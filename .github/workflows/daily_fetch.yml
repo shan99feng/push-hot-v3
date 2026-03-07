@@ -39,7 +39,6 @@ jobs:
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
         run: |
-          cd push-hot-v3
           python3 scripts/fetch_papers.py
 
       - name: 提交数据更新

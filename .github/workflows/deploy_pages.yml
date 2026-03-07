@@ -35,6 +35,7 @@ jobs:
       - name: 准备部署目录
         run: |
           # 将 data 目录复制到 frontend 目录下，供前端直接访问
+          rm -rf frontend/data
           cp -r data frontend/data
           echo "✅ 数据目录已复制到 frontend/"
           ls -la frontend/

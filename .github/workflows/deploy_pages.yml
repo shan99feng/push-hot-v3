@@ -1,53 +1,60 @@
-name: 部署 GitHub Pages
+name: 每日论文采集
 
 on:
-  # 每次推送到 main 分支时触发（包括每日数据更新后的推送）
-  push:
-    branches: [ main, master ]
-    paths:
-      - 'frontend/**'
-      - 'data/**'
-  # 支持手动触发
+  # 每天北京时间 10:00（UTC 02:00）自动运行
+  schedule:
+    - cron: '0 2 * * *'
+  # 支持手动触发（用于补跑历史数据）
   workflow_dispatch:
+    inputs:
+      date:
+        description: '指定采集日期（留空则采集今天），格式 YYYY-MM-DD'
+        required: false
+        default: ''
 
-# 设置 GITHUB_TOKEN 权限
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# 同一时间只允许一个部署任务运行
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  contents: write   # 需要写权限以提交数据文件
+  actions: write    # 需要触发其他 workflow
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  fetch:
     runs-on: ubuntu-latest
 
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
-
-      - name: 准备部署目录
-        run: |
-          # 将 data 目录复制到 frontend 目录下，供前端直接访问
-          cp -r data frontend/data
-          echo "✅ 数据目录已复制到 frontend/"
-          ls -la frontend/
-
-      - name: 配置 GitHub Pages
-        uses: actions/configure-pages@v4
-
-      - name: 上传站点文件
-        uses: actions/upload-pages-artifact@v3
         with:
-          # 部署 frontend 目录（已包含 data 子目录）
-          path: 'frontend'
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 部署到 GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: 配置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install certifi
+
+      - name: 执行论文采集
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+        run: |
+          python3 scripts/fetch_papers.py
+
+      - name: 提交数据更新
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          # 如果有变更才提交
+          git diff --cached --quiet || git commit -m "📄 每日论文更新 $(date -u '+%Y-%m-%d')"
+          git push
+
+      - name: 触发页面部署
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy_pages.yml/dispatches \
+            -d '{"ref":"main"}'

@@ -40,9 +40,11 @@ jobs:
           echo "✅ 删除frontend/data后展示"
           rm -rf frontend/data
           ls -la frontend/
+          echo "✅ 数据目录已复制到 frontend/后展示"
           cp -r data frontend/data
-          echo "✅ 数据目录已复制到 frontend/"
-          ls -la frontend/data
+          ls -la frontend/
+          echo "✅ 查看frontend/data/daily"
+          ls -la frontend/data/daily
 
       - name: 配置 GitHub Pages
         uses: actions/configure-pages@v4

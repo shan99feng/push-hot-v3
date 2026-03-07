@@ -1,6 +1,6 @@
 {
   "date": "2026-03-08",
-  "generated_at": "2026-03-07T16:34:14.943962+00:00",
+  "generated_at": "2026-03-07T16:39:09.003325+00:00",
   "total": 10,
   "papers": [
     {
@@ -26,7 +26,29 @@
       "tags": [],
       "upvotes": 6,
       "hot_score": 60,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "MASQuant: 一种针对多模态大型语言模型的模态感知平滑量化方法",
+        "chinese_summary": "MASQuant 提供了稳定且高效的多模态大型语言模型量化方法。",
+        "pain_point": "现有量化方法在多模态大型语言模型上表现不佳。",
+        "core_value": "通过模态感知平滑量化和跨模态补偿，提高量化性能。",
+        "technical_architecture": "引入模态感知平滑和跨模态补偿机制。",
+        "quantitative_results": "实验表明 MASQuant 在多模态模型上表现良好。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证其有效性。",
+        "key_contributions": [
+          "提出模态感知平滑量化方法",
+          "引入跨模态补偿机制"
+        ],
+        "application_scenarios": [
+          "多模态大型语言模型",
+          "跨模态任务"
+        ],
+        "technical_highlights": [
+          "学习模态特定的平滑因子",
+          "使用 SVD 白化进行跨模态转换"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.02604",
@@ -54,7 +76,30 @@
       "tags": [],
       "upvotes": 5,
       "hot_score": 50,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "异构代理协作强化学习",
+        "chinese_summary": "HACPO算法通过协作共享回放提高了所有参与代理的性能。",
+        "pain_point": "现有的强化学习方法在处理异构代理时存在效率低下和协调部署困难的问题。",
+        "core_value": "HACRL提供了一种无需协调部署的异构代理协作优化方法，HACPO则进一步通过协作共享回放提高了样本利用效率和跨代理知识转移。",
+        "technical_architecture": "HACPO算法通过引入四个定制机制实现了无偏优势估计和优化正确性。",
+        "quantitative_results": "实验结果显示HACPO在多种异构模型组合和推理基准测试中均优于其他方法。",
+        "competitors": "对比了基于LLM的多代理强化学习方法。",
+        "limitations": "未来工作可以探索更复杂的代理组合和更广泛的场景。",
+        "key_contributions": [
+          "提出了HACRL框架",
+          "设计了HACPO算法",
+          "引入了四个定制机制"
+        ],
+        "application_scenarios": [
+          "多智能体系统",
+          "复杂决策任务"
+        ],
+        "technical_highlights": [
+          "无需协调部署",
+          "双向跨代理知识转移"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.04379",
@@ -78,7 +123,30 @@
       "tags": [],
       "upvotes": 5,
       "hot_score": 50,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "Helios：实时长视频生成模型",
+        "chinese_summary": "Helios 是首个在单张 NVIDIA H100 GPU 上以 19.5 FPS 实时生成分钟级长视频的 14B 视频生成模型。",
+        "pain_point": "现有模型在长视频生成时容易出现漂移，且难以实现实时生成。",
+        "core_value": "通过创新的训练策略和高效压缩技术，Helios 实现了长视频的高质量实时生成。",
+        "technical_architecture": "Helios 是一个 14B 自回归扩散模型，采用统一输入表示支持多种任务。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在单张 GPU 上实现，未来可探索多 GPU 并行。",
+        "key_contributions": [
+          "提出简单有效的训练策略以消除长视频生成中的漂移",
+          "通过压缩历史和噪声上下文提高效率",
+          "无需并行或切片框架即可实现大规模批量处理"
+        ],
+        "application_scenarios": [
+          "长视频内容生成",
+          "实时视频编辑"
+        ],
+        "technical_highlights": [
+          "无需常用抗漂移技术",
+          "无需标准加速技术"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.05504",
@@ -106,7 +174,30 @@
       "tags": [],
       "upvotes": 4,
       "hot_score": 40,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "RoboPocket：利用手机即时改进机器人策略",
+        "chinese_summary": "RoboPocket 通过单个消费级智能手机实现无需机器人即时策略迭代。",
+        "pain_point": "现有方法在数据收集效率和政策迭代成本之间存在权衡。",
+        "core_value": "通过增强现实反馈和异步在线微调实现高效数据收集和策略改进。",
+        "technical_architecture": "引入远程推理框架和增强现实视觉预知。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于单个消费级智能手机。",
+        "key_contributions": [
+          "无需机器人实现即时策略迭代",
+          "利用增强现实反馈优化数据收集",
+          "实现异步在线微调"
+        ],
+        "application_scenarios": [
+          "家庭服务机器人",
+          "工业自动化"
+        ],
+        "technical_highlights": [
+          "远程推理框架",
+          "增强现实视觉预知"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.04448",
@@ -173,7 +264,29 @@
       "tags": [],
       "upvotes": 3,
       "hot_score": 30,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "SkillNet: 创建、评估和连接AI技能",
+        "chinese_summary": "SkillNet显著提升代理性能，平均奖励提高40%，执行步骤减少30%。",
+        "pain_point": "当前AI代理缺乏系统积累和转移技能的机制，导致重复发明。",
+        "core_value": "提供统一的技能结构化框架，支持大规模技能创建、评估和组织。",
+        "technical_architecture": "构建了一个包含超过20万技能的仓库，以及一个交互式平台和Python工具。",
+        "quantitative_results": "实验表明，SkillNet提高了代理性能，平均奖励提高40%，执行步骤减少30%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步扩展技能库并优化评估方法。",
+        "key_contributions": [
+          "提供统一的技能结构化框架",
+          "支持大规模技能创建、评估和组织"
+        ],
+        "application_scenarios": [
+          "多模态环境中的技能学习",
+          "复杂任务执行"
+        ],
+        "technical_highlights": [
+          "丰富的技能关系连接",
+          "多维度评估体系"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.00466",
@@ -199,7 +312,31 @@
       "tags": [],
       "upvotes": 3,
       "hot_score": 30,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "DreamWorld: 统一的视频生成世界建模框架",
+        "chinese_summary": "提出了一种新的框架，通过联合建模多维度世界知识来提升视频生成的质量。",
+        "pain_point": "现有模型仅能达到表面的合理性，缺乏对世界的统一理解。",
+        "core_value": "通过联合建模多维度世界知识，提升视频生成的连贯性和一致性。",
+        "technical_architecture": "提出了一种联合世界建模范式，结合基础模型预测视频像素和特征。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以优化视觉稳定性和时间连贯性。",
+        "key_contributions": [
+          "提出了一种联合世界建模范式",
+          "引入了Consistent Constraint Annealing和Multi-Source Inner-Guidance",
+          "提升了视频生成的连贯性和一致性"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "联合建模多维度世界知识",
+          "动态调节世界约束",
+          "多源内引导"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.04743",
@@ -225,7 +362,30 @@
       "tags": [],
       "upvotes": 3,
       "hot_score": 30,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "DARE: 通过分布感知检索对齐R统计生态系统中的LLM代理",
+        "chinese_summary": "DARE通过融合分布特征和函数元数据，显著提升了R包检索的相关性。",
+        "pain_point": "现有检索增强方法忽视了数据分布，导致匹配效果不佳。",
+        "core_value": "DARE通过引入数据分布信息，提高了R包检索的准确性和相关性。",
+        "technical_architecture": "DARE融合分布特征和函数元数据，构建了一个轻量级的检索模型。",
+        "quantitative_results": "DARE在包检索上的NDCG@10达到93.47%，优于现有模型17%。",
+        "competitors": "对比了现有开源嵌入式模型，DARE表现更优。",
+        "limitations": "仅在R统计生态系统中进行了评估。",
+        "key_contributions": [
+          "构建了R包知识库RPKB",
+          "提出了DARE嵌入模型",
+          "开发了R导向的LLM代理RCodingAgent"
+        ],
+        "application_scenarios": [
+          "R代码生成",
+          "统计分析任务"
+        ],
+        "technical_highlights": [
+          "融合分布特征和函数元数据",
+          "轻量级且插件式设计"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.03756",
@@ -245,7 +405,30 @@
       "tags": [],
       "upvotes": 3,
       "hot_score": 30,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "MOOSE-Star: 打破复杂性壁垒，解锁科学发现的可训练性",
+        "chinese_summary": "MOOSE-Star 通过分解任务和启发式搜索，将复杂度从指数级降低到对数级，实现科学发现的直接训练。",
+        "pain_point": "现有研究仅关注推理或反馈训练，忽视了生成性推理过程的直接建模。",
+        "core_value": "MOOSE-Star 提供了一种新的框架，使科学发现的训练变得可处理且可扩展。",
+        "technical_architecture": "通过分解任务和启发式搜索，MOOSE-Star 将复杂度从指数级降低到对数级。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要大量计算资源进行训练。",
+        "key_contributions": [
+          "提出 MOOSE-Star 框架，实现科学发现的直接训练",
+          "通过分解任务和启发式搜索降低复杂度",
+          "提供大规模训练数据集 TOMATO-Star"
+        ],
+        "application_scenarios": [
+          "科学发现和创新",
+          "知识图谱生成"
+        ],
+        "technical_highlights": [
+          "将复杂度从指数级降低到对数级",
+          "提供大规模训练数据集"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.04304",
@@ -280,7 +463,30 @@
       "tags": [],
       "upvotes": 3,
       "hot_score": 30,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "V_1: 统一生成与自我验证的并行推理框架",
+        "chinese_summary": "通过引入V_1框架，显著提高了复杂推理任务的测试时扩展性。",
+        "pain_point": "现有方法在独立评估候选解时，难以可靠地识别正确解。",
+        "core_value": "通过高效的成对排名，增强模型的自我验证能力，提升任务性能。",
+        "technical_architecture": "V_1框架包括V_1-Infer和V_1-PairRL两个组件。",
+        "quantitative_results": "在代码生成和数学推理基准测试中，V_1-Infer提高了通过率。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索更广泛的推理任务。",
+        "key_contributions": [
+          "提出了一种统一生成与自我验证的框架",
+          "通过成对排名增强模型自我验证能力",
+          "确保验证器适应生成器的分布变化"
+        ],
+        "application_scenarios": [
+          "代码生成",
+          "数学推理"
+        ],
+        "technical_highlights": [
+          "使用成对自我验证方法",
+          "结合强化学习联合训练生成器和验证器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     },
     {
       "paper_id": "hf-paper-2603.03282",
@@ -302,7 +508,30 @@
       "tags": [],
       "upvotes": 3,
       "hot_score": 30,
-      "structured_summary": null
+      "structured_summary": {
+        "chinese_title": "MIBURI: 朝向富有表现力的交互手势合成",
+        "chinese_summary": "提出MIBURI框架，实现实时同步生成富有表现力的全身手势和面部表情。",
+        "pain_point": "现有对话代理缺乏身体语言的表达性，导致交互不自然。",
+        "core_value": "实时生成自然且多样的手势和表情，提升人机交互体验。",
+        "technical_architecture": "采用身体部分感知的手势编码器，结合因果框架生成实时同步的手势。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步优化生成效率。",
+        "key_contributions": [
+          "提出MIBURI框架",
+          "实时生成同步的手势和表情",
+          "采用因果框架和身体部分感知编码"
+        ],
+        "application_scenarios": [
+          "虚拟助手",
+          "虚拟客服"
+        ],
+        "technical_highlights": [
+          "实时同步生成",
+          "多级离散编码"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
     }
   ]
 }

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>经典论文 · AI Papers Daily</title>
+  <meta name="description" content="AI领域各方向经典高影响力论文精选，附带AI生成的深度解析。" />
+  <script src="js/tailwind.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #1a365d;
+      --color-primary-light: #2a4a7f;
+      --color-primary-dark: #0f2040;
+      --color-accent: #3182ce;
+      --color-accent-light: #4299e1;
+      --color-accent-dark: #2b6cb0;
+      --font-sans: 'Inter', 'Noto Sans SC', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- 顶部导航栏 -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center shadow-sm group-hover:bg-primary-light transition-colors">
+            <i class="fa fa-file-text-o text-white text-base"></i>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-primary leading-tight">AI Papers Daily</div>
+            <div class="text-xs text-gray-500 leading-tight">每日 AI 论文速递</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-1">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors">
+            <i class="fa fa-home mr-1.5"></i>今日推送
+          </a>
+          <a href="history.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors">
+            <i class="fa fa-calendar mr-1.5"></i>历史论文
+          </a>
+          <a href="classics.html" class="px-4 py-2 rounded-lg text-sm font-medium text-primary bg-blue-50">
+            <i class="fa fa-star mr-1.5"></i>经典论文
+          </a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input type="text" id="headerSearch" placeholder="搜索论文..."
+              class="w-56 pl-9 pr-4 py-2 text-sm bg-gray-100 border border-transparent rounded-lg focus:outline-none focus:bg-white focus:border-accent transition-all" />
+            <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+          </div>
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+            <i class="fa fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- 移动端菜单 -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100 bg-white px-4 py-3 space-y-1">
+      <a href="index.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100"><i class="fa fa-home"></i>今日推送</a>
+      <a href="history.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100"><i class="fa fa-calendar"></i>历史论文</a>
+      <a href="classics.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-primary bg-blue-50"><i class="fa fa-star"></i>经典论文</a>
+    </div>
+  </header>
+
+  <!-- Hero 区域 -->
+  <div class="bg-gradient-to-br from-primary to-accent text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-2 mb-3">
+          <i class="fa fa-star text-yellow-300 text-lg"></i>
+          <span class="text-sm font-medium text-blue-200 uppercase tracking-wide">经典论文集合</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-3">AI 领域经典论文</h1>
+        <p class="text-blue-100 text-base leading-relaxed">
+          精选各 AI 子领域高影响力经典论文，涵盖大模型、多模态、强化学习等方向，
+          附带 AI 生成的深度解析，帮助你快速掌握领域核心知识。
+        </p>
+        <p class="text-blue-200 text-sm mt-3">
+          <i class="fa fa-info-circle mr-1"></i>
+          经典论文由每日推送中热度最高的论文自动入选，持续更新
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主体内容 -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex gap-6">
+
+      <!-- 左侧：领域分类导航 -->
+      <aside class="hidden lg:block w-52 flex-shrink-0">
+        <div class="sticky top-24">
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <div class="px-4 py-3 border-b border-gray-100 bg-gray-50">
+              <h3 class="text-sm font-semibold text-gray-700">
+                <i class="fa fa-th-list mr-1.5 text-accent"></i>领域分类
+              </h3>
+            </div>
+            <nav class="p-2" id="domainNav">
+              <button class="domain-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-primary bg-blue-50 flex items-center justify-between" data-domain="all">
+                <span><i class="fa fa-th mr-2 text-accent"></i>全部领域</span>
+                <span class="domain-count text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full"></span>
+              </button>
+              <button class="domain-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 flex items-center justify-between mt-1" data-domain="llm">
+                <span><i class="fa fa-user mr-2 text-blue-500"></i>大模型 LLM</span>
+                <span class="domain-count text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full"></span>
+              </button>
+              <button class="domain-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 flex items-center justify-between mt-1" data-domain="multimodal">
+                <span><i class="fa fa-image mr-2 text-purple-500"></i>多模态</span>
+                <span class="domain-count text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full"></span>
+              </button>
+              <button class="domain-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 flex items-center justify-between mt-1" data-domain="agent">
+                <span><i class="fa fa-android mr-2 text-green-500"></i>Agent</span>
+                <span class="domain-count text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full"></span>
+              </button>
+              <button class="domain-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 flex items-center justify-between mt-1" data-domain="cv">
+                <span><i class="fa fa-eye mr-2 text-orange-500"></i>计算机视觉</span>
+                <span class="domain-count text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full"></span>
+              </button>
+              <button class="domain-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 flex items-center justify-between mt-1" data-domain="nlp">
+                <span><i class="fa fa-language mr-2 text-teal-500"></i>NLP</span>
+                <span class="domain-count text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full"></span>
+              </button>
+              <button class="domain-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 flex items-center justify-between mt-1" data-domain="rl">
+                <span><i class="fa fa-gamepad mr-2 text-red-500"></i>强化学习</span>
+                <span class="domain-count text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full"></span>
+              </button>
+              <button class="domain-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 flex items-center justify-between mt-1" data-domain="recsys">
+                <span><i class="fa fa-search mr-2 text-yellow-500"></i>搜广推</span>
+                <span class="domain-count text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full"></span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 右侧：论文列表 -->
+      <main class="flex-1 min-w-0">
+
+        <!-- 标题和排序 -->
+        <div class="flex items-center justify-between mb-5">
+          <div>
+            <h2 class="text-xl font-bold text-primary" id="classicsTitle">全部经典论文</h2>
+            <p class="text-sm text-gray-500 mt-0.5" id="classicsSubtitle">加载中...</p>
+          </div>
+          <select id="sortSelect" class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 text-gray-600 focus:outline-none focus:border-accent bg-white">
+            <option value="hot_score">热度排序</option>
+            <option value="upvotes">点赞排序</option>
+            <option value="date">时间排序</option>
+          </select>
+        </div>
+
+        <!-- 移动端领域筛选 -->
+        <div class="lg:hidden mb-4 overflow-x-auto">
+          <div class="flex gap-2 pb-1" id="mobileDomainFilter">
+            <button class="cat-tab active flex-shrink-0" data-domain="all">全部</button>
+            <button class="cat-tab flex-shrink-0" data-domain="llm">大模型</button>
+            <button class="cat-tab flex-shrink-0" data-domain="multimodal">多模态</button>
+            <button class="cat-tab flex-shrink-0" data-domain="agent">Agent</button>
+            <button class="cat-tab flex-shrink-0" data-domain="cv">视觉</button>
+            <button class="cat-tab flex-shrink-0" data-domain="nlp">NLP</button>
+            <button class="cat-tab flex-shrink-0" data-domain="rl">强化学习</button>
+            <button class="cat-tab flex-shrink-0" data-domain="recsys">搜广推</button>
+          </div>
+        </div>
+
+        <!-- 加载状态 -->
+        <div id="loadingState" class="flex flex-col items-center justify-center py-20 text-gray-400">
+          <div class="loading-spinner mb-4"></div>
+          <p class="text-sm">正在加载经典论文...</p>
+        </div>
+
+        <!-- 空状态 -->
+        <div id="emptyState" class="hidden flex flex-col items-center justify-center py-20 text-gray-400">
+          <i class="fa fa-star-o text-5xl mb-4 opacity-30"></i>
+          <p class="text-base font-medium">该领域暂无经典论文</p>
+          <p class="text-sm mt-1">经典论文集合持续更新中</p>
+        </div>
+
+        <!-- 论文列表 -->
+        <div id="paperList" class="space-y-4"></div>
+
+        <!-- 加载更多 -->
+        <div id="loadMoreWrap" class="hidden text-center mt-6">
+          <button id="btnLoadMore" class="px-8 py-3 text-sm font-medium text-accent border border-accent rounded-lg hover:bg-blue-50 transition-colors">
+            <i class="fa fa-chevron-down mr-2"></i>加载更多
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- 论文卡片模板（带经典标识） -->
+  <template id="paperTpl">
+    <article class="paper-card bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all overflow-hidden">
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-yellow-50 border border-yellow-200 text-yellow-700 text-xs font-medium rounded-full">
+              <i class="fa fa-star text-yellow-400 text-xs"></i>经典
+            </span>
+            <span class="source-badge badge"></span>
+            <span class="cat-badge badge"></span>
+            <span class="paper-date text-xs text-gray-400"></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="upvotes-tag hidden items-center gap-1 text-xs text-rose-500 font-medium">
+              <i class="fa fa-heart"></i><span class="upvotes-num"></span>
+            </span>
+            <button class="favorite-btn p-1.5 rounded-lg text-gray-400 hover:text-rose-500 hover:bg-rose-50 transition-colors" title="收藏">
+              <i class="fa fa-bookmark-o text-sm"></i>
+            </button>
+          </div>
+        </div>
+        <div class="mb-3">
+          <h2 class="paper-title-en text-base font-semibold text-gray-900 leading-snug hover:text-accent cursor-pointer transition-colors"></h2>
+          <div class="paper-title-zh hidden text-sm font-medium text-primary mt-1"></div>
+        </div>
+        <div class="paper-authors text-xs text-gray-500 mb-3 truncate"></div>
+        <div class="paper-summary-short hidden text-sm text-gray-600 leading-relaxed mb-3 bg-blue-50 border-l-2 border-accent px-3 py-2 rounded-r-lg"></div>
+        <div class="paper-analysis hidden mt-4 space-y-4 border-t border-gray-100 pt-4">
+          <section>
+            <div class="flex items-center gap-2 mb-2"><span class="text-base">📄</span><span class="text-sm font-semibold text-gray-700">论文摘要</span></div>
+            <div class="abstract-content text-sm text-gray-600 leading-relaxed bg-gray-50 rounded-lg p-3"></div>
+          </section>
+          <section class="highlights-block hidden">
+            <div class="flex items-center gap-2 mb-2"><span class="text-base">✦</span><span class="text-sm font-semibold text-gray-700">核心亮点</span></div>
+            <ul class="highlights-list space-y-1.5"></ul>
+          </section>
+          <section class="techarch-block hidden">
+            <div class="flex items-center gap-2 mb-2"><span class="text-base">⚙</span><span class="text-sm font-semibold text-gray-700">技术方法</span></div>
+            <p class="techarch-content text-sm text-gray-600 leading-relaxed bg-purple-50 rounded-lg p-3"></p>
+          </section>
+          <section class="limitations-block hidden">
+            <div class="flex items-center gap-2 mb-2"><span class="text-base">⚠</span><span class="text-sm font-semibold text-gray-700">局限性</span></div>
+            <p class="limitations-content text-sm text-gray-600 leading-relaxed bg-orange-50 rounded-lg p-3"></p>
+          </section>
+        </div>
+        <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+          <div class="paper-tags flex flex-wrap gap-1.5"></div>
+          <div class="flex items-center gap-2">
+            <button class="btn-expand text-xs text-accent font-medium flex items-center gap-1 hover:text-accent-dark transition-colors">
+              展开分析 <i class="fa fa-chevron-down expand-icon text-xs transition-transform"></i>
+            </button>
+            <a class="btn-detail text-xs font-medium px-3 py-1.5 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors" href="#">
+              详情 <i class="fa fa-arrow-right ml-1"></i>
+            </a>
+            <a class="btn-paper-link text-xs font-medium px-3 py-1.5 bg-primary text-white rounded-lg hover:bg-primary-light transition-colors" href="#" target="_blank" rel="noopener">
+              原文 <i class="fa fa-external-link ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <!-- 页脚 -->
+  <footer class="mt-12 border-t border-gray-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <i class="fa fa-file-text-o text-white text-sm"></i>
+          </div>
+          <div>
+            <div class="text-sm font-semibold text-primary">AI Papers Daily</div>
+            <div class="text-xs text-gray-400">每日 AI 论文速递 · 数据来源 arXiv & HuggingFace</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-gray-500">
+          <a href="https://arxiv.org" target="_blank" class="hover:text-primary">arXiv</a>
+          <a href="https://huggingface.co/papers" target="_blank" class="hover:text-primary">HuggingFace</a>
+          <span>© 2026 AI Papers Daily</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btnTop" class="hidden fixed bottom-6 right-6 w-10 h-10 bg-primary text-white rounded-full shadow-lg hover:bg-primary-light transition-all flex items-center justify-center z-30">
+    <i class="fa fa-chevron-up text-sm"></i>
+  </button>
+
+<script src="js/utils.js?v=20260307b"></script>
+  <script src="js/api.js"></script>
+  <script src="js/classics.js"></script>
+</body>
+</html>

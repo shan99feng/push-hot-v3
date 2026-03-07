@@ -1,0 +1,505 @@
+{
+  "date": "2026-03-05",
+  "generated_at": "2026-03-07T04:33:17.623397+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.02604",
+      "source": "huggingface",
+      "title": "Heterogeneous Agent Collaborative Reinforcement Learning",
+      "authors": [
+        "Zhixia Zhang",
+        "Zixuan Huang",
+        "Xin Xia",
+        "Deqing Wang",
+        "Fuzhen Zhuang",
+        "Shuai Ma",
+        "Ning Ding",
+        "Yaodong Yang",
+        "Jianxin Li",
+        "Yikun Ban"
+      ],
+      "abstract": "We introduce Heterogeneous Agent Collaborative Reinforcement Learning (HACRL), a new learning paradigm that addresses the inefficiencies of isolated on-policy optimization. HACRL enables collaborative optimization with independent execution: heterogeneous agents share verified rollouts during training to mutually improve, while operating independently at inference time. Unlike LLM-based multi-agent reinforcement learning (MARL), HACRL does not require coordinated deployment, and unlike on-/off-policy distillation, it enables bidirectional mutual learning among heterogeneous agents rather than one-directional teacher-to-student transfer. Building on this paradigm, we propose HACPO, a collaborative RL algorithm that enables principled rollout sharing to maximize sample utilization and cross-agent knowledge transfer. To mitigate capability discrepancies and policy distribution shifts, HACPO introduces four tailored mechanisms with theoretical guarantees on unbiased advantage estimation and optimization correctness. Extensive experiments across diverse heterogeneous model combinations and reasoning benchmarks show that HACPO consistently improves all participating agents, outperforming GSPO by an average of 3.3\\% while using only half the rollout cost.",
+      "published_date": "2026-03-03T05:09:49.000Z",
+      "url": "https://arxiv.org/abs/2603.02604",
+      "pdf_url": "https://arxiv.org/pdf/2603.02604",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.02604",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 5,
+      "hot_score": 50,
+      "structured_summary": {
+        "chinese_title": "异构代理协作强化学习",
+        "chinese_summary": "HACPO算法通过协作共享回放数据，提升异构代理的性能。",
+        "pain_point": "现有方法在处理异构代理协作学习时存在效率低下和协调部署复杂的问题。",
+        "core_value": "HACPO算法实现了异构代理之间的双向互学，提高了样本利用效率和跨代理知识转移。",
+        "technical_architecture": "HACPO算法通过引入四个机制实现回放数据的协作共享。",
+        "quantitative_results": "实验表明HACPO在多种异构模型组合和推理基准上均优于其他方法。",
+        "competitors": "对比了基于LLM的多代理强化学习方法。",
+        "limitations": "未来工作可以探索更复杂的代理组合和更广泛的场景。",
+        "key_contributions": [
+          "提出了HACRL新学习范式",
+          "设计了HACPO算法",
+          "引入了四个机制确保算法正确性"
+        ],
+        "application_scenarios": [
+          "多智能体系统",
+          "复杂任务协作"
+        ],
+        "technical_highlights": [
+          "异构代理间的双向互学",
+          "理论保证的无偏优势估计"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04379",
+      "source": "huggingface",
+      "title": "Helios: Real Real-Time Long Video Generation Model",
+      "authors": [
+        "Shenghai Yuan",
+        "Yuanyang Yin",
+        "Zongjian Li",
+        "Xinwei Huang",
+        "Xiao Yang",
+        "Li Yuan"
+      ],
+      "abstract": "We introduce Helios, the first 14B video generation model that runs at 19.5 FPS on a single NVIDIA H100 GPU and supports minute-scale generation while matching the quality of a strong baseline. We make breakthroughs along three key dimensions: (1) robustness to long-video drifting without commonly used anti-drifting heuristics such as self-forcing, error-banks, or keyframe sampling; (2) real-time generation without standard acceleration techniques such as KV-cache, sparse/linear attention, or quantization; and (3) training without parallelism or sharding frameworks, enabling image-diffusion-scale batch sizes while fitting up to four 14B models within 80 GB of GPU memory. Specifically, Helios is a 14B autoregressive diffusion model with a unified input representation that natively supports T2V, I2V, and V2V tasks. To mitigate drifting in long-video generation, we characterize typical failure modes and propose simple yet effective training strategies that explicitly simulate drifting during training, while eliminating repetitive motion at its source. For efficiency, we heavily compress the historical and noisy context and reduce the number of sampling steps, yielding computational costs comparable to -- or lower than -- those of 1.3B video generative models. Moreover, we introduce infrastructure-level optimizations that accelerate both inference and training while reducing memory consumption. Extensive experiments demonstrate that Helios consistently outperforms prior methods on both short- and long-video generation. We plan to release the code, base model, and distilled model to support further development by the community.",
+      "published_date": "2026-03-04T18:45:21.000Z",
+      "url": "https://arxiv.org/abs/2603.04379",
+      "pdf_url": "https://arxiv.org/pdf/2603.04379",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04379",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 5,
+      "hot_score": 50,
+      "structured_summary": {
+        "chinese_title": "Helios: 实现实时长视频生成的14B模型",
+        "chinese_summary": "Helios 是首个在单块 NVIDIA H100 GPU 上以 19.5 FPS 实现实时长视频生成的 14B 视频生成模型。",
+        "pain_point": "现有模型在长视频生成中存在漂移问题，且难以实现实时生成。",
+        "core_value": "Helios 通过创新的训练策略和高效压缩技术解决了长视频生成的漂移问题，并实现了实时生成。",
+        "technical_architecture": "Helios 是一个 14B 自回归扩散模型，采用统一的输入表示支持多种任务。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "模型未在大规模数据集上进行验证。",
+        "key_contributions": [
+          "提出简单有效的训练策略以消除长视频生成中的漂移",
+          "采用高效压缩技术减少计算量",
+          "无需并行或分片框架即可支持大规模批量处理"
+        ],
+        "application_scenarios": [
+          "长视频实时生成",
+          "视频编辑与增强"
+        ],
+        "technical_highlights": [
+          "实现实时长视频生成",
+          "无需常用加速技术"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.03790",
+      "source": "huggingface",
+      "title": "T2S-Bench & Structure-of-Thought: Benchmarking and Prompting Comprehensive Text-to-Structure Reasoning",
+      "authors": [
+        "Qinsi Wang",
+        "Hancheng Ye",
+        "Jinhee Kim",
+        "Jinghan Ke",
+        "Yifei Wang",
+        "Martin Kuo",
+        "Zishan Shao",
+        "Dongting Li",
+        "Yueqian Lin",
+        "Ting Jiang",
+        "Chiyue Wei",
+        "Qi Qian",
+        "Wei Wen",
+        "Helen Li",
+        "Yiran Chen"
+      ],
+      "abstract": "Think about how human handles complex reading tasks: marking key points, inferring their relationships, and structuring information to guide understanding and responses. Likewise, can a large language model benefit from text structure to enhance text-processing performance? To explore it, in this work, we first introduce Structure of Thought (SoT), a prompting technique that explicitly guides models to construct intermediate text structures, consistently boosting performance across eight tasks and three model families. Building upon this insight, we present T2S-Bench, the first benchmark designed to evaluate and improve text-to-structure capabilities of models. T2S-Bench includes 1.8K samples across 6 scientific domains and 32 structural types, rigorously constructed to ensure accuracy, fairness, and quality. Evaluation on 45 mainstream models reveals substantial improvement potential: the average accuracy on the multi-hop reasoning task is only 52.1%, and even the most advanced model achieves 58.1% node accuracy in end-to-end extraction. Furthermore, on Qwen2.5-7B-Instruct, SoT alone yields an average +5.7% improvement across eight diverse text-processing tasks, and fine-tuning on T2S-Bench further increases this gain to +8.6%. These results highlight the value of explicit text structuring and the complementary contributions of SoT and T2S-Bench. Dataset and eval code have been released at https://t2s-bench.github.io/T2S-Bench-Page/.",
+      "published_date": "2026-03-04T07:05:09.000Z",
+      "url": "https://arxiv.org/abs/2603.03790",
+      "pdf_url": "https://arxiv.org/pdf/2603.03790",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.03790",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "T2S-Bench & Structure-of-Thought: 评估和提升文本到结构推理能力的基准",
+        "chinese_summary": "提出了一种新的基准T2S-Bench和SoT技术，显著提升了模型的文本到结构推理能力。",
+        "pain_point": "现有模型在处理复杂文本推理任务时表现不佳。",
+        "core_value": "通过引入SoT技术，显著提升了模型的文本到结构推理能力。",
+        "technical_architecture": "提出了SoT技术，引导模型构建中间文本结构。",
+        "quantitative_results": "SoT技术在多个任务上平均提升了5.7%，多跳推理任务准确率提升显著。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究SoT技术在更多任务上的应用。",
+        "key_contributions": [
+          "提出了T2S-Bench基准",
+          "引入了SoT技术"
+        ],
+        "application_scenarios": [
+          "文本摘要",
+          "知识图谱构建"
+        ],
+        "technical_highlights": [
+          "SoT技术显著提升了模型性能",
+          "T2S-Bench基准涵盖了多种结构类型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.03447",
+      "source": "huggingface",
+      "title": "Proact-VL: A Proactive VideoLLM for Real-Time AI Companions",
+      "authors": [
+        "Weicai Yan",
+        "Yuhong Dai",
+        "Qi Ran",
+        "Haodong Li",
+        "Wang Lin",
+        "Hao Liao",
+        "Xing Xie",
+        "Tao Jin",
+        "Jianxun Lian"
+      ],
+      "abstract": "Proactive and real-time interactive experiences are essential for human-like AI companions, yet face three key challenges: (1) achieving low-latency inference under continuous streaming inputs, (2) autonomously deciding when to respond, and (3) controlling both quality and quantity of generated content to meet real-time constraints. In this work, we instantiate AI companions through two gaming scenarios, commentator and guide, selected for their suitability for automatic evaluation. We introduce the Live Gaming Benchmark, a large-scale dataset with three representative scenarios: solo commentary, co-commentary, and user guidance, and present Proact-VL, a general framework that shapes multimodal language models into proactive, real-time interactive agents capable of human-like environment perception and interaction. Extensive experiments show Proact-VL achieves superior response latency and quality while maintaining strong video understanding capabilities, demonstrating its practicality for real-time interactive applications.",
+      "published_date": "2026-03-03T19:02:46.000Z",
+      "url": "https://arxiv.org/abs/2603.03447",
+      "pdf_url": "https://arxiv.org/pdf/2603.03447",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.03447",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "Proact-VL: 实时互动的人类级AI伴侣",
+        "chinese_summary": "Proact-VL 是一种实时主动的视频语言模型，能够实现低延迟响应并维持高质量视频理解能力。",
+        "pain_point": "低延迟实时响应、自主响应时机决策和内容质量与数量控制。",
+        "core_value": "实现低延迟、高质量的实时互动，适用于自动评估的实时应用。",
+        "technical_architecture": "基于多模态语言模型，形成主动的实时交互代理。",
+        "quantitative_results": "实验显示Proact-VL在响应延迟和质量上表现优异。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步扩展应用场景。",
+        "key_contributions": [
+          "提出Proact-VL框架",
+          "实现低延迟实时互动",
+          "维持高质量视频理解"
+        ],
+        "application_scenarios": [
+          "游戏评论员",
+          "游戏引导员"
+        ],
+        "technical_highlights": [
+          "实时响应能力",
+          "自动评价能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.03379",
+      "source": "huggingface",
+      "title": "MemSifter: Offloading LLM Memory Retrieval via Outcome-Driven Proxy Reasoning",
+      "authors": [
+        "Jiejun Tan",
+        "Zhicheng Dou",
+        "Liancheng Zhang",
+        "Yuyang Hu",
+        "Yiruo Cheng",
+        "Ji-Rong Wen"
+      ],
+      "abstract": "As Large Language Models (LLMs) are increasingly used for long-duration tasks, maintaining effective long-term memory has become a critical challenge. Current methods often face a trade-off between cost and accuracy. Simple storage methods often fail to retrieve relevant information, while complex indexing methods (such as memory graphs) require heavy computation and can cause information loss. Furthermore, relying on the working LLM to process all memories is computationally expensive and slow. To address these limitations, we propose MemSifter, a novel framework that offloads the memory retrieval process to a small-scale proxy model. Instead of increasing the burden on the primary working LLM, MemSifter uses a smaller model to reason about the task before retrieving the necessary information. This approach requires no heavy computation during the indexing phase and adds minimal overhead during inference. To optimize the proxy model, we introduce a memory-specific Reinforcement Learning (RL) training paradigm. We design a task-outcome-oriented reward based on the working LLM's actual performance in completing the task. The reward measures the actual contribution of retrieved memories by mutiple interactions with the working LLM, and discriminates retrieved rankings by stepped decreasing contributions. Additionally, we employ training techniques such as Curriculum Learning and Model Merging to improve performance. We evaluated MemSifter on eight LLM memory benchmarks, including Deep Research tasks. The results demonstrate that our method meets or exceeds the performance of existing state-of-the-art approaches in both retrieval accuracy and final task completion. MemSifter offers an efficient and scalable solution for long-term LLM memory. We have open-sourced the model weights, code, and training data to support further research.",
+      "published_date": "2026-03-03T02:57:38.000Z",
+      "url": "https://arxiv.org/abs/2603.03379",
+      "pdf_url": "https://arxiv.org/pdf/2603.03379",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.03379",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "MemSifter：通过结果驱动的代理推理卸载LLM内存检索",
+        "chinese_summary": "MemSifter 通过使用小型代理模型进行推理来卸载 LLM 的内存检索过程，提高检索效率和准确性。",
+        "pain_point": "当前方法在成本和准确性之间存在权衡，且依赖于主 LLM 处理所有记忆导致计算成本高。",
+        "core_value": "通过代理模型推理减少主 LLM 负担，提高检索效率，无需复杂索引。",
+        "technical_architecture": "使用小型代理模型进行任务推理，然后检索必要信息。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化代理模型的训练方法。",
+        "key_contributions": [
+          "提出了一种新的框架 MemSifter，用于卸载 LLM 的内存检索过程。",
+          "引入了针对内存检索的强化学习训练方法。",
+          "设计了基于实际任务完成情况的奖励机制"
+        ],
+        "application_scenarios": [
+          "长期任务中的大语言模型内存管理",
+          "需要高效检索历史信息的场景"
+        ],
+        "technical_highlights": [
+          "使用小型代理模型进行推理，减轻主 LLM 负担。",
+          "基于实际任务完成情况的奖励机制优化代理模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04338",
+      "source": "huggingface",
+      "title": "ArtHOI: Articulated Human-Object Interaction Synthesis by 4D Reconstruction from Video Priors",
+      "authors": [
+        "Zihao Huang",
+        "Tianqi Liu",
+        "Zhaoxi Chen",
+        "Shaocong Xu",
+        "Saining Zhang",
+        "Lixing Xiao",
+        "Zhiguo Cao",
+        "Wei Li",
+        "Hao Zhao",
+        "Ziwei Liu"
+      ],
+      "abstract": "Synthesizing physically plausible articulated human-object interactions (HOI) without 3D/4D supervision remains a fundamental challenge. While recent zero-shot approaches leverage video diffusion models to synthesize human-object interactions, they are largely confined to rigid-object manipulation and lack explicit 4D geometric reasoning. To bridge this gap, we formulate articulated HOI synthesis as a 4D reconstruction problem from monocular video priors: given only a video generated by a diffusion model, we reconstruct a full 4D articulated scene without any 3D supervision. This reconstruction-based approach treats the generated 2D video as supervision for an inverse rendering problem, recovering geometrically consistent and physically plausible 4D scenes that naturally respect contact, articulation, and temporal coherence. We introduce ArtHOI, the first zero-shot framework for articulated human-object interaction synthesis via 4D reconstruction from video priors. Our key designs are: 1) Flow-based part segmentation: leveraging optical flow as a geometric cue to disentangle dynamic from static regions in monocular video; 2) Decoupled reconstruction pipeline: joint optimization of human motion and object articulation is unstable under monocular ambiguity, so we first recover object articulation, then synthesize human motion conditioned on the reconstructed object states. ArtHOI bridges video-based generation and geometry-aware reconstruction, producing interactions that are both semantically aligned and physically grounded. Across diverse articulated scenes (e.g., opening fridges, cabinets, microwaves), ArtHOI significantly outperforms prior methods in contact accuracy, penetration reduction, and articulation fidelity, extending zero-shot interaction synthesis beyond rigid manipulation through reconstruction-informed synthesis.",
+      "published_date": "2026-03-04T17:58:04.000Z",
+      "url": "https://arxiv.org/abs/2603.04338",
+      "pdf_url": "https://arxiv.org/pdf/2603.04338",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04338",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "ArtHOI: 从视频先验进行4D重建的 articulated 人-物交互合成",
+        "chinese_summary": "通过视频先验进行4D重建，实现无3D/4D监督的 articulated 人-物交互合成。",
+        "pain_point": "缺乏3D/4D监督下合成物理上合理的 articulated 人-物交互。",
+        "core_value": "首次提出基于视频先验的4D重建框架，实现无监督的 articulated 人-物交互合成。",
+        "technical_architecture": "利用视频先验进行4D重建，结合流场部分分割和解耦重建管道。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于单目视频，未来可探索多视角数据。",
+        "key_contributions": [
+          "提出基于视频先验的4D重建框架",
+          "引入流场部分分割方法",
+          "实现无3D监督的articulated 人-物交互合成"
+        ],
+        "application_scenarios": [
+          "虚拟现实与增强现实",
+          "机器人人机交互"
+        ],
+        "technical_highlights": [
+          "利用视频先验进行4D重建",
+          "解耦重建管道优化几何一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04304",
+      "source": "huggingface",
+      "title": "V_1: Unifying Generation and Self-Verification for Parallel Reasoners",
+      "authors": [
+        "Harman Singh",
+        "Xiuyu Li",
+        "Kusha Sareen",
+        "Monishwaran Maheswaran",
+        "Sijun Tan",
+        "Xiaoxia Wu",
+        "Junxiong Wang",
+        "Alpay Ariyak",
+        "Qingyang Wu",
+        "Samir Khaki",
+        "Rishabh Tiwari",
+        "Long Lian",
+        "Yucheng Lu",
+        "Boyi Li",
+        "Alane Suhr",
+        "Ben Athiwaratkun",
+        "Kurt Keutzer"
+      ],
+      "abstract": "Test-time scaling for complex reasoning tasks shows that leveraging inference-time compute, by methods such as independently sampling and aggregating multiple solutions, results in significantly better task outcomes. However, a critical bottleneck is verification: sampling is only effective if correct solutions can be reliably identified among candidates. While existing approaches typically evaluate candidates independently via scalar scoring, we demonstrate that models are substantially stronger at pairwise self-verification. Leveraging this insight, we introduce V_1, a framework that unifies generation and verification through efficient pairwise ranking. V_1 comprises two components: V_1-Infer, an uncertainty-guided algorithm using a tournament-based ranking that dynamically allocates self-verification compute to candidate pairs whose relative correctness is most uncertain; and V_1-PairRL, an RL framework that jointly trains a single model as both generator and pairwise self-verifier, ensuring the verifier adapts to the generator's evolving distribution. On code generation (LiveCodeBench, CodeContests, SWE-Bench) and math reasoning (AIME, HMMT) benchmarks, V_1-Infer improves Pass@1 by up to 10% over pointwise verification and outperforms recent test-time scaling methods while being significantly more efficient. Furthermore, V_1-PairRL achieves 7--9% test-time scaling gains over standard RL and pointwise joint training, and improves base Pass@1 by up to 8.7% over standard RL in a code-generation setting.",
+      "published_date": "2026-03-04T17:22:16.000Z",
+      "url": "https://arxiv.org/abs/2603.04304",
+      "pdf_url": "https://arxiv.org/pdf/2603.04304",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04304",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "V_1: 统一生成与自我验证的并行推理框架",
+        "chinese_summary": "通过高效的成对排名，V_1 提高了复杂推理任务的测试时扩展性。",
+        "pain_point": "现有方法在独立评估候选解时，难以可靠地识别正确解。",
+        "core_value": "V_1 通过成对自我验证提高了生成模型的准确性。",
+        "technical_architecture": "V_1 包含 V_1-Infer 和 V_1-PairRL 两个组件。",
+        "quantitative_results": "在代码生成和数学推理基准测试中，V_1-Infer 提升了通过率。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多任务上验证其有效性。",
+        "key_contributions": [
+          "提出了 V_1 框架统一生成与自我验证",
+          "引入了基于成对自我验证的高效算法",
+          "联合训练生成器和自我验证器"
+        ],
+        "application_scenarios": [
+          "代码生成",
+          "数学推理"
+        ],
+        "technical_highlights": [
+          "成对自我验证显著提高准确性",
+          "动态分配计算资源"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.03282",
+      "source": "huggingface",
+      "title": "MIBURI: Towards Expressive Interactive Gesture Synthesis",
+      "authors": [
+        "M. Hamza Mughal",
+        "Rishabh Dabral",
+        "Vera Demberg",
+        "Christian Theobalt"
+      ],
+      "abstract": "Embodied Conversational Agents (ECAs) aim to emulate human face-to-face interaction through speech, gestures, and facial expressions. Current large language model (LLM)-based conversational agents lack embodiment and the expressive gestures essential for natural interaction. Existing solutions for ECAs often produce rigid, low-diversity motions, that are unsuitable for human-like interaction. Alternatively, generative methods for co-speech gesture synthesis yield natural body gestures but depend on future speech context and require long run-times. To bridge this gap, we present MIBURI, the first online, causal framework for generating expressive full-body gestures and facial expressions synchronized with real-time spoken dialogue. We employ body-part aware gesture codecs that encode hierarchical motion details into multi-level discrete tokens. These tokens are then autoregressively generated by a two-dimensional causal framework conditioned on LLM-based speech-text embeddings, modeling both temporal dynamics and part-level motion hierarchy in real time. Further, we introduce auxiliary objectives to encourage expressive and diverse gestures while preventing convergence to static poses. Comparative evaluations demonstrate that our causal and real-time approach produces natural and contextually aligned gestures against recent baselines. We urge the reader to explore demo videos on https://vcai.mpi-inf.mpg.de/projects/MIBURI/.",
+      "published_date": "2026-03-03T18:59:51.000Z",
+      "url": "https://arxiv.org/abs/2603.03282",
+      "pdf_url": "https://arxiv.org/pdf/2603.03282",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.03282",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "MIBURI：迈向表达性互动手势合成",
+        "chinese_summary": "提出MIBURI，一种实时生成与口语对话同步的表达性全身手势和面部表情的框架。",
+        "pain_point": "现有对话代理缺乏表达性手势，导致交互不自然。",
+        "core_value": "实时生成与口语对话同步的表达性手势，提高交互自然度。",
+        "technical_architecture": "采用身体部位感知的手势编解码器和二维因果框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化生成效率。",
+        "key_contributions": [
+          "提出实时生成与口语对话同步的表达性手势框架",
+          "采用身体部位感知的手势编解码器",
+          "引入辅助目标鼓励生成多样且表达性强的手势"
+        ],
+        "application_scenarios": [
+          "虚拟助手",
+          "虚拟角色"
+        ],
+        "technical_highlights": [
+          "实时生成与口语对话同步的手势",
+          "采用身体部位感知的手势编解码器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04291",
+      "source": "huggingface",
+      "title": "CubeComposer: Spatio-Temporal Autoregressive 4K 360° Video Generation from Perspective Video",
+      "authors": [
+        "Lingen Li",
+        "Guangzhi Wang",
+        "Xiaoyu Li",
+        "Zhaoyang Zhang",
+        "Qi Dou",
+        "Jinwei Gu",
+        "Tianfan Xue",
+        "Ying Shan"
+      ],
+      "abstract": "Generating high-quality 360° panoramic videos from perspective input is one of the crucial applications for virtual reality (VR), whereby high-resolution videos are especially important for immersive experience. Existing methods are constrained by computational limitations of vanilla diffusion models, only supporting leq 1K resolution native generation and relying on suboptimal post super-resolution to increase resolution. We introduce CubeComposer, a novel spatio-temporal autoregressive diffusion model that natively generates 4K-resolution 360° videos. By decomposing videos into cubemap representations with six faces, CubeComposer autoregressively synthesizes content in a well-planned spatio-temporal order, reducing memory demands while enabling high-resolution output. Specifically, to address challenges in multi-dimensional autoregression, we propose: (1) a spatio-temporal autoregressive strategy that orchestrates 360° video generation across cube faces and time windows for coherent synthesis; (2) a cube face context management mechanism, equipped with a sparse context attention design to improve efficiency; and (3) continuity-aware techniques, including cube-aware positional encoding, padding, and blending to eliminate boundary seams. Extensive experiments on benchmark datasets demonstrate that CubeComposer outperforms state-of-the-art methods in native resolution and visual quality, supporting practical VR application scenarios. Project page: https://lg-li.github.io/project/cubecomposer",
+      "published_date": "2026-03-04T17:06:56.000Z",
+      "url": "https://arxiv.org/abs/2603.04291",
+      "pdf_url": "https://arxiv.org/pdf/2603.04291",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04291",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "CubeComposer: 从视角视频生成4K全景视频的空间-时间自回归模型",
+        "chinese_summary": "提出了一种新型空间-时间自回归扩散模型，能够原生生成4K分辨率的360°全景视频。",
+        "pain_point": "现有方法受限于计算能力，仅支持低分辨率生成，并依赖于次优的后处理超分辨率。",
+        "core_value": "能够原生生成高分辨率的360°全景视频，提高沉浸体验。",
+        "technical_architecture": "通过将视频分解为六面体表示，并采用空间-时间自回归策略进行合成。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索更多应用场景。",
+        "key_contributions": [
+          "提出了一种空间-时间自回归策略，用于360°视频的多维自回归合成。",
+          "设计了一种稀疏上下文注意力机制，提高效率。",
+          "引入了空间感知位置编码技术，增强连续性"
+        ],
+        "application_scenarios": [
+          "虚拟现实体验",
+          "全景视频生成"
+        ],
+        "technical_highlights": [
+          "六面体表示法",
+          "空间-时间自回归策略",
+          "稀疏上下文注意力机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04257",
+      "source": "huggingface",
+      "title": "Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory",
+      "authors": [
+        "Zhenting Wang",
+        "Huancheng Chen",
+        "Jiayun Wang",
+        "Wei Wei"
+      ],
+      "abstract": "Large language model (LLM) agents are fundamentally bottlenecked by finite context windows on long-horizon tasks. As trajectories grow, retaining tool outputs and intermediate reasoning in-context quickly becomes infeasible: the working context becomes prohibitively long, eventually exceeds the context budget, and makes distant evidence harder to use even when it is still present. Existing solutions typically shorten context through truncation or running summaries, but these methods are fundamentally lossy because they compress or discard past evidence itself. We introduce Memex, an indexed experience memory mechanism that instead compresses context without discarding evidence. Memex maintains a compact working context consisting of concise structured summaries and stable indices, while storing full-fidelity underlying interactions in an external experience database under those indices. The agent can then decide when to dereference an index and recover the exact past evidence needed for the current subgoal. We optimize both write and read behaviors with our reinforcement learning framework MemexRL, using reward shaping tailored to indexed memory usage under a context budget, so the agent learns what to summarize, what to archive, how to index it, and when to retrieve it. This yields a substantially less lossy form of long-horizon memory than summary-only approaches. We further provide a theoretical analysis showing the potential of the Memex loop to preserve decision quality with bounded dereferencing while keeping effective in-context computation bounded as history grows. Empirically, on challenging long-horizon tasks, Memex agent trained with MemexRL improves task success while using a significantly smaller working context.",
+      "published_date": "2026-03-04T16:45:06.000Z",
+      "url": "https://arxiv.org/abs/2603.04257",
+      "pdf_url": "https://arxiv.org/pdf/2603.04257",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04257",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "Memex(RL): 通过索引经验记忆扩展大型语言模型代理的长期任务能力",
+        "chinese_summary": "Memex 通过索引经验记忆机制，优化长期任务中的上下文管理。",
+        "pain_point": "现有方法通过截断或摘要压缩上下文，导致信息丢失。",
+        "core_value": "Memex 保持完整证据而不丢弃，优化长期任务中的上下文使用。",
+        "technical_architecture": "Memex 使用索引经验和结构化摘要，结合 MemexRL 框架进行优化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证在更广泛任务上的适用性。",
+        "key_contributions": [
+          "引入索引经验记忆机制",
+          "优化上下文管理以支持长期任务"
+        ],
+        "application_scenarios": [
+          "长期规划任务",
+          "多步骤决策任务"
+        ],
+        "technical_highlights": [
+          "使用索引恢复完整证据",
+          "结合 RL 框架进行优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

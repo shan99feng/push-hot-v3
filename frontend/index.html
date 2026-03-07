@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Papers Daily · 每日AI论文速递</title>
+  <meta name="description" content="每天推送最新AI领域热点论文，涵盖LLM大模型、多模态、搜广推等领域，附带AI生成的详细摘要和亮点分析。" />
+  <script src="js/tailwind.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #1a365d;
+      --color-primary-light: #2a4a7f;
+      --color-primary-dark: #0f2040;
+      --color-accent: #3182ce;
+      --color-accent-light: #4299e1;
+      --color-accent-dark: #2b6cb0;
+      --font-family-sans: Inter, "Noto Sans SC", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- ===== 顶部导航栏 ===== -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center shadow-sm group-hover:bg-primary-light transition-colors">
+            <i class="fa fa-file-text-o text-white text-base"></i>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-primary leading-tight">AI Papers Daily</div>
+            <div class="text-xs text-gray-500 leading-tight">每日 AI 论文速递</div>
+          </div>
+        </a>
+
+        <!-- 导航菜单 -->
+        <nav class="hidden md:flex items-center gap-1">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-primary bg-blue-50">
+            <i class="fa fa-fire mr-1.5"></i>今日推送
+          </a>
+          <a href="history.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors">
+            <i class="fa fa-calendar mr-1.5"></i>历史论文
+          </a>
+          <a href="classics.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors">
+            <i class="fa fa-star mr-1.5"></i>经典论文
+          </a>
+        </nav>
+
+        <!-- 右侧：搜索 + 移动端菜单 -->
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input type="text" id="headerSearch" placeholder="搜索论文..."
+              class="w-56 pl-9 pr-4 py-2 text-sm bg-gray-100 border border-transparent rounded-lg focus:outline-none focus:bg-white focus:border-accent transition-all" />
+            <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+          </div>
+          <span id="updateTime" class="hidden lg:block text-xs text-gray-400"></span>
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+            <i class="fa fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 移动端菜单 -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100 bg-white px-4 py-3 space-y-1">
+      <a href="index.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-primary bg-blue-50">
+        <i class="fa fa-fire"></i>今日推送
+      </a>
+      <a href="history.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        <i class="fa fa-calendar"></i>历史论文
+      </a>
+      <a href="classics.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        <i class="fa fa-star"></i>经典论文
+      </a>
+      <div class="pt-2 relative">
+        <input type="text" id="mobileSearch" placeholder="搜索论文..."
+          class="w-full pl-9 pr-4 py-2 text-sm bg-gray-100 rounded-lg focus:outline-none" />
+        <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" style="top:calc(50% + 4px)"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== 主体 ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex gap-6">
+
+      <!-- 左侧边栏：历史日期 -->
+      <aside class="hidden lg:block w-52 flex-shrink-0">
+        <div class="sticky top-24 space-y-4">
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <div class="px-4 py-3 border-b border-gray-100 bg-gray-50">
+              <h3 class="text-sm font-semibold text-gray-700">
+                <i class="fa fa-history mr-1.5 text-accent"></i>历史记录
+              </h3>
+            </div>
+            <nav id="dateNav" class="p-2 max-h-96 overflow-y-auto">
+              <div class="text-center py-4 text-gray-400 text-sm">加载中...</div>
+            </nav>
+          </div>
+
+          <!-- 今日统计 -->
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
+            <h3 class="text-sm font-semibold text-gray-700 mb-3">
+              <i class="fa fa-bar-chart mr-1.5 text-accent"></i>今日统计
+            </h3>
+            <div class="space-y-1" id="sidebarStats">
+              <div class="flex justify-between items-center text-sm px-1 py-0.5">
+                <span class="text-gray-500">论文总数</span>
+                <span id="statTotal" class="font-semibold text-primary">-</span>
+              </div>
+              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="llm">
+                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-user mr-1 text-blue-400"></i>大模型</span>
+                <span id="statLLM" class="font-semibold text-blue-600">-</span>
+              </div>
+              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="multimodal">
+                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-image mr-1 text-purple-400"></i>多模态</span>
+                <span id="statMultimodal" class="font-semibold text-purple-600">-</span>
+              </div>
+              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="agent">
+                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-android mr-1 text-yellow-500"></i>Agent</span>
+                <span id="statAgent" class="font-semibold text-yellow-600">-</span>
+              </div>
+              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="cv">
+                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-eye mr-1 text-green-400"></i>计算机视觉</span>
+                <span id="statCV" class="font-semibold text-green-600">-</span>
+              </div>
+              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="nlp">
+                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-language mr-1 text-teal-400"></i>NLP</span>
+                <span id="statNLP" class="font-semibold text-teal-600">-</span>
+              </div>
+              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="recsys">
+                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-search mr-1 text-orange-400"></i>搜广推</span>
+                <span id="statRecsys" class="font-semibold text-orange-600">-</span>
+              </div>
+              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="rl">
+                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-gamepad mr-1 text-rose-400"></i>强化学习</span>
+                <span id="statRL" class="font-semibold text-rose-600">-</span>
+              </div>
+            </div>
+          </div>        </div>
+      </aside>
+
+      <!-- 主内容区 -->
+      <main class="flex-1 min-w-0">
+
+        <!-- 页面标题 -->
+        <div class="flex items-center justify-between mb-5">
+          <div>
+            <h1 class="text-2xl font-bold text-primary">今日论文推送</h1>
+            <p class="text-sm text-gray-500 mt-0.5" id="pageSubtitle">加载中...</p>
+          </div>
+          <button id="btnRefresh" class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-accent border border-accent rounded-lg hover:bg-blue-50 transition-colors">
+            <i class="fa fa-refresh" id="refreshIcon"></i>刷新
+          </button>
+        </div>
+
+        <!-- 筛选工具栏 -->
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 mb-5">
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="flex flex-wrap gap-2" id="categoryFilter">
+              <button class="cat-tab active" data-category="all">全部</button>
+              <button class="cat-tab" data-category="llm"><i class="fa fa-user mr-1"></i>大模型</button>
+              <button class="cat-tab" data-category="multimodal"><i class="fa fa-image mr-1"></i>多模态</button>
+              <button class="cat-tab" data-category="agent"><i class="fa fa-android mr-1"></i>Agent</button>
+              <button class="cat-tab" data-category="cv"><i class="fa fa-eye mr-1"></i>视觉</button>
+              <button class="cat-tab" data-category="nlp"><i class="fa fa-language mr-1"></i>NLP</button>
+              <button class="cat-tab" data-category="recsys"><i class="fa fa-search mr-1"></i>搜广推</button>
+              <button class="cat-tab" data-category="rl"><i class="fa fa-gamepad mr-1"></i>强化学习</button>
+            </div>
+            <div class="ml-auto flex items-center gap-2">
+              <select id="sortSelect" class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 text-gray-600 focus:outline-none focus:border-accent bg-white">
+                <option value="hot_score">热度排序</option>
+                <option value="upvotes">点赞排序</option>
+                <option value="date">时间排序</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- 统计信息条 -->
+        <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+          <span id="statsText"></span>
+        </div>
+
+        <!-- 加载状态 -->
+        <div id="loadingState" class="flex flex-col items-center justify-center py-20 text-gray-400">
+          <div class="loading-spinner mb-4"></div>
+          <p class="text-sm">正在加载论文数据...</p>
+        </div>
+
+        <!-- 论文列表 -->
+        <div id="paperList" class="space-y-4"></div>
+
+        <!-- 空状态 -->
+        <div id="emptyState" class="hidden flex flex-col items-center justify-center py-20 text-gray-400">
+          <i class="fa fa-search text-5xl mb-4 opacity-30"></i>
+          <p class="text-base font-medium">暂无匹配论文</p>
+          <p class="text-sm mt-1">尝试调整筛选条件</p>
+        </div>
+
+        <!-- 加载更多 -->
+        <div id="loadMoreWrap" class="hidden text-center mt-6">
+          <button id="btnLoadMore" class="px-8 py-3 text-sm font-medium text-accent border border-accent rounded-lg hover:bg-blue-50 transition-colors">
+            <i class="fa fa-chevron-down mr-2"></i>加载更多论文
+          </button>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ===== 论文卡片模板 ===== -->
+  <template id="paperTpl">
+    <article class="paper-card bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all overflow-hidden">
+      <div class="p-5">
+        <!-- 顶部元信息 -->
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="source-badge badge"></span>
+            <span class="cat-badge badge"></span>
+            <span class="paper-date text-xs text-gray-400"></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="upvotes-tag hidden items-center gap-1 text-xs text-rose-500 font-medium">
+              <i class="fa fa-heart"></i><span class="upvotes-num"></span>
+            </span>
+            <button class="favorite-btn p-1.5 rounded-lg text-gray-400 hover:text-rose-500 hover:bg-rose-50 transition-colors" title="收藏">
+              <i class="fa fa-bookmark-o text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 标题 -->
+        <div class="mb-3">
+          <h2 class="paper-title-en text-base font-semibold text-gray-900 leading-snug hover:text-accent cursor-pointer transition-colors"></h2>
+          <div class="paper-title-zh hidden text-sm font-medium text-primary mt-1"></div>
+        </div>
+
+        <!-- 作者 -->
+        <div class="paper-authors text-xs text-gray-500 mb-3 truncate"></div>
+
+        <!-- 一句话摘要 -->
+        <div class="paper-summary-short hidden text-sm text-gray-600 leading-relaxed mb-3 bg-blue-50 border-l-2 border-accent px-3 py-2 rounded-r-lg"></div>
+
+        <!-- 详细分析（折叠） -->
+        <div class="paper-analysis hidden mt-4 space-y-4 border-t border-gray-100 pt-4">
+          <section>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-base">📄</span>
+              <span class="text-sm font-semibold text-gray-700">论文摘要</span>
+            </div>
+            <div class="abstract-content text-sm text-gray-600 leading-relaxed bg-gray-50 rounded-lg p-3"></div>
+          </section>
+          <section class="highlights-block hidden">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-base">✦</span>
+              <span class="text-sm font-semibold text-gray-700">核心亮点</span>
+            </div>
+            <ul class="highlights-list space-y-1.5"></ul>
+          </section>
+          <section class="techarch-block hidden">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-base">⚙</span>
+              <span class="text-sm font-semibold text-gray-700">技术方法</span>
+            </div>
+            <p class="techarch-content text-sm text-gray-600 leading-relaxed bg-purple-50 rounded-lg p-3"></p>
+          </section>
+          <section class="limitations-block hidden">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-base">⚠</span>
+              <span class="text-sm font-semibold text-gray-700">局限性</span>
+            </div>
+            <p class="limitations-content text-sm text-gray-600 leading-relaxed bg-orange-50 rounded-lg p-3"></p>
+          </section>
+        </div>
+
+        <!-- 底部操作栏 -->
+        <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+          <div class="paper-tags flex flex-wrap gap-1.5"></div>
+          <div class="flex items-center gap-2">
+            <button class="btn-expand text-xs text-accent font-medium flex items-center gap-1 hover:text-accent-dark transition-colors">
+              展开分析 <i class="fa fa-chevron-down expand-icon text-xs transition-transform"></i>
+            </button>
+            <a class="btn-detail text-xs font-medium px-3 py-1.5 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors" href="#" >
+              详情 <i class="fa fa-arrow-right ml-1"></i>
+            </a>
+            <a class="btn-paper-link text-xs font-medium px-3 py-1.5 bg-primary text-white rounded-lg hover:bg-primary-light transition-colors" href="#" target="_blank" rel="noopener">
+              原文 <i class="fa fa-external-link ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <!-- ===== 搜索浮层 ===== -->
+  <div id="searchOverlay" class="hidden fixed inset-0 bg-black/50 z-40 flex items-start justify-center pt-20 px-4">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[70vh] overflow-hidden flex flex-col">
+      <div class="flex items-center gap-3 p-4 border-b border-gray-100">
+        <i class="fa fa-search text-gray-400"></i>
+        <input type="text" id="searchInput" placeholder="搜索论文标题、作者、关键词..."
+          class="flex-1 text-sm focus:outline-none" autofocus />
+        <button id="searchClose" class="p-1 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100">
+          <i class="fa fa-times text-lg"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="overflow-y-auto p-4 space-y-3">
+        <div class="text-center text-gray-400 text-sm py-8">输入关键词开始搜索</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="mt-12 border-t border-gray-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <i class="fa fa-file-text-o text-white text-sm"></i>
+          </div>
+          <div>
+            <div class="text-sm font-semibold text-primary">AI Papers Daily</div>
+            <div class="text-xs text-gray-400">每日 AI 论文速递 · 数据来源 arXiv & HuggingFace</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-gray-500">
+          <a href="https://arxiv.org" target="_blank" class="hover:text-primary transition-colors">arXiv</a>
+          <a href="https://huggingface.co/papers" target="_blank" class="hover:text-primary transition-colors">HuggingFace</a>
+          <a href="https://github.com" target="_blank" class="hover:text-primary transition-colors"><i class="fa fa-github mr-1"></i>GitHub</a>
+          <span class="text-gray-300">|</span>
+          <span>© 2026 AI Papers Daily</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button id="btnTop" class="hidden fixed bottom-6 right-6 w-10 h-10 bg-primary text-white rounded-full shadow-lg hover:bg-primary-light transition-all flex items-center justify-center z-30">
+    <i class="fa fa-chevron-up text-sm"></i>
+  </button>
+
+  <script src="js/utils.js?v=20260307"></script>
+  <script src="js/api.js?v=20260307"></script>
+<script src="js/index.js?v=20260307c"></script>
+</body>
+</html>

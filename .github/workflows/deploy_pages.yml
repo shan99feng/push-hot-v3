@@ -1,0 +1,53 @@
+name: 部署 GitHub Pages
+
+on:
+  # 每次推送到 main 分支时触发（包括每日数据更新后的推送）
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'push-hot-v3/frontend/**'
+      - 'push-hot-v3/data/**'
+  # 支持手动触发
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只允许一个部署任务运行
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 准备部署目录
+        run: |
+          # 将 data 目录复制到 frontend 目录下，供前端直接访问
+          cp -r push-hot-v3/data push-hot-v3/frontend/data
+          echo "✅ 数据目录已复制到 frontend/"
+          ls -la push-hot-v3/frontend/
+
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: 上传站点文件
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 部署 frontend 目录（已包含 data 子目录）
+          path: 'push-hot-v3/frontend'
+
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,406 @@
+/* ===== AI Papers Daily - 主样式文件 ===== */
+
+/* ===== 全局基础 ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== 加载动画 ===== */
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #3182ce;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== 分类标签按钮 ===== */
+.cat-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #4a5568;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.cat-tab:hover {
+  background: #ebf8ff;
+  border-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.cat-tab.active {
+  background: #ebf8ff;
+  border-color: #3182ce;
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+/* ===== 来源徽章 ===== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.source-badge.arxiv {
+  background: #fff5f5;
+  color: #c53030;
+  border: 1px solid #fed7d7;
+}
+
+.source-badge.huggingface {
+  background: #fffaf0;
+  color: #c05621;
+  border: 1px solid #feebc8;
+}
+
+.source-badge.github {
+  background: #f0fff4;
+  color: #276749;
+  border: 1px solid #c6f6d5;
+}
+
+.source-badge.manual {
+  background: #f0f4ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+}
+
+/* ===== 分类徽章 ===== */
+.cat-badge {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  border: 1px solid #bee3f8;
+}
+
+.cat-badge.llm { background: #ebf8ff; color: #2b6cb0; border-color: #bee3f8; }
+.cat-badge.multimodal { background: #faf5ff; color: #6b21a8; border-color: #e9d5ff; }
+.cat-badge.agent { background: #f0fff4; color: #276749; border-color: #c6f6d5; }
+.cat-badge.cv { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+.cat-badge.nlp { background: #f0fdfa; color: #0f766e; border-color: #99f6e4; }
+.cat-badge.recsys { background: #fefce8; color: #a16207; border-color: #fef08a; }
+.cat-badge.rl { background: #fff1f2; color: #be123c; border-color: #fecdd3; }
+.cat-badge.other { background: #f8fafc; color: #475569; border-color: #e2e8f0; }
+
+/* ===== 论文卡片 ===== */
+.paper-card {
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.paper-card:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== 展开/折叠动画 ===== */
+.paper-analysis {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== 亮点列表 ===== */
+.highlights-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.highlights-list li::before {
+  content: '✦';
+  color: #3182ce;
+  font-size: 0.625rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* ===== 优劣势列表 ===== */
+.pros-list li,
+.cons-list li {
+  font-size: 0.8125rem;
+  color: #4a5568;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.pros-list li::before {
+  content: '+';
+  color: #38a169;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cons-list li::before {
+  content: '−';
+  color: #dd6b20;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ===== 日期导航 ===== */
+.date-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.date-nav-item:hover {
+  background: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.date-nav-item.active {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+.date-nav-item .date-count {
+  font-size: 0.6875rem;
+  color: #a0aec0;
+  background: #f7fafc;
+  padding: 1px 6px;
+  border-radius: 9999px;
+}
+
+/* ===== 日历组件 ===== */
+.cal-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin: 1px auto;
+}
+
+.cal-day:hover:not(.cal-empty):not(.cal-no-data) {
+  background: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.cal-day.cal-has-data {
+  color: #2b6cb0;
+  font-weight: 600;
+  background: #ebf8ff;
+}
+
+.cal-day.cal-has-data:hover {
+  background: #bee3f8;
+}
+
+.cal-day.cal-selected {
+  background: #3182ce !important;
+  color: white !important;
+}
+
+.cal-day.cal-today {
+  border: 2px solid #3182ce;
+}
+
+.cal-day.cal-empty,
+.cal-day.cal-no-data {
+  color: #cbd5e0;
+  cursor: default;
+}
+
+/* ===== 详情页 Tab ===== */
+.detail-tab {
+  transition: all 0.15s ease;
+}
+
+.detail-tab.active {
+  color: #3182ce;
+  border-bottom-color: #3182ce;
+}
+
+/* ===== 评分星星 ===== */
+.rating-star {
+  cursor: pointer;
+  transition: color 0.1s ease, transform 0.1s ease;
+  line-height: 1;
+}
+
+.rating-star:hover,
+.rating-star.active {
+  color: #f6ad55 !important;
+  transform: scale(1.1);
+}
+
+/* ===== 搜索结果项 ===== */
+.search-result-item {
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.search-result-item:hover {
+  background: #f7fafc;
+  border-color: #e2e8f0;
+}
+
+/* ===== 回到顶部按钮 ===== */
+#btnTop {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+#btnTop.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 响应式调整 ===== */
+@media (max-width: 640px) {
+  .paper-card .p-5 {
+    padding: 1rem;
+  }
+}
+
+/* ===== 滚动条美化 ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* ===== 文字截断 ===== */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== 标签 ===== */
+.paper-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  color: #718096;
+}
+
+/* ===== 应用场景卡片 ===== */
+.scenario-card {
+  padding: 12px;
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+  border-radius: 10px;
+  font-size: 0.8125rem;
+  color: #276749;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scenario-card::before {
+  content: '🚀';
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ===== 技术亮点标签 ===== */
+.tech-highlight-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: #ebf8ff;
+  border: 1px solid #bee3f8;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  color: #2b6cb0;
+  font-weight: 500;
+}
+
+/* ===== 贡献点列表 ===== */
+.contrib-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #f7fafc;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.contrib-item-num {
+  width: 20px;
+  height: 20px;
+  background: #3182ce;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}

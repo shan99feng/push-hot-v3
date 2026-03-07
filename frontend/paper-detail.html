@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>论文详情 · AI Papers Daily</title>
+  <meta name="description" content="AI论文详情，包含AI生成的结构化摘要、核心亮点、技术分析和应用前景。" />
+  <script src="js/tailwind.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #1a365d;
+      --color-primary-light: #2a4a7f;
+      --color-primary-dark: #0f2040;
+      --color-accent: #3182ce;
+      --color-accent-light: #4299e1;
+      --color-accent-dark: #2b6cb0;
+      --font-sans: 'Inter', 'Noto Sans SC', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- 顶部导航栏 -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center shadow-sm group-hover:bg-primary-light transition-colors">
+            <i class="fa fa-file-text-o text-white text-base"></i>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-primary leading-tight">AI Papers Daily</div>
+            <div class="text-xs text-gray-500 leading-tight">每日 AI 论文速递</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-1">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors">
+            <i class="fa fa-home mr-1.5"></i>今日推送
+          </a>
+          <a href="history.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors">
+            <i class="fa fa-calendar mr-1.5"></i>历史论文
+          </a>
+          <a href="classics.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors">
+            <i class="fa fa-star mr-1.5"></i>经典论文
+          </a>
+        </nav>
+        <button onclick="history.back()" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors px-3 py-2 rounded-lg hover:bg-gray-100">
+          <i class="fa fa-arrow-left"></i><span class="hidden sm:inline">返回</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主体内容 -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- 加载状态 -->
+    <div id="loadingState" class="flex flex-col items-center justify-center py-24 text-gray-400">
+      <div class="loading-spinner mb-4"></div>
+      <p class="text-sm">正在加载论文详情...</p>
+    </div>
+
+    <!-- 错误状态 -->
+    <div id="errorState" class="hidden text-center py-24">
+      <i class="fa fa-exclamation-circle text-5xl text-gray-300 mb-4 block"></i>
+      <p class="text-lg font-medium text-gray-500 mb-2">论文不存在或加载失败</p>
+      <p class="text-sm text-gray-400 mb-6">该论文可能已超出搜索范围（最近30天）</p>
+      <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-light transition-colors">
+        <i class="fa fa-home"></i>返回首页
+      </a>
+    </div>
+
+    <!-- 论文详情 -->
+    <article id="paperDetail" class="hidden">
+
+      <!-- 面包屑 -->
+      <nav class="flex items-center gap-2 text-sm text-gray-400 mb-6 flex-wrap">
+        <a href="index.html" class="hover:text-primary transition-colors">首页</a>
+        <i class="fa fa-chevron-right text-xs"></i>
+        <span id="breadcrumbCategory" class="text-gray-500"></span>
+        <i class="fa fa-chevron-right text-xs"></i>
+        <span id="breadcrumbTitle" class="text-gray-700 truncate max-w-xs"></span>
+      </nav>
+
+      <!-- 论文头部信息卡片 -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mb-6">
+        <!-- 标签行 -->
+        <div class="flex items-center gap-2 flex-wrap mb-4">
+          <span id="detailSourceBadge" class="badge source-badge"></span>
+          <span id="detailCatBadge" class="badge cat-badge"></span>
+          <span id="detailDate" class="text-xs text-gray-400"></span>
+          <span id="detailUpvotes" class="hidden items-center gap-1 text-xs text-rose-500 font-medium ml-auto">
+            <i class="fa fa-heart"></i>
+            <span id="detailUpvotesNum"></span> 点赞
+          </span>
+        </div>
+
+        <!-- 英文标题 -->
+        <h1 id="detailTitleEn" class="text-xl sm:text-2xl font-bold text-gray-900 leading-snug mb-2"></h1>
+
+        <!-- 中文标题 -->
+        <h2 id="detailTitleZh" class="hidden text-lg font-semibold text-primary mb-4"></h2>
+
+        <!-- 作者 -->
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 mb-5">
+          <span id="detailAuthors" class="flex items-center gap-1.5">
+            <i class="fa fa-users text-gray-400"></i>
+          </span>
+        </div>
+
+        <!-- 链接按钮组 -->
+        <div class="flex flex-wrap gap-3">
+          <a id="linkPaper" href="#" target="_blank" rel="noopener"
+            class="flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-light transition-colors">
+            <i class="fa fa-file-text-o"></i>阅读原文
+          </a>
+          <a id="linkPDF" href="#" target="_blank" rel="noopener"
+            class="hidden items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
+            <i class="fa fa-download"></i>下载 PDF
+          </a>
+          <a id="linkCode" href="#" target="_blank" rel="noopener"
+            class="hidden items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
+            <i class="fa fa-github"></i>查看代码
+          </a>
+          <a id="linkHF" href="#" target="_blank" rel="noopener"
+            class="hidden items-center gap-2 px-4 py-2 border border-orange-300 text-orange-700 text-sm font-medium rounded-lg hover:bg-orange-50 transition-colors">
+            🤗 HuggingFace
+          </a>
+          <div class="ml-auto flex items-center gap-2">
+            <button id="btnFavorite"
+              class="flex items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
+              <i class="fa fa-bookmark-o" id="favoriteIcon"></i>
+              <span id="favoriteText">收藏</span>
+            </button>
+            <button id="btnShare"
+              class="flex items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
+              <i class="fa fa-share-alt"></i>分享
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI 核心贡献 Banner -->
+      <div id="coreSummaryBlock" class="hidden bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 p-5 mb-6">
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i class="fa fa-lightbulb-o text-white text-sm"></i>
+          </div>
+          <div>
+            <div class="text-xs font-semibold text-accent uppercase tracking-wide mb-1.5">🤖 AI 核心贡献摘要</div>
+            <p id="coreSummaryText" class="text-base font-medium text-gray-800 leading-relaxed"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 详细分析卡片（Tab 切换） -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-6">
+        <!-- Tab 导航 -->
+        <div class="flex border-b border-gray-100 overflow-x-auto">
+          <button class="detail-tab active flex-shrink-0 px-5 py-3.5 text-sm font-medium text-accent border-b-2 border-accent" data-tab="abstract">
+            📄 摘要
+          </button>
+          <button class="detail-tab flex-shrink-0 px-5 py-3.5 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent transition-colors" data-tab="analysis">
+            ✦ 亮点分析
+          </button>
+          <button class="detail-tab flex-shrink-0 px-5 py-3.5 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent transition-colors" data-tab="critique">
+            ⚖ 优劣锐评
+          </button>
+          <button class="detail-tab flex-shrink-0 px-5 py-3.5 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent transition-colors" data-tab="application">
+            🚀 应用前景
+          </button>
+        </div>
+
+        <!-- Tab 内容 -->
+        <div class="p-6">
+          <!-- 摘要 Tab -->
+          <div id="tab-abstract" class="tab-content">
+            <p id="abstractContent" class="text-sm text-gray-700 leading-relaxed"></p>
+          </div>
+
+          <!-- 亮点分析 Tab -->
+          <div id="tab-analysis" class="tab-content hidden space-y-5">
+            <div id="painPointBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                <span class="w-5 h-5 bg-red-100 rounded flex items-center justify-center text-xs">🎯</span>核心痛点
+              </h3>
+              <p id="painPointText" class="text-sm text-gray-600 leading-relaxed bg-red-50 rounded-lg p-3"></p>
+            </div>
+            <div id="coreValueBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                <span class="w-5 h-5 bg-blue-100 rounded flex items-center justify-center text-xs">💡</span>核心价值
+              </h3>
+              <p id="coreValueText" class="text-sm text-gray-600 leading-relaxed bg-blue-50 rounded-lg p-3"></p>
+            </div>
+            <div id="techArchBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                <span class="w-5 h-5 bg-purple-100 rounded flex items-center justify-center text-xs">⚙</span>技术方法
+              </h3>
+              <p id="techArchText" class="text-sm text-gray-600 leading-relaxed bg-purple-50 rounded-lg p-3"></p>
+            </div>
+            <div id="quantResultBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                <span class="w-5 h-5 bg-green-100 rounded flex items-center justify-center text-xs">📊</span>量化结果
+              </h3>
+              <p id="quantResultText" class="text-sm text-gray-600 leading-relaxed bg-green-50 rounded-lg p-3"></p>
+            </div>
+            <div id="keyContribBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                <span class="w-5 h-5 bg-yellow-100 rounded flex items-center justify-center text-xs">✦</span>关键贡献
+              </h3>
+              <div id="keyContribList" class="space-y-2"></div>
+            </div>
+          </div>
+
+          <!-- 优劣锐评 Tab -->
+          <div id="tab-critique" class="tab-content hidden space-y-5">
+            <div id="competitorsBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                <span class="w-5 h-5 bg-gray-100 rounded flex items-center justify-center text-xs">🏆</span>对比基线
+              </h3>
+              <p id="competitorsText" class="text-sm text-gray-600 leading-relaxed bg-gray-50 rounded-lg p-3"></p>
+            </div>
+            <div id="techHighlightsBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                <span class="w-5 h-5 bg-blue-100 rounded flex items-center justify-center text-xs">⚡</span>技术亮点
+              </h3>
+              <div id="techHighlightsList" class="flex flex-wrap gap-2"></div>
+            </div>
+            <div id="limitationsBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                <span class="w-5 h-5 bg-orange-100 rounded flex items-center justify-center text-xs">⚠</span>局限性
+              </h3>
+              <p id="limitationsText" class="text-sm text-gray-600 leading-relaxed bg-orange-50 rounded-lg p-3"></p>
+            </div>
+          </div>
+
+          <!-- 应用前景 Tab -->
+          <div id="tab-application" class="tab-content hidden">
+            <div id="scenariosBlock" class="hidden">
+              <h3 class="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                <span class="w-5 h-5 bg-green-100 rounded flex items-center justify-center text-xs">🚀</span>应用场景
+              </h3>
+              <div id="scenariosList" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+            </div>
+            <div id="noApplicationData" class="text-center py-8 text-gray-400 text-sm">
+              暂无应用场景数据
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 相关操作 -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p class="text-sm font-medium text-gray-700 mb-1">觉得这篇论文有价值？</p>
+            <p class="text-xs text-gray-400">收藏后可在「我的收藏」中随时查看</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <button id="btnFavorite2"
+              class="flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-light transition-colors">
+              <i class="fa fa-bookmark-o" id="favoriteIcon2"></i>
+              <span id="favoriteText2">收藏论文</span>
+            </button>
+            <button id="btnShare2"
+              class="flex items-center gap-2 px-5 py-2.5 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
+              <i class="fa fa-share-alt"></i>分享
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- 分享弹窗 -->
+  <div id="shareModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-4">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-base font-semibold text-gray-800">分享论文</h3>
+        <button id="shareClose" class="p-1 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100">
+          <i class="fa fa-times text-lg"></i>
+        </button>
+      </div>
+      <div class="space-y-3">
+        <button id="shareCopyLink" class="w-full flex items-center gap-3 px-4 py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors text-sm text-gray-700">
+          <i class="fa fa-link text-accent"></i>复制页面链接
+        </button>
+        <button id="shareCopyTitle" class="w-full flex items-center gap-3 px-4 py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors text-sm text-gray-700">
+          <i class="fa fa-clipboard text-green-500"></i>复制标题+链接
+        </button>
+        <a id="shareTwitter" href="#" target="_blank"
+          class="w-full flex items-center gap-3 px-4 py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors text-sm text-gray-700">
+          <i class="fa fa-twitter text-blue-400"></i>分享到 Twitter/X
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 回到顶部 -->
+  <button id="btnTop" class="hidden fixed bottom-6 right-6 w-10 h-10 bg-primary text-white rounded-full shadow-lg hover:bg-primary-light transition-all flex items-center justify-center z-30">
+    <i class="fa fa-chevron-up text-sm"></i>
+  </button>
+
+<script src="js/utils.js?v=20260307b"></script>
+<script src="js/api.js?v=20260307b"></script>
+  <script src="js/paper-detail.js"></script>
+</body>
+</html>

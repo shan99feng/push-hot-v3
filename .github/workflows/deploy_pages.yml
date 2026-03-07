@@ -5,8 +5,8 @@ on:
   push:
     branches: [ main, master ]
     paths:
-      - 'push-hot-v3/frontend/**'
-      - 'push-hot-v3/data/**'
+      - 'frontend/**'
+      - 'data/**'
   # 支持手动触发
   workflow_dispatch:
 
@@ -35,9 +35,9 @@ jobs:
       - name: 准备部署目录
         run: |
           # 将 data 目录复制到 frontend 目录下，供前端直接访问
-          cp -r push-hot-v3/data push-hot-v3/frontend/data
+          cp -r data frontend/data
           echo "✅ 数据目录已复制到 frontend/"
-          ls -la push-hot-v3/frontend/
+          ls -la frontend/
 
       - name: 配置 GitHub Pages
         uses: actions/configure-pages@v4
@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # 部署 frontend 目录（已包含 data 子目录）
-          path: 'push-hot-v3/frontend'
+          path: 'frontend'
 
       - name: 部署到 GitHub Pages
         id: deployment

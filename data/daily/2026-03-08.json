@@ -1,0 +1,537 @@
+{
+  "date": "2026-03-08",
+  "generated_at": "2026-03-08T04:05:27.179455+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.04800",
+      "source": "huggingface",
+      "title": "MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models",
+      "authors": [
+        "Lulu Hu",
+        "Wenhu Xiao",
+        "Xin Chen",
+        "Xinhua Xu",
+        "Bowen Xu",
+        "Kun Li",
+        "Yongliang Tao"
+      ],
+      "abstract": "Post-training quantization (PTQ) with computational invariance for Large Language Models~(LLMs) have demonstrated remarkable advances, however, their application to Multimodal Large Language Models~(MLLMs) presents substantial challenges. In this paper, we analyze SmoothQuant as a case study and identify two critical issues: Smoothing Misalignment and Cross-Modal Computational Invariance. To address these issues, we propose Modality-Aware Smoothing Quantization (MASQuant), a novel framework that introduces (1) Modality-Aware Smoothing (MAS), which learns separate, modality-specific smoothing factors to prevent Smoothing Misalignment, and (2) Cross-Modal Compensation (CMC), which addresses Cross-modal Computational Invariance by using SVD whitening to transform multi-modal activation differences into low-rank forms, enabling unified quantization across modalities. MASQuant demonstrates stable quantization performance across both dual-modal and tri-modal MLLMs. Experimental results show that MASQuant is competitive among the state-of-the-art PTQ algorithms. Source code: https://github.com/alibaba/EfficientAI.",
+      "published_date": "2026-03-05T04:41:32.000Z",
+      "url": "https://arxiv.org/abs/2603.04800",
+      "pdf_url": "https://arxiv.org/pdf/2603.04800",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04800",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "MASQuant: 一种针对多模态大型语言模型的模态感知平滑量化方法",
+        "chinese_summary": "MASQuant 提供了稳定的量化性能，适用于双模态和三模态 MLLMs。",
+        "pain_point": "平滑失准和跨模态计算不变性。",
+        "core_value": "通过模态感知平滑和跨模态补偿，提高量化性能。",
+        "technical_architecture": "引入模态感知平滑和跨模态补偿机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证。",
+        "key_contributions": [
+          "提出模态感知平滑方法",
+          "引入跨模态补偿机制"
+        ],
+        "application_scenarios": [
+          "双模态 MLLMs",
+          "三模态 MLLMs"
+        ],
+        "technical_highlights": [
+          "模态感知平滑",
+          "跨模态补偿"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.02604",
+      "source": "huggingface",
+      "title": "Heterogeneous Agent Collaborative Reinforcement Learning",
+      "authors": [
+        "Zhixia Zhang",
+        "Zixuan Huang",
+        "Xin Xia",
+        "Deqing Wang",
+        "Fuzhen Zhuang",
+        "Shuai Ma",
+        "Ning Ding",
+        "Yaodong Yang",
+        "Jianxin Li",
+        "Yikun Ban"
+      ],
+      "abstract": "We introduce Heterogeneous Agent Collaborative Reinforcement Learning (HACRL), a new learning paradigm that addresses the inefficiencies of isolated on-policy optimization. HACRL enables collaborative optimization with independent execution: heterogeneous agents share verified rollouts during training to mutually improve, while operating independently at inference time. Unlike LLM-based multi-agent reinforcement learning (MARL), HACRL does not require coordinated deployment, and unlike on-/off-policy distillation, it enables bidirectional mutual learning among heterogeneous agents rather than one-directional teacher-to-student transfer. Building on this paradigm, we propose HACPO, a collaborative RL algorithm that enables principled rollout sharing to maximize sample utilization and cross-agent knowledge transfer. To mitigate capability discrepancies and policy distribution shifts, HACPO introduces four tailored mechanisms with theoretical guarantees on unbiased advantage estimation and optimization correctness. Extensive experiments across diverse heterogeneous model combinations and reasoning benchmarks show that HACPO consistently improves all participating agents, outperforming GSPO by an average of 3.3\\% while using only half the rollout cost.",
+      "published_date": "2026-03-03T05:09:49.000Z",
+      "url": "https://arxiv.org/abs/2603.02604",
+      "pdf_url": "https://arxiv.org/pdf/2603.02604",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.02604",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 5,
+      "hot_score": 50,
+      "structured_summary": {
+        "chinese_title": "异质代理协作强化学习",
+        "chinese_summary": "HACPO算法通过协作强化学习提高所有参与代理的表现。",
+        "pain_point": "现有的强化学习方法在处理异质代理协作优化时存在效率低下和协调部署困难的问题。",
+        "core_value": "HACRL提供了一种无需协调部署的异质代理协作优化方法，HACPO进一步通过机制确保了无偏优势估计和优化正确性。",
+        "technical_architecture": "HACPO算法通过引入协作回放共享机制来最大化样本利用和跨代理知识转移。",
+        "quantitative_results": "实验结果显示HACPO在多种异质模型组合和推理基准测试中均优于其他方法。",
+        "competitors": "对比了基于LLM的多代理强化学习方法。",
+        "limitations": "未来工作可以探索更多复杂场景下的应用。",
+        "key_contributions": [
+          "提出了HACRL新的学习范式",
+          "设计了HACPO算法",
+          "引入了四个机制确保无偏优势估计和优化正确性"
+        ],
+        "application_scenarios": [
+          "多智能体系统",
+          "复杂任务协作"
+        ],
+        "technical_highlights": [
+          "无需协调部署的异质代理协作优化",
+          "理论保证的无偏优势估计和优化正确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04379",
+      "source": "huggingface",
+      "title": "Helios: Real Real-Time Long Video Generation Model",
+      "authors": [
+        "Shenghai Yuan",
+        "Yuanyang Yin",
+        "Zongjian Li",
+        "Xinwei Huang",
+        "Xiao Yang",
+        "Li Yuan"
+      ],
+      "abstract": "We introduce Helios, the first 14B video generation model that runs at 19.5 FPS on a single NVIDIA H100 GPU and supports minute-scale generation while matching the quality of a strong baseline. We make breakthroughs along three key dimensions: (1) robustness to long-video drifting without commonly used anti-drifting heuristics such as self-forcing, error-banks, or keyframe sampling; (2) real-time generation without standard acceleration techniques such as KV-cache, sparse/linear attention, or quantization; and (3) training without parallelism or sharding frameworks, enabling image-diffusion-scale batch sizes while fitting up to four 14B models within 80 GB of GPU memory. Specifically, Helios is a 14B autoregressive diffusion model with a unified input representation that natively supports T2V, I2V, and V2V tasks. To mitigate drifting in long-video generation, we characterize typical failure modes and propose simple yet effective training strategies that explicitly simulate drifting during training, while eliminating repetitive motion at its source. For efficiency, we heavily compress the historical and noisy context and reduce the number of sampling steps, yielding computational costs comparable to -- or lower than -- those of 1.3B video generative models. Moreover, we introduce infrastructure-level optimizations that accelerate both inference and training while reducing memory consumption. Extensive experiments demonstrate that Helios consistently outperforms prior methods on both short- and long-video generation. We plan to release the code, base model, and distilled model to support further development by the community.",
+      "published_date": "2026-03-04T18:45:21.000Z",
+      "url": "https://arxiv.org/abs/2603.04379",
+      "pdf_url": "https://arxiv.org/pdf/2603.04379",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04379",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 5,
+      "hot_score": 50,
+      "structured_summary": {
+        "chinese_title": "Helios：实时长视频生成模型",
+        "chinese_summary": "Helios 是首个在单块 NVIDIA H100 GPU 上以 19.5 FPS 实时生成分钟级长视频的 14B 视频生成模型。",
+        "pain_point": "现有模型在长视频生成时容易出现漂移问题，且难以实现实时生成。",
+        "core_value": "Helios 通过创新的训练策略和高效压缩技术，解决了长视频生成中的漂移问题，并实现了实时生成。",
+        "technical_architecture": "Helios 是一个 14B 自回归扩散模型，采用统一输入表示支持多种任务。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前模型仅能在单块 GPU 上运行。",
+        "key_contributions": [
+          "提出了一种新的训练策略，有效缓解长视频生成中的漂移问题",
+          "通过高效压缩技术，实现实时长视频生成",
+          "无需并行或分片框架，支持大规模批量处理"
+        ],
+        "application_scenarios": [
+          "长视频实时生成",
+          "视频编辑与合成"
+        ],
+        "technical_highlights": [
+          "无需使用自强制、错误银行或关键帧采样等抗漂移技巧",
+          "不依赖标准加速技术，如 KV 缓存、稀疏/线性注意力或量化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.05504",
+      "source": "huggingface",
+      "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
+      "authors": [
+        "Junjie Fang",
+        "Wendi Chen",
+        "Han Xue",
+        "Fangyuan Zhou",
+        "Tian Le",
+        "Yi Wang",
+        "Yuting Zhang",
+        "Jun Lv",
+        "Chuan Wen",
+        "Cewu Lu"
+      ],
+      "abstract": "Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones. Its core innovation is a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors to proactively identify potential failures and focus data collection on the policy's weak regions without requiring a physical robot. Furthermore, we implement an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes. Extensive experiments demonstrate that RoboPocket adheres to data scaling laws and doubles the data efficiency compared to offline scaling strategies, overcoming their long-standing efficiency bottleneck. Moreover, our instant iteration loop also boosts sample efficiency by up to 2times in distributed environments a small number of interactive corrections per person. Project page and videos: https://robo-pocket.github.io.",
+      "published_date": "2026-03-05T18:59:38.000Z",
+      "url": "https://arxiv.org/abs/2603.05504",
+      "pdf_url": "https://arxiv.org/pdf/2603.05504",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.05504",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 4,
+      "hot_score": 40,
+      "structured_summary": {
+        "chinese_title": "RoboPocket：利用手机即时改进机器人策略",
+        "chinese_summary": "RoboPocket 通过单个消费级智能手机实现无需机器人即时策略迭代。",
+        "pain_point": "手持设备数据收集效率低下，且互动方法依赖物理机器人执行，成本高且难以扩展。",
+        "core_value": "通过增强现实反馈和异步在线微调，提高策略学习效率并降低成本。",
+        "technical_architecture": "引入远程推理框架和增强现实视觉预知，实现无需机器人策略迭代。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于消费级智能手机，可能在性能上不如专业设备。",
+        "key_contributions": [
+          "提出无需机器人即时策略迭代系统RoboPocket",
+          "利用增强现实反馈提高数据收集效率",
+          "实现异步在线微调以持续更新策略"
+        ],
+        "application_scenarios": [
+          "家庭服务机器人",
+          "工业自动化"
+        ],
+        "technical_highlights": [
+          "远程推理框架",
+          "增强现实视觉预知"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04448",
+      "source": "huggingface",
+      "title": "SkillNet: Create, Evaluate, and Connect AI Skills",
+      "authors": [
+        "Yuan Liang",
+        "Ruobin Zhong",
+        "Haoming Xu",
+        "Chen Jiang",
+        "Yi Zhong",
+        "Runnan Fang",
+        "Jia-Chen Gu",
+        "Shumin Deng",
+        "Yunzhi Yao",
+        "Mengru Wang",
+        "Shuofei Qiao",
+        "Xin Xu",
+        "Tongtong Wu",
+        "Kun Wang",
+        "Yang Liu",
+        "Zhen Bi",
+        "Jungang Lou",
+        "Yuchen Eleanor Jiang",
+        "Hangcheng Zhu",
+        "Gang Yu",
+        "Haiwen Hong",
+        "Longtao Huang",
+        "Hui Xue",
+        "Chenxi Wang",
+        "Yijun Wang",
+        "Zifei Shan",
+        "Xi Chen",
+        "Zhaopeng Tu",
+        "Feiyu Xiong",
+        "Xin Xie",
+        "Peng Zhang",
+        "Zhengke Gui",
+        "Lei Liang",
+        "Jun Zhou",
+        "Chiyu Wu",
+        "Jin Shang",
+        "Yu Gong",
+        "Junyu Lin",
+        "Changliang Xu",
+        "Hongjie Deng",
+        "Wen Zhang",
+        "Keyan Ding",
+        "Qiang Zhang",
+        "Fei Huang",
+        "Ningyu Zhang",
+        "Jeff Z. Pan",
+        "Guilin Qi",
+        "Haofen Wang",
+        "Huajun Chen"
+      ],
+      "abstract": "Current AI agents can flexibly invoke tools and execute complex tasks, yet their long-term advancement is hindered by the lack of systematic accumulation and transfer of skills. Without a unified mechanism for skill consolidation, agents frequently ``reinvent the wheel'', rediscovering solutions in isolated contexts without leveraging prior strategies. To overcome this limitation, we introduce SkillNet, an open infrastructure designed to create, evaluate, and organize AI skills at scale. SkillNet structures skills within a unified ontology that supports creating skills from heterogeneous sources, establishing rich relational connections, and performing multi-dimensional evaluation across Safety, Completeness, Executability, Maintainability, and Cost-awareness. Our infrastructure integrates a repository of over 200,000 skills, an interactive platform, and a versatile Python toolkit. Experimental evaluations on ALFWorld, WebShop, and ScienceWorld demonstrate that SkillNet significantly enhances agent performance, improving average rewards by 40% and reducing execution steps by 30% across multiple backbone models. By formalizing skills as evolving, composable assets, SkillNet provides a robust foundation for agents to move from transient experience to durable mastery.",
+      "published_date": "2026-02-26T14:24:02.000Z",
+      "url": "https://arxiv.org/abs/2603.04448",
+      "pdf_url": "https://arxiv.org/pdf/2603.04448",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04448",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "SkillNet: 创建、评估和连接AI技能",
+        "chinese_summary": "SkillNet显著提升代理性能，通过统一的技能结构化框架，增强技能的积累和转移。",
+        "pain_point": "现有AI代理缺乏系统化的技能积累和转移机制，导致重复工作。",
+        "core_value": "提供统一的技能结构化框架，增强技能的创建、评估和组织。",
+        "technical_architecture": "采用统一的本体论结构技能，支持多维度评估。",
+        "quantitative_results": "SkillNet在多个任务中平均奖励提高40%，执行步骤减少30%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提供统一的技能结构化框架",
+          "支持多维度评估技能"
+        ],
+        "application_scenarios": [
+          "ALFWorld",
+          "WebShop",
+          "ScienceWorld"
+        ],
+        "technical_highlights": [
+          "技能的创建、评估和组织",
+          "多维度评估框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.00466",
+      "source": "huggingface",
+      "title": "DreamWorld: Unified World Modeling in Video Generation",
+      "authors": [
+        "Boming Tan",
+        "Xiangdong Zhang",
+        "Ning Liao",
+        "Yuqing Zhang",
+        "Shaofeng Zhang",
+        "Xue Yang",
+        "Qi Fan",
+        "Yanyong Zhang"
+      ],
+      "abstract": "Despite impressive progress in video generation, existing models remain limited to surface-level plausibility, lacking a coherent and unified understanding of the world. Prior approaches typically incorporate only a single form of world-related knowledge or rely on rigid alignment strategies to introduce additional knowledge. However, aligning the single world knowledge is insufficient to constitute a world model that requires jointly modeling multiple heterogeneous dimensions (e.g., physical commonsense, 3D and temporal consistency). To address this limitation, we introduce DreamWorld, a unified framework that integrates complementary world knowledge into video generators via a Joint World Modeling Paradigm, jointly predicting video pixels and features from foundation models to capture temporal dynamics, spatial geometry, and semantic consistency. However, naively optimizing these heterogeneous objectives can lead to visual instability and temporal flickering. To mitigate this issue, we propose Consistent Constraint Annealing (CCA) to progressively regulate world-level constraints during training, and Multi-Source Inner-Guidance to enforce learned world priors at inference. Extensive evaluations show that DreamWorld improves world consistency, outperforming Wan2.1 by 2.26 points on VBench. Code will be made publicly available at https://github.com/ABU121111/DreamWorld{mypink{Github}}.",
+      "published_date": "2026-02-28T05:02:39.000Z",
+      "url": "https://arxiv.org/abs/2603.00466",
+      "pdf_url": "https://arxiv.org/pdf/2603.00466",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.00466",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "DreamWorld: 统一的视频生成世界建模",
+        "chinese_summary": "DreamWorld 统一框架通过联合建模多维度世界知识，提升视频生成的连贯性和一致性。",
+        "pain_point": "现有模型仅具备表面合理性，缺乏统一的世界理解。",
+        "core_value": "通过联合建模多维度世界知识，提升视频生成的质量。",
+        "technical_architecture": "DreamWorld 采用联合世界建模范式，结合基础模型预测视频像素和特征。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化视觉稳定性和时间连贯性。",
+        "key_contributions": [
+          "提出联合世界建模范式",
+          "引入一致约束退火和多源内部引导"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "多维度世界知识联合建模",
+          "动态调节世界约束"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04743",
+      "source": "huggingface",
+      "title": "DARE: Aligning LLM Agents with the R Statistical Ecosystem via Distribution-Aware Retrieval",
+      "authors": [
+        "Maojun Sun",
+        "Yue Wu",
+        "Yifei Xie",
+        "Ruijian Han",
+        "Binyan Jiang",
+        "Defeng Sun",
+        "Yancheng Yuan",
+        "Jian Huang"
+      ],
+      "abstract": "Large Language Model (LLM) agents can automate data-science workflows, but many rigorous statistical methods implemented in R remain underused because LLMs struggle with statistical knowledge and tool retrieval. Existing retrieval-augmented approaches focus on function-level semantics and ignore data distribution, producing suboptimal matches. We propose DARE (Distribution-Aware Retrieval Embedding), a lightweight, plug-and-play retrieval model that incorporates data distribution information into function representations for R package retrieval. Our main contributions are: (i) RPKB, a curated R Package Knowledge Base derived from 8,191 high-quality CRAN packages; (ii) DARE, an embedding model that fuses distributional features with function metadata to improve retrieval relevance; and (iii) RCodingAgent, an R-oriented LLM agent for reliable R code generation and a suite of statistical analysis tasks for systematically evaluating LLM agents in realistic analytical scenarios. Empirically, DARE achieves an NDCG at 10 of 93.47%, outperforming state-of-the-art open-source embedding models by up to 17% on package retrieval while using substantially fewer parameters. Integrating DARE into RCodingAgent yields significant gains on downstream analysis tasks. This work helps narrow the gap between LLM automation and the mature R statistical ecosystem.",
+      "published_date": "2026-03-05T02:29:54.000Z",
+      "url": "https://arxiv.org/abs/2603.04743",
+      "pdf_url": "https://arxiv.org/pdf/2603.04743",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04743",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "DARE：通过分布感知检索与R统计生态系统对齐的LLM代理",
+        "chinese_summary": "DARE通过融合分布特征和函数元数据，显著提升R包检索的相关性。",
+        "pain_point": "LLM在统计知识和工具检索方面存在不足，导致R中的许多严谨统计方法未被充分利用。",
+        "core_value": "通过引入分布感知检索，DARE提高了LLM在R包检索中的性能，解决了现有方法的不足。",
+        "technical_architecture": "DARE通过融合分布特征和函数元数据，改进了检索相关性。",
+        "quantitative_results": "DARE在包检索上的NDCG@10达到93.47%，优于现有开源嵌入式模型17%。",
+        "competitors": "对比了现有开源嵌入式模型，DARE性能更优。",
+        "limitations": "未来需要进一步探索在更多实际场景中的应用。",
+        "key_contributions": [
+          "构建了R包知识库RPKB",
+          "提出了分布感知检索嵌入模型DARE",
+          "开发了R导向的LLM代理RCodingAgent"
+        ],
+        "application_scenarios": [
+          "数据科学工作流自动化",
+          "统计分析任务"
+        ],
+        "technical_highlights": [
+          "融合分布特征和函数元数据",
+          "显著提升检索相关性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.03756",
+      "source": "huggingface",
+      "title": "MOOSE-Star: Unlocking Tractable Training for Scientific Discovery by Breaking the Complexity Barrier",
+      "authors": [
+        "Zonglin Yang",
+        "Lidong Bing"
+      ],
+      "abstract": "While large language models (LLMs) show promise in scientific discovery, existing research focuses on inference or feedback-driven training, leaving the direct modeling of the generative reasoning process, P(hypothesis|background) (P(h|b)), unexplored. We demonstrate that directly training P(h|b) is mathematically intractable due to the combinatorial complexity (O(N^k)) inherent in retrieving and composing inspirations from a vast knowledge base. To break this barrier, we introduce MOOSE-Star, a unified framework enabling tractable training and scalable inference. In the best case, MOOSE-Star reduces complexity from exponential to logarithmic (O(log N)) by (1) training on decomposed subtasks derived from the probabilistic equation of discovery, (2) employing motivation-guided hierarchical search to enable logarithmic retrieval and prune irrelevant subspaces, and (3) utilizing bounded composition for robustness against retrieval noise. To facilitate this, we release TOMATO-Star, a dataset of 108,717 decomposed papers (38,400 GPU hours) for training. Furthermore, we show that while brute-force sampling hits a ''complexity wall,'' MOOSE-Star exhibits continuous test-time scaling.",
+      "published_date": "2026-03-04T06:11:18.000Z",
+      "url": "https://arxiv.org/abs/2603.03756",
+      "pdf_url": "https://arxiv.org/pdf/2603.03756",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.03756",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "MOOSE-Star: 打破复杂性障碍以实现可处理的科学发现训练",
+        "chinese_summary": "MOOSE-Star 通过分解任务和启发式搜索，将科学发现训练的复杂性从指数级降低到对数级。",
+        "pain_point": "现有研究主要关注推理或反馈驱动的训练，忽视了直接建模生成性推理过程。",
+        "core_value": "MOOSE-Star 提供了一种可处理的训练框架，实现了科学发现的高效推理。",
+        "technical_architecture": "通过分解任务和启发式搜索，MOOSE-Star 将复杂性从指数级降低到对数级。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证在大规模数据集上的效果。",
+        "key_contributions": [
+          "提出 MOOSE-Star 统一框架",
+          "通过分解任务降低复杂性",
+          "利用启发式搜索提高检索效率"
+        ],
+        "application_scenarios": [
+          "科学发现",
+          "知识图谱推理"
+        ],
+        "technical_highlights": [
+          "分解任务",
+          "启发式搜索",
+          "对数级复杂性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04304",
+      "source": "huggingface",
+      "title": "V_1: Unifying Generation and Self-Verification for Parallel Reasoners",
+      "authors": [
+        "Harman Singh",
+        "Xiuyu Li",
+        "Kusha Sareen",
+        "Monishwaran Maheswaran",
+        "Sijun Tan",
+        "Xiaoxia Wu",
+        "Junxiong Wang",
+        "Alpay Ariyak",
+        "Qingyang Wu",
+        "Samir Khaki",
+        "Rishabh Tiwari",
+        "Long Lian",
+        "Yucheng Lu",
+        "Boyi Li",
+        "Alane Suhr",
+        "Ben Athiwaratkun",
+        "Kurt Keutzer"
+      ],
+      "abstract": "Test-time scaling for complex reasoning tasks shows that leveraging inference-time compute, by methods such as independently sampling and aggregating multiple solutions, results in significantly better task outcomes. However, a critical bottleneck is verification: sampling is only effective if correct solutions can be reliably identified among candidates. While existing approaches typically evaluate candidates independently via scalar scoring, we demonstrate that models are substantially stronger at pairwise self-verification. Leveraging this insight, we introduce V_1, a framework that unifies generation and verification through efficient pairwise ranking. V_1 comprises two components: V_1-Infer, an uncertainty-guided algorithm using a tournament-based ranking that dynamically allocates self-verification compute to candidate pairs whose relative correctness is most uncertain; and V_1-PairRL, an RL framework that jointly trains a single model as both generator and pairwise self-verifier, ensuring the verifier adapts to the generator's evolving distribution. On code generation (LiveCodeBench, CodeContests, SWE-Bench) and math reasoning (AIME, HMMT) benchmarks, V_1-Infer improves Pass@1 by up to 10% over pointwise verification and outperforms recent test-time scaling methods while being significantly more efficient. Furthermore, V_1-PairRL achieves 7--9% test-time scaling gains over standard RL and pointwise joint training, and improves base Pass@1 by up to 8.7% over standard RL in a code-generation setting.",
+      "published_date": "2026-03-04T17:22:16.000Z",
+      "url": "https://arxiv.org/abs/2603.04304",
+      "pdf_url": "https://arxiv.org/pdf/2603.04304",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04304",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "V_1: 统一生成与自我验证的并行推理框架",
+        "chinese_summary": "通过引入V_1框架，利用模型在成对自我验证方面的优势，提高复杂推理任务的测试时扩展性。",
+        "pain_point": "现有方法在独立评估候选解时，难以有效识别正确解，导致并行推理性能受限。",
+        "core_value": "通过成对自我验证和联合训练生成与验证模型，显著提升复杂推理任务的性能。",
+        "technical_architecture": "采用成对排名和基于锦标赛的不确定性指导算法实现高效成对自我验证。",
+        "quantitative_results": "在代码生成和数学推理基准测试中，V_1-Infer显著提高了通过率。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定领域进行了验证，未来需在更广泛场景下测试。",
+        "key_contributions": [
+          "提出V_1框架，结合生成与自我验证",
+          "利用模型在成对自我验证上的优势",
+          "联合训练生成与验证模型"
+        ],
+        "application_scenarios": [
+          "代码生成",
+          "数学推理"
+        ],
+        "technical_highlights": [
+          "成对自我验证",
+          "联合训练生成与验证模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.03282",
+      "source": "huggingface",
+      "title": "MIBURI: Towards Expressive Interactive Gesture Synthesis",
+      "authors": [
+        "M. Hamza Mughal",
+        "Rishabh Dabral",
+        "Vera Demberg",
+        "Christian Theobalt"
+      ],
+      "abstract": "Embodied Conversational Agents (ECAs) aim to emulate human face-to-face interaction through speech, gestures, and facial expressions. Current large language model (LLM)-based conversational agents lack embodiment and the expressive gestures essential for natural interaction. Existing solutions for ECAs often produce rigid, low-diversity motions, that are unsuitable for human-like interaction. Alternatively, generative methods for co-speech gesture synthesis yield natural body gestures but depend on future speech context and require long run-times. To bridge this gap, we present MIBURI, the first online, causal framework for generating expressive full-body gestures and facial expressions synchronized with real-time spoken dialogue. We employ body-part aware gesture codecs that encode hierarchical motion details into multi-level discrete tokens. These tokens are then autoregressively generated by a two-dimensional causal framework conditioned on LLM-based speech-text embeddings, modeling both temporal dynamics and part-level motion hierarchy in real time. Further, we introduce auxiliary objectives to encourage expressive and diverse gestures while preventing convergence to static poses. Comparative evaluations demonstrate that our causal and real-time approach produces natural and contextually aligned gestures against recent baselines. We urge the reader to explore demo videos on https://vcai.mpi-inf.mpg.de/projects/MIBURI/.",
+      "published_date": "2026-03-03T18:59:51.000Z",
+      "url": "https://arxiv.org/abs/2603.03282",
+      "pdf_url": "https://arxiv.org/pdf/2603.03282",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.03282",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "MIBURI：迈向富有表现力的交互手势合成",
+        "chinese_summary": "提出MIBURI框架，实现实时同步生成富有表现力的全身手势和面部表情。",
+        "pain_point": "现有的对话代理缺乏表现力的手势，导致交互不自然。",
+        "core_value": "实时生成自然且多样的手势，提升人机交互体验。",
+        "technical_architecture": "采用身体部分感知的手势编码器和因果框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化生成速度。",
+        "key_contributions": [
+          "提出MIBURI框架",
+          "采用身体部分感知的手势编码器",
+          "实现实时同步生成"
+        ],
+        "application_scenarios": [
+          "虚拟助手",
+          "虚拟角色"
+        ],
+        "technical_highlights": [
+          "身体部分感知的手势编码",
+          "实时生成能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "date": "2026-03-13",
+  "generated_at": "2026-03-13T04:05:57.696761+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.10160",
+      "source": "huggingface",
+      "title": "ReMix: Reinforcement routing for mixtures of LoRAs in LLM finetuning",
+      "authors": [
+        "Ruizhong Qiu",
+        "Hanqing Zeng",
+        "Yinglong Xia",
+        "Yiwen Meng",
+        "Ren Chen",
+        "Jiarui Feng",
+        "Dongqi Fu",
+        "Qifan Wang",
+        "Jiayi Liu",
+        "Jun Xiao",
+        "Xiangjun Fan",
+        "Benyu Zhang",
+        "Hong Li",
+        "Zhining Liu",
+        "Hyunsik Yoo",
+        "Zhichen Zeng",
+        "Tianxin Wei",
+        "Hanghang Tong"
+      ],
+      "abstract": "Low-rank adapters (LoRAs) are a parameter-efficient finetuning technique that injects trainable low-rank matrices into pretrained models to adapt them to new tasks. Mixture-of-LoRAs models expand neural networks efficiently by routing each layer input to a small subset of specialized LoRAs of the layer. Existing Mixture-of-LoRAs routers assign a learned routing weight to each LoRA to enable end-to-end training of the router. Despite their empirical promise, we observe that the routing weights are typically extremely imbalanced across LoRAs in practice, where only one or two LoRAs often dominate the routing weights. This essentially limits the number of effective LoRAs and thus severely hinders the expressive power of existing Mixture-of-LoRAs models. In this work, we attribute this weakness to the nature of learnable routing weights and rethink the fundamental design of the router. To address this critical issue, we propose a new router designed that we call Reinforcement Routing for Mixture-of-LoRAs (ReMix). Our key idea is using non-learnable routing weights to ensure all active LoRAs to be equally effective, with no LoRA dominating the routing weights. However, our routers cannot be trained directly via gradient descent due to our non-learnable routing weights. Hence, we further propose an unbiased gradient estimator for the router by employing the reinforce leave-one-out (RLOO) technique, where we regard the supervision loss as the reward and the router as the policy in reinforcement learning. Our gradient estimator also enables to scale up training compute to boost the predictive performance of our ReMix. Extensive experiments demonstrate that our proposed ReMix significantly outperform state-of-the-art parameter-efficient finetuning methods under a comparable number of activated parameters.",
+      "published_date": "2026-03-10T18:51:27.000Z",
+      "url": "https://arxiv.org/abs/2603.10160",
+      "pdf_url": "https://arxiv.org/pdf/2603.10160",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10160",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 4,
+      "hot_score": 40,
+      "structured_summary": {
+        "chinese_title": "ReMix: 基于强化学习的LoRA混合路由方法",
+        "chinese_summary": "提出了一种新的路由方法ReMix，确保所有激活的LoRA在混合模型中具有相同的有效性。",
+        "pain_point": "现有Mixture-of-LoRAs模型中路由权重不平衡，导致有效LoRA数量受限。",
+        "core_value": "通过非学习型路由权重，ReMix提高了模型的表达能力，增强了LoRA的均衡性。",
+        "technical_architecture": "使用非学习型路由权重，确保每个LoRA在路由中具有相同的重要性。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前仅在特定场景下进行了验证，未来需进一步验证其普适性。",
+        "key_contributions": [
+          "提出ReMix路由方法",
+          "确保所有LoRA在路由中均衡"
+        ],
+        "application_scenarios": [
+          "大模型微调",
+          "高效模型扩展"
+        ],
+        "technical_highlights": [
+          "非学习型路由权重设计",
+          "增强模型表达能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09723",
+      "source": "huggingface",
+      "title": "RbtAct: Rebuttal as Supervision for Actionable Review Feedback Generation",
+      "authors": [
+        "Sihong Wu",
+        "Yiling Ma",
+        "Yilun Zhao",
+        "Tiansheng Hu",
+        "Owen Jiang",
+        "Manasi Patwardhan",
+        "Arman Cohan"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used across the scientific workflow, including to draft peer-review reports. However, many AI-generated reviews are superficial and insufficiently actionable, leaving authors without concrete, implementable guidance and motivating the gap this work addresses. We propose RbtAct, which targets actionable review feedback generation and places existing peer review rebuttal at the center of learning. Rebuttals show which reviewer comments led to concrete revisions or specific plans, and which were only defended. Building on this insight, we leverage rebuttal as implicit supervision to directly optimize a feedback generator for actionability. To support this objective, we propose a new task called perspective-conditioned segment-level review feedback generation, in which the model is required to produce a single focused comment based on the complete paper and a specified perspective such as experiments and writing. We also build a large dataset named RMR-75K that maps review segments to the rebuttal segments that address them, with perspective labels and impact categories that order author uptake. We then train the Llama-3.1-8B-Instruct model with supervised fine-tuning on review segments followed by preference optimization using rebuttal derived pairs. Experiments with human experts and LLM-as-a-judge show consistent gains in actionability and specificity over strong baselines while maintaining grounding and relevance.",
+      "published_date": "2026-03-10T14:30:55.000Z",
+      "url": "https://arxiv.org/abs/2603.09723",
+      "pdf_url": "https://arxiv.org/pdf/2603.09723",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09723",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "RbtAct: 通过反驳作为监督生成可操作的评审反馈",
+        "chinese_summary": "提出RbtAct，利用反驳作为监督优化反馈生成模型，使其更具可操作性。",
+        "pain_point": "AI生成的评审报告浅显且缺乏可操作性，导致作者无法获得具体的实施指导。",
+        "core_value": "通过反驳作为监督，直接优化反馈生成模型的可操作性。",
+        "technical_architecture": "提出新的任务框架，结合反驳数据训练反馈生成模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集依赖特定领域，未来需扩展数据集覆盖范围。",
+        "key_contributions": [
+          "提出新的任务框架，结合反驳数据训练反馈生成模型。",
+          "构建大规模数据集RMR-75K，包含视角标签和影响类别。",
+          "利用反驳作为监督优化反馈生成模型的可操作性"
+        ],
+        "application_scenarios": [
+          "科学工作流程中的同行评审报告生成",
+          "提高AI生成的评审报告的实用性和指导性"
+        ],
+        "technical_highlights": [
+          "利用反驳数据作为隐式监督，优化反馈生成模型。",
+          "构建大规模数据集，支持模型训练和评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.10744",
+      "source": "huggingface",
+      "title": "Just-in-Time: Training-Free Spatial Acceleration for Diffusion Transformers",
+      "authors": [
+        "Wenhao Sun",
+        "Ji Li",
+        "Zhaoqiang Liu"
+      ],
+      "abstract": "Diffusion Transformers have established a new state-of-the-art in image synthesis, but the high computational cost of iterative sampling severely hampers their practical deployment. While existing acceleration methods often focus on the temporal domain, they overlook the substantial spatial redundancy inherent in the generative process, where global structures emerge long before fine-grained details are formed. The uniform computational treatment of all spatial regions represents a critical inefficiency. In this paper, we introduce Just-in-Time (JiT), a novel training-free framework that addresses this challenge by acceleration in the spatial domain. JiT formulates a spatially approximated generative ordinary differential equation (ODE) that drives the full latent state evolution based on computations from a dynamically selected, sparse subset of anchor tokens. To ensure seamless transitions as new tokens are incorporated to expand the dimensions of the latent state, we propose a deterministic micro-flow, a simple and effective finite-time ODE that maintains both structural coherence and statistical correctness. Extensive experiments on the state-of-the-art FLUX.1-dev model demonstrate that JiT achieves up to a 7x speedup with nearly lossless performance, significantly outperforming existing acceleration methods and establishing a new and superior trade-off between inference speed and generation fidelity.",
+      "published_date": "2026-03-11T13:16:41.000Z",
+      "url": "https://arxiv.org/abs/2603.10744",
+      "pdf_url": "https://arxiv.org/pdf/2603.10744",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10744",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "Just-in-Time: 训练无感知的空间加速方法",
+        "chinese_summary": "提出了一种训练无感知的Just-in-Time框架，通过空间加速方法显著提高扩散变换器的合成效率。",
+        "pain_point": "扩散变换器的高计算成本严重阻碍了其实际部署。",
+        "core_value": "通过空间加速和动态选择锚点token，大幅提高生成效率。",
+        "technical_architecture": "提出了一种空间近似生成常微分方程，基于动态选择的稀疏锚点token进行计算。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在FLUX.1-dev模型上进行了实验验证。",
+        "key_contributions": [
+          "提出了一种训练无感知的空间加速方法",
+          "基于动态选择的稀疏锚点token进行计算",
+          "提出了一种确定性微流，确保结构连贯性和统计正确性"
+        ],
+        "application_scenarios": [
+          "图像合成",
+          "生成模型加速"
+        ],
+        "technical_highlights": [
+          "空间近似生成常微分方程",
+          "动态选择稀疏锚点token"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12267",
+      "source": "huggingface",
+      "title": "EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation",
+      "authors": [
+        "Tianwei Xiong",
+        "Jun Hao Liew",
+        "Zilong Huang",
+        "Zhijie Lin",
+        "Jiashi Feng",
+        "Xihui Liu"
+      ],
+      "abstract": "Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce EVATok, a framework to produce Efficient Video Adaptive Tokenizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.",
+      "published_date": "2026-03-12T17:59:59.000Z",
+      "url": "https://arxiv.org/abs/2603.12267",
+      "pdf_url": "https://arxiv.org/pdf/2603.12267",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12267",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "EVATok: 适应长度的视频分词方法以提高视觉自回归生成效率",
+        "chinese_summary": "EVATok 提供了高效的视频自回归生成方法，显著提升了重建质量和下游生成效果。",
+        "pain_point": "传统视频分词方法在处理复杂动态视频时效率低下，浪费资源。",
+        "core_value": "通过自适应分词和预测优化，EVATok 提高了视频生成的效率和质量。",
+        "technical_architecture": "EVATok 引入了自适应视频分词框架，结合轻量级路由器和自适应编码器。",
+        "quantitative_results": "在 UCF-101 数据集上，EVATok 达到了最先进的类到视频生成效果。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更复杂的视频场景。",
+        "key_contributions": [
+          "提出了自适应视频分词框架",
+          "开发了轻量级路由器进行快速预测",
+          "结合了视频语义编码器进行训练"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "视频重建"
+        ],
+        "technical_highlights": [
+          "自适应分词提高效率",
+          "轻量级预测加速过程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.07865",
+      "source": "huggingface",
+      "title": "SoundWeaver: Semantic Warm-Starting for Text-to-Audio Diffusion Serving",
+      "authors": [
+        "Ayush Barik",
+        "Sofia Stoica",
+        "Nikhil Sarda",
+        "Arnav Kethana",
+        "Abhinav Khanduja",
+        "Muchen Xu",
+        "Fan Lai"
+      ],
+      "abstract": "Text-to-audio diffusion models produce high-fidelity audio but require tens of function evaluations (NFEs), incurring multi-second latency and limited throughput. We present SoundWeaver, the first training-free, model-agnostic serving system that accelerates text-to-audio diffusion by warm-starting from semantically similar cached audio. SoundWeaver introduces three components: a Reference Selector that retrieves and temporally aligns cached candidates via semantic and duration-aware gating; a Skip Gater that dynamically determines the percentage of NFEs to skip; and a lightweight Cache Manager that maintains cache utility through quality-aware eviction and refinement. On real-world audio traces, SoundWeaver achieves 1.8--3.0 times  latency reduction with a cache of only {sim}1K entries while preserving or improving perceptual quality.",
+      "published_date": "2026-03-09T00:38:02.000Z",
+      "url": "https://arxiv.org/abs/2603.07865",
+      "pdf_url": "https://arxiv.org/pdf/2603.07865",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.07865",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "SoundWeaver: 基于语义预热的文本到音频扩散服务",
+        "chinese_summary": "SoundWeaver 通过语义相似的缓存音频预热，将文本到音频的生成时间缩短 1.8-3.0 倍。",
+        "pain_point": "文本到音频模型需要大量计算，导致高延迟和低吞吐量。",
+        "core_value": "通过语义预热加速文本到音频生成，同时保持或提升音质。",
+        "technical_architecture": "引入参考选择器、跳过门控器和轻量级缓存管理器三大组件。",
+        "quantitative_results": "使用仅 1K 条缓存条目，实现 1.8-3.0 倍的延迟减少。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来可以探索更多语义相似缓存的生成方法。",
+        "key_contributions": [
+          "提出首个无需训练、模型无关的加速系统",
+          "引入语义和时长感知的参考选择器",
+          "动态跳过无用的计算步骤"
+        ],
+        "application_scenarios": [
+          "实时语音合成服务",
+          "在线音频生成应用"
+        ],
+        "technical_highlights": [
+          "语义相似缓存预热",
+          "动态跳过计算"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.08982",
+      "source": "huggingface",
+      "title": "SVG-EAR: Parameter-Free Linear Compensation for Sparse Video Generation via Error-aware Routing",
+      "authors": [
+        "Xuanyi Zhou",
+        "Qiuyang Mang",
+        "Shuo Yang",
+        "Haocheng Xi",
+        "Jintao Zhang",
+        "Huanzhi Mao",
+        "Joseph E. Gonzalez",
+        "Kurt Keutzer",
+        "Ion Stoica",
+        "Alvin Cheung"
+      ],
+      "abstract": "Diffusion Transformers (DiTs) have become a leading backbone for video generation, yet their quadratic attention cost remains a major bottleneck. Sparse attention reduces this cost by computing only a subset of attention blocks. However, prior methods often either drop the remaining blocks, which incurs information loss, or rely on learned predictors to approximate them, introducing training overhead and potential output distribution shifting. In this paper, we show that the missing contributions can be recovered without training: after semantic clustering, keys and values within each block exhibit strong similarity and can be well summarized by a small set of cluster centroids. Based on this observation, we introduce SVG-EAR, a parameter-free linear compensation branch that uses the centroid to approximate skipped blocks and recover their contributions. While centroid compensation is accurate for most blocks, it can fail on a small subset. Standard sparsification typically selects blocks by attention scores, which indicate where the model places its attention mass, but not where the approximation error would be largest. SVG-EAR therefore performs error-aware routing: a lightweight probe estimates the compensation error for each block, and we compute exactly the blocks with the highest error-to-cost ratio while compensating for skipped blocks. We provide theoretical guarantees that relate attention reconstruction error to clustering quality, and empirically show that SVG-EAR improves the quality-efficiency trade-off and increases throughput at the same generation fidelity on video diffusion tasks. Overall, SVG-EAR establishes a clear Pareto frontier over prior approaches, achieving up to 1.77times and 1.93times speedups while maintaining PSNRs of up to 29.759 and 31.043 on Wan2.2 and HunyuanVideo, respectively.",
+      "published_date": "2026-03-09T22:15:31.000Z",
+      "url": "https://arxiv.org/abs/2603.08982",
+      "pdf_url": "https://arxiv.org/pdf/2603.08982",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.08982",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "SVG-EAR: 无参数线性补偿方法用于稀疏视频生成",
+        "chinese_summary": "通过误差感知路由恢复缺失贡献，提高稀疏视频生成质量。",
+        "pain_point": "现有稀疏注意力方法要么损失信息，要么引入训练开销。",
+        "core_value": "提出无参数线性补偿方法，有效恢复缺失贡献，提高生成质量。",
+        "technical_architecture": "基于聚类中心进行误差感知路由补偿。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于大多数块，少数块可能效果不佳。",
+        "key_contributions": [
+          "提出无参数线性补偿方法",
+          "基于聚类中心进行补偿",
+          "误差感知路由"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "视频压缩"
+        ],
+        "technical_highlights": [
+          "无参数设计",
+          "误差感知路由"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09018",
+      "source": "huggingface",
+      "title": "Meissa: Multi-modal Medical Agentic Intelligence",
+      "authors": [
+        "Yixiong Chen",
+        "Xinyi Bai",
+        "Yue Pan",
+        "Zongwei Zhou",
+        "Alan Yuille"
+      ],
+      "abstract": "Multi-modal large language models (MM-LLMs) have shown strong performance in medical image understanding and clinical reasoning. Recent medical agent systems extend them with tool use and multi-agent collaboration, enabling complex decision-making. However, these systems rely almost entirely on frontier models (e.g., GPT), whose API-based deployment incurs high cost, high latency, and privacy risks that conflict with on-premise clinical requirements. We present Meissa, a lightweight 4B-parameter medical MM-LLM that brings agentic capability offline. Instead of imitating static answers, Meissa learns both when to engage external interaction (strategy selection) and how to execute multi-step interaction (strategy execution) by distilling structured trajectories from frontier models. Specifically, we propose: (1) Unified trajectory modeling: trajectories (reasoning and action traces) are represented within a single state-action-observation formalism, allowing one model to generalize across heterogeneous medical environments. (2) Three-tier stratified supervision: the model's own errors trigger progressive escalation from direct reasoning to tool-augmented and multi-agent interaction, explicitly learning difficulty-aware strategy selection. (3) Prospective-retrospective supervision: pairing exploratory forward traces with hindsight-rationalized execution traces enables stable learning of effective interaction policies. Trained on 40K curated trajectories, Meissa matches or exceeds proprietary frontier agents in 10 of 16 evaluation settings across 13 medical benchmarks spanning radiology, pathology, and clinical reasoning. Using over 25x fewer parameters than typical frontier models like Gemini-3, Meissa operates fully offline with 22x lower end-to-end latency compared to API-based deployment. Data, models, and environments are released at https://github.com/Schuture/Meissa.",
+      "published_date": "2026-03-09T23:22:55.000Z",
+      "url": "https://arxiv.org/abs/2603.09018",
+      "pdf_url": "https://arxiv.org/pdf/2603.09018",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09018",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "Meissa：多模态医疗智能代理",
+        "chinese_summary": "提出了一种轻量级的4B参数多模态医疗LLM，能够在离线环境下提供智能代理能力。",
+        "pain_point": "现有系统依赖昂贵且存在隐私风险的API部署，与现场临床需求冲突。",
+        "core_value": "通过统一轨迹建模和分层监督，实现策略选择和执行，增强医疗环境下的智能交互。",
+        "technical_architecture": "采用统一的轨迹建模和分层监督方法，允许模型在不同医疗环境中泛化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证在更多医疗环境中的适用性。",
+        "key_contributions": [
+          "提出统一轨迹建模方法",
+          "设计分层监督机制"
+        ],
+        "application_scenarios": [
+          "医疗图像理解",
+          "临床推理"
+        ],
+        "technical_highlights": [
+          "轻量级模型实现离线智能代理",
+          "统一轨迹建模与分层监督"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.10256",
+      "source": "huggingface",
+      "title": "ID-LoRA: Identity-Driven Audio-Video Personalization with In-Context LoRA",
+      "authors": [
+        "Aviad Dahan",
+        "Moran Yanuka",
+        "Noa Kraicer",
+        "Lior Wolf",
+        "Raja Giryes"
+      ],
+      "abstract": "Existing video personalization methods preserve visual likeness but treat video and audio separately. Without access to the visual scene, audio models cannot synchronize sounds with on-screen actions; and because classical voice-cloning models condition only on a reference recording, a text prompt cannot redirect speaking style or acoustic environment. We propose ID-LoRA (Identity-Driven In-Context LoRA), which jointly generates a subject's appearance and voice in a single model, letting a text prompt, a reference image, and a short audio clip govern both modalities together. ID-LoRA adapts the LTX-2 joint audio-video diffusion backbone via parameter-efficient In-Context LoRA and, to our knowledge, is the first method to personalize visual appearance and voice in a single generative pass. Two challenges arise. Reference and generation tokens share the same positional-encoding space, making them hard to distinguish; we address this with negative temporal positions, placing reference tokens in a disjoint RoPE region while preserving their internal temporal structure. Speaker characteristics also tend to be diluted during denoising; we introduce identity guidance, a classifier-free guidance variant that amplifies speaker-specific features by contrasting predictions with and without the reference signal. In human preference studies, ID-LoRA is preferred over Kling 2.6 Pro by 73% of annotators for voice similarity and 65% for speaking style. On cross-environment settings, speaker similarity improves by 24% over Kling, with the gap widening as conditions diverge. A preliminary user study further suggests that joint generation provides a useful inductive bias for physically grounded sound synthesis. ID-LoRA achieves these results with only ~3K training pairs on a single GPU. Code, models, and data will be released.",
+      "published_date": "2026-03-10T22:23:36.000Z",
+      "url": "https://arxiv.org/abs/2603.10256",
+      "pdf_url": "https://arxiv.org/pdf/2603.10256",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10256",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "ID-LoRA：基于身份驱动的音频-视频个性化方法",
+        "chinese_summary": "ID-LoRA 联合生成主体的外观和声音，通过文本提示、参考图像和短音频片段同时控制两种模态。",
+        "pain_point": "现有方法将视频和音频分开处理，导致音频与视频动作不匹配，且语音克隆模型只能基于参考录音，无法改变说话风格或声学环境。",
+        "core_value": "首次实现单次生成过程中同时个性化视觉外观和声音，解决了身份特征在去噪过程中被稀释的问题。",
+        "technical_architecture": "通过参数高效的 In-Context LoRA 调整 LTX-2 联合音频-视频扩散骨干网络。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "参考和生成标记共享相同的位置编码空间，可能导致区分困难。",
+        "key_contributions": [
+          "提出 ID-LoRA 方法，实现单次生成过程中的音频-视频个性化。",
+          "引入负时间位置，解决参考标记和生成标记难以区分的问题。",
+          "提出身份指导，防止说话特征在去噪过程中被稀释"
+        ],
+        "application_scenarios": [
+          "虚拟人物生成",
+          "个性化语音合成"
+        ],
+        "technical_highlights": [
+          "参数高效的 In-Context LoRA 技术",
+          "负时间位置的引入"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.11048",
+      "source": "huggingface",
+      "title": "COMIC: Agentic Sketch Comedy Generation",
+      "authors": [
+        "Susung Hong",
+        "Brian Curless",
+        "Ira Kemelmacher-Shlizerman",
+        "Steve Seitz"
+      ],
+      "abstract": "We propose a fully automated AI system that produces short comedic videos similar to sketch shows such as Saturday Night Live. Starting with character references, the system employs a population of agents loosely based on real production studio roles, structured to optimize the quality and diversity of ideas and outputs through iterative competition, evaluation, and improvement. A key contribution is the introduction of LLM critics aligned with real viewer preferences through the analysis of a corpus of comedy videos on YouTube to automatically evaluate humor. Our experiments show that our framework produces results approaching the quality of professionally produced sketches while demonstrating state-of-the-art performance in video generation.",
+      "published_date": "2026-03-11T17:59:59.000Z",
+      "url": "https://arxiv.org/abs/2603.11048",
+      "pdf_url": "https://arxiv.org/pdf/2603.11048",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.11048",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "COMIC: 自主素描喜剧生成",
+        "chinese_summary": "提出了一种自动AI系统，生成类似于周六夜现场的短喜剧视频。",
+        "pain_point": "缺乏自动化生成高质量喜剧视频的方法。",
+        "core_value": "通过迭代竞争和改进生成高质量喜剧视频，引入与观众偏好对齐的LLM批评者。",
+        "technical_architecture": "基于现实生产工作室角色的代理群体，通过迭代竞争、评估和改进优化创意和输出。",
+        "quantitative_results": "实验结果显示，框架生成的结果接近专业制作的草稿质量。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步提高生成视频的多样性。",
+        "key_contributions": [
+          "引入与观众偏好对齐的LLM批评者",
+          "通过代理群体优化创意和输出"
+        ],
+        "application_scenarios": [
+          "自动喜剧视频生成",
+          "娱乐内容创作"
+        ],
+        "technical_highlights": [
+          "代理群体优化机制",
+          "自动幽默评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.01990",
+      "source": "huggingface",
+      "title": "According to Me: Long-Term Personalized Referential Memory QA",
+      "authors": [
+        "Jingbiao Mei",
+        "Jinghong Chen",
+        "Guangyu Yang",
+        "Xinyu Hou",
+        "Margaret Li",
+        "Bill Byrne"
+      ],
+      "abstract": "Personalized AI assistants must recall and reason over long-term user memory, which naturally spans multiple modalities and sources such as images, videos, and emails. However, existing Long-term Memory benchmarks focus primarily on dialogue history, failing to capture realistic personalized references grounded in lived experience. We introduce ATM-Bench, the first benchmark for multimodal, multi-source personalized referential Memory QA. ATM-Bench contains approximately four years of privacy-preserving personal memory data and human-annotated question-answer pairs with ground-truth memory evidence, including queries that require resolving personal references, multi-evidence reasoning from multi-source and handling conflicting evidence. We propose Schema-Guided Memory (SGM) to structurally represent memory items originated from different sources. In experiments, we implement 5 state-of-the-art memory systems along with a standard RAG baseline and evaluate variants with different memory ingestion, retrieval, and answer generation techniques. We find poor performance (under 20\\% accuracy) on the ATM-Bench-Hard set, and that SGM improves performance over Descriptive Memory commonly adopted in prior works. Code available at: https://github.com/JingbiaoMei/ATM-Bench",
+      "published_date": "2026-03-02T15:42:29.000Z",
+      "url": "https://arxiv.org/abs/2603.01990",
+      "pdf_url": "https://arxiv.org/pdf/2603.01990",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.01990",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "根据我：长期个性化引用记忆问答",
+        "chinese_summary": "提出了ATM-Bench，首个多模态多源个性化引用记忆问答基准，显著提升了AI助手处理个人引用的能力。",
+        "pain_point": "现有基准主要关注对话历史，未能捕捉基于生活经验的个性化引用。",
+        "core_value": "填补了多模态多源个性化引用记忆领域的空白，提供更真实的用户体验。",
+        "technical_architecture": "提出了Schema-Guided Memory (SGM)来结构化表示不同来源的记忆项。",
+        "quantitative_results": "在ATM-Bench-Hard集上表现不佳，准确率低于20%。",
+        "competitors": "对比了5种最先进的记忆系统和标准RAG基线。",
+        "limitations": "需要进一步优化记忆系统的性能。",
+        "key_contributions": [
+          "提出了首个多模态多源个性化引用记忆基准ATM-Bench。",
+          "提出了Schema-Guided Memory (SGM)来结构化表示不同来源的记忆项。",
+          "评估了多种记忆系统的技术方案"
+        ],
+        "application_scenarios": [
+          "个性化AI助手",
+          "多模态信息处理"
+        ],
+        "technical_highlights": [
+          "首次涵盖多模态多源个性化引用记忆",
+          "引入了Schema-Guided Memory (SGM)来结构化表示记忆项"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

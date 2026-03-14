@@ -7,6 +7,21 @@
   const $ = id => document.getElementById(id);
 
   // ===== 状态 =====
+  // 获取北京时间（UTC+8）的今日日期字符串 YYYY-MM-DD
+  function getBeijingToday() {
+    const now = new Date();
+    const bjOffset = 8 * 60; // 北京时间 UTC+8，单位分钟
+    const utcMs = now.getTime() + now.getTimezoneOffset() * 60000;
+    const bjDate = new Date(utcMs + bjOffset * 60000);
+    return {
+      year: bjDate.getFullYear(),
+      month: bjDate.getMonth(),
+      dateStr: `${bjDate.getFullYear()}-${String(bjDate.getMonth() + 1).padStart(2, '0')}-${String(bjDate.getDate()).padStart(2, '0')}`,
+    };
+  }
+
+  const bjToday = getBeijingToday();
+
   let state = {
     mode: 'date',          // 'date' | 'search' | 'allHistory'
     selectedDate: null,
@@ -18,8 +33,8 @@
     category: 'all',
     sort: 'hot_score',
     datesWithData: new Set(),
-    calYear: new Date().getFullYear(),
-    calMonth: new Date().getMonth(),
+    calYear: bjToday.year,
+    calMonth: bjToday.month,
   };
 
   const PAGE_SIZE = 15;
@@ -209,7 +224,7 @@
 
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const today = new Date().toISOString().slice(0, 10);
+    const today = getBeijingToday().dateStr;
 
     calGrid.innerHTML = '';
 
@@ -252,11 +267,11 @@
     state.sort = 'hot_score';
     state.displayCount = PAGE_SIZE;
 
-    // 同步日历月份
-    const d = new Date(date);
-    if (!isNaN(d)) {
-      state.calYear = d.getFullYear();
-      state.calMonth = d.getMonth();
+    // 同步日历月份（直接解析 YYYY-MM-DD，避免 UTC 偏移）
+    const dp = date && date.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (dp) {
+      state.calYear = parseInt(dp[1]);
+      state.calMonth = parseInt(dp[2]) - 1;
     }
     renderCalendar();
 

@@ -1,0 +1,545 @@
+{
+  "date": "2026-03-13",
+  "generated_at": "2026-03-14T07:43:32.427010+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.12255",
+      "source": "huggingface",
+      "title": "Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training",
+      "authors": [
+        "Fangfu Liu",
+        "Diankun Wu",
+        "Jiawei Chi",
+        "Yimo Cai",
+        "Yi-Hsin Hung",
+        "Xumin Yu",
+        "Hao Li",
+        "Han Hu",
+        "Yongming Rao",
+        "Yueqi Duan"
+      ],
+      "abstract": "Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), which adapts a subset of parameters (fast weights) to capture and organize spatial evidence over long-horizon scene videos. Specifically, we design a hybrid architecture and adopt large-chunk updates parallel with sliding-window attention for efficient spatial video processing. To further promote spatial awareness, we introduce a spatial-predictive mechanism applied to TTT layers with 3D spatiotemporal convolution, which encourages the model to capture geometric correspondence and temporal continuity across frames. Beyond architecture design, we construct a dataset with dense 3D spatial descriptions, which guides the model to update its fast weights to memorize and organize global 3D spatial signals in a structured manner. Extensive experiments demonstrate that Spatial-TTT improves long-horizon spatial understanding and achieves state-of-the-art performance on video spatial benchmarks. Project page: https://liuff19.github.io/Spatial-TTT.",
+      "published_date": "2026-03-12T17:58:58.000Z",
+      "url": "https://arxiv.org/abs/2603.12255",
+      "pdf_url": "https://arxiv.org/pdf/2603.12255",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12255",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 66,
+      "hot_score": 660,
+      "structured_summary": {
+        "chinese_title": "Spatial-TTT：基于测试时训练的流式视觉空间智能",
+        "chinese_summary": "提出Spatial-TTT，通过测试时训练适应参数以捕捉和组织长时序场景视频中的空间证据。",
+        "pain_point": "现有方法难以高效处理长时序场景视频中的空间信息。",
+        "core_value": "通过测试时训练和3D时空卷积促进空间感知。",
+        "technical_architecture": "设计混合架构并采用大块更新和滑动窗口注意力机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多实验验证其在实际场景中的效果。",
+        "key_contributions": [
+          "提出Spatial-TTT框架",
+          "采用测试时训练机制",
+          "引入3D时空卷积机制"
+        ],
+        "application_scenarios": [
+          "城市监控",
+          "自动驾驶"
+        ],
+        "technical_highlights": [
+          "高效处理长时序视频",
+          "促进空间感知"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12180",
+      "source": "huggingface",
+      "title": "Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections",
+      "authors": [
+        "Łukasz Borchmann",
+        "Jordy Van Landeghem",
+        "Michał Turski",
+        "Shreyansh Padarha",
+        "Ryan Othniel Kearns",
+        "Adam Mahdi",
+        "Niels Rogge",
+        "Clémentine Fourrier",
+        "Siwei Han",
+        "Huaxiu Yao",
+        "Artemis Llabrés",
+        "Yiming Xu",
+        "Dimosthenis Karatzas",
+        "Hao Zhang",
+        "Anupam Datta"
+      ],
+      "abstract": "Multimodal agents offer a promising path to automating complex document-intensive workflows. Yet, a critical question remains: do these agents demonstrate genuine strategic reasoning, or merely stochastic trial-and-error search? To address this, we introduce MADQA, a benchmark of 2,250 human-authored questions grounded in 800 heterogeneous PDF documents. Guided by Classical Test Theory, we design it to maximize discriminative power across varying levels of agentic abilities. To evaluate agentic behaviour, we introduce a novel evaluation protocol measuring the accuracy-effort trade-off. Using this framework, we show that while the best agents can match human searchers in raw accuracy, they succeed on largely different questions and rely on brute-force search to compensate for weak strategic planning. They fail to close the nearly 20% gap to oracle performance, persisting in unproductive loops. We release the dataset and evaluation harness to help facilitate the transition from brute-force retrieval to calibrated, efficient reasoning.",
+      "published_date": "2026-03-12T17:11:22.000Z",
+      "url": "https://arxiv.org/abs/2603.12180",
+      "pdf_url": "https://arxiv.org/pdf/2603.12180",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12180",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 41,
+      "hot_score": 410,
+      "structured_summary": {
+        "chinese_title": "战略导航还是随机搜索？代理和人类在文档集合中的推理方式",
+        "chinese_summary": "研究发现最佳代理在准确性和努力之间难以平衡，无法达到理想性能。",
+        "pain_point": "代理在文档密集型工作流程中的战略推理能力不足。",
+        "core_value": "提出MADQA基准，评估代理的战略推理能力。",
+        "technical_architecture": "基于经典测试理论设计MADQA基准。",
+        "quantitative_results": "最佳代理在准确率上可与人类搜索者匹敌，但在策略规划上表现较弱。",
+        "competitors": "暂无对比信息",
+        "limitations": "代理在避免无效循环方面存在局限。",
+        "key_contributions": [
+          "提出MADQA基准",
+          "设计评估代理行为的新协议",
+          "揭示代理与人类在文档搜索中的差异"
+        ],
+        "application_scenarios": [
+          "文档密集型工作流程自动化",
+          "信息检索与导航"
+        ],
+        "technical_highlights": [
+          "最大化不同代理能力级别的区分力",
+          "评估准确性和努力之间的权衡"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12201",
+      "source": "huggingface",
+      "title": "IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse",
+      "authors": [
+        "Yushi Bai",
+        "Qian Dong",
+        "Ting Jiang",
+        "Xin Lv",
+        "Zhengxiao Du",
+        "Aohan Zeng",
+        "Jie Tang",
+        "Juanzi Li"
+      ],
+      "abstract": "Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from O(L^2) to O(Lk). However, the indexer itself retains O(L^2) complexity and must run independently at every layer, despite the fact that the resulting top-k selections are highly similar across consecutive layers. We present IndexCache, which exploits this cross-layer redundancy by partitioning layers into a small set of Full layers that run their own indexers and a majority of Shared layers that simply reuse the nearest Full layer's top-k indices. We propose two complementary approaches to determine and optimize this configuration. Training-free IndexCache applies a greedy search algorithm that selects which layers to retain indexers by directly minimizing language modeling loss on a calibration set, requiring no weight updates. Training-aware IndexCache introduces a multi-layer distillation loss that trains each retained indexer against the averaged attention distributions of all layers it serves, enabling even simple interleaved patterns to match full-indexer accuracy. Experimental results on a 30B DSA model show that IndexCache can remove 75% of indexer computations with negligible quality degradation, achieving up to 1.82times prefill speedup and 1.48times decode speedup compared to standard DSA. These positive results are further confirmed by our preliminary experiments on the production-scale GLM-5 model (Figure 1).",
+      "published_date": "2026-03-12T17:27:21.000Z",
+      "url": "https://arxiv.org/abs/2603.12201",
+      "pdf_url": "https://arxiv.org/pdf/2603.12201",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12201",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "IndexCache：通过跨层索引重用加速稀疏注意力",
+        "chinese_summary": "通过跨层索引重用减少索引器的计算量，提高稀疏注意力效率。",
+        "pain_point": "现有稀疏注意力方法中索引器计算量大且需在每层独立运行。",
+        "core_value": "通过跨层索引重用减少计算量，提高模型效率。",
+        "technical_architecture": "将层分为少量全层和多数共享层。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化配置。",
+        "key_contributions": [
+          "提出IndexCache方法",
+          "提出两种配置优化方法"
+        ],
+        "application_scenarios": [
+          "大型语言模型推理加速",
+          "降低服务成本"
+        ],
+        "technical_highlights": [
+          "跨层索引重用",
+          "配置优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.10178",
+      "source": "huggingface",
+      "title": "Video-Based Reward Modeling for Computer-Use Agents",
+      "authors": [
+        "Linxin Song",
+        "Jieyu Zhang",
+        "Huanxin Sheng",
+        "Taiwei Shi",
+        "Gupta Rahul",
+        "Yang Liu",
+        "Ranjay Krishna",
+        "Jian Kang",
+        "Jieyu Zhao"
+      ],
+      "abstract": "Computer-using agents (CUAs) are becoming increasingly capable; however, it remains difficult to scale evaluation of whether a trajectory truly fulfills a user instruction. In this work, we study reward modeling from execution video: a sequence of keyframes from an agent trajectory that is independent of the agent's internal reasoning or actions. Although video-execution modeling is method-agnostic, it presents key challenges, including highly redundant layouts and subtle, localized cues that determine success. We introduce Execution Video Reward 53k (ExeVR-53k), a dataset of 53k high-quality video--task--reward triplets. We further propose adversarial instruction translation to synthesize negative samples with step-level annotations. To enable learning from long, high-resolution execution videos, we design spatiotemporal token pruning, which removes homogeneous regions and persistent tokens while preserving decisive UI changes. Building on these components, we fine-tune an Execution Video Reward Model (ExeVRM) that takes only a user instruction and a video-execution sequence to predict task success. Our ExeVRM 8B achieves 84.7% accuracy and 87.7% recall on video-execution assessment, outperforming strong proprietary models such as GPT-5.2 and Gemini-3 Pro across Ubuntu, macOS, Windows, and Android, while providing more precise temporal attribution. These results show that video-execution reward modeling can serve as a scalable, model-agnostic evaluator for CUAs.",
+      "published_date": "2026-03-10T19:17:22.000Z",
+      "url": "https://arxiv.org/abs/2603.10178",
+      "pdf_url": "https://arxiv.org/pdf/2603.10178",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10178",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "upvotes": 31,
+      "hot_score": 310,
+      "structured_summary": {
+        "chinese_title": "基于视频的奖励建模用于计算机使用代理",
+        "chinese_summary": "提出了一种新的方法，通过执行视频预测任务成功，显著提高了计算机使用代理的评估准确性。",
+        "pain_point": "现有方法难以大规模评估代理是否真正满足用户指令。",
+        "core_value": "通过执行视频建模，解决了冗余布局和细微成功线索的挑战。",
+        "technical_architecture": "设计了时空令牌剪枝，保留关键UI变化，去除冗余区域。",
+        "quantitative_results": "ExeVRM 8B模型在视频执行评估中达到84.7%的准确率和87.7%的召回率。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多样化的场景下进行测试。",
+        "key_contributions": [
+          "提出了ExeVR-53k数据集",
+          "设计了时空令牌剪枝方法",
+          "提出了对抗指令翻译生成负样本"
+        ],
+        "application_scenarios": [
+          "计算机使用代理评估",
+          "自动化测试"
+        ],
+        "technical_highlights": [
+          "高精度的视频执行评估",
+          "有效去除冗余信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12257",
+      "source": "huggingface",
+      "title": "DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning",
+      "authors": [
+        "Yujie Wei",
+        "Xinyu Liu",
+        "Shiwei Zhang",
+        "Hangjie Yuan",
+        "Jinbo Xing",
+        "Zhekai Chen",
+        "Xiang Wang",
+        "Haonan Qiu",
+        "Rui Zhao",
+        "Yutong Feng",
+        "Ruihang Chu",
+        "Yingya Zhang",
+        "Yike Guo",
+        "Xihui Liu",
+        "Hongming Shan"
+      ],
+      "abstract": "While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.",
+      "published_date": "2026-03-12T17:59:12.000Z",
+      "url": "https://arxiv.org/abs/2603.12257",
+      "pdf_url": "https://arxiv.org/pdf/2603.12257",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12257",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "DreamVideo-Omni：全方位运动控制的多主体视频定制",
+        "chinese_summary": "DreamVideo-Omni 提供了多主体身份和多粒度运动的精确控制。",
+        "pain_point": "现有方法在多主体身份和多粒度运动控制上存在不足。",
+        "core_value": "通过统一框架和渐进式两阶段训练，实现多主体和全方位运动控制。",
+        "technical_architecture": "采用条件感知的3D旋转位置嵌入和分层运动注入策略。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来可探索更多应用场景。",
+        "key_contributions": [
+          "引入条件感知的3D旋转位置嵌入",
+          "提出分层运动注入策略",
+          "实现多主体和全方位运动控制"
+        ],
+        "application_scenarios": [
+          "影视制作",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "多主体身份和运动控制",
+          "渐进式两阶段训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12247",
+      "source": "huggingface",
+      "title": "Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation",
+      "authors": [
+        "Xiangyu Zhao",
+        "Peiyuan Zhang",
+        "Junming Lin",
+        "Tianhao Liang",
+        "Yuchen Duan",
+        "Shengyuan Ding",
+        "Changyao Tian",
+        "Yuhang Zang",
+        "Junchi Yan",
+        "Xue Yang"
+      ],
+      "abstract": "Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and editing. First, we design tailored data curation pipelines to construct high-quality scoring datasets. Specifically, we evaluate editing using both execution and consistency, while generation is primarily assessed via instruction following. Using these pipelines, we collect the FIRM-Edit-370K and FIRM-Gen-293K datasets, and train specialized reward models (FIRM-Edit-8B and FIRM-Gen-8B) that accurately reflect these criteria. Second, we introduce FIRM-Bench, a comprehensive benchmark specifically designed for editing and generation critics. Evaluations demonstrate that our models achieve superior alignment with human judgment compared to existing metrics. Furthermore, to seamlessly integrate these critics into the RL pipeline, we formulate a novel \"Base-and-Bonus\" reward strategy that balances competing objectives: Consistency-Modulated Execution (CME) for editing and Quality-Modulated Alignment (QMA) for generation. Empowered by this framework, our resulting models FIRM-Qwen-Edit and FIRM-SD3.5 achieve substantial performance breakthroughs. Comprehensive experiments demonstrate that FIRM mitigates hallucinations, establishing a new standard for fidelity and instruction adherence over existing general models. All of our datasets, models, and code have been publicly available at https://firm-reward.github.io.",
+      "published_date": "2026-03-12T17:57:21.000Z",
+      "url": "https://arxiv.org/abs/2603.12247",
+      "pdf_url": "https://arxiv.org/pdf/2603.12247",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12247",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "信任你的评论者：稳健的奖励建模与强化学习在忠实图像编辑和生成中的应用",
+        "chinese_summary": "提出FIRM框架，通过构建高质量数据集和专门的奖励模型，提高图像编辑和生成的准确性。",
+        "pain_point": "当前奖励模型容易产生幻觉，导致优化过程偏离目标。",
+        "core_value": "提供准确可靠的奖励模型，提升图像编辑和生成的忠实度。",
+        "technical_architecture": "设计定制化数据处理管道和专门的奖励模型。",
+        "quantitative_results": "模型在人类判断上的对齐度优于现有指标。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多应用场景。",
+        "key_contributions": [
+          "构建高质量数据集和奖励模型",
+          "提出FIRM-Bench基准",
+          "提高图像编辑和生成的准确性"
+        ],
+        "application_scenarios": [
+          "图像编辑",
+          "文本到图像生成"
+        ],
+        "technical_highlights": [
+          "定制化数据处理管道",
+          "专门的奖励模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12250",
+      "source": "huggingface",
+      "title": "DVD: Deterministic Video Depth Estimation with Generative Priors",
+      "authors": [
+        "Hongfei Zhang",
+        "Harold Haodong Chen",
+        "Chenfei Liao",
+        "Jing He",
+        "Zixin Zhang",
+        "Haodong Li",
+        "Yihao Liang",
+        "Kanghao Chen",
+        "Bin Ren",
+        "Xu Zheng",
+        "Shuai Yang",
+        "Kun Zhou",
+        "Yinchuan Li",
+        "Nicu Sebe",
+        "Ying-Cong Chen"
+      ],
+      "abstract": "Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to deterministically adapt pre-trained video diffusion models into single-pass depth regressors. Specifically, DVD features three core designs: (i) repurposing the diffusion timestep as a structural anchor to balance global stability with high-frequency details; (ii) latent manifold rectification (LMR) to mitigate regression-induced over-smoothing, enforcing differential constraints to restore sharp boundaries and coherent motion; and (iii) global affine coherence, an inherent property bounding inter-window divergence, which enables seamless long-video inference without requiring complex temporal alignment. Extensive experiments demonstrate that DVD achieves state-of-the-art zero-shot performance across benchmarks. Furthermore, DVD successfully unlocks the profound geometric priors implicit in video foundation models using 163x less task-specific data than leading baselines. Notably, we fully release our pipeline, providing the whole training suite for SOTA video depth estimation to benefit the open-source community.",
+      "published_date": "2026-03-12T17:58:06.000Z",
+      "url": "https://arxiv.org/abs/2603.12250",
+      "pdf_url": "https://arxiv.org/pdf/2603.12250",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12250",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "DVD: 确定性视频深度估计与生成先验",
+        "chinese_summary": "DVD 是首个将预训练视频扩散模型转换为单次深度回归模型的框架，实现零样本最佳性能。",
+        "pain_point": "现有视频深度估计方法在生成模型的随机几何幻觉和规模漂移与判别模型对大规模标注数据的需求之间存在矛盾。",
+        "core_value": "DVD 通过确定性方法解决了这一矛盾，显著减少了任务特定数据的需求。",
+        "technical_architecture": "DVD 通过重新利用扩散时间步作为结构锚点，以及引入全局仿射一致性来实现。",
+        "quantitative_results": "DVD 在基准测试中实现了最先进的零样本性能。",
+        "competitors": "与领先基线相比，DVD 使用了 163 倍少的任务特定数据。",
+        "limitations": "未来工作可能涉及更复杂的场景适应。",
+        "key_contributions": [
+          "提出了一种新的确定性框架 DVD",
+          "通过生成先验减少了任务特定数据的需求",
+          "实现了单次深度估计"
+        ],
+        "application_scenarios": [
+          "视频深度估计",
+          "视频理解"
+        ],
+        "technical_highlights": [
+          "重新利用扩散时间步作为结构锚点",
+          "引入全局仿射一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12056",
+      "source": "huggingface",
+      "title": "XSkill: Continual Learning from Experience and Skills in Multimodal Agents",
+      "authors": [
+        "Guanyu Jiang",
+        "Zhaochen Su",
+        "Xiaoye Qu",
+        "Yi R.",
+        "Fung"
+      ],
+      "abstract": "Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings. A central challenge is enabling such agents to continually improve without parameter updates by learning from past trajectories. We identify two complementary forms of reusable knowledge essential for this goal: experiences, providing concise action-level guidance for tool selection and decision making, and skills, providing structured task-level guidance for planning and tool use. To this end, we propose XSkill, a dual-stream framework for continual learning from experience and skills in multimodal agents. XSkill grounds both knowledge extraction and retrieval in visual observations. During accumulation, XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique. During inference, it retrieves and adapts this knowledge to the current visual context and feeds usage history back into accumulation to form a continual learning loop. Evaluated on five benchmarks across diverse domains with four backbone models, XSkill consistently and substantially outperforms both tool-only and learning-based baselines. Further analysis reveals that the two knowledge streams play complementary roles in influencing the reasoning behaviors of agents and show superior zero-shot generalization.",
+      "published_date": "2026-03-12T15:25:57.000Z",
+      "url": "https://arxiv.org/abs/2603.12056",
+      "pdf_url": "https://arxiv.org/pdf/2603.12056",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12056",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "XSkill: 多模态智能体中的持续学习经验与技能",
+        "chinese_summary": "XSkill 提出了一种双流框架，用于多模态智能体从经验与技能中进行持续学习。",
+        "pain_point": "多模态智能体在开放环境中存在工具使用效率低下和规划灵活性不足的问题。",
+        "core_value": "通过学习过往轨迹，XSkill 使智能体能够持续改进而无需更新参数。",
+        "technical_architecture": "XSkill 通过视觉观察来提取和检索知识，并在推理过程中根据当前视觉上下文进行知识应用。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在五个跨领域基准上进行了评估。",
+        "key_contributions": [
+          "提出了一种双流框架 XSkill",
+          "通过视觉观察进行知识提取和检索",
+          "形成持续学习循环"
+        ],
+        "application_scenarios": [
+          "多模态智能体的持续学习",
+          "复杂推理任务的智能体规划"
+        ],
+        "technical_highlights": [
+          "结合经验与技能进行持续学习",
+          "使用视觉观察进行知识提取和检索"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.11421",
+      "source": "huggingface",
+      "title": "ShotVerse: Advancing Cinematic Camera Control for Text-Driven Multi-Shot Video Creation",
+      "authors": [
+        "Songlin Yang",
+        "Zhe Wang",
+        "Xuyi Yang",
+        "Songchun Zhang",
+        "Xianghao Kong",
+        "Taiyi Wu",
+        "Xiaotong Zhao",
+        "Ran Zhang",
+        "Alan Zhao",
+        "Anyi Rao"
+      ],
+      "abstract": "Text-driven video generation has democratized film creation, but camera control in cinematic multi-shot scenarios remains a significant block. Implicit textual prompts lack precision, while explicit trajectory conditioning imposes prohibitive manual overhead and often triggers execution failures in current models. To overcome this bottleneck, we propose a data-centric paradigm shift, positing that aligned (Caption, Trajectory, Video) triplets form an inherent joint distribution that can connect automated plotting and precise execution. Guided by this insight, we present ShotVerse, a \"Plan-then-Control\" framework that decouples generation into two collaborative agents: a VLM (Vision-Language Model)-based Planner that leverages spatial priors to obtain cinematic, globally aligned trajectories from text, and a Controller that renders these trajectories into multi-shot video content via a camera adapter. Central to our approach is the construction of a data foundation: we design an automated multi-shot camera calibration pipeline aligns disjoint single-shot trajectories into a unified global coordinate system. This facilitates the curation of ShotVerse-Bench, a high-fidelity cinematic dataset with a three-track evaluation protocol that serves as the bedrock for our framework. Extensive experiments demonstrate that ShotVerse effectively bridges the gap between unreliable textual control and labor-intensive manual plotting, achieving superior cinematic aesthetics and generating multi-shot videos that are both camera-accurate and cross-shot consistent.",
+      "published_date": "2026-03-12T01:27:08.000Z",
+      "url": "https://arxiv.org/abs/2603.11421",
+      "pdf_url": "https://arxiv.org/pdf/2603.11421",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.11421",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "ShotVerse：提升基于文本的多镜头视频创作中的电影级摄像控制",
+        "chinese_summary": "提出ShotVerse框架，通过Plan-then-Control方式实现文本驱动的多镜头视频创作。",
+        "pain_point": "现有方法中，文本驱动的多镜头视频创作中摄像控制存在精度不足和手动操作负担重的问题。",
+        "core_value": "通过数据驱动的方法，实现从文本到多镜头视频的精确摄像控制。",
+        "technical_architecture": "提出Plan-then-Control框架，包括基于VLM的规划器和控制器。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集的构建依赖于自动化多镜头摄像校准。",
+        "key_contributions": [
+          "提出Plan-then-Control框架",
+          "设计自动化多镜头摄像校准管道",
+          "构建高保真电影级ShotVerse-Bench数据集"
+        ],
+        "application_scenarios": [
+          "电影制作",
+          "广告制作"
+        ],
+        "technical_highlights": [
+          "结合视觉语言模型进行全局对齐轨迹生成",
+          "通过摄像适配器实现多镜头视频渲染"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.11593",
+      "source": "huggingface",
+      "title": "WeEdit: A Dataset, Benchmark and Glyph-Guided Framework for Text-centric Image Editing",
+      "authors": [
+        "Hui Zhang",
+        "Juntao Liu",
+        "Zongkai Liu",
+        "Liqiang Niu",
+        "Fandong Meng",
+        "Zuxuan Wu",
+        "Yu-Gang Jiang"
+      ],
+      "abstract": "Instruction-based image editing aims to modify specific content within existing images according to user-provided instructions while preserving non-target regions. Beyond traditional object- and style-centric manipulation, text-centric image editing focuses on modifying, translating, or rearranging textual elements embedded within images. However, existing leading models often struggle to execute complex text editing precisely, frequently producing blurry or hallucinated characters. We attribute these failures primarily to the lack of specialized training paradigms tailored for text-centric editing, as well as the absence of large-scale datasets and standardized benchmarks necessary for a closed-loop training and evaluation system. To address these limitations, we present WeEdit, a systematic solution encompassing a scalable data construction pipeline, two benchmarks, and a tailored two-stage training strategy. Specifically, we propose a novel HTML-based automatic editing pipeline, which generates 330K training pairs covering diverse editing operations and 15 languages, accompanied by standardized bilingual and multilingual benchmarks for comprehensive evaluation. On the algorithmic side, we employ glyph-guided supervised fine-tuning to inject explicit spatial and content priors, followed by a multi-objective reinforcement learning stage to align generation with instruction adherence, text clarity, and background preservation. Extensive experiments demonstrate that WeEdit outperforms previous open-source models by a clear margin across diverse editing operations.",
+      "published_date": "2026-03-12T06:25:09.000Z",
+      "url": "https://arxiv.org/abs/2603.11593",
+      "pdf_url": "https://arxiv.org/pdf/2603.11593",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.11593",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": {
+        "chinese_title": "WeEdit: 一种面向文本的图像编辑数据集、基准和字形导向框架",
+        "chinese_summary": "提出WeEdit，包含数据生成管道、两个基准和两阶段训练策略，解决复杂文本编辑精度不足问题。",
+        "pain_point": "现有模型在执行复杂文本编辑时精度不足，常产生模糊或虚假字符。",
+        "core_value": "提供大规模数据集和标准化基准，以及专门的两阶段训练策略。",
+        "technical_architecture": "基于HTML的自动编辑管道，生成多样编辑操作和多语言数据。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步优化模型性能。",
+        "key_contributions": [
+          "提出HTML自动编辑管道",
+          "生成大规模多语言数据集",
+          "提供标准化基准和两阶段训练策略"
+        ],
+        "application_scenarios": [
+          "图像编辑",
+          "文本修改"
+        ],
+        "technical_highlights": [
+          "自动编辑管道",
+          "多语言数据集"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

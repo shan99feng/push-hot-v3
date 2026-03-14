@@ -40,7 +40,11 @@ jobs:
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
         run: |
-          python3 scripts/fetch_papers.py
+          if [ -n "${{ inputs.date }}" ]; then
+            python3 scripts/fetch_papers.py "${{ inputs.date }}"
+          else
+            python3 scripts/fetch_papers.py
+          fi
 
       - name: 提交数据更新
         run: |

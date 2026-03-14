@@ -1,0 +1,475 @@
+{
+  "date": "2026-03-14",
+  "generated_at": "2026-03-14T04:04:43.179893+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.10055",
+      "source": "huggingface",
+      "title": "Training Language Models via Neural Cellular Automata",
+      "authors": [
+        "Dan Lee",
+        "Seungwook Han",
+        "Akarsh Kumar",
+        "Pulkit Agrawal"
+      ],
+      "abstract": "Pre-training is crucial for large language models (LLMs), as it is when most representations and capabilities are acquired. However, natural language pre-training has problems: high-quality text is finite, it contains human biases, and it entangles knowledge with reasoning. This raises a fundamental question: is natural language the only path to intelligence? We propose using neural cellular automata (NCA) to generate synthetic, non-linguistic data for pre-pre-training LLMs--training on synthetic-then-natural language. NCA data exhibits rich spatiotemporal structure and statistics resembling natural language while being controllable and cheap to generate at scale. We find that pre-pre-training on only 164M NCA tokens improves downstream language modeling by up to 6% and accelerates convergence by up to 1.6x. Surprisingly, this even outperforms pre-pre-training on 1.6B tokens of natural language from Common Crawl with more compute. These gains also transfer to reasoning benchmarks, including GSM8K, HumanEval, and BigBench-Lite. Investigating what drives transfer, we find that attention layers are the most transferable, and that optimal NCA complexity varies by domain: code benefits from simpler dynamics, while math and web text favor more complex ones. These results enable systematic tuning of the synthetic distribution to target domains. More broadly, our work opens a path toward more efficient models with fully synthetic pre-training.",
+      "published_date": "2026-03-09T18:14:26.000Z",
+      "url": "https://arxiv.org/abs/2603.10055",
+      "pdf_url": "https://arxiv.org/pdf/2603.10055",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10055",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "通过神经细胞自动机训练语言模型",
+        "chinese_summary": "通过神经细胞自动机生成合成数据，用于预训练语言模型，提高下游语言模型性能。",
+        "pain_point": "自然语言预训练存在数据有限、包含偏见和知识与推理交织的问题。",
+        "core_value": "提出使用神经细胞自动机生成合成数据，用于预预训练语言模型，提高模型性能。",
+        "technical_architecture": "使用神经细胞自动机生成具有丰富时空结构的合成数据。",
+        "quantitative_results": "预预训练仅164M神经细胞自动机令牌，性能提升6%，加速收敛1.6倍。",
+        "competitors": "暂无对比信息",
+        "limitations": "不同领域最优神经细胞自动机复杂度不同。",
+        "key_contributions": [
+          "提出使用神经细胞自动机生成合成数据",
+          "证明合成数据优于大量自然语言数据",
+          "提升下游语言模型性能"
+        ],
+        "application_scenarios": [
+          "语言模型预训练",
+          "推理基准测试"
+        ],
+        "technical_highlights": [
+          "生成具有丰富时空结构的合成数据",
+          "合成数据优于大量自然语言数据"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12267",
+      "source": "huggingface",
+      "title": "EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation",
+      "authors": [
+        "Tianwei Xiong",
+        "Jun Hao Liew",
+        "Zilong Huang",
+        "Zhijie Lin",
+        "Jiashi Feng",
+        "Xihui Liu"
+      ],
+      "abstract": "Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce EVATok, a framework to produce Efficient Video Adaptive Tokenizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.",
+      "published_date": "2026-03-12T17:59:59.000Z",
+      "url": "https://arxiv.org/abs/2603.12267",
+      "pdf_url": "https://arxiv.org/pdf/2603.12267",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12267",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "EVATok: 适应长度的视频分词以提高高效视觉自回归生成",
+        "chinese_summary": "EVATok 提供了显著的效率和质量改进，适用于视频重建和下游自回归生成。",
+        "pain_point": "传统视频分词方法在处理复杂和动态视频时效率低下。",
+        "core_value": "通过自适应分词优化视频生成的效率和质量。",
+        "technical_architecture": "开发了轻量级路由器和自适应分词器来预测最优分词。",
+        "quantitative_results": "在 UCF-101 数据集上实现了最先进的类到视频生成。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上验证其泛化能力。",
+        "key_contributions": [
+          "提出自适应长度的视频分词方法",
+          "开发轻量级路由器进行快速预测",
+          "结合视频语义编码进行训练"
+        ],
+        "application_scenarios": [
+          "视频重建",
+          "自回归视频生成"
+        ],
+        "technical_highlights": [
+          "自适应分词优化效率和质量",
+          "轻量级路由器实现快速预测"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12201",
+      "source": "huggingface",
+      "title": "IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse",
+      "authors": [
+        "Yushi Bai",
+        "Qian Dong",
+        "Ting Jiang",
+        "Xin Lv",
+        "Zhengxiao Du",
+        "Aohan Zeng",
+        "Jie Tang",
+        "Juanzi Li"
+      ],
+      "abstract": "Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from O(L^2) to O(Lk). However, the indexer itself retains O(L^2) complexity and must run independently at every layer, despite the fact that the resulting top-k selections are highly similar across consecutive layers. We present IndexCache, which exploits this cross-layer redundancy by partitioning layers into a small set of Full layers that run their own indexers and a majority of Shared layers that simply reuse the nearest Full layer's top-k indices. We propose two complementary approaches to determine and optimize this configuration. Training-free IndexCache applies a greedy search algorithm that selects which layers to retain indexers by directly minimizing language modeling loss on a calibration set, requiring no weight updates. Training-aware IndexCache introduces a multi-layer distillation loss that trains each retained indexer against the averaged attention distributions of all layers it serves, enabling even simple interleaved patterns to match full-indexer accuracy. Experimental results on a 30B DSA model show that IndexCache can remove 75% of indexer computations with negligible quality degradation, achieving up to 1.82times prefill speedup and 1.48times decode speedup compared to standard DSA. These positive results are further confirmed by our preliminary experiments on the production-scale GLM-5 model (Figure 1).",
+      "published_date": "2026-03-12T17:27:21.000Z",
+      "url": "https://arxiv.org/abs/2603.12201",
+      "pdf_url": "https://arxiv.org/pdf/2603.12201",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12201",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "IndexCache：通过跨层索引重用加速稀疏注意力",
+        "chinese_summary": "通过跨层索引重用减少索引器的计算量，提高稀疏注意力效率。",
+        "pain_point": "现有稀疏注意力方法中，索引器在每层独立运行导致计算冗余。",
+        "core_value": "通过跨层索引重用减少计算量，提高模型效率。",
+        "technical_architecture": "将层分为少量全层和多数共享层，共享层重用最近全层的索引。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化配置选择算法。",
+        "key_contributions": [
+          "提出IndexCache方法减少索引器计算量",
+          "提出两种配置优化方法"
+        ],
+        "application_scenarios": [
+          "大型语言模型推理加速",
+          "降低服务成本"
+        ],
+        "technical_highlights": [
+          "跨层索引重用",
+          "配置优化算法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.07865",
+      "source": "huggingface",
+      "title": "SoundWeaver: Semantic Warm-Starting for Text-to-Audio Diffusion Serving",
+      "authors": [
+        "Ayush Barik",
+        "Sofia Stoica",
+        "Nikhil Sarda",
+        "Arnav Kethana",
+        "Abhinav Khanduja",
+        "Muchen Xu",
+        "Fan Lai"
+      ],
+      "abstract": "Text-to-audio diffusion models produce high-fidelity audio but require tens of function evaluations (NFEs), incurring multi-second latency and limited throughput. We present SoundWeaver, the first training-free, model-agnostic serving system that accelerates text-to-audio diffusion by warm-starting from semantically similar cached audio. SoundWeaver introduces three components: a Reference Selector that retrieves and temporally aligns cached candidates via semantic and duration-aware gating; a Skip Gater that dynamically determines the percentage of NFEs to skip; and a lightweight Cache Manager that maintains cache utility through quality-aware eviction and refinement. On real-world audio traces, SoundWeaver achieves 1.8--3.0 times  latency reduction with a cache of only {sim}1K entries while preserving or improving perceptual quality.",
+      "published_date": "2026-03-09T00:38:02.000Z",
+      "url": "https://arxiv.org/abs/2603.07865",
+      "pdf_url": "https://arxiv.org/pdf/2603.07865",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.07865",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "SoundWeaver: 语义启发的文本到音频扩散模型加速系统",
+        "chinese_summary": "SoundWeaver 通过利用语义相似的缓存音频来加速文本到音频的生成，显著降低延迟。",
+        "pain_point": "文本到音频扩散模型需要大量计算，导致高延迟和低吞吐量。",
+        "core_value": "通过语义启发的方法，SoundWeaver 在保持或提升音质的同时，大幅降低生成音频的延迟。",
+        "technical_architecture": "SoundWeaver 采用参考选择器、跳过门控器和轻量级缓存管理器三个组件来实现加速。",
+        "quantitative_results": "SoundWeaver 在实际音频数据上实现了 1.8 到 3.0 倍的延迟减少，同时保持或提升了音质。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅使用了有限的缓存条目（约 1K），未来可能需要扩展缓存规模。",
+        "key_contributions": [
+          "提出了首个无需训练的、模型无关的加速系统",
+          "引入了语义和时长感知的参考选择器",
+          "实现了动态跳过计算步骤的功能"
+        ],
+        "application_scenarios": [
+          "实时语音合成",
+          "虚拟助手和聊天机器人"
+        ],
+        "technical_highlights": [
+          "语义相似的缓存音频用于初始化生成过程",
+          "动态调整跳过计算步骤的比例"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12245",
+      "source": "huggingface",
+      "title": "One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers",
+      "authors": [
+        "Moayed Haji-Ali",
+        "Willi Menapace",
+        "Ivan Skorokhodov",
+        "Dogyun Park",
+        "Anil Kag",
+        "Michael Vasilkovsky",
+        "Sergey Tulyakov",
+        "Vicente Ordonez",
+        "Aliaksandr Siarohin"
+      ],
+      "abstract": "Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface Transformer (ELIT), a drop-in, DiT-compatible mechanism that decouples input image size from compute. Our approach inserts a latent interface, a learnable variable-length token sequence on which standard transformer blocks can operate. Lightweight Read and Write cross-attention layers move information between spatial tokens and latents and prioritize important input regions. By training with random dropping of tail latents, ELIT learns to produce importance-ordered representations with earlier latents capturing global structure while later ones contain information to refine details. At inference, the number of latents can be dynamically adjusted to match compute constraints. ELIT is deliberately minimal, adding two cross-attention layers while leaving the rectified flow objective and the DiT stack unchanged. Across datasets and architectures (DiT, U-ViT, HDiT, MM-DiT), ELIT delivers consistent gains. On ImageNet-1K 512px, ELIT delivers an average gain of 35.3% and 39.6% in FID and FDD scores. Project page: https://snap-research.github.io/elit/",
+      "published_date": "2026-03-12T17:57:04.000Z",
+      "url": "https://arxiv.org/abs/2603.12245",
+      "pdf_url": "https://arxiv.org/pdf/2603.12245",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12245",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "一种模型，多种预算：扩散变换器的弹性潜在接口",
+        "chinese_summary": "ELIT通过动态调整潜在接口长度，实现计算量与生成质量的灵活权衡。",
+        "pain_point": "现有扩散变换器固定FLOPs到图像分辨率，导致计算资源分配不均。",
+        "core_value": "ELIT通过弹性潜在接口，实现输入图像大小与计算的解耦，提高资源利用率。",
+        "technical_architecture": "ELIT插入可学习的潜在接口序列，通过轻量级读写交叉注意力层优化信息传递。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在部分数据集和架构上进行了验证。",
+        "key_contributions": [
+          "提出弹性潜在接口机制，实现计算量与生成质量的灵活权衡。",
+          "通过随机丢弃尾部潜在接口，学习生成重要性排序的表示。",
+          "保持扩散变换器原始架构不变，仅增加轻量级交叉注意力层"
+        ],
+        "application_scenarios": [
+          "图像生成任务",
+          "资源受限环境下的图像生成"
+        ],
+        "technical_highlights": [
+          "弹性潜在接口设计",
+          "轻量级读写交叉注意力机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.08258",
+      "source": "huggingface",
+      "title": "WaDi: Weight Direction-aware Distillation for One-step Image Synthesis",
+      "authors": [
+        "Lei Wang",
+        "Yang Cheng",
+        "Senmao Li",
+        "Ge Wu",
+        "Yaxing Wang",
+        "Jian Yang"
+      ],
+      "abstract": "Despite the impressive performance of diffusion models such as Stable Diffusion (SD) in image generation, their slow inference limits practical deployment. Recent works accelerate inference by distilling multi-step diffusion into one-step generators. To better understand the distillation mechanism, we analyze U-Net/DiT weight changes between one-step students and their multi-step teacher counterparts. Our analysis reveals that changes in weight direction significantly exceed those in weight norm, highlighting it as the key factor during distillation. Motivated by this insight, we propose the Low-rank Rotation of weight Direction (LoRaD), a parameter-efficient adapter tailored to one-step diffusion distillation. LoRaD is designed to model these structured directional changes using learnable low-rank rotation matrices. We further integrate LoRaD into Variational Score Distillation (VSD), resulting in Weight Direction-aware Distillation (WaDi)-a novel one-step distillation framework. WaDi achieves state-of-the-art FID scores on COCO 2014 and COCO 2017 while using only approximately 10% of the trainable parameters of the U-Net/DiT. Furthermore, the distilled one-step model demonstrates strong versatility and scalability, generalizing well to various downstream tasks such as controllable generation, relation inversion, and high-resolution synthesis.",
+      "published_date": "2026-03-09T11:27:28.000Z",
+      "url": "https://arxiv.org/abs/2603.08258",
+      "pdf_url": "https://arxiv.org/pdf/2603.08258",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.08258",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "WaDi: 一种面向图像合成的一步式权重方向感知蒸馏方法",
+        "chinese_summary": "提出了一种新的蒸馏框架WaDi，显著提高了单步生成模型的性能。",
+        "pain_point": "基于扩散模型的图像生成速度快，但推理速度慢，影响实际部署。",
+        "core_value": "通过分析权重方向的变化，提出了一种参数高效的蒸馏方法，显著提升生成效果。",
+        "technical_architecture": "利用可学习的低秩旋转矩阵建模权重方向变化，集成到变分分数蒸馏中。",
+        "quantitative_results": "在COCO 2014和COCO 2017上达到最先进的FID分数，参数量减少约10%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来可以探索更多应用场景。",
+        "key_contributions": [
+          "提出了一种新的蒸馏框架WaDi",
+          "分析了权重方向变化的重要性",
+          "设计了参数高效的LoRaD方法"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像合成"
+        ],
+        "technical_highlights": [
+          "利用低秩旋转矩阵建模权重方向变化",
+          "显著减少参数量同时保持高生成质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09970",
+      "source": "huggingface",
+      "title": "CREATE: Testing LLMs for Associative Creativity",
+      "authors": [
+        "Manya Wadhwa",
+        "Tiasa Singha Roy",
+        "Harvey Lederman",
+        "Junyi Jessy Li",
+        "Greg Durrett"
+      ],
+      "abstract": "A key component of creativity is associative reasoning: the ability to draw novel yet meaningful connections between concepts. We introduce CREATE, a benchmark designed to evaluate models' capacity for creative associative reasoning. CREATE requires models to generate sets of paths connecting concepts in a model's parametric knowledge. Paths should have high specificity (distinctiveness and closeness of the concept connection) and high diversity (dissimilarity from other paths), and models are scored more highly if they produce a larger set of strong, diverse paths. This task shares demands of real creativity tasks like hypothesis generation, including an extremely large search space, but enables collection of a sizable benchmark with objective answer grading. Evaluation of frontier models shows that the strongest models achieve higher creative utility than others, with the high multiplicity of answers and complexity of the search making benchmark saturation difficult to achieve. Furthermore, our results illustrate that thinking models are not always more effective on our task, even with high token budgets. Recent approaches for creative prompting give some but limited additional improvement. CREATE provides a sandbox for developing new methods to improve models' capacity for associative creativity.",
+      "published_date": "2026-03-10T17:58:44.000Z",
+      "url": "https://arxiv.org/abs/2603.09970",
+      "pdf_url": "https://arxiv.org/pdf/2603.09970",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09970",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "CREATE：测试LLMs的联想创造力",
+        "chinese_summary": "CREATE基准测试模型的创造性联想推理能力。",
+        "pain_point": "现有模型在创造性联想推理方面表现不足。",
+        "core_value": "提供了一个评估模型创造性联想推理能力的新基准。",
+        "technical_architecture": "设计了一个需要模型生成特定路径连接概念的任务。",
+        "quantitative_results": "最强模型在创造性效用上优于其他模型。",
+        "competitors": "暂无对比信息",
+        "limitations": "搜索空间庞大，难以实现基准饱和。",
+        "key_contributions": [
+          "提出了一个新的基准测试CREATE",
+          "展示了最强模型在创造性效用上的优势"
+        ],
+        "application_scenarios": [
+          "评估模型创造力",
+          "促进创造性联想推理研究"
+        ],
+        "technical_highlights": [
+          "任务具有极大的搜索空间",
+          "基准收集具有客观答案评分"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12228",
+      "source": "huggingface",
+      "title": "Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights",
+      "authors": [
+        "Yulu Gan",
+        "Phillip Isola"
+      ],
+      "abstract": "Pretraining produces a learned parameter vector that is typically treated as a starting point for further iterative adaptation. In this work, we instead view the outcome of pretraining as a distribution over parameter vectors, whose support already contains task-specific experts. We show that in small models such expert solutions occupy a negligible fraction of the volume of this distribution, making their discovery reliant on structured optimization methods such as gradient descent. In contrast, in large, well-pretrained models the density of task-experts increases dramatically, so that diverse, task-improving specialists populate a substantial fraction of the neighborhood around the pretrained weights. Motivated by this perspective, we explore a simple, fully parallel post-training method that samples N parameter perturbations at random, selects the top K, and ensembles predictions via majority vote. Despite its simplicity, this approach is competitive with standard post-training methods such as PPO, GRPO, and ES for contemporary large-scale models.",
+      "published_date": "2026-03-12T17:49:30.000Z",
+      "url": "https://arxiv.org/abs/2603.12228",
+      "pdf_url": "https://arxiv.org/pdf/2603.12228",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12228",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "神经密林：预训练权重周围密集分布着多样化任务专家",
+        "chinese_summary": "提出了一种简单且完全并行的后训练方法，通过随机采样和多数投票实现模型优化。",
+        "pain_point": "现有方法在大型模型中发现多样化任务专家效率低下。",
+        "core_value": "在大型预训练模型中密集分布着多样化任务专家，提出了一种高效的后训练方法。",
+        "technical_architecture": "采用随机采样和多数投票的并行后训练方法。",
+        "quantitative_results": "在多个大规模模型上，该方法与标准后训练方法竞争。",
+        "competitors": "PPO, GRPO, ES等标准后训练方法。",
+        "limitations": "仅在大型预训练模型中有效。",
+        "key_contributions": [
+          "提出了神经密林的概念",
+          "提出了一种简单有效的后训练方法",
+          "展示了在大型模型中任务专家的分布特点"
+        ],
+        "application_scenarios": [
+          "大型语言模型的优化",
+          "其他大规模预训练模型的后训练"
+        ],
+        "technical_highlights": [
+          "完全并行的后训练方法",
+          "通过随机采样和多数投票实现高效优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09160",
+      "source": "huggingface",
+      "title": "RubiCap: Rubric-Guided Reinforcement Learning for Dense Image Captioning",
+      "authors": [
+        "Tzu-Heng Huang",
+        "Sirajul Salekin",
+        "Javier Movellan",
+        "Frederic Sala",
+        "Manjot Bilkhu"
+      ],
+      "abstract": "Dense image captioning is critical for cross-modal alignment in vision-language pretraining and text-to-image generation, but scaling expert-quality annotations is prohibitively expensive. While synthetic captioning via strong vision-language models (VLMs) is a practical alternative, supervised distillation often yields limited output diversity and weak generalization. Reinforcement learning (RL) could overcome these limitations, but its successes have so far been concentrated in verifiable domains that rely on deterministic checkers -- a luxury not available in open-ended captioning. We address this bottleneck with RubiCap, a novel RL framework that derives fine-grained, sample-specific reward signals from LLM-written rubrics. RubiCap first assembles a diverse committee of candidate captions, then employs an LLM rubric writer to extract consensus strengths and diagnose deficiencies in the current policy. These insights are converted into explicit evaluation criteria, enabling an LLM judge to decompose holistic quality assessment and replace coarse scalar rewards with structured, multi-faceted evaluations. Across extensive benchmarks, RubiCap achieves the highest win rates on CapArena, outperforming supervised distillation, prior RL methods, human-expert annotations, and GPT-4V-augmented outputs. On CaptionQA, it demonstrates superior word efficiency: our 7B model matches Qwen2.5-VL-32B-Instruct, and our 3B model surpasses its 7B counterpart. Remarkably, using the compact RubiCap-3B as a captioner produces stronger pretrained VLMs than those trained on captions from proprietary models.",
+      "published_date": "2026-03-10T03:51:27.000Z",
+      "url": "https://arxiv.org/abs/2603.09160",
+      "pdf_url": "https://arxiv.org/pdf/2603.09160",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09160",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "RubiCap: 依据评分标准的强化学习密集图像描述",
+        "chinese_summary": "RubiCap 通过 LLM 写的评分标准，为开放式的图像描述任务提供细粒度的奖励信号，显著提高了多样性与泛化能力。",
+        "pain_point": "现有方法难以生成多样且泛化的图像描述，且难以有效利用强化学习。",
+        "core_value": "通过 LLM 写的评分标准，RubiCap 提供了细粒度的奖励信号，解决了现有方法的局限。",
+        "technical_architecture": "RubiCap 采用强化学习框架，结合 LLM 写的评分标准，评估并改进图像描述。",
+        "quantitative_results": "RubiCap 在 CapAr 基准测试中获得最高胜率。",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于高质量的 LLM 写的评分标准。",
+        "key_contributions": [
+          "提出了一种基于 LLM 写的评分标准的强化学习框架",
+          "显著提高了图像描述的多样性和泛化能力"
+        ],
+        "application_scenarios": [
+          "视觉语言预训练",
+          "文本生成图像"
+        ],
+        "technical_highlights": [
+          "利用 LLM 写的评分标准生成细粒度奖励信号",
+          "提高了图像描述的质量和多样性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.11327",
+      "source": "huggingface",
+      "title": "Meta-Reinforcement Learning with Self-Reflection for Agentic Search",
+      "authors": [
+        "Teng Xiao",
+        "Yige Yuan",
+        "Hamish Ivison",
+        "Huaisheng Zhu",
+        "Faeze Brahman",
+        "Nathan Lambert",
+        "Pradeep Dasigi",
+        "Noah A. Smith",
+        "Hannaneh Hajishirzi"
+      ],
+      "abstract": "This paper introduces MR-Search, an in-context meta reinforcement learning (RL) formulation for agentic search with self-reflection. Instead of optimizing a policy within a single independent episode with sparse rewards, MR-Search trains a policy that conditions on past episodes and adapts its search strategy across episodes. MR-Search learns to learn a search strategy with self-reflection, allowing search agents to improve in-context exploration at test-time. Specifically, MR-Search performs cross-episode exploration by generating explicit self-reflections after each episode and leveraging them as additional context to guide subsequent attempts, thereby promoting more effective exploration during test-time. We further introduce a multi-turn RL algorithm that estimates a dense relative advantage at the turn level, enabling fine-grained credit assignment on each episode. Empirical results across various benchmarks demonstrate the advantages of MR-Search over baselines based RL, showing strong generalization and relative improvements of 9.2% to 19.3% across eight benchmarks. Our code and data are available at https://github.com/tengxiao1/MR-Search.",
+      "published_date": "2026-03-11T21:40:26.000Z",
+      "url": "https://arxiv.org/abs/2603.11327",
+      "pdf_url": "https://arxiv.org/pdf/2603.11327",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.11327",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "元强化学习中的自我反思搜索",
+        "chinese_summary": "MR-Search 通过自我反思在测试时改进上下文探索。",
+        "pain_point": "现有方法在单独立场中优化策略，难以有效探索。",
+        "core_value": "自我反思促进更有效的上下文探索。",
+        "technical_architecture": "基于自我反思的元强化学习框架。",
+        "quantitative_results": "在八个基准上，相对改进9.2%至19.3%。",
+        "competitors": "基于基线的强化学习方法。",
+        "limitations": "仅在特定领域进行了实验。",
+        "key_contributions": [
+          "引入自我反思机制",
+          "多轮RL算法",
+          "跨场探索"
+        ],
+        "application_scenarios": [
+          "复杂环境下的智能搜索",
+          "动态变化场景的适应性策略"
+        ],
+        "technical_highlights": [
+          "自我反思促进策略改进",
+          "多轮RL算法实现细粒度信用分配"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

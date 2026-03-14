@@ -40,10 +40,11 @@
       allClassics = papers;
 
       // 统计各领域数量
-      const cats = ['llm', 'multimodal', 'agent', 'cv', 'nlp', 'rl', 'recsys', 'other'];
+      const cats = ['llm', 'multimodal', 'cv', 'rl', 'recsys', 'other'];
       cats.forEach(c => { domainCounts[c] = 0; });
       papers.forEach(p => {
-        const cat = p.category || 'other';
+        // agent/nlp 合并到 llm
+        const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : (p.category || 'other');
         if (domainCounts[cat] !== undefined) domainCounts[cat]++;
         else domainCounts['other']++;
       });
@@ -104,7 +105,10 @@
   function applyFilterAndRender() {
     filteredClassics = currentDomain === 'all'
       ? [...allClassics]
-      : allClassics.filter(p => p.category === currentDomain);
+      : allClassics.filter(p => {
+          const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : (p.category || 'other');
+          return cat === currentDomain;
+        });
 
     const sortFns = {
       hot_score: (a, b) => (b.hot_score || 0) - (a.hot_score || 0),
@@ -126,8 +130,8 @@
     // 更新标题
     const domainLabels = {
       all: '全部经典论文', llm: '大模型 LLM 经典论文',
-      multimodal: '多模态经典论文', agent: 'Agent 经典论文',
-      cv: '计算机视觉经典论文', nlp: 'NLP 经典论文',
+      multimodal: '多模态经典论文',
+      cv: '计算机视觉经典论文',
       rl: '强化学习经典论文', recsys: '搜广推经典论文',
     };
     $('classicsTitle').textContent = domainLabels[currentDomain] || '经典论文';

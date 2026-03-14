@@ -72,12 +72,13 @@
     // 并行加载所有日期数据并缓存
     try {
       const allData = await Promise.all(dates.map(d => API.getDailyPapers(d.date).catch(() => ({ papers: [] }))));
-      const counts = { llm: 0, multimodal: 0, agent: 0, cv: 0, nlp: 0, recsys: 0, rl: 0 };
+      const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0 };
       let total = 0;
       allData.forEach(data => {
         (data.papers || []).forEach(p => {
           total++;
-          if (counts[p.category] !== undefined) counts[p.category]++;
+          const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : p.category;
+          if (counts[cat] !== undefined) counts[cat]++;
           state.allHistoryPapers.push(p);
         });
       });
@@ -91,9 +92,7 @@
   const CAT_CONFIG = [
     { key: 'llm',       label: '大模型',   icon: 'fa-user',     color: 'text-blue-600' },
     { key: 'multimodal',label: '多模态',   icon: 'fa-image',    color: 'text-purple-600' },
-    { key: 'agent',     label: 'Agent',    icon: 'fa-android',  color: 'text-yellow-600' },
     { key: 'cv',        label: '计算机视觉',icon: 'fa-eye',     color: 'text-green-600' },
-    { key: 'nlp',       label: 'NLP',      icon: 'fa-language', color: 'text-teal-600' },
     { key: 'recsys',    label: '搜广推',   icon: 'fa-search',   color: 'text-orange-600' },
     { key: 'rl',        label: '强化学习', icon: 'fa-gamepad',  color: 'text-rose-600' },
   ];
@@ -318,9 +317,10 @@
     const listEl = $('dailyStatsList');
     if (!card || !listEl) return;
 
-    const counts = { llm: 0, multimodal: 0, agent: 0, cv: 0, nlp: 0, recsys: 0, rl: 0 };
+    const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0 };
     papers.forEach(p => {
-      if (counts[p.category] !== undefined) counts[p.category]++;
+      const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : p.category;
+      if (counts[cat] !== undefined) counts[cat]++;
     });
 
     if (dateLabel) dateLabel.textContent = date;
@@ -383,7 +383,10 @@
       // 'date' 和 'allHistory' 模式都支持类别筛选
       state.filteredPapers = state.category === 'all'
         ? [...state.allPapers]
-        : state.allPapers.filter(p => p.category === state.category);
+        : state.allPapers.filter(p => {
+            const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : (p.category || 'other');
+            return cat === state.category;
+          });
     }
 
     const sortFns = {

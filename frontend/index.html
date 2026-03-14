@@ -122,17 +122,9 @@
                 <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-image mr-1 text-purple-400"></i>多模态</span>
                 <span id="statMultimodal" class="font-semibold text-purple-600">-</span>
               </div>
-              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="agent">
-                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-android mr-1 text-yellow-500"></i>Agent</span>
-                <span id="statAgent" class="font-semibold text-yellow-600">-</span>
-              </div>
               <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="cv">
                 <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-eye mr-1 text-green-400"></i>计算机视觉</span>
                 <span id="statCV" class="font-semibold text-green-600">-</span>
-              </div>
-              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="nlp">
-                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-language mr-1 text-teal-400"></i>NLP</span>
-                <span id="statNLP" class="font-semibold text-teal-600">-</span>
               </div>
               <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="recsys">
                 <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-search mr-1 text-orange-400"></i>搜广推</span>
@@ -164,14 +156,12 @@
         <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 mb-5">
           <div class="flex flex-wrap items-center gap-3">
             <div class="flex flex-wrap gap-2" id="categoryFilter">
-              <button class="cat-tab active" data-category="all">全部</button>
-              <button class="cat-tab" data-category="llm"><i class="fa fa-user mr-1"></i>大模型</button>
-              <button class="cat-tab" data-category="multimodal"><i class="fa fa-image mr-1"></i>多模态</button>
-              <button class="cat-tab" data-category="agent"><i class="fa fa-android mr-1"></i>Agent</button>
-              <button class="cat-tab" data-category="cv"><i class="fa fa-eye mr-1"></i>视觉</button>
-              <button class="cat-tab" data-category="nlp"><i class="fa fa-language mr-1"></i>NLP</button>
-              <button class="cat-tab" data-category="recsys"><i class="fa fa-search mr-1"></i>搜广推</button>
-              <button class="cat-tab" data-category="rl"><i class="fa fa-gamepad mr-1"></i>强化学习</button>
+            <button class="cat-tab active" data-category="all">全部</button>
+                <button class="cat-tab" data-category="llm"><i class="fa fa-user mr-1"></i>大模型</button>
+                <button class="cat-tab" data-category="multimodal"><i class="fa fa-image mr-1"></i>多模态</button>
+                <button class="cat-tab" data-category="cv"><i class="fa fa-eye mr-1"></i>视觉</button>
+                <button class="cat-tab" data-category="recsys"><i class="fa fa-search mr-1"></i>搜广推</button>
+                <button class="cat-tab" data-category="rl"><i class="fa fa-gamepad mr-1"></i>强化学习</button>
             </div>
             <div class="ml-auto flex items-center gap-2">
               <select id="sortSelect" class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 text-gray-600 focus:outline-none focus:border-accent bg-white">
@@ -227,8 +217,8 @@
             <span class="paper-date text-xs text-gray-400"></span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="upvotes-tag hidden items-center gap-1 text-xs text-rose-500 font-medium">
-              <i class="fa fa-heart"></i><span class="upvotes-num"></span>
+<span class="upvotes-tag hidden items-center gap-1 text-xs text-rose-500 font-medium">
+              <i class="fa fa-thumbs-up"></i><span class="upvotes-num"></span>
             </span>
             <button class="favorite-btn p-1.5 rounded-lg text-gray-400 hover:text-rose-500 hover:bg-rose-50 transition-colors" title="收藏">
               <i class="fa fa-bookmark-o text-sm"></i>

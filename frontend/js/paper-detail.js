@@ -50,7 +50,7 @@
     const catBadge = $('detailCatBadge');
     if (catBadge) {
       catBadge.textContent = getCategoryLabel(paper.category);
-      catBadge.classList.add(paper.category || 'other');
+      catBadge.classList.add(normalizeCategory(paper.category));
     }
 
     // 日期

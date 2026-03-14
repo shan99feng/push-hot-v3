@@ -74,17 +74,16 @@
 
   // ===== 更新侧边栏统计 =====
   function updateSidebarStats(papers) {
-    const counts = { llm: 0, multimodal: 0, agent: 0, cv: 0, nlp: 0, recsys: 0, rl: 0 };
+    const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0 };
     papers.forEach(p => {
-      if (counts[p.category] !== undefined) counts[p.category]++;
+      const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : p.category;
+      if (counts[cat] !== undefined) counts[cat]++;
     });
     const s = id => $(id);
     if (s('statTotal'))     s('statTotal').textContent     = papers.length;
     if (s('statLLM'))       s('statLLM').textContent       = counts.llm;
     if (s('statMultimodal'))s('statMultimodal').textContent= counts.multimodal;
-    if (s('statAgent'))     s('statAgent').textContent     = counts.agent;
     if (s('statCV'))        s('statCV').textContent        = counts.cv;
-    if (s('statNLP'))       s('statNLP').textContent       = counts.nlp;
     if (s('statRecsys'))    s('statRecsys').textContent    = counts.recsys;
     if (s('statRL'))        s('statRL').textContent        = counts.rl;
   }
@@ -94,7 +93,10 @@
     // 筛选
     filteredPapers = currentCategory === 'all'
       ? [...allPapers]
-      : allPapers.filter(p => p.category === currentCategory);
+      : allPapers.filter(p => {
+          const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : (p.category || 'other');
+          return cat === currentCategory;
+        });
 
     // 排序
     const sortFns = {
@@ -279,7 +281,7 @@
               <div class="flex-1 min-w-0">
                 <div class="flex items-center gap-2 mb-1">
                   <span class="badge source-badge ${getSourceClass(paper.source)}">${getSourceLabel(paper.source)}</span>
-                  <span class="badge cat-badge ${paper.category || 'other'}">${getCategoryLabel(paper.category)}</span>
+                  <span class="badge cat-badge ${normalizeCategory(paper.category)}">${getCategoryLabel(paper.category)}</span>
                 </div>
                 <div class="text-sm font-medium text-gray-800 line-clamp-2">${paper.title}</div>
                 ${paper.structured_summary?.chinese_title ? `<div class="text-xs text-primary mt-0.5">${paper.structured_summary.chinese_title}</div>` : ''}

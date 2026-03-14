@@ -104,11 +104,13 @@ def http_post_json(url, data, headers=None):
         conn.close()
 
 def map_arxiv_category(cats):
-    """将 arXiv 分类映射到网站分类"""
+    """将 arXiv 分类映射到网站分类
+    注意：大模型、Agent、NLP 三个方向统一合并为 "llm"（大模型）
+    """
     cats = cats if isinstance(cats, list) else [cats]
-    if any(c in ["cs.CL", "cs.AI"] for c in cats): return "llm"
+    # cs.CL(NLP)、cs.AI(AI/Agent)、cs.LG(机器学习/大模型) 全部归入大模型
+    if any(c in ["cs.CL", "cs.AI", "cs.LG", "cs.MA", "cs.NE"] for c in cats): return "llm"
     if "cs.CV" in cats: return "cv"
-    if "cs.LG" in cats: return "llm"
     if "cs.IR" in cats: return "recsys"
     if "cs.RO" in cats: return "rl"
     return "other"
@@ -177,6 +179,41 @@ def fetch_arxiv():
 
 # ===== HuggingFace Daily Papers =====
 
+def _get_arxiv_cats_batch(arxiv_ids):
+    """批量通过 arXiv API 查询多篇论文的真实分类，返回 {arxiv_id: [cats]} 字典"""
+    if not arxiv_ids:
+        return {}
+    id_list = ",".join(arxiv_ids)
+    url = f"https://export.arxiv.org/api/query?id_list={id_list}&max_results={len(arxiv_ids)}"
+    # 遇到 429 限流时，最多重试 3 次，等待时间依次为 30s / 60s / 90s
+    for attempt in range(3):
+        try:
+            xml_text = http_get(url, timeout=30)
+            root = ET.fromstring(xml_text)
+            ns = {"atom": "http://www.w3.org/2005/Atom"}
+            result = {}
+            for entry in root.findall("atom:entry", ns):
+                raw_id = (entry.find("atom:id", ns).text or "").strip()
+                arxiv_id = raw_id.replace("http://arxiv.org/abs/", "").replace("https://arxiv.org/abs/", "").strip()
+                # 去掉版本号 v1/v2 等
+                arxiv_id = re.sub(r"v\d+$", "", arxiv_id)
+                cats = [c.get("term", "") for c in entry.findall("atom:category", ns) if c.get("term")]
+                result[arxiv_id] = cats
+            return result
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                wait = (attempt + 1) * 30  # 30s / 60s / 90s
+                log(f"  ⏳ arXiv 限流(429)，等待 {wait}s 后重试 ({attempt+1}/3)...")
+                time.sleep(wait)
+            else:
+                log(f"  批量查询 arXiv 分类失败: {e}")
+                return {}
+        except Exception as e:
+            log(f"  批量查询 arXiv 分类失败: {e}")
+            return {}
+    log("  ⚠️  arXiv 分类查询多次限流，放弃，使用兜底分类")
+    return {}
+
 def fetch_huggingface():
     log("🤗 开始采集 HuggingFace Daily Papers...")
     items = []
@@ -189,6 +226,8 @@ def fetch_huggingface():
         if not isinstance(papers, list):
             papers = papers.get("papers", [])
 
+        # 第一步：解析基础字段，收集所有 arxiv_id
+        raw_items = []
         for paper in papers:
             try:
                 p = paper.get("paper", paper)
@@ -197,32 +236,51 @@ def fetch_huggingface():
                     a.get("name", a) if isinstance(a, dict) else str(a)
                     for a in (p.get("authors") or [])
                 ]
-                upvotes = paper.get("numComments", 0) or paper.get("upvotes", 0) or 0
+                # upvotes 在 paper 内层（不在外层）
+                upvotes = p.get("upvotes", 0) or 0
                 hot_score = upvotes * 10 + (p.get("likes", 0) or 0)
-
-                items.append({
-                    "paper_id": f"hf-paper-{arxiv_id}",
-                    "source": "huggingface",
+                raw_items.append({
+                    "arxiv_id": arxiv_id,
+                    "upvotes": upvotes,
+                    "hot_score": hot_score,
                     "title": p.get("title", ""),
                     "authors": authors,
                     "abstract": p.get("summary", p.get("abstract", "")),
                     "published_date": p.get("publishedAt", paper.get("publishedAt", "")),
-                    "url": f"https://arxiv.org/abs/{arxiv_id}",
-                    "pdf_url": f"https://arxiv.org/pdf/{arxiv_id}",
-                    "code_url": None,
-                    "hf_url": f"https://huggingface.co/papers/{arxiv_id}",
-                    "category": "llm",
-                    "tags": [],
-                    "upvotes": upvotes,
-                    "hot_score": hot_score,
-                    "structured_summary": None,
                 })
             except Exception as e:
                 log(f"  解析 HF 论文失败: {e}")
 
-        # 按热度排序，取精选 TOP N
-        items.sort(key=lambda x: x.get("hot_score", 0), reverse=True)
-        items = items[:HF_MAX_RESULTS]
+        # 第二步：先按热度排序，只取 TOP N，再批量查询 arXiv 分类（减少请求量）
+        raw_items.sort(key=lambda x: x["hot_score"], reverse=True)
+        top_items = raw_items[:HF_MAX_RESULTS]
+        arxiv_ids = [r["arxiv_id"] for r in top_items if r["arxiv_id"]]
+        log(f"  批量查询 arXiv 分类: {len(arxiv_ids)} 篇...")
+        cats_map = _get_arxiv_cats_batch(arxiv_ids)
+
+        # 第三步：组装最终数据
+        for r in top_items:
+            arxiv_id = r["arxiv_id"]
+            arxiv_cats = cats_map.get(arxiv_id, [])
+            category = map_arxiv_category(arxiv_cats) if arxiv_cats else "llm"
+            items.append({
+                "paper_id": f"hf-paper-{arxiv_id}",
+                "source": "huggingface",
+                "title": r["title"],
+                "authors": r["authors"],
+                "abstract": r["abstract"],
+                "published_date": r["published_date"],
+                "url": f"https://arxiv.org/abs/{arxiv_id}",
+                "pdf_url": f"https://arxiv.org/pdf/{arxiv_id}",
+                "code_url": None,
+                "hf_url": f"https://huggingface.co/papers/{arxiv_id}",
+                "category": category,
+                "tags": arxiv_cats[:5],
+                "upvotes": r["upvotes"],
+                "hot_score": r["hot_score"],
+                "structured_summary": None,
+            })
+
         log(f"  HuggingFace: 精选 {len(items)} 篇（按热度排序）")
     except Exception as e:
         log(f"  HuggingFace 采集失败: {e}")

@@ -174,7 +174,10 @@ const API = {
       const data = await fetchJSON(`${DATA_BASE}/classics.json`);
       let papers = data.papers || [];
       if (domain !== 'all') {
-        papers = papers.filter(p => p.category === domain);
+        papers = papers.filter(p => {
+          const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : (p.category || 'other');
+          return cat === domain;
+        });
       }
       papers.sort((a, b) => (b.hot_score || 0) - (a.hot_score || 0));
       return {
@@ -194,7 +197,8 @@ const API = {
         const dayData = await this.getDailyPapers(date);
         for (const paper of (dayData.papers || [])) {
           if (paper.is_classic) {
-            if (domain === 'all' || paper.category === domain) {
+            const cat = (paper.category === 'agent' || paper.category === 'nlp') ? 'llm' : (paper.category || 'other');
+            if (domain === 'all' || cat === domain) {
               results.push(paper);
             }
           }

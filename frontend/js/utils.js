@@ -31,16 +31,20 @@ function formatDateFull(dateStr) {
 const CATEGORY_MAP = {
   llm: { label: '大模型', color: 'llm' },
   multimodal: { label: '多模态', color: 'multimodal' },
-  agent: { label: 'Agent', color: 'agent' },
   cv: { label: '计算机视觉', color: 'cv' },
-  nlp: { label: 'NLP', color: 'nlp' },
   recsys: { label: '搜广推', color: 'recsys' },
   rl: { label: '强化学习', color: 'rl' },
   other: { label: '其他', color: 'other' },
 };
 
 function getCategoryLabel(cat) {
-  return CATEGORY_MAP[cat]?.label || cat || '其他';
+  // agent/nlp 合并到大模型
+  const normalizedCat = (cat === 'agent' || cat === 'nlp') ? 'llm' : cat;
+  return CATEGORY_MAP[normalizedCat]?.label || normalizedCat || '其他';
+}
+
+function normalizeCategory(cat) {
+  return (cat === 'agent' || cat === 'nlp') ? 'llm' : (cat || 'other');
 }
 
 // ===== 来源映射 =====
@@ -193,8 +197,9 @@ function renderPaperCard(paper, container) {
   // 分类徽章
   const catBadge = card.querySelector('.cat-badge');
   if (catBadge) {
+    const normalizedCat = normalizeCategory(paper.category);
     catBadge.textContent = getCategoryLabel(paper.category);
-    catBadge.classList.add(paper.category || 'other');
+    catBadge.classList.add(normalizedCat);
   }
 
   // 日期
@@ -315,7 +320,8 @@ function renderPaperCard(paper, container) {
     tags.slice(0, 3).forEach(tag => {
       const span = document.createElement('span');
       span.className = 'paper-tag';
-      span.textContent = tag;
+      // agent/nlp 标签统一显示为"大模型"
+      span.textContent = (tag === 'agent' || tag === 'nlp') ? '大模型' : tag;
       tagsEl.appendChild(span);
     });
   }

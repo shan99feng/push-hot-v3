@@ -5,11 +5,14 @@
 // ===== 日期格式化 =====
 function formatDate(dateStr) {
   if (!dateStr) return '';
-  const d = new Date(dateStr);
+  // 对 YYYY-MM-DD 格式直接解析，避免 new Date() 按 UTC 解析导致北京时间少一天
+  const parts = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  const d = parts ? new Date(+parts[1], +parts[2] - 1, +parts[3]) : new Date(dateStr);
   if (isNaN(d.getTime())) return dateStr;
   const now = new Date();
-  const diff = now - d;
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const dStart = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const days = Math.round((todayStart - dStart) / (1000 * 60 * 60 * 24));
   if (days === 0) return '今天';
   if (days === 1) return '昨天';
   if (days < 7) return `${days}天前`;
@@ -22,7 +25,9 @@ function formatDate(dateStr) {
 
 function formatDateFull(dateStr) {
   if (!dateStr) return '';
-  const d = new Date(dateStr);
+  // 对 YYYY-MM-DD 格式直接解析，避免 new Date() 按 UTC 解析导致北京时间少一天
+  const parts = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  const d = parts ? new Date(+parts[1], +parts[2] - 1, +parts[3]) : new Date(dateStr);
   if (isNaN(d.getTime())) return dateStr;
   return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
 }

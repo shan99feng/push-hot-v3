@@ -28,8 +28,11 @@
       allPapers = data.papers || [];
 
       // 更新页面标题
-      const d = new Date(data.date);
-      const dateStr = isNaN(d) ? data.date : d.toLocaleDateString('zh-CN', { month: 'long', day: 'numeric' });
+      // 注意：直接用字符串解析，避免 new Date("YYYY-MM-DD") 按 UTC 解析导致北京时间少一天
+      const dateParts = data.date && data.date.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      const dateStr = dateParts
+        ? `${parseInt(dateParts[2])}月${parseInt(dateParts[3])}日`
+        : data.date;
       $('pageSubtitle').textContent = `${dateStr} · 共 ${data.total} 篇论文`;
       $('updateTime').textContent = `更新于 ${dateStr}`;
 

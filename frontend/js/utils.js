@@ -207,9 +207,12 @@ function renderPaperCard(paper, container) {
     catBadge.classList.add(normalizedCat);
   }
 
-  // 日期
+  // 日期（统一显示绝对日期，如"3月13日"，避免今日/历史页面显示不一致）
   const dateEl = card.querySelector('.paper-date');
-  if (dateEl) dateEl.textContent = formatDate(paper.published_date);
+  if (dateEl) {
+    const dp = paper.published_date && paper.published_date.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    dateEl.textContent = dp ? `${parseInt(dp[2])}月${parseInt(dp[3])}日` : (paper.published_date || '');
+  }
 
   // 点赞数
   if (paper.upvotes > 0) {

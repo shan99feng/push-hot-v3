@@ -505,10 +505,16 @@ def update_index(date_str, total):
 # ===== 主流程 =====
 
 def main():
-    # 使用北京时间（UTC+8）作为日期基准，避免跨天时文件名错误
-    beijing_tz = timezone(timedelta(hours=8))
-    today = datetime.now(beijing_tz).strftime("%Y-%m-%d")
-    log(f"=== AI Papers Daily 采集任务开始 ({today}) ===")
+    import sys
+    # 支持命令行参数指定日期，例如：python fetch_papers.py 2026-03-13
+    if len(sys.argv) > 1:
+        today = sys.argv[1]
+        log(f"=== AI Papers Daily 采集任务开始（指定日期：{today}）===")
+    else:
+        # 使用北京时间（UTC+8）作为日期基准，避免跨天时文件名错误
+        beijing_tz = timezone(timedelta(hours=8))
+        today = datetime.now(beijing_tz).strftime("%Y-%m-%d")
+        log(f"=== AI Papers Daily 采集任务开始 ({today}) ===")
 
     # 1. 采集论文
     # 第一步：优先从 HuggingFace 获取精选论文（人工筛选，质量高）

@@ -1,6 +1,6 @@
 {
-  "date": "2026-03-14",
-  "generated_at": "2026-03-14T06:04:51.639145+00:00",
+  "date": "2026-03-13",
+  "generated_at": "2026-03-14T06:21:02.422205+00:00",
   "total": 10,
   "papers": [
     {
@@ -34,26 +34,25 @@
       "hot_score": 660,
       "structured_summary": {
         "chinese_title": "Spatial-TTT：基于测试时训练的流式视觉空间智能",
-        "chinese_summary": "提出Spatial-TTT，通过测试时训练处理长时序场景视频中的空间证据。",
-        "pain_point": "处理长时序场景视频中的空间信息选择、组织和保留。",
+        "chinese_summary": "提出Spatial-TTT，通过测试时训练动态维护和更新长时视频中的空间证据。",
+        "pain_point": "现有方法难以高效处理长时视频中的空间信息。",
         "core_value": "通过测试时训练和3D时空卷积促进空间感知。",
-        "technical_architecture": "设计混合架构，采用大块更新和滑动窗口注意力机制。",
+        "technical_architecture": "采用混合架构和大块更新并行滑动窗口注意力机制。",
         "quantitative_results": "暂无量化数据",
         "competitors": "暂无对比信息",
-        "limitations": "需要更多实验验证模型的鲁棒性和泛化能力。",
+        "limitations": "仅在特定数据集上验证。",
         "key_contributions": [
           "提出Spatial-TTT框架",
-          "设计高效的空间视频处理架构",
-          "引入3D时空卷积促进空间感知"
+          "采用测试时训练机制",
+          "引入3D时空卷积"
         ],
         "application_scenarios": [
-          "虚拟现实",
-          "增强现实"
+          "城市监控",
+          "虚拟现实导航"
         ],
         "technical_highlights": [
-          "测试时训练",
-          "大块更新",
-          "3D时空卷积"
+          "高效处理长时视频",
+          "动态更新空间证据"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }
@@ -94,25 +93,25 @@
       "hot_score": 410,
       "structured_summary": {
         "chinese_title": "战略导航还是随机搜索？代理和人类在文档集合中的推理方式",
-        "chinese_summary": "该研究展示了最佳代理在准确率上可与人类搜索者匹敌，但在策略规划上存在不足，导致无法达到最优性能。",
-        "pain_point": "代理在文档密集型工作流程中的战略推理能力不足，依赖于随机搜索。",
-        "core_value": "通过引入MADQA基准测试，评估代理的准确率与努力之间的权衡。",
-        "technical_architecture": "基于经典测试理论设计MADQA基准测试，评估代理行为。",
-        "quantitative_results": "最佳代理在准确率上可与人类搜索者匹敌，但未能达到最优性能。",
+        "chinese_summary": "研究发现，尽管最佳代理在准确性上可与人类搜索者匹敌，但它们依赖于无策略的搜索来弥补策略规划的不足。",
+        "pain_point": "现有代理在文档密集型工作流程中的策略性推理能力不足。",
+        "core_value": "提出MADQA基准，评估代理的准确性与努力之间的权衡。",
+        "technical_architecture": "基于经典测试理论设计MADQA基准，引入新的评估协议。",
+        "quantitative_results": "暂无量化数据",
         "competitors": "暂无对比信息",
-        "limitations": "代理在策略规划上的不足导致无法有效减少无用循环。",
+        "limitations": "代理在策略规划方面仍存在局限性。",
         "key_contributions": [
-          "引入MADQA基准测试",
-          "评估代理准确率与努力之间的权衡",
-          "揭示代理在策略规划上的不足"
+          "提出MADQA基准",
+          "评估代理的准确性与努力之间的权衡",
+          "揭示代理与人类搜索者之间的差异"
         ],
         "application_scenarios": [
           "文档密集型工作流程自动化",
-          "信息检索与导航"
+          "代理与人类搜索者比较"
         ],
         "technical_highlights": [
-          "基于经典测试理论设计基准测试",
-          "评估准确率与努力之间的权衡"
+          "基于经典测试理论设计基准",
+          "引入新的评估协议"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }
@@ -145,25 +144,25 @@
       "upvotes": 33,
       "hot_score": 330,
       "structured_summary": {
-        "chinese_title": "IndexCache：通过跨层索引重用加速稀疏注意机制",
-        "chinese_summary": "通过跨层索引重用减少索引器的计算量，提高稀疏注意机制的效率。",
-        "pain_point": "稀疏注意机制中索引器的计算量大，导致每层都需要独立运行。",
-        "core_value": "通过跨层重用索引显著降低计算复杂度，提高模型效率。",
+        "chinese_title": "IndexCache：通过跨层索引重用加速稀疏注意力",
+        "chinese_summary": "通过跨层索引重用减少索引器的计算量，提高稀疏注意力效率。",
+        "pain_point": "现有稀疏注意力方法中，索引器在每一层都需要独立运行，导致计算冗余。",
+        "core_value": "通过跨层索引重用减少计算量，提高模型效率。",
         "technical_architecture": "将层分为全层和共享层，共享层重用全层的索引。",
         "quantitative_results": "暂无量化数据",
         "competitors": "暂无对比信息",
-        "limitations": "需要进一步优化配置选择方法。",
+        "limitations": "需要进一步优化配置选择算法。",
         "key_contributions": [
-          "提出IndexCache方法",
-          "利用跨层冗余减少计算量"
+          "提出IndexCache方法减少索引器计算量",
+          "提出两种配置优化方法"
         ],
         "application_scenarios": [
           "大型语言模型推理加速",
           "降低服务成本"
         ],
         "technical_highlights": [
-          "无需训练的配置选择",
-          "共享层直接重用索引"
+          "利用跨层冗余减少计算量",
+          "无需训练即可优化配置"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }
@@ -198,25 +197,25 @@
       "hot_score": 310,
       "structured_summary": {
         "chinese_title": "基于视频的计算机使用代理奖励建模",
-        "chinese_summary": "提出了一种新的奖励建模方法，通过执行视频预测任务成功，显著提升了计算机使用代理的评估效率。",
-        "pain_point": "现有方法难以大规模评估代理执行是否符合用户指令。",
-        "core_value": "通过执行视频直接建模奖励，解决了冗余布局和细微线索的挑战。",
+        "chinese_summary": "提出了一种新的奖励建模方法，通过执行视频预测任务成功，显著提高了计算机使用代理的评估准确性。",
+        "pain_point": "现有方法难以大规模评估代理是否真正执行了用户指令。",
+        "core_value": "通过执行视频建模奖励，解决了冗余布局和细微成功线索的挑战。",
         "technical_architecture": "设计了时空令牌剪枝，保留关键UI变化，去除冗余区域。",
         "quantitative_results": "ExeVRM 8B模型在视频执行评估中达到84.7%的准确率和87.7%的召回率。",
         "competitors": "暂无对比信息",
-        "limitations": "仅在特定数据集上进行了验证，未来需在更广泛场景下测试。",
+        "limitations": "仅在特定数据集上进行了验证。",
         "key_contributions": [
           "提出了ExeVR-53k数据集",
-          "设计了时空令牌剪枝方法",
-          "构建了ExeVRM奖励模型"
+          "设计了时空令牌剪枝",
+          "提出了对抗指令翻译"
         ],
         "application_scenarios": [
           "计算机使用代理评估",
           "自动化测试"
         ],
         "technical_highlights": [
-          "无需依赖代理内部推理或动作",
-          "有效处理冗余布局和细微线索"
+          "高分辨率执行视频处理",
+          "对抗样本生成负样本"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }
@@ -255,26 +254,26 @@
       "upvotes": 24,
       "hot_score": 240,
       "structured_summary": {
-        "chinese_title": "DreamVideo-Omni：全方位运动控制的多主体视频定制",
-        "chinese_summary": "DreamVideo-Omni 提供了多主体视频定制的统一框架，实现了精确的身份和多粒度运动控制。",
-        "pain_point": "现有方法在多主体身份和运动控制上存在精度不足和控制模糊的问题。",
-        "core_value": "通过引入条件感知的3D旋转位置嵌入和分层运动注入策略，实现了精确的多主体和多粒度运动控制。",
-        "technical_architecture": "采用渐进的两阶段训练框架，结合全面的控制信号进行联合训练。",
+        "chinese_title": "DreamVideo-Omni：全方位运动控制多主体视频定制",
+        "chinese_summary": "DreamVideo-Omni 提供了一种统一框架，实现多主体的和谐定制和全方位运动控制。",
+        "pain_point": "现有方法在多主体身份和多粒度运动控制上存在不足。",
+        "core_value": "通过引入条件感知的3D旋转位置嵌入和分层运动注入策略，实现精确控制。",
+        "technical_architecture": "采用渐进式的两阶段训练框架。",
         "quantitative_results": "暂无量化数据",
         "competitors": "暂无对比信息",
-        "limitations": "未来工作将探索更多复杂场景的应用。",
+        "limitations": "未来需要进一步探索更复杂的场景。",
         "key_contributions": [
           "引入条件感知的3D旋转位置嵌入",
-          "提出分层运动注入策略",
-          "实现多主体和多粒度运动控制"
+          "分层运动注入策略",
+          "多主体身份和运动信号解耦"
         ],
         "application_scenarios": [
-          "虚拟现实",
-          "增强现实"
+          "视频编辑",
+          "虚拟现实"
         ],
         "technical_highlights": [
           "全方位运动控制",
-          "多主体身份和运动分离"
+          "多主体身份解耦"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }
@@ -310,23 +309,24 @@
       "structured_summary": {
         "chinese_title": "信任你的评判者：稳健的奖励建模与强化学习在忠实图像编辑和生成中的应用",
         "chinese_summary": "提出FIRM框架，通过构建高质量数据集和专门的奖励模型，提高图像编辑和生成的准确性。",
-        "pain_point": "当前的奖励模型容易产生幻觉，导致优化过程偏离目标。",
-        "core_value": "提供准确可靠的奖励模型，提升图像编辑和生成的质量。",
-        "technical_architecture": "设计定制化数据处理管道和专门的奖励模型。",
-        "quantitative_results": "模型在FIRM-Bench基准测试中表现优于现有指标。",
+        "pain_point": "当前的奖励模型容易产生幻觉并提供误导性的评分，影响优化过程。",
+        "core_value": "提供准确可靠的奖励模型，提升图像编辑和生成的忠实度。",
+        "technical_architecture": "设计定制的数据处理管道和专门的奖励模型。",
+        "quantitative_results": "模型在人类判断上的对齐度优于现有指标。",
         "competitors": "暂无对比信息",
-        "limitations": "未来工作可探索更多应用场景。",
+        "limitations": "未来需要在更多场景下验证模型的泛化能力。",
         "key_contributions": [
-          "构建高质量数据集和奖励模型",
-          "提出FIRM-Bench基准测试"
+          "提出FIRM框架",
+          "构建高质量数据集",
+          "训练专门的奖励模型"
         ],
         "application_scenarios": [
           "图像编辑",
           "文本到图像生成"
         ],
         "technical_highlights": [
-          "定制化数据处理管道",
-          "专门的奖励模型"
+          "使用执行和一致性评估编辑",
+          "专门设计的基准测试"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }
@@ -365,26 +365,26 @@
       "upvotes": 16,
       "hot_score": 160,
       "structured_summary": {
-        "chinese_title": "DVD: 确定性视频深度估计与生成先验",
-        "chinese_summary": "DVD 是首个将预训练视频扩散模型转换为单次深度回归的框架，实现零样本最佳性能。",
+        "chinese_title": "DVD：基于生成先验的确定性视频深度估计",
+        "chinese_summary": "DVD 通过重新利用扩散时间步作为结构锚点，实现视频深度估计的零样本最佳性能。",
         "pain_point": "现有视频深度估计方法在生成模型的几何幻觉和尺度漂移与判别模型的数据需求之间存在矛盾。",
-        "core_value": "通过引入确定性设计和几何先验，DVD 在无需大量标注数据的情况下实现了卓越的零样本性能。",
-        "technical_architecture": "DVD 采用扩散时间步作为结构锚点，结合潜流形矫正和全局仿射一致性，实现单次深度估计。",
-        "quantitative_results": "DVD 在多个基准测试中达到最先进的零样本性能。",
-        "competitors": "与现有基线相比，DVD 使用更少的任务特定数据量解锁视频基础模型中的几何先验。",
-        "limitations": "未来工作可能涉及更复杂的时间对齐问题。",
+        "core_value": "DVD 通过确定性方法利用预训练的视频扩散模型，大幅减少任务特定数据的需求。",
+        "technical_architecture": "DVD 通过重新利用扩散时间步、latent manifold rectification 和 global affine coherence 实现确定性深度估计。",
+        "quantitative_results": "DVD 在多个基准测试中达到零样本最佳性能。",
+        "competitors": "与现有基线相比，DVD 使用更少的任务特定数据实现了更好的性能。",
+        "limitations": "未来工作可能包括更复杂的场景适应性。",
         "key_contributions": [
-          "引入扩散时间步作为结构锚点",
-          "提出潜流形矫正（LMR）",
-          "实现全局仿射一致性"
+          "重新利用扩散时间步作为结构锚点",
+          "latent manifold rectification 技术",
+          "global affine coherence 技术"
         ],
         "application_scenarios": [
           "视频深度估计",
           "视频理解"
         ],
         "technical_highlights": [
-          "单次深度估计",
-          "几何先验利用"
+          "大幅减少任务特定数据的需求",
+          "实现零样本最佳性能"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }
@@ -419,25 +419,74 @@
       "hot_score": 160,
       "structured_summary": {
         "chinese_title": "ShotVerse: 提升基于文本的多镜头视频创作中的电影级摄像控制",
-        "chinese_summary": "提出ShotVerse框架，通过Plan-then-Control方式实现文本驱动的多镜头视频创作。",
-        "pain_point": "现有方法在多镜头场景中缺乏精确的摄像控制。",
-        "core_value": "通过数据驱动的方法连接自动情节规划和精确执行。",
-        "technical_architecture": "提出Plan-then-Control框架，包括基于VLM的规划器和控制器。",
+        "chinese_summary": "提出ShotVerse框架，通过Plan-then-Control方式解决多镜头视频创作中的摄像控制问题。",
+        "pain_point": "当前模型在多镜头视频创作中的摄像控制存在精度不足和手动操作负担重的问题。",
+        "core_value": "通过数据驱动的方法，实现从文本到多镜头视频的精确摄像控制。",
+        "technical_architecture": "采用Plan-then-Control框架，结合VLM规划器和控制器实现。",
         "quantitative_results": "暂无量化数据",
         "competitors": "暂无对比信息",
-        "limitations": "需要大量标注数据来构建数据基础。",
+        "limitations": "数据集的构建依赖于自动化的多镜头摄像校准。",
         "key_contributions": [
           "提出Plan-then-Control框架",
-          "设计自动多镜头摄像校准管道",
-          "构建高保真电影级ShotVerse-Bench数据集"
+          "设计自动化的多镜头摄像校准管道",
+          "构建高保真度的ShotVerse-Bench数据集"
         ],
         "application_scenarios": [
-          "电影制作",
+          "电影短片制作",
           "广告视频创作"
         ],
         "technical_highlights": [
-          "数据驱动的多镜头摄像控制",
-          "自动多镜头摄像校准"
+          "结合VLM规划器和控制器",
+          "实现从文本到多镜头视频的精确摄像控制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.12056",
+      "source": "huggingface",
+      "title": "XSkill: Continual Learning from Experience and Skills in Multimodal Agents",
+      "authors": [
+        "Guanyu Jiang",
+        "Zhaochen Su",
+        "Xiaoye Qu",
+        "Yi R.",
+        "Fung"
+      ],
+      "abstract": "Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings. A central challenge is enabling such agents to continually improve without parameter updates by learning from past trajectories. We identify two complementary forms of reusable knowledge essential for this goal: experiences, providing concise action-level guidance for tool selection and decision making, and skills, providing structured task-level guidance for planning and tool use. To this end, we propose XSkill, a dual-stream framework for continual learning from experience and skills in multimodal agents. XSkill grounds both knowledge extraction and retrieval in visual observations. During accumulation, XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique. During inference, it retrieves and adapts this knowledge to the current visual context and feeds usage history back into accumulation to form a continual learning loop. Evaluated on five benchmarks across diverse domains with four backbone models, XSkill consistently and substantially outperforms both tool-only and learning-based baselines. Further analysis reveals that the two knowledge streams play complementary roles in influencing the reasoning behaviors of agents and show superior zero-shot generalization.",
+      "published_date": "2026-03-12T15:25:57.000Z",
+      "url": "https://arxiv.org/abs/2603.12056",
+      "pdf_url": "https://arxiv.org/pdf/2603.12056",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.12056",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": {
+        "chinese_title": "XSkill: 多模态代理中的持续学习经验与技能",
+        "chinese_summary": "XSkill 提出了一种基于视觉观察的持续学习框架，通过经验与技能的提取与检索实现多模态代理的持续改进。",
+        "pain_point": "多模态代理在开放环境中工具使用效率低且缺乏灵活调度。",
+        "core_value": "通过经验与技能的持续学习，提高多模态代理在复杂任务中的表现。",
+        "technical_architecture": "提出了一种双流框架，通过视觉观察进行知识提取与检索。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在五个不同领域进行了评估。",
+        "key_contributions": [
+          "提出了一种基于视觉观察的持续学习框架",
+          "通过经验与技能的提取与检索实现持续学习",
+          "适用于多模态代理的复杂任务"
+        ],
+        "application_scenarios": [
+          "复杂推理任务",
+          "多模态代理的持续改进"
+        ],
+        "technical_highlights": [
+          "双流框架",
+          "视觉观察为基础的知识提取与检索"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }
@@ -468,17 +517,17 @@
       "upvotes": 15,
       "hot_score": 150,
       "structured_summary": {
-        "chinese_title": "WeEdit：面向文本为中心图像编辑的数据集、基准和字形导向框架",
-        "chinese_summary": "提出WeEdit，包含数据构建管道、两个基准和定制的两阶段训练策略。",
-        "pain_point": "现有模型在执行复杂文本编辑时经常出现模糊或幻觉字符。",
-        "core_value": "提供大规模数据集和标准化基准，解决文本为中心编辑的训练和评估问题。",
-        "technical_architecture": "提出HTML基于的自动编辑管道，生成大量训练对。",
+        "chinese_title": "WeEdit: 一种用于文本中心图像编辑的数据集、基准和字形导向框架",
+        "chinese_summary": "提出WeEdit，涵盖数据构建管道、两个基准和定制的两阶段训练策略，解决文本编辑精度问题。",
+        "pain_point": "现有模型在执行复杂文本编辑时经常产生模糊或虚构的字符。",
+        "core_value": "提供大规模数据集和标准化基准，以及定制的训练策略，提升文本编辑精度。",
+        "technical_architecture": "提出HTML基于的自动编辑管道，生成大量训练数据。",
         "quantitative_results": "暂无量化数据",
         "competitors": "暂无对比信息",
-        "limitations": "未来需探索更多复杂编辑操作。",
+        "limitations": "未来需探索更多应用场景。",
         "key_contributions": [
           "提出HTML基于的自动编辑管道",
-          "生成330K训练对覆盖多种编辑操作",
+          "生成330K训练数据对",
           "提供标准化的多语言基准"
         ],
         "application_scenarios": [
@@ -487,61 +536,7 @@
         ],
         "technical_highlights": [
           "大规模数据集",
-          "标准化基准",
-          "两阶段训练策略"
-        ],
-        "model_used": "Qwen/Qwen2.5-7B-Instruct"
-      }
-    },
-    {
-      "paper_id": "hf-paper-2603.08982",
-      "source": "huggingface",
-      "title": "SVG-EAR: Parameter-Free Linear Compensation for Sparse Video Generation via Error-aware Routing",
-      "authors": [
-        "Xuanyi Zhou",
-        "Qiuyang Mang",
-        "Shuo Yang",
-        "Haocheng Xi",
-        "Jintao Zhang",
-        "Huanzhi Mao",
-        "Joseph E. Gonzalez",
-        "Kurt Keutzer",
-        "Ion Stoica",
-        "Alvin Cheung"
-      ],
-      "abstract": "Diffusion Transformers (DiTs) have become a leading backbone for video generation, yet their quadratic attention cost remains a major bottleneck. Sparse attention reduces this cost by computing only a subset of attention blocks. However, prior methods often either drop the remaining blocks, which incurs information loss, or rely on learned predictors to approximate them, introducing training overhead and potential output distribution shifting. In this paper, we show that the missing contributions can be recovered without training: after semantic clustering, keys and values within each block exhibit strong similarity and can be well summarized by a small set of cluster centroids. Based on this observation, we introduce SVG-EAR, a parameter-free linear compensation branch that uses the centroid to approximate skipped blocks and recover their contributions. While centroid compensation is accurate for most blocks, it can fail on a small subset. Standard sparsification typically selects blocks by attention scores, which indicate where the model places its attention mass, but not where the approximation error would be largest. SVG-EAR therefore performs error-aware routing: a lightweight probe estimates the compensation error for each block, and we compute exactly the blocks with the highest error-to-cost ratio while compensating for skipped blocks. We provide theoretical guarantees that relate attention reconstruction error to clustering quality, and empirically show that SVG-EAR improves the quality-efficiency trade-off and increases throughput at the same generation fidelity on video diffusion tasks. Overall, SVG-EAR establishes a clear Pareto frontier over prior approaches, achieving up to 1.77times and 1.93times speedups while maintaining PSNRs of up to 29.759 and 31.043 on Wan2.2 and HunyuanVideo, respectively.",
-      "published_date": "2026-03-09T22:15:31.000Z",
-      "url": "https://arxiv.org/abs/2603.08982",
-      "pdf_url": "https://arxiv.org/pdf/2603.08982",
-      "code_url": null,
-      "hf_url": "https://huggingface.co/papers/2603.08982",
-      "category": "cv",
-      "tags": [
-        "cs.CV"
-      ],
-      "upvotes": 15,
-      "hot_score": 150,
-      "structured_summary": {
-        "chinese_title": "SVG-EAR: 无参数线性补偿方法实现稀疏视频生成中的误差感知路由",
-        "chinese_summary": "SVG-EAR 通过误差感知路由实现无参数线性补偿，有效恢复缺失贡献，提升稀疏视频生成质量。",
-        "pain_point": "现有方法在稀疏视频生成中存在信息丢失或引入训练开销的问题。",
-        "core_value": "SVG-EAR 提供了一种无参数的线性补偿方法，无需训练即可恢复缺失的贡献。",
-        "technical_architecture": "通过误差感知路由和中心补偿实现无参数线性补偿。",
-        "quantitative_results": "暂无量化数据",
-        "competitors": "暂无对比信息",
-        "limitations": "仅适用于大多数块，少数块可能补偿失败。",
-        "key_contributions": [
-          "提出无参数线性补偿方法",
-          "实现误差感知路由",
-          "有效恢复缺失贡献"
-        ],
-        "application_scenarios": [
-          "视频生成",
-          "视频压缩"
-        ],
-        "technical_highlights": [
-          "无需训练的补偿方法",
-          "误差感知路由机制"
+          "标准化多语言基准"
         ],
         "model_used": "Qwen/Qwen2.5-7B-Instruct"
       }

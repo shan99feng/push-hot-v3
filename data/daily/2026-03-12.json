@@ -1,0 +1,528 @@
+{
+  "date": "2026-03-12",
+  "generated_at": "2026-03-14T07:01:26.820094+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.10165",
+      "source": "huggingface",
+      "title": "OpenClaw-RL: Train Any Agent Simply by Talking",
+      "authors": [
+        "Yinjie Wang",
+        "Xuyang Chen",
+        "Xiaolong Jin",
+        "Mengdi Wang",
+        "Ling Yang"
+      ],
+      "abstract": "Every agent interaction generates a next-state signal, namely the user reply, tool output, terminal or GUI state change that follows each action, yet no existing agentic RL system recovers it as a live, online learning source. We present OpenClaw-RL, a framework built on a simple observation: next-state signals are universal, and policy can learn from all of them simultaneously. Personal conversations, terminal executions, GUI interactions, SWE tasks, and tool-call traces are not separate training problems. They are all interactions that can be used to train the same policy in the same loop. Next-state signals encode two forms of information: evaluative signals, which indicate how well the action performed and are extracted as scalar rewards via a PRM judge; and directive signals, which indicate how the action should have been different and are recovered through Hindsight-Guided On-Policy Distillation (OPD). We extract textual hints from the next state, construct an enhanced teacher context, and provide token-level directional advantage supervision that is richer than any scalar reward. Due to the asynchronous design, the model serves live requests, the PRM judges ongoing interactions, and the trainer updates the policy at the same time, with zero coordination overhead between them. Applied to personal agents, OpenClaw-RL enables an agent to improve simply by being used, recovering conversational signals from user re-queries, corrections, and explicit feedback. Applied to general agents, the same infrastructure supports scalable RL across terminal, GUI, SWE, and tool-call settings, where we additionally demonstrate the utility of process rewards. Code: https://github.com/Gen-Verse/OpenClaw-RL",
+      "published_date": "2026-03-10T18:59:01.000Z",
+      "url": "https://arxiv.org/abs/2603.10165",
+      "pdf_url": "https://arxiv.org/pdf/2603.10165",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10165",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 89,
+      "hot_score": 890,
+      "structured_summary": {
+        "chinese_title": "OpenClaw-RL：通过对话训练任何代理",
+        "chinese_summary": "OpenClaw-RL 通过利用所有交互中的下一个状态信号来训练代理，实现了一种新的在线学习方法。",
+        "pain_point": "现有代理强化学习系统未能充分利用所有交互中的下一个状态信号进行实时学习。",
+        "core_value": "OpenClaw-RL 通过统一处理各种交互来训练单一策略，提高了学习效率和灵活性。",
+        "technical_architecture": "基于下一个状态信号的通用性，OpenClaw-RL 实现了统一的在线学习框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前设计为异步，可能影响某些实时应用的响应速度。",
+        "key_contributions": [
+          "提出了利用所有交互中的下一个状态信号进行实时学习的新方法",
+          "实现了统一处理多种交互类型以训练单一策略的框架"
+        ],
+        "application_scenarios": [
+          "个人对话",
+          "终端执行",
+          "GUI交互",
+          "软件工程任务",
+          "工具调用跟踪"
+        ],
+        "technical_highlights": [
+          "通过PRM法官提取评价信号作为标量奖励",
+          "通过Hindsight-Guided On-Policy Distillation（OPD）恢复指令信号"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09229",
+      "source": "huggingface",
+      "title": "Flash-KMeans: Fast and Memory-Efficient Exact K-Means",
+      "authors": [
+        "Shuo Yang",
+        "Haocheng Xi",
+        "Yilong Zhao",
+        "Muyang Li",
+        "Xiaoze Fan",
+        "Jintao Zhang",
+        "Han Cai",
+        "Yujun Lin",
+        "Xiuyu Li",
+        "Kurt Keutzer",
+        "Song Han",
+        "Chenfeng Xu",
+        "Ion Stoica"
+      ],
+      "abstract": "k-means has historically been positioned primarily as an offline processing primitive, typically used for dataset organization or embedding preprocessing rather than as a first-class component in online systems. In this work, we revisit this classical algorithm under the lens of modern AI system design and enable k-means as an online primitive. We point out that existing GPU implementations of k-means remain fundamentally bottlenecked by low-level system constraints rather than theoretical algorithmic complexity. Specifically, the assignment stage suffers from a severe IO bottleneck due to the massive explicit materialization of the N times K distance matrix in High Bandwidth Memory (HBM). Simultaneously, the centroid update stage is heavily penalized by hardware-level atomic write contention caused by irregular, scatter-style token aggregations. To bridge this performance gap, we propose flash-kmeans, an IO-aware and contention-free k-means implementation for modern GPU workloads. Flash-kmeans introduces two core kernel-level innovations: (1) FlashAssign, which fuses distance computation with an online argmin to completely bypass intermediate memory materialization; (2) sort-inverse update, which explicitly constructs an inverse mapping to transform high-contention atomic scatters into high-bandwidth, segment-level localized reductions. Furthermore, we integrate algorithm-system co-designs, including chunked-stream overlap and cache-aware compile heuristics, to ensure practical deployability. Extensive evaluations on NVIDIA H200 GPUs demonstrate that flash-kmeans achieves up to 17.9times end-to-end speedup over best baselines, while outperforming industry-standard libraries like cuML and FAISS by 33times and over 200times, respectively.",
+      "published_date": "2026-03-10T05:54:52.000Z",
+      "url": "https://arxiv.org/abs/2603.09229",
+      "pdf_url": "https://arxiv.org/pdf/2603.09229",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09229",
+      "category": "other",
+      "tags": [
+        "cs.DC"
+      ],
+      "upvotes": 63,
+      "hot_score": 630,
+      "structured_summary": {
+        "chinese_title": "Flash-KMeans: 快速且内存高效的精确K-Means",
+        "chinese_summary": "提出Flash-KMeans，一种针对现代GPU工作负载的IO感知且无争用的K-Means实现。",
+        "pain_point": "现有GPU实现的K-Means因IO瓶颈和硬件级原子写争用而性能受限。",
+        "core_value": "通过FlashAssign和sort-invert技术，显著提高K-Means的性能和效率。",
+        "technical_architecture": "引入FlashAssign和sort-invert两个核心内核级创新。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对GPU工作负载优化。",
+        "key_contributions": [
+          "FlashAssign技术",
+          "sort-invert技术"
+        ],
+        "application_scenarios": [
+          "在线系统中的K-Means应用",
+          "大数据处理"
+        ],
+        "technical_highlights": [
+          "完全绕过中间内存材料化",
+          "解决硬件级原子写争用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.04597",
+      "source": "huggingface",
+      "title": "Bootstrapping Exploration with Group-Level Natural Language Feedback in Reinforcement Learning",
+      "authors": [
+        "Lei Huang",
+        "Xiang Cheng",
+        "Chenxiao Zhao",
+        "Guobin Shen",
+        "Junjie Yang",
+        "Xiaocheng Feng",
+        "Yuxuan Gu",
+        "Xing Yu",
+        "Bing Qin"
+      ],
+      "abstract": "Large language models (LLMs) typically receive diverse natural language (NL) feedback through interaction with the environment. However, current reinforcement learning (RL) algorithms rely solely on scalar rewards, leaving the rich information in NL feedback underutilized and leading to inefficient exploration. In this work, we propose GOLF, an RL framework that explicitly exploits group-level language feedback to guide targeted exploration through actionable refinements. GOLF aggregates two complementary feedback sources: (i) external critiques that pinpoint errors or propose targeted fixes, and (ii) intra-group attempts that supply alternative partial ideas and diverse failure patterns. These group-level feedbacks are aggregated to produce high-quality refinements, which are adaptively injected into training as off-policy scaffolds to provide targeted guidance in sparse-reward regions. Meanwhile, GOLF jointly optimizes generation and refinement within a unified RL loop, creating a virtuous cycle that continuously improves both capabilities. Experiments on both verifiable and non-verifiable benchmarks show that GOLF achieves superior performance and exploration efficiency, achieving 2.2times improvements in sample efficiency compared to RL methods trained solely on scalar rewards. Code is available at https://github.com/LuckyyySTA/GOLF.",
+      "published_date": "2026-03-04T20:53:17.000Z",
+      "url": "https://arxiv.org/abs/2603.04597",
+      "pdf_url": "https://arxiv.org/pdf/2603.04597",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.04597",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "Bootstrapping Exploration with Group-Level Natural Language Feedback in Reinforcement Learning",
+        "chinese_summary": "GOLF框架利用组级自然语言反馈引导强化学习中的探索。",
+        "pain_point": "当前RL算法仅依赖标量奖励，忽视了自然语言反馈中的丰富信息，导致探索效率低下。",
+        "core_value": "通过利用组级自然语言反馈，GOLF框架提高了探索效率和性能。",
+        "technical_architecture": "GOLF框架结合外部批评和组内尝试，生成高质量的改进，并将其注入训练作为策略。",
+        "quantitative_results": "在可验证和不可验证基准测试中，GOLF表现出优越的性能和探索效率。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更复杂环境中测试GOLF框架。",
+        "key_contributions": [
+          "提出利用组级自然语言反馈的RL框架GOLF",
+          "结合外部批评和组内尝试生成高质量改进",
+          "在探索效率和性能上取得显著提升"
+        ],
+        "application_scenarios": [
+          "复杂环境下的强化学习任务",
+          "需要高效探索的智能代理"
+        ],
+        "technical_highlights": [
+          "利用自然语言反馈进行探索引导",
+          "生成高质量改进并注入训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.10913",
+      "source": "huggingface",
+      "title": "LLM2Vec-Gen: Generative Embeddings from Large Language Models",
+      "authors": [
+        "Parishad BehnamGhader",
+        "Vaibhav Adlakha",
+        "Fabian David Schmidt",
+        "Nicolas Chapados",
+        "Marius Mosbach",
+        "Siva Reddy"
+      ],
+      "abstract": "LLM-based text embedders typically encode the semantic content of their input. However, embedding tasks require mapping diverse inputs to similar outputs. Typically, this input-output is addressed by training embedding models with paired data using contrastive learning. In this work, we propose a novel self-supervised approach, LLM2Vec-Gen, which adopts a different paradigm: rather than encoding the input, we learn to represent the model's potential response. Specifically, we add trainable special tokens to the LLM's vocabulary, append them to input, and optimize them to represent the LLM's response in a fixed-length sequence. Training is guided by the LLM's own completion for the query, along with an unsupervised embedding teacher that provides distillation targets. This formulation helps to bridge the input-output gap and transfers LLM capabilities such as safety alignment and reasoning to embedding tasks. Crucially, the LLM backbone remains frozen and training requires only unlabeled queries. LLM2Vec-Gen achieves state-of-the-art self-supervised performance on the Massive Text Embedding Benchmark (MTEB), improving by 9.3% over the best unsupervised embedding teacher. We also observe up to 43.2% reduction in harmful content retrieval and 29.3% improvement in reasoning capabilities for embedding tasks. Finally, the learned embeddings are interpretable and can be decoded into text to reveal their semantic content.",
+      "published_date": "2026-03-11T15:58:47.000Z",
+      "url": "https://arxiv.org/abs/2603.10913",
+      "pdf_url": "https://arxiv.org/pdf/2603.10913",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10913",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "LLM2Vec-Gen：大型语言模型生成嵌入",
+        "chinese_summary": "提出了一种新的自监督方法LLM2Vec-Gen，通过学习表示模型的潜在响应来解决嵌入任务中的输入输出差距。",
+        "pain_point": "现有嵌入方法难以将多样化的输入映射到一致的输出。",
+        "core_value": "通过自监督学习，将大型语言模型的安全对齐和推理能力转移到嵌入任务中。",
+        "technical_architecture": "通过添加可训练的特殊标记并优化它们来表示模型的响应。",
+        "quantitative_results": "在大规模文本嵌入基准测试中达到最先进的自监督性能，优于最佳无监督嵌入教师9.3%。",
+        "competitors": "暂无对比信息",
+        "limitations": "LLM主干保持冻结，仅需未标记的查询进行训练。",
+        "key_contributions": [
+          "提出了一种新的自监督方法LLM2Vec-Gen。",
+          "通过学习表示模型的潜在响应来解决嵌入任务中的输入输出差距。",
+          "将大型语言模型的安全对齐和推理能力转移到嵌入任务中"
+        ],
+        "application_scenarios": [
+          "文本嵌入",
+          "信息检索"
+        ],
+        "technical_highlights": [
+          "无需标记数据即可训练。",
+          "利用大型语言模型的潜在能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09827",
+      "source": "huggingface",
+      "title": "MA-EgoQA: Question Answering over Egocentric Videos from Multiple Embodied Agents",
+      "authors": [
+        "Kangsan Kim",
+        "Yanlai Yang",
+        "Suji Kim",
+        "Woongyeong Yeo",
+        "Youngwan Lee",
+        "Mengye Ren",
+        "Sung Ju Hwang"
+      ],
+      "abstract": "As embodied models become powerful, humans will collaborate with multiple embodied AI agents at their workplace or home in the future. To ensure better communication between human users and the multi-agent system, it is crucial to interpret incoming information from agents in parallel and refer to the appropriate context for each query. Existing challenges include effectively compressing and communicating high volumes of individual sensory inputs in the form of video and correctly aggregating multiple egocentric videos to construct system-level memory. In this work, we first formally define a novel problem of understanding multiple long-horizon egocentric videos simultaneously collected from embodied agents. To facilitate research in this direction, we introduce MultiAgent-EgoQA (MA-EgoQA), a benchmark designed to systemically evaluate existing models in our scenario. MA-EgoQA provides 1.7k questions unique to multiple egocentric streams, spanning five categories: social interaction, task coordination, theory-of-mind, temporal reasoning, and environmental interaction. We further propose a simple baseline model for MA-EgoQA named EgoMAS, which leverages shared memory across embodied agents and agent-wise dynamic retrieval. Through comprehensive evaluation across diverse baselines and EgoMAS on MA-EgoQA, we find that current approaches are unable to effectively handle multiple egocentric streams, highlighting the need for future advances in system-level understanding across the agents. The code and benchmark are available at https://ma-egoqa.github.io.",
+      "published_date": "2026-03-10T15:48:35.000Z",
+      "url": "https://arxiv.org/abs/2603.09827",
+      "pdf_url": "https://arxiv.org/pdf/2603.09827",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09827",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "MA-EgoQA: 多个实体代理的主观视频问答",
+        "chinese_summary": "提出MA-EgoQA基准，用于评估多代理系统中的主观视频理解能力。",
+        "pain_point": "现有模型难以有效处理和整合多代理的主观视频信息。",
+        "core_value": "提供了一个系统性的基准来评估多代理系统的主观视频理解能力。",
+        "technical_architecture": "提出EgoMAS模型，利用共享记忆处理多代理视频。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对特定场景，未来需扩展应用范围。",
+        "key_contributions": [
+          "提出MA-EgoQA基准",
+          "设计EgoMAS模型"
+        ],
+        "application_scenarios": [
+          "家庭协作",
+          "工作场所协作"
+        ],
+        "technical_highlights": [
+          "多代理视频理解",
+          "共享记忆机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.08068",
+      "source": "huggingface",
+      "title": "In-Context Reinforcement Learning for Tool Use in Large Language Models",
+      "authors": [
+        "Yaoqi Ye",
+        "Yiran Zhao",
+        "Keyu Duan",
+        "Zeyu Zheng",
+        "Kenji Kawaguchi",
+        "Cihang Xie",
+        "Michael Qizhe Shieh"
+      ],
+      "abstract": "While large language models (LLMs) exhibit strong reasoning abilities, their performance on complex tasks is often constrained by the limitations of their internal knowledge. A compelling approach to overcome this challenge is to augment these models with external tools -- such as Python interpreters for mathematical computations or search engines for retrieving factual information. However, enabling models to use these tools effectively remains a significant challenge. Existing methods typically rely on cold-start pipelines that begin with supervised fine-tuning (SFT), followed by reinforcement learning (RL). These approaches often require substantial amounts of labeled data for SFT, which is expensive to annotate or synthesize. In this work, we propose In-Context Reinforcement Learning (ICRL), an RL-only framework that eliminates the need for SFT by leveraging few-shot prompting during the rollout stage of RL. Specifically, ICRL introduces in-context examples within the rollout prompts to teach the model how to invoke external tools. Furthermore, as training progresses, the number of in-context examples is gradually reduced, eventually reaching a zero-shot setting where the model learns to call tools independently. We conduct extensive experiments across a range of reasoning and tool-use benchmarks. Results show that ICRL achieves state-of-the-art performance, demonstrating its effectiveness as a scalable, data-efficient alternative to traditional SFT-based pipelines.",
+      "published_date": "2026-03-09T08:06:18.000Z",
+      "url": "https://arxiv.org/abs/2603.08068",
+      "pdf_url": "https://arxiv.org/pdf/2603.08068",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.08068",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "大型语言模型中基于上下文的强化学习工具使用",
+        "chinese_summary": "提出了一种无需预训练的强化学习框架ICRL，通过上下文提示教会模型如何使用外部工具。",
+        "pain_point": "现有方法依赖于昂贵的标注数据进行预训练，限制了模型在复杂任务上的应用。",
+        "core_value": "通过引入上下文示例，ICRL减少了对预训练数据的依赖，提高了模型的灵活性。",
+        "technical_architecture": "ICRL通过在强化学习的展开阶段使用上下文提示来教授模型调用外部工具。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "ICRL在没有上下文示例的情况下，模型可能无法有效调用工具。",
+        "key_contributions": [
+          "提出了一种无需预训练的强化学习框架ICRL",
+          "通过上下文提示教授模型调用外部工具",
+          "减少了对预训练数据的依赖"
+        ],
+        "application_scenarios": [
+          "数学计算",
+          "事实检索"
+        ],
+        "technical_highlights": [
+          "利用上下文提示进行学习",
+          "逐步减少上下文示例数量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.10160",
+      "source": "huggingface",
+      "title": "ReMix: Reinforcement routing for mixtures of LoRAs in LLM finetuning",
+      "authors": [
+        "Ruizhong Qiu",
+        "Hanqing Zeng",
+        "Yinglong Xia",
+        "Yiwen Meng",
+        "Ren Chen",
+        "Jiarui Feng",
+        "Dongqi Fu",
+        "Qifan Wang",
+        "Jiayi Liu",
+        "Jun Xiao",
+        "Xiangjun Fan",
+        "Benyu Zhang",
+        "Hong Li",
+        "Zhining Liu",
+        "Hyunsik Yoo",
+        "Zhichen Zeng",
+        "Tianxin Wei",
+        "Hanghang Tong"
+      ],
+      "abstract": "Low-rank adapters (LoRAs) are a parameter-efficient finetuning technique that injects trainable low-rank matrices into pretrained models to adapt them to new tasks. Mixture-of-LoRAs models expand neural networks efficiently by routing each layer input to a small subset of specialized LoRAs of the layer. Existing Mixture-of-LoRAs routers assign a learned routing weight to each LoRA to enable end-to-end training of the router. Despite their empirical promise, we observe that the routing weights are typically extremely imbalanced across LoRAs in practice, where only one or two LoRAs often dominate the routing weights. This essentially limits the number of effective LoRAs and thus severely hinders the expressive power of existing Mixture-of-LoRAs models. In this work, we attribute this weakness to the nature of learnable routing weights and rethink the fundamental design of the router. To address this critical issue, we propose a new router designed that we call Reinforcement Routing for Mixture-of-LoRAs (ReMix). Our key idea is using non-learnable routing weights to ensure all active LoRAs to be equally effective, with no LoRA dominating the routing weights. However, our routers cannot be trained directly via gradient descent due to our non-learnable routing weights. Hence, we further propose an unbiased gradient estimator for the router by employing the reinforce leave-one-out (RLOO) technique, where we regard the supervision loss as the reward and the router as the policy in reinforcement learning. Our gradient estimator also enables to scale up training compute to boost the predictive performance of our ReMix. Extensive experiments demonstrate that our proposed ReMix significantly outperform state-of-the-art parameter-efficient finetuning methods under a comparable number of activated parameters.",
+      "published_date": "2026-03-10T18:51:27.000Z",
+      "url": "https://arxiv.org/abs/2603.10160",
+      "pdf_url": "https://arxiv.org/pdf/2603.10160",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10160",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "ReMix: 在LLM微调中混合LoRAs的强化路由方法",
+        "chinese_summary": "提出ReMix，一种新的路由方法，确保所有激活的LoRA等效，避免单一LoRA主导路由权重。",
+        "pain_point": "现有Mixture-of-LoRAs模型中，路由权重通常极度不平衡，导致有效LoRA数量受限。",
+        "core_value": "通过非学习型路由权重确保所有LoRA等效，增强模型表达能力。",
+        "technical_architecture": "提出ReMix路由方法，使用非学习型权重确保所有LoRA等效。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证ReMix在大规模模型上的表现。",
+        "key_contributions": [
+          "提出ReMix路由方法",
+          "确保所有LoRA等效"
+        ],
+        "application_scenarios": [
+          "LLM微调",
+          "高效模型扩展"
+        ],
+        "technical_highlights": [
+          "非学习型路由权重",
+          "增强模型表达能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.08982",
+      "source": "huggingface",
+      "title": "SVG-EAR: Parameter-Free Linear Compensation for Sparse Video Generation via Error-aware Routing",
+      "authors": [
+        "Xuanyi Zhou",
+        "Qiuyang Mang",
+        "Shuo Yang",
+        "Haocheng Xi",
+        "Jintao Zhang",
+        "Huanzhi Mao",
+        "Joseph E. Gonzalez",
+        "Kurt Keutzer",
+        "Ion Stoica",
+        "Alvin Cheung"
+      ],
+      "abstract": "Diffusion Transformers (DiTs) have become a leading backbone for video generation, yet their quadratic attention cost remains a major bottleneck. Sparse attention reduces this cost by computing only a subset of attention blocks. However, prior methods often either drop the remaining blocks, which incurs information loss, or rely on learned predictors to approximate them, introducing training overhead and potential output distribution shifting. In this paper, we show that the missing contributions can be recovered without training: after semantic clustering, keys and values within each block exhibit strong similarity and can be well summarized by a small set of cluster centroids. Based on this observation, we introduce SVG-EAR, a parameter-free linear compensation branch that uses the centroid to approximate skipped blocks and recover their contributions. While centroid compensation is accurate for most blocks, it can fail on a small subset. Standard sparsification typically selects blocks by attention scores, which indicate where the model places its attention mass, but not where the approximation error would be largest. SVG-EAR therefore performs error-aware routing: a lightweight probe estimates the compensation error for each block, and we compute exactly the blocks with the highest error-to-cost ratio while compensating for skipped blocks. We provide theoretical guarantees that relate attention reconstruction error to clustering quality, and empirically show that SVG-EAR improves the quality-efficiency trade-off and increases throughput at the same generation fidelity on video diffusion tasks. Overall, SVG-EAR establishes a clear Pareto frontier over prior approaches, achieving up to 1.77times and 1.93times speedups while maintaining PSNRs of up to 29.759 and 31.043 on Wan2.2 and HunyuanVideo, respectively.",
+      "published_date": "2026-03-09T22:15:31.000Z",
+      "url": "https://arxiv.org/abs/2603.08982",
+      "pdf_url": "https://arxiv.org/pdf/2603.08982",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.08982",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": {
+        "chinese_title": "SVG-EAR: 一种无需训练的稀疏视频生成线性补偿方法",
+        "chinese_summary": "通过误差感知路由恢复缺失贡献，无需训练即可补偿稀疏视频生成中的信息损失。",
+        "pain_point": "稀疏注意力机制在保留信息和减少计算成本之间存在权衡。",
+        "core_value": "提出SVG-EAR，无需训练即可补偿缺失的注意力块，提高生成质量。",
+        "technical_architecture": "基于聚类中心进行误差感知路由补偿。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于大多数注意力块，少数块可能补偿不准确。",
+        "key_contributions": [
+          "提出SVG-EAR补偿方法",
+          "无需训练的误差感知路由"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "稀疏注意力机制优化"
+        ],
+        "technical_highlights": [
+          "参数自由的线性补偿",
+          "误差感知路由"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.10256",
+      "source": "huggingface",
+      "title": "ID-LoRA: Identity-Driven Audio-Video Personalization with In-Context LoRA",
+      "authors": [
+        "Aviad Dahan",
+        "Moran Yanuka",
+        "Noa Kraicer",
+        "Lior Wolf",
+        "Raja Giryes"
+      ],
+      "abstract": "Existing video personalization methods preserve visual likeness but treat video and audio separately. Without access to the visual scene, audio models cannot synchronize sounds with on-screen actions; and because classical voice-cloning models condition only on a reference recording, a text prompt cannot redirect speaking style or acoustic environment. We propose ID-LoRA (Identity-Driven In-Context LoRA), which jointly generates a subject's appearance and voice in a single model, letting a text prompt, a reference image, and a short audio clip govern both modalities together. ID-LoRA adapts the LTX-2 joint audio-video diffusion backbone via parameter-efficient In-Context LoRA and, to our knowledge, is the first method to personalize visual appearance and voice in a single generative pass. Two challenges arise. Reference and generation tokens share the same positional-encoding space, making them hard to distinguish; we address this with negative temporal positions, placing reference tokens in a disjoint RoPE region while preserving their internal temporal structure. Speaker characteristics also tend to be diluted during denoising; we introduce identity guidance, a classifier-free guidance variant that amplifies speaker-specific features by contrasting predictions with and without the reference signal. In human preference studies, ID-LoRA is preferred over Kling 2.6 Pro by 73% of annotators for voice similarity and 65% for speaking style. On cross-environment settings, speaker similarity improves by 24% over Kling, with the gap widening as conditions diverge. A preliminary user study further suggests that joint generation provides a useful inductive bias for physically grounded sound synthesis. ID-LoRA achieves these results with only ~3K training pairs on a single GPU. Code, models, and data will be released.",
+      "published_date": "2026-03-10T22:23:36.000Z",
+      "url": "https://arxiv.org/abs/2603.10256",
+      "pdf_url": "https://arxiv.org/pdf/2603.10256",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.10256",
+      "category": "cv",
+      "tags": [
+        "cs.SD",
+        "cs.CV",
+        "cs.GR"
+      ],
+      "upvotes": 14,
+      "hot_score": 140,
+      "structured_summary": {
+        "chinese_title": "ID-LoRA：基于身份驱动的音频-视频个性化生成",
+        "chinese_summary": "ID-LoRA 联合生成人物外观和声音，通过文本提示、参考图像和短音频片段同时控制两种模态。",
+        "pain_point": "现有方法将音频和视频处理分开，导致音频与视频动作不匹配，且语音克隆模型仅基于参考录音，无法通过文本提示改变说话风格或声学环境。",
+        "core_value": "首次实现单次生成过程中同时个性化视觉外观和声音，解决了身份特征在去噪过程中被稀释的问题。",
+        "technical_architecture": "通过参数高效 In-Context LoRA 调整 LTX-2 联合音频-视频扩散骨干网络。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "参考和生成标记共享相同的相对位置编码空间，可能导致区分困难。",
+        "key_contributions": [
+          "联合生成视觉外观和声音",
+          "引入负时间位置解决区分问题",
+          "引入身份指导以保留说话者特征"
+        ],
+        "application_scenarios": [
+          "虚拟主播生成",
+          "个性化视频创作"
+        ],
+        "technical_highlights": [
+          "参数高效 In-Context LoRA 技术",
+          "负时间位置编码技术"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.07392",
+      "source": "huggingface",
+      "title": "Can Large Language Models Keep Up? Benchmarking Online Adaptation to Continual Knowledge Streams",
+      "authors": [
+        "Jiyeon Kim",
+        "Hyunji Lee",
+        "Dylan Zhou",
+        "Sue Hyun Park",
+        "Seunghyun Yoon",
+        "Trung Bui",
+        "Franck Dernoncourt",
+        "Sungmin Cha",
+        "Minjoon Seo"
+      ],
+      "abstract": "LLMs operating in dynamic real-world contexts often encounter knowledge that evolves continuously or emerges incrementally. To remain accurate and effective, models must adapt to newly arriving information on the fly. We introduce Online Adaptation to Continual Knowledge Streams(OAKS) to evaluate this capability, establishing a benchmark for online adaptation over streaming, continually updating knowledge. Specifically, the benchmark is structured as a sequence of fine-grained context chunks where facts change dynamically across time intervals. OAKS comprises two datasets: OAKS-BABI and OAKS-Novel, where individual facts evolve multiple times across context chunks. These datasets include dense annotations to measure whether models track changes accurately. Evaluating 14 models with varied inference approaches, we observe significant limitations in current methodologies. Both state-of-the-art models and agentic memory systems fail to adapt robustly on OAKS, demonstrating delays in state-tracking and susceptibility to distraction within streaming environments.",
+      "published_date": "2026-03-08T00:38:39.000Z",
+      "url": "https://arxiv.org/abs/2603.07392",
+      "pdf_url": "https://arxiv.org/pdf/2603.07392",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.07392",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 14,
+      "hot_score": 140,
+      "structured_summary": {
+        "chinese_title": "大型语言模型能跟上吗？连续知识流的在线适应基准测试",
+        "chinese_summary": "评估模型在连续知识流中的在线适应能力，发现当前方法存在显著局限。",
+        "pain_point": "模型在动态环境下难以实时适应新知识。",
+        "core_value": "提出OAKS基准测试，评估模型在连续知识流中的在线适应能力。",
+        "technical_architecture": "采用细粒度上下文片段，动态变化的事实。",
+        "quantitative_results": "14种不同模型表现不佳，显示出状态跟踪延迟和易受干扰。",
+        "competitors": "暂无对比信息",
+        "limitations": "当前模型在连续知识流中适应能力有限。",
+        "key_contributions": [
+          "提出OAKS基准测试",
+          "详细标注数据集以测量模型变化跟踪准确性"
+        ],
+        "application_scenarios": [
+          "动态知识更新场景",
+          "实时信息处理场景"
+        ],
+        "technical_highlights": [
+          "细粒度上下文片段",
+          "动态变化的事实"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

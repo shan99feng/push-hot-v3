@@ -1,0 +1,550 @@
+{
+  "date": "2026-03-11",
+  "generated_at": "2026-03-14T06:49:54.918044+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.03143",
+      "source": "huggingface",
+      "title": "Geometry-Guided Reinforcement Learning for Multi-view Consistent 3D Scene Editing",
+      "authors": [
+        "Jiyuan Wang",
+        "Chunyu Lin",
+        "Lei Sun",
+        "Zhi Cao",
+        "Yuyang Yin",
+        "Lang Nie",
+        "Zhenlong Yuan",
+        "Xiangxiang Chu",
+        "Yunchao Wei",
+        "Kang Liao",
+        "Guosheng Lin"
+      ],
+      "abstract": "Leveraging the priors of 2D diffusion models for 3D editing has emerged as a promising paradigm. However, maintaining multi-view consistency in edited results remains challenging, and the extreme scarcity of 3D-consistent editing paired data renders supervised fine-tuning (SFT), the most effective training strategy for editing tasks, infeasible. In this paper, we observe that, while generating multi-view consistent 3D content is highly challenging, verifying 3D consistency is tractable, naturally positioning reinforcement learning (RL) as a feasible solution. Motivated by this, we propose RL3DEdit, a single-pass framework driven by RL optimization with novel rewards derived from the 3D foundation model, VGGT. Specifically, we leverage VGGT's robust priors learned from massive real-world data, feed the edited images, and utilize the output confidence maps and pose estimation errors as reward signals, effectively anchoring the 2D editing priors onto a 3D-consistent manifold via RL. Extensive experiments demonstrate that RL3DEdit achieves stable multi-view consistency and outperforms state-of-the-art methods in editing quality with high efficiency. To promote the development of 3D editing, we will release the code and model.",
+      "published_date": "2026-03-03T16:31:10.000Z",
+      "url": "https://arxiv.org/abs/2603.03143",
+      "pdf_url": "https://arxiv.org/pdf/2603.03143",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.03143",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 136,
+      "hot_score": 1360,
+      "structured_summary": {
+        "chinese_title": "基于几何引导的多视图一致3D场景编辑的强化学习方法",
+        "chinese_summary": "通过强化学习优化，利用VGGT的先验知识实现高效且多视图一致的3D场景编辑。",
+        "pain_point": "现有方法难以保持多视图编辑结果的一致性，且缺乏足够的3D一致编辑数据。",
+        "core_value": "提出基于几何引导的强化学习框架，通过奖励信号实现2D编辑先验与3D一致性之间的有效链接。",
+        "technical_architecture": "利用VGGT的先验知识，结合强化学习优化编辑结果。",
+        "quantitative_results": "实验表明，该方法在多视图一致性与编辑质量上优于现有方法。",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于VGGT的先验知识，未来可探索更多数据源。",
+        "key_contributions": [
+          "提出基于几何引导的强化学习框架",
+          "利用VGGT的先验知识优化编辑结果",
+          "实现高效且多视图一致的3D场景编辑"
+        ],
+        "application_scenarios": [
+          "3D场景编辑",
+          "虚拟现实与增强现实"
+        ],
+        "technical_highlights": [
+          "利用VGGT的先验知识",
+          "通过奖励信号实现2D与3D一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09906",
+      "source": "huggingface",
+      "title": "Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs",
+      "authors": [
+        "Zorik Gekhman",
+        "Roee Aharoni",
+        "Eran Ofek",
+        "Mor Geva",
+        "Roi Reichart",
+        "Jonathan Herzig"
+      ],
+      "abstract": "While reasoning in LLMs plays a natural role in math, code generation, and multi-hop factual questions, its effect on simple, single-hop factual questions remains unclear. Such questions do not require step-by-step logical decomposition, making the utility of reasoning highly counterintuitive. Nevertheless, we find that enabling reasoning substantially expands the capability boundary of the model's parametric knowledge recall, unlocking correct answers that are otherwise effectively unreachable. Why does reasoning aid parametric knowledge recall when there are no complex reasoning steps to be done? To answer this, we design a series of hypothesis-driven controlled experiments, and identify two key driving mechanisms: (1) a computational buffer effect, where the model uses the generated reasoning tokens to perform latent computation independent of their semantic content; and (2) factual priming, where generating topically related facts acts as a semantic bridge that facilitates correct answer retrieval. Importantly, this latter generative self-retrieval mechanism carries inherent risks: we demonstrate that hallucinating intermediate facts during reasoning increases the likelihood of hallucinations in the final answer. Finally, we show that our insights can be harnessed to directly improve model accuracy by prioritizing reasoning trajectories that contain hallucination-free factual statements.",
+      "published_date": "2026-03-10T16:59:20.000Z",
+      "url": "https://arxiv.org/abs/2603.09906",
+      "pdf_url": "https://arxiv.org/pdf/2603.09906",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09906",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 59,
+      "hot_score": 590,
+      "structured_summary": {
+        "chinese_title": "思考以回忆：推理如何解锁LLMs中的参数化知识",
+        "chinese_summary": "推理在解决简单事实问题时能显著提升模型的参数化知识召回能力。",
+        "pain_point": "在解决简单、单步骤事实问题时，推理的作用不明显。",
+        "core_value": "推理通过计算缓冲效应和事实联想机制，显著提升模型的参数化知识召回能力。",
+        "technical_architecture": "设计了一系列假设驱动的控制实验，识别出两种关键机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "生成自我检索机制存在风险，可能导致事实虚构。",
+        "key_contributions": [
+          "识别出计算缓冲效应和事实联想机制",
+          "解释推理在简单问题上的作用"
+        ],
+        "application_scenarios": [
+          "数学推理",
+          "代码生成",
+          "多跳事实问题"
+        ],
+        "technical_highlights": [
+          "假设驱动的实验设计",
+          "识别关键机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.06577",
+      "source": "huggingface",
+      "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion",
+      "authors": [
+        "Lijiang Li",
+        "Zuwei Long",
+        "Yunhang Shen",
+        "Heting Gao",
+        "Haoyu Cao",
+        "Xing Sun",
+        "Caifeng Shan",
+        "Ran He",
+        "Chaoyou Fu"
+      ],
+      "abstract": "While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal systems. Drawing inspiration from these pioneering research, we introduce Omni-Diffusion, the first any-to-any multimodal language model built entirely on mask-based discrete diffusion models, which unifies understanding and generation across text, speech, and images. Omni-Diffusion employs a unified mask-based discrete diffusion model to directly capture the joint distribution over discrete multimodal tokens. This approach supports not only bimodal tasks but also more complex scenarios involving multiple modalities. On a diverse set of benchmarks, our method outperforms or performs on par with existing multimodal systems that process two or more modalities, highlighting the significant promise of diffusion models in powering the next generation of multimodal foundation models. Project webpage: https://omni-diffusion.github.io.",
+      "published_date": "2026-03-06T18:59:57.000Z",
+      "url": "https://arxiv.org/abs/2603.06577",
+      "pdf_url": "https://arxiv.org/pdf/2603.06577",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.06577",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 43,
+      "hot_score": 430,
+      "structured_summary": {
+        "chinese_title": "全向扩散：基于掩码离散扩散模型的统一多模态理解和生成",
+        "chinese_summary": "Omni-Diffusion通过掩码离散扩散模型实现了统一的多模态理解和生成。",
+        "pain_point": "现有的多模态大语言模型主要采用自回归架构，缺乏有效的替代方案。",
+        "core_value": "Omni-Diffusion在多模态任务中表现出色，支持多种模态的联合分布捕获。",
+        "technical_architecture": "采用统一的掩码离散扩散模型直接捕捉离散多模态令牌的联合分布。",
+        "quantitative_results": "在多种基准测试中，Omni-Diffusion优于或与现有系统持平。",
+        "competitors": "对比了现有的处理两种或多种模态的多模态系统。",
+        "limitations": "未来工作将探索更复杂的多模态场景。",
+        "key_contributions": [
+          "提出了基于掩码离散扩散模型的统一多模态语言模型",
+          "支持多种模态的联合分布捕获"
+        ],
+        "application_scenarios": [
+          "文本、语音和图像的理解与生成",
+          "多模态任务处理"
+        ],
+        "technical_highlights": [
+          "统一的掩码离散扩散模型",
+          "支持多种模态的联合分布"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09206",
+      "source": "huggingface",
+      "title": "MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data",
+      "authors": [
+        "Zongxia Li",
+        "Hongyang Du",
+        "Chengsong Huang",
+        "Xiyang Wu",
+        "Lantao Yu",
+        "Yicheng He",
+        "Jing Xie",
+        "Xiaomin Wu",
+        "Zhichao Liu",
+        "Jiarui Zhang",
+        "Fuxiao Liu"
+      ],
+      "abstract": "Self-evolving has emerged as a key paradigm for improving foundational models such as Large Language Models (LLMs) and Vision Language Models (VLMs) with minimal human intervention. While recent approaches have demonstrated that LLM agents can self-evolve from scratch with little to no data, VLMs introduce an additional visual modality that typically requires at least some seed data, such as images, to bootstrap the self-evolution process. In this work, we present Multi-model Multimodal Zero (MM-Zero), the first RL-based framework to achieve zero-data self-evolution for VLM reasoning. Moving beyond prior dual-role (Proposer and Solver) setups, MM-Zero introduces a multi-role self-evolving training framework comprising three specialized roles: a Proposer that generates abstract visual concepts and formulates questions; a Coder that translates these concepts into executable code (e.g., Python, SVG) to render visual images; and a Solver that performs multimodal reasoning over the generated visual content. All three roles are initialized from the same base model and trained using Group Relative Policy Optimization (GRPO), with carefully designed reward mechanisms that integrate execution feedback, visual verification, and difficulty balancing. Our experiments show that MM-Zero improves VLM reasoning performance across a wide range of multimodal benchmarks. MM-Zero establishes a scalable path toward self-evolving multi-model systems for multimodal models, extending the frontier of self-improvement beyond the conventional two-model paradigm.",
+      "published_date": "2026-03-10T05:23:26.000Z",
+      "url": "https://arxiv.org/abs/2603.09206",
+      "pdf_url": "https://arxiv.org/pdf/2603.09206",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09206",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 41,
+      "hot_score": 410,
+      "structured_summary": {
+        "chinese_title": "MM-Zero: 从零数据自我进化的多模型跨模态语言模型",
+        "chinese_summary": "提出了一种基于强化学习的多角色框架，实现了无需种子数据的跨模态语言模型自我进化。",
+        "pain_point": "现有跨模态语言模型通常需要种子数据来启动自我进化过程。",
+        "core_value": "首次实现了无需任何数据的跨模态语言模型自我进化。",
+        "technical_architecture": "提出了一个包含三个角色的多角色自我进化训练框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证该框架在大规模数据集上的表现。",
+        "key_contributions": [
+          "提出了首个无需种子数据的跨模态语言模型自我进化框架",
+          "设计了多角色自我进化训练框架",
+          "采用了组相对策略优化算法进行训练"
+        ],
+        "application_scenarios": [
+          "无需标注数据的跨模态推理任务",
+          "自动化生成视觉内容并进行跨模态推理"
+        ],
+        "technical_highlights": [
+          "引入了三个专门角色进行自我进化",
+          "使用组相对策略优化算法进行训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09877",
+      "source": "huggingface",
+      "title": "InternVL-U: Democratizing Unified Multimodal Models for Understanding, Reasoning, Generation and Editing",
+      "authors": [
+        "Changyao Tian",
+        "Danni Yang",
+        "Guanzhou Chen",
+        "Erfei Cui",
+        "Zhaokai Wang",
+        "Yuchen Duan",
+        "Penghao Yin",
+        "Sitao Chen",
+        "Ganlin Yang",
+        "Mingxin Liu",
+        "Zirun Zhu",
+        "Ziqian Fan",
+        "Leyao Gu",
+        "Haomin Wang",
+        "Qi Wei",
+        "Jinhui Yin",
+        "Xue Yang",
+        "Zhihang Zhong",
+        "Qi Qin",
+        "Yi Xin",
+        "Bin Fu",
+        "Yihao Liu",
+        "Jiaye Ge",
+        "Qipeng Guo",
+        "Gen Luo",
+        "Hongsheng Li",
+        "Yu Qiao",
+        "Kai Chen",
+        "Hongjie Zhang"
+      ],
+      "abstract": "Unified multimodal models (UMMs) that integrate understanding, reasoning, generation, and editing face inherent trade-offs between maintaining strong semantic comprehension and acquiring powerful generation capabilities. In this report, we present InternVL-U, a lightweight 4B-parameter UMM that democratizes these capabilities within a unified framework. Guided by the principles of unified contextual modeling and modality-specific modular design with decoupled visual representations, InternVL-U integrates a state-of-the-art Multimodal Large Language Model (MLLM) with a specialized MMDiT-based visual generation head. To further bridge the gap between aesthetic generation and high-level intelligence, we construct a comprehensive data synthesis pipeline targeting high-semantic-density tasks, such as text rendering and scientific reasoning, under a reasoning-centric paradigm that leverages Chain-of-Thought (CoT) to better align abstract user intent with fine-grained visual generation details. Extensive experiments demonstrate that InternVL-U achieves a superior performance - efficiency balance. Despite using only 4B parameters, it consistently outperforms unified baseline models with over 3x larger scales such as BAGEL (14B) on various generation and editing tasks, while retaining strong multimodal understanding and reasoning capabilities.",
+      "published_date": "2026-03-10T16:38:33.000Z",
+      "url": "https://arxiv.org/abs/2603.09877",
+      "pdf_url": "https://arxiv.org/pdf/2603.09877",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09877",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 39,
+      "hot_score": 390,
+      "structured_summary": {
+        "chinese_title": "InternVL-U：为理解、推理、生成和编辑统一的多模态模型",
+        "chinese_summary": "InternVL-U 是一个轻量级的 4B 参数统一多模态模型，实现了强大的语义理解和生成能力。",
+        "pain_point": "统一多模态模型在保持语义理解与生成能力之间存在固有的权衡。",
+        "core_value": "通过统一框架和模块化设计，InternVL-U 实现了语义理解和生成能力的平衡。",
+        "technical_architecture": "采用统一上下文建模和模态特定模块化设计，结合 MLLM 和 MMDiT 视觉生成头。",
+        "quantitative_results": "尽管参数量较少，但 InternVL-U 在多项任务上优于其他基线模型。",
+        "competitors": "对比了其他统一基线模型。",
+        "limitations": "未来工作将探索更复杂的数据合成方法。",
+        "key_contributions": [
+          "提出了统一的多模态模型框架",
+          "结合了 MLLM 和 MMDiT 技术",
+          "构建了综合的数据合成管道"
+        ],
+        "application_scenarios": [
+          "文本渲染",
+          "科学推理"
+        ],
+        "technical_highlights": [
+          "轻量级设计",
+          "统一框架下的语义理解和生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09896",
+      "source": "huggingface",
+      "title": "Stepping VLMs onto the Court: Benchmarking Spatial Intelligence in Sports",
+      "authors": [
+        "Yuchen Yang",
+        "Yuqing Shao",
+        "Duxiu Huang",
+        "Linfeng Dong",
+        "Yifei Liu",
+        "Suixin Tang",
+        "Xiang Zhou",
+        "Yuanyuan Gao",
+        "Wei Wang",
+        "Yue Zhou",
+        "Xue Yang",
+        "Yanfeng Wang",
+        "Xiao Sun",
+        "Zhihang Zhong"
+      ],
+      "abstract": "Sports have long attracted broad attention as they push the limits of human physical and cognitive capabilities. Amid growing interest in spatial intelligence for vision-language models (VLMs), sports provide a natural testbed for understanding high-intensity human motion and dynamic object interactions. To this end, we present CourtSI, the first large-scale spatial intelligence dataset tailored to sports scenarios. CourtSI contains over 1M QA pairs, organized under a holistic taxonomy that systematically covers spatial counting, distance measurement, localization, and relational reasoning, across representative net sports including badminton, tennis, and table tennis. Leveraging well-defined court geometry as metric anchors, we develop a semi-automatic data engine to reconstruct sports scenes, enabling scalable curation of CourtSI. In addition, we introduce CourtSI-Bench, a high-quality evaluation benchmark comprising 3,686 QA pairs with rigorous human verification. We evaluate 25 proprietary and open-source VLMs on CourtSI-Bench, revealing a remaining human-AI performance gap and limited generalization from existing spatial intelligence benchmarks. These findings indicate that sports scenarios expose limitations in spatial intelligence capabilities captured by existing benchmarks. Further, fine-tuning Qwen3-VL-8B on CourtSI improves accuracy on CourtSI-Bench by 23.5 percentage points. The adapted model also generalizes effectively to CourtSI-Ext, an evaluation set built on a similar but unseen sport, and demonstrates enhanced spatial-aware commentary generation. Together, these findings demonstrate that CourtSI provides a scalable pathway toward advancing spatial intelligence of VLMs in sports.",
+      "published_date": "2026-03-10T16:50:32.000Z",
+      "url": "https://arxiv.org/abs/2603.09896",
+      "pdf_url": "https://arxiv.org/pdf/2603.09896",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09896",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "步入赛场：体育场景中空间智能基准测试",
+        "chinese_summary": "提出了CourtSI，首个针对体育场景的空间智能大规模数据集。",
+        "pain_point": "现有空间智能基准在体育场景中的适用性不足。",
+        "core_value": "填补了体育场景中空间智能研究的空白，提供高质量的评估基准。",
+        "technical_architecture": "利用定义明确的场地几何作为度量锚点，开发半自动数据引擎。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集仅涵盖代表性网球场体育项目。",
+        "key_contributions": [
+          "提出了首个针对体育场景的空间智能数据集CourtSI",
+          "开发了高质量的评估基准CourtSI-Bench",
+          "揭示了现有VLMs在空间智能上的局限性"
+        ],
+        "application_scenarios": [
+          "体育赛事分析",
+          "智能体育教练系统"
+        ],
+        "technical_highlights": [
+          "半自动数据引擎实现高效数据收集",
+          "严格的人工验证确保数据质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09095",
+      "source": "huggingface",
+      "title": "Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
+      "authors": [
+        "Kaiser Sun",
+        "Xiaochuang Yuan",
+        "Hongjun Liu",
+        "Chen Zhao",
+        "Cheng Zhang",
+        "Mark Dredze",
+        "Fan Bai"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) can process text presented as images, yet they often perform worse than when the same content is provided as textual tokens. We systematically diagnose this \"modality gap\" by evaluating seven MLLMs across seven benchmarks in five input modes, spanning both synthetically rendered text and realistic document images from arXiv PDFs to Wikipedia pages. We find that the modality gap is task- and data-dependent. For example, math tasks degrade by over 60 points on synthetic renderings, while natural document images often match or exceed text-mode performance. Rendering choices such as font and resolution are strong confounds, with font alone swinging accuracy by up to 47 percentage points. To understand this, we conduct a grounded-theory error analysis of over 4,000 examples, revealing that image mode selectively amplifies reading errors (calculation and formatting failures) while leaving knowledge and reasoning errors largely unchanged, and that some models exhibit a chain-of-thought reasoning collapse under visual input. Motivated by these findings, we propose a self-distillation method that trains the model on its own pure text reasoning traces paired with image inputs, raising image-mode accuracy on GSM8K from 30.71% to 92.72% and transferring to unseen benchmarks without catastrophic forgetting. Overall, our study provides a systematic understanding of the modality gap and suggests a practical path toward improving visual text understanding in multimodal language models.",
+      "published_date": "2026-03-10T02:14:23.000Z",
+      "url": "https://arxiv.org/abs/2603.09095",
+      "pdf_url": "https://arxiv.org/pdf/2603.09095",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09095",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 23,
+      "hot_score": 230,
+      "structured_summary": {
+        "chinese_title": "阅读，而非思考：理解并弥合当文本变为像素时多模态LLMs的模态差距",
+        "chinese_summary": "研究发现多模态LLMs在处理图像文本时表现较差，提出一种自蒸馏方法改善此问题。",
+        "pain_point": "多模态LLMs在处理图像文本时表现不如文本模式，存在显著的模态差距。",
+        "core_value": "通过自蒸馏方法提升模型在图像模式下的表现，弥合模态差距。",
+        "technical_architecture": "采用自蒸馏方法，训练模型在纯文本推理痕迹上。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于当前实验数据，未来需进一步验证。",
+        "key_contributions": [
+          "系统诊断多模态LLMs的模态差距",
+          "揭示图像模式下阅读错误的放大效应",
+          "提出自蒸馏方法改善模型表现"
+        ],
+        "application_scenarios": [
+          "多模态文本处理",
+          "图像文本理解"
+        ],
+        "technical_highlights": [
+          "自蒸馏方法",
+          "全面的错误分析"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.08823",
+      "source": "huggingface",
+      "title": "Fish Audio S2 Technical Report",
+      "authors": [
+        "Shijia Liao",
+        "Yuxuan Wang",
+        "Songting Liu",
+        "Yifan Cheng",
+        "Ruoyi Zhang",
+        "Tianyu Li",
+        "Shidong Li",
+        "Yisheng Zheng",
+        "Xingwei Liu",
+        "Qingzheng Wang",
+        "Zhizhuo Zhou",
+        "Jiahua Liu",
+        "Xin Chen",
+        "Dawei Han"
+      ],
+      "abstract": "We introduce Fish Audio S2, an open-sourced text-to-speech system featuring multi-speaker, multi-turn generation, and, most importantly, instruction-following control via natural-language descriptions. To scale training, we develop a multi-stage training recipe together with a staged data pipeline covering video captioning and speech captioning, voice-quality assessment, and reward modeling. To push the frontier of open-source TTS, we release our model weights, fine-tuning code, and an SGLang-based inference engine. The inference engine is production-ready for streaming, achieving an RTF of 0.195 and a time-to-first-audio below 100 ms.Our code and weights are available on GitHub (https://github.com/fishaudio/fish-speech) and Hugging Face (https://huggingface.co/fishaudio/s2-pro). We highly encourage readers to visit https://fish.audio to try custom voices.",
+      "published_date": "2026-03-09T18:34:33.000Z",
+      "url": "https://arxiv.org/abs/2603.08823",
+      "pdf_url": "https://arxiv.org/pdf/2603.08823",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.08823",
+      "category": "llm",
+      "tags": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "Fish Audio S2 技术报告",
+        "chinese_summary": "Fish Audio S2 是一个多说话人、多轮生成及指令跟随控制的开源文本转语音系统。",
+        "pain_point": "现有 TTS 系统缺乏多说话人和指令跟随控制功能。",
+        "core_value": "提供多说话人和指令跟随控制功能，提升 TTS 系统的灵活性和可控性。",
+        "technical_architecture": "采用多阶段训练方法和分阶段数据管道。",
+        "quantitative_results": "实现 0.195 的 RTF 和 100 ms 以下的时间到第一音频。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅提供开源代码和模型权重，未详细说明具体应用场景。",
+        "key_contributions": [
+          "多说话人和指令跟随控制功能",
+          "多阶段训练和数据管道"
+        ],
+        "application_scenarios": [
+          "语音助手",
+          "虚拟主播"
+        ],
+        "technical_highlights": [
+          "生产级流式推理引擎",
+          "RTF 和时间到第一音频表现优异"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.09652",
+      "source": "huggingface",
+      "title": "MiniAppBench: Evaluating the Shift from Text to Interactive HTML Responses in LLM-Powered Assistants",
+      "authors": [
+        "Zuhao Zhang",
+        "Chengyue Yu",
+        "Yuante Li",
+        "Chenyi Zhuang",
+        "Linjian Mo",
+        "Shuai Li"
+      ],
+      "abstract": "With the rapid advancement of Large Language Models (LLMs) in code generation, human-AI interaction is evolving from static text responses to dynamic, interactive HTML-based applications, which we term MiniApps. These applications require models to not only render visual interfaces but also construct customized interaction logic that adheres to real-world principles. However, existing benchmarks primarily focus on algorithmic correctness or static layout reconstruction, failing to capture the capabilities required for this new paradigm. To address this gap, we introduce MiniAppBench, the first comprehensive benchmark designed to evaluate principle-driven, interactive application generation. Sourced from a real-world application with 10M+ generations, MiniAppBench distills 500 tasks across six domains (e.g., Games, Science, and Tools). Furthermore, to tackle the challenge of evaluating open-ended interactions where no single ground truth exists, we propose MiniAppEval, an agentic evaluation framework. Leveraging browser automation, it performs human-like exploratory testing to systematically assess applications across three dimensions: Intention, Static, and Dynamic. Our experiments reveal that current LLMs still face significant challenges in generating high-quality MiniApps, while MiniAppEval demonstrates high alignment with human judgment, establishing a reliable standard for future research. Our code is available in github.com/MiniAppBench.",
+      "published_date": "2026-03-10T13:30:03.000Z",
+      "url": "https://arxiv.org/abs/2603.09652",
+      "pdf_url": "https://arxiv.org/pdf/2603.09652",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.09652",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "MiniAppBench: 评估从文本到交互HTML响应的LLM驱动助手转变",
+        "chinese_summary": "提出MiniAppBench，首个评估基于原则的交互应用生成的基准",
+        "pain_point": "现有基准主要关注算法正确性或静态布局重建，忽视了新范式所需的能力。",
+        "core_value": "MiniAppBench旨在评估LLM生成交互MiniApp的能力，填补现有基准的空白。",
+        "technical_architecture": "利用浏览器自动化进行类似人类的探索性测试，评估应用的意图、静态和动态维度。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于一个实际应用的数据集，未来需扩展数据源。",
+        "key_contributions": [
+          "提出首个评估交互MiniApp生成的基准MiniAppBench",
+          "开发MiniAppEval框架进行开放交互评估"
+        ],
+        "application_scenarios": [
+          "代码生成",
+          "人机交互"
+        ],
+        "technical_highlights": [
+          "结合浏览器自动化进行探索性测试",
+          "评估多维度：意图、静态和动态"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.06854",
+      "source": "huggingface",
+      "title": "Are Audio-Language Models Listening? Audio-Specialist Heads for Adaptive Audio Steering",
+      "authors": [
+        "Neta Glazer",
+        "Lenny Aharon",
+        "Ethan Fetaya"
+      ],
+      "abstract": "Multimodal large language models can exhibit text dominance, over-relying on linguistic priors instead of grounding predictions in non-text inputs. One example is large audio-language models (LALMs) where decisive audio evidence can be under-utilized even when it contains important information. To address this issue we use mechanistic interpretability to identify a small set of audio-specialist attention heads whose audio attention yields a ``listening'' signal. We show that this signal increases when audio evidence affects the model's output, providing an indicator of audio engagement under standard prompting. Leveraging this localization, we construct an audio--silence steering direction and apply an inference-time activation intervention to the final representation, amplifying the model's audio effect. To demonstrate the utility of this intervention, we show on MMAU that this improves accuracy by up to +8.0 percentage points on two Qwen-based LALMs, without any parameter updates.",
+      "published_date": "2026-03-06T20:18:30.000Z",
+      "url": "https://arxiv.org/abs/2603.06854",
+      "pdf_url": "https://arxiv.org/pdf/2603.06854",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.06854",
+      "category": "llm",
+      "tags": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "upvotes": 11,
+      "hot_score": 110,
+      "structured_summary": {
+        "chinese_title": "音频-语言模型是否在倾听？适应性音频引导的音频专家头部",
+        "chinese_summary": "通过音频专家头部提高音频语言模型的音频响应能力，提升准确率。",
+        "pain_point": "音频语言模型过度依赖文本先验，忽视音频输入的重要信息。",
+        "core_value": "通过音频专家头部识别音频关注信号，增强模型对音频输入的响应。",
+        "technical_architecture": "使用机械可解释性识别音频专家注意力头，构建音频-静默引导方向。",
+        "quantitative_results": "在MMAU上，改进后的模型准确率提升8.0个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上验证，未来需扩展应用场景。",
+        "key_contributions": [
+          "提出音频专家头部识别音频关注信号",
+          "提出音频-静默引导方向",
+          "提升模型对音频输入的响应能力"
+        ],
+        "application_scenarios": [
+          "音频内容理解",
+          "多模态对话系统"
+        ],
+        "technical_highlights": [
+          "利用机械可解释性识别关键注意力头",
+          "在推理时激活干预提升音频效果"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

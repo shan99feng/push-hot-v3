@@ -77,10 +77,11 @@
 
   // ===== 更新侧边栏统计 =====
   function updateSidebarStats(papers) {
-    const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0 };
+    const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0, other: 0 };
     papers.forEach(p => {
-      const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : p.category;
+      const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : (p.category || 'other');
       if (counts[cat] !== undefined) counts[cat]++;
+      else counts['other']++;
     });
     const s = id => $(id);
     if (s('statTotal'))     s('statTotal').textContent     = papers.length;
@@ -89,6 +90,7 @@
     if (s('statCV'))        s('statCV').textContent        = counts.cv;
     if (s('statRecsys'))    s('statRecsys').textContent    = counts.recsys;
     if (s('statRL'))        s('statRL').textContent        = counts.rl;
+    if (s('statOther'))     s('statOther').textContent     = counts.other;
   }
 
   // ===== 筛选 + 排序 + 渲染 =====

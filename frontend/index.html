@@ -134,6 +134,10 @@
                 <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-gamepad mr-1 text-rose-400"></i>强化学习</span>
                 <span id="statRL" class="font-semibold text-rose-600">-</span>
               </div>
+              <div class="flex justify-between items-center text-sm group cursor-pointer hover:bg-blue-50 rounded px-1 py-0.5 -mx-1 transition-colors" data-stat-cat="other">
+                <span class="text-gray-500 group-hover:text-accent"><i class="fa fa-ellipsis-h mr-1 text-gray-400"></i>其它</span>
+                <span id="statOther" class="font-semibold text-gray-600">-</span>
+              </div>
             </div>
           </div>        </div>
       </aside>
@@ -162,6 +166,7 @@
                 <button class="cat-tab" data-category="cv"><i class="fa fa-eye mr-1"></i>视觉</button>
                 <button class="cat-tab" data-category="recsys"><i class="fa fa-search mr-1"></i>搜广推</button>
                 <button class="cat-tab" data-category="rl"><i class="fa fa-gamepad mr-1"></i>强化学习</button>
+                <button class="cat-tab" data-category="other"><i class="fa fa-ellipsis-h mr-1"></i>其它</button>
             </div>
             <div class="ml-auto flex items-center gap-2">
               <select id="sortSelect" class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 text-gray-600 focus:outline-none focus:border-accent bg-white">

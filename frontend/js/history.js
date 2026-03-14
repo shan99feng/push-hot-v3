@@ -87,13 +87,14 @@
     // 并行加载所有日期数据并缓存
     try {
       const allData = await Promise.all(dates.map(d => API.getDailyPapers(d.date).catch(() => ({ papers: [] }))));
-      const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0 };
+      const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0, other: 0 };
       let total = 0;
       allData.forEach(data => {
         (data.papers || []).forEach(p => {
           total++;
-          const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : p.category;
+          const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : (p.category || 'other');
           if (counts[cat] !== undefined) counts[cat]++;
+          else counts['other']++;
           state.allHistoryPapers.push(p);
         });
       });
@@ -105,11 +106,12 @@
 
   // ===== 渲染统计块（复用） =====
   const CAT_CONFIG = [
-    { key: 'llm',       label: '大模型',   icon: 'fa-user',     color: 'text-blue-600' },
-    { key: 'multimodal',label: '多模态',   icon: 'fa-image',    color: 'text-purple-600' },
-    { key: 'cv',        label: '计算机视觉',icon: 'fa-eye',     color: 'text-green-600' },
-    { key: 'recsys',    label: '搜广推',   icon: 'fa-search',   color: 'text-orange-600' },
-    { key: 'rl',        label: '强化学习', icon: 'fa-gamepad',  color: 'text-rose-600' },
+    { key: 'llm',       label: '大模型',   icon: 'fa-user',        color: 'text-blue-600' },
+    { key: 'multimodal',label: '多模态',   icon: 'fa-image',       color: 'text-purple-600' },
+    { key: 'cv',        label: '计算机视觉',icon: 'fa-eye',        color: 'text-green-600' },
+    { key: 'recsys',    label: '搜广推',   icon: 'fa-search',      color: 'text-orange-600' },
+    { key: 'rl',        label: '强化学习', icon: 'fa-gamepad',     color: 'text-rose-600' },
+    { key: 'other',     label: '其它',     icon: 'fa-ellipsis-h',  color: 'text-gray-600' },
   ];
 
   // clickable=true 时，类别行可点击
@@ -332,10 +334,11 @@
     const listEl = $('dailyStatsList');
     if (!card || !listEl) return;
 
-    const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0 };
+    const counts = { llm: 0, multimodal: 0, cv: 0, recsys: 0, rl: 0, other: 0 };
     papers.forEach(p => {
-      const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : p.category;
+      const cat = (p.category === 'agent' || p.category === 'nlp') ? 'llm' : (p.category || 'other');
       if (counts[cat] !== undefined) counts[cat]++;
+      else counts['other']++;
     });
 
     if (dateLabel) dateLabel.textContent = date;

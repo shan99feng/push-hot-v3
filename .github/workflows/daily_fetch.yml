@@ -1,14 +1,14 @@
 name: 每日论文采集
 
 on:
-  # 每天北京时间 10:00（UTC 02:00）自动运行
+  # 每天北京时间 07:00（UTC 23:00 前一天）自动运行，推送前一天的热点论文
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 23 * * *'
   # 支持手动触发（用于补跑历史数据）
   workflow_dispatch:
     inputs:
       date:
-        description: '指定采集日期（留空则采集今天），格式 YYYY-MM-DD'
+        description: '指定采集日期（留空则采集前一天），格式 YYYY-MM-DD'
         required: false
         default: ''
 

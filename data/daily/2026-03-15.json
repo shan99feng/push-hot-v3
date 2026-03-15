@@ -1,0 +1,533 @@
+{
+  "date": "2026-03-15",
+  "generated_at": "2026-03-15T23:32:20.146923+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2603.12267v1",
+      "source": "arxiv",
+      "title": "EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation",
+      "authors": [
+        "Tianwei Xiong",
+        "Jun Hao Liew",
+        "Zilong Huang",
+        "Zhijie Lin",
+        "Jiashi Feng",
+        "Xihui Liu"
+      ],
+      "abstract": "Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce $\\textbf{EVATok}$, a framework to produce $\\textbf{E}$fficient $\\textbf{V}$ideo $\\textbf{A}$daptive $\\textbf{Tok}$enizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.",
+      "published_date": "2026-03-12T17:59:59Z",
+      "url": "https://arxiv.org/abs/2603.12267v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12267v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "EVATok: 适应长度的视频分词以提高高效视觉自回归生成",
+        "chinese_summary": "EVATok 提供了高效的视频分词方法，提高了视频重建和下游自回归生成的质量。",
+        "pain_point": "传统视频分词方法在处理复杂动态视频时效率低下。",
+        "core_value": "通过自适应分词和优化路由器，EVATok 提高了视频生成的效率和质量。",
+        "technical_architecture": "EVATok 采用自适应分词和轻量级路由器架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多视频类型。",
+        "key_contributions": [
+          "提出自适应视频分词方法",
+          "开发轻量级路由器进行快速预测",
+          "结合视频语义编码进行训练"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "视频重建"
+        ],
+        "technical_highlights": [
+          "自适应分词提高效率",
+          "轻量级路由器加速预测"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12266v1",
+      "source": "arxiv",
+      "title": "MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning",
+      "authors": [
+        "Haozhan Shen",
+        "Shilin Yan",
+        "Hongwei Xue",
+        "Shuaiqi Lu",
+        "Xiaojun Tang",
+        "Guannan Zhang",
+        "Tiancheng Zhao",
+        "Jianwei Yin"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., \"if a permission dialog appears and the color of the interface is green, click Allow\") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.",
+      "published_date": "2026-03-12T17:59:56Z",
+      "url": "https://arxiv.org/abs/2603.12266v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12266v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "MM-CondChain: 一个程序验证基准，用于视觉接地的深度组合推理",
+        "chinese_summary": "提出了一个用于视觉接地的深度组合推理基准MM-CondChain。",
+        "pain_point": "现有基准主要关注浅组合或独立约束，而忽视了深度组合条件链的评估。",
+        "core_value": "填补了深度组合条件链评估的空白，提供了一个新的基准来评估多模态大语言模型。",
+        "technical_architecture": "提出了一个代理合成管道，包括规划器和验证器来生成多层次的组合条件。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对视觉接地的组合推理，未来可能扩展到其他领域。",
+        "key_contributions": [
+          "提出了一个新的基准MM-CondChain",
+          "设计了多层次的组合条件链"
+        ],
+        "application_scenarios": [
+          "多模态大语言模型的评估",
+          "视觉工作流的导航"
+        ],
+        "technical_highlights": [
+          "代理合成管道",
+          "多层次组合条件链"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12265v1",
+      "source": "arxiv",
+      "title": "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams",
+      "authors": [
+        "Yibin Yan",
+        "Jilan Xu",
+        "Shangzhe Di",
+        "Haoning Wu",
+        "Weidi Xie"
+      ],
+      "abstract": "Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.",
+      "published_date": "2026-03-12T17:59:55Z",
+      "url": "https://arxiv.org/abs/2603.12265v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12265v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "OmniStream：掌握连续流中的感知、重建和行动",
+        "chinese_summary": "OmniStream 统一视觉骨干模型在视频流中实现高效感知、重建和行动。",
+        "pain_point": "现有视觉基础模型在实时流环境中表现碎片化，缺乏统一处理能力。",
+        "core_value": "通过因果时空注意力和3D旋转位置嵌入，实现高效在线视频流处理。",
+        "technical_architecture": "采用因果时空注意力和3D旋转位置嵌入的统一视觉骨干模型。",
+        "quantitative_results": "在多种任务上表现与专门专家模型相当，甚至优于部分模型。",
+        "competitors": "与专门针对图像和视频处理的模型对比。",
+        "limitations": "未来需要在更多样化的数据集上进行测试。",
+        "key_contributions": [
+          "提出统一的视觉骨干模型",
+          "引入因果时空注意力机制",
+          "使用3D旋转位置嵌入"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "复杂视频和空间推理"
+        ],
+        "technical_highlights": [
+          "支持高效的帧级在线处理",
+          "预训练框架结合静态和动态任务"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12264v1",
+      "source": "arxiv",
+      "title": "GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing",
+      "authors": [
+        "Mingxin Liu",
+        "Ziqian Fan",
+        "Zhaokai Wang",
+        "Leyao Gu",
+        "Zirun Zhu",
+        "Yiguo He",
+        "Yuchen Yang",
+        "Changyao Tian",
+        "Xiangyu Zhao",
+        "Ning Liao",
+        "Shaofeng Zhang",
+        "Qibing Ren",
+        "Zhihang Zhong",
+        "Xuanhe Zhou",
+        "Junchi Yan",
+        "Xue Yang"
+      ],
+      "abstract": "Unified multimodal models target joint understanding, reasoning, and generation, but current image editing benchmarks are largely confined to natural images and shallow commonsense reasoning, offering limited assessment of this capability under structured, domain-specific constraints. In this work, we introduce GRADE, the first benchmark to assess discipline-informed knowledge and reasoning in image editing. GRADE comprises 520 carefully curated samples across 10 academic domains, spanning from natural science to social science. To support rigorous evaluation, we propose a multi-dimensional evaluation protocol that jointly assesses Discipline Reasoning, Visual Consistency, and Logical Readability. Extensive experiments on 20 state-of-the-art open-source and closed-source models reveal substantial limitations in current models under implicit, knowledge-intensive editing settings, leading to large performance gaps. Beyond quantitative scores, we conduct rigorous analyses and ablations to expose model shortcomings and identify the constraints within disciplinary editing. Together, GRADE pinpoints key directions for the future development of unified multimodal models, advancing the research on discipline-informed image editing and reasoning. Our benchmark and evaluation code are publicly released.",
+      "published_date": "2026-03-12T17:59:52Z",
+      "url": "https://arxiv.org/abs/2603.12264v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12264v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "GRADE: 图像编辑中学科导向推理的基准测试",
+        "chinese_summary": "GRADE 是首个评估图像编辑中学科导向知识和推理的基准测试。",
+        "pain_point": "当前图像编辑基准主要针对自然图像和浅层常识推理，缺乏对结构化、领域特定约束条件下的评估。",
+        "core_value": "提供了一个全面的评估框架，涵盖学科推理、视觉一致性和逻辑可读性。",
+        "technical_architecture": "提出了一个多维度评估协议，包括学科推理、视觉一致性和逻辑可读性。",
+        "quantitative_results": "展示了20个先进模型在隐含、知识密集型编辑设置下的显著性能差距。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索更多学科领域的应用。",
+        "key_contributions": [
+          "首次提出学科导向的图像编辑基准",
+          "提出多维度评估协议",
+          "揭示当前模型的局限性"
+        ],
+        "application_scenarios": [
+          "自然科学研究",
+          "社会科学"
+        ],
+        "technical_highlights": [
+          "涵盖广泛学科领域",
+          "多维度评估协议"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12262v1",
+      "source": "arxiv",
+      "title": "Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously",
+      "authors": [
+        "Yiran Guan",
+        "Liang Yin",
+        "Dingkang Liang",
+        "Jianzhong Ju",
+        "Zhenbo Luo",
+        "Jian Luan",
+        "Yuliang Liu",
+        "Xiang Bai"
+      ],
+      "abstract": "Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response latency. To address this trade-off, we propose Video Streaming Thinking (VST), a novel paradigm for streaming video understanding. It supports a thinking while watching mechanism, which activates reasoning over incoming video clips during streaming. This design improves timely comprehension and coherent cognition while preserving real-time responsiveness by amortizing LLM reasoning latency over video playback. Furthermore, we introduce a comprehensive post-training pipeline that integrates VST-SFT, which structurally adapts the offline VideoLLM to causal streaming reasoning, and VST-RL, which provides end-to-end improvement through self-exploration in a multi-turn video interaction environment. Additionally, we devise an automated training-data synthesis pipeline that uses video knowledge graphs to generate high-quality streaming QA pairs, with an entity-relation grounded streaming Chain-of-Thought to enforce multi-evidence reasoning and sustained attention to the video stream. Extensive evaluations show that VST-7B performs strongly on online benchmarks, e.g. 79.5% on StreamingBench and 59.3% on OVO-Bench. Meanwhile, VST remains competitive on offline long-form or reasoning benchmarks. Compared with Video-R1, VST responds 15.7 times faster and achieves +5.4% improvement on VideoHolmes, demonstrating higher efficiency and strong generalization across diverse video understanding tasks. Code, data, and models will be released at https://github.com/1ranGuan/VST.",
+      "published_date": "2026-03-12T17:59:51Z",
+      "url": "https://arxiv.org/abs/2603.12262v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12262v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "视频流思考：视频LLMs可以同时观看和思考",
+        "chinese_summary": "提出Video Streaming Thinking (VST)，支持边看边思考机制，提高实时理解与连贯认知。",
+        "pain_point": "现有方法缺乏同步逻辑推理流，导致响应延迟。",
+        "core_value": "通过边看边思考机制，平衡实时响应与及时理解。",
+        "technical_architecture": "采用Video Streaming Thinking (VST) 新范式，结合VST-SFT和VST-RL优化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化推理延迟。",
+        "key_contributions": [
+          "提出Video Streaming Thinking (VST) 新范式",
+          "结合VST-SFT和VST-RL优化",
+          "自动化训练数据合成管道"
+        ],
+        "application_scenarios": [
+          "在线视频实时交互",
+          "多轮视频互动环境"
+        ],
+        "technical_highlights": [
+          "支持边看边思考机制",
+          "结构化适应视频LLM到因果流推理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12261v1",
+      "source": "arxiv",
+      "title": "The Latent Color Subspace: Emergent Order in High-Dimensional Chaos",
+      "authors": [
+        "Mateusz Pach",
+        "Jessica Bader",
+        "Quentin Bouniot",
+        "Serge Belongie",
+        "Zeynep Akata"
+      ],
+      "abstract": "Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.",
+      "published_date": "2026-03-12T17:59:48Z",
+      "url": "https://arxiv.org/abs/2603.12261v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12261v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "潜在颜色子空间：高维混沌中的自发秩序",
+        "chinese_summary": "通过揭示FLUX中变分自编码器潜在空间的颜色结构，提出了一种全新的颜色控制方法。",
+        "pain_point": "现有文本到图像生成模型难以实现对生成图像的精细控制。",
+        "core_value": "通过潜在颜色子空间揭示颜色编码结构，实现无需训练的闭式潜在空间操作。",
+        "technical_architecture": "基于FLUX的变分自编码器潜在空间颜色结构分析。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在FLUX模型上进行了验证，未来需在其他模型上进行测试。",
+        "key_contributions": [
+          "揭示FLUX潜在空间的颜色结构",
+          "提出无需训练的闭式潜在空间颜色控制方法"
+        ],
+        "application_scenarios": [
+          "文本到图像生成",
+          "图像编辑"
+        ],
+        "technical_highlights": [
+          "颜色子空间的发现",
+          "闭式潜在空间操作"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12257v1",
+      "source": "arxiv",
+      "title": "DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning",
+      "authors": [
+        "Yujie Wei",
+        "Xinyu Liu",
+        "Shiwei Zhang",
+        "Hangjie Yuan",
+        "Jinbo Xing",
+        "Zhekai Chen",
+        "Xiang Wang",
+        "Haonan Qiu",
+        "Rui Zhao",
+        "Yutong Feng",
+        "Ruihang Chu",
+        "Yingya Zhang",
+        "Yike Guo",
+        "Xihui Liu",
+        "Hongming Shan"
+      ],
+      "abstract": "While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.",
+      "published_date": "2026-03-12T17:59:12Z",
+      "url": "https://arxiv.org/abs/2603.12257v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12257v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "DreamVideo-Omni：全方位运动控制多主体视频定制与潜在身份强化学习",
+        "chinese_summary": "DreamVideo-Omni 提供了精确控制多主体身份和多粒度运动的统一框架。",
+        "pain_point": "现有方法难以同时精确控制多主体身份和多粒度运动。",
+        "core_value": "通过引入条件感知 3D 旋转位置嵌入和分层运动注入策略，实现精确控制。",
+        "technical_architecture": "采用渐进两阶段训练框架，结合全面控制信号进行联合训练。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索更复杂场景的应用。",
+        "key_contributions": [
+          "引入条件感知 3D 旋转位置嵌入",
+          "分层运动注入策略",
+          "多主体身份和运动控制统一框架"
+        ],
+        "application_scenarios": [
+          "视频编辑",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "全方位运动控制",
+          "潜在身份强化学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12255v1",
+      "source": "arxiv",
+      "title": "Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training",
+      "authors": [
+        "Fangfu Liu",
+        "Diankun Wu",
+        "Jiawei Chi",
+        "Yimo Cai",
+        "Yi-Hsin Hung",
+        "Xumin Yu",
+        "Hao Li",
+        "Han Hu",
+        "Yongming Rao",
+        "Yueqi Duan"
+      ],
+      "abstract": "Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), which adapts a subset of parameters (fast weights) to capture and organize spatial evidence over long-horizon scene videos. Specifically, we design a hybrid architecture and adopt large-chunk updates parallel with sliding-window attention for efficient spatial video processing. To further promote spatial awareness, we introduce a spatial-predictive mechanism applied to TTT layers with 3D spatiotemporal convolution, which encourages the model to capture geometric correspondence and temporal continuity across frames. Beyond architecture design, we construct a dataset with dense 3D spatial descriptions, which guides the model to update its fast weights to memorize and organize global 3D spatial signals in a structured manner. Extensive experiments demonstrate that Spatial-TTT improves long-horizon spatial understanding and achieves state-of-the-art performance on video spatial benchmarks. Project page: https://liuff19.github.io/Spatial-TTT.",
+      "published_date": "2026-03-12T17:58:58Z",
+      "url": "https://arxiv.org/abs/2603.12255v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12255v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Spatial-TTT：基于测试时训练的流式视觉空间智能",
+        "chinese_summary": "提出Spatial-TTT，通过测试时训练处理长时序场景视频中的空间证据。",
+        "pain_point": "处理长时序场景视频中的空间证据更新。",
+        "core_value": "通过测试时训练高效处理空间视频，增强空间感知。",
+        "technical_architecture": "采用混合架构和大块更新并行滑动窗口注意力机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多实验验证。",
+        "key_contributions": [
+          "提出Spatial-TTT模型",
+          "采用测试时训练机制",
+          "引入空间预测机制"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "高效处理长时序场景视频",
+          "增强空间感知"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12254v1",
+      "source": "arxiv",
+      "title": "Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing",
+      "authors": [
+        "Baifeng Shi",
+        "Stephanie Fu",
+        "Long Lian",
+        "Hanrong Ye",
+        "David Eigen",
+        "Aaron Reite",
+        "Boyi Li",
+        "Jan Kautz",
+        "Song Han",
+        "David M. Chan",
+        "Pavlo Molchanov",
+        "Trevor Darrell",
+        "Hongxu Yin"
+      ],
+      "abstract": "Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.",
+      "published_date": "2026-03-12T17:58:52Z",
+      "url": "https://arxiv.org/abs/2603.12254v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12254v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": " Attend Before Attention: 面向注意力机制之前的自回归凝视高效可扩展视频理解",
+        "chinese_summary": "AutoGaze 减少视觉标记 4-100 倍，加速 ViTs 和 MLLMs 19 倍，提升视频理解性能。",
+        "pain_point": "现有 MLLMs 处理长高分辨率视频效率低下，存在大量冗余。",
+        "core_value": "通过自回归选择关键多尺度补丁，减少冗余并保持信息。",
+        "technical_architecture": "引入 AutoGaze 模块，在 ViT 或 MLLM 前去除冗余补丁。",
+        "quantitative_results": "视觉标记减少 4-100 倍，加速 19 倍，视频理解性能提升显著。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定视频基准上测试。",
+        "key_contributions": [
+          "提出 AutoGaze 模块",
+          "显著减少视觉标记",
+          "加速视频理解模型"
+        ],
+        "application_scenarios": [
+          "长高分辨率视频理解",
+          "视频问答"
+        ],
+        "technical_highlights": [
+          "自回归选择关键补丁",
+          "用户指定误差阈值"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.12252v1",
+      "source": "arxiv",
+      "title": "EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models",
+      "authors": [
+        "Xuanlang Dai",
+        "Yujie Zhou",
+        "Long Xing",
+        "Jiazi Bu",
+        "Xilin Wei",
+        "Yuhong Liu",
+        "Beichen Zhang",
+        "Kai Chen",
+        "Yuhang Zang"
+      ],
+      "abstract": "Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning depth. Single-step encoding fails to activate the Chain-of-Thought process, which is essential for MLLMs to provide accurate guidance for complex tasks. (ii) The guidance remains invariant during the decoding process. Invariant guidance during decoding prevents DiT from progressively decomposing complex instructions into actionable denoising steps, even with correct MLLM encodings. To this end, we propose Endogenous Chain-of-Thought (EndoCoT), a novel framework that first activates MLLMs' reasoning potential by iteratively refining latent thought states through an iterative thought guidance module, and then bridges these states to the DiT's denoising process. Second, a terminal thought grounding module is applied to ensure the reasoning trajectory remains grounded in textual supervision by aligning the final state with ground-truth answers. With these two components, the MLLM text encoder delivers meticulously reasoned guidance, enabling the DiT to execute it progressively and ultimately solve complex tasks in a step-by-step manner. Extensive evaluations across diverse benchmarks (e.g., Maze, TSP, VSP, and Sudoku) achieve an average accuracy of 92.1%, outperforming the strongest baseline by 8.3 percentage points.",
+      "published_date": "2026-03-12T17:58:48Z",
+      "url": "https://arxiv.org/abs/2603.12252v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12252v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "EndoCoT: 扩展端生链式推理在扩散模型中的应用",
+        "chinese_summary": "提出Endogenous Chain-of-Thought (EndoCoT)框架，增强MLLMs的推理深度并确保推理过程与文本监督一致。",
+        "pain_point": "MLLMs的单步编码无法激活链式推理过程，指导信息在解码过程中保持不变。",
+        "core_value": "通过迭代思想指导模块激活MLLMs的推理潜力，并通过终端思想接地模块确保推理过程与文本监督一致。",
+        "technical_architecture": "提出迭代思想指导模块和终端思想接地模块来增强MLLMs的推理能力。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多任务上验证模型的有效性。",
+        "key_contributions": [
+          "提出迭代思想指导模块激活MLLMs的推理潜力",
+          "提出终端思想接地模块确保推理过程与文本监督一致"
+        ],
+        "application_scenarios": [
+          "复杂任务的多模态处理",
+          "需要链式推理的扩散模型任务"
+        ],
+        "technical_highlights": [
+          "迭代思想指导模块增强推理深度",
+          "终端思想接地模块确保推理与文本监督一致"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

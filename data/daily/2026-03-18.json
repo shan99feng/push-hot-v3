@@ -1,0 +1,608 @@
+{
+  "date": "2026-03-18",
+  "generated_at": "2026-03-18T23:32:27.928859+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.16790",
+      "source": "huggingface",
+      "title": "InCoder-32B: Code Foundation Model for Industrial Scenarios",
+      "authors": [
+        "Jian Yang",
+        "Wei Zhang",
+        "Jiajun Wu",
+        "Junhang Cheng",
+        "Shawn Guo",
+        "Haowen Wang",
+        "Weicheng Gu",
+        "Yaxin Du",
+        "Joseph Li",
+        "Fanglin Xu",
+        "Yizhi Li",
+        "Lin Jing",
+        "Yuanbo Wang",
+        "Yuhan Gao",
+        "Ruihao Gong",
+        "Chuan Hao",
+        "Ran Tao",
+        "Aishan Liu",
+        "Tuney Zheng",
+        "Ganqu Cui",
+        "Zhoujun Li",
+        "Mingjie Tang",
+        "Chenghua Lin",
+        "Wayne Xin Zhao",
+        "Xianglong Liu",
+        "Ming Zhou",
+        "Bryan Dai",
+        "Weifeng Lv"
+      ],
+      "abstract": "Recent code large language models have achieved remarkable progress on general programming tasks. Nevertheless, their performance degrades significantly in industrial scenarios that require reasoning about hardware semantics, specialized language constructs, and strict resource constraints. To address these challenges, we introduce InCoder-32B (Industrial-Coder-32B), the first 32B-parameter code foundation model unifying code intelligence across chip design, GPU kernel optimization, embedded systems, compiler optimization, and 3D modeling. By adopting an efficient architecture, we train InCoder-32B from scratch with general code pre-training, curated industrial code annealing, mid-training that progressively extends context from 8K to 128K tokens with synthetic industrial reasoning data, and post-training with execution-grounded verification. We conduct extensive evaluation on 14 mainstream general code benchmarks and 9 industrial benchmarks spanning 4 specialized domains. Results show InCoder-32B achieves highly competitive performance on general tasks while establishing strong open-source baselines across industrial domains.",
+      "published_date": "2026-03-17T17:01:35.000Z",
+      "url": "https://arxiv.org/abs/2603.16790",
+      "pdf_url": "https://arxiv.org/pdf/2603.16790",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16790",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "upvotes": 134,
+      "hot_score": 1340,
+      "structured_summary": {
+        "chinese_title": "InCoder-32B：工业场景下的代码基础模型",
+        "chinese_summary": "InCoder-32B在通用任务上表现优异，同时在工业领域建立了强大的开源基准。",
+        "pain_point": "现有代码模型在处理硬件语义、专业语言结构和资源约束时表现不佳。",
+        "core_value": "InCoder-32B统一了芯片设计、GPU内核优化、嵌入式系统、编译器优化和3D建模等领域的代码智能。",
+        "technical_architecture": "采用高效架构，通过从零开始训练、代码预训练、工业代码调优、逐步扩展上下文和执行验证等步骤构建。",
+        "quantitative_results": "在14个主流通用代码基准和9个工业基准上表现出色。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能涉及更广泛的工业场景应用。",
+        "key_contributions": [
+          "提出了首个针对工业场景的32B参数代码基础模型",
+          "通过多阶段训练方法提升模型性能",
+          "建立了工业领域的开源基准"
+        ],
+        "application_scenarios": [
+          "芯片设计",
+          "GPU内核优化",
+          "嵌入式系统",
+          "编译器优化",
+          "3D建模"
+        ],
+        "technical_highlights": [
+          "采用高效架构",
+          "多阶段训练方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.15726",
+      "source": "huggingface",
+      "title": "MiroThinker-1.7 & H1: Towards Heavy-Duty Research Agents via Verification",
+      "authors": [
+        "MiroMind Team",
+        "S. Bai",
+        "L. Bing",
+        "L. Lei",
+        "R. Li",
+        "X. Li",
+        "X. Lin",
+        "E. Min",
+        "L. Su",
+        "B. Wang",
+        "L. Wang",
+        "L. Wang",
+        "S. Wang",
+        "X. Wang",
+        "Y. Zhang",
+        "Z. Zhang",
+        "G. Chen",
+        "L. Chen",
+        "Z. Cheng",
+        "Y. Deng",
+        "Z. Huang",
+        "D. Ng",
+        "J. Ni",
+        "Q. Ren",
+        "X. Tang",
+        "B. L. Wang",
+        "H. Wang",
+        "N. Wang",
+        "C. Wei",
+        "Q. Wu",
+        "J. Xia",
+        "Y. Xiao",
+        "H. Xu",
+        "X. Xu",
+        "C. Xue",
+        "Z. Yang",
+        "Z. Yang",
+        "F. Ye",
+        "H. Ye",
+        "J. Yu",
+        "C. Zhang",
+        "W. Zhang",
+        "H. Zhao",
+        "P. Zhu"
+      ],
+      "abstract": "We present MiroThinker-1.7, a new research agent designed for complex long-horizon reasoning tasks. Building on this foundation, we further introduce MiroThinker-H1, which extends the agent with heavy-duty reasoning capabilities for more reliable multi-step problem solving. In particular, MiroThinker-1.7 improves the reliability of each interaction step through an agentic mid-training stage that emphasizes structured planning, contextual reasoning, and tool interaction. This enables more effective multi-step interaction and sustained reasoning across complex tasks. MiroThinker-H1 further incorporates verification directly into the reasoning process at both local and global levels. Intermediate reasoning decisions can be evaluated and refined during inference, while the overall reasoning trajectory is audited to ensure that final answers are supported by coherent chains of evidence. Across benchmarks covering open-web research, scientific reasoning, and financial analysis, MiroThinker-H1 achieves state-of-the-art performance on deep research tasks while maintaining strong results on specialized domains. We also release MiroThinker-1.7 and MiroThinker-1.7-mini as open-source models, providing competitive research-agent capabilities with significantly improved efficiency.",
+      "published_date": "2026-03-16T17:55:42.000Z",
+      "url": "https://arxiv.org/abs/2603.15726",
+      "pdf_url": "https://arxiv.org/pdf/2603.15726",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.15726",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "upvotes": 132,
+      "hot_score": 1320,
+      "structured_summary": {
+        "chinese_title": "MiroThinker-1.7 & H1：迈向重型研究代理的验证之路",
+        "chinese_summary": "MiroThinker-H1 通过直接验证增强重型推理能力，实现复杂任务的可靠多步问题解决。",
+        "pain_point": "现有研究代理在复杂任务中的可靠性不足。",
+        "core_value": "通过验证增强多步推理的可靠性和有效性。",
+        "technical_architecture": "引入验证机制，增强推理过程的可靠性和连贯性。",
+        "quantitative_results": "在多个基准测试中达到最先进的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "开放源代码模型可能缺乏商业应用的优化。",
+        "key_contributions": [
+          "引入验证机制增强推理可靠性",
+          "实现多步问题解决的有效性"
+        ],
+        "application_scenarios": [
+          "开放网络研究",
+          "科学推理",
+          "金融分析"
+        ],
+        "technical_highlights": [
+          "直接验证机制",
+          "多步推理能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.13398",
+      "source": "huggingface",
+      "title": "Qianfan-OCR: A Unified End-to-End Model for Document Intelligence",
+      "authors": [
+        "Daxiang Dong",
+        "Mingming Zheng",
+        "Dong Xu",
+        "Chunhua Luo",
+        "Bairong Zhuang",
+        "Yuxuan Li",
+        "Ruoyun He",
+        "Haoran Wang",
+        "Wenyu Zhang",
+        "Wenbo Wang",
+        "Yicheng Wang",
+        "Xue Xiong",
+        "Ayong Zheng",
+        "Xiaoying Zuo",
+        "Ziwei Ou",
+        "Jingnan Gu",
+        "Quanhao Guo",
+        "Jianmin Wu",
+        "Dawei Yin",
+        "Dou Shen"
+      ],
+      "abstract": "We present Qianfan-OCR, a 4B-parameter end-to-end vision-language model that unifies document parsing, layout analysis, and document understanding within a single architecture. It performs direct image-to-Markdown conversion and supports diverse prompt-driven tasks including table extraction, chart understanding, document QA, and key information extraction. To address the loss of explicit layout analysis in end-to-end OCR, we propose Layout-as-Thought, an optional thinking phase triggered by special think tokens that generates structured layout representations -- bounding boxes, element types, and reading order -- before producing final outputs, recovering layout grounding capabilities while improving accuracy on complex layouts. Qianfan-OCR ranks first among end-to-end models on OmniDocBench v1.5 (93.12) and OlmOCR Bench (79.8), achieves competitive results on OCRBench, CCOCR, DocVQA, and ChartQA against general VLMs of comparable scale, and attains the highest average score on public key information extraction benchmarks, surpassing Gemini-3.1-Pro, Seed-2.0, and Qwen3-VL-235B. The model is publicly accessible via the Baidu AI Cloud Qianfan platform.",
+      "published_date": "2026-03-11T16:08:22.000Z",
+      "url": "https://arxiv.org/abs/2603.13398",
+      "pdf_url": "https://arxiv.org/pdf/2603.13398",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.13398",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 81,
+      "hot_score": 810,
+      "structured_summary": {
+        "chinese_title": "Qianfan-OCR：统一的端到端文档智能模型",
+        "chinese_summary": "Qianfan-OCR 是一个统一的端到端视觉-语言模型，支持多种任务并取得优异性能。",
+        "pain_point": "端到端 OCR 中的布局分析缺失。",
+        "core_value": "通过 Layout-as-Thought 机制提升复杂布局的准确性和布局关联能力。",
+        "technical_architecture": "采用统一架构处理文档解析、布局分析和文档理解。",
+        "quantitative_results": "在 OmniDocBench v1.5 和 OlmOCR Bench 上表现优异。",
+        "competitors": "与 Gemini-3.1-Pro, Seed-2.0, Qwen3-VL-235B 等模型竞争。",
+        "limitations": "未来需要进一步扩展应用场景。",
+        "key_contributions": [
+          "提出 Layout-as-Thought 机制",
+          "支持多种任务如表格提取和文档 QA"
+        ],
+        "application_scenarios": [
+          "文档解析",
+          "表格提取"
+        ],
+        "technical_highlights": [
+          "统一的端到端模型架构",
+          "支持多种任务和高精度布局分析"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.13366",
+      "source": "huggingface",
+      "title": "Thinking in Uncertainty: Mitigating Hallucinations in MLRMs with Latent Entropy-Aware Decoding",
+      "authors": [
+        "Zhongxing Xu",
+        "Zhonghua Wang",
+        "Zhe Qian",
+        "Dachuan Shi",
+        "Feilong Tang",
+        "Ming Hu",
+        "Shiyan Su",
+        "Xiaocheng Zou",
+        "Wei Feng",
+        "Dwarikanath Mahapatra",
+        "Yifan Peng",
+        "Mingquan Lin",
+        "Zongyuan Ge"
+      ],
+      "abstract": "Recent advancements in multimodal large reasoning models (MLRMs) have significantly improved performance in visual question answering. However, we observe that transition words (e.g., because, however, and wait) are closely associated with hallucinations and tend to exhibit high-entropy states. We argue that adequate contextual reasoning information can be directly extracted from the token probability distribution. Inspired by superposed representation theory, we propose leveraging latent superposed reasoning to integrate multiple candidate semantics and maintain latent reasoning trajectories. The hypothesis is that reliance on discrete textual inputs may drive the model toward sequential explicit reasoning, underutilizing dense contextual cues during high-entropy reasoning stages. Therefore, we propose constructing rich semantic representations from the token probability distributions to enhance in-context reasoning. With this goal, we present Latent Entropy-Aware Decoding (LEAD), an efficient plug-and-play decoding strategy that leverages semantic context to achieve reliable reasoning. The heart of our method lies in entropy-aware reasoning mode switching. The model employs probability-weighted continuous embeddings under high-entropy states and transitions back to discrete token embeddings as entropy decreases. Moreover, we propose a prior-guided visual anchor injection strategy that encourages the model to focus on visual information. Extensive experiments show that LEAD effectively mitigates hallucinations across various MLRMs on multiple benchmarks.",
+      "published_date": "2026-03-09T12:47:54.000Z",
+      "url": "https://arxiv.org/abs/2603.13366",
+      "pdf_url": "https://arxiv.org/pdf/2603.13366",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.13366",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 81,
+      "hot_score": 810,
+      "structured_summary": {
+        "chinese_title": "思考不确定性：通过潜在熵感知解码减轻MLRMs幻觉",
+        "chinese_summary": "提出LEAD策略，通过潜在熵感知解码增强上下文推理，减轻MLRMs幻觉。",
+        "pain_point": "MLRMs在视觉问答中易产生幻觉，特别是使用过渡词时。",
+        "core_value": "通过熵感知模式切换和潜在推理，提高模型的上下文理解和推理能力。",
+        "technical_architecture": "提出LEAD策略，结合潜在推理和熵感知模式切换。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在视觉问答任务上进行了验证。",
+        "key_contributions": [
+          "提出LEAD策略",
+          "熵感知模式切换",
+          "潜在推理"
+        ],
+        "application_scenarios": [
+          "视觉问答",
+          "多模态推理"
+        ],
+        "technical_highlights": [
+          "熵感知模式切换",
+          "潜在推理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.16669",
+      "source": "huggingface",
+      "title": "Kinema4D: Kinematic 4D World Modeling for Spatiotemporal Embodied Simulation",
+      "authors": [
+        "Mutian Xu",
+        "Tianbao Zhang",
+        "Tianqi Liu",
+        "Zhaoxi Chen",
+        "Xiaoguang Han",
+        "Ziwei Liu"
+      ],
+      "abstract": "Simulating robot-world interactions is a cornerstone of Embodied AI. Recently, a few works have shown promise in leveraging video generations to transcend the rigid visual/physical constraints of traditional simulators. However, they primarily operate in 2D space or are guided by static environmental cues, ignoring the fundamental reality that robot-world interactions are inherently 4D spatiotemporal events that require precise interactive modeling. To restore this 4D essence while ensuring the precise robot control, we introduce Kinema4D, a new action-conditioned 4D generative robotic simulator that disentangles the robot-world interaction into: i) Precise 4D representation of robot controls: we drive a URDF-based 3D robot via kinematics, producing a precise 4D robot control trajectory. ii) Generative 4D modeling of environmental reactions: we project the 4D robot trajectory into a pointmap as a spatiotemporal visual signal, controlling the generative model to synthesize complex environments' reactive dynamics into synchronized RGB/pointmap sequences. To facilitate training, we curated a large-scale dataset called Robo4D-200k, comprising 201,426 robot interaction episodes with high-quality 4D annotations. Extensive experiments demonstrate that our method effectively simulates physically-plausible, geometry-consistent, and embodiment-agnostic interactions that faithfully mirror diverse real-world dynamics. For the first time, it shows potential zero-shot transfer capability, providing a high-fidelity foundation for advancing next-generation embodied simulation.",
+      "published_date": "2026-03-17T15:36:38.000Z",
+      "url": "https://arxiv.org/abs/2603.16669",
+      "pdf_url": "https://arxiv.org/pdf/2603.16669",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16669",
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 62,
+      "hot_score": 620,
+      "structured_summary": {
+        "chinese_title": "Kinema4D：基于运动学的4D世界建模用于时空体态模拟",
+        "chinese_summary": "提出Kinema4D，一种新的动作条件下的4D生成机器人模拟器，实现精确的4D机器人控制和环境反应生成。",
+        "pain_point": "现有模拟器在2D空间或静态环境线索下运行，忽视了机器人-世界交互的4D时空本质。",
+        "core_value": "精确的4D机器人控制和环境反应生成，填补了现有模拟器的空白。",
+        "technical_architecture": "基于URDF的3D机器人运动学驱动和4D生成模型控制环境反应。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步扩展数据集以提高泛化能力。",
+        "key_contributions": [
+          "提出4D生成机器人模拟器",
+          "精确的4D机器人控制",
+          "环境反应的4D生成"
+        ],
+        "application_scenarios": [
+          "机器人交互模拟",
+          "机器人环境适应性训练"
+        ],
+        "technical_highlights": [
+          "动作条件下的4D生成",
+          "精确的4D机器人控制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.16870",
+      "source": "huggingface",
+      "title": "Demystifing Video Reasoning",
+      "authors": [
+        "Ruisi Wang",
+        "Zhongang Cai",
+        "Fanyi Pu",
+        "Junxiang Xu",
+        "Wanqi Yin",
+        "Maijunxian Wang",
+        "Ran Ji",
+        "Chenyang Gu",
+        "Bo Li",
+        "Ziqi Huang",
+        "Hokin Deng",
+        "Dahua Lin",
+        "Ziwei Liu",
+        "Lei Yang"
+      ],
+      "abstract": "Recent advances in video generation have revealed an unexpected phenomenon: diffusion-based video models exhibit non-trivial reasoning capabilities. Prior work attributes this to a Chain-of-Frames (CoF) mechanism, where reasoning is assumed to unfold sequentially across video frames. In this work, we challenge this assumption and uncover a fundamentally different mechanism. We show that reasoning in video models instead primarily emerges along the diffusion denoising steps. Through qualitative analysis and targeted probing experiments, we find that models explore multiple candidate solutions in early denoising steps and progressively converge to a final answer, a process we term Chain-of-Steps (CoS). Beyond this core mechanism, we identify several emergent reasoning behaviors critical to model performance: (1) working memory, enabling persistent reference; (2) self-correction and enhancement, allowing recovery from incorrect intermediate solutions; and (3) perception before action, where early steps establish semantic grounding and later steps perform structured manipulation. During a diffusion step, we further uncover self-evolved functional specialization within Diffusion Transformers, where early layers encode dense perceptual structure, middle layers execute reasoning, and later layers consolidate latent representations. Motivated by these insights, we present a simple training-free strategy as a proof-of-concept, demonstrating how reasoning can be improved by ensembling latent trajectories from identical models with different random seeds. Overall, our work provides a systematic understanding of how reasoning emerges in video generation models, offering a foundation to guide future research in better exploiting the inherent reasoning dynamics of video models as a new substrate for intelligence.",
+      "published_date": "2026-03-17T17:59:55.000Z",
+      "url": "https://arxiv.org/abs/2603.16870",
+      "pdf_url": "https://arxiv.org/pdf/2603.16870",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16870",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 56,
+      "hot_score": 560,
+      "structured_summary": {
+        "chinese_title": "揭秘视频推理",
+        "chinese_summary": "研究发现视频模型的推理能力主要源自于去噪步骤，而非帧间的顺序推理。",
+        "pain_point": "现有视频推理模型依赖于帧间顺序推理，但实际推理过程可能更复杂。",
+        "core_value": "提出了新的推理机制——Chain-of-Steps (CoS)，并识别了关键的推理行为。",
+        "technical_architecture": "通过分析去噪步骤中的推理过程，揭示了新的推理机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索其他可能的推理机制。",
+        "key_contributions": [
+          "提出了Chain-of-Steps (CoS)机制",
+          "识别了工作记忆、自我纠正和感知先于行动等关键推理行为",
+          "挑战了传统的帧间顺序推理假设"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "视频理解"
+        ],
+        "technical_highlights": [
+          "揭示了去噪步骤中的推理过程",
+          "提出了新的推理机制CoS"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.16871",
+      "source": "huggingface",
+      "title": "WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation",
+      "authors": [
+        "Jisu Nam",
+        "Yicong Hong",
+        "Chun-Hao Paul Huang",
+        "Feng Liu",
+        "JoungBin Lee",
+        "Jiyoung Kim",
+        "Siyoon Jin",
+        "Yunsung Lee",
+        "Jaeyoon Jung",
+        "Suhwan Choi",
+        "Seungryong Kim",
+        "Yang Zhou"
+      ],
+      "abstract": "Recent advances in video diffusion transformers have enabled interactive gaming world models that allow users to explore generated environments over extended horizons. However, existing approaches struggle with precise action control and long-horizon 3D consistency. Most prior works treat user actions as abstract conditioning signals, overlooking the fundamental geometric coupling between actions and the 3D world, whereby actions induce relative camera motions that accumulate into a global camera pose within a 3D world. In this paper, we establish camera pose as a unifying geometric representation to jointly ground immediate action control and long-term 3D consistency. First, we define a physics-based continuous action space and represent user inputs in the Lie algebra to derive precise 6-DoF camera poses, which are injected into the generative model via a camera embedder to ensure accurate action alignment. Second, we use global camera poses as spatial indices to retrieve relevant past observations, enabling geometrically consistent revisiting of locations during long-horizon navigation. To support this research, we introduce a large-scale dataset comprising 3,000 minutes of authentic human gameplay annotated with camera trajectories and textual descriptions. Extensive experiments show that our approach substantially outperforms state-of-the-art interactive gaming world models in action controllability, long-horizon visual quality, and 3D spatial consistency.",
+      "published_date": "2026-03-17T17:59:56.000Z",
+      "url": "https://arxiv.org/abs/2603.16871",
+      "pdf_url": "https://arxiv.org/pdf/2603.16871",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16871",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 45,
+      "hot_score": 450,
+      "structured_summary": {
+        "chinese_title": "WorldCam: 以相机姿态为统一几何表示的交互式自回归3D游戏世界",
+        "chinese_summary": "通过相机姿态作为统一几何表示，实现精确的动作控制和长期3D一致性。",
+        "pain_point": "现有方法在精确动作控制和长期3D一致性方面存在困难。",
+        "core_value": "通过相机姿态实现精确动作控制和长期3D一致性，提升用户体验。",
+        "technical_architecture": "定义基于物理的连续动作空间，使用Lie代数表示用户输入。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步扩展数据集以支持更复杂的游戏环境。",
+        "key_contributions": [
+          "将相机姿态作为统一几何表示",
+          "定义基于物理的连续动作空间",
+          "使用Lie代数表示用户输入"
+        ],
+        "application_scenarios": [
+          "交互式3D游戏",
+          "虚拟现实体验"
+        ],
+        "technical_highlights": [
+          "精确的动作控制",
+          "长期3D一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.16448",
+      "source": "huggingface",
+      "title": "TRUST-SQL: Tool-Integrated Multi-Turn Reinforcement Learning for Text-to-SQL over Unknown Schemas",
+      "authors": [
+        "Ai Jian",
+        "Xiaoyun Zhang",
+        "Wanrou Du",
+        "Jingqing Ruan",
+        "Jiangbo Pei",
+        "Weipeng Zhang",
+        "Ke Zeng",
+        "Xunliang Cai"
+      ],
+      "abstract": "Text-to-SQL parsing has achieved remarkable progress under the Full Schema Assumption. However, this premise fails in real-world enterprise environments where databases contain hundreds of tables with massive noisy metadata. Rather than injecting the full schema upfront, an agent must actively identify and verify only the relevant subset, giving rise to the Unknown Schema scenario we study in this work. To address this, we propose TRUST-SQL (Truthful Reasoning with Unknown Schema via Tools). We formulate the task as a Partially Observable Markov Decision Process where our autonomous agent employs a structured four-phase protocol to ground reasoning in verified metadata. Crucially, this protocol provides a structural boundary for our novel Dual-Track GRPO strategy. By applying token-level masked advantages, this strategy isolates exploration rewards from execution outcomes to resolve credit assignment, yielding a 9.9% relative improvement over standard GRPO. Extensive experiments across five benchmarks demonstrate that TRUST-SQL achieves an average absolute improvement of 30.6% and 16.6% for the 4B and 8B variants respectively over their base models. Remarkably, despite operating entirely without pre-loaded metadata, our framework consistently matches or surpasses strong baselines that rely on schema prefilling.",
+      "published_date": "2026-03-17T12:30:42.000Z",
+      "url": "https://arxiv.org/abs/2603.16448",
+      "pdf_url": "https://arxiv.org/pdf/2603.16448",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16448",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 43,
+      "hot_score": 430,
+      "structured_summary": {
+        "chinese_title": "TRUST-SQL: 工具集成的未知模式多轮强化学习文本到SQL",
+        "chinese_summary": "TRUST-SQL 提出了一种新的方法，通过工具集成的未知模式多轮强化学习来解决文本到SQL的问题。",
+        "pain_point": "现有方法在处理包含大量表和噪声元数据的实际企业环境中表现不佳。",
+        "core_value": "通过自主识别和验证相关元数据，显著提高了文本到SQL的准确率。",
+        "technical_architecture": "提出了一个部分可观测马尔可夫决策过程和双重轨道GRPO策略。",
+        "quantitative_results": "在五个基准测试中，TRUST-SQL 的 4B 和 8B 变体分别实现了 30.6% 和 16.6% 的绝对改进。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更复杂的真实环境中进行测试。",
+        "key_contributions": [
+          "提出了未知模式下的多轮强化学习方法",
+          "设计了双重轨道GRPO策略",
+          "通过验证元数据提高了模型的准确性"
+        ],
+        "application_scenarios": [
+          "企业数据库查询",
+          "自动化数据处理"
+        ],
+        "technical_highlights": [
+          "自主识别和验证相关元数据",
+          "双重轨道GRPO策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.16856",
+      "source": "huggingface",
+      "title": "Online Experiential Learning for Language Models",
+      "authors": [
+        "Tianzhu Ye",
+        "Li Dong",
+        "Qingxiu Dong",
+        "Xun Wu",
+        "Shaohan Huang",
+        "Furu Wei"
+      ],
+      "abstract": "The prevailing paradigm for improving large language models relies on offline training with human annotations or simulated environments, leaving the rich experience accumulated during real-world deployment entirely unexploited. We propose Online Experiential Learning (OEL), a framework that enables language models to continuously improve from their own deployment experience. OEL operates in two stages: first, transferable experiential knowledge is extracted and accumulated from interaction trajectories collected on the user side; second, this knowledge is consolidated into model parameters via on-policy context distillation, requiring no access to the user-side environment. The two stages are iterated to form an online learning loop, where the improved model collects higher-quality trajectories that yield richer experiential knowledge for subsequent rounds. We evaluate OEL on text-based game environments across multiple model scales and both thinking and non-thinking variants. OEL achieves consistent improvements over successive iterations, enhancing both task accuracy and token efficiency while preserving out-of-distribution performance. Our analysis further shows that extracted experiential knowledge is significantly more effective than raw trajectories, and that on-policy consistency between the knowledge source and the policy model is critical for effective learning.",
+      "published_date": "2026-03-17T17:57:49.000Z",
+      "url": "https://arxiv.org/abs/2603.16856",
+      "pdf_url": "https://arxiv.org/pdf/2603.16856",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16856",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "在线体验学习语言模型",
+        "chinese_summary": "OEL框架使语言模型能够从自身部署经验中持续改进。",
+        "pain_point": "现有方法未充分利用语言模型在实际部署中的丰富经验。",
+        "core_value": "通过在线学习循环，提高任务准确性和标记效率。",
+        "technical_architecture": "两阶段过程：提取交互轨迹中的可转移知识并进行模型参数优化。",
+        "quantitative_results": "在多个模型规模和环境上实现持续改进。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多应用场景。",
+        "key_contributions": [
+          "提出OEL框架",
+          "实现在线学习循环",
+          "提高任务准确性和标记效率"
+        ],
+        "application_scenarios": [
+          "文本游戏环境",
+          "大规模语言模型"
+        ],
+        "technical_highlights": [
+          "无需访问用户端环境",
+          "迭代优化模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.08262",
+      "source": "huggingface",
+      "title": "FinToolBench: Evaluating LLM Agents for Real-World Financial Tool Use",
+      "authors": [
+        "Jiaxuan Lu",
+        "Kong Wang",
+        "Yemin Wang",
+        "Qingmei Tang",
+        "Hongwei Zeng",
+        "Xiang Chen",
+        "Jiahao Pi",
+        "Shujian Deng",
+        "Lingzhi Chen",
+        "Yi Fu",
+        "Kehua Yang",
+        "Xiao Sun"
+      ],
+      "abstract": "The integration of Large Language Models (LLMs) into the financial domain is driving a paradigm shift from passive information retrieval to dynamic, agentic interaction. While general-purpose tool learning has witnessed a surge in benchmarks, the financial sector, characterized by high stakes, strict compliance, and rapid data volatility, remains critically underserved. Existing financial evaluations predominantly focus on static textual analysis or document-based QA, ignoring the complex reality of tool execution. Conversely, general tool benchmarks lack the domain-specific rigor required for finance, often relying on toy environments or a negligible number of financial APIs. To bridge this gap, we introduce FinToolBench, the first real-world, runnable benchmark dedicated to evaluating financial tool learning agents. Unlike prior works limited to a handful of mock tools, FinToolBench establishes a realistic ecosystem coupling 760 executable financial tools with 295 rigorous, tool-required queries. We propose a novel evaluation framework that goes beyond binary execution success, assessing agents on finance-critical dimensions: timeliness, intent type, and regulatory domain alignment. Furthermore, we present FATR, a finance-aware tool retrieval and reasoning baseline that enhances stability and compliance. By providing the first testbed for auditable, agentic financial execution, FinToolBench sets a new standard for trustworthy AI in finance. The tool manifest, execution environment, and evaluation code will be open-sourced to facilitate future research.",
+      "published_date": "2026-03-09T11:33:05.000Z",
+      "url": "https://arxiv.org/abs/2603.08262",
+      "pdf_url": "https://arxiv.org/pdf/2603.08262",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.08262",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 32,
+      "hot_score": 320,
+      "structured_summary": {
+        "chinese_title": "FinToolBench: 评估金融工具使用能力的LLM代理基准",
+        "chinese_summary": "提出首个针对金融工具学习代理的现实可运行基准FinToolBench。",
+        "pain_point": "现有金融工具评估主要关注静态文本分析或文档问答，忽视了工具执行的复杂性。",
+        "core_value": "填补了金融领域工具评估的空白，提供了一个现实且严格的评估框架。",
+        "technical_architecture": "结合760个可执行金融工具和295个严格要求的查询构建评估框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅涵盖部分金融工具，未来需扩展更多工具类型。",
+        "key_contributions": [
+          "提出首个针对金融工具学习代理的现实可运行基准",
+          "构建了一个包含760个可执行金融工具和295个严格要求查询的评估框架"
+        ],
+        "application_scenarios": [
+          "金融工具开发与评估",
+          "金融领域的人机交互"
+        ],
+        "technical_highlights": [
+          "结合大量真实金融工具进行评估",
+          "评估框架涵盖金融关键维度：时效性、意图类型和合规性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

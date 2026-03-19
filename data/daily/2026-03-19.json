@@ -1,0 +1,543 @@
+{
+  "date": "2026-03-19",
+  "generated_at": "2026-03-19T23:31:44.710448+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.17187",
+      "source": "huggingface",
+      "title": "MetaClaw: Just Talk -- An Agent That Meta-Learns and Evolves in the Wild",
+      "authors": [
+        "Peng Xia",
+        "Jianwen Chen",
+        "Xinyu Yang",
+        "Haoqin Tu",
+        "Jiaqi Liu",
+        "Kaiwen Xiong",
+        "Siwei Han",
+        "Shi Qiu",
+        "Haonian Ji",
+        "Yuyin Zhou",
+        "Zeyu Zheng",
+        "Cihang Xie",
+        "Huaxiu Yao"
+      ],
+      "abstract": "Large language model (LLM) agents are increasingly used for complex tasks, yet deployed agents often remain static, failing to adapt as user needs evolve. This creates a tension between the need for continuous service and the necessity of updating capabilities to match shifting task distributions. On platforms like OpenClaw, which handle diverse workloads across 20+ channels, existing methods either store raw trajectories without distilling knowledge, maintain static skill libraries, or require disruptive downtime for retraining. We present MetaClaw, a continual meta-learning framework that jointly evolves a base LLM policy and a library of reusable behavioral skills. MetaClaw employs two complementary mechanisms. Skill-driven fast adaptation analyzes failure trajectories via an LLM evolver to synthesize new skills, enabling immediate improvement with zero downtime. Opportunistic policy optimization performs gradient-based updates via cloud LoRA fine-tuning and Reinforcement Learning with a Process Reward Model (RL-PRM). This is triggered during user-inactive windows by the Opportunistic Meta-Learning Scheduler (OMLS), which monitors system inactivity and calendar data. These mechanisms are mutually reinforcing: a refined policy generates better trajectories for skill synthesis, while richer skills provide higher-quality data for policy optimization. To prevent data contamination, a versioning mechanism separates support and query data. Built on a proxy-based architecture, MetaClaw scales to production-size LLMs without local GPUs. Experiments on MetaClaw-Bench and AutoResearchClaw show that skill-driven adaptation improves accuracy by up to 32% relative. The full pipeline advances Kimi-K2.5 accuracy from 21.4% to 40.6% and increases composite robustness by 18.3%. Code is available at https://github.com/aiming-lab/MetaClaw.",
+      "published_date": "2026-03-17T22:30:30.000Z",
+      "url": "https://arxiv.org/abs/2603.17187",
+      "pdf_url": "https://arxiv.org/pdf/2603.17187",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.17187",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 88,
+      "hot_score": 880,
+      "structured_summary": {
+        "chinese_title": "MetaClaw: 只谈一谈 -- 一个在野外进行元学习和进化的智能体",
+        "chinese_summary": "MetaClaw 是一种元学习框架，能够实时进化基础语言模型策略和可重用行为技能库。",
+        "pain_point": "现有方法无法在不中断服务的情况下适应不断变化的任务需求。",
+        "core_value": "MetaClaw 能够在用户不活跃时自动优化模型，提供无缝的服务体验。",
+        "technical_architecture": "采用技能驱动的快速适应和机会性策略优化机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定平台和场景下进行了测试。",
+        "key_contributions": [
+          "引入技能驱动的快速适应机制",
+          "提出机会性元学习调度器"
+        ],
+        "application_scenarios": [
+          "多渠道服务平台",
+          "需要持续服务的复杂任务"
+        ],
+        "technical_highlights": [
+          "零停机时间的即时改进",
+          "基于云的轻量级微调"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.14935",
+      "source": "huggingface",
+      "title": "Video-CoE: Reinforcing Video Event Prediction via Chain of Events",
+      "authors": [
+        "Qile Su",
+        "Jing Tang",
+        "Rui Chen",
+        "Lei Sun",
+        "Xiangxiang Chu"
+      ],
+      "abstract": "Despite advances in the application of MLLMs for various video tasks, video event prediction (VEP) remains relatively underexplored. VEP requires the model to perform fine-grained temporal modeling of videos and establish logical relationships between videos and future events, which current MLLMs still struggle with. In this work, we first present a comprehensive evaluation of current leading MLLMs on the VEP task, revealing the reasons behind their inaccurate predictions, including lack of logical reasoning ability for future events prediction and insufficient utilization of visual information. To address these challenges, we propose Chain of Events (CoE) paradigm, which constructs temporal event chains to implicitly enforce MLLM focusing on the visual content and the logical connections between videos and future events, incentivizing model's reasoning capability with multiple training protocols. Experimental results on public benchmarks demonstrate that our method outperforms both leading open-source and commercial MLLMs, establishing a new state-of-the-art on the VEP task. Codes and models will be released soon.",
+      "published_date": "2026-03-16T07:38:15.000Z",
+      "url": "https://arxiv.org/abs/2603.14935",
+      "pdf_url": "https://arxiv.org/pdf/2603.14935",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.14935",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 82,
+      "hot_score": 820,
+      "structured_summary": {
+        "chinese_title": "Video-CoE: 通过事件链强化视频事件预测",
+        "chinese_summary": "提出Chain of Events (CoE) 架构，显著提升视频事件预测准确性。",
+        "pain_point": "现有模型在视频事件预测中缺乏逻辑推理能力和视觉信息利用不足。",
+        "core_value": "通过构建事件链，增强模型的逻辑推理和视觉理解能力。",
+        "technical_architecture": "提出Chain of Events (CoE) 架构，利用事件链隐式引导模型。",
+        "quantitative_results": "在公开基准上超越现有开源和商用模型，达到新SOTA。",
+        "competitors": "对比了当前领先开源和商用模型。",
+        "limitations": "未来可探索更多复杂场景的应用。",
+        "key_contributions": [
+          "提出Chain of Events (CoE) 架构",
+          "增强模型逻辑推理和视觉理解能力",
+          "显著提升视频事件预测准确性"
+        ],
+        "application_scenarios": [
+          "视频监控",
+          "智能安防"
+        ],
+        "technical_highlights": [
+          "构建事件链隐式引导模型",
+          "多训练协议激励模型推理能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.17117",
+      "source": "huggingface",
+      "title": "MosaicMem: Hybrid Spatial Memory for Controllable Video World Models",
+      "authors": [
+        "Wei Yu",
+        "Runjia Qian",
+        "Yumeng Li",
+        "Liquan Wang",
+        "Songheng Yin",
+        "Sri Siddarth Chakaravarthy P",
+        "Dennis Anthony",
+        "Yang Ye",
+        "Yidi Li",
+        "Weiwei Wan",
+        "Animesh Garg"
+      ],
+      "abstract": "Video diffusion models are moving beyond short, plausible clips toward world simulators that must remain consistent under camera motion, revisits, and intervention. Yet spatial memory remains a key bottleneck: explicit 3D structures can improve reprojection-based consistency but struggle to depict moving objects, while implicit memory often produces inaccurate camera motion even with correct poses. We propose Mosaic Memory (MosaicMem), a hybrid spatial memory that lifts patches into 3D for reliable localization and targeted retrieval, while exploiting the model's native conditioning to preserve prompt-following generation. MosaicMem composes spatially aligned patches in the queried view via a patch-and-compose interface, preserving what should persist while allowing the model to inpaint what should evolve. With PRoPE camera conditioning and two new memory alignment methods, experiments show improved pose adherence compared to implicit memory and stronger dynamic modeling than explicit baselines. MosaicMem further enables minute-level navigation, memory-based scene editing, and autoregressive rollout.",
+      "published_date": "2026-03-17T20:19:44.000Z",
+      "url": "https://arxiv.org/abs/2603.17117",
+      "pdf_url": "https://arxiv.org/pdf/2603.17117",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.17117",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 68,
+      "hot_score": 680,
+      "structured_summary": {
+        "chinese_title": "MosaicMem: 结合空间记忆的可控视频世界模型",
+        "chinese_summary": "提出MosaicMem，一种结合空间记忆方法，提升视频世界模型的动态建模能力。",
+        "pain_point": "现有方法在处理动态物体和准确的相机运动方面存在瓶颈。",
+        "core_value": "通过结合显式和隐式记忆，提升模型的动态物体建模和相机运动准确性。",
+        "technical_architecture": "提出一种新的空间记忆方法，将片段提升到3D以实现可靠的定位和目标检索。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更复杂场景。",
+        "key_contributions": [
+          "提出MosaicMem，结合显式和隐式记忆",
+          "提升动态物体建模和相机运动准确性"
+        ],
+        "application_scenarios": [
+          "分钟级导航",
+          "基于记忆的场景编辑"
+        ],
+        "technical_highlights": [
+          "提出新的记忆对齐方法",
+          "提升生成模型的可控性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.17218",
+      "source": "huggingface",
+      "title": "Alignment Makes Language Models Normative, Not Descriptive",
+      "authors": [
+        "Eilam Shapira",
+        "Moshe Tennenholtz",
+        "Roi Reichart"
+      ],
+      "abstract": "Post-training alignment optimizes language models to match human preference signals, but this objective is not equivalent to modeling observed human behavior. We compare 120 base-aligned model pairs on more than 10,000 real human decisions in multi-round strategic games - bargaining, persuasion, negotiation, and repeated matrix games. In these settings, base models outperform their aligned counterparts in predicting human choices by nearly 10:1, robustly across model families, prompt formulations, and game configurations. This pattern reverses, however, in settings where human behavior is more likely to follow normative predictions: aligned models dominate on one-shot textbook games across all 12 types tested and on non-strategic lottery choices - and even within the multi-round games themselves, at round one, before interaction history develops. This boundary-condition pattern suggests that alignment induces a normative bias: it improves prediction when human behavior is relatively well captured by normative solutions, but hurts prediction in multi-round strategic settings, where behavior is shaped by descriptive dynamics such as reciprocity, retaliation, and history-dependent adaptation. These results reveal a fundamental trade-off between optimizing models for human use and using them as proxies for human behavior.",
+      "published_date": "2026-03-17T23:47:08.000Z",
+      "url": "https://arxiv.org/abs/2603.17218",
+      "pdf_url": "https://arxiv.org/pdf/2603.17218",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.17218",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.GT"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": {
+        "chinese_title": "对齐使语言模型规范而非描述",
+        "chinese_summary": "对齐优化后的模型在多轮战略游戏中预测人类选择不如基模型，但在规范预测更准确的场景中表现更好。",
+        "pain_point": "现有对齐方法未能在多轮战略游戏中准确预测人类行为。",
+        "core_value": "揭示了对齐方法在不同场景下的预测效果差异，强调了规范与描述性行为的区别。",
+        "technical_architecture": "通过比较对齐和基模型在多轮战略游戏中的表现来评估对齐效果。",
+        "quantitative_results": "基模型在多轮战略游戏中比对齐模型预测人类选择更准确。",
+        "competitors": "暂无对比信息",
+        "limitations": "实验主要集中在特定类型的游戏和决策上，未来需扩展到更广泛的应用场景。",
+        "key_contributions": [
+          "揭示了对齐方法在不同场景下的预测效果差异",
+          "强调了规范与描述性行为的区别"
+        ],
+        "application_scenarios": [
+          "多轮战略游戏",
+          "规范预测场景"
+        ],
+        "technical_highlights": [
+          "使用大量真实人类决策数据进行实验",
+          "发现对齐方法在特定场景下反而降低了预测准确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.17621",
+      "source": "huggingface",
+      "title": "Complementary Reinforcement Learning",
+      "authors": [
+        "Dilxat Muhtar",
+        "Jiashun Liu",
+        "Wei Gao",
+        "Weixun Wang",
+        "Shaopan Xiong",
+        "Ju Huang",
+        "Siran Yang",
+        "Wenbo Su",
+        "Jiamang Wang",
+        "Ling Pan",
+        "Bo Zheng"
+      ],
+      "abstract": "Reinforcement Learning (RL) has emerged as a powerful paradigm for training LLM-based agents, yet remains limited by low sample efficiency, stemming not only from sparse outcome feedback but also from the agent's inability to leverage prior experience across episodes. While augmenting agents with historical experience offers a promising remedy, existing approaches suffer from a critical weakness: the experience distilled from history is either stored statically or fail to coevolve with the improving actor, causing a progressive misalignment between the experience and the actor's evolving capability that diminishes its utility over the course of training. Inspired by complementary learning systems in neuroscience, we present Complementary RL to achieve seamless co-evolution of an experience extractor and a policy actor within the RL optimization loop. Specifically, the actor is optimized via sparse outcome-based rewards, while the experience extractor is optimized according to whether its distilled experiences demonstrably contribute to the actor's success, thereby evolving its experience management strategy in lockstep with the actor's growing capabilities. Empirically, Complementary RL outperforms outcome-based agentic RL baselines that do not learn from experience, achieving 10% performance improvement in single-task scenarios and exhibits robust scalability in multi-task settings. These results establish Complementary RL as a paradigm for efficient experience-driven agent learning.",
+      "published_date": "2026-03-18T11:38:01.000Z",
+      "url": "https://arxiv.org/abs/2603.17621",
+      "pdf_url": "https://arxiv.org/pdf/2603.17621",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.17621",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "互补强化学习",
+        "chinese_summary": "提出互补强化学习以实现策略执行者和经验提取器的无缝协同进化。",
+        "pain_point": "现有方法中，历史经验与策略执行者的能力逐渐脱节，降低了其效用。",
+        "core_value": "通过互补学习系统，使经验提取器与策略执行者同步进化，提高样本效率。",
+        "technical_architecture": "结合稀疏奖励优化策略执行者和基于经验贡献优化经验提取器。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证在更复杂任务中的适用性。",
+        "key_contributions": [
+          "提出互补强化学习框架",
+          "实现策略执行者和经验提取器的协同进化"
+        ],
+        "application_scenarios": [
+          "大型语言模型训练",
+          "复杂任务学习"
+        ],
+        "technical_highlights": [
+          "结合稀疏奖励和经验贡献进行优化",
+          "无缝协同进化策略执行者和经验提取器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.16642",
+      "source": "huggingface",
+      "title": "When AI Navigates the Fog of War",
+      "authors": [
+        "Ming Li",
+        "Xirui Li",
+        "Tianyi Zhou"
+      ],
+      "abstract": "Can AI reason about a war before its trajectory becomes historically obvious? Analyzing this capability is difficult because retrospective geopolitical prediction is heavily confounded by training-data leakage. We address this challenge through a temporally grounded case study of the early stages of the 2026 Middle East conflict, which unfolded after the training cutoff of current frontier models. We construct 11 critical temporal nodes, 42 node-specific verifiable questions, and 5 general exploratory questions, requiring models to reason only from information that would have been publicly available at each moment. This design substantially mitigates training-data leakage concerns, creating a setting well-suited for studying how models analyze an unfolding crisis under the fog of war, and provides, to our knowledge, the first temporally grounded analysis of LLM reasoning in an ongoing geopolitical conflict. Our analysis reveals three main findings. First, current state-of-the-art large language models often display a striking degree of strategic realism, reasoning beyond surface rhetoric toward deeper structural incentives. Second, this capability is uneven across domains: models are more reliable in economically and logistically structured settings than in politically ambiguous multi-actor environments. Finally, model narratives evolve over time, shifting from early expectations of rapid containment toward more systemic accounts of regional entrenchment and attritional de-escalation. Since the conflict remains ongoing at the time of writing, this work can serve as an archival snapshot of model reasoning during an unfolding geopolitical crisis, enabling future studies without the hindsight bias of retrospective analysis.",
+      "published_date": "2026-03-17T15:13:10.000Z",
+      "url": "https://arxiv.org/abs/2603.16642",
+      "pdf_url": "https://arxiv.org/pdf/2603.16642",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16642",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "当AI穿越战争迷雾",
+        "chinese_summary": "首次对大型语言模型在持续地缘政治冲突中的推理能力进行时间锚定分析。",
+        "pain_point": "现有模型难以处理未见过的历史数据中的地缘政治预测。",
+        "core_value": "提供了一种新的方法来研究模型在地缘政治危机中的推理能力。",
+        "technical_architecture": "构建了时间锚定的案例研究和验证性问题。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅分析了模型在特定时间段的表现。",
+        "key_contributions": [
+          "首次对大型语言模型在持续地缘政治冲突中的推理能力进行时间锚定分析",
+          "揭示了模型在战略层面的推理能力",
+          "提出了新的研究框架来评估模型在危机中的表现"
+        ],
+        "application_scenarios": [
+          "地缘政治危机管理",
+          "军事战略规划"
+        ],
+        "technical_highlights": [
+          "时间锚定的案例研究",
+          "验证性问题的设计"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.15618",
+      "source": "huggingface",
+      "title": "Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models",
+      "authors": [
+        "Yulin Luo",
+        "Hao Chen",
+        "Zhuangzhe Wu",
+        "Bowen Sui",
+        "Jiaming Liu",
+        "Chenyang Gu",
+        "Zhuoyang Liu",
+        "Qiuxuan Feng",
+        "Jiale Yu",
+        "Shuo Gu",
+        "Peng Jia",
+        "Pheng-Ann Heng",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have recently emerged as a promising paradigm for robotic manipulation, in which reliable action prediction critically depends on accurately interpreting and integrating visual observations conditioned on language instructions. Although recent works have sought to enhance the visual capabilities of VLA models, most approaches treat the LLM backbone as a black box, providing limited insight into how visual information is grounded into action generation. Therefore, we perform a systematic analysis of multiple VLA models across different action-generation paradigms and observe that sensitivity to visual tokens progressively decreases in deeper layers during action generation. Motivated by this observation, we propose DeepVision-VLA, built on a Vision-Language Mixture-of-Transformers (VL-MoT) framework. This framework enables shared attention between the vision foundation model and the VLA backbone, injecting multi-level visual features from the vision expert into deeper layers of the VLA backbone to enhance visual representations for precise and complex manipulation. In addition, we introduce Action-Guided Visual Pruning (AGVP), which leverages shallow-layer attention to prune irrelevant visual tokens while preserving task-relevant ones, reinforcing critical visual cues for manipulation with minimal computational overhead. DeepVision-VLA outperforms prior state-of-the-art methods by 9.0\\% and 7.5\\% on simulated and real-world tasks, respectively, providing new insights for the design of visually enhanced VLA models.",
+      "published_date": "2026-03-16T17:59:54.000Z",
+      "url": "https://arxiv.org/abs/2603.15618",
+      "pdf_url": "https://arxiv.org/pdf/2603.15618",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.15618",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": {
+        "chinese_title": "行动之前先观察：提升视觉基础表示以增强视觉-语言-行动模型",
+        "chinese_summary": "提出DeepVision-VLA模型，通过视觉-语言混合的Transformer框架增强视觉信息在行动生成中的作用。",
+        "pain_point": "现有的VLA模型在深层生成动作时对视觉信息的敏感度降低。",
+        "core_value": "通过引入视觉-语言混合框架和动作引导的视觉剪枝，提升视觉信息在行动生成中的作用。",
+        "technical_architecture": "基于视觉-语言混合的Transformer框架，实现视觉和语言的共享注意力。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上验证模型的有效性。",
+        "key_contributions": [
+          "提出DeepVision-VLA模型",
+          "引入视觉-语言混合框架",
+          "提出动作引导的视觉剪枝"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "智能辅助"
+        ],
+        "technical_highlights": [
+          "增强视觉信息在行动生成中的作用",
+          "实现视觉和语言的共享注意力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.17240",
+      "source": "huggingface",
+      "title": "GigaWorld-Policy: An Efficient Action-Centered World--Action Model",
+      "authors": [
+        "Angen Ye",
+        "Boyuan Wang",
+        "Chaojun Ni",
+        "Guan Huang",
+        "Guosheng Zhao",
+        "Hao Li",
+        "Hengtao Li",
+        "Jie Li",
+        "Jindi Lv",
+        "Jingyu Liu",
+        "Min Cao",
+        "Peng Li",
+        "Qiuping Deng",
+        "Wenjun Mei",
+        "Xiaofeng Wang",
+        "Xinze Chen",
+        "Xinyu Zhou",
+        "Yang Wang",
+        "Yifan Chang",
+        "Yifan Li",
+        "Yukun Zhou",
+        "Yun Ye",
+        "Zhichao Liu",
+        "Zheng Zhu"
+      ],
+      "abstract": "World-Action Models (WAM) initialized from pre-trained video generation backbones have demonstrated remarkable potential for robot policy learning. However, existing approaches face two critical bottlenecks that hinder performance and deployment. First, jointly reasoning over future visual dynamics and corresponding actions incurs substantial inference overhead. Second, joint modeling often entangles visual and motion representations, making motion prediction accuracy heavily dependent on the quality of future video forecasts. To address these issues, we introduce GigaWorld-Policy, an action-centered WAM that learns 2D pixel-action dynamics while enabling efficient action decoding, with optional video generation. Specifically, we formulate policy training into two coupled components: the model predicts future action sequences conditioned on the current observation, and simultaneously generates future videos conditioned on the predicted actions and the same observation. The policy is supervised by both action prediction and video generation, providing richer learning signals and encouraging physically plausible actions through visual-dynamics constraints. With a causal design that prevents future-video tokens from influencing action tokens, explicit future-video generation is optional at inference time, allowing faster action prediction during deployment. To support this paradigm, we curate a diverse, large-scale robot dataset to pre-train an action-centered video generation model, which is then adapted as the backbone for robot policy learning. Experimental results on real-world robotic platforms show that GigaWorld-Policy runs 9x faster than the leading WAM baseline, Motus, while improving task success rates by 7%. Moreover, compared with pi-0.5, GigaWorld-Policy improves performance by 95% on RoboTwin 2.0.",
+      "published_date": "2026-03-18T00:52:02.000Z",
+      "url": "https://arxiv.org/abs/2603.17240",
+      "pdf_url": "https://arxiv.org/pdf/2603.17240",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.17240",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": {
+        "chinese_title": "GigaWorld-Policy: 一种高效的动作中心世界-动作模型",
+        "chinese_summary": "通过预测动作序列和生成未来视频，GigaWorld-Policy 提供了更丰富的学习信号，促进了物理上合理动作的学习。",
+        "pain_point": "现有方法在推理未来视觉动态和动作时存在计算开销大和依赖未来视频预测的问题。",
+        "core_value": "通过动作中心的设计，GigaWorld-Policy 提高了动作预测的效率和准确性。",
+        "technical_architecture": "GigaWorld-Policy 通过预测动作序列和生成未来视频来学习 2D 像素动作动力学。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索更多实际应用场景。",
+        "key_contributions": [
+          "提出了一种动作中心的世界-动作模型",
+          "通过预测动作序列和生成未来视频来学习像素动作动力学",
+          "提供了更丰富的学习信号，促进了物理上合理动作的学习"
+        ],
+        "application_scenarios": [
+          "机器人政策学习",
+          "动作预测和视频生成"
+        ],
+        "technical_highlights": [
+          "动作中心的设计",
+          "同时预测动作序列和生成未来视频"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.17541",
+      "source": "huggingface",
+      "title": "Temporal Gains, Spatial Costs: Revisiting Video Fine-Tuning in Multimodal Large Language Models",
+      "authors": [
+        "Linghao Zhang",
+        "Jungang Li",
+        "Yonghua Hei",
+        "Sicheng Tao",
+        "Song Dai",
+        "Yibo Yan",
+        "Zihao Dongfang",
+        "Weiting Liu",
+        "Chenxi Qin",
+        "Hanqian Li",
+        "Xin Zou",
+        "Jiahao Zhang",
+        "Shuhang Xun",
+        "Haiyun Jiang",
+        "Xuming Hu"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) are typically trained in multiple stages, with video-based supervised fine-tuning (Video-SFT) serving as a key step for improving visual understanding. Yet its effect on the fine-grained evolution of visual capabilities, particularly the balance between spatial and temporal understanding, remains poorly understood. In this paper, we systematically study how Video-SFT reshapes visual capabilities in MLLMs. Across architectures, parameter scales, and frame sampling settings, we observe a consistent pattern: Video-SFT reliably improves video performance, but often yields limited gains or even degradation on static image benchmarks. We further show that this trade-off is closely tied to temporal budget: increasing the number of sampled frames generally improves video performance, but does not reliably improve static image performance. Motivated by this finding, we study an instruction-aware Hybrid-Frame strategy that adaptively allocates frame counts and partially mitigates the image-video trade-off. Our results indicate that Video-SFT is not a free lunch for MLLMs, and preserving spatial understanding remains a central challenge in joint image-video training.",
+      "published_date": "2026-03-18T09:46:44.000Z",
+      "url": "https://arxiv.org/abs/2603.17541",
+      "pdf_url": "https://arxiv.org/pdf/2603.17541",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.17541",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "时间收益，空间代价：重访多模态大型语言模型中的视频微调",
+        "chinese_summary": "研究视频微调对视觉能力的细粒度演化影响，提出指令感知的混合帧策略。",
+        "pain_point": "视频微调在提升视频理解的同时，对静态图像理解的影响存在局限性。",
+        "core_value": "揭示了视频微调与静态图像理解之间的权衡，并提出了一种新的混合帧策略。",
+        "technical_architecture": "研究了不同架构、参数规模和帧采样设置下的视频微调效果。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索如何平衡视频和静态图像理解。",
+        "key_contributions": [
+          "系统研究了视频微调对视觉能力的影响",
+          "提出了指令感知的混合帧策略"
+        ],
+        "application_scenarios": [
+          "多模态大型语言模型的视觉理解优化",
+          "视频和静态图像理解的联合优化"
+        ],
+        "technical_highlights": [
+          "揭示了视频微调与静态图像理解之间的权衡",
+          "提出了一种新的混合帧策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.16557",
+      "source": "huggingface",
+      "title": "BenchPreS: A Benchmark for Context-Aware Personalized Preference Selectivity of Persistent-Memory LLMs",
+      "authors": [
+        "Sangyeon Yoon",
+        "Sunkyoung Kim",
+        "Hyesoo Hong",
+        "Wonje Jeung",
+        "Yongil Kim",
+        "Wooseok Seo",
+        "Heuiyeen Yeen",
+        "Albert No"
+      ],
+      "abstract": "Large language models (LLMs) increasingly store user preferences in persistent memory to support personalization across interactions. However, in third-party communication settings governed by social and institutional norms, some user preferences may be inappropriate to apply. We introduce BenchPreS, which evaluates whether memory-based user preferences are appropriately applied or suppressed across communication contexts. Using two complementary metrics, Misapplication Rate (MR) and Appropriate Application Rate (AAR), we find even frontier LLMs struggle to apply preferences in a context-sensitive manner. Models with stronger preference adherence exhibit higher rates of over-application, and neither reasoning capability nor prompt-based defenses fully resolve this issue. These results suggest current LLMs treat personalized preferences as globally enforceable rules rather than as context-dependent normative signals.",
+      "published_date": "2026-03-17T14:19:05.000Z",
+      "url": "https://arxiv.org/abs/2603.16557",
+      "pdf_url": "https://arxiv.org/pdf/2603.16557",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16557",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": {
+        "chinese_title": "BenchPreS：持久内存LLMs上下文感知个性化偏好选择基准",
+        "chinese_summary": "BenchPreS 评估 LLMs 在不同上下文中的偏好应用是否适当。",
+        "pain_point": "现有 LLMs 在上下文感知的偏好应用上存在不足。",
+        "core_value": "引入 BenchPreS 以量化 LLMs 的偏好应用准确性。",
+        "technical_architecture": "使用 Misapplication Rate 和 Appropriate Application Rate 作为评估指标。",
+        "quantitative_results": "前沿 LLMs 在上下文感知偏好应用上表现不佳。",
+        "competitors": "暂无对比信息",
+        "limitations": "当前 LLMs 将个性化偏好视为全局规则。",
+        "key_contributions": [
+          "提出 BenchPreS 评估 LLMs 的偏好应用",
+          "量化 LLMs 在不同上下文中的偏好应用准确性"
+        ],
+        "application_scenarios": [
+          "第三方通信场景",
+          "社交和机构规范下的偏好应用"
+        ],
+        "technical_highlights": [
+          "使用 Misapplication Rate 和 Appropriate Application Rate",
+          "揭示 LLMs 在偏好应用上的局限性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

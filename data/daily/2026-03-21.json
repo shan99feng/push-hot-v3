@@ -1,0 +1,526 @@
+{
+  "date": "2026-03-21",
+  "generated_at": "2026-03-21T23:27:36.918497+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2603.19235v1",
+      "source": "arxiv",
+      "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+      "authors": [
+        "Xianjin Wu",
+        "Dingkang Liang",
+        "Tianrui Feng",
+        "Kui Xia",
+        "Yumeng Zhang",
+        "Xiaofan Li",
+        "Xiao Tan",
+        "Xiang Bai"
+      ],
+      "abstract": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
+      "published_date": "2026-03-19T17:59:58Z",
+      "url": "https://arxiv.org/abs/2603.19235v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19235v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "生成模型了解空间：释放隐含的3D先验以增强场景理解",
+        "chinese_summary": "通过利用大规模视频生成模型中的隐含空间先验，增强多模态大语言模型的几何感知能力。",
+        "pain_point": "现有方法依赖于稀缺的3D数据和复杂的几何结构，导致几何推理和物理动态能力不足。",
+        "core_value": "通过隐含的3D结构先验增强多模态大语言模型的几何感知能力，无需显式的3D监督。",
+        "technical_architecture": "利用预训练的视频扩散模型作为潜空间模拟器，通过时空特征提取和语义表示的自适应门控融合机制增强模型。",
+        "quantitative_results": "在3D场景理解、空间推理和体态操作基准测试中，方法优于现有最先进的方法。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可以探索更多复杂的3D场景和更广泛的语义理解。",
+        "key_contributions": [
+          "提出利用大规模视频生成模型中的隐含3D结构先验",
+          "引入VEGA-3D框架，增强多模态大语言模型的几何感知能力",
+          "无需显式的3D监督，通过时空特征提取和语义表示的融合机制实现"
+        ],
+        "application_scenarios": [
+          "3D场景理解",
+          "空间推理",
+          "体态操作"
+        ],
+        "technical_highlights": [
+          "利用预训练的视频扩散模型作为潜空间模拟器",
+          "时空特征提取和语义表示的自适应门控融合机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19234v1",
+      "source": "arxiv",
+      "title": "Matryoshka Gaussian Splatting",
+      "authors": [
+        "Zhilin Guo",
+        "Boqiao Zhang",
+        "Hakan Aktas",
+        "Kyle Fogarty",
+        "Jeffrey Hu",
+        "Nursena Koprucu Aslan",
+        "Wenzhao Li",
+        "Canberk Baykal",
+        "Albert Miao",
+        "Josef Bengtson",
+        "Chenliang Zhou",
+        "Weihao Xia",
+        "Cristina Nader Vasconcelos. Cengiz Oztireli"
+      ],
+      "abstract": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
+      "published_date": "2026-03-19T17:59:56Z",
+      "url": "https://arxiv.org/abs/2603.19234v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19234v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Matryoshka 高斯点云渲染",
+        "chinese_summary": "MGS 提供了一种无需牺牲全容量渲染质量即可实现连续层级细节调整的方法。",
+        "pain_point": "现有离散层级细节方法暴露的操作点有限，而连续方法在全容量下质量下降明显。",
+        "core_value": "MGS 在保持全容量渲染质量的同时实现了连续层级细节调整。",
+        "technical_architecture": "通过学习单个有序的高斯集合，MGS 实现了连续层级细节调整。",
+        "quantitative_results": "MGS 在四个基准和六个基线中展示了与全容量性能相当的渲染质量。",
+        "competitors": "对比了现有的离散和连续层级细节方法。",
+        "limitations": "未来工作可能涉及更复杂场景下的性能优化。",
+        "key_contributions": [
+          "提出了连续层级细节调整的训练框架 MGS",
+          "在保持全容量渲染质量的同时实现了连续调整"
+        ],
+        "application_scenarios": [
+          "3D 场景渲染",
+          "虚拟现实和增强现实应用"
+        ],
+        "technical_highlights": [
+          "仅需两次前向传播",
+          "无需架构修改"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19232v1",
+      "source": "arxiv",
+      "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
+      "authors": [
+        "Yuqing Wang",
+        "Chuofan Ma",
+        "Zhijie Lin",
+        "Yao Teng",
+        "Lijun Yu",
+        "Shuai Wang",
+        "Jiaming Han",
+        "Jiashi Feng",
+        "Yi Jiang",
+        "Xihui Liu"
+      ],
+      "abstract": "Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at $T$ regardless of feature dimensionality, where $T \\ll hwd$. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.",
+      "published_date": "2026-03-19T17:59:55Z",
+      "url": "https://arxiv.org/abs/2603.19232v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19232v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "高维表示令牌上的离散视觉生成：立方体离散扩散",
+        "chinese_summary": "CubiD 是首个用于高维表示的离散生成模型，实现高维度下的离散视觉生成。",
+        "pain_point": "现有离散生成方法局限于低维度，无法充分表达语义信息。",
+        "core_value": "CubiD 能够在高维度下进行离散生成，提升语义表达能力。",
+        "technical_architecture": "CubiD 通过细粒度掩码和预测学习高维度离散表示。",
+        "quantitative_results": "在 ImageNet-256 上，CubiD 达到最佳离散生成效果，参数量从 900M 增至 3.7B 时表现良好。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提出 CubiD 模型",
+          "实现高维离散生成"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "多模态理解"
+        ],
+        "technical_highlights": [
+          "固定生成步数",
+          "跨位置学习丰富关联"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19231v1",
+      "source": "arxiv",
+      "title": "MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction",
+      "authors": [
+        "Haitian Li",
+        "Haozhe Xie",
+        "Junxiang Xu",
+        "Beichen Wen",
+        "Fangzhou Hong",
+        "Ziwei Liu"
+      ],
+      "abstract": "Reconstructing articulated 3D objects from a single image requires jointly inferring object geometry, part structure, and motion parameters from limited visual evidence. A key difficulty lies in the entanglement between motion cues and object structure, which makes direct articulation regression unstable. Existing methods address this challenge through multi-view supervision, retrieval-based assembly, or auxiliary video generation, often sacrificing scalability or efficiency. We present MonoArt, a unified framework grounded in progressive structural reasoning. Rather than predicting articulation directly from image features, MonoArt progressively transforms visual observations into canonical geometry, structured part representations, and motion-aware embeddings within a single architecture. This structured reasoning process enables stable and interpretable articulation inference without external motion templates or multi-stage pipelines. Extensive experiments on PartNet-Mobility demonstrate that OM achieves state-of-the-art performance in both reconstruction accuracy and inference speed. The framework further generalizes to robotic manipulation and articulated scene reconstruction.",
+      "published_date": "2026-03-19T17:59:52Z",
+      "url": "https://arxiv.org/abs/2603.19231v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19231v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "MonoArt: 单目 articulated 3D 重建的渐进结构推理",
+        "chinese_summary": "MonoArt 通过渐进结构推理实现了 articulated 3D 重建的稳定性和高效性。",
+        "pain_point": "单目图像中 articulated 对象的 3D 重建面临结构和运动参数的纠缠问题。",
+        "core_value": "MonoArt 提供了一种统一框架，无需外部运动模板或多阶段管道即可实现稳定和可解释的articulation 推理。",
+        "technical_architecture": "MonoArt 通过将视觉观察逐步转化为标准几何、结构部件表示和运动感知嵌入来实现结构推理。",
+        "quantitative_results": "在 PartNet-Mobility 上，MonoArt 在重建准确性和推理速度方面达到了最先进的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更复杂的场景和对象。",
+        "key_contributions": [
+          "提出了统一的渐进结构推理框架",
+          "无需外部运动模板即可实现稳定推理",
+          "在重建准确性和速度上达到先进水平"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "articulated 场景重建"
+        ],
+        "technical_highlights": [
+          "单目图像下的 articulated 3D 重建",
+          "渐进结构推理过程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19229v1",
+      "source": "arxiv",
+      "title": "NavTrust: Benchmarking Trustworthiness for Embodied Navigation",
+      "authors": [
+        "Huaide Jiang",
+        "Yash Chaudhary",
+        "Yuping Wang",
+        "Zehao Wang",
+        "Raghav Sharma",
+        "Manan Mehta",
+        "Yang Zhou",
+        "Lichao Sun",
+        "Zhiwen Fan",
+        "Zhengzhong Tu",
+        "Jiachen Li"
+      ],
+      "abstract": "There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input modalities, including RGB, depth, and instructions, in realistic scenarios and evaluates their impact on navigation performance. To our best knowledge, NavTrust is the first benchmark that exposes embodied navigation agents to diverse RGB-Depth corruptions and instruction variations in a unified framework. Our extensive evaluation of seven state-of-the-art approaches reveals substantial performance degradation under realistic corruptions, which highlights critical robustness gaps and provides a roadmap toward more trustworthy embodied navigation systems. Furthermore, we systematically evaluate four distinct mitigation strategies to enhance robustness against RGB-Depth and instructions corruptions. Our base models include Uni-NaVid and ETPNav. We deployed them on a real mobile robot and observed improved robustness to corruptions. The project website is: https://navtrust.github.io.",
+      "published_date": "2026-03-19T17:59:51Z",
+      "url": "https://arxiv.org/abs/2603.19229v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19229v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "NavTrust: 评估实体导航可信度基准",
+        "chinese_summary": "NavTrust 是首个在统一框架下评估 RGB-Depth 腐蚀和指令变异对实体导航影响的基准",
+        "pain_point": "现有工作主要在理想条件下评估模型性能，忽视了真实场景中的潜在腐蚀",
+        "core_value": "NavTrust 提供了评估和增强实体导航系统鲁棒性的方法",
+        "technical_architecture": "NavTrust 通过系统地在现实场景中腐蚀输入模态来评估导航性能",
+        "quantitative_results": "七种最先进的方法在现实腐蚀下的性能显著下降",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究更多类型的腐蚀和更复杂的导航任务",
+        "key_contributions": [
+          "提出了首个统一的实体导航可信度基准",
+          "评估了多种腐蚀对导航性能的影响",
+          "提出了增强鲁棒性的策略"
+        ],
+        "application_scenarios": [
+          "实体导航系统评估",
+          "增强实体导航系统的鲁棒性"
+        ],
+        "technical_highlights": [
+          "在统一框架下评估多种腐蚀",
+          "提供了增强实体导航系统鲁棒性的方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19227v1",
+      "source": "arxiv",
+      "title": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer",
+      "authors": [
+        "Chenyang Gu",
+        "Mingyuan Zhang",
+        "Haozhe Xie",
+        "Zhongang Cai",
+        "Lei Yang",
+        "Ziwei Liu"
+      ],
+      "abstract": "Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples semantic abstraction from fine-grained reconstruction by delegating motion recovery to a diffusion decoder, enabling compact single-layer tokens while preserving motion fidelity. For kinematic conditions, coarse constraints guide token generation during planning, while fine-grained constraints are enforced during control through diffusion-based optimization. This design prevents kinematic details from disrupting semantic token planning. On HumanML3D, our method significantly improves controllability and fidelity over MaskControl while using only one-sixth of the tokens, reducing trajectory error from 0.72 cm to 0.08 cm and FID from 0.083 to 0.029. Unlike prior methods that degrade under stronger kinematic constraints, ours improves fidelity, reducing FID from 0.033 to 0.014.",
+      "published_date": "2026-03-19T17:59:51Z",
+      "url": "https://arxiv.org/abs/2603.19227v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19227v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "结合语义和运动条件的基于扩散的离散运动分词器",
+        "chinese_summary": "提出了一种三阶段框架，结合连续扩散模型和离散标记生成器的优点，显著提高可控性和保真度。",
+        "pain_point": "现有方法在处理语义和运动条件时存在局限性。",
+        "core_value": "通过MoTok实现语义抽象和细粒度重建的解耦，提高运动生成的效率和质量。",
+        "technical_architecture": "提出MoTok，一种基于扩散的离散运动分词器，用于三阶段框架中的条件特征提取、离散标记生成和运动合成。",
+        "quantitative_results": "在HumanML3D数据集上，相比MaskControl，使用六分之一的标记，轨迹误差从0.72 cm降至0.08 cm，FID从0.083降至0.029。",
+        "competitors": "与MaskControl等方法对比，性能更优。",
+        "limitations": "未来可探索更多应用场景。",
+        "key_contributions": [
+          "提出MoTok，实现语义和运动条件的解耦",
+          "三阶段框架结合连续扩散模型和离散标记生成器",
+          "显著提高运动生成的可控性和保真度"
+        ],
+        "application_scenarios": [
+          "三维人体动作生成",
+          "虚拟现实中的角色动画"
+        ],
+        "technical_highlights": [
+          "MoTok实现高效运动分词",
+          "细粒度约束优化运动合成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19228v1",
+      "source": "arxiv",
+      "title": "SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing",
+      "authors": [
+        "Xinyao Zhang",
+        "Wenkai Dong",
+        "Yuxin Song",
+        "Bo Fang",
+        "Qi Zhang",
+        "Jing Wang",
+        "Fan Chen",
+        "Hui Zhang",
+        "Haocheng Feng",
+        "Yu Lu",
+        "Hang Zhou",
+        "Chun Yuan",
+        "Jingdong Wang"
+      ],
+      "abstract": "Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editing into semantic anchoring and motion modeling. First, we introduce Semantic Anchoring, which establishes a reliable visual anchor by jointly predicting semantic tokens and video latents at sparse anchor frames, enabling purely instruction-aware structural planning. Second, Motion Alignment pre-trains the same backbone on motion-centric video restoration pretext tasks (cube inpainting, speed perturbation, and tube shuffle), enabling the model to internalize temporal dynamics directly from raw videos. SAMA is optimized with a two-stage pipeline: a factorized pre-training stage that learns inherent semantic-motion representations without paired video-instruction editing data, followed by supervised fine-tuning on paired editing data. Remarkably, the factorized pre-training alone already yields strong zero-shot video editing ability, validating the proposed factorization. SAMA achieves state-of-the-art performance among open-source models and is competitive with leading commercial systems (e.g., Kling-Omni). Code, models, and datasets will be released.",
+      "published_date": "2026-03-19T17:59:51Z",
+      "url": "https://arxiv.org/abs/2603.19228v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19228v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SAMA：因子化的语义锚定与运动对齐的指令指导视频编辑",
+        "chinese_summary": "提出了SAMA框架，通过语义锚定和运动对齐实现精确的语义修改和忠实的运动保留。",
+        "pain_point": "现有模型难以同时实现精确的语义修改和忠实的运动保留。",
+        "core_value": "通过因子化的预训练和指令感知的结构规划，提升了模型的鲁棒性和泛化能力。",
+        "technical_architecture": "将视频编辑分解为语义锚定和运动建模，分别进行预训练。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上进行测试。",
+        "key_contributions": [
+          "提出了语义锚定和运动对齐的框架",
+          "通过因子化预训练提升模型性能",
+          "实现了指令感知的结构规划"
+        ],
+        "application_scenarios": [
+          "视频编辑",
+          "视频修复"
+        ],
+        "technical_highlights": [
+          "将视频编辑任务分解为语义和运动两个部分",
+          "通过预训练学习时空动态"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19226v1",
+      "source": "arxiv",
+      "title": "Under One Sun: Multi-Object Generative Perception of Materials and Illumination",
+      "authors": [
+        "Nobuo Yoshii",
+        "Xinran Nicole Han",
+        "Ryo Kawahara",
+        "Todd Zickler",
+        "Ko Nishino"
+      ],
+      "abstract": "We introduce Multi-Object Generative Perception (MultiGP), a generative inverse rendering method for stochastic sampling of all radiometric constituents -- reflectance, texture, and illumination -- underlying object appearance from a single image. Our key idea to solve this inherently ambiguous radiometric disentanglement is to leverage the fact that while their texture and reflectance may differ, objects in the same scene are all lit by the same illumination. MultiGP exploits this consensus to produce samples of reflectance, texture, and illumination from a single image of known shapes based on four key technical contributions: a cascaded end-to-end architecture that combines image-space and angular-space disentanglement; Coordinated Guidance for diffusion convergence to a single consistent illumination estimate; Axial Attention applied to facilitate ``cross-talk'' between objects of different reflectance; and a Texture Extraction ControlNet to preserve high-frequency texture details while ensuring decoupling from estimated lighting. Experimental results demonstrate that MultiGP effectively leverages the complementary spatial and frequency characteristics of multiple object appearances to recover individual texture and reflectance as well as the common illumination.",
+      "published_date": "2026-03-19T17:59:45Z",
+      "url": "https://arxiv.org/abs/2603.19226v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19226v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "同在阳光下：多对象生成感知材质与照明",
+        "chinese_summary": "通过单张图像生成材质、纹理和照明的样本。",
+        "pain_point": "现有方法难以从单张图像中分离出材质、纹理和照明。",
+        "core_value": "利用场景中所有物体共享同一照明的事实，有效分离材质、纹理和照明。",
+        "technical_architecture": "采用级联端到端架构，结合图像空间和角度空间的分离。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多复杂场景的应用。",
+        "key_contributions": [
+          "利用场景中所有物体共享同一照明的事实",
+          "采用级联端到端架构",
+          "应用轴向注意力以促进不同反射率物体之间的信息交流"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "Coordinated Guidance 协调引导",
+          "Axial Attention 轴向注意力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19225v1",
+      "source": "arxiv",
+      "title": "FinTradeBench: A Financial Reasoning Benchmark for LLMs",
+      "authors": [
+        "Yogesh Agrawal",
+        "Aniruddha Dutta",
+        "Md Mahadi Hasan",
+        "Santu Karmaker",
+        "Aritra Dutta"
+      ],
+      "abstract": "Real-world financial decision-making is a challenging problem that requires reasoning over heterogeneous signals, including company fundamentals derived from regulatory filings and trading signals computed from price dynamics. Recently, with the advancement of Large Language Models (LLMs), financial analysts have begun to use them for financial decision-making tasks. However, existing financial question answering benchmarks for testing these models primarily focus on company balance sheet data and rarely evaluate reasoning over how company stocks trade in the market or their interactions with fundamentals. To take advantage of the strengths of both approaches, we introduce FinTradeBench, a benchmark for evaluating financial reasoning that integrates company fundamentals and trading signals. FinTradeBench contains 1,400 questions grounded in NASDAQ-100 companies over a ten-year historical window. The benchmark is organized into three reasoning categories: fundamentals-focused, trading-signal-focused, and hybrid questions requiring cross-signal reasoning. To ensure reliability at scale, we adopt a calibration-then-scaling framework that combines expert seed questions, multi-model response generation, intra-model self-filtering, numerical auditing, and human-LLM judge alignment. We evaluate 14 LLMs under zero-shot prompting and retrieval-augmented settings and witness a clear performance gap. Retrieval substantially improves reasoning over textual fundamentals, but provides limited benefit for trading-signal reasoning. These findings highlight fundamental challenges in the numerical and time-series reasoning for current LLMs and motivate future research in financial intelligence.",
+      "published_date": "2026-03-19T17:59:41Z",
+      "url": "https://arxiv.org/abs/2603.19225v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19225v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CE",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "q-fin.CP"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "FinTradeBench：LLMs 的金融推理基准",
+        "chinese_summary": "引入 FinTradeBench，评估 LLMs 在结合公司基本面和交易信号方面的金融推理能力。",
+        "pain_point": "现有基准主要关注公司资产负债表数据，忽视了市场交易信号和基本面的互动。",
+        "core_value": "提供了一个新的基准，综合评估 LLMs 在金融推理中的表现。",
+        "technical_architecture": "采用专家种子问题和多模型校准扩展框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多实际应用验证。",
+        "key_contributions": [
+          "引入综合基准评估 LLMs 的金融推理能力",
+          "涵盖公司基本面和交易信号"
+        ],
+        "application_scenarios": [
+          "金融决策支持",
+          "自动化财务分析"
+        ],
+        "technical_highlights": [
+          "多模型校准扩展框架",
+          "涵盖十年历史数据"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2603.19224v1",
+      "source": "arxiv",
+      "title": "EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing",
+      "authors": [
+        "Yang Fu",
+        "Yike Zheng",
+        "Ziyun Dai",
+        "Henghui Ding"
+      ],
+      "abstract": "Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across varied environments for training and evaluation. To address this, we introduce VOR (Video Object Removal), a large-scale dataset that provides diverse paired videos, each consisting of one video where the target object is present with its effects and a counterpart where the object and effects are absent, with corresponding object masks. VOR contains 60K high-quality video pairs from captured and synthetic sources, covers five effects types, and spans a wide range of object categories as well as complex, dynamic multi-object scenes. Building on VOR, we propose EffectErase, an effect-aware video object removal method that treats video object insertion as the inverse auxiliary task within a reciprocal learning scheme. The model includes task-aware region guidance that focuses learning on affected areas and enables flexible task switching. Then, an insertion-removal consistency objective that encourages complementary behaviors and shared localization of effect regions and structural cues. Trained on VOR, EffectErase achieves superior performance in extensive experiments, delivering high-quality video object effect erasing across diverse scenarios.",
+      "published_date": "2026-03-19T17:59:22Z",
+      "url": "https://arxiv.org/abs/2603.19224v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19224v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "EffectErase: 联合视频对象去除与插入以实现高质量效果擦除",
+        "chinese_summary": "提出EffectErase方法，实现动态目标及其效果的去除和背景的无缝恢复。",
+        "pain_point": "现有方法难以去除视觉效果并合成连贯的背景。",
+        "core_value": "提出VOR数据集和EffectErase方法，解决效果去除和背景合成问题。",
+        "technical_architecture": "基于扩散模型的视频对象去除和插入方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多复杂场景的应用。",
+        "key_contributions": [
+          "提出VOR数据集",
+          "提出EffectErase方法",
+          "解决效果去除和背景合成问题"
+        ],
+        "application_scenarios": [
+          "视频编辑",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "大规模数据集支持",
+          "效果感知的方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

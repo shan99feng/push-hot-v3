@@ -1,0 +1,584 @@
+{
+  "date": "2026-03-24",
+  "generated_at": "2026-03-24T23:36:14.490199+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.22212",
+      "source": "huggingface",
+      "title": "Omni-WorldBench: Towards a Comprehensive Interaction-Centric Evaluation for World Models",
+      "authors": [
+        "Meiqi Wu",
+        "Zhixin Cai",
+        "Fufangchen Zhao",
+        "Xiaokun Feng",
+        "Rujing Dang",
+        "Bingze Song",
+        "Ruitian Tian",
+        "Jiashu Zhu",
+        "Jiachen Lei",
+        "Hao Dou",
+        "Jing Tang",
+        "Lei Sun",
+        "Jiahong Wu",
+        "Xiangxiang Chu",
+        "Zeming Liu",
+        "Kaiqi Huang"
+      ],
+      "abstract": "Video--based world models have emerged along two dominant paradigms: video generation and 3D reconstruction. However, existing evaluation benchmarks either focus narrowly on visual fidelity and text--video alignment for generative models, or rely on static 3D reconstruction metrics that fundamentally neglect temporal dynamics. We argue that the future of world modeling lies in 4D generation, which jointly models spatial structure and temporal evolution. In this paradigm, the core capability is interactive response: the ability to faithfully reflect how interaction actions drive state transitions across space and time. Yet no existing benchmark systematically evaluates this critical dimension. To address this gap, we propose Omni--WorldBench, a comprehensive benchmark specifically designed to evaluate the interactive response capabilities of world models in 4D settings. Omni--WorldBench comprises two key components: Omni--WorldSuite, a systematic prompt suite spanning diverse interaction levels and scene types; and Omni--Metrics, an agent-based evaluation framework that quantifies world modeling capabilities by measuring the causal impact of interaction actions on both final outcomes and intermediate state evolution trajectories. We conduct extensive evaluations of 18 representative world models across multiple paradigms. Our analysis reveals critical limitations of current world models in interactive response, providing actionable insights for future research. Omni-WorldBench will be publicly released to foster progress in interactive 4D world modeling.",
+      "published_date": "2026-03-23T17:10:29.000Z",
+      "url": "https://arxiv.org/abs/2603.22212",
+      "pdf_url": "https://arxiv.org/pdf/2603.22212",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.22212",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 107,
+      "hot_score": 1070,
+      "structured_summary": {
+        "chinese_title": "全方位世界模型基准：面向4D交互中心评估",
+        "chinese_summary": "提出全方位世界模型基准，评估4D设置中世界模型的交互响应能力。",
+        "pain_point": "现有基准忽视了4D生成中交互响应的关键维度。",
+        "core_value": "提供系统化的提示套件和基于代理的评估框架，全面评估交互响应能力。",
+        "technical_architecture": "设计了全方位世界套件和基于代理的评估框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对4D交互响应评估，未来可扩展至更多场景。",
+        "key_contributions": [
+          "提出全方位世界模型基准",
+          "设计系统化的提示套件",
+          "开发基于代理的评估框架"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "3D重建"
+        ],
+        "technical_highlights": [
+          "覆盖多样交互和场景类型",
+          "量化交互对最终结果的影响"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.21986",
+      "source": "huggingface",
+      "title": "Speed by Simplicity: A Single-Stream Architecture for Fast Audio-Video Generative Foundation Model",
+      "authors": [
+        "SII-GAIR",
+        "Sand. ai",
+        "Ethan Chern",
+        "Hansi Teng",
+        "Hanwen Sun",
+        "Hao Wang",
+        "Hong Pan",
+        "Hongyu Jia",
+        "Jiadi Su",
+        "Jin Li",
+        "Junjie Yu",
+        "Lijie Liu",
+        "Lingzhi Li",
+        "Lyumanshan Ye",
+        "Min Hu",
+        "Qiangang Wang",
+        "Quanwei Qi",
+        "Steffi Chern",
+        "Tao Bu",
+        "Taoran Wang",
+        "Teren Xu",
+        "Tianning Zhang",
+        "Tiantian Mi",
+        "Weixian Xu",
+        "Wenqiang Zhang",
+        "Wentai Zhang",
+        "Xianping Yi",
+        "Xiaojie Cai",
+        "Xiaoyang Kang",
+        "Yan Ma",
+        "Yixiu Liu",
+        "Yunbo Zhang",
+        "Yunpeng Huang",
+        "Yutong Lin",
+        "Zewei Tao",
+        "Zhaoliang Liu",
+        "Zheng Zhang",
+        "Zhiyao Cen",
+        "Zhixuan Yu",
+        "Zhongshu Wang",
+        "Zhulin Hu",
+        "Zijin Zhou",
+        "Zinan Guo",
+        "Yue Cao",
+        "Pengfei Liu"
+      ],
+      "abstract": "We present daVinci-MagiHuman, an open-source audio-video generative foundation model for human-centric generation. daVinci-MagiHuman jointly generates synchronized video and audio using a single-stream Transformer that processes text, video, and audio within a unified token sequence via self-attention only. This single-stream design avoids the complexity of multi-stream or cross-attention architectures while remaining easy to optimize with standard training and inference infrastructure. The model is particularly strong in human-centric scenarios, producing expressive facial performance, natural speech-expression coordination, realistic body motion, and precise audio-video synchronization. It supports multilingual spoken generation across Chinese (Mandarin and Cantonese), English, Japanese, Korean, German, and French. For efficient inference, we combine the single-stream backbone with model distillation, latent-space super-resolution, and a Turbo VAE decoder, enabling generation of a 5-second 256p video in 2 seconds on a single H100 GPU. In automatic evaluation, daVinci-MagiHuman achieves the highest visual quality and text alignment among leading open models, along with the lowest word error rate (14.60%) for speech intelligibility. In pairwise human evaluation, it achieves win rates of 80.0% against Ovi 1.1 and 60.9% against LTX 2.3 over 2000 comparisons. We open-source the complete model stack, including the base model, the distilled model, the super-resolution model, and the inference codebase.",
+      "published_date": "2026-03-23T13:49:06.000Z",
+      "url": "https://arxiv.org/abs/2603.21986",
+      "pdf_url": "https://arxiv.org/pdf/2603.21986",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.21986",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 88,
+      "hot_score": 880,
+      "structured_summary": {
+        "chinese_title": "简单即快：单流架构的音频视频生成基础模型",
+        "chinese_summary": "daVinci-MagiHuman通过单流Transformer生成同步的音频和视频。",
+        "pain_point": "多流或多注意力架构的复杂性。",
+        "core_value": "简化设计，易于优化，支持多语言生成。",
+        "technical_architecture": "单流Transformer处理文本、视频和音频。",
+        "quantitative_results": "在自动评估中，视觉质量和文本对齐最高。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来可能需要更多场景测试。",
+        "key_contributions": [
+          "单流设计简化架构",
+          "支持多语言生成",
+          "高效推理速度"
+        ],
+        "application_scenarios": [
+          "人像生成",
+          "多语言音频视频生成"
+        ],
+        "technical_highlights": [
+          "自注意力机制",
+          "模型蒸馏与超分辨率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.21065",
+      "source": "huggingface",
+      "title": "LongCat-Flash-Prover: Advancing Native Formal Reasoning via Agentic Tool-Integrated Reinforcement Learning",
+      "authors": [
+        "Jianing Wang",
+        "Jianfei Zhang",
+        "Qi Guo",
+        "Linsen Guo",
+        "Rumei Li",
+        "Chao Zhang",
+        "Chong Peng",
+        "Cunguang Wang",
+        "Dengchang Zhao",
+        "Jiarong Shi",
+        "Jingang Wang",
+        "Liulin Feng",
+        "Mengxia Shen",
+        "Qi Li",
+        "Shengnan An",
+        "Shun Wang",
+        "Wei Shi",
+        "Xiangyu Xi",
+        "Xiaoyu Li",
+        "Xuezhi Cao",
+        "Yi Lu",
+        "Yunke Zhao",
+        "Zhengyu Chen",
+        "Zhimin Lin",
+        "Wei Wang",
+        "Peng Pei",
+        "Xunliang Cai"
+      ],
+      "abstract": "We introduce LongCat-Flash-Prover, a flagship 560-billion-parameter open-source Mixture-of- Experts (MoE) model that advances Native Formal Reasoning in Lean4 through agentic tool-integrated reasoning (TIR). We decompose the native formal reasoning task into three independent formal capabilities, i.e., auto-formalization, sketching, and proving. To facilitate these capabilities, we propose a Hybrid-Experts Iteration Framework to expand high-quality task trajectories, including generating a formal statement based on a given informal problem, producing a whole-proof directly from the statement, or a lemma-style sketch. During agentic RL, we present a Hierarchical Importance Sampling Policy Optimization (HisPO) algorithm, which aims to stabilize the MoE model training on such long-horizon tasks. It employs a gradient masking strategy that accounts for the policy staleness and the inherent train-inference engine discrepancies at both sequence and token levels. Additionally, we also incorporate theorem consistency and legality detection mechanisms to eliminate reward hacking issues. Extensive evaluations show that our LongCat-Flash-Prover sets a new state-of-the-art for open-weights models in both auto-formalization and theorem proving. Demonstrating remarkable sample efficiency, it achieves a 97.1% pass rate on MiniF2F-Test using only 72 inference budget per problem. On more challenging benchmarks, it solves 70.8% of ProverBench and 41.5% of PutnamBench with no more than 220 attempts per problem, significantly outperforming existing open-weights baselines.",
+      "published_date": "2026-03-22T05:16:09.000Z",
+      "url": "https://arxiv.org/abs/2603.21065",
+      "pdf_url": "https://arxiv.org/pdf/2603.21065",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.21065",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 62,
+      "hot_score": 620,
+      "structured_summary": {
+        "chinese_title": "LongCat-Flash-Prover: 通过代理工具集成强化学习推进本体形式推理",
+        "chinese_summary": "提出了一种新的代理工具集成强化学习方法，显著提升了形式推理能力。",
+        "pain_point": "现有形式推理工具在处理复杂任务时表现不佳。",
+        "core_value": "通过代理工具集成强化学习，提高了形式推理的效率和准确性。",
+        "technical_architecture": "提出了一种混合专家迭代框架和层次重要采样策略。",
+        "quantitative_results": "在多个基准测试中，LongCat-Flash-Prover 显著优于现有模型。",
+        "competitors": "对比了与 Lean4 相关的现有形式推理工具。",
+        "limitations": "未来需要进一步研究以适应更广泛的推理任务。",
+        "key_contributions": [
+          "提出了一种新的混合专家迭代框架",
+          "设计了层次重要采样策略以稳定训练",
+          "实现了定理一致性检测机制"
+        ],
+        "application_scenarios": [
+          "形式化验证",
+          "自动定理证明"
+        ],
+        "technical_highlights": [
+          "代理工具集成强化学习",
+          "混合专家迭代框架",
+          "层次重要采样策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.16932",
+      "source": "huggingface",
+      "title": "Look Where It Matters: High-Resolution Crops Retrieval for Efficient VLMs",
+      "authors": [
+        "Nimrod Shabtay",
+        "Moshe Kimhi",
+        "Artem Spector",
+        "Sivan Haray",
+        "Ehud Rivlin",
+        "Chaim Baskin",
+        "Raja Giryes",
+        "Eli Schwartz"
+      ],
+      "abstract": "Vision-language models (VLMs) typically process images at a native high-resolution, forcing a trade-off between accuracy and computational efficiency: high-resolution inputs capture fine details but incur significant computational costs, while low-resolution inputs advocate for efficiency, they potentially miss critical visual information, like small text. We present AwaRes, a spatial-on-demand framework that resolves this accuracy-efficiency trade-off by operating on a low-resolution global view and using tool-calling to retrieve only high-resolution segments needed for a given query. We construct supervised data automatically: a judge compares low- vs.\\ high-resolution answers to label whether cropping is needed, and an oracle grounding model localizes the evidence for the correct answer, which we map to a discrete crop set to form multi-turn tool-use trajectories. We train our framework with cold-start SFT followed by multi-turn GRPO with a composite reward that combines semantic answer correctness with explicit crop-cost penalties. Project page: https://nimrodshabtay.github.io/AwaRes",
+      "published_date": "2026-03-14T10:11:32.000Z",
+      "url": "https://arxiv.org/abs/2603.16932",
+      "pdf_url": "https://arxiv.org/pdf/2603.16932",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.16932",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 56,
+      "hot_score": 560,
+      "structured_summary": {
+        "chinese_title": "关注关键区域：高效VLMs的高分辨率作物检索",
+        "chinese_summary": "提出AwaRes框架，通过低分辨率全局视图和高分辨率局部检索解决视觉语言模型的准确性和效率权衡。",
+        "pain_point": "高分辨率图像处理准确但效率低，低分辨率图像处理效率高但可能丢失关键信息。",
+        "core_value": "通过工具调用检索关键区域，平衡准确性和效率。",
+        "technical_architecture": "基于低分辨率全局视图和高分辨率局部检索的时空需求框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多实验验证。",
+        "key_contributions": [
+          "提出AwaRes框架解决准确性和效率权衡",
+          "自动构建监督数据集",
+          "采用冷启动SFT和多轮GRPO训练"
+        ],
+        "application_scenarios": [
+          "视觉语言模型高效检索",
+          "图像理解和生成任务"
+        ],
+        "technical_highlights": [
+          "时空需求框架",
+          "自动监督数据构建",
+          "多轮策略优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.20278",
+      "source": "huggingface",
+      "title": "OpenResearcher: A Fully Open Pipeline for Long-Horizon Deep Research Trajectory Synthesis",
+      "authors": [
+        "Zhuofeng Li",
+        "Dongfu Jiang",
+        "Xueguang Ma",
+        "Haoxiang Zhang",
+        "Ping Nie",
+        "Yuyu Zhang",
+        "Kai Zou",
+        "Jianwen Xie",
+        "Yu Zhang",
+        "Wenhu Chen"
+      ],
+      "abstract": "Training deep research agents requires long-horizon trajectories that interleave search, evidence aggregation, and multi-step reasoning. However, existing data collection pipelines typically rely on proprietary web APIs, making large-scale trajectory synthesis costly, unstable, and difficult to reproduce. We present OpenResearcher, a reproducible pipeline that decouples one-time corpus bootstrapping from multi-turn trajectory synthesis and executes the search-and-browse loop entirely offline using three explicit browser primitives: search, open, and find, over a 15M-document corpus. Using GPT-OSS-120B as the teacher model, we synthesize over 97K trajectories, including a substantial long-horizon tail with 100+ tool calls. Supervised fine-tuning a 30B-A3B backbone on these trajectories achieves 54.8\\% accuracy on BrowseComp-Plus, a +34.0 point improvement over the base model, while remaining competitive on BrowseComp, GAIA, and xbench-DeepSearch. Because the environment is offline and fully instrumented, it also enables controlled analysis, where our study reveals practical insights into deep research pipeline design, including data filtering strategies, agent configuration choices, and how retrieval success relates to final answer accuracy. We release the pipeline, synthesized trajectories, model checkpoints, and the offline search environment at https://github.com/TIGER-AI-Lab/OpenResearcher.",
+      "published_date": "2026-03-17T20:10:12.000Z",
+      "url": "https://arxiv.org/abs/2603.20278",
+      "pdf_url": "https://arxiv.org/pdf/2603.20278",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.20278",
+      "category": "llm",
+      "tags": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 50,
+      "hot_score": 500,
+      "structured_summary": {
+        "chinese_title": "OpenResearcher：一个全开源的长时深研轨迹合成管道",
+        "chinese_summary": "提出了一个可复现的管道，用于合成长时深研轨迹，显著提高了研究代理的训练效率。",
+        "pain_point": "现有数据收集管道依赖于专有API，导致大规模轨迹合成成本高、不稳定且难以复现。",
+        "core_value": "通过开源管道和离线执行搜索和浏览循环，显著提高了研究代理的训练效率。",
+        "technical_architecture": "使用三个显式浏览器原语（搜索、打开、查找）在15M文档库上执行搜索和浏览循环。",
+        "quantitative_results": "使用GPT-OSS-120B教师模型合成超过97K轨迹，精度提升34.0点。",
+        "competitors": "暂无对比信息",
+        "limitations": "环境为离线且完全仪器化，限制了在线交互能力。",
+        "key_contributions": [
+          "提出了一种可复现的长时深研轨迹合成管道",
+          "使用开源方法显著提高了研究代理的训练效率",
+          "展示了在离线环境中执行搜索和浏览循环的可能性"
+        ],
+        "application_scenarios": [
+          "深研代理的训练",
+          "大规模轨迹合成"
+        ],
+        "technical_highlights": [
+          "完全开源的管道",
+          "离线执行搜索和浏览循环"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.22285",
+      "source": "huggingface",
+      "title": "VideoDetective: Clue Hunting via both Extrinsic Query and Intrinsic Relevance for Long Video Understanding",
+      "authors": [
+        "Ruoliu Yang",
+        "Chu Wu",
+        "Caifeng Shan",
+        "Ran He",
+        "Chaoyou Fu"
+      ],
+      "abstract": "Long video understanding remains challenging for multimodal large language models (MLLMs) due to limited context windows, which necessitate identifying sparse query-relevant video segments. However, existing methods predominantly localize clues based solely on the query, overlooking the video's intrinsic structure and varying relevance across segments. To address this, we propose VideoDetective, a framework that integrates query-to-segment relevance and inter-segment affinity for effective clue hunting in long-video question answering. Specifically, we divide a video into various segments and represent them as a visual-temporal affinity graph built from visual similarity and temporal proximity. We then perform a Hypothesis-Verification-Refinement loop to estimate relevance scores of observed segments to the query and propagate them to unseen segments, yielding a global relevance distribution that guides the localization of the most critical segments for final answering with sparse observation. Experiments show our method consistently achieves substantial gains across a wide range of mainstream MLLMs on representative benchmarks, with accuracy improvements of up to 7.5% on VideoMME-long. Our code is available at https://videodetective.github.io/",
+      "published_date": "2026-03-23T17:59:51.000Z",
+      "url": "https://arxiv.org/abs/2603.22285",
+      "pdf_url": "https://arxiv.org/pdf/2603.22285",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.22285",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 45,
+      "hot_score": 450,
+      "structured_summary": {
+        "chinese_title": "VideoDetective：通过外在查询和内在相关性进行长视频理解中的线索搜索",
+        "chinese_summary": "VideoDetective 提出了一种结合查询到片段相关性和片段间亲和力的方法，以有效进行长视频问题回答中的线索搜索。",
+        "pain_point": "现有方法主要基于查询定位线索，忽视了视频的内在结构和片段间变化的相关性。",
+        "core_value": "通过结合查询相关性和片段亲和力，VideoDetective 能更准确地定位关键片段。",
+        "technical_architecture": "VideoDetective 使用视觉-时间亲和图和假设-验证-精炼循环来估计片段相关性。",
+        "quantitative_results": "VideoDetective 在主流 MLLMs 上实现了显著的准确率提升，最高达 7.5%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更多样化的查询类型。",
+        "key_contributions": [
+          "结合查询相关性和片段亲和力的方法",
+          "假设-验证-精炼循环机制"
+        ],
+        "application_scenarios": [
+          "长视频理解",
+          "视频问答"
+        ],
+        "technical_highlights": [
+          "视觉-时间亲和图表示",
+          "Hypothesis-Verification-Refinement 循环"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.22057",
+      "source": "huggingface",
+      "title": "SpatialBoost: Enhancing Visual Representation through Language-Guided Reasoning",
+      "authors": [
+        "Byungwoo Jeon",
+        "Dongyoung Kim",
+        "Huiwon Jang",
+        "Insoo Kim",
+        "Jinwoo Shin"
+      ],
+      "abstract": "Despite the remarkable success of large-scale pre-trained image representation models (i.e., vision encoders) across various vision tasks, they are predominantly trained on 2D image data and therefore often fail to capture 3D spatial relationships between objects and backgrounds in the real world, constraining their effectiveness in many downstream applications. To address this, we propose SpatialBoost, a scalable framework that enhances the spatial awareness of existing pre-trained vision encoders by injecting 3D spatial knowledge expressed in linguistic descriptions. The core idea involves converting dense 3D spatial information from 2D images into linguistic expressions, which is then used to inject such spatial knowledge into vision encoders through a Large Language Model (LLM). To this end, we adopt a multi-turn Chain-of-Thought (CoT) reasoning process that progressively incorporates dense spatial knowledge and builds hierarchical spatial understanding. To validate effectiveness, we adapt SpatialBoost to state-of-the-art vision encoders such as DINOv3, and evaluate its performance gains on a wide range of benchmarks requiring both 3D perception and general vision abilities. For instance, SpatialBoost improves DINOv3 performance from 55.9 to 59.7 mIoU on ADE20K, achieving state-of-the-art performance with 3.8% gain over the pre-trained DINOv3.",
+      "published_date": "2026-03-23T14:54:34.000Z",
+      "url": "https://arxiv.org/abs/2603.22057",
+      "pdf_url": "https://arxiv.org/pdf/2603.22057",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.22057",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 38,
+      "hot_score": 380,
+      "structured_summary": {
+        "chinese_title": "SpatialBoost：通过语言引导增强视觉表示",
+        "chinese_summary": "通过将3D空间知识注入预训练视觉编码器，提升其在3D感知和通用视觉任务中的性能。",
+        "pain_point": "现有预训练视觉模型难以捕捉真实世界中的3D空间关系。",
+        "core_value": "通过语言引导增强视觉模型的3D空间感知能力，提升其在多种下游任务中的表现。",
+        "technical_architecture": "采用多轮链式推理过程，将2D图像中的密集3D空间信息转化为语言表达注入视觉编码器。",
+        "quantitative_results": "在多种需要3D感知和通用视觉能力的基准测试中，SpatialBoost显著提升了模型性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定的视觉编码器上进行了验证。",
+        "key_contributions": [
+          "提出了一种将3D空间知识注入预训练视觉编码器的方法。",
+          "采用多轮链式推理逐步构建层次化的空间理解。",
+          "验证了方法在多种视觉任务中的有效性"
+        ],
+        "application_scenarios": [
+          "3D物体识别",
+          "场景理解"
+        ],
+        "technical_highlights": [
+          "利用语言模型将2D图像中的3D空间信息转化为语言表达。",
+          "采用多轮链式推理逐步构建层次化的空间理解"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.21872",
+      "source": "huggingface",
+      "title": "Manifold-Aware Exploration for Reinforcement Learning in Video Generation",
+      "authors": [
+        "Mingzhe Zheng",
+        "Weijie Kong",
+        "Yue Wu",
+        "Dengyang Jiang",
+        "Yue Ma",
+        "Xuanhua He",
+        "Bin Lin",
+        "Kaixiong Gong",
+        "Zhao Zhong",
+        "Liefeng Bo",
+        "Qifeng Chen",
+        "Harry Yang"
+      ],
+      "abstract": "Group Relative Policy Optimization (GRPO) methods for video generation like FlowGRPO remain far less reliable than their counterparts for language models and images. This gap arises because video generation has a complex solution space, and the ODE-to-SDE conversion used for exploration can inject excess noise, lowering rollout quality and making reward estimates less reliable, which destabilizes post-training alignment. To address this problem, we view the pre-trained model as defining a valid video data manifold and formulate the core problem as constraining exploration within the vicinity of this manifold, ensuring that rollout quality is preserved and reward estimates remain reliable. We propose SAGE-GRPO (Stable Alignment via Exploration), which applies constraints at both micro and macro levels. At the micro level, we derive a precise manifold-aware SDE with a logarithmic curvature correction and introduce a gradient norm equalizer to stabilize sampling and updates across timesteps. At the macro level, we use a dual trust region with a periodic moving anchor and stepwise constraints so that the trust region tracks checkpoints that are closer to the manifold and limits long-horizon drift. We evaluate SAGE-GRPO on HunyuanVideo1.5 using the original VideoAlign as the reward model and observe consistent gains over previous methods in VQ, MQ, TA, and visual metrics (CLIPScore, PickScore), demonstrating superior performance in both reward maximization and overall video quality. The code and visual gallery are available at https://dungeonmassster.github.io/SAGE-GRPO-Page/.",
+      "published_date": "2026-03-23T12:04:38.000Z",
+      "url": "https://arxiv.org/abs/2603.21872",
+      "pdf_url": "https://arxiv.org/pdf/2603.21872",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.21872",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "面向视频生成的流形感知探索强化学习",
+        "chinese_summary": "提出SAGE-GRPO方法，通过约束探索在流形附近进行，提高视频生成的稳定性和可靠性。",
+        "pain_point": "现有方法在视频生成中的探索不稳定，导致奖励估计不可靠。",
+        "core_value": "通过流形约束探索，提高视频生成的质量和奖励估计的可靠性。",
+        "technical_architecture": "微观和宏观层面的流形约束，结合精确的流形感知SDE和梯度范数均衡器。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了实验验证。",
+        "key_contributions": [
+          "提出了SAGE-GRPO方法",
+          "引入了流形感知的SDE和梯度范数均衡器",
+          "通过流形约束提高了探索的稳定性"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "强化学习"
+        ],
+        "technical_highlights": [
+          "流形感知的SDE",
+          "梯度范数均衡器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.21304",
+      "source": "huggingface",
+      "title": "F4Splat: Feed-Forward Predictive Densification for Feed-Forward 3D Gaussian Splatting",
+      "authors": [
+        "Injae Kim",
+        "Chaehyeon Kim",
+        "Minseong Bae",
+        "Minseok Joo",
+        "Hyunwoo J. Kim"
+      ],
+      "abstract": "Feed-forward 3D Gaussian Splatting methods enable single-pass reconstruction and real-time rendering. However, they typically adopt rigid pixel-to-Gaussian or voxel-to-Gaussian pipelines that uniformly allocate Gaussians, leading to redundant Gaussians across views. Moreover, they lack an effective mechanism to control the total number of Gaussians while maintaining reconstruction fidelity. To address these limitations, we present F4Splat, which performs Feed-Forward predictive densification for Feed-Forward 3D Gaussian Splatting, introducing a densification-score-guided allocation strategy that adaptively distributes Gaussians according to spatial complexity and multi-view overlap. Our model predicts per-region densification scores to estimate the required Gaussian density and allows explicit control over the final Gaussian budget without retraining. This spatially adaptive allocation reduces redundancy in simple regions and minimizes duplicate Gaussians across overlapping views, producing compact yet high-quality 3D representations. Extensive experiments demonstrate that our model achieves superior novel-view synthesis performance compared to prior uncalibrated feed-forward methods, while using significantly fewer Gaussians.",
+      "published_date": "2026-03-22T16:03:56.000Z",
+      "url": "https://arxiv.org/abs/2603.21304",
+      "pdf_url": "https://arxiv.org/pdf/2603.21304",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.21304",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "F4Splat: 前馈预测密集化用于前馈3D高斯点绘制",
+        "chinese_summary": "通过预测每个区域的密集化得分，F4Splat减少了冗余高斯分布，提高了3D重建质量。",
+        "pain_point": "现有方法在不同视图间存在冗余高斯分布，且难以控制高斯数量。",
+        "core_value": "通过预测每个区域的密集化得分，F4Splat实现了空间自适应分配，减少了冗余。",
+        "technical_architecture": "采用预测每个区域的密集化得分来估计所需的高斯密度。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多复杂场景。",
+        "key_contributions": [
+          "提出了预测每个区域的密集化得分的方法",
+          "实现了空间自适应的高斯分配",
+          "减少了冗余高斯分布，提高了3D重建质量"
+        ],
+        "application_scenarios": [
+          "实时渲染",
+          "单次通过重建"
+        ],
+        "technical_highlights": [
+          "引入了densification-score-guided分配策略",
+          "允许用户控制最终的高斯预算"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.21606",
+      "source": "huggingface",
+      "title": "mSFT: Addressing Dataset Mixtures Overfiting Heterogeneously in Multi-task SFT",
+      "authors": [
+        "Woosung Koh",
+        "Jeyoung Jeon",
+        "Youngjin Song",
+        "Yujin Cheon",
+        "Soowon Oh",
+        "Jaehyeong Choi",
+        "Se-Young Yun"
+      ],
+      "abstract": "Current language model training commonly applies multi-task Supervised Fine-Tuning (SFT) using a homogeneous compute budget across all sub-datasets. This approach is fundamentally sub-optimal: heterogeneous learning dynamics cause faster-learning tasks to overfit early while slower ones remain under-fitted. To address this, we introduce mSFT, an iterative, overfitting-aware search algorithm for multi-task data mixtures. mSFT trains the model on an active mixture, identifies and excludes the earliest overfitting sub-dataset, and reverts to that specific optimal checkpoint before continuing. Extensive evaluations demonstrate that mSFT consistently outperforms 4 baselines across 10 benchmarks and 6 base models. Further analysis confirms mSFT maintains robust gains across diverse dataset sizes, task granularities, and is insensitive to its single new hyperparameter (compute budget). Notably, at low compute budget, mSFT can improve performance while lowering training FLOPs. Ultimately, mSFT establishes a practical overfitting-aware algorithm for multi-task SFT that maximizes the potential of models across diverse data mixtures.",
+      "published_date": "2026-03-23T06:01:51.000Z",
+      "url": "https://arxiv.org/abs/2603.21606",
+      "pdf_url": "https://arxiv.org/pdf/2603.21606",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.21606",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "mSFT：多任务SFT中异质数据混合过拟合问题的解决方法",
+        "chinese_summary": "mSFT算法通过迭代排除过拟合子数据集，提高多任务SFT模型在异质数据混合中的性能。",
+        "pain_point": "当前多任务SFT方法在异质数据集上存在过拟合快、欠拟合慢的问题。",
+        "core_value": "mSFT算法能够有效解决多任务SFT中的过拟合问题，提升模型性能。",
+        "technical_architecture": "mSFT通过迭代训练和排除过拟合子数据集来优化模型。",
+        "quantitative_results": "mSFT在10个基准和6个基模型上优于4个基线。",
+        "competitors": "对比了4个基线方法。",
+        "limitations": "需要进一步研究不同场景下的适用性。",
+        "key_contributions": [
+          "提出了一种迭代排除过拟合子数据集的方法",
+          "在低计算预算下提高性能并降低训练FLOPs",
+          "适用于多种数据集和任务粒度"
+        ],
+        "application_scenarios": [
+          "多任务学习场景",
+          "异质数据混合场景"
+        ],
+        "technical_highlights": [
+          "引入了过拟合感知的搜索算法",
+          "能够自适应调整数据混合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+{
+  "date": "2026-03-25",
+  "generated_at": "2026-03-25T23:36:51.743704+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.22458",
+      "source": "huggingface",
+      "title": "MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding",
+      "authors": [
+        "Hejun Dong",
+        "Junbo Niu",
+        "Bin Wang",
+        "Weijun Zeng",
+        "Wentao Zhang",
+        "Conghui He"
+      ],
+      "abstract": "Optical character recognition (OCR) has evolved from line-level transcription to structured document parsing, requiring models to recover long-form sequences containing layout, tables, and formulas. Despite recent advances in vision-language models, most existing systems rely on autoregressive decoding, which introduces sequential latency and amplifies error propagation in long documents. In this work, we revisit document OCR from an inverse rendering perspective, arguing that left-to-right causal generation is an artifact of serialization rather than an intrinsic property of the task. Motivated by this insight, we propose MinerU-Diffusion, a unified diffusion-based framework that replaces autoregressive sequential decoding with parallel diffusion denoising under visual conditioning. MinerU-Diffusion employs a block-wise diffusion decoder and an uncertainty-driven curriculum learning strategy to enable stable training and efficient long-sequence inference. Extensive experiments demonstrate that MinerU-Diffusion consistently improves robustness while achieving up to 3.2x faster decoding compared to autoregressive baselines. Evaluations on the proposed Semantic Shuffle benchmark further confirm its reduced dependence on linguistic priors and stronger visual OCR capability.",
+      "published_date": "2026-03-23T18:25:17.000Z",
+      "url": "https://arxiv.org/abs/2603.22458",
+      "pdf_url": "https://arxiv.org/pdf/2603.22458",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.22458",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 110,
+      "hot_score": 1100,
+      "structured_summary": {
+        "chinese_title": "MinerU-Diffusion: 重新思考文档OCR为逆渲染的扩散解码",
+        "chinese_summary": "提出MinerU-Diffusion框架，通过视觉条件下的并行扩散去噪替代自回归序列解码，提升OCR模型的鲁棒性和解码速度。",
+        "pain_point": "现有OCR系统依赖自回归解码，导致长文档解码延迟和错误传播。",
+        "core_value": "通过逆渲染视角和扩散解码，提升OCR模型的鲁棒性和解码效率。",
+        "technical_architecture": "采用块状扩散解码器和不确定性驱动的课程学习策略。",
+        "quantitative_results": "相比自回归基线，解码速度提升3.2倍。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更复杂的文档结构处理。",
+        "key_contributions": [
+          "提出逆渲染视角下的OCR模型",
+          "采用扩散解码替代自回归解码",
+          "引入不确定性驱动的课程学习策略"
+        ],
+        "application_scenarios": [
+          "文档解析",
+          "表格和公式识别"
+        ],
+        "technical_highlights": [
+          "并行扩散去噪",
+          "不确定性驱动的课程学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.23497",
+      "source": "huggingface",
+      "title": "WildWorld: A Large-Scale Dataset for Dynamic World Modeling with Actions and Explicit State toward Generative ARPG",
+      "authors": [
+        "Zhen Li",
+        "Zian Meng",
+        "Shuwei Shi",
+        "Wenshuo Peng",
+        "Yuwei Wu",
+        "Bo Zheng",
+        "Chuanhao Li",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Dynamical systems theory and reinforcement learning view world evolution as latent-state dynamics driven by actions, with visual observations providing partial information about the state. Recent video world models attempt to learn this action-conditioned dynamics from data. However, existing datasets rarely match the requirement: they typically lack diverse and semantically meaningful action spaces, and actions are directly tied to visual observations rather than mediated by underlying states. As a result, actions are often entangled with pixel-level changes, making it difficult for models to learn structured world dynamics and maintain consistent evolution over long horizons. In this paper, we propose WildWorld, a large-scale action-conditioned world modeling dataset with explicit state annotations, automatically collected from a photorealistic AAA action role-playing game (Monster Hunter: Wilds). WildWorld contains over 108 million frames and features more than 450 actions, including movement, attacks, and skill casting, together with synchronized per-frame annotations of character skeletons, world states, camera poses, and depth maps. We further derive WildBench to evaluate models through Action Following and State Alignment. Extensive experiments reveal persistent challenges in modeling semantically rich actions and maintaining long-horizon state consistency, highlighting the need for state-aware video generation. The project page is https://shandaai.github.io/wildworld-project/.",
+      "published_date": "2026-03-24T17:58:25.000Z",
+      "url": "https://arxiv.org/abs/2603.23497",
+      "pdf_url": "https://arxiv.org/pdf/2603.23497",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.23497",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 66,
+      "hot_score": 660,
+      "structured_summary": {
+        "chinese_title": "WildWorld: 动态世界建模的大规模数据集，包含动作和显式状态，面向生成型ARPG",
+        "chinese_summary": "提出了WildWorld数据集，包含超过108百万帧和450种动作，用于动态世界建模。",
+        "pain_point": "现有数据集缺乏多样性和语义动作空间，导致难以学习结构化的世界动态。",
+        "core_value": "提供了显式状态标注的动作条件世界模型数据集，有助于学习长期一致的世界演化。",
+        "technical_architecture": "从真实感AAA动作角色扮演游戏收集数据，包含动作、状态、相机姿态等同步标注。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集依赖特定游戏，可能限制其普适性。",
+        "key_contributions": [
+          "提出了WildWorld数据集",
+          "包含显式状态标注的动作",
+          "适用于动态世界建模"
+        ],
+        "application_scenarios": [
+          "动作角色扮演游戏",
+          "增强现实应用"
+        ],
+        "technical_highlights": [
+          "大规模数据集",
+          "动作和显式状态同步标注"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.23483",
+      "source": "huggingface",
+      "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
+      "authors": [
+        "Haoyu Huang",
+        "Jinfa Huang",
+        "Zhongwei Wan",
+        "Xiawu Zheng",
+        "Rongrong Ji",
+        "Jiebo Luo"
+      ],
+      "abstract": "Agentic multimodal large language models (MLLMs) (e.g., OpenAI o3 and Gemini Agentic Vision) achieve remarkable reasoning capabilities through iterative visual tool invocation. However, the cascaded perception, reasoning, and tool-calling loops introduce significant sequential overhead. This overhead, termed agentic depth, incurs prohibitive latency and seriously limits system-level concurrency. To this end, we propose SpecEyes, an agentic-level speculative acceleration framework that breaks this sequential bottleneck. Our key insight is that a lightweight, tool-free MLLM can serve as a speculative planner to predict the execution trajectory, enabling early termination of expensive tool chains without sacrificing accuracy. To regulate this speculative planning, we introduce a cognitive gating mechanism based on answer separability, which quantifies the model's confidence for self-verification without requiring oracle labels. Furthermore, we design a heterogeneous parallel funnel that exploits the stateless concurrency of the small model to mask the stateful serial execution of the large model, maximizing system throughput. Extensive experiments on V* Bench, HR-Bench, and POPE demonstrate that SpecEyes achieves 1.1-3.35x speedup over the agentic baseline while preserving or even improving accuracy (up to +6.7%), thereby boosting serving throughput under concurrent workloads.",
+      "published_date": "2026-03-24T17:45:47.000Z",
+      "url": "https://arxiv.org/abs/2603.23483",
+      "pdf_url": "https://arxiv.org/pdf/2603.23483",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.23483",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": {
+        "chinese_title": "SpecEyes: 加速具身多模态大语言模型的推测感知与规划",
+        "chinese_summary": "通过推测感知与规划，SpecEyes 提高了具身多模态大语言模型的执行效率。",
+        "pain_point": "具身多模态大语言模型的迭代感知、推理和工具调用循环导致了显著的顺序延迟。",
+        "core_value": "SpecEyes 通过推测规划和认知门控机制，实现了早期终止昂贵的工具链，提高了系统吞吐量。",
+        "technical_architecture": "SpecEyes 采用了一个轻量级的工具免费模型作为推测规划器，利用小模型的无状态并行性来掩盖大模型的状态性顺序执行。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更复杂的任务场景。",
+        "key_contributions": [
+          "提出了推测感知与规划的框架",
+          "设计了基于答案可分性的认知门控机制",
+          "实现了小模型的无状态并行与大模型的状态性顺序执行的结合"
+        ],
+        "application_scenarios": [
+          "具身多模态大语言模型的推理与执行",
+          "视觉工具调用的加速"
+        ],
+        "technical_highlights": [
+          "轻量级工具免费模型作为推测规划器",
+          "认知门控机制实现自验证",
+          "无状态并行与状态性顺序执行结合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.22386",
+      "source": "huggingface",
+      "title": "From Static Templates to Dynamic Runtime Graphs: A Survey of Workflow Optimization for LLM Agents",
+      "authors": [
+        "Ling Yue",
+        "Kushal Raj Bhandari",
+        "Ching-Yun Ko",
+        "Dhaval Patel",
+        "Shuxin Lin",
+        "Nianjun Zhou",
+        "Jianxi Gao",
+        "Pin-Yu Chen",
+        "Shaowu Pan"
+      ],
+      "abstract": "Large language model (LLM)-based systems are becoming increasingly popular for solving tasks by constructing executable workflows that interleave LLM calls, information retrieval, tool use, code execution, memory updates, and verification. This survey reviews recent methods for designing and optimizing such workflows, which we treat as agentic computation graphs (ACGs). We organize the literature based on when workflow structure is determined, where structure refers to which components or agents are present, how they depend on each other, and how information flows between them. This lens distinguishes static methods, which fix a reusable workflow scaffold before deployment, from dynamic methods, which select, generate, or revise the workflow for a particular run before or during execution. We further organize prior work along three dimensions: when structure is determined, what part of the workflow is optimized, and which evaluation signals guide optimization (e.g., task metrics, verifier signals, preferences, or trace-derived feedback). We also distinguish reusable workflow templates, run-specific realized graphs, and execution traces, separating reusable design choices from the structures actually deployed in a given run and from realized runtime behavior. Finally, we outline a structure-aware evaluation perspective that complements downstream task metrics with graph-level properties, execution cost, robustness, and structural variation across inputs. Our goal is to provide a clear vocabulary, a unified framework for positioning new methods, a more comparable view of existing body of literature, and a more reproducible evaluation standard for future work in workflow optimizations for LLM agents.",
+      "published_date": "2026-03-23T17:42:59.000Z",
+      "url": "https://arxiv.org/abs/2603.22386",
+      "pdf_url": "https://arxiv.org/pdf/2603.22386",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.22386",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 41,
+      "hot_score": 410,
+      "structured_summary": {
+        "chinese_title": "从静态模板到动态运行图：LLM 代理工作流优化综述",
+        "chinese_summary": "本文综述了设计和优化基于 LLM 的工作流的方法，将其视为代理计算图。",
+        "pain_point": "现有方法在工作流结构确定和优化方面存在局限性。",
+        "core_value": "区分静态和动态方法，提供优化工作流的多维度分类。",
+        "technical_architecture": "代理计算图（ACGs）作为工作流优化的基础架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索更多优化信号和应用场景。",
+        "key_contributions": [
+          "提出代理计算图的概念",
+          "区分静态和动态方法",
+          "提供多维度分类"
+        ],
+        "application_scenarios": [
+          "LLM 代理任务执行",
+          "复杂工作流优化"
+        ],
+        "technical_highlights": [
+          "多维度分类方法",
+          "动态工作流优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.20422",
+      "source": "huggingface",
+      "title": "PEARL: Personalized Streaming Video Understanding Model",
+      "authors": [
+        "Yuanhong Zheng",
+        "Ruichuan An",
+        "Xiaopeng Lin",
+        "Yuxing Liu",
+        "Sihan Yang",
+        "Huanyu Zhang",
+        "Haodong Li",
+        "Qintong Zhang",
+        "Renrui Zhang",
+        "Guopeng Li",
+        "Yifan Zhang",
+        "Yuheng Li",
+        "Wentao Zhang"
+      ],
+      "abstract": "Human cognition of new concepts is inherently a streaming process: we continuously recognize new objects or identities and update our memories over time. However, current multimodal personalization methods are largely limited to static images or offline videos. This disconnects continuous visual input from instant real-world feedback, limiting their ability to provide the real-time, interactive personalized responses essential for future AI assistants. To bridge this gap, we first propose and formally define the novel task of Personalized Streaming Video Understanding (PSVU). To facilitate research in this new direction, we introduce PEARL-Bench, the first comprehensive benchmark designed specifically to evaluate this challenging setting. It evaluates a model's ability to respond to personalized concepts at exact timestamps under two modes: (1) Frame-level, focusing on a specific person or object in discrete frames, and (2) a novel Video-level, focusing on personalized actions unfolding across continuous frames. PEARL-Bench comprises 132 unique videos and 2,173 fine-grained annotations with precise timestamps. Concept diversity and annotation quality are strictly ensured through a combined pipeline of automated generation and human verification. To tackle this challenging new setting, we further propose PEARL, a plug-and-play, training-free strategy that serves as a strong baseline. Extensive evaluations across 8 offline and online models demonstrate that PEARL achieves state-of-the-art performance. Notably, it brings consistent PSVU improvements when applied to 3 distinct architectures, proving to be a highly effective and robust strategy. We hope this work advances vision-language model (VLM) personalization and inspires further research into streaming personalized AI assistants. Code is available at https://github.com/Yuanhong-Zheng/PEARL.",
+      "published_date": "2026-03-20T18:47:54.000Z",
+      "url": "https://arxiv.org/abs/2603.20422",
+      "pdf_url": "https://arxiv.org/pdf/2603.20422",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.20422",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": {
+        "chinese_title": "PEARL: 个性化流式视频理解模型",
+        "chinese_summary": "提出并定义了个性化流式视频理解任务，构建了首个专门用于评估该任务的基准PEARL-Bench。",
+        "pain_point": "现有方法主要针对静态图像或离线视频，无法提供实时互动的个性化响应。",
+        "core_value": "填补了流式视频理解与实时反馈之间的空白，提供新的研究方向。",
+        "technical_architecture": "提出了新的任务定义和评估基准PEARL-Bench。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步提高模型的实时性和泛化能力。",
+        "key_contributions": [
+          "提出个性化流式视频理解任务",
+          "构建首个专门评估该任务的基准PEARL-Bench",
+          "提供两种评估模式：帧级和视频级"
+        ],
+        "application_scenarios": [
+          "个性化AI助手",
+          "视频内容理解和推荐"
+        ],
+        "technical_highlights": [
+          "严格确保概念多样性和注释质量",
+          "提供两种评估模式以全面评估模型能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.23499",
+      "source": "huggingface",
+      "title": "DA-Flow: Degradation-Aware Optical Flow Estimation with Diffusion Models",
+      "authors": [
+        "Jaewon Min",
+        "Jaeeun Lee",
+        "Yeji Choi",
+        "Paul Hyunbin Cho",
+        "Jin Hyeon Kim",
+        "Tae-Young Lee",
+        "Jongsik Ahn",
+        "Hwayeong Lee",
+        "Seonghyun Park",
+        "Seungryong Kim"
+      ],
+      "abstract": "Optical flow models trained on high-quality data often degrade severely when confronted with real-world corruptions such as blur, noise, and compression artifacts. To overcome this limitation, we formulate Degradation-Aware Optical Flow, a new task targeting accurate dense correspondence estimation from real-world corrupted videos. Our key insight is that the intermediate representations of image restoration diffusion models are inherently corruption-aware but lack temporal awareness. To address this limitation, we lift the model to attend across adjacent frames via full spatio-temporal attention, and empirically demonstrate that the resulting features exhibit zero-shot correspondence capabilities. Based on this finding, we present DA-Flow, a hybrid architecture that fuses these diffusion features with convolutional features within an iterative refinement framework. DA-Flow substantially outperforms existing optical flow methods under severe degradation across multiple benchmarks.",
+      "published_date": "2026-03-24T17:59:13.000Z",
+      "url": "https://arxiv.org/abs/2603.23499",
+      "pdf_url": "https://arxiv.org/pdf/2603.23499",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.23499",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "DA-Flow: 带有退化感知的光学流估计",
+        "chinese_summary": "DA-Flow 在严重退化条件下显著优于现有光学流方法。",
+        "pain_point": "现有光学流模型在处理真实世界退化（如模糊、噪声、压缩伪影）时表现不佳。",
+        "core_value": "通过融合扩散模型特征和卷积特征，DA-Flow 实现了零样本对应能力。",
+        "technical_architecture": "DA-Flow 使用全时空注意力机制融合扩散模型和卷积模型。",
+        "quantitative_results": "在多个基准测试中，DA-Flow 显著优于现有方法。",
+        "competitors": "对比了多种现有光学流方法。",
+        "limitations": "未来工作可探索更多类型的退化处理。",
+        "key_contributions": [
+          "提出了退化感知的光学流任务",
+          "融合扩散模型和卷积模型",
+          "实现了零样本对应能力"
+        ],
+        "application_scenarios": [
+          "视频去噪",
+          "动作识别"
+        ],
+        "technical_highlights": [
+          "全时空注意力机制",
+          "扩散模型与卷积模型的融合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.23386",
+      "source": "huggingface",
+      "title": "SIMART: Decomposing Monolithic Meshes into Sim-ready Articulated Assets via MLLM",
+      "authors": [
+        "Chuanrui Zhang",
+        "Minghan Qin",
+        "Yuang Wang",
+        "Baifeng Xie",
+        "Hang Li",
+        "Ziwei Wang"
+      ],
+      "abstract": "High-quality articulated 3D assets are indispensable for embodied AI and physical simulation, yet 3D generation still focuses on static meshes, leaving a gap in \"sim-ready\" interactive objects. Most recent articulated object creation methods rely on multi-stage pipelines that accumulate errors across decoupled modules. Alternatively, unified MLLMs offer a single-stage path to joint static asset understanding and sim-ready asset generation. However dense voxel-based 3D tokenization yields long 3D token sequences and high memory overhead, limiting scalability to complex articulated objects. To address this, we propose SIMART, a unified MLLM framework that jointly performs part-level decomposition and kinematic prediction. By introducing a Sparse 3D VQ-VAE, SIMART reduces token counts by 70% vs. dense voxel tokens, enabling high-fidelity multi-part assemblies. SIMART achieves state-of-the-art performance on PartNet-Mobility and in-the-wild AIGC datasets, and enables physics-based robotic simulation.",
+      "published_date": "2026-03-24T16:16:52.000Z",
+      "url": "https://arxiv.org/abs/2603.23386",
+      "pdf_url": "https://arxiv.org/pdf/2603.23386",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.23386",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.GR",
+        "cs.RO"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "SIMART: 通过MLLM将大型网格拆解为可模拟的动画资产",
+        "chinese_summary": "SIMART通过引入稀疏3D VQ-VAE，大幅减少token数量，实现高质量多部件组装。",
+        "pain_point": "现有方法难以处理复杂动画对象，导致生成的模拟对象质量不高。",
+        "core_value": "SIMART通过稀疏3D VQ-VAE，显著降低token数量，提升模拟对象的高保真度。",
+        "technical_architecture": "SIMART采用统一的MLLM框架，联合进行部分级拆解和运动预测。",
+        "quantitative_results": "在PartNet-Mobility和AIGC数据集上达到SOTA性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来可探索更多复杂场景的应用。",
+        "key_contributions": [
+          "提出SIMART框架，联合进行部分级拆解和运动预测。",
+          "引入稀疏3D VQ-VAE，大幅减少token数量。",
+          "在复杂对象上实现高保真度组装"
+        ],
+        "application_scenarios": [
+          "物理模拟",
+          "机器人仿真"
+        ],
+        "technical_highlights": [
+          "稀疏3D VQ-VAE显著减少token数量",
+          "实现高质量多部件组装"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.23500",
+      "source": "huggingface",
+      "title": "UniGRPO: Unified Policy Optimization for Reasoning-Driven Visual Generation",
+      "authors": [
+        "Jie Liu",
+        "Zilyu Ye",
+        "Linxiao Yuan",
+        "Shenhan Zhu",
+        "Yu Gao",
+        "Jie Wu",
+        "Kunchang Li",
+        "Xionghui Wang",
+        "Xiaonan Nie",
+        "Weilin Huang",
+        "Wanli Ouyang"
+      ],
+      "abstract": "Unified models capable of interleaved generation have emerged as a promising paradigm, with the community increasingly converging on autoregressive modeling for text and flow matching for image generation. To advance this direction, we propose a unified reinforcement learning framework tailored for interleaved generation. We validate our approach on its fundamental unit: a single round of reasoning-driven image generation, where the model first expands the user prompt through reasoning, followed by image synthesis. Formulating this multimodal generation process as a Markov Decision Process with sparse terminal rewards, we introduce UniGRPO to jointly optimize text and image generation policies using GRPO. Adopting a minimalist methodology to avoid over-design, we leverage established training recipes for both modalities by seamlessly integrating standard GRPO for reasoning and FlowGRPO for visual synthesis. To ensure scalability to multi-round interleaved generation, we introduce two critical modifications to the original FlowGRPO: (1) eliminating classifier-free guidance to maintain linear, unbranched rollouts, which is essential for scaling to complex scenarios involving multi-turn interactions and multi-condition generation (e.g., editing); and (2) replacing the standard latent KL penalty with an MSE penalty directly on the velocity fields, providing a more robust and direct regularization signal to mitigate reward hacking effectively. Our experiments demonstrate that this unified training recipe significantly enhances image generation quality through reasoning, providing a robust and scalable baseline for the future post-training of fully interleaved models.",
+      "published_date": "2026-03-24T17:59:17.000Z",
+      "url": "https://arxiv.org/abs/2603.23500",
+      "pdf_url": "https://arxiv.org/pdf/2603.23500",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.23500",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "UniGRPO：统一的推理驱动视觉生成策略优化",
+        "chinese_summary": "提出UniGRPO框架，结合推理和视觉生成策略优化，提升多模态生成性能。",
+        "pain_point": "现有模型在多轮推理驱动的视觉生成中难以有效扩展。",
+        "core_value": "通过统一框架优化推理和视觉生成策略，提升生成质量和效率。",
+        "technical_architecture": "采用GRPO和FlowGRPO结合的策略优化方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在单轮生成上验证，未来需扩展至多轮生成。",
+        "key_contributions": [
+          "提出UniGRPO框架",
+          "结合推理和视觉生成策略优化",
+          "简化设计避免过度工程"
+        ],
+        "application_scenarios": [
+          "交互式图像生成",
+          "智能设计辅助"
+        ],
+        "technical_highlights": [
+          "无缝集成标准GRPO和FlowGRPO",
+          "消除分类器自由引导以保持线性流程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.23462",
+      "source": "huggingface",
+      "title": "RealMaster: Lifting Rendered Scenes into Photorealistic Video",
+      "authors": [
+        "Dana Cohen-Bar",
+        "Ido Sobol",
+        "Raphael Bensadoun",
+        "Shelly Sheynin",
+        "Oran Gafni",
+        "Or Patashnik",
+        "Daniel Cohen-Or",
+        "Amit Zohar"
+      ],
+      "abstract": "State-of-the-art video generation models produce remarkable photorealism, but they lack the precise control required to align generated content with specific scene requirements. Furthermore, without an underlying explicit geometry, these models cannot guarantee 3D consistency. Conversely, 3D engines offer granular control over every scene element and provide native 3D consistency by design, yet their output often remains trapped in the \"uncanny valley\". Bridging this sim-to-real gap requires both structural precision, where the output must exactly preserve the geometry and dynamics of the input, and global semantic transformation, where materials, lighting, and textures must be holistically transformed to achieve photorealism. We present RealMaster, a method that leverages video diffusion models to lift rendered video into photorealistic video while maintaining full alignment with the output of the 3D engine. To train this model, we generate a paired dataset via an anchor-based propagation strategy, where the first and last frames are enhanced for realism and propagated across the intermediate frames using geometric conditioning cues. We then train an IC-LoRA on these paired videos to distill the high-quality outputs of the pipeline into a model that generalizes beyond the pipeline's constraints, handling objects and characters that appear mid-sequence and enabling inference without requiring anchor frames. Evaluated on complex GTA-V sequences, RealMaster significantly outperforms existing video editing baselines, improving photorealism while preserving the geometry, dynamics, and identity specified by the original 3D control.",
+      "published_date": "2026-03-24T17:32:42.000Z",
+      "url": "https://arxiv.org/abs/2603.23462",
+      "pdf_url": "https://arxiv.org/pdf/2603.23462",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.23462",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "RealMaster: 将渲染场景提升为照片级真实感视频",
+        "chinese_summary": "提出RealMaster方法，利用视频扩散模型将渲染视频提升为照片级真实感视频，同时保持与3D引擎输出的完全对齐。",
+        "pain_point": "现有视频生成模型缺乏精确控制，无法保证3D一致性；3D引擎虽提供精细控制但输出常处于“毛茸茸山谷”。",
+        "core_value": "RealMaster通过结合视频扩散模型和几何条件提示，实现结构精确和全局语义转换，提升渲染视频的真实感。",
+        "technical_architecture": "采用基于锚点的传播策略生成配对数据集，并利用IC-LoRA进行训练。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索更复杂的场景和更精细的细节处理。",
+        "key_contributions": [
+          "提出RealMaster方法",
+          "结合视频扩散模型和几何条件提示",
+          "实现结构精确和全局语义转换"
+        ],
+        "application_scenarios": [
+          "电影特效制作",
+          "虚拟现实内容生成"
+        ],
+        "technical_highlights": [
+          "基于视频扩散模型的渲染视频提升",
+          "几何条件提示下的配对数据生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.21064",
+      "source": "huggingface",
+      "title": "2Xplat: Two Experts Are Better Than One Generalist",
+      "authors": [
+        "Hwasik Jeong",
+        "Seungryong Lee",
+        "Gyeongjin Kang",
+        "Seungkwon Yang",
+        "Xiangyu Sun",
+        "Seungtae Nam",
+        "Eunbyung Park"
+      ],
+      "abstract": "Pose-free feed-forward 3D Gaussian Splatting (3DGS) has opened a new frontier for rapid 3D modeling, enabling high-quality Gaussian representations to be generated from uncalibrated multi-view images in a single forward pass. The dominant approach in this space adopts unified monolithic architectures, often built on geometry-centric 3D foundation models, to jointly estimate camera poses and synthesize 3DGS representations within a single network. While architecturally streamlined, such \"all-in-one\" designs may be suboptimal for high-fidelity 3DGS generation, as they entangle geometric reasoning and appearance modeling within a shared representation. In this work, we introduce 2Xplat, a pose-free feed-forward 3DGS framework based on a two-expert design that explicitly separates geometry estimation from Gaussian generation. A dedicated geometry expert first predicts camera poses, which are then explicitly passed to a powerful appearance expert that synthesizes 3D Gaussians. Despite its conceptual simplicity, being largely underexplored in prior works, the proposed approach proves highly effective. In fewer than 5K training iterations, the proposed two-experts pipeline substantially outperforms prior pose-free feed-forward 3DGS approaches and achieves performance on par with state-of-the-art posed methods. These results challenge the prevailing unified paradigm and suggest the potential advantages of modular design principles for complex 3D geometric estimation and appearance synthesis tasks.",
+      "published_date": "2026-03-22T05:14:38.000Z",
+      "url": "https://arxiv.org/abs/2603.21064",
+      "pdf_url": "https://arxiv.org/pdf/2603.21064",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.21064",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": {
+        "chinese_title": "2Xplat: 两个专家胜过一个通才",
+        "chinese_summary": "提出了一种分离几何估计与高斯生成的两专家架构，显著提升了3DGS生成效果。",
+        "pain_point": "现有统一架构可能因几何推理与外观建模的耦合而影响高保真3DGS生成。",
+        "core_value": "通过分离几何与外观处理，显著提高3DGS生成质量。",
+        "technical_architecture": "采用两专家设计，分别负责几何估计与高斯生成。",
+        "quantitative_results": "在不到5K训练迭代中，显著提升3DGS生成效果。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多训练数据以进一步提升模型性能。",
+        "key_contributions": [
+          "提出两专家分离几何与外观处理的架构",
+          "显著提升3DGS生成质量"
+        ],
+        "application_scenarios": [
+          "快速3D建模",
+          "多视角图像处理"
+        ],
+        "technical_highlights": [
+          "分离几何与外观处理",
+          "显著提升生成效果"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

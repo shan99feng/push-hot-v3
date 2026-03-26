@@ -1,0 +1,535 @@
+{
+  "date": "2026-03-26",
+  "generated_at": "2026-03-26T23:34:53.045316+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.24440",
+      "source": "huggingface",
+      "title": "CUA-Suite: Massive Human-annotated Video Demonstrations for Computer-Use Agents",
+      "authors": [
+        "Xiangru Jian",
+        "Shravan Nayak",
+        "Kevin Qinghong Lin",
+        "Aarash Feizi",
+        "Kaixin Li",
+        "Patrice Bechard",
+        "Spandana Gella",
+        "Sai Rajeswar"
+      ],
+      "abstract": "Computer-use agents (CUAs) hold great promise for automating complex desktop workflows, yet progress toward general-purpose agents is bottlenecked by the scarcity of continuous, high-quality human demonstration videos. Recent work emphasizes that continuous video, not sparse screenshots, is the critical missing ingredient for scaling these agents. However, the largest existing open dataset, ScaleCUA, contains only 2 million screenshots, equating to less than 20 hours of video. To address this bottleneck, we introduce CUA-Suite, a large-scale ecosystem of expert video demonstrations and dense annotations for professional desktop computer-use agents. At its core is VideoCUA, which provides approximately 10,000 human-demonstrated tasks across 87 diverse applications with continuous 30 fps screen recordings, kinematic cursor traces, and multi-layerfed reasoning annotations, totaling approximately 55 hours and 6 million frames of expert video. Unlike sparse datasets that capture only final click coordinates, these continuous video streams preserve the full temporal dynamics of human interaction, forming a superset of information that can be losslessly transformed into the formats required by existing agent frameworks. CUA-Suite further provides two complementary resources: UI-Vision, a rigorous benchmark for evaluating grounding and planning capabilities in CUAs, and GroundCUA, a large-scale grounding dataset with 56K annotated screenshots and over 3.6 million UI element annotations. Preliminary evaluation reveals that current foundation action models struggle substantially with professional desktop applications (~60% task failure rate). Beyond evaluation, CUA-Suite's rich multimodal corpus supports emerging research directions including generalist screen parsing, continuous spatial control, video-based reward modeling, and visual world models. All data and models are publicly released.",
+      "published_date": "2026-03-25T15:52:56.000Z",
+      "url": "https://arxiv.org/abs/2603.24440",
+      "pdf_url": "https://arxiv.org/pdf/2603.24440",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.24440",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 69,
+      "hot_score": 690,
+      "structured_summary": {
+        "chinese_title": "CUA-Suite: 大规模专业桌面计算机使用专家演示与密集标注",
+        "chinese_summary": "CUA-Suite 提供了 10,000 个人类演示任务，覆盖 87 种应用，总时长 55 小时。",
+        "pain_point": "现有数据集稀缺，无法支持通用计算机使用代理的发展。",
+        "core_value": "提供了大规模的连续视频演示，填补了现有数据集的空白。",
+        "technical_architecture": "包含连续 30 fps 屏幕录制、动作轨迹和多层推理注释。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步扩展数据集覆盖的应用范围。",
+        "key_contributions": [
+          "提供大规模连续视频演示",
+          "包含密集标注信息"
+        ],
+        "application_scenarios": [
+          "自动化复杂桌面工作流",
+          "专业桌面计算机使用代理"
+        ],
+        "technical_highlights": [
+          "覆盖 87 种应用",
+          "多层推理注释"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.22918",
+      "source": "huggingface",
+      "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+      "authors": [
+        "Yaolun Zhang",
+        "Ruohui Wang",
+        "Jiahao Wang",
+        "Yepeng Tang",
+        "Xuanyu Zheng",
+        "Haonan Duan",
+        "Hao Lu",
+        "Hanming Deng",
+        "Lewei Lu"
+      ],
+      "abstract": "Video understanding with multimodal large language models (MLLMs) remains challenging due to the long token sequences of videos, which contain extensive temporal dependencies and redundant frames. Existing approaches typically treat MLLMs as passive recognizers, processing entire videos or uniformly sampled frames without adaptive reasoning. Recent agent-based methods introduce external tools, yet still depend on manually designed workflows and perception-first strategies, resulting in inefficiency on long videos. We present EVA, an Efficient Reinforcement Learning framework for End-to-End Video Agent, which enables planning-before-perception through iterative summary-plan-action-reflection reasoning. EVA autonomously decides what to watch, when to watch, and how to watch, achieving query-driven and efficient video understanding. To train such agents, we design a simple yet effective three-stage learning pipeline - comprising supervised fine-tuning (SFT), Kahneman-Tversky Optimization (KTO), and Generalized Reward Policy Optimization (GRPO) - that bridges supervised imitation and reinforcement learning. We further construct high-quality datasets for each stage, supporting stable and reproducible training. We evaluate EVA on six video understanding benchmarks, demonstrating its comprehensive capabilities. Compared with existing baselines, EVA achieves a substantial improvement of 6-12% over general MLLM baselines and a further 1-3% gain over prior adaptive agent methods. Our code and model are available at https://github.com/wangruohui/EfficientVideoAgent.",
+      "published_date": "2026-03-24T08:06:29.000Z",
+      "url": "https://arxiv.org/abs/2603.22918",
+      "pdf_url": "https://arxiv.org/pdf/2603.22918",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.22918",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": {
+        "chinese_title": "EVA: 用于端到端视频代理的高效强化学习",
+        "chinese_summary": "EVA 通过迭代总结-计划-行动-反思推理，实现查询驱动和高效的视频理解。",
+        "pain_point": "现有方法处理长视频时效率低下，依赖手动设计的工作流。",
+        "core_value": "EVA 自主决定何时何地观看视频，实现高效的视频理解。",
+        "technical_architecture": "采用迭代总结-计划-行动-反思推理框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化模型在长视频上的性能。",
+        "key_contributions": [
+          "提出迭代总结-计划-行动-反思推理框架",
+          "设计三阶段学习管道"
+        ],
+        "application_scenarios": [
+          "视频理解",
+          "智能代理"
+        ],
+        "technical_highlights": [
+          "自主决定观看策略",
+          "结合监督微调和强化学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.22341",
+      "source": "huggingface",
+      "title": "T-MAP: Red-Teaming LLM Agents with Trajectory-aware Evolutionary Search",
+      "authors": [
+        "Hyomin Lee",
+        "Sangwoo Park",
+        "Yumin Choi",
+        "Sohyun An",
+        "Seanie Lee",
+        "Sung Ju Hwang"
+      ],
+      "abstract": "While prior red-teaming efforts have focused on eliciting harmful text outputs from large language models (LLMs), such approaches fail to capture agent-specific vulnerabilities that emerge through multi-step tool execution, particularly in rapidly growing ecosystems such as the Model Context Protocol (MCP). To address this gap, we propose a trajectory-aware evolutionary search method, T-MAP, which leverages execution trajectories to guide the discovery of adversarial prompts. Our approach enables the automatic generation of attacks that not only bypass safety guardrails but also reliably realize harmful objectives through actual tool interactions. Empirical evaluations across diverse MCP environments demonstrate that T-MAP substantially outperforms baselines in attack realization rate (ARR) and remains effective against frontier models, including GPT-5.2, Gemini-3-Pro, Qwen3.5, and GLM-5, thereby revealing previously underexplored vulnerabilities in autonomous LLM agents.",
+      "published_date": "2026-03-21T12:33:34.000Z",
+      "url": "https://arxiv.org/abs/2603.22341",
+      "pdf_url": "https://arxiv.org/pdf/2603.22341",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.22341",
+      "category": "llm",
+      "tags": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "T-MAP: 通过轨迹感知进化搜索对抗大型语言模型代理",
+        "chinese_summary": "T-MAP 提高了攻击实现率并揭示了自主 LLM 代理的新漏洞。",
+        "pain_point": "现有方法未能捕捉多步骤工具执行中出现的代理特定漏洞。",
+        "core_value": "通过轨迹感知进化搜索自动生成攻击，不仅绕过安全护栏，还能实现有害目标。",
+        "technical_architecture": "利用执行轨迹指导对抗性提示的发现。",
+        "quantitative_results": "在不同 MCP 环境中，T-MAP 在攻击实现率上显著优于基线。",
+        "competitors": "GPT-5.2, Gemini-3-Pro, Qwen3.5, GLM-5",
+        "limitations": "仅在特定 MCP 环境中进行了评估。",
+        "key_contributions": [
+          "提出轨迹感知进化搜索方法 T-MAP",
+          "自动生成攻击以实现有害目标",
+          "揭示了自主 LLM 代理的新漏洞"
+        ],
+        "application_scenarios": [
+          "对抗性测试",
+          "安全评估"
+        ],
+        "technical_highlights": [
+          "利用执行轨迹指导搜索",
+          "提高攻击实现率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.24533",
+      "source": "huggingface",
+      "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
+      "authors": [
+        "Zichuan Lin",
+        "Feiyu Liu",
+        "Yijun Yang",
+        "Jiafei Lyu",
+        "Yiming Gao",
+        "Yicheng Liu",
+        "Zhicong Lu",
+        "Yangbin Yu",
+        "Mingyu Yang",
+        "Junyou Li",
+        "Deheng Ye",
+        "Jie Jiang"
+      ],
+      "abstract": "Autonomous mobile GUI agents have attracted increasing attention along with the advancement of Multimodal Large Language Models (MLLMs). However, existing methods still suffer from inefficient learning from failed trajectories and ambiguous credit assignment under sparse rewards for long-horizon GUI tasks. To that end, we propose UI-Voyager, a novel two-stage self-evolving mobile GUI agent. In the first stage, we employ Rejection Fine-Tuning (RFT), which enables the continuous co-evolution of data and models in a fully autonomous loop. The second stage introduces Group Relative Self-Distillation (GRSD), which identifies critical fork points in group rollouts and constructs dense step-level supervision from successful trajectories to correct failed ones. Extensive experiments on AndroidWorld show that our 4B model achieves an 81.0% Pass@1 success rate, outperforming numerous recent baselines and exceeding human-level performance. Ablation and case studies further verify the effectiveness of GRSD. Our method represents a significant leap toward efficient, self-evolving, and high-performance mobile GUI automation without expensive manual data annotation.",
+      "published_date": "2026-03-25T17:10:29.000Z",
+      "url": "https://arxiv.org/abs/2603.24533",
+      "pdf_url": "https://arxiv.org/pdf/2603.24533",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.24533",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "UI-Voyager: 自适应GUI代理学习失败经验",
+        "chinese_summary": "UI-Voyager 提高了移动GUI任务的成功率，超越了人类水平。",
+        "pain_point": "现有方法在学习失败轨迹和稀疏奖励下的长期GUI任务中效率低下。",
+        "core_value": "通过引入RFT和GRSD，实现了高效、自适应和高性能的移动GUI自动化。",
+        "technical_architecture": "采用两阶段方法，包括RFT和GRSD。",
+        "quantitative_results": "4B模型在AndroidWorld上的Pass@1成功率达到81.0%，超越了多个基线。",
+        "competitors": "对比了多个近期基线。",
+        "limitations": "需要进一步研究以适应更复杂的GUI任务。",
+        "key_contributions": [
+          "提出了RFT和GRSD方法",
+          "显著提高了GUI自动化效率",
+          "达到了人类水平的成功率"
+        ],
+        "application_scenarios": [
+          "移动应用测试",
+          "自动化GUI交互"
+        ],
+        "technical_highlights": [
+          "自主学习失败经验",
+          "密集步骤级监督"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.24472",
+      "source": "huggingface",
+      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
+      "authors": [
+        "Jeonghye Kim",
+        "Xufang Luo",
+        "Minbeom Kim",
+        "Sangmook Lee",
+        "Dohyung Kim",
+        "Jiwon Jeon",
+        "Dongsheng Li",
+        "Yuqing Yang"
+      ],
+      "abstract": "Self-distillation has emerged as an effective post-training paradigm for LLMs, often improving performance while shortening reasoning traces. However, in mathematical reasoning, we find that it can reduce response length while degrading performance. We trace this degradation to the suppression of epistemic verbalization - the model's expression of uncertainty during reasoning. Through controlled experiments varying conditioning context richness and task coverage, we show that conditioning the teacher on rich information suppresses uncertainty expression, enabling rapid in-domain optimization with limited task coverage but harming OOD performance, where unseen problems benefit from expressing uncertainty and adjusting accordingly. Across Qwen3-8B, DeepSeek-Distill-Qwen-7B, and Olmo3-7B-Instruct, we observe performance drops of up to 40%. Our findings highlight that exposing appropriate levels of uncertainty is crucial for robust reasoning and underscore the importance of optimizing reasoning behavior beyond merely reinforcing correct answer traces.",
+      "published_date": "2026-03-25T16:14:52.000Z",
+      "url": "https://arxiv.org/abs/2603.24472",
+      "pdf_url": "https://arxiv.org/pdf/2603.24472",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.24472",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "为什么自蒸馏有时会降低大语言模型的推理能力？",
+        "chinese_summary": "自蒸馏在数学推理中会缩短回答长度并降低性能。",
+        "pain_point": "自蒸馏在数学推理任务中会降低模型的推理能力。",
+        "core_value": "揭示了自蒸馏抑制模型表达不确定性的问题，并强调了适当暴露不确定性的重要性。",
+        "technical_architecture": "通过控制实验研究自蒸馏对模型推理行为的影响。",
+        "quantitative_results": "在Qwen3-8B、DeepSeek-Distill-Qwen-7B和Olmo3-7B-Instruct上观察到高达40%的性能下降。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究如何在保持性能的同时增强模型的不确定性表达。",
+        "key_contributions": [
+          "发现自蒸馏抑制模型表达不确定性",
+          "强调适当暴露不确定性的重要性",
+          "通过实验验证了自蒸馏对模型推理行为的影响"
+        ],
+        "application_scenarios": [
+          "大语言模型的推理优化",
+          "数学推理任务的模型改进"
+        ],
+        "technical_highlights": [
+          "通过控制实验研究自蒸馏的影响",
+          "揭示了自蒸馏抑制不确定性表达的问题"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.24329",
+      "source": "huggingface",
+      "title": "GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents",
+      "authors": [
+        "Yunzhe Wang",
+        "Runhui Xu",
+        "Kexin Zheng",
+        "Tianyi Zhang",
+        "Jayavibhav Niranjan Kogundi",
+        "Soham Hans",
+        "Volkan Ustun"
+      ],
+      "abstract": "Multimodal LLMs are increasingly deployed as perceptual backbones for autonomous agents in 3D environments, from robotics to virtual worlds. These applications require agents to perceive rapid state changes, attribute actions to the correct entities, and reason about concurrent multi-agent behaviors from a first-person perspective, capabilities that existing benchmarks do not adequately evaluate. We introduce GameplayQA, a framework for evaluating agentic-centric perception and reasoning through video understanding. Specifically, we densely annotate multiplayer 3D gameplay videos at 1.22 labels/second, with time-synced, concurrent captions of states, actions, and events structured around a triadic system of Self, Other Agents, and the World, a natural decomposition for multi-agent environments. From these annotations, we refined 2.4K diagnostic QA pairs organized into three levels of cognitive complexity, accompanied by a structured distractor taxonomy that enables fine-grained analysis of where models hallucinate. Evaluation of frontier MLLMs reveals a substantial gap from human performance, with common failures in temporal and cross-video grounding, agent-role attribution, and handling the decision density of the game. We hope GameplayQA stimulates future research at the intersection of embodied AI, agentic perception, and world modeling.",
+      "published_date": "2026-03-25T14:10:45.000Z",
+      "url": "https://arxiv.org/abs/2603.24329",
+      "pdf_url": "https://arxiv.org/pdf/2603.24329",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.24329",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "GameplayQA：3D虚拟代理多视角同步多视频理解的决策密集型第一人称感知基准框架",
+        "chinese_summary": "引入GameplayQA框架，评估多玩家3D游戏视频理解中的感知和推理能力。",
+        "pain_point": "现有基准无法充分评估代理感知快速状态变化、正确归因动作及多代理并发行为推理的能力。",
+        "core_value": "通过密集标注和结构化注释，提供多视角同步多视频理解的新基准，揭示模型幻觉。",
+        "technical_architecture": "采用时间同步的三元系统注释方法，涵盖自我、其他代理和世界。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于游戏视频，可能不完全适用于所有3D环境。",
+        "key_contributions": [
+          "提供多玩家3D游戏视频理解的新基准",
+          "密集标注和结构化注释方法",
+          "揭示模型幻觉的细粒度分析"
+        ],
+        "application_scenarios": [
+          "机器人",
+          "虚拟世界"
+        ],
+        "technical_highlights": [
+          "时间同步的三元系统注释",
+          "结构化注释和细粒度分析"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.21289",
+      "source": "huggingface",
+      "title": "When Models Judge Themselves: Unsupervised Self-Evolution for Multimodal Reasoning",
+      "authors": [
+        "Zhengxian Wu",
+        "Kai Shi",
+        "Chuanrui Zhang",
+        "Zirui Liao",
+        "Jun Yang",
+        "Ni Yang",
+        "Qiuying Peng",
+        "Luyuan Zhang",
+        "Hangrui Xu",
+        "Tianhuang Su",
+        "Zhenyu Yang",
+        "Haonan Lu",
+        "Haoqian Wang"
+      ],
+      "abstract": "Recent progress in multimodal large language models has led to strong performance on reasoning tasks, but these improvements largely rely on high-quality annotated data or teacher-model distillation, both of which are costly and difficult to scale. To address this, we propose an unsupervised self-evolution training framework for multimodal reasoning that achieves stable performance improvements without using human-annotated answers or external reward models. For each input, we sample multiple reasoning trajectories and jointly model their within group structure. We use the Actor's self-consistency signal as a training prior, and introduce a bounded Judge based modulation to continuously reweight trajectories of different quality. We further model the modulated scores as a group level distribution and convert absolute scores into relative advantages within each group, enabling more robust policy updates. Trained with Group Relative Policy Optimization (GRPO) on unlabeled data, our method consistently improves reasoning performance and generalization on five mathematical reasoning benchmarks, offering a scalable path toward self-evolving multimodal models. The code are available at https://github.com/OPPO-Mente-Lab/LLM-Self-Judge.",
+      "published_date": "2026-03-22T15:22:19.000Z",
+      "url": "https://arxiv.org/abs/2603.21289",
+      "pdf_url": "https://arxiv.org/pdf/2603.21289",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.21289",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 14,
+      "hot_score": 140,
+      "structured_summary": {
+        "chinese_title": "当模型自我评判：无监督自我进化多模态推理",
+        "chinese_summary": "提出了一种无监督自我进化框架，通过自我一致性信号和有界评判器实现多模态推理性能的稳定提升。",
+        "pain_point": "现有模型依赖高质量标注数据或教师模型蒸馏，成本高且难以扩展。",
+        "core_value": "无需标注数据或外部奖励模型，实现多模态推理性能的无监督自我进化。",
+        "technical_architecture": "采用自我一致性信号和有界评判器对推理轨迹进行加权，通过组相对策略优化进行训练。",
+        "quantitative_results": "在五个数学推理基准上，方法持续提升推理性能和泛化能力。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在数学推理领域进行了验证，未来需扩展应用场景。",
+        "key_contributions": [
+          "提出无监督自我进化框架",
+          "利用自我一致性信号和有界评判器",
+          "实现多模态推理性能提升"
+        ],
+        "application_scenarios": [
+          "数学推理",
+          "多模态推理"
+        ],
+        "technical_highlights": [
+          "无需标注数据或外部奖励模型",
+          "通过组相对策略优化进行训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.23994",
+      "source": "huggingface",
+      "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
+      "authors": [
+        "Allen Nie",
+        "Xavier Daull",
+        "Zhiyi Kuang",
+        "Abhinav Akkiraju",
+        "Anish Chaudhuri",
+        "Max Piasevoli",
+        "Ryan Rong",
+        "YuCheng Yuan",
+        "Prerit Choudhary",
+        "Shannon Xiao",
+        "Rasool Fakoor",
+        "Adith Swaminathan",
+        "Ching-An Cheng"
+      ],
+      "abstract": "Generative optimization uses large language models (LLMs) to iteratively improve artifacts (such as code, workflows or prompts) using execution feedback. It is a promising approach to building self-improving agents, yet in practice remains brittle: despite active research, only 9% of surveyed agents used any automated optimization. We argue that this brittleness arises because, to set up a learning loop, an engineer must make ``hidden'' design choices: What can the optimizer edit and what is the \"right\" learning evidence to provide at each update? We investigate three factors that affect most applications: the starting artifact, the credit horizon for execution traces, and batching trials and errors into learning evidence. Through case studies in MLAgentBench, Atari, and BigBench Extra Hard, we find that these design decisions can determine whether generative optimization succeeds, yet they are rarely made explicit in prior work. Different starting artifacts determine which solutions are reachable in MLAgentBench, truncated traces can still improve Atari agents, and larger minibatches do not monotonically improve generalization on BBEH. We conclude that the lack of a simple, universal way to set up learning loops across domains is a major hurdle for productionization and adoption. We provide practical guidance for making these choices.",
+      "published_date": "2026-03-25T06:49:24.000Z",
+      "url": "https://arxiv.org/abs/2603.23994",
+      "pdf_url": "https://arxiv.org/pdf/2603.23994",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.23994",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "理解使用大语言模型进行迭代生成优化的挑战",
+        "chinese_summary": "研究发现设计决策影响生成优化的成功，但这些决策在先前工作中很少被明确讨论。",
+        "pain_point": "生成优化在实际应用中表现脆弱，工程师需要做出隐含的设计选择。",
+        "core_value": "揭示了影响生成优化的关键设计因素，强调了这些选择的重要性。",
+        "technical_architecture": "通过案例研究分析了起始艺术、执行痕迹的信用范围和学习证据的批量处理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更多应用场景的具体设计决策。",
+        "key_contributions": [
+          "揭示了影响生成优化的关键设计因素",
+          "强调了这些选择的重要性"
+        ],
+        "application_scenarios": [
+          "MLAgentBench",
+          "Atari",
+          "BigBench Extra Hard"
+        ],
+        "technical_highlights": [
+          "通过案例研究分析了关键设计因素",
+          "发现不同起始艺术影响解决方案的可达性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.24036",
+      "source": "huggingface",
+      "title": "SpectralSplats: Robust Differentiable Tracking via Spectral Moment Supervision",
+      "authors": [
+        "Avigail Cohen Rimon",
+        "Amir Mann",
+        "Mirela Ben Chen",
+        "Or Litany"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) enables real-time, photorealistic novel view synthesis, making it a highly attractive representation for model-based video tracking. However, leveraging the differentiability of the 3DGS renderer \"in the wild\" remains notoriously fragile. A fundamental bottleneck lies in the compact, local support of the Gaussian primitives. Standard photometric objectives implicitly rely on spatial overlap; if severe camera misalignment places the rendered object outside the target's local footprint, gradients strictly vanish, leaving the optimizer stranded. We introduce SpectralSplats, a robust tracking framework that resolves this \"vanishing gradient\" problem by shifting the optimization objective from the spatial to the frequency domain. By supervising the rendered image via a set of global complex sinusoidal features (Spectral Moments), we construct a global basin of attraction, ensuring that a valid, directional gradient toward the target exists across the entire image domain, even when pixel overlap is completely nonexistent. To harness this global basin without introducing periodic local minima associated with high frequencies, we derive a principled Frequency Annealing schedule from first principles, gracefully transitioning the optimizer from global convexity to precise spatial alignment. We demonstrate that SpectralSplats acts as a seamless, drop-in replacement for spatial losses across diverse deformation parameterizations (from MLPs to sparse control points), successfully recovering complex deformations even from severely misaligned initializations where standard appearance-based tracking catastrophically fails.",
+      "published_date": "2026-03-25T07:48:22.000Z",
+      "url": "https://arxiv.org/abs/2603.24036",
+      "pdf_url": "https://arxiv.org/pdf/2603.24036",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.24036",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "SpectralSplats: 通过光谱矩监督实现鲁棒可微跟踪",
+        "chinese_summary": "通过光谱矩监督，实现鲁棒的可微跟踪，解决传统方法中的梯度消失问题。",
+        "pain_point": "传统3DGS渲染器在“野外”应用中可微性脆弱，因目标与渲染物之间缺乏空间重叠导致梯度消失。",
+        "core_value": "通过光谱矩监督，确保即使在完全无像素重叠的情况下也能存在有效的方向梯度，实现鲁棒跟踪。",
+        "technical_architecture": "将优化目标从空间域转移到频率域，通过光谱矩监督构建全局吸引盆地。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究如何避免引入与高频率相关的周期局部极小值。",
+        "key_contributions": [
+          "提出光谱矩监督方法解决梯度消失问题",
+          "将优化目标从空间域转移到频率域"
+        ],
+        "application_scenarios": [
+          "基于模型的视频跟踪",
+          "实时、逼真的新视角合成"
+        ],
+        "technical_highlights": [
+          "光谱矩监督确保全局有效梯度",
+          "避免引入周期局部极小值"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.14375",
+      "source": "huggingface",
+      "title": "The Pulse of Motion: Measuring Physical Frame Rate from Visual Dynamics",
+      "authors": [
+        "Xiangbo Gao",
+        "Mingyang Wu",
+        "Siyuan Yang",
+        "Jiongze Yu",
+        "Pardis Taghavi",
+        "Fangzhou Lin",
+        "Zhengzhong Tu"
+      ],
+      "abstract": "While recent generative video models have achieved remarkable visual realism and are being explored as world models, true physical simulation requires mastering both space and time. Current models can produce visually smooth kinematics, yet they lack a reliable internal motion pulse to ground these motions in a consistent, real-world time scale. This temporal ambiguity stems from the common practice of indiscriminately training on videos with vastly different real-world speeds, forcing them into standardized frame rates. This leads to what we term chronometric hallucination: generated sequences exhibit ambiguous, unstable, and uncontrollable physical motion speeds. To address this, we propose Visual Chronometer, a predictor that recovers the Physical Frames Per Second (PhyFPS) directly from the visual dynamics of an input video. Trained via controlled temporal resampling, our method estimates the true temporal scale implied by the motion itself, bypassing unreliable metadata. To systematically quantify this issue, we establish two benchmarks, PhyFPS-Bench-Real and PhyFPS-Bench-Gen. Our evaluations reveal a harsh reality: state-of-the-art video generators suffer from severe PhyFPS misalignment and temporal instability. Finally, we demonstrate that applying PhyFPS corrections significantly improves the human-perceived naturalness of AI-generated videos. Our project page is https://xiangbogaobarry.github.io/Visual_Chronometer/.",
+      "published_date": "2026-03-15T13:29:31.000Z",
+      "url": "https://arxiv.org/abs/2603.14375",
+      "pdf_url": "https://arxiv.org/pdf/2603.14375",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.14375",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "运动的脉搏：从视觉动态中测量物理帧率",
+        "chinese_summary": "提出Visual Chronometer，直接从输入视频的视觉动态中恢复物理帧率，解决生成视频中的时间尺度不一致问题。",
+        "pain_point": "当前生成视频模型缺乏可靠的内部运动脉搏，导致生成的序列在物理运动速度上表现出模糊、不稳定和不可控。",
+        "core_value": "通过直接从视觉动态中恢复物理帧率，解决了生成视频中的时间尺度不一致问题，提高了生成视频的真实感。",
+        "technical_architecture": "通过受控的时间重采样训练，估计由运动本身暗示的真实时间尺度。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多数据集验证方法的有效性。",
+        "key_contributions": [
+          "提出Visual Chronometer方法",
+          "建立PhyFPS-Bench-Real和PhyFPS-Bench-Gen两个基准",
+          "解决了生成视频中的时间尺度不一致问题"
+        ],
+        "application_scenarios": [
+          "生成视频的质量评估",
+          "物理模拟和动画制作"
+        ],
+        "technical_highlights": [
+          "直接从视觉动态中恢复物理帧率",
+          "通过受控的时间重采样训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

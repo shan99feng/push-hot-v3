@@ -1,0 +1,541 @@
+{
+  "date": "2026-03-30",
+  "generated_at": "2026-03-30T23:36:49.274370+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.25716",
+      "source": "huggingface",
+      "title": "Out of Sight but Not Out of Mind: Hybrid Memory for Dynamic Video World Models",
+      "authors": [
+        "Kaijin Chen",
+        "Dingkang Liang",
+        "Xin Zhou",
+        "Yikang Ding",
+        "Xiaoqiang Liu",
+        "Pengfei Wan",
+        "Xiang Bai"
+      ],
+      "abstract": "Video world models have shown immense potential in simulating the physical world, yet existing memory mechanisms primarily treat environments as static canvases. When dynamic subjects hide out of sight and later re-emerge, current methods often struggle, leading to frozen, distorted, or vanishing subjects. To address this, we introduce Hybrid Memory, a novel paradigm requiring models to simultaneously act as precise archivists for static backgrounds and vigilant trackers for dynamic subjects, ensuring motion continuity during out-of-view intervals. To facilitate research in this direction, we construct HM-World, the first large-scale video dataset dedicated to hybrid memory. It features 59K high-fidelity clips with decoupled camera and subject trajectories, encompassing 17 diverse scenes, 49 distinct subjects, and meticulously designed exit-entry events to rigorously evaluate hybrid coherence. Furthermore, we propose HyDRA, a specialized memory architecture that compresses memory into tokens and utilizes a spatiotemporal relevance-driven retrieval mechanism. By selectively attending to relevant motion cues, HyDRA effectively preserves the identity and motion of hidden subjects. Extensive experiments on HM-World demonstrate that our method significantly outperforms state-of-the-art approaches in both dynamic subject consistency and overall generation quality.",
+      "published_date": "2026-03-26T17:56:01.000Z",
+      "url": "https://arxiv.org/abs/2603.25716",
+      "pdf_url": "https://arxiv.org/pdf/2603.25716",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25716",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 133,
+      "hot_score": 1330,
+      "structured_summary": {
+        "chinese_title": "隐形但未被遗忘：动态视频世界模型中的混合记忆",
+        "chinese_summary": "提出Hybrid Memory，解决动态主体消失后重新出现时的连续性问题。",
+        "pain_point": "现有方法在处理动态主体消失后再出现时，容易导致主体冻结、失真或消失。",
+        "core_value": "Hybrid Memory确保动态主体在消失期间的连续性和身份一致性。",
+        "technical_architecture": "HyDRA架构通过时空相关性驱动检索机制，有效保留隐藏主体的身份和运动。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了测试，未来需扩展到更多场景。",
+        "key_contributions": [
+          "提出Hybrid Memory解决动态主体消失问题",
+          "构建HM-World数据集",
+          "提出HyDRA架构"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "时空相关性驱动检索",
+          "动态主体连续性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.25746",
+      "source": "huggingface",
+      "title": "ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling",
+      "authors": [
+        "Yawen Luo",
+        "Xiaoyu Shi",
+        "Junhao Zhuang",
+        "Yutian Chen",
+        "Quande Liu",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Tianfan Xue"
+      ],
+      "abstract": "Multi-shot video generation is crucial for long narrative storytelling, yet current bidirectional architectures suffer from limited interactivity and high latency. We propose ShotStream, a novel causal multi-shot architecture that enables interactive storytelling and efficient on-the-fly frame generation. By reformulating the task as next-shot generation conditioned on historical context, ShotStream allows users to dynamically instruct ongoing narratives via streaming prompts. We achieve this by first fine-tuning a text-to-video model into a bidirectional next-shot generator, which is then distilled into a causal student via Distribution Matching Distillation. To overcome the challenges of inter-shot consistency and error accumulation inherent in autoregressive generation, we introduce two key innovations. First, a dual-cache memory mechanism preserves visual coherence: a global context cache retains conditional frames for inter-shot consistency, while a local context cache holds generated frames within the current shot for intra-shot consistency. And a RoPE discontinuity indicator is employed to explicitly distinguish the two caches to eliminate ambiguity. Second, to mitigate error accumulation, we propose a two-stage distillation strategy. This begins with intra-shot self-forcing conditioned on ground-truth historical shots and progressively extends to inter-shot self-forcing using self-generated histories, effectively bridging the train-test gap. Extensive experiments demonstrate that ShotStream generates coherent multi-shot videos with sub-second latency, achieving 16 FPS on a single GPU. It matches or exceeds the quality of slower bidirectional models, paving the way for real-time interactive storytelling. Training and inference code, as well as the models, are available on our",
+      "published_date": "2026-03-26T17:59:59.000Z",
+      "url": "https://arxiv.org/abs/2603.25746",
+      "pdf_url": "https://arxiv.org/pdf/2603.25746",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25746",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 110,
+      "hot_score": 1100,
+      "structured_summary": {
+        "chinese_title": "ShotStream：用于交互式叙事的流式多镜头视频生成",
+        "chinese_summary": "通过引入新的因果多镜头架构，ShotStream 实现了交互式叙事和实时帧生成。",
+        "pain_point": "现有双向架构在交互性和实时性方面存在局限。",
+        "core_value": "提高交互性和实时性，实现动态叙事控制。",
+        "technical_architecture": "采用因果多镜头架构，通过条件下的下一个镜头生成。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步优化模型效率。",
+        "key_contributions": [
+          "引入因果多镜头架构",
+          "提出双缓存机制",
+          "使用RoPE断点指示器"
+        ],
+        "application_scenarios": [
+          "交互式叙事",
+          "实时视频生成"
+        ],
+        "technical_highlights": [
+          "动态叙事控制",
+          "实时帧生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.25730",
+      "source": "huggingface",
+      "title": "PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference",
+      "authors": [
+        "Xiaofeng Mao",
+        "Shaohao Rui",
+        "Kaining Ying",
+        "Bo Zheng",
+        "Chuanhao Li",
+        "Mingmin Chi",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Autoregressive video diffusion models have demonstrated remarkable progress, yet they remain bottlenecked by intractable linear KV-cache growth, temporal repetition, and compounding errors during long-video generation. To address these challenges, we present PackForcing, a unified framework that efficiently manages the generation history through a novel three-partition KV-cache strategy. Specifically, we categorize the historical context into three distinct types: (1) Sink tokens, which preserve early anchor frames at full resolution to maintain global semantics; (2) Mid tokens, which achieve a massive spatiotemporal compression (32x token reduction) via a dual-branch network fusing progressive 3D convolutions with low-resolution VAE re-encoding; and (3) Recent tokens, kept at full resolution to ensure local temporal coherence. To strictly bound the memory footprint without sacrificing quality, we introduce a dynamic top-k context selection mechanism for the mid tokens, coupled with a continuous Temporal RoPE Adjustment that seamlessly re-aligns position gaps caused by dropped tokens with negligible overhead. Empowered by this principled hierarchical context compression, PackForcing can generate coherent 2-minute, 832x480 videos at 16 FPS on a single H200 GPU. It achieves a bounded KV cache of just 4 GB and enables a remarkable 24x temporal extrapolation (5s to 120s), operating effectively either zero-shot or trained on merely 5-second clips. Extensive results on VBench demonstrate state-of-the-art temporal consistency (26.07) and dynamic degree (56.25), proving that short-video supervision is sufficient for high-quality, long-video synthesis. https://github.com/ShandaAI/PackForcing",
+      "published_date": "2026-03-26T17:59:05.000Z",
+      "url": "https://arxiv.org/abs/2603.25730",
+      "pdf_url": "https://arxiv.org/pdf/2603.25730",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25730",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 38,
+      "hot_score": 380,
+      "structured_summary": {
+        "chinese_title": "PackForcing: 短视频训练足以支持长视频采样和长上下文推理",
+        "chinese_summary": "通过三部分KV缓存策略有效管理生成历史，实现长视频生成。",
+        "pain_point": "长视频生成面临缓存增长难题、时间重复和累积误差。",
+        "core_value": "通过高效缓存策略和动态上下文选择机制提升长视频生成质量。",
+        "technical_architecture": "提出三部分KV缓存策略，包括Sink tokens、Mid tokens和Recent tokens。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证在更大数据集上的效果。",
+        "key_contributions": [
+          "提出三部分KV缓存策略",
+          "引入动态上下文选择机制",
+          "实现长视频生成的高效管理"
+        ],
+        "application_scenarios": [
+          "长视频生成",
+          "视频采样"
+        ],
+        "technical_highlights": [
+          "三部分KV缓存策略",
+          "动态上下文选择机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.25158",
+      "source": "huggingface",
+      "title": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills",
+      "authors": [
+        "Jingwei Ni",
+        "Yihao Liu",
+        "Xinpeng Liu",
+        "Yutao Sun",
+        "Mengyu Zhou",
+        "Pengyu Cheng",
+        "Dexin Wang",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang"
+      ],
+      "abstract": "Equipping Large Language Model (LLM) agents with domain-specific skills is critical for tackling complex tasks. Yet, manual authoring creates a severe scalability bottleneck. Conversely, automated skill generation often yields fragile or fragmented results because it either relies on shallow parametric knowledge or sequentially overfits to non-generalizable trajectory-local lessons. To overcome this, we introduce Trace2Skill, a framework that mirrors how human experts author skills: by holistically analyzing broad execution experience before distilling it into a single, comprehensive guide. Instead of reacting sequentially to individual trajectories, Trace2Skill dispatches a parallel fleet of sub-agents to analyze a diverse pool of executions. It extracts trajectory-specific lessons and hierarchically consolidates them into a unified, conflict-free skill directory via inductive reasoning. Trace2Skill supports both deepening existing human-written skills and creating new ones from scratch. Experiments in challenging domains, such as spreadsheet, VisionQA and math reasoning, show that Trace2Skill significantly improves upon strong baselines, including Anthropic's official xlsx skills. Crucially, this trajectory-grounded evolution does not merely memorize task instances or model-specific quirks: evolved skills transfer across LLM scales and generalize to OOD settings. For example, skills evolved by Qwen3.5-35B on its own trajectories improved a Qwen3.5-122B agent by up to 57.65 absolute percentage points on WikiTableQuestions. Ultimately, our results demonstrate that complex agent experience can be packaged into highly transferable, declarative skills -- requiring no parameter updates, no external retrieval modules, and utilizing open-source models as small as 35B parameters.",
+      "published_date": "2026-03-26T08:26:38.000Z",
+      "url": "https://arxiv.org/abs/2603.25158",
+      "pdf_url": "https://arxiv.org/pdf/2603.25158",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25158",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "Trace2Skill: 将轨迹局部教训提炼为可转移的智能体技能",
+        "chinese_summary": "通过并行分析多种执行经验，Trace2Skill 提升了智能体的技能生成能力。",
+        "pain_point": "手动编写特定领域技能效率低下且难以扩展。",
+        "core_value": "通过归纳推理提炼并整合轨迹局部教训，生成可转移的技能。",
+        "technical_architecture": "采用并行分析方法，通过归纳推理提炼技能。",
+        "quantitative_results": "在多个挑战性领域中，Trace2Skill 显著优于现有基线。",
+        "competitors": "对比了 Anthropic 的官方 xlsx 技能。",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提出了一种并行分析方法来提炼技能。",
+          "通过归纳推理整合轨迹局部教训。",
+          "支持现有技能的深化和新技能的创建"
+        ],
+        "application_scenarios": [
+          "电子表格处理",
+          "视觉问答",
+          "数学推理"
+        ],
+        "technical_highlights": [
+          "并行分析多种执行经验",
+          "归纳推理提炼技能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.24649",
+      "source": "huggingface",
+      "title": "MedOpenClaw: Auditable Medical Imaging Agents Reasoning over Uncurated Full Studies",
+      "authors": [
+        "Weixiang Shen",
+        "Yanzhu Hu",
+        "Che Liu",
+        "Junde Wu",
+        "Jiayuan Zhu",
+        "Chengzhi Shen",
+        "Min Xu",
+        "Yueming Jin",
+        "Benedikt Wiestler",
+        "Daniel Rueckert",
+        "Jiazhen Pan"
+      ],
+      "abstract": "Currently, evaluating vision-language models (VLMs) in medical imaging tasks oversimplifies clinical reality by relying on pre-selected 2D images that demand significant manual labor to curate. This setup misses the core challenge of realworld diagnostics: a true clinical agent must actively navigate full 3D volumes across multiple sequences or modalities to gather evidence and ultimately support a final decision. To address this, we propose MEDOPENCLAW, an auditable runtime designed to let VLMs operate dynamically within standard medical tools or viewers (e.g., 3D Slicer). On top of this runtime, we introduce MEDFLOWBENCH, a full-study medical imaging benchmark covering multi-sequence brain MRI and lung CT/PET. It systematically evaluates medical agentic capabilities across viewer-only, tool-use, and open-method tracks. Initial results reveal a critical insight: while state-of-the-art LLMs/VLMs (e.g., Gemini 3.1 Pro and GPT-5.4) can successfully navigate the viewer to solve basic study-level tasks, their performance paradoxically degrades when given access to professional support tools due to a lack of precise spatial grounding. By bridging the gap between static-image perception and interactive clinical workflows, MEDOPENCLAW and MEDFLOWBENCH establish a reproducible foundation for developing auditable, full-study medical imaging agents.",
+      "published_date": "2026-03-25T17:33:58.000Z",
+      "url": "https://arxiv.org/abs/2603.24649",
+      "pdf_url": "https://arxiv.org/pdf/2603.24649",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.24649",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "MedOpenClaw: 审核医疗影像代理在未整理全研究上的推理",
+        "chinese_summary": "提出MedOpenClaw，一种可审计的运行时，让VLMs在标准医疗工具或查看器中动态操作，评估其在多序列脑MRI和肺CT/PET中的医疗代理能力。",
+        "pain_point": "现有评估方法仅依赖预选的2D图像，忽视了真实临床诊断中导航全3D体积的需求。",
+        "core_value": "MedOpenClaw提供了一个系统来评估VLMs在医疗工具和查看器中的表现，揭示了其在使用专业工具时的性能下降。",
+        "technical_architecture": "MedOpenClaw基于一个可审计的运行时，支持VLMs在标准医疗工具或查看器中动态操作。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前结果仅基于初步实验，未来需进一步验证。",
+        "key_contributions": [
+          "提出MedOpenClaw，一种可审计的运行时",
+          "构建MEDFLOWBENCH，一个全面的医疗影像基准",
+          "揭示了VLMs在使用专业工具时的性能下降"
+        ],
+        "application_scenarios": [
+          "多序列脑MRI诊断",
+          "肺CT/PET诊断"
+        ],
+        "technical_highlights": [
+          "支持VLMs在标准医疗工具或查看器中动态操作",
+          "系统性评估医疗代理能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.25804",
+      "source": "huggingface",
+      "title": "RealChart2Code: Advancing Chart-to-Code Generation with Real Data and Multi-Task Evaluation",
+      "authors": [
+        "Jiajun Zhang",
+        "Yuying Li",
+        "Zhixun Li",
+        "Xingyu Guo",
+        "Jingzhuo Wu",
+        "Leqi Zheng",
+        "Yiran Yang",
+        "Jianke Zhang",
+        "Qingbin Li",
+        "Shannan Yan",
+        "Zhetong Li",
+        "Changguo Jia",
+        "Junfei Wu",
+        "Zilei Wang",
+        "Qiang Liu",
+        "Liang Wang"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have demonstrated impressive capabilities in code generation across various domains. However, their ability to replicate complex, multi-panel visualizations from real-world data remains largely unassessed. To address this gap, we introduce \\texttt{RealChart2Code}, a new large-scale benchmark with over 2,800 instances grounded in authentic datasets and featuring tasks with clear analytical intent. Crucially, it is the first benchmark to systematically evaluate chart generation from large-scale raw data and assess iterative code refinement in a multi-turn conversational setting. Our comprehensive evaluation of 14 leading VLMs on RealChart2Code reveals significant performance degradation compared to simpler benchmarks, highlighting their struggles with complex plot structures and authentic data. Our analysis uncovers a substantial performance gap between proprietary and open-weight models and confirms that even state-of-the-art VLMs often fail to accurately replicate intricate, multi-panel charts. These findings provide valuable insights into the current limitations of VLMs and guide future research directions. We release the benchmark and code at https://github.com/Speakn0w/RealChart2Code.",
+      "published_date": "2026-03-26T18:11:46.000Z",
+      "url": "https://arxiv.org/abs/2603.25804",
+      "pdf_url": "https://arxiv.org/pdf/2603.25804",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25804",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "RealChart2Code: 提升基于真实数据的图表到代码生成",
+        "chinese_summary": "首次系统评估VLMs在真实数据上的图表生成能力，揭示其在复杂图表结构上的局限性。",
+        "pain_point": "现有VLMs在生成复杂多面板图表时表现不佳。",
+        "core_value": "提供首个基于真实数据的大规模图表生成基准，评估迭代代码优化。",
+        "technical_architecture": "采用多任务评估方法，涵盖真实数据和多轮对话。",
+        "quantitative_results": "14种领先VLMs在RealChart2Code上的表现显著低于简单基准。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了部分VLMs，未来需扩展模型范围。",
+        "key_contributions": [
+          "提供首个基于真实数据的大规模图表生成基准",
+          "首次系统评估VLMs在复杂图表生成上的能力"
+        ],
+        "application_scenarios": [
+          "代码生成",
+          "数据可视化"
+        ],
+        "technical_highlights": [
+          "多任务评估方法",
+          "多轮对话迭代优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.23607",
+      "source": "huggingface",
+      "title": "LongTail Driving Scenarios with Reasoning Traces: The KITScenes LongTail Dataset",
+      "authors": [
+        "Royden Wagner",
+        "Omer Sahin Tas",
+        "Jaime Villa",
+        "Felix Hauser",
+        "Yinzhe Shen",
+        "Marlon Steiner",
+        "Dominik Strutz",
+        "Carlos Fernandez",
+        "Christian Kinzig",
+        "Guillermo S. Guitierrez-Cabello",
+        "Hendrik Königshof",
+        "Fabian Immel",
+        "Richard Schwarzkopf",
+        "Nils Alexander Rack",
+        "Kevin Rösch",
+        "Kaiwen Wang",
+        "Jan-Hendrik Pauls",
+        "Martin Lauer",
+        "Igor Gilitschenski",
+        "Holger Caesar",
+        "Christoph Stiller"
+      ],
+      "abstract": "In real-world domains such as self-driving, generalization to rare scenarios remains a fundamental challenge. To address this, we introduce a new dataset designed for end-to-end driving that focuses on long-tail driving events. We provide multi-view video data, trajectories, high-level instructions, and detailed reasoning traces, facilitating in-context learning and few-shot generalization. The resulting benchmark for multimodal models, such as VLMs and VLAs, goes beyond safety and comfort metrics by evaluating instruction following and semantic coherence between model outputs. The multilingual reasoning traces in English, Spanish, and Chinese are from domain experts with diverse cultural backgrounds. Thus, our dataset is a unique resource for studying how different forms of reasoning affect driving competence. Our dataset is available at: https://hf.co/datasets/kit-mrt/kitscenes-longtail",
+      "published_date": "2026-03-24T18:00:08.000Z",
+      "url": "https://arxiv.org/abs/2603.23607",
+      "pdf_url": "https://arxiv.org/pdf/2603.23607",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.23607",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 12,
+      "hot_score": 120,
+      "structured_summary": {
+        "chinese_title": "长尾驾驶场景及其推理轨迹：KITScenes长尾数据集",
+        "chinese_summary": "提供多视图视频数据、轨迹、高级指令和详细推理轨迹，促进在上下文学习和少量样本泛化。",
+        "pain_point": "自动驾驶领域中对罕见场景的泛化能力不足。",
+        "core_value": "通过评估指令遵循和模型输出语义一致性，超越了安全和舒适性指标。",
+        "technical_architecture": "提供多视图视频数据和详细推理轨迹，支持多模态模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅提供多语言推理轨迹，未来可扩展更多语言。",
+        "key_contributions": [
+          "提供长尾驾驶事件的数据集",
+          "包含多语言推理轨迹",
+          "促进模型在罕见场景下的泛化"
+        ],
+        "application_scenarios": [
+          "自动驾驶",
+          "智能交通"
+        ],
+        "technical_highlights": [
+          "多视图视频数据",
+          "详细推理轨迹"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.25723",
+      "source": "huggingface",
+      "title": "Natural-Language Agent Harnesses",
+      "authors": [
+        "Linyue Pan",
+        "Lexiao Zou",
+        "Shuo Guo",
+        "Jingchen Ni",
+        "Hai-Tao Zheng"
+      ],
+      "abstract": "Agent performance increasingly depends on harness engineering, yet harness design is usually buried in controller code and runtime-specific conventions, making it hard to transfer, compare, and study as a scientific object. We ask whether the high-level control logic of an agent harness can instead be externalized as a portable executable artifact. We introduce Natural-Language Agent Harnesses (NLAHs), which express harness behavior in editable natural language, and Intelligent Harness Runtime (IHR), a shared runtime that executes these harnesses through explicit contracts, durable artifacts, and lightweight adapters. Across coding and computer-use benchmarks, we conduct controlled evaluations of operational viability, module ablation, and code-to-text harness migration.",
+      "published_date": "2026-03-26T17:58:15.000Z",
+      "url": "https://arxiv.org/abs/2603.25723",
+      "pdf_url": "https://arxiv.org/pdf/2603.25723",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25723",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 11,
+      "hot_score": 110,
+      "structured_summary": {
+        "chinese_title": "自然语言代理框架",
+        "chinese_summary": "提出自然语言代理框架，使其控制逻辑可编辑且可移植。",
+        "pain_point": "代理性能依赖于难以转移和研究的框架设计。",
+        "core_value": "通过自然语言表达代理框架行为，提高框架的可移植性和可研究性。",
+        "technical_architecture": "引入自然语言代理框架和智能代理运行时，通过明确合约、持久化构件和轻量适配器执行框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索框架在更广泛场景下的应用。",
+        "key_contributions": [
+          "提出自然语言代理框架",
+          "引入智能代理运行时",
+          "实现框架行为的可编辑和可移植"
+        ],
+        "application_scenarios": [
+          "代理控制逻辑的外部化",
+          "代码和计算机使用基准测试"
+        ],
+        "technical_highlights": [
+          "自然语言表达框架行为",
+          "智能代理运行时执行框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.22782",
+      "source": "huggingface",
+      "title": "Know3D: Prompting 3D Generation with Knowledge from Vision-Language Models",
+      "authors": [
+        "Wenyue Chen",
+        "Wenjue Chen",
+        "Peng Li",
+        "Qinghe Wang",
+        "Xu Jia",
+        "Heliang Zheng",
+        "Rongfei Jia",
+        "Yuan Liu",
+        "Ronggang Wang"
+      ],
+      "abstract": "Recent advances in 3D generation have improved the fidelity and geometric details of synthesized 3D assets. However, due to the inherent ambiguity of single-view observations and the lack of robust global structural priors caused by limited 3D training data, the unseen regions generated by existing models are often stochastic and difficult to control, which may sometimes fail to align with user intentions or produce implausible geometries. In this paper, we propose Know3D, a novel framework that incorporates rich knowledge from multimodal large language models into 3D generative processes via latent hidden-state injection, enabling language-controllable generation of the back-view for 3D assets. We utilize a VLM-diffusion-based model, where the VLM is responsible for semantic understanding and guidance. The diffusion model acts as a bridge that transfers semantic knowledge from the VLM to the 3D generation model. In this way, we successfully bridge the gap between abstract textual instructions and the geometric reconstruction of unobserved regions, transforming the traditionally stochastic back-view hallucination into a semantically controllable process, demonstrating a promising direction for future 3D generation models.",
+      "published_date": "2026-03-24T04:18:29.000Z",
+      "url": "https://arxiv.org/abs/2603.22782",
+      "pdf_url": "https://arxiv.org/pdf/2603.22782",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.22782",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": {
+        "chinese_title": "Know3D: 使用视觉-语言模型知识进行3D生成的提示",
+        "chinese_summary": "通过引入视觉-语言模型的知识，Know3D实现了可控的3D资产后视图生成。",
+        "pain_point": "现有3D生成模型难以控制未观察区域的生成，导致不一致或不合理的结果。",
+        "core_value": "Know3D将语义知识注入到3D生成过程中，实现了语义可控的后视图生成。",
+        "technical_architecture": "采用VLM-diffusion模型，VLM负责语义理解和指导，扩散模型负责知识转移。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了实验，未来需扩展到更多应用。",
+        "key_contributions": [
+          "引入视觉-语言模型知识进行3D生成",
+          "实现语义可控的后视图生成",
+          "通过扩散模型转移语义知识"
+        ],
+        "application_scenarios": [
+          "3D建模",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "利用VLM进行语义理解与指导",
+          "扩散模型实现知识转移"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.25750",
+      "source": "huggingface",
+      "title": "Sommelier: Scalable Open Multi-turn Audio Pre-processing for Full-duplex Speech Language Models",
+      "authors": [
+        "Kyudan Jung",
+        "Jihwan Kim",
+        "Soyoon Kim",
+        "Jeongoon Kim",
+        "Jaegul Choo",
+        "Cheonbok Park"
+      ],
+      "abstract": "As the paradigm of AI shifts from text-based LLMs to Speech Language Models (SLMs), there is a growing demand for full-duplex systems capable of real-time, natural human-computer interaction. However, the development of such models is constrained by the scarcity of high-quality, multi-speaker conversational data, as existing large-scale resources are predominantly single-speaker or limited in volume. Addressing the complex dynamics of natural dialogue, such as overlapping and back-channeling remains a challenge, with standard processing pipelines suffering from diarization errors and ASR hallucinations. To bridge this gap, we present a robust and scalable open-source data processing pipeline designed for full-duplex model.",
+      "published_date": "2026-03-20T09:10:43.000Z",
+      "url": "https://arxiv.org/abs/2603.25750",
+      "pdf_url": "https://arxiv.org/pdf/2603.25750",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25750",
+      "category": "llm",
+      "tags": [
+        "cs.SD",
+        "cs.AI",
+        "eess.AS"
+      ],
+      "upvotes": 8,
+      "hot_score": 80,
+      "structured_summary": {
+        "chinese_title": "Sommelier: 面向全双工模型的可扩展开放多轮音频预处理",
+        "chinese_summary": "提出了一种用于全双工模型的稳健且可扩展的开放源代码数据处理管道，以解决自然对话中的复杂动态问题。",
+        "pain_point": "现有数据资源稀缺，难以处理自然对话中的重叠和回话插话。",
+        "core_value": "提供了一种解决多说话人对话数据预处理问题的方法，提高全双工模型的性能。",
+        "technical_architecture": "设计了一种开放源代码的多轮音频预处理管道。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步优化处理复杂对话场景的能力。",
+        "key_contributions": [
+          "提出了一种新的数据处理管道",
+          "解决了多说话人对话数据的预处理问题"
+        ],
+        "application_scenarios": [
+          "全双工语音助手",
+          "实时对话系统"
+        ],
+        "technical_highlights": [
+          "可扩展的开放源代码架构",
+          "处理多说话人对话数据"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+{
+  "date": "2026-04-02",
+  "generated_at": "2026-04-02T23:37:03.239967+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.24414",
+      "source": "huggingface",
+      "title": "ClawKeeper: Comprehensive Safety Protection for OpenClaw Agents Through Skills, Plugins, and Watchers",
+      "authors": [
+        "Songyang Liu",
+        "Chaozhuo Li",
+        "Chenxu Wang",
+        "Jinyu Hou",
+        "Zejian Chen",
+        "Litian Zhang",
+        "Zheng Liu",
+        "Qiwei Ye",
+        "Yiming Hei",
+        "Xi Zhang",
+        "Zhongyuan Wang"
+      ],
+      "abstract": "OpenClaw has rapidly established itself as a leading open-source autonomous agent runtime, offering powerful capabilities including tool integration, local file access, and shell command execution. However, these broad operational privileges introduce critical security vulnerabilities, transforming model errors into tangible system-level threats such as sensitive data leakage, privilege escalation, and malicious third-party skill execution. Existing security measures for the OpenClaw ecosystem remain highly fragmented, addressing only isolated stages of the agent lifecycle rather than providing holistic protection. To bridge this gap, we present ClawKeeper, a real-time security framework that integrates multi-dimensional protection mechanisms across three complementary architectural layers. (1) Skill-based protection operates at the instruction level, injecting structured security policies directly into the agent context to enforce environment-specific constraints and cross-platform boundaries. (2) Plugin-based protection serves as an internal runtime enforcer, providing configuration hardening, proactive threat detection, and continuous behavioral monitoring throughout the execution pipeline. (3) Watcher-based protection introduces a novel, decoupled system-level security middleware that continuously verifies agent state evolution. It enables real-time execution intervention without coupling to the agent's internal logic, supporting operations such as halting high-risk actions or enforcing human confirmation. We argue that this Watcher paradigm holds strong potential to serve as a foundational building block for securing next-generation autonomous agent systems. Extensive qualitative and quantitative evaluations demonstrate the effectiveness and robustness of ClawKeeper across diverse threat scenarios. We release our code.",
+      "published_date": "2026-03-25T15:27:54.000Z",
+      "url": "https://arxiv.org/abs/2603.24414",
+      "pdf_url": "https://arxiv.org/pdf/2603.24414",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.24414",
+      "category": "llm",
+      "tags": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "upvotes": 166,
+      "hot_score": 1660,
+      "structured_summary": {
+        "chinese_title": "ClawKeeper: 通过技能、插件和观察者实现OpenClaw代理的全面安全保护",
+        "chinese_summary": "ClawKeeper 提供了针对 OpenClaw 代理的全面实时安全保护。",
+        "pain_point": "OpenClaw 的广泛操作权限引入了严重的安全漏洞，如敏感数据泄露和权限提升。",
+        "core_value": "通过多维度保护机制提供端到端的安全保护，增强 OpenClaw 的安全性。",
+        "technical_architecture": "采用技能、插件和观察者三层架构，实现多层次的安全保护。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步测试和优化。",
+        "key_contributions": [
+          "引入技能保护机制",
+          "开发插件保护框架",
+          "设计观察者监控系统"
+        ],
+        "application_scenarios": [
+          "自主代理运行时保护",
+          "敏感数据保护"
+        ],
+        "technical_highlights": [
+          "多层次安全保护",
+          "实时威胁检测"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.00073",
+      "source": "huggingface",
+      "title": "Terminal Agents Suffice for Enterprise Automation",
+      "authors": [
+        "Patrice Bechard",
+        "Orlando Marquez Ayala",
+        "Emily Chen",
+        "Jordan Skelton",
+        "Sagar Davasam",
+        "Srinivas Sunkara",
+        "Vikas Yadav",
+        "Sai Rajeswar"
+      ],
+      "abstract": "There has been growing interest in building agents that can interact with digital platforms to execute meaningful enterprise tasks autonomously. Among the approaches explored are tool-augmented agents built on abstractions such as Model Context Protocol (MCP) and web agents that operate through graphical interfaces. Yet, it remains unclear whether such complex agentic systems are necessary given their cost and operational overhead. We argue that a coding agent equipped only with a terminal and a filesystem can solve many enterprise tasks more effectively by interacting directly with platform APIs. We evaluate this hypothesis across diverse real-world systems and show that these low-level terminal agents match or outperform more complex agent architectures. Our findings suggest that simple programmatic interfaces, combined with strong foundation models, are sufficient for practical enterprise automation.",
+      "published_date": "2026-03-31T14:14:47.000Z",
+      "url": "https://arxiv.org/abs/2604.00073",
+      "pdf_url": "https://arxiv.org/pdf/2604.00073",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.00073",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 68,
+      "hot_score": 680,
+      "structured_summary": {
+        "chinese_title": "终端代理足以实现企业自动化",
+        "chinese_summary": "简单的终端代理比复杂的代理架构更有效执行企业任务。",
+        "pain_point": "现有复杂代理架构成本高且操作复杂。",
+        "core_value": "终端代理通过直接与平台API交互，实现高效的企业自动化。",
+        "technical_architecture": "仅需终端和文件系统即可实现。",
+        "quantitative_results": "低级终端代理在多种实际系统中表现优于复杂架构。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提出简单终端代理可以有效执行企业任务",
+          "证明低级代理优于复杂架构"
+        ],
+        "application_scenarios": [
+          "企业自动化",
+          "任务执行"
+        ],
+        "technical_highlights": [
+          "直接与平台API交互",
+          "低成本高效率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.28407",
+      "source": "huggingface",
+      "title": "MiroEval: Benchmarking Multimodal Deep Research Agents in Process and Outcome",
+      "authors": [
+        "Fangda Ye",
+        "Yuxin Hu",
+        "Pengxiang Zhu",
+        "Yibo Li",
+        "Ziqi Jin",
+        "Yao Xiao",
+        "Yibo Wang",
+        "Lei Wang",
+        "Zhen Zhang",
+        "Lu Wang",
+        "Yue Deng",
+        "Bin Wang",
+        "Yifan Zhang",
+        "Liangcai Su",
+        "Xinyu Wang",
+        "He Zhao",
+        "Chen Wei",
+        "Qiang Ren",
+        "Bryan Hooi",
+        "An Bo",
+        "Shuicheng Yan",
+        "Lidong Bing"
+      ],
+      "abstract": "Recent progress in deep research systems has been impressive, but evaluation still lags behind real user needs. Existing benchmarks predominantly assess final reports using fixed rubrics, failing to evaluate the underlying research process. Most also offer limited multimodal coverage, rely on synthetic tasks that do not reflect real-world query complexity, and cannot be refreshed as knowledge evolves. To address these gaps, we introduce MiroEval, a benchmark and evaluation framework for deep research systems. The benchmark comprises 100 tasks (70 text-only, 30 multimodal), all grounded in real user needs and constructed via a dual-path pipeline that supports periodic updates, enabling a live and evolving setting. The proposed evaluation suite assesses deep research systems along three complementary dimensions: adaptive synthesis quality evaluation with task-specific rubrics, agentic factuality verification via active retrieval and reasoning over both web sources and multimodal attachments, and process-centric evaluation audits how the system searches, reasons, and refines throughout its investigation. Evaluation across 13 systems yields three principal findings: the three evaluation dimensions capture complementary aspects of system capability, with each revealing distinct strengths and weaknesses across systems; process quality serves as a reliable predictor of overall outcome while revealing weaknesses invisible to output-level metrics; and multimodal tasks pose substantially greater challenges, with most systems declining by 3 to 10 points. The MiroThinker series achieves the most balanced performance, with MiroThinker-H1 ranking the highest overall in both settings. Human verification and robustness results confirm the reliability of the benchmark and evaluation framework. MiroEval provides a holistic diagnostic tool for the next generation of deep research agents.",
+      "published_date": "2026-03-30T13:16:03.000Z",
+      "url": "https://arxiv.org/abs/2603.28407",
+      "pdf_url": "https://arxiv.org/pdf/2603.28407",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.28407",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 52,
+      "hot_score": 520,
+      "structured_summary": {
+        "chinese_title": "MiroEval: 多模态深度研究代理的过程与结果基准测试",
+        "chinese_summary": "MiroEval 是一个基准和评估框架，用于评估深度研究系统，涵盖 100 个任务，评估维度包括自适应合成质量、事实验证和过程评估。",
+        "pain_point": "现有基准主要评估最终报告，忽视了研究过程，且缺乏真实世界复杂查询的覆盖。",
+        "core_value": "MiroEval 提供了一个全面的评估框架，涵盖真实用户需求和多模态数据，支持定期更新。",
+        "technical_architecture": "通过双路径管道构建任务，支持定期更新，评估系统在搜索、推理和细化过程中的表现。",
+        "quantitative_results": "评估 13 个系统，揭示了三个主要发现。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多系统参与以进一步验证评估框架的有效性。",
+        "key_contributions": [
+          "提出了一个多模态深度研究代理的评估框架",
+          "涵盖了真实用户需求和多模态数据的任务",
+          "支持定期更新的评估机制"
+        ],
+        "application_scenarios": [
+          "深度研究系统的评估",
+          "多模态数据处理与分析"
+        ],
+        "technical_highlights": [
+          "双路径管道构建任务",
+          "多维度评估系统性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.25823",
+      "source": "huggingface",
+      "title": "ViGoR-Bench: How Far Are Visual Generative Models From Zero-Shot Visual Reasoners?",
+      "authors": [
+        "Haonan Han",
+        "Jiancheng Huang",
+        "Xiaopeng Sun",
+        "Junyan He",
+        "Rui Yang",
+        "Jie Hu",
+        "Xiaojiang Peng",
+        "Lin Ma",
+        "Xiaoming Wei",
+        "Xiu Li"
+      ],
+      "abstract": "Beneath the stunning visual fidelity of modern AIGC models lies a \"logical desert\", where systems fail tasks that require physical, causal, or complex spatial reasoning. Current evaluations largely rely on superficial metrics or fragmented benchmarks, creating a ``performance mirage'' that overlooks the generative process. To address this, we introduce ViGoR Vision-G}nerative Reasoning-centric Benchmark), a unified framework designed to dismantle this mirage. ViGoR distinguishes itself through four key innovations: 1) holistic cross-modal coverage bridging Image-to-Image and Video tasks; 2) a dual-track mechanism evaluating both intermediate processes and final results; 3) an evidence-grounded automated judge ensuring high human alignment; and 4) granular diagnostic analysis that decomposes performance into fine-grained cognitive dimensions. Experiments on over 20 leading models reveal that even state-of-the-art systems harbor significant reasoning deficits, establishing ViGoR as a critical ``stress test'' for the next generation of intelligent vision models. The demo have been available at https://vincenthancoder.github.io/ViGoR-Bench/",
+      "published_date": "2026-03-26T18:40:09.000Z",
+      "url": "https://arxiv.org/abs/2603.25823",
+      "pdf_url": "https://arxiv.org/pdf/2603.25823",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25823",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": {
+        "chinese_title": "ViGoR-Bench: 视觉生成模型与零样本视觉推理器之间的差距有多大？",
+        "chinese_summary": "ViGoR-Bench 提供了一个新的基准来评估视觉生成模型的推理能力。",
+        "pain_point": "现有评估方法忽视了生成过程中的推理能力，导致对模型性能的误解。",
+        "core_value": "通过多模态覆盖、过程和结果评估、自动化评分和细粒度分析，ViGoR-Bench 提供了更全面的评估。",
+        "technical_architecture": "ViGoR-Bench 采用多模态覆盖和细粒度分析方法。",
+        "quantitative_results": "实验表明，最先进的模型在推理方面存在显著缺陷。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多模型参与测试以进一步验证结果。",
+        "key_contributions": [
+          "提供了一个新的多模态推理基准",
+          "引入了过程和结果的双重评估机制",
+          "使用自动化评分确保高人类一致性"
+        ],
+        "application_scenarios": [
+          "视觉生成模型的评估",
+          "零样本视觉推理器的评估"
+        ],
+        "technical_highlights": [
+          "证据支持的自动化评分",
+          "细粒度的认知维度分解"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.26648",
+      "source": "huggingface",
+      "title": "Vision2Web: A Hierarchical Benchmark for Visual Website Development with Agent Verification",
+      "authors": [
+        "Zehai He",
+        "Wenyi Hong",
+        "Zhen Yang",
+        "Ziyang Pan",
+        "Mingdao Liu",
+        "Xiaotao Gu",
+        "Jie Tang"
+      ],
+      "abstract": "Recent advances in large language models have improved the capabilities of coding agents, yet systematic evaluation of complex, end-to-end website development remains limited. To address this gap, we introduce Vision2Web, a hierarchical benchmark for visual website development, spanning from static UI-to-code generation, interactive multi-page frontend reproduction, to long-horizon full-stack website development. The benchmark is constructed from real-world websites and comprises a total of 193 tasks across 16 categories, with 918 prototype images and 1,255 test cases. To support flexible, thorough and reliable evaluation, we propose workflow-based agent verification paradigm based on two complementary components: a GUI agent verifier and a VLM-based judge. We evaluate multiple visual language models instantiated under different coding-agent frameworks, revealing substantial performance gaps at all task levels, with state-of-the-art models still struggling on full-stack development.",
+      "published_date": "2026-03-27T17:50:45.000Z",
+      "url": "https://arxiv.org/abs/2603.26648",
+      "pdf_url": "https://arxiv.org/pdf/2603.26648",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.26648",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "upvotes": 32,
+      "hot_score": 320,
+      "structured_summary": {
+        "chinese_title": "Vision2Web：面向代理验证的视觉网站开发层次基准",
+        "chinese_summary": "提出了一种新的基准测试，用于评估视觉网站开发能力。",
+        "pain_point": "现有评估方法对复杂、端到端的网站开发系统性评估不足。",
+        "core_value": "提供了一个多层次的基准测试，涵盖从静态UI到全栈开发的多种任务。",
+        "technical_architecture": "基于工作流的代理验证框架，结合GUI代理验证器和VLM判别器。",
+        "quantitative_results": "展示了不同视觉语言模型在各任务级别上的显著性能差异。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了部分视觉语言模型。",
+        "key_contributions": [
+          "提出了一个新的多层次基准测试",
+          "设计了基于工作流的代理验证框架",
+          "涵盖了从静态UI到全栈开发的多种任务"
+        ],
+        "application_scenarios": [
+          "视觉网站开发评估",
+          "代理验证"
+        ],
+        "technical_highlights": [
+          "多层次任务设计",
+          "GUI代理验证器与VLM判别器结合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.26017",
+      "source": "huggingface",
+      "title": "QuitoBench: A High-Quality Open Time Series Forecasting Benchmark",
+      "authors": [
+        "Siqiao Xue",
+        "Zhaoyang Zhu",
+        "Wei Zhang",
+        "Rongyao Cai",
+        "Rui Wang",
+        "Yixiang Mu",
+        "Fan Zhou",
+        "Jianguo Li",
+        "Peng Di",
+        "Hang Yu"
+      ],
+      "abstract": "Time series forecasting is critical across finance, healthcare, and cloud computing, yet progress is constrained by a fundamental bottleneck: the scarcity of large-scale, high-quality benchmarks. To address this gap, we introduce QuitoBench, a regime-balanced benchmark for time series forecasting with coverage across eight trendtimesseasonalitytimesforecastability (TSF) regimes, designed to capture forecasting-relevant properties rather than application-defined domain labels. The benchmark is built upon Quito, a billion-scale time series corpus of application traffic from Alipay spanning nine business domains. Benchmarking 10 models from deep learning, foundation models, and statistical baselines across 232,200 evaluation instances, we report four key findings: (i) a context-length crossover where deep learning models lead at short context (L=96) but foundation models dominate at long context (L ge 576); (ii) forecastability is the dominant difficulty driver, producing a 3.64 times MAE gap across regimes; (iii) deep learning models match or surpass foundation models at 59 times fewer parameters; and (iv) scaling the amount of training data provides substantially greater benefit than scaling model size for both model families. These findings are validated by strong cross-benchmark and cross-metric consistency. Our open-source release enables reproducible, regime-aware evaluation for time series forecasting research.",
+      "published_date": "2026-03-27T02:24:34.000Z",
+      "url": "https://arxiv.org/abs/2603.26017",
+      "pdf_url": "https://arxiv.org/pdf/2603.26017",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.26017",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "QuitoBench: 一个高质量开放时间序列预测基准",
+        "chinese_summary": "提出了一个包含八大趋势时间序列预测基准，旨在捕捉预测相关属性而非应用定义领域标签。",
+        "pain_point": "时间序列预测领域缺乏大规模高质量基准，限制了进展。",
+        "core_value": "提供了全面覆盖时间序列预测属性的基准，有助于模型性能评估。",
+        "technical_architecture": "基于Alipay的应用流量构建了一个亿级时间序列数据集。",
+        "quantitative_results": "报告了四种关键发现，包括上下文长度交叉、可预测性主导难度、参数量对比和数据量扩展效益。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能涉及更多应用场景的扩展。",
+        "key_contributions": [
+          "提供了一个全面覆盖时间序列预测属性的基准",
+          "展示了不同模型在不同上下文长度的表现"
+        ],
+        "application_scenarios": [
+          "金融",
+          "医疗",
+          "云计算"
+        ],
+        "technical_highlights": [
+          "亿级规模的时间序列数据集",
+          "八大趋势时间序列预测基准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01161",
+      "source": "huggingface",
+      "title": "Reasoning Shift: How Context Silently Shortens LLM Reasoning",
+      "authors": [
+        "Gleb Rodionov"
+      ],
+      "abstract": "Large language models (LLMs) exhibiting test-time scaling behavior, such as extended reasoning traces and self-verification, have demonstrated remarkable performance on complex, long-term reasoning tasks. However, the robustness of these reasoning behaviors remains underexplored. To investigate this, we conduct a systematic evaluation of multiple reasoning models across three scenarios: (1) problems augmented with lengthy, irrelevant context; (2) multi-turn conversational settings with independent tasks; and (3) problems presented as a subtask within a complex task. We observe an interesting phenomenon: reasoning models tend to produce much shorter reasoning traces (up to 50%) for the same problem under different context conditions compared to the traces produced when the problem is presented in isolation. A finer-grained analysis reveals that this compression is associated with a decrease in self-verification and uncertainty management behaviors, such as double-checking. While this behavioral shift does not compromise performance on straightforward problems, it might affect performance on more challenging tasks. We hope our findings draw additional attention to both the robustness of reasoning models and the problem of context management for LLMs and LLM-based agents.",
+      "published_date": "2026-04-01T17:14:18.000Z",
+      "url": "https://arxiv.org/abs/2604.01161",
+      "pdf_url": "https://arxiv.org/pdf/2604.01161",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01161",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "推理转变：上下文如何悄然缩短大模型推理",
+        "chinese_summary": "研究发现，大模型在不同上下文条件下推理时，推理过程显著缩短，影响自验证行为，但不影响简单问题性能。",
+        "pain_point": "大模型在复杂推理任务中的鲁棒性尚未充分研究。",
+        "core_value": "揭示了推理过程在不同上下文条件下的压缩现象及其对模型行为的影响。",
+        "technical_architecture": "通过系统评估多个推理模型在不同场景下的表现。",
+        "quantitative_results": "推理过程缩短高达50%，自验证行为减少。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了评估。",
+        "key_contributions": [
+          "发现推理过程在不同上下文条件下的压缩现象",
+          "分析了压缩现象对模型行为的影响"
+        ],
+        "application_scenarios": [
+          "复杂推理任务",
+          "多轮对话场景"
+        ],
+        "technical_highlights": [
+          "系统评估不同场景下的推理模型",
+          "揭示推理过程压缩现象及其影响"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01221",
+      "source": "huggingface",
+      "title": "HippoCamp: Benchmarking Contextual Agents on Personal Computers",
+      "authors": [
+        "Zhe Yang",
+        "Shulin Tian",
+        "Kairui Hu",
+        "Shuai Liu",
+        "Hoang-Nhat Nguyen",
+        "Yichi Zhang",
+        "Zujin Guo",
+        "Mengying Yu",
+        "Zinan Zhang",
+        "Jingkang Yang",
+        "Chen Change Loy",
+        "Ziwei Liu"
+      ],
+      "abstract": "We present HippoCamp, a new benchmark designed to evaluate agents' capabilities on multimodal file management. Unlike existing agent benchmarks that focus on tasks like web interaction, tool use, or software automation in generic settings, HippoCamp evaluates agents in user-centric environments to model individual user profiles and search massive personal files for context-aware reasoning. Our benchmark instantiates device-scale file systems over real-world profiles spanning diverse modalities, comprising 42.4 GB of data across over 2K real-world files. Building upon the raw files, we construct 581 QA pairs to assess agents' capabilities in search, evidence perception, and multi-step reasoning. To facilitate fine-grained analysis, we provide 46.1K densely annotated structured trajectories for step-wise failure diagnosis. We evaluate a wide range of state-of-the-art multimodal large language models (MLLMs) and agentic methods on HippoCamp. Our comprehensive experiments reveal a significant performance gap: even the most advanced commercial models achieve only 48.3% accuracy in user profiling, struggling particularly with long-horizon retrieval and cross-modal reasoning within dense personal file systems. Furthermore, our step-wise failure diagnosis identifies multimodal perception and evidence grounding as the primary bottlenecks. Ultimately, HippoCamp exposes the critical limitations of current agents in realistic, user-centric environments and provides a robust foundation for developing next-generation personal AI assistants.",
+      "published_date": "2026-04-01T17:58:33.000Z",
+      "url": "https://arxiv.org/abs/2604.01221",
+      "pdf_url": "https://arxiv.org/pdf/2604.01221",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01221",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "HippoCamp：评估个人电脑上上下文代理能力的新基准",
+        "chinese_summary": "HippoCamp 评估代理在个人文件管理中的多模态能力。",
+        "pain_point": "现有代理基准主要关注通用环境下的任务，而忽视了用户中心的个人文件管理需求。",
+        "core_value": "提供用户中心的环境来评估代理的个人文件管理能力。",
+        "technical_architecture": "构建大规模真实用户文件系统并设计多模态QA对。",
+        "quantitative_results": "最先进的模型在用户建模上的准确率仅为48.3%。",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集规模和多样性有待进一步扩展。",
+        "key_contributions": [
+          "提出用户中心的文件管理基准",
+          "提供大规模多模态数据集",
+          "评估多模态大语言模型和代理方法"
+        ],
+        "application_scenarios": [
+          "个人文件管理",
+          "多模态代理评估"
+        ],
+        "technical_highlights": [
+          "真实用户文件系统",
+          "多模态QA对",
+          "详细标注的失败诊断轨迹"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.00025",
+      "source": "huggingface",
+      "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
+      "authors": [
+        "MD Azizul Hakim"
+      ],
+      "abstract": "Standard evaluation protocols reveal a counterintuitive phenomenon: on 7.7% of benchmark problems spanning five datasets, larger language models underperform smaller ones by 28.4 percentage points despite 10-100x more parameters. Through systematic evaluation of 31 models (0.5B-405B parameters) across 1,485 problems, we identify the mechanism as spontaneous scale-dependent verbosity that introduces errors through overelaboration. Causal intervention experiments demonstrate this reflects correctable prompt design rather than fundamental capability limitations. Constraining large models to produce brief responses improves accuracy by 26 percentage points and reduces performance gaps by up to two-thirds. Most critically, brevity constraints completely reverse performance hierarchies on mathematical reasoning and scientific knowledge benchmarks, with large models achieving 7.7-15.9 percentage point advantages over small models -- direct inversions of the original gaps. These reversals prove large models possess superior latent capabilities that universal prompting masks. We validate findings through three independent contamination tests and demonstrate inverse scaling operates continuously across the full parameter spectrum, with dataset-specific optimal scales ranging from 0.5B to 3.0B parameters. Our results establish that maximizing large model performance requires scale-aware prompt engineering rather than universal evaluation protocols, with immediate implications for deployment: prompt adaptation simultaneously improves accuracy and reduces computational costs.",
+      "published_date": "2026-03-11T06:47:41.000Z",
+      "url": "https://arxiv.org/abs/2604.00025",
+      "pdf_url": "https://arxiv.org/pdf/2604.00025",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.00025",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "简洁约束逆转语言模型性能层级",
+        "chinese_summary": "通过约束大模型生成简洁响应，其在数学推理和科学知识基准上的表现超越小模型。",
+        "pain_point": "大模型在某些基准任务上表现不如小模型。",
+        "core_value": "揭示大模型具有被通用提示掩盖的潜在能力。",
+        "technical_architecture": "通过系统评估不同规模模型在多种问题上的表现。",
+        "quantitative_results": "约束大模型生成简洁响应可提高准确率26个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证和拓展应用场景。",
+        "key_contributions": [
+          "发现大模型在某些任务上表现优于小模型",
+          "提出简洁约束可以提高大模型性能",
+          "揭示大模型潜在能力被通用提示掩盖"
+        ],
+        "application_scenarios": [
+          "数学推理",
+          "科学知识"
+        ],
+        "technical_highlights": [
+          "系统评估不同规模模型",
+          "简洁约束显著提升大模型性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.26653",
+      "source": "huggingface",
+      "title": "PerceptionComp: A Video Benchmark for Complex Perception-Centric Reasoning",
+      "authors": [
+        "Shaoxuan Li",
+        "Zhixuan Zhao",
+        "Hanze Deng",
+        "Zirun Ma",
+        "Shulin Tian",
+        "Zuyan Liu",
+        "Yushi Hu",
+        "Haoning Wu",
+        "Yuhao Dong",
+        "Benlin Liu",
+        "Ziwei Liu",
+        "Ranjay Krishna"
+      ],
+      "abstract": "We introduce PerceptionComp, a manually annotated benchmark for complex, long-horizon, perception-centric video reasoning. PerceptionComp is designed so that no single moment is sufficient: answering each question requires multiple temporally separated pieces of visual evidence and compositional constraints under conjunctive and sequential logic, spanning perceptual subtasks such as objects, attributes, relations, locations, actions, and events, and requiring skills including semantic recognition, visual correspondence, temporal reasoning, and spatial reasoning. The benchmark contains 1,114 highly complex questions on 279 videos from diverse domains including city walk tours, indoor villa tours, video games, and extreme outdoor sports, with 100% manual annotation. Human studies show that PerceptionComp requires substantial test-time thinking and repeated perception steps: participants take much longer than on prior benchmarks, and accuracy drops to near chance (18.97%) when rewatching is disallowed. State-of-the-art MLLMs also perform substantially worse on PerceptionComp than on existing benchmarks: the best model in our evaluation, Gemini-3-Flash, reaches only 45.96% accuracy in the five-choice setting, while open-source models remain below 40%. These results suggest that perception-centric long-horizon video reasoning remains a major bottleneck, and we hope PerceptionComp will help drive progress in perceptual reasoning.",
+      "published_date": "2026-03-27T17:54:36.000Z",
+      "url": "https://arxiv.org/abs/2603.26653",
+      "pdf_url": "https://arxiv.org/pdf/2603.26653",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.26653",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 14,
+      "hot_score": 140,
+      "structured_summary": {
+        "chinese_title": "PerceptionComp：一个复杂感知中心推理的视频基准",
+        "chinese_summary": "PerceptionComp 是一个包含 1,114 个复杂问题的视频推理基准，要求多步骤感知和逻辑推理。",
+        "pain_point": "现有基准无法充分评估模型在复杂感知中心推理任务上的能力。",
+        "core_value": "提供了全面的复杂视觉推理任务，挑战现有模型的多步骤感知和逻辑推理能力。",
+        "technical_architecture": "包含多种感知子任务和逻辑推理，如对象、属性、关系等。",
+        "quantitative_results": "最佳模型 Gemini-3-Flash 准确率仅为 45.96%，远低于现有基准。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅包含有限的视频领域，未来可扩展更多类型。",
+        "key_contributions": [
+          "提出了一个全面的复杂视频推理基准",
+          "展示了现有模型在复杂任务上的局限性"
+        ],
+        "application_scenarios": [
+          "视频理解和分析",
+          "智能监控和安全"
+        ],
+        "technical_highlights": [
+          "包含多步骤感知和逻辑推理",
+          "100% 手动标注确保高质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

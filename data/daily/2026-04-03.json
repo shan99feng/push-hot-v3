@@ -1,0 +1,539 @@
+{
+  "date": "2026-04-03",
+  "generated_at": "2026-04-03T23:39:16.856294+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2603.26164",
+      "source": "huggingface",
+      "title": "DataFlex: A Unified Framework for Data-Centric Dynamic Training of Large Language Models",
+      "authors": [
+        "Hao Liang",
+        "Zhengyang Zhao",
+        "Meiyi Qiang",
+        "Mingrui Chen",
+        "Lu Ma",
+        "Rongyi Yu",
+        "Hengyi Feng",
+        "Shixuan Sun",
+        "Zimo Meng",
+        "Xiaochen Ma",
+        "Xuanlin Yang",
+        "Qifeng Cai",
+        "Ruichuan An",
+        "Bohan Zeng",
+        "Zhen Hao Wong",
+        "Chengyu Shen",
+        "Runming He",
+        "Zhaoyang Han",
+        "Yaowei Zheng",
+        "Fangcheng Fu",
+        "Conghui He",
+        "Bin Cui",
+        "Zhiyu Li",
+        "Weinan E",
+        "Wentao Zhang"
+      ],
+      "abstract": "Data-centric training has emerged as a promising direction for improving large language models (LLMs) by optimizing not only model parameters but also the selection, composition, and weighting of training data during optimization. However, existing approaches to data selection, data mixture optimization, and data reweighting are often developed in isolated codebases with inconsistent interfaces, hindering reproducibility, fair comparison, and practical integration. In this paper, we present DataFlex, a unified data-centric dynamic training framework built upon LLaMA-Factory. DataFlex supports three major paradigms of dynamic data optimization: sample selection, domain mixture adjustment, and sample reweighting, while remaining fully compatible with the original training workflow. It provides extensible trainer abstractions and modular components, enabling a drop-in replacement for standard LLM training, and unifies key model-dependent operations such as embedding extraction, inference, and gradient computation, with support for large-scale settings including DeepSpeed ZeRO-3. We conduct comprehensive experiments across multiple data-centric methods. Dynamic data selection consistently outperforms static full-data training on MMLU across both Mistral-7B and Llama-3.2-3B. For data mixture, DoReMi and ODM improve both MMLU accuracy and corpus-level perplexity over default proportions when pretraining Qwen2.5-1.5B on SlimPajama at 6B and 30B token scales. DataFlex also achieves consistent runtime improvements over original implementations. These results demonstrate that DataFlex provides an effective, efficient, and reproducible infrastructure for data-centric dynamic training of LLMs.",
+      "published_date": "2026-03-27T08:28:02.000Z",
+      "url": "https://arxiv.org/abs/2603.26164",
+      "pdf_url": "https://arxiv.org/pdf/2603.26164",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.26164",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 138,
+      "hot_score": 1380,
+      "structured_summary": {
+        "chinese_title": "DataFlex：一种统一的数据为中心的动态训练框架",
+        "chinese_summary": "DataFlex 提供了一个统一的动态数据优化框架，支持样本选择、领域混合调整和样本重加权。",
+        "pain_point": "现有数据选择、混合优化和重加权方法独立开发，接口不一致，影响可重复性、公平比较和实际集成。",
+        "core_value": "提供统一的框架，支持多种动态数据优化方法，保持与原始训练流程兼容。",
+        "technical_architecture": "基于 LLaMA-Factory 构建，支持样本选择、领域混合调整和样本重加权。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在大规模设置中支持 DeepSpeed ZeRO-3。",
+        "key_contributions": [
+          "提供统一的动态数据优化框架",
+          "支持多种动态数据优化方法",
+          "保持与原始训练流程兼容"
+        ],
+        "application_scenarios": [
+          "大规模语言模型训练",
+          "数据优化研究"
+        ],
+        "technical_highlights": [
+          "支持多种动态数据优化方法",
+          "保持与原始训练流程兼容"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02029",
+      "source": "huggingface",
+      "title": "The Latent Space: Foundation, Evolution, Mechanism, Ability, and Outlook",
+      "authors": [
+        "Xinlei Yu",
+        "Zhangquan Chen",
+        "Yongbo He",
+        "Tianyu Fu",
+        "Cheng Yang",
+        "Chengming Xu",
+        "Yue Ma",
+        "Xiaobin Hu",
+        "Zhe Cao",
+        "Jie Xu",
+        "Guibin Zhang",
+        "Jiale Tao",
+        "Jiayi Zhang",
+        "Siyuan Ma",
+        "Kaituo Feng",
+        "Haojie Huang",
+        "Youxing Li",
+        "Ronghao Chen",
+        "Huacan Wang",
+        "Chenglin Wu",
+        "Zikun Su",
+        "Xiaogang Xu",
+        "Kelu Yao",
+        "Kun Wang",
+        "Chen Gao",
+        "Yue Liao",
+        "Ruqi Huang",
+        "Tao Jin",
+        "Cheng Tan",
+        "Jiangning Zhang",
+        "Wenqi Ren",
+        "Yanwei Fu",
+        "Yong Liu",
+        "Yu Wang",
+        "Xiangyu Yue",
+        "Yu-Gang Jiang",
+        "Shuicheng Yan"
+      ],
+      "abstract": "Latent space is rapidly emerging as a native substrate for language-based models. While modern systems are still commonly understood through explicit token-level generation, an increasing body of work shows that many critical internal processes are more naturally carried out in continuous latent space than in human-readable verbal traces. This shift is driven by the structural limitations of explicit-space computation, including linguistic redundancy, discretization bottlenecks, sequential inefficiency, and semantic loss. This survey aims to provide a unified and up-to-date landscape of latent space in language-based models. We organize the survey into five sequential perspectives: Foundation, Evolution, Mechanism, Ability, and Outlook. We begin by delineating the scope of latent space, distinguishing it from explicit or verbal space and from the latent spaces commonly studied in generative visual models. We then trace the field's evolution from early exploratory efforts to the current large-scale expansion. To organize the technical landscape, we examine existing work through the complementary lenses of mechanism and ability. From the perspective of Mechanism, we identify four major lines of development: Architecture, Representation, Computation, and Optimization. From the perspective of Ability, we show how latent space supports a broad capability spectrum spanning Reasoning, Planning, Modeling, Perception, Memory, Collaboration, and Embodiment. Beyond consolidation, we discuss the key open challenges, and outline promising directions for future research. We hope this survey serves not only as a reference for existing work, but also as a foundation for understanding latent space as a general computational and systems paradigm for next-generation intelligence.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02029",
+      "pdf_url": "https://arxiv.org/pdf/2604.02029",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02029",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 98,
+      "hot_score": 980,
+      "structured_summary": {
+        "chinese_title": "潜在空间：基础、演变、机制、能力和展望",
+        "chinese_summary": "本文提供了一个关于语言模型潜在空间的全面概述。",
+        "pain_point": "现有语言模型在处理语言冗余、离散瓶颈等问题时效率低下。",
+        "core_value": "通过潜在空间处理语言模型的内部过程，提高效率和准确性。",
+        "technical_architecture": "基于潜在空间的模型架构，替代传统的显式空间计算。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "潜在空间的应用范围和机制仍需进一步探索。",
+        "key_contributions": [
+          "提供潜在空间的全面概述",
+          "区分潜在空间与显式空间"
+        ],
+        "application_scenarios": [
+          "自然语言生成",
+          "机器翻译"
+        ],
+        "technical_highlights": [
+          "潜在空间的机制分析",
+          "潜在空间的能力评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02329",
+      "source": "huggingface",
+      "title": "Generative World Renderer",
+      "authors": [
+        "Zheng-Hui Huang",
+        "Zhixiang Wang",
+        "Jiaming Tan",
+        "Ruihan Yu",
+        "Yidan Zhang",
+        "Bo Zheng",
+        "Yu-Lun Liu",
+        "Yung-Yu Chuang",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Scaling generative inverse and forward rendering to real-world scenarios is bottlenecked by the limited realism and temporal coherence of existing synthetic datasets. To bridge this persistent domain gap, we introduce a large-scale, dynamic dataset curated from visually complex AAA games. Using a novel dual-screen stitched capture method, we extracted 4M continuous frames (720p/30 FPS) of synchronized RGB and five G-buffer channels across diverse scenes, visual effects, and environments, including adverse weather and motion-blur variants. This dataset uniquely advances bidirectional rendering: enabling robust in-the-wild geometry and material decomposition, and facilitating high-fidelity G-buffer-guided video generation. Furthermore, to evaluate the real-world performance of inverse rendering without ground truth, we propose a novel VLM-based assessment protocol measuring semantic, spatial, and temporal consistency. Experiments demonstrate that inverse renderers fine-tuned on our data achieve superior cross-dataset generalization and controllable generation, while our VLM evaluation strongly correlates with human judgment. Combined with our toolkit, our forward renderer enables users to edit styles of AAA games from G-buffers using text prompts.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02329",
+      "pdf_url": "https://arxiv.org/pdf/2604.02329",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02329",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 74,
+      "hot_score": 740,
+      "structured_summary": {
+        "chinese_title": "生成式世界渲染器",
+        "chinese_summary": "提出了一种基于复杂AAA游戏的大型动态数据集，用于增强生成式逆渲染和前向渲染的真实性和连贯性。",
+        "pain_point": "现有合成数据集在真实场景中的现实感和时间连贯性有限。",
+        "core_value": "通过引入复杂游戏数据集，提升逆渲染和前向渲染的真实性和连贯性。",
+        "technical_architecture": "使用双屏拼接捕捉方法，提取多样场景和视觉效果的连续帧。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步扩展数据集以覆盖更多场景。",
+        "key_contributions": [
+          "提出了一种新的双屏拼接捕捉方法",
+          "构建了大规模动态数据集",
+          "提出了基于VLM的评估协议"
+        ],
+        "application_scenarios": [
+          "增强现实",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "支持双向渲染",
+          "实现高保真G-缓冲引导视频生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02268",
+      "source": "huggingface",
+      "title": "SKILL0: In-Context Agentic Reinforcement Learning for Skill Internalization",
+      "authors": [
+        "Zhengxi Lu",
+        "Zhiyuan Yao",
+        "Jinyang Wu",
+        "Chengcheng Han",
+        "Qi Gu",
+        "Xunliang Cai",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Yongliang Shen"
+      ],
+      "abstract": "Agent skills, structured packages of procedural knowledge and executable resources that agents dynamically load at inference time, have become a reliable mechanism for augmenting LLM agents. Yet inference-time skill augmentation is fundamentally limited: retrieval noise introduces irrelevant guidance, injected skill content imposes substantial token overhead, and the model never truly acquires the knowledge it merely follows. We ask whether skills can instead be internalized into model parameters, enabling zero-shot autonomous behavior without any runtime skill retrieval. We introduce SKILL0, an in-context reinforcement learning framework designed for skill internalization. SKILL0 introduces a training-time curriculum that begins with full skill context and progressively withdraws it. Skills are grouped offline by category and rendered with interaction history into a compact visual context, teaching he model tool invocation and multi-turn task completion. A Dynamic Curriculum then evaluates each skill file's on-policy helpfulness, retaining only those from which the current policy still benefits within a linearly decaying budget, until the agent operates in a fully zero-shot setting. Extensive agentic experiments demonstrate that SKILL0 achieves substantial improvements over the standard RL baseline (+9.7\\% for ALFWorld and +6.6\\% for Search-QA), while maintaining a highly efficient context of fewer than 0.5k tokens per step. Our code is available at https://github.com/ZJU-REAL/SkillZero.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02268",
+      "pdf_url": "https://arxiv.org/pdf/2604.02268",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02268",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 72,
+      "hot_score": 720,
+      "structured_summary": {
+        "chinese_title": "SKILL0: 在上下文中介导技能的自主强化学习",
+        "chinese_summary": "将技能内化到模型参数中，实现零样本自主行为。",
+        "pain_point": "现有技能增强方法存在检索噪声、额外标记量和模型未真正掌握知识的问题。",
+        "core_value": "通过内化技能，实现无需运行时检索的零样本自主行为。",
+        "technical_architecture": "引入SKILL0框架，通过训练时课程设计逐步减少技能上下文。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证在更复杂任务中的有效性。",
+        "key_contributions": [
+          "提出SKILL0框架",
+          "设计训练时课程逐步减少技能上下文",
+          "实现零样本自主行为"
+        ],
+        "application_scenarios": [
+          "增强语言模型的自主行为能力",
+          "提高技能内化的效率和效果"
+        ],
+        "technical_highlights": [
+          "通过交互历史将技能渲染为紧凑视觉上下文",
+          "动态课程评估技能文件的在线策略帮助性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01001",
+      "source": "huggingface",
+      "title": "EgoSim: Egocentric World Simulator for Embodied Interaction Generation",
+      "authors": [
+        "Jinkun Hao",
+        "Mingda Jia",
+        "Ruiyan Wang",
+        "Xihui Liu",
+        "Ran Yi",
+        "Lizhuang Ma",
+        "Jiangmiao Pang",
+        "Xudong Xu"
+      ],
+      "abstract": "We introduce EgoSim, a closed-loop egocentric world simulator that generates spatially consistent interaction videos and persistently updates the underlying 3D scene state for continuous simulation. Existing egocentric simulators either lack explicit 3D grounding, causing structural drift under viewpoint changes, or treat the scene as static, failing to update world states across multi-stage interactions. EgoSim addresses both limitations by modeling 3D scenes as updatable world states. We generate embodiment interactions via a Geometry-action-aware Observation Simulation model, with spatial consistency from an Interaction-aware State Updating module. To overcome the critical data bottleneck posed by the difficulty in acquiring densely aligned scene-interaction training pairs, we design a scalable pipeline that extracts static point clouds, camera trajectories, and embodiment actions from in-the-wild large-scale monocular egocentric videos. We further introduce EgoCap, a capture system that enables low-cost real-world data collection with uncalibrated smartphones. Extensive experiments demonstrate that EgoSim significantly outperforms existing methods in terms of visual quality, spatial consistency, and generalization to complex scenes and in-the-wild dexterous interactions, while supporting cross-embodiment transfer to robotic manipulation. Codes and datasets will be open soon. The project page is at egosimulator.github.io.",
+      "published_date": "2026-04-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.01001",
+      "pdf_url": "https://arxiv.org/pdf/2604.01001",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01001",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "EgoSim：第一人称世界模拟器用于生成具身交互视频",
+        "chinese_summary": "EgoSim 通过生成一致的交互视频并持续更新 3D 场景状态，显著提升了具身交互视频的质量。",
+        "pain_point": "现有模拟器要么缺乏 3D 地基，要么将场景视为静态，导致交互不一致。",
+        "core_value": "通过动态更新 3D 场景状态，EgoSim 提供了更高质量的具身交互视频。",
+        "technical_architecture": "采用几何动作感知的观察模拟模型和交互感知的状态更新模块。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据采集成本较高。",
+        "key_contributions": [
+          "提出了一种新的动态更新 3D 场景状态的方法",
+          "设计了一种可扩展的数据采集管道",
+          "引入了 EgoCap 捕获系统"
+        ],
+        "application_scenarios": [
+          "虚拟现实中的具身交互",
+          "增强现实中的场景理解"
+        ],
+        "technical_highlights": [
+          "能够生成一致的交互视频",
+          "能够持续更新 3D 场景状态"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02327",
+      "source": "huggingface",
+      "title": "Steerable Visual Representations",
+      "authors": [
+        "Jona Ruthardt",
+        "Manu Gaur",
+        "Deva Ramanan",
+        "Makarand Tapaswi",
+        "Yuki M. Asano"
+      ],
+      "abstract": "Pretrained Vision Transformers (ViTs) such as DINOv2 and MAE provide generic image features that can be applied to a variety of downstream tasks such as retrieval, classification, and segmentation. However, such representations tend to focus on the most salient visual cues in the image, with no way to direct them toward less prominent concepts of interest. In contrast, Multimodal LLMs can be guided with textual prompts, but the resulting representations tend to be language-centric and lose their effectiveness for generic visual tasks. To address this, we introduce Steerable Visual Representations, a new class of visual representations, whose global and local features can be steered with natural language. While most vision-language models (e.g., CLIP) fuse text with visual features after encoding (late fusion), we inject text directly into the layers of the visual encoder (early fusion) via lightweight cross-attention. We introduce benchmarks for measuring representational steerability, and demonstrate that our steerable visual features can focus on any desired objects in an image while preserving the underlying representation quality. Our method also matches or outperforms dedicated approaches on anomaly detection and personalized object discrimination, exhibiting zero-shot generalization to out-of-distribution tasks.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02327",
+      "pdf_url": "https://arxiv.org/pdf/2604.02327",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02327",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": {
+        "chinese_title": "可引导的视觉表示",
+        "chinese_summary": "提出了一种新的视觉表示方法，可以通过自然语言引导全局和局部特征。",
+        "pain_point": "现有预训练视觉Transformer关注显眼的视觉线索，缺乏对不显眼概念的关注。",
+        "core_value": "通过早期融合直接注入文本到视觉编码器，提高视觉表示的灵活性和质量。",
+        "technical_architecture": "在视觉编码器层中注入轻量级交叉注意力以融合文本和视觉特征。",
+        "quantitative_results": "在基准测试中，提出的可引导视觉特征在保持底层表示质量的同时，能够聚焦于图像中的任何所需对象。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索不同场景下的应用效果。",
+        "key_contributions": [
+          "提出了一种新的视觉表示方法",
+          "通过早期融合直接注入文本到视觉编码器",
+          "能够引导视觉特征关注图像中的任何所需对象"
+        ],
+        "application_scenarios": [
+          "图像检索",
+          "图像分类"
+        ],
+        "technical_highlights": [
+          "轻量级交叉注意力机制",
+          "保持底层表示质量的同时引导视觉特征"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02097",
+      "source": "huggingface",
+      "title": "LatentUM: Unleashing the Potential of Interleaved Cross-Modal Reasoning via a Latent-Space Unified Model",
+      "authors": [
+        "Jiachun Jin",
+        "Zetong Zhou",
+        "Xiao Yang",
+        "Hao Zhang",
+        "Pengfei Liu",
+        "Jun Zhu",
+        "Zhijie Deng"
+      ],
+      "abstract": "Unified models (UMs) hold promise for their ability to understand and generate content across heterogeneous modalities. Compared to merely generating visual content, the use of UMs for interleaved cross-modal reasoning is more promising and valuable, e.g., for solving understanding problems that require dense visual thinking, improving visual generation through self-reflection, or modeling visual dynamics of the physical world guided by stepwise action interventions. However, existing UMs necessitate pixel decoding as a bridge due to their disjoint visual representations for understanding and generation, which is both ineffective and inefficient. In this paper, we introduce LatentUM, a novel unified model that represents all modalities within a shared semantic latent space, eliminating the need for pixel-space mediation between visual understanding and generation. This design naturally enables flexible interleaved cross-modal reasoning and generation. Beyond improved computational efficiency, the shared representation substantially alleviates codec bias and strengthens cross-modal alignment, allowing LatentUM to achieve state-of-the-art performance on the Visual Spatial Planning benchmark, push the limits of visual generation through self-reflection, and support world modeling by predicting future visual states within the shared semantic latent space.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02097",
+      "pdf_url": "https://arxiv.org/pdf/2604.02097",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02097",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "LatentUM：通过潜在空间统一模型释放交错跨模态推理的潜力",
+        "chinese_summary": "LatentUM通过共享语义潜在空间实现跨模态理解和生成，显著提升计算效率和跨模态对齐。",
+        "pain_point": "现有统一模型需要通过像素空间解码作为桥梁，导致效率低下且效果不佳。",
+        "core_value": "通过共享潜在空间，提升跨模态理解和生成的效率和效果。",
+        "technical_architecture": "采用潜在空间统一模型，消除视觉理解和生成之间的像素空间中介。",
+        "quantitative_results": "在视觉空间规划任务上达到SOTA性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更多应用场景。",
+        "key_contributions": [
+          "提出潜在空间统一模型",
+          "消除像素空间中介",
+          "提升跨模态理解和生成性能"
+        ],
+        "application_scenarios": [
+          "解决需要密集视觉思考的理解问题",
+          "通过自我反思改进视觉生成"
+        ],
+        "technical_highlights": [
+          "共享语义潜在空间",
+          "自然支持交错跨模态推理和生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01973",
+      "source": "huggingface",
+      "title": "NearID: Identity Representation Learning via Near-identity Distractors",
+      "authors": [
+        "Aleksandar Cvejic",
+        "Rameen Abdal",
+        "Abdelrahman Eldesokey",
+        "Bernard Ghanem",
+        "Peter Wonka"
+      ],
+      "abstract": "When evaluating identity-focused tasks such as personalized generation and image editing, existing vision encoders entangle object identity with background context, leading to unreliable representations and metrics. We introduce the first principled framework to address this vulnerability using Near-identity (NearID) distractors, where semantically similar but distinct instances are placed on the exact same background as a reference image, eliminating contextual shortcuts and isolating identity as the sole discriminative signal. Based on this principle, we present the NearID dataset (19K identities, 316K matched-context distractors) together with a strict margin-based evaluation protocol. Under this setting, pre-trained encoders perform poorly, achieving Sample Success Rates (SSR), a strict margin-based identity discrimination metric, as low as 30.7% and often ranking distractors above true cross-view matches. We address this by learning identity-aware representations on a frozen backbone using a two-tier contrastive objective enforcing the hierarchy: same identity > NearID distractor > random negative. This improves SSR to 99.2%, enhances part-level discrimination by 28.0%, and yields stronger alignment with human judgments on DreamBench++, a human-aligned benchmark for personalization. Project page: https://gorluxor.github.io/NearID/",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.01973",
+      "pdf_url": "https://arxiv.org/pdf/2604.01973",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01973",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "NearID: 通过近似身份干扰进行身份表示学习",
+        "chinese_summary": "提出了一种新的框架，通过近似身份干扰消除背景对身份识别的影响，显著提升了身份识别的准确性。",
+        "pain_point": "现有视觉编码器将对象身份与背景混淆，导致不可靠的身份表示和评估。",
+        "core_value": "通过近似身份干扰，有效隔离身份作为唯一区分信号，提升身份识别的准确性。",
+        "technical_architecture": "基于近似身份干扰原理，构建了新的数据集和评估协议，采用两层对比目标学习身份感知表示。",
+        "quantitative_results": "通过两层对比目标学习，SSR从30.7%提升到99.2%，提升了28.0%的部分级区分度。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上验证模型的泛化能力。",
+        "key_contributions": [
+          "提出了近似身份干扰的概念",
+          "构建了新的数据集和评估协议",
+          "提出了两层对比目标学习方法"
+        ],
+        "application_scenarios": [
+          "个性化生成",
+          "图像编辑"
+        ],
+        "technical_highlights": [
+          "有效隔离身份作为唯一区分信号",
+          "显著提升身份识别的准确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01007",
+      "source": "huggingface",
+      "title": "Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory",
+      "authors": [
+        "Jiaqi Liu",
+        "Zipeng Ling",
+        "Shi Qiu",
+        "Yanqing Liu",
+        "Siwei Han",
+        "Peng Xia",
+        "Haoqin Tu",
+        "Zeyu Zheng",
+        "Cihang Xie",
+        "Charles Fleming",
+        "Mingyu Ding",
+        "Huaxiu Yao"
+      ],
+      "abstract": "AI agents increasingly operate over extended time horizons, yet their ability to retain, organize, and recall multimodal experiences remains a critical bottleneck. Building effective lifelong memory requires navigating a vast design space spanning architecture, retrieval strategies, prompt engineering, and data pipelines; this space is too large and interconnected for manual exploration or traditional AutoML to explore effectively. We deploy an autonomous research pipeline to discover Omni-SimpleMem, a unified multimodal memory framework for lifelong AI agents. Starting from a naïve baseline (F1=0.117 on LoCoMo), the pipeline autonomously executes {sim}50 experiments across two benchmarks, diagnosing failure modes, proposing architectural modifications, and repairing data pipeline bugs, all without human intervention in the inner loop. The resulting system achieves state-of-the-art on both benchmarks, improving F1 by +411% on LoCoMo (0.117to0.598) and +214% on Mem-Gallery (0.254to0.797) relative to the initial configurations. Critically, the most impactful discoveries are not hyperparameter adjustments: bug fixes (+175%), architectural changes (+44%), and prompt engineering (+188% on specific categories) each individually exceed the cumulative contribution of all hyperparameter tuning, demonstrating capabilities fundamentally beyond the reach of traditional AutoML. We provide a taxonomy of six discovery types and identify four properties that make multimodal memory particularly suited for autoresearch, offering guidance for applying autonomous research pipelines to other AI system domains. Code is available at this https://github.com/aiming-lab/SimpleMem.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.01007",
+      "pdf_url": "https://arxiv.org/pdf/2604.01007",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01007",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": {
+        "chinese_title": "Omni-SimpleMem: 自动研究引导的终身多模态智能体记忆发现",
+        "chinese_summary": "该研究通过自动研究管道发现了一种新的统一多模态记忆框架，显著提升了智能体在多模态记忆上的表现。",
+        "pain_point": "智能体在长时间操作中保留、组织和回忆多模态经验的能力不足。",
+        "core_value": "通过自动研究管道发现了一种新的统一多模态记忆框架，显著提升了智能体的性能。",
+        "technical_architecture": "采用自动研究管道，自主执行实验，诊断问题，提出修改建议。",
+        "quantitative_results": "在两个基准测试中，系统性能大幅提升，分别提高了411%和214%。",
+        "competitors": "暂无对比信息",
+        "limitations": "主要贡献点并非超参数调整。",
+        "key_contributions": [
+          "发现了一种新的统一多模态记忆框架",
+          "显著提升了智能体的多模态记忆性能",
+          "采用自动研究管道自主发现改进方案"
+        ],
+        "application_scenarios": [
+          "长期操作的智能体",
+          "多模态数据处理"
+        ],
+        "technical_highlights": [
+          "自动研究管道自主执行实验",
+          "显著提升多模态记忆性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02296",
+      "source": "huggingface",
+      "title": "VOID: Video Object and Interaction Deletion",
+      "authors": [
+        "Saman Motamed",
+        "William Harvey",
+        "Benjamin Klein",
+        "Luc Van Gool",
+        "Zhuoning Yuan",
+        "Ta-Ying Cheng"
+      ],
+      "abstract": "Existing video object removal methods excel at inpainting content \"behind\" the object and correcting appearance-level artifacts such as shadows and reflections. However, when the removed object has more significant interactions, such as collisions with other objects, current models fail to correct them and produce implausible results. We present VOID, a video object removal framework designed to perform physically-plausible inpainting in these complex scenarios. To train the model, we generate a new paired dataset of counterfactual object removals using Kubric and HUMOTO, where removing an object requires altering downstream physical interactions. During inference, a vision-language model identifies regions of the scene affected by the removed object. These regions are then used to guide a video diffusion model that generates physically consistent counterfactual outcomes. Experiments on both synthetic and real data show that our approach better preserves consistent scene dynamics after object removal compared to prior video object removal methods. We hope this framework sheds light on how to make video editing models better simulators of the world through high-level causal reasoning.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02296",
+      "pdf_url": "https://arxiv.org/pdf/2604.02296",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02296",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "VOID: 视频对象和交互删除",
+        "chinese_summary": "VOID 框架在删除对象时能更好地保持场景动态一致性。",
+        "pain_point": "现有方法在处理对象与其它物体有显著交互时效果不佳。",
+        "core_value": "通过生成新的数据集和使用视频扩散模型，VOID 能生成更合理的场景结果。",
+        "technical_architecture": "使用视频扩散模型和视图-语言模型进行物理一致的反事实结果生成。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在合成和真实数据上进行了实验。",
+        "key_contributions": [
+          "提出了新的数据集生成方法",
+          "使用视频扩散模型生成物理一致的反事实结果"
+        ],
+        "application_scenarios": [
+          "视频编辑",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "结合视图-语言模型和视频扩散模型",
+          "处理复杂的物理交互"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

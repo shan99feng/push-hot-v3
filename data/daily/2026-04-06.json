@@ -1,0 +1,537 @@
+{
+  "date": "2026-04-06",
+  "generated_at": "2026-04-06T23:37:45.132288+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.03128",
+      "source": "huggingface",
+      "title": "Self-Distilled RLVR",
+      "authors": [
+        "Chenxu Yang",
+        "Chuanyu Qin",
+        "Qingyi Si",
+        "Minghui Chen",
+        "Naibin Gu",
+        "Dingyu Yao",
+        "Zheng Lin",
+        "Weiping Wang",
+        "Jiaqi Wang",
+        "Nan Duan"
+      ],
+      "abstract": "On-policy distillation (OPD) has become a popular training paradigm in the LLM community. This paradigm selects a larger model as the teacher to provide dense, fine-grained signals for each sampled trajectory, in contrast to reinforcement learning with verifiable rewards (RLVR), which only obtains sparse signals from verifiable outcomes in the environment. Recently, the community has explored on-policy self-distillation (OPSD), where the same model serves as both teacher and student, with the teacher receiving additional privileged information such as reference answers to enable self-evolution. This paper demonstrates that learning signals solely derived from the privileged teacher result in severe information leakage and unstable long-term training. Accordingly, we identify the optimal niche for self-distillation and propose RLSD (RLVR with Self-Distillation). Specifically, we leverage self-distillation to obtain token-level policy differences for determining fine-grained update magnitudes, while continuing to use RLVR to derive reliable update directions from environmental feedback (e.g., response correctness). This enables RLSD to simultaneously harness the strengths of both RLVR and OPSD, achieving a higher convergence ceiling and superior training stability.",
+      "published_date": "2026-04-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.03128",
+      "pdf_url": "https://arxiv.org/pdf/2604.03128",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.03128",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 79,
+      "hot_score": 790,
+      "structured_summary": {
+        "chinese_title": "Self-Distilled RLVR",
+        "chinese_summary": "提出RLSD，结合RLVR和自蒸馏，提高模型训练的稳定性和可靠性。",
+        "pain_point": "现有自蒸馏方法导致信息泄露和长期训练不稳定。",
+        "core_value": "通过结合RLVR和自蒸馏，提供可靠的更新方向和细粒度的更新幅度。",
+        "technical_architecture": "利用自蒸馏获取标记级策略差异，同时使用RLVR从环境反馈中获取可靠更新方向。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步探索更广泛的应用场景。",
+        "key_contributions": [
+          "提出RLSD方法",
+          "结合RLVR和自蒸馏",
+          "提高模型训练的稳定性和可靠性"
+        ],
+        "application_scenarios": [
+          "自然语言处理",
+          "强化学习"
+        ],
+        "technical_highlights": [
+          "利用自蒸馏获取标记级策略差异",
+          "结合RLVR从环境反馈中获取可靠更新方向"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02317",
+      "source": "huggingface",
+      "title": "A Simple Baseline for Streaming Video Understanding",
+      "authors": [
+        "Yujiao Shen",
+        "Shulin Tian",
+        "Jingkang Yang",
+        "Ziwei Liu"
+      ],
+      "abstract": "Recent streaming video understanding methods increasingly rely on complex memory mechanisms to handle long video streams. We challenge this trend with a simple finding: a sliding-window baseline that feeds only the most recent N frames to an off-the-shelf VLM already matches or surpasses published streaming models. We formalize this baseline as SimpleStream and evaluate it against 13 major offline and online video LLM baselines on OVO-Bench and StreamingBench. Despite its simplicity, SimpleStream delivers consistently strong performance. With only 4 recent frames, it reaches 67.7% average accuracy on OVO-Bench and 80.59% on StreamingBench. Controlled ablations further show that the value of longer context is backbone-dependent rather than uniformly increasing with model scale, and reveal a consistent perception-memory trade-off: adding more historical context can improve recall, but often weakens real-time perception. This suggests that stronger memory, retrieval, or compression modules should not be taken as evidence of progress unless they clearly outperform SimpleStream under the same protocol. We therefore argue that future streaming benchmarks should separate recent-scene perception from long-range memory, so that performance improvements from added complexity can be evaluated more clearly.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02317",
+      "pdf_url": "https://arxiv.org/pdf/2604.02317",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02317",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 53,
+      "hot_score": 530,
+      "structured_summary": {
+        "chinese_title": "流式视频理解的简单基线",
+        "chinese_summary": "滑动窗口基线在流式视频理解中表现出色，超越复杂记忆机制的方法。",
+        "pain_point": "流式视频理解方法依赖复杂记忆机制处理长视频流。",
+        "core_value": "提出简单滑动窗口基线，性能超越复杂方法，揭示记忆与实时感知的权衡。",
+        "technical_architecture": "滑动窗口机制，仅输入最近N帧给现成的视觉语言模型。",
+        "quantitative_results": "4帧滑动窗口在OVO-Bench和StreamingBench分别达到67.7%和80.59%的准确率。",
+        "competitors": "与13种离线和在线视频基线进行对比。",
+        "limitations": "未来需要进一步研究不同骨干网络下的表现。",
+        "key_contributions": [
+          "提出简单滑动窗口基线",
+          "揭示记忆与实时感知的权衡",
+          "挑战复杂记忆机制的趋势"
+        ],
+        "application_scenarios": [
+          "流式视频理解",
+          "视频监控"
+        ],
+        "technical_highlights": [
+          "简单基线超越复杂方法",
+          "揭示记忆与实时感知的权衡"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02870",
+      "source": "huggingface",
+      "title": "Token Warping Helps MLLMs Look from Nearby Viewpoints",
+      "authors": [
+        "Phillip Y. Lee",
+        "Chanho Park",
+        "Mingue Park",
+        "Seungwoo Yoo",
+        "Juil Koo",
+        "Minhyuk Sung"
+      ],
+      "abstract": "Can warping tokens, rather than pixels, help multimodal large language models (MLLMs) understand how a scene appears from a nearby viewpoint? While MLLMs perform well on visual reasoning, they remain fragile to viewpoint changes, as pixel-wise warping is highly sensitive to small depth errors and often introduces geometric distortions. Drawing on theories of mental imagery that posit part-level structural representations as the basis for human perspective transformation, we examine whether image tokens in ViT-based MLLMs serve as an effective substrate for viewpoint changes. We compare forward and backward warping, finding that backward token warping, which defines a dense grid on the target view and retrieves a corresponding source-view token for each grid point, achieves greater stability and better preserves semantic coherence under viewpoint shifts. Experiments on our proposed ViewBench benchmark demonstrate that token-level warping enables MLLMs to reason reliably from nearby viewpoints, consistently outperforming all baselines including pixel-wise warping approaches, spatially fine-tuned MLLMs, and a generative warping method.",
+      "published_date": "2026-04-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02870",
+      "pdf_url": "https://arxiv.org/pdf/2604.02870",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02870",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "Token Warping Helps MLLMs Look from Nearby Viewpoints",
+        "chinese_summary": "通过token扭曲而非像素扭曲，使MLLMs在附近视角下更好地理解场景。",
+        "pain_point": "MLLMs对视角变化敏感，像素扭曲易引入几何失真。",
+        "core_value": "token扭曲在视角变化中更稳定，保持语义连贯。",
+        "technical_architecture": "使用ViT架构，采用反向token扭曲方法。",
+        "quantitative_results": "在ViewBench基准上，token扭曲方法优于所有基线。",
+        "competitors": "像素扭曲、空间微调MLLMs、生成扭曲方法。",
+        "limitations": "仅在特定视角变化场景下验证。",
+        "key_contributions": [
+          "提出反向token扭曲方法",
+          "验证token扭曲在视角变化中的优势"
+        ],
+        "application_scenarios": [
+          "多模态场景理解",
+          "视角变化下的场景推理"
+        ],
+        "technical_highlights": [
+          "基于ViT的token扭曲方法",
+          "反向token扭曲保持语义连贯"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.03016",
+      "source": "huggingface",
+      "title": "Agentic-MME: What Agentic Capability Really Brings to Multimodal Intelligence?",
+      "authors": [
+        "Qianshan Wei",
+        "Yishan Yang",
+        "Siyi Wang",
+        "Jinglin Chen",
+        "Binyu Wang",
+        "Jiaming Wang",
+        "Shuang Chen",
+        "Zechen Li",
+        "Yang Shi",
+        "Yuqi Tang",
+        "Weining Wang",
+        "Yi Yu",
+        "Chaoyou Fu",
+        "Qi Li",
+        "Yi-Fan Zhang"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) are evolving from passive observers into active agents, solving problems through Visual Expansion (invoking visual tools) and Knowledge Expansion (open-web search). However, existing evaluations fall short: they lack flexible tool integration, test visual and search tools separately, and evaluate primarily by final answers. Consequently, they cannot verify if tools were actually invoked, applied correctly, or used efficiently. To address this, we introduce Agentic-MME, a process-verified benchmark for Multimodal Agentic Capabilities. It contains 418 real-world tasks across 6 domains and 3 difficulty levels to evaluate capability synergy, featuring over 2,000 stepwise checkpoints that average 10+ person-hours of manual annotation per task. Each task includes a unified evaluation framework supporting sandboxed code and APIs, alongside a human reference trajectory annotated with stepwise checkpoints along dual-axis: S-axis and V-axis. To enable true process-level verification, we audit fine-grained intermediate states rather than just final answers, and quantify efficiency via an overthinking metric relative to human trajectories. Experimental results show the best model, Gemini3-pro, achieves 56.3% overall accuracy, which falls significantly to 23.0% on Level-3 tasks, underscoring the difficulty of real-world multimodal agentic problem solving.",
+      "published_date": "2026-04-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.03016",
+      "pdf_url": "https://arxiv.org/pdf/2604.03016",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.03016",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "Agentic-MME：多模态智能中代理能力究竟带来了什么？",
+        "chinese_summary": "提出Agentic-MME基准，用于评估多模态代理能力，包含2000多个步骤检查点。",
+        "pain_point": "现有评估方法缺乏灵活的工具集成，无法验证工具是否被正确和高效地使用。",
+        "core_value": "提供了一个全面的基准，用于评估多模态代理能力的协同效应和效率。",
+        "technical_architecture": "包含2000多个步骤检查点，每个任务都有统一的评估框架和人工参考轨迹。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多实际应用场景的数据支持。",
+        "key_contributions": [
+          "提出了Agentic-MME基准",
+          "包含2000多个步骤检查点",
+          "提供了一个全面的评估框架"
+        ],
+        "application_scenarios": [
+          "多模态代理能力评估",
+          "多模态智能系统开发"
+        ],
+        "technical_highlights": [
+          "包含2000多个步骤检查点",
+          "提供了一个全面的评估框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01411",
+      "source": "huggingface",
+      "title": "Test-Time Scaling Makes Overtraining Compute-Optimal",
+      "authors": [
+        "Nicholas Roberts",
+        "Sungjun Cho",
+        "Zhiqi Gao",
+        "Tzu-Heng Huang",
+        "Albert Wu",
+        "Gabriel Orlanski",
+        "Avi Trost",
+        "Kelly Buchanan",
+        "Aws Albarghouthi",
+        "Frederic Sala"
+      ],
+      "abstract": "Modern LLMs scale at test-time, e.g. via repeated sampling, where inference cost grows with model size and the number of samples. This creates a trade-off that pretraining scaling laws, such as Chinchilla, do not address. We present Train-to-Test (T^2) scaling laws that jointly optimize model size, training tokens, and number of inference samples under fixed end-to-end budgets. T^2 modernizes pretraining scaling laws with pass@k modeling used for test-time scaling, then jointly optimizes pretraining and test-time decisions. Forecasts from T^2 are robust over distinct modeling approaches: measuring joint scaling effect on the task loss and modeling impact on task accuracy. Across eight downstream tasks, we find that when accounting for inference cost, optimal pretraining decisions shift radically into the overtraining regime, well-outside of the range of standard pretraining scaling suites. We validate our results by pretraining heavily overtrained models in the optimal region that T^2 scaling forecasts, confirming their substantially stronger performance compared to pretraining scaling alone. Finally, as frontier LLMs are post-trained, we show that our findings survive the post-training stage, making T^2 scaling meaningful in modern deployments.",
+      "published_date": "2026-04-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.01411",
+      "pdf_url": "https://arxiv.org/pdf/2604.01411",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01411",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL",
+        "stat.ML"
+      ],
+      "upvotes": 14,
+      "hot_score": 140,
+      "structured_summary": {
+        "chinese_title": "测试时缩放使过拟合计算最优",
+        "chinese_summary": "通过测试时缩放，优化模型大小、训练令牌和推理样本数量，使过拟合成为计算最优的选择。",
+        "pain_point": "现有预训练缩放法则未解决测试时缩放带来的计算成本问题。",
+        "core_value": "提出T^2缩放法则，优化预训练和测试时决策，使过拟合模型在计算上更具优势。",
+        "technical_architecture": "结合测试时缩放的pass@k建模方法，优化预训练和测试时的决策。",
+        "quantitative_results": "在八个下游任务中，考虑推理成本后，过拟合模型表现出显著更好的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在当前前沿LLM中验证，未来需在更广泛的模型中测试。",
+        "key_contributions": [
+          "提出T^2缩放法则",
+          "优化预训练和测试时决策",
+          "使过拟合模型在计算上更具优势"
+        ],
+        "application_scenarios": [
+          "优化大型语言模型的训练和推理",
+          "提高模型在计算资源有限环境下的性能"
+        ],
+        "technical_highlights": [
+          "结合测试时缩放的pass@k建模方法",
+          "优化预训练和测试时的决策"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.27183",
+      "source": "huggingface",
+      "title": "Communicating about Space: Language-Mediated Spatial Integration Across Partial Views",
+      "authors": [
+        "Ankur Sikarwar",
+        "Debangan Mishra",
+        "Sudarshan Nikhil",
+        "Ponnurangam Kumaraguru",
+        "Aishwarya Agrawal"
+      ],
+      "abstract": "Humans build shared spatial understanding by communicating partial, viewpoint-dependent observations. We ask whether Multimodal Large Language Models (MLLMs) can do the same, aligning distinct egocentric views through dialogue to form a coherent, allocentric mental model of a shared environment. To study this systematically, we introduce COSMIC, a benchmark for Collaborative Spatial Communication. In this setting, two static MLLM agents observe a 3D indoor environment from different viewpoints and exchange natural-language messages to solve spatial queries. COSMIC contains 899 diverse scenes and 1250 question-answer pairs spanning five tasks. We find a consistent capability hierarchy, MLLMs are most reliable at identifying shared anchor objects across views, perform worse on relational reasoning, and largely fail at building globally consistent maps, performing near chance, even for the frontier models. Moreover, we find thinking capability yields consistent gains in anchor grounding, but is insufficient for higher-level spatial communication. To contextualize model behavior, we additionally collect 250 human-human dialogues. Humans achieve 95% aggregate accuracy, leaving significant room for improvement for even the best performing model Gemini-3-Pro-Thinking which achieves 72% aggregate accuracy. Moreover, human conversations become increasingly specific as partners converge on a shared mental model, whereas model dialogues continue to explore new possibilities rather than converging, consistent with a limited ability to build and maintain a robust shared mental model. Our code and data is available at https://github.com/ankursikarwar/Cosmic",
+      "published_date": "2026-03-28T08:01:50.000Z",
+      "url": "https://arxiv.org/abs/2603.27183",
+      "pdf_url": "https://arxiv.org/pdf/2603.27183",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.27183",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 12,
+      "hot_score": 120,
+      "structured_summary": {
+        "chinese_title": "关于空间的语言中介：基于视角依赖观察的共享空间理解",
+        "chinese_summary": "研究多模态大型语言模型在对话中整合不同视角信息的能力。",
+        "pain_point": "现有模型在构建全局一致的空间模型方面表现不佳。",
+        "core_value": "提出COSMIC基准，评估模型在空间沟通中的表现。",
+        "technical_architecture": "设计了基于对话的多模态大型语言模型协作空间沟通框架。",
+        "quantitative_results": "模型在识别共享锚点对象方面表现较好，但在关系推理和构建全局一致地图方面表现较差。",
+        "competitors": "暂无对比信息",
+        "limitations": "模型在高层次空间沟通方面的能力不足。",
+        "key_contributions": [
+          "提出了COSMIC基准",
+          "分析了模型在不同任务上的表现",
+          "收集了人类对话数据进行对比"
+        ],
+        "application_scenarios": [
+          "虚拟现实中的环境理解",
+          "机器人导航与定位"
+        ],
+        "technical_highlights": [
+          "引入了多视角协作框架",
+          "评估了模型在空间沟通中的能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.03144",
+      "source": "huggingface",
+      "title": "InCoder-32B-Thinking: Industrial Code World Model for Thinking",
+      "authors": [
+        "Jian Yang",
+        "Wei Zhang",
+        "Jiajun Wu",
+        "Junhang Cheng",
+        "Tuney Zheng",
+        "Fanglin Xu",
+        "Weicheng Gu",
+        "Lin Jing",
+        "Yaxin Du",
+        "Joseph Li",
+        "Yizhi Li",
+        "Yan Xing",
+        "Chuan Hao",
+        "Ran Tao",
+        "Ruihao Gong",
+        "Aishan Liu",
+        "Zhoujun Li",
+        "Mingjie Tang",
+        "Chenghua Lin",
+        "Siheng Chen",
+        "Wayne Xin Zhao",
+        "Xianglong Liu",
+        "Ming Zhou",
+        "Bryan Dai",
+        "Weifeng Lv"
+      ],
+      "abstract": "Industrial software development across chip design, GPU optimization, and embedded systems lacks expert reasoning traces showing how engineers reason about hardware constraints and timing semantics. In this work, we propose InCoder-32B-Thinking, trained on the data from the Error-driven Chain-of-Thought (ECoT) synthesis framework with an industrial code world model (ICWM) to generate reasoning traces. Specifically, ECoT generates reasoning chains by synthesizing the thinking content from multi-turn dialogue with environmental error feedback, explicitly modeling the error-correction process. ICWM is trained on domain-specific execution traces from Verilog simulation, GPU profiling, etc., learns the causal dynamics of how code affects hardware behavior, and enables self-verification by predicting execution outcomes before actual compilation. All synthesized reasoning traces are validated through domain toolchains, creating training data matching the natural reasoning depth distribution of industrial tasks. Evaluation on 14 general (81.3% on LiveCodeBench v5) and 9 industrial benchmarks (84.0% in CAD-Coder and 38.0% on KernelBench) shows InCoder-32B-Thinking achieves top-tier open-source results across all domains.GPU Optimization",
+      "published_date": "2026-04-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.03144",
+      "pdf_url": "https://arxiv.org/pdf/2604.03144",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.03144",
+      "category": "llm",
+      "tags": [
+        "cs.AR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "InCoder-32B-Thinking：工业代码世界模型",
+        "chinese_summary": "InCoder-32B-Thinking 通过 ECoT 合成框架和工业代码世界模型生成专家推理轨迹，提升工业软件开发中的硬件约束和时序语义推理能力。",
+        "pain_point": "工业软件开发缺乏展示工程师如何推理硬件约束和时序语义的专家推理轨迹。",
+        "core_value": "通过生成推理轨迹，提高代码与硬件行为之间的因果关系理解，增强自验证能力。",
+        "technical_architecture": "基于 ECoT 合成框架和工业代码世界模型，生成推理链条。",
+        "quantitative_results": "在 14 个通用基准和 9 个工业基准上表现优异。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多工业数据以进一步提升模型性能。",
+        "key_contributions": [
+          "提出 InCoder-32B-Thinking 模型",
+          "结合 ECoT 合成框架和工业代码世界模型"
+        ],
+        "application_scenarios": [
+          "芯片设计",
+          "GPU 优化",
+          "嵌入式系统"
+        ],
+        "technical_highlights": [
+          "生成专家推理轨迹",
+          "自验证能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01487",
+      "source": "huggingface",
+      "title": "AgentSocialBench: Evaluating Privacy Risks in Human-Centered Agentic Social Networks",
+      "authors": [
+        "Prince Zizhuang Wang",
+        "Shuli Jiang"
+      ],
+      "abstract": "With the rise of personalized, persistent LLM agent frameworks such as OpenClaw, human-centered agentic social networks in which teams of collaborative AI agents serve individual users in a social network across multiple domains are becoming a reality. This setting creates novel privacy challenges: agents must coordinate across domain boundaries, mediate between humans, and interact with other users' agents, all while protecting sensitive personal information. While prior work has evaluated multi-agent coordination and privacy preservation, the dynamics and privacy risks of human-centered agentic social networks remain unexplored. To this end, we introduce AgentSocialBench, the first benchmark to systematically evaluate privacy risk in this setting, comprising scenarios across seven categories spanning dyadic and multi-party interactions, grounded in realistic user profiles with hierarchical sensitivity labels and directed social graphs. Our experiments reveal that privacy in agentic social networks is fundamentally harder than in single-agent settings: (1) cross-domain and cross-user coordination creates persistent leakage pressure even when agents are explicitly instructed to protect information, (2) privacy instructions that teach agents how to abstract sensitive information paradoxically cause them to discuss it more (we call it abstraction paradox). These findings underscore that current LLM agents lack robust mechanisms for privacy preservation in human-centered agentic social networks, and that new approaches beyond prompt engineering are needed to make agent-mediated social coordination safe for real-world deployment.",
+      "published_date": "2026-04-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.01487",
+      "pdf_url": "https://arxiv.org/pdf/2604.01487",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01487",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.SI"
+      ],
+      "upvotes": 4,
+      "hot_score": 40,
+      "structured_summary": {
+        "chinese_title": "AgentSocialBench: 评估人类中心代理社交网络中的隐私风险",
+        "chinese_summary": "首次系统性评估人类中心代理社交网络中的隐私风险。",
+        "pain_point": "代理在跨域和跨用户协调中保护个人敏感信息存在挑战。",
+        "core_value": "提供首个基准测试，涵盖多种交互场景，揭示代理社交网络中隐私保护的难度。",
+        "technical_architecture": "基于现实用户配置文件和有向社交图的多场景测试。",
+        "quantitative_results": "揭示代理社交网络中的隐私保护比单代理设置更困难。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于当前框架，未来需扩展更多代理类型。",
+        "key_contributions": [
+          "首次系统性评估人类中心代理社交网络中的隐私风险",
+          "提供首个涵盖多种交互场景的基准测试",
+          "揭示代理社交网络中隐私保护的难度"
+        ],
+        "application_scenarios": [
+          "多领域协作代理社交网络",
+          "跨域和跨用户代理协调"
+        ],
+        "technical_highlights": [
+          "基于现实用户配置文件和有向社交图",
+          "涵盖多种交互场景"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01609",
+      "source": "huggingface",
+      "title": "Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression",
+      "authors": [
+        "Ruoling Qi",
+        "Yirui Liu",
+        "Xuaner Wu",
+        "Xiangyu Wang",
+        "Ming Li",
+        "Chen Chen",
+        "Jian Chen",
+        "Yin Chen",
+        "Qizhen Weng"
+      ],
+      "abstract": "The deployment of Large Language Models is constrained by the memory and bandwidth demands of static weights and dynamic Key-Value cache. SVD-based compression provides a hardware-friendly solution to reduce these costs. However, existing methods suffer from two key limitations: some are suboptimal in reconstruction error, while others are theoretically optimal but practically inefficient. In this paper, we propose Swift-SVD, an activation-aware, closed-form compression framework that simultaneously guarantees theoretical optimum, practical efficiency and numerical stability. Swift-SVD incrementally aggregates covariance of output activations given a batch of inputs and performs a single eigenvalue decomposition after aggregation, enabling training-free, fast, and optimal layer-wise low-rank approximation. We employ effective rank to analyze local layer-wise compressibility and design a dynamic rank allocation strategy that jointly accounts for local reconstruction loss and end-to-end layer importance. Extensive experiments across six LLMs and eight datasets demonstrate that Swift-SVD outperforms state-of-the-art baselines, achieving optimal compression accuracy while delivering 3-70X speedups in end-to-end compression time. Our code will be released upon acceptance.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.01609",
+      "pdf_url": "https://arxiv.org/pdf/2604.01609",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01609",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "Swift-SVD：在低秩大语言模型压缩中实现理论最优与实际高效",
+        "chinese_summary": "Swift-SVD 提供了一种同时保证理论最优、实际高效和数值稳定的低秩大语言模型压缩方法。",
+        "pain_point": "现有方法在重建误差和计算效率之间存在权衡。",
+        "core_value": "Swift-SVD 在保持最优压缩精度的同时，提高了计算效率。",
+        "technical_architecture": "Swift-SVD 通过增量聚合输出激活的协方差并进行一次特征值分解实现低秩近似。",
+        "quantitative_results": "Swift-SVD 在六种大语言模型和八种数据集上的实验结果优于现有基线。",
+        "competitors": "对比了现有最先进的基线方法。",
+        "limitations": "未来工作可以探索更广泛的模型和数据集。",
+        "key_contributions": [
+          "提出了一种同时保证理论最优、实际高效和数值稳定的压缩框架。",
+          "设计了一种动态秩分配策略，平衡局部重建误差和端到端层重要性。",
+          "通过增量聚合和一次特征值分解实现快速训练无损的低秩近似"
+        ],
+        "application_scenarios": [
+          "大语言模型的高效部署",
+          "减少大语言模型的内存和带宽需求"
+        ],
+        "technical_highlights": [
+          "激活感知的压缩框架",
+          "动态秩分配策略",
+          "增量聚合和一次特征值分解"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02947",
+      "source": "huggingface",
+      "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
+      "authors": [
+        "Yunhao Feng",
+        "Yifan Ding",
+        "Yingshui Tan",
+        "Xingjun Ma",
+        "Yige Li",
+        "Yutao Wu",
+        "Yifeng Gao",
+        "Kun Zhai",
+        "Yanming Guo"
+      ],
+      "abstract": "Computer-use agents extend language models from text generation to persistent action over tools, files, and execution environments. Unlike chat systems, they maintain state across interactions and translate intermediate outputs into concrete actions. This creates a distinct safety challenge in that harmful behavior may emerge through sequences of individually plausible steps, including intermediate actions that appear locally acceptable but collectively lead to unauthorized actions. We present AgentHazard, a benchmark for evaluating harmful behavior in computer-use agents. AgentHazard contains 2,653 instances spanning diverse risk categories and attack strategies. Each instance pairs a harmful objective with a sequence of operational steps that are locally legitimate but jointly induce unsafe behavior. The benchmark evaluates whether agents can recognize and interrupt harm arising from accumulated context, repeated tool use, intermediate actions, and dependencies across steps. We evaluate AgentHazard on Claude Code, OpenClaw, and IFlow using mostly open or openly deployable models from the Qwen3, Kimi, GLM, and DeepSeek families. Our experimental results indicate that current systems remain highly vulnerable. In particular, when powered by Qwen3-Coder, Claude Code exhibits an attack success rate of 73.63\\%, suggesting that model alignment alone does not reliably guarantee the safety of autonomous agents.",
+      "published_date": "2026-04-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02947",
+      "pdf_url": "https://arxiv.org/pdf/2604.02947",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02947",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 2,
+      "hot_score": 20,
+      "structured_summary": {
+        "chinese_title": "AgentHazard：评估计算机使用代理有害行为的标准",
+        "chinese_summary": "提出AgentHazard基准，评估计算机使用代理的有害行为。",
+        "pain_point": "计算机使用代理可能通过一系列看似合理的步骤产生有害行为。",
+        "core_value": "提供全面的有害行为评估基准，涵盖多种风险类别和攻击策略。",
+        "technical_architecture": "构建包含2653个实例的基准，每个实例包含有害目标和局部合法但联合产生不安全行为的操作步骤。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了部分开源模型。",
+        "key_contributions": [
+          "提供全面的有害行为评估基准",
+          "涵盖多种风险类别和攻击策略"
+        ],
+        "application_scenarios": [
+          "评估计算机使用代理的安全性",
+          "指导代理开发和改进"
+        ],
+        "technical_highlights": [
+          "包含大量实例的基准",
+          "评估代理对累积上下文、重复工具使用、中间动作和步骤间依赖的识别和中断能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

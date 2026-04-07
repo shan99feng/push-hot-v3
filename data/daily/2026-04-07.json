@@ -1,0 +1,602 @@
+{
+  "date": "2026-04-07",
+  "generated_at": "2026-04-07T23:38:51.002525+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.04707",
+      "source": "huggingface",
+      "title": "OpenWorldLib: A Unified Codebase and Definition of Advanced World Models",
+      "authors": [
+        "DataFlow Team",
+        "Bohan Zeng",
+        "Daili Hua",
+        "Kaixin Zhu",
+        "Yifan Dai",
+        "Bozhou Li",
+        "Yuran Wang",
+        "Chengzhuo Tong",
+        "Yifan Yang",
+        "Mingkun Chang",
+        "Jianbin Zhao",
+        "Zhou Liu",
+        "Hao Liang",
+        "Xiaochen Ma",
+        "Ruichuan An",
+        "Junbo Niu",
+        "Zimo Meng",
+        "Tianyi Bai",
+        "Meiyi Qiang",
+        "Huanyao Zhang",
+        "Zhiyou Xiao",
+        "Tianyu Guo",
+        "Qinhan Yu",
+        "Runhao Zhao",
+        "Zhengpin Li",
+        "Xinyi Huang",
+        "Yisheng Pan",
+        "Yiwen Tang",
+        "Yang Shi",
+        "Yue Ding",
+        "Xinlong Chen",
+        "Hongcheng Gao",
+        "Minglei Shi",
+        "Jialong Wu",
+        "Zekun Wang",
+        "Yuanxing Zhang",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Yiren Song",
+        "Mike Zheng Shou",
+        "Wentao Zhang"
+      ],
+      "abstract": "World models have garnered significant attention as a promising research direction in artificial intelligence, yet a clear and unified definition remains lacking. In this paper, we introduce OpenWorldLib, a comprehensive and standardized inference framework for Advanced World Models. Drawing on the evolution of world models, we propose a clear definition: a world model is a model or framework centered on perception, equipped with interaction and long-term memory capabilities, for understanding and predicting the complex world. We further systematically categorize the essential capabilities of world models. Based on this definition, OpenWorldLib integrates models across different tasks within a unified framework, enabling efficient reuse and collaborative inference. Finally, we present additional reflections and analyses on potential future directions for world model research. Code link: https://github.com/OpenDCAI/OpenWorldLib",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04707",
+      "pdf_url": "https://arxiv.org/pdf/2604.04707",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04707",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 148,
+      "hot_score": 1480,
+      "structured_summary": {
+        "chinese_title": "OpenWorldLib: 统一的高级世界模型代码库和定义",
+        "chinese_summary": "提出OpenWorldLib，提供统一的世界模型定义和框架。",
+        "pain_point": "缺乏清晰的世界模型定义和统一的实现框架。",
+        "core_value": "提供统一的世界模型定义和框架，促进高效重用和协作推理。",
+        "technical_architecture": "基于世界模型的进化，提出清晰定义并系统分类核心能力。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提供统一的世界模型定义",
+          "系统分类世界模型的核心能力",
+          "提供统一的框架促进高效重用和协作推理"
+        ],
+        "application_scenarios": [
+          "多任务推理",
+          "复杂环境理解"
+        ],
+        "technical_highlights": [
+          "清晰的世界模型定义",
+          "统一的框架整合不同任务"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04771",
+      "source": "huggingface",
+      "title": "MinerU2.5-Pro: Pushing the Limits of Data-Centric Document Parsing at Scale",
+      "authors": [
+        "Bin Wang",
+        "Tianyao He",
+        "Linke Ouyang",
+        "Fan Wu",
+        "Zhiyuan Zhao",
+        "Tao Chu",
+        "Yuan Qu",
+        "Zhenjiang Jin",
+        "Weijun Zeng",
+        "Ziyang Miao",
+        "Bangrui Xu",
+        "Junbo Niu",
+        "Mengzhang Cai",
+        "Jiantao Qiu",
+        "Qintong Zhang",
+        "Dongsheng Ma",
+        "Yuefeng Sun",
+        "Hejun Dong",
+        "Wenzheng Zhang",
+        "Jutao Xiao",
+        "Jiayong Shi",
+        "Pengyu Liao",
+        "Xiaomeng Zhao",
+        "Huaping Zhong",
+        "Liqun Wei",
+        "Jing Yu",
+        "Jie Yang",
+        "Wei Li",
+        "Shasha Wang",
+        "Qianqian Wu",
+        "Xuanhe Zhou",
+        "Weijia Li",
+        "Zhenxiang Li",
+        "Zhongying Tu",
+        "Jiang Wu",
+        "Lijun Wu",
+        "Chao Xu",
+        "Kai Chen",
+        "Wentao Zhang",
+        "Yu Qiao",
+        "Bowen Zhou",
+        "Dahua Lin",
+        "Conghui He"
+      ],
+      "abstract": "Current document parsing methods compete primarily on model architecture innovation, while systematic engineering of training data remains underexplored. Yet SOTA models of different architectures and parameter scales exhibit highly consistent failure patterns on the same set of hard samples, suggesting that the performance bottleneck stems from shared deficiencies in training data rather than architecture itself. Building on this finding, we present \\minerupro, which advances the state of the art solely through data engineering and training strategy optimization while keeping the 1.2B-parameter architecture of \\mineru completely fixed. At its core is a Data Engine co-designed around coverage, informativeness, and annotation accuracy: Diversity-and-Difficulty-Aware Sampling expands training data from under 10M to 65.5M samples while correcting distribution shift; Cross-Model Consistency Verification leverages output agreement among heterogeneous models to assess sample difficulty and generate reliable annotations; the Judge-and-Refine pipeline improves annotation quality for hard samples through render-then-verify iterative correction. A three-stage progressive training strategy -- large-scale pre-training, hard sample fine-tuning, and GRPO alignment -- sequentially exploits these data at different quality tiers. On the evaluation front, we fix element-matching biases in OmniDocBench~v1.5 and introduce a Hard subset, establishing the more discriminative OmniDocBench~v1.6 protocol. Without any architectural modification, \\minerupro achieves 95.69 on OmniDocBench~v1.6, improving over the same-architecture baseline by 2.71 points and surpassing all existing methods including models with over 200times more parameters.",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04771",
+      "pdf_url": "https://arxiv.org/pdf/2604.04771",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04771",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "upvotes": 89,
+      "hot_score": 890,
+      "structured_summary": {
+        "chinese_title": "MinerU2.5-Pro: 推动数据为中心的文档解析技术边界",
+        "chinese_summary": "通过数据工程和训练策略优化，提升文档解析性能。",
+        "pain_point": "当前文档解析方法主要集中在模型架构创新，而训练数据的系统性工程则被忽视。",
+        "core_value": "通过数据工程和训练策略优化，显著提升文档解析性能，而无需改变模型架构。",
+        "technical_architecture": "设计了覆盖、信息量和标注准确性为核心的Data Engine。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多应用场景。",
+        "key_contributions": [
+          "通过数据工程和训练策略优化提升文档解析性能",
+          "设计了覆盖、信息量和标注准确性为核心的Data Engine",
+          "利用模型一致性验证生成可靠标注"
+        ],
+        "application_scenarios": [
+          "大规模文档解析",
+          "复杂文档结构解析"
+        ],
+        "technical_highlights": [
+          "Diversity-and-Difficulty-Aware Sampling",
+          "Cross-Model Consistency Verification"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.28301",
+      "source": "huggingface",
+      "title": "LIBERO-Para: A Diagnostic Benchmark and Metrics for Paraphrase Robustness in VLA Models",
+      "authors": [
+        "Chanyoung Kim",
+        "Minwoo Kim",
+        "Minseok Kang",
+        "Hyunwoo Kim",
+        "Dahuin Jung"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models achieve strong performance in robotic manipulation by leveraging pre-trained vision-language backbones. However, in downstream robotic settings, they are typically fine-tuned with limited data, leading to overfitting to specific instruction formulations and leaving robustness to paraphrased instructions underexplored. To study this gap, we introduce LIBERO-Para, a controlled benchmark that independently varies action expressions and object references for fine-grained analysis of linguistic generalization. Across seven VLA configurations (0.6B-7.5B), we observe consistent performance degradation of 22-52 pp under paraphrasing. This degradation is primarily driven by object-level lexical variation: even simple synonym substitutions cause large drops, indicating reliance on surface-level matching rather than semantic grounding. Moreover, 80-96% of failures arise from planning-level trajectory divergence rather than execution errors, showing that paraphrasing disrupts task identification. Binary success rate treats all paraphrases equally, obscuring whether models perform consistently across difficulty levels or rely on easier cases. To address this, we propose PRIDE, a metric that quantifies paraphrase difficulty using semantic and syntactic factors. Our benchmark and corresponding code are available at: https://github.com/cau-hai-lab/LIBERO-Para",
+      "published_date": "2026-03-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2603.28301",
+      "pdf_url": "https://arxiv.org/pdf/2603.28301",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.28301",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 70,
+      "hot_score": 700,
+      "structured_summary": {
+        "chinese_title": "LIBERO-Para：一种用于VLA模型同义表达鲁棒性的诊断基准和指标",
+        "chinese_summary": "引入LIBERO-Para基准，评估VLA模型在同义表达下的鲁棒性，发现模型依赖于表面匹配而非语义接地。",
+        "pain_point": "VLA模型在下游机器人设置中对特定指令表达过度拟合，缺乏对同义表达的鲁棒性。",
+        "core_value": "提供细粒度的语言泛化分析基准，揭示模型在同义表达下的性能下降原因。",
+        "technical_architecture": "通过独立变化动作表达和物体参考，构建细粒度语言泛化分析基准。",
+        "quantitative_results": "观察到22-52个百分点的性能下降，主要由物体层面的词汇变化驱动。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对VLA模型，未来可扩展至其他模型类型。",
+        "key_contributions": [
+          "构建了细粒度的语言泛化基准LIBERO-Para"
+        ],
+        "application_scenarios": [
+          "机器人操作任务识别"
+        ],
+        "technical_highlights": [
+          "独立变化动作表达和物体参考",
+          "揭示模型依赖表面匹配而非语义接地"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04921",
+      "source": "huggingface",
+      "title": "TriAttention: Efficient Long Reasoning with Trigonometric KV Compression",
+      "authors": [
+        "Weian Mao",
+        "Xi Lin",
+        "Wei Huang",
+        "Yuxin Xie",
+        "Tianfu Fu",
+        "Bohan Zhuang",
+        "Song Han",
+        "Yukang Chen"
+      ],
+      "abstract": "Extended reasoning in large language models (LLMs) creates severe KV cache memory bottlenecks. Leading KV cache compression methods estimate KV importance using attention scores from recent post-RoPE queries. However, queries rotate with position during RoPE, making representative queries very few, leading to poor top-key selection and unstable reasoning. To avoid this issue, we turn to the pre-RoPE space, where we observe that Q and K vectors are highly concentrated around fixed non-zero centers and remain stable across positions -- Q/K concentration. We show that this concentration causes queries to preferentially attend to keys at specific distances (e.g., nearest keys), with the centers determining which distances are preferred via a trigonometric series. Based on this, we propose TriAttention to estimate key importance by leveraging these centers. Via the trigonometric series, we use the distance preference characterized by these centers to score keys according to their positions, and also leverage Q/K norms as an additional signal for importance estimation. On AIME25 with 32K-token generation, TriAttention matches Full Attention reasoning accuracy while achieving 2.5x higher throughput or 10.7x KV memory reduction, whereas leading baselines achieve only about half the accuracy at the same efficiency. TriAttention enables OpenClaw deployment on a single consumer GPU, where long context would otherwise cause out-of-memory with Full Attention.",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04921",
+      "pdf_url": "https://arxiv.org/pdf/2604.04921",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04921",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 64,
+      "hot_score": 640,
+      "structured_summary": {
+        "chinese_title": "TriAttention: 高效长距离推理的三角键值压缩",
+        "chinese_summary": "TriAttention 通过三角函数压缩键值对，提高长距离推理效率。",
+        "pain_point": "大型语言模型中扩展推理导致的 KV 缓存内存瓶颈。",
+        "core_value": "通过三角函数压缩键值对，提高推理准确性和效率。",
+        "technical_architecture": "利用 Q 和 K 向量的集中特性，结合三角函数和 Q/K 规范进行键值重要性估计。",
+        "quantitative_results": "在 AIME25 上，32K 生成时，TriAttention 达到与全注意机制相当的推理准确度，同时效率提高 2.5 倍。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上进行了验证。",
+        "key_contributions": [
+          "提出 TriAttention，利用三角函数压缩键值对",
+          "结合 Q/K 向量集中特性进行键值重要性估计"
+        ],
+        "application_scenarios": [
+          "大型语言模型中的长距离推理",
+          "需要高效处理大量数据的场景"
+        ],
+        "technical_highlights": [
+          "利用 Q/K 向量的集中特性",
+          "结合三角函数进行键值重要性估计"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02176",
+      "source": "huggingface",
+      "title": "Adam's Law: Textual Frequency Law on Large Language Models",
+      "authors": [
+        "Hongyuan Adam Lu",
+        "Z. L.",
+        "Victor Wei",
+        "Zefan Zhang",
+        "Zhao Hong",
+        "Qiqi Xiang",
+        "Bowen Cao",
+        "Wai Lam"
+      ],
+      "abstract": "While textual frequency has been validated as relevant to human cognition in reading speed, its relatedness to Large Language Models (LLMs) is seldom studied. We propose a novel research direction in terms of textual data frequency, which is an understudied topic, to the best of our knowledge. Our framework is composed of three units. First, this paper proposes Textual Frequency Law (TFL), which indicates that frequent textual data should be preferred for LLMs for both prompting and fine-tuning. Since many LLMs are closed-source in their training data, we propose using online resources to estimate the sentence-level frequency. We then utilize an input paraphraser to paraphrase the input into a more frequent textual expression. Next, we propose Textual Frequency Distillation (TFD) by querying LLMs to conduct story completion by further extending the sentences in the datasets, and the resulting corpora are used to adjust the initial estimation. Finally, we propose Curriculum Textual Frequency Training (CTFT) that fine-tunes LLMs in an increasing order of sentence-level frequency. Experiments are conducted on our curated dataset Textual Frequency Paired Dataset (TFPD) on math reasoning, machine translation, commonsense reasoning and agentic tool calling. Results show the effectiveness of our framework.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02176",
+      "pdf_url": "https://arxiv.org/pdf/2604.02176",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02176",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 45,
+      "hot_score": 450,
+      "structured_summary": {
+        "chinese_title": "亚当定律：大型语言模型中的文本频率定律",
+        "chinese_summary": "提出文本频率定律，通过在线资源估计句子频率并利用输入改写器和故事完成技术优化大型语言模型。",
+        "pain_point": "大型语言模型训练数据的封闭性导致难以直接评估文本频率。",
+        "core_value": "提出文本频率定律、频率蒸馏和课程文本频率训练方法，提升模型性能。",
+        "technical_architecture": "利用在线资源估计频率，输入改写器和故事完成技术。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在数学推理数据集上进行了实验。",
+        "key_contributions": [
+          "提出文本频率定律",
+          "提出频率蒸馏方法",
+          "提出课程文本频率训练方法"
+        ],
+        "application_scenarios": [
+          "大型语言模型优化",
+          "自然语言处理任务"
+        ],
+        "technical_highlights": [
+          "利用在线资源估计频率",
+          "输入改写器提高文本频率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04184",
+      "source": "huggingface",
+      "title": "AURA: Always-On Understanding and Real-Time Assistance via Video Streams",
+      "authors": [
+        "Xudong Lu",
+        "Yang Bo",
+        "Jinpeng Chen",
+        "Shuhan Li",
+        "Xintong Guo",
+        "Huankang Guan",
+        "Fang Liu",
+        "Dunyuan Xu",
+        "Peiwen Sun",
+        "Heyang Sun",
+        "Rui Liu",
+        "Hongsheng Li"
+      ],
+      "abstract": "Video Large Language Models (VideoLLMs) have achieved strong performance on many video understanding tasks, but most existing systems remain offline and are not well-suited for live video streams that require continuous observation and timely response. Recent streaming VideoLLMs have made progress, yet current approaches often rely on decoupled trigger-response pipelines or are limited to captioning-style narration, reducing their effectiveness for open-ended question answering and long-horizon interaction. We propose AURA (Always-On Understanding and Real-Time Assistance), an end-to-end streaming visual interaction framework that enables a unified VideoLLM to continuously process video streams and support both real-time question answering and proactive responses. AURA integrates context management, data construction, training objectives, and deployment optimization for stable long-horizon streaming interaction. It achieves state-of-the-art performance on streaming benchmarks and supports a real-time demo system with ASR and TTS running at 2 FPS on two 80G accelerators. We release the AURA model together with a real-time inference framework to facilitate future research.",
+      "published_date": "2026-04-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04184",
+      "pdf_url": "https://arxiv.org/pdf/2604.04184",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04184",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": {
+        "chinese_title": "AURA：通过视频流实现持续理解和实时辅助",
+        "chinese_summary": "AURA 是一个端到端的实时视频交互框架，支持连续处理视频流并提供实时问答和主动响应。",
+        "pain_point": "现有系统无法实时处理视频流，无法支持持续观察和及时响应。",
+        "core_value": "AURA 支持实时问答和主动响应，提升开放性问题回答和长期交互的有效性。",
+        "technical_architecture": "AURA 结合上下文管理、数据构建、训练目标和部署优化，实现稳定长时交互。",
+        "quantitative_results": "在流媒体基准测试中达到最佳性能，实时演示系统运行速度为每秒 2 帧。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索更复杂的场景和更长时间的交互。",
+        "key_contributions": [
+          "提出统一的端到端实时视频交互框架",
+          "支持实时问答和主动响应",
+          "结合上下文管理和数据构建"
+        ],
+        "application_scenarios": [
+          "实时视频监控",
+          "远程教育"
+        ],
+        "technical_highlights": [
+          "实现稳定长时交互",
+          "支持实时问答和主动响应"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04911",
+      "source": "huggingface",
+      "title": "SpatialEdit: Benchmarking Fine-Grained Image Spatial Editing",
+      "authors": [
+        "Yicheng Xiao",
+        "Wenhu Zhang",
+        "Lin Song",
+        "Yukang Chen",
+        "Wenbo Li",
+        "Nan Jiang",
+        "Tianhe Ren",
+        "Haokun Lin",
+        "Wei Huang",
+        "Haoyang Huang",
+        "Xiu Li",
+        "Nan Duan",
+        "Xiaojuan Qi"
+      ],
+      "abstract": "Image spatial editing performs geometry-driven transformations, allowing precise control over object layout and camera viewpoints. Current models are insufficient for fine-grained spatial manipulations, motivating a dedicated assessment suite. Our contributions are listed: (i) We introduce SpatialEdit-Bench, a complete benchmark that evaluates spatial editing by jointly measuring perceptual plausibility and geometric fidelity via viewpoint reconstruction and framing analysis. (ii) To address the data bottleneck for scalable training, we construct SpatialEdit-500k, a synthetic dataset generated with a controllable Blender pipeline that renders objects across diverse backgrounds and systematic camera trajectories, providing precise ground-truth transformations for both object- and camera-centric operations. (iii) Building on this data, we develop SpatialEdit-16B, a baseline model for fine-grained spatial editing. Our method achieves competitive performance on general editing while substantially outperforming prior methods on spatial manipulation tasks. All resources will be made public at https://github.com/EasonXiao-888/SpatialEdit.",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04911",
+      "pdf_url": "https://arxiv.org/pdf/2604.04911",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04911",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "SpatialEdit：细粒度图像空间编辑基准测试",
+        "chinese_summary": "引入SpatialEdit-Bench，通过视点重建和构图分析评估空间编辑的感知可信度和几何保真度。",
+        "pain_point": "当前模型在细粒度空间操作方面不足。",
+        "core_value": "提供了一个综合基准和大规模合成数据集，推动细粒度空间编辑的发展。",
+        "technical_architecture": "基于可控Blender管道生成合成数据集，构建基准模型。",
+        "quantitative_results": "在空间操作任务上显著优于先前方法。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要更多实际场景数据。",
+        "key_contributions": [
+          "引入SpatialEdit-Bench",
+          "构建SpatialEdit-500k合成数据集",
+          "开发SpatialEdit-16B基线模型"
+        ],
+        "application_scenarios": [
+          "图像编辑",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "可控Blender管道生成",
+          "视点重建和构图分析"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04202",
+      "source": "huggingface",
+      "title": "ClawArena: Benchmarking AI Agents in Evolving Information Environments",
+      "authors": [
+        "Haonian Ji",
+        "Kaiwen Xiong",
+        "Siwei Han",
+        "Peng Xia",
+        "Shi Qiu",
+        "Yiyang Zhou",
+        "Jiaqi Liu",
+        "Jinlong Li",
+        "Bingzhou Li",
+        "Zeyu Zheng",
+        "Cihang Xie",
+        "Huaxiu Yao"
+      ],
+      "abstract": "AI agents deployed as persistent assistants must maintain correct beliefs as their information environment evolves. In practice, evidence is scattered across heterogeneous sources that often contradict one another, new information can invalidate earlier conclusions, and user preferences surface through corrections rather than explicit instructions. Existing benchmarks largely assume static, single-authority settings and do not evaluate whether agents can keep up with this complexity. We introduce ClawArena, a benchmark for evaluating AI agents in evolving information environments. Each scenario maintains a complete hidden ground truth while exposing the agent only to noisy, partial, and sometimes contradictory traces across multi-channel sessions, workspace files, and staged updates. Evaluation is organized around three coupled challenges: multi-source conflict reasoning, dynamic belief revision, and implicit personalization, whose interactions yield a 14-category question taxonomy. Two question formats, multi-choice (set-selection) and shell-based executable checks, test both reasoning and workspace grounding. The current release contains 64 scenarios across 8 professional domains, totaling 1{,}879 evaluation rounds and 365 dynamic updates. Experiments on five agent frameworks and five language models show that both model capability (15.4% range) and framework design (9.2%) substantially affect performance, that self-evolving skill frameworks can partially close model-capability gaps, and that belief revision difficulty is determined by update design strategy rather than the mere presence of updates. Code is available at https://github.com/aiming-lab/ClawArena.",
+      "published_date": "2026-04-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04202",
+      "pdf_url": "https://arxiv.org/pdf/2604.04202",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04202",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "ClawArena: 在不断变化的信息环境中评估AI代理",
+        "chinese_summary": "ClawArena 是一个评估 AI 代理在不断变化的信息环境中的基准测试。",
+        "pain_point": "现有基准假设静态、单一权威环境，无法评估代理在复杂信息环境中的表现。",
+        "core_value": "ClawArena 提供了一个全面的评估框架，涵盖多源冲突推理、动态信念修订和隐式个性化。",
+        "technical_architecture": "ClawArena 通过多渠道会话、工作区文件和阶段更新提供噪声、部分和有时矛盾的踪迹。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前版本仅包含8个专业领域的64个场景。",
+        "key_contributions": [
+          "引入了多源冲突推理",
+          "动态信念修订",
+          "隐式个性化评估框架"
+        ],
+        "application_scenarios": [
+          "持续助手代理评估",
+          "多源信息环境下的代理评估"
+        ],
+        "technical_highlights": [
+          "14类问题分类",
+          "多选择和shell可执行检查问题格式"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04901",
+      "source": "huggingface",
+      "title": "FileGram: Grounding Agent Personalization in File-System Behavioral Traces",
+      "authors": [
+        "Shuai Liu",
+        "Shulin Tian",
+        "Kairui Hu",
+        "Yuhao Dong",
+        "Zhe Yang",
+        "Bo Li",
+        "Jingkang Yang",
+        "Chen Change Loy",
+        "Ziwei Liu"
+      ],
+      "abstract": "Coworking AI agents operating within local file systems are rapidly emerging as a paradigm in human-AI interaction; however, effective personalization remains limited by severe data constraints, as strict privacy barriers and the difficulty of jointly collecting multimodal real-world traces prevent scalable training and evaluation, and existing methods remain interaction-centric while overlooking dense behavioral traces in file-system operations; to address this gap, we propose FileGram, a comprehensive framework that grounds agent memory and personalization in file-system behavioral traces, comprising three core components: (1) FileGramEngine, a scalable persona-driven data engine that simulates realistic workflows and generates fine-grained multimodal action sequences at scale; (2) FileGramBench, a diagnostic benchmark grounded in file-system behavioral traces for evaluating memory systems on profile reconstruction, trace disentanglement, persona drift detection, and multimodal grounding; and (3) FileGramOS, a bottom-up memory architecture that builds user profiles directly from atomic actions and content deltas rather than dialogue summaries, encoding these traces into procedural, semantic, and episodic channels with query-time abstraction; extensive experiments show that FileGramBench remains challenging for state-of-the-art memory systems and that FileGramEngine and FileGramOS are effective, and by open-sourcing the framework, we hope to support future research on personalized memory-centric file-system agents.",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04901",
+      "pdf_url": "https://arxiv.org/pdf/2604.04901",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04901",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "FileGram：基于文件系统行为轨迹的代理个性化",
+        "chinese_summary": "提出FileGram框架，通过文件系统行为轨迹实现代理个性化。",
+        "pain_point": "现有AI代理缺乏有效的个性化，受限于数据约束和隐私障碍。",
+        "core_value": "通过文件系统行为轨迹实现代理个性化，解决数据约束问题。",
+        "technical_architecture": "提出FileGramEngine和FileGramBench，构建用户画像。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证实际应用效果。",
+        "key_contributions": [
+          "提出FileGram框架",
+          "基于文件系统行为轨迹实现代理个性化",
+          "构建用户画像的底层架构"
+        ],
+        "application_scenarios": [
+          "协同工作环境中的AI代理",
+          "个性化文件系统代理"
+        ],
+        "technical_highlights": [
+          "模拟真实工作流",
+          "多模态行为序列生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.03679",
+      "source": "huggingface",
+      "title": "LightThinker++: From Reasoning Compression to Memory Management",
+      "authors": [
+        "Yuqi Zhu",
+        "Jintian Zhang",
+        "Zhenjie Wan",
+        "Yujie Luo",
+        "Shuofei Qiao",
+        "Zhengke Gui",
+        "Da Zheng",
+        "Lei Liang",
+        "Huajun Chen",
+        "Ningyu Zhang"
+      ],
+      "abstract": "Large language models (LLMs) excel at complex reasoning, yet their efficiency is limited by the surging cognitive overhead of long thought traces. In this paper, we propose LightThinker, a method that enables LLMs to dynamically compress intermediate thoughts into compact semantic representations. However, static compression often struggles with complex reasoning where the irreversible loss of intermediate details can lead to logical bottlenecks. To address this, we evolve the framework into LightThinker++, introducing Explicit Adaptive Memory Management. This paradigm shifts to behavioral-level management by incorporating explicit memory primitives, supported by a specialized trajectory synthesis pipeline to train purposeful memory scheduling. Extensive experiments demonstrate the framework's versatility across three dimensions. (1) LightThinker reduces peak token usage by 70% and inference time by 26% with minimal accuracy loss. (2) In standard reasoning, LightThinker++ slashes peak token usage by 69.9% while yielding a +2.42% accuracy gain under the same context budget for maximum performance. (3) Most notably, in long-horizon agentic tasks, it maintains a stable footprint beyond 80 rounds (a 60%-70% reduction), achieving an average performance gain of 14.8% across different complex scenarios. Overall, our work provides a scalable direction for sustaining deep LLM reasoning over extended horizons with minimal overhead.",
+      "published_date": "2026-04-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.03679",
+      "pdf_url": "https://arxiv.org/pdf/2604.03679",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.03679",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "LightThinker++: 从推理压缩到内存管理",
+        "chinese_summary": "LightThinker++ 提高了大型语言模型在复杂推理任务中的效率和准确性。",
+        "pain_point": "大型语言模型在处理长推理链时效率低下，中间细节的不可逆丢失导致逻辑瓶颈。",
+        "core_value": "通过引入显式适应性内存管理，LightThinker++ 在保持高准确率的同时显著减少了内存使用。",
+        "technical_architecture": "采用显式内存原语和专门的轨迹合成管道进行训练。",
+        "quantitative_results": "LightThinker++ 在长时任务中保持稳定性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更复杂的任务场景。",
+        "key_contributions": [
+          "引入显式适应性内存管理",
+          "提高推理效率和准确性"
+        ],
+        "application_scenarios": [
+          "复杂推理任务",
+          "长时任务"
+        ],
+        "technical_highlights": [
+          "动态压缩中间思想",
+          "专门的轨迹合成管道"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

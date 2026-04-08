@@ -1,0 +1,521 @@
+{
+  "date": "2026-04-08",
+  "generated_at": "2026-04-08T23:40:19.701429+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.05015",
+      "source": "huggingface",
+      "title": "Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding",
+      "authors": [
+        "Chaoyou Fu",
+        "Haozhi Yuan",
+        "Yuhao Dong",
+        "Yi-Fan Zhang",
+        "Yunhang Shen",
+        "Xiaoxing Hu",
+        "Xueying Li",
+        "Jinsen Su",
+        "Chengwu Long",
+        "Xiaoyao Xie",
+        "Yongkang Xie",
+        "Xiawu Zheng",
+        "Xue Yang",
+        "Haoyu Cao",
+        "Yunsheng Wu",
+        "Ziwei Liu",
+        "Xing Sun",
+        "Caifeng Shan",
+        "Ran He"
+      ],
+      "abstract": "With the rapid advancement of video understanding, existing benchmarks are becoming increasingly saturated, exposing a critical discrepancy between inflated leaderboard scores and real-world model capabilities. To address this widening gap, we introduce Video-MME-v2, a comprehensive benchmark designed to rigorously evaluate the robustness and faithfulness of video understanding. To systematically evaluate model capabilities, we design a progressive tri-level hierarchy that incrementally increases the complexity of video comprehension, ranging from multi-point visual information aggregation, to temporal dynamics modeling, and ultimately to complex multimodal reasoning. Besides, in contrast to conventional per-question accuracy, we propose a group-based non-linear evaluation strategy that enforces both consistency across related queries and coherence in multi-step reasoning. It penalizes fragmented or guess-based correctness and assigns credit only to answers supported by valid reasoning. To guarantee data quality, Video-MME-v2 is constructed through a rigorously controlled human annotation pipeline, involving 12 annotators and 50 independent reviewers. Backed by 3,300 human-hours and up to 5 rounds of quality assurance, Video-MME-v2 aims to serve as one of the most authoritative video benchmarks. Extensive experiments reveal a substantial gap between current best model Gemini-3-Pro and human experts, and uncover a clear hierarchical bottleneck where errors in visual information aggregation and temporal modeling propagate to limit high-level reasoning. We further find that thinking-based reasoning is highly dependent on textual cues, improving performance with subtitles but sometimes degrading it in purely visual settings. By exposing these limitations, Video-MME-v2 establishes a demanding new testbed for the development of next-generation video MLLMs.",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.05015",
+      "pdf_url": "https://arxiv.org/pdf/2604.05015",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.05015",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 197,
+      "hot_score": 1970,
+      "structured_summary": {
+        "chinese_title": "Video-MME-v2: 朝着全面视频理解基准的下一阶段迈进",
+        "chinese_summary": "Video-MME-v2 通过严格的多级评估体系和基于组的非线性评价策略，提升视频理解模型的鲁棒性和真实性。",
+        "pain_point": "现有视频理解基准存在理论与实际应用能力差距。",
+        "core_value": "提供系统化的多级评估体系和基于组的非线性评价策略，增强模型的真实性和鲁棒性。",
+        "technical_architecture": "设计了多级评估体系，涵盖多点视觉信息聚合、时间动态建模和复杂多模态推理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖大量人工标注，成本较高。",
+        "key_contributions": [
+          "提出多级评估体系",
+          "引入基于组的非线性评价策略",
+          "严格控制的人工标注流程"
+        ],
+        "application_scenarios": [
+          "视频理解模型评估",
+          "多模态视频分析"
+        ],
+        "technical_highlights": [
+          "系统化的多级评估体系",
+          "严格的多人工标注流程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.06132",
+      "source": "huggingface",
+      "title": "Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents",
+      "authors": [
+        "Bowen Ye",
+        "Rang Li",
+        "Qibin Yang",
+        "Yuanxin Liu",
+        "Linli Yao",
+        "Hanglong Lv",
+        "Zhihui Xie",
+        "Chenxin An",
+        "Lei Li",
+        "Lingpeng Kong",
+        "Qi Liu",
+        "Zhifang Sui",
+        "Tong Yang"
+      ],
+      "abstract": "Large language models are increasingly deployed as autonomous agents executing multi-step workflows in real-world software environments. However, existing agent benchmarks suffer from three critical limitations: (1) trajectory-opaque grading that checks only final outputs, (2) underspecified safety and robustness evaluation, and (3) narrow modality coverage and interaction paradigms. We introduce Claw-Eval, an end-to-end evaluation suite addressing all three gaps. It comprises 300 human-verified tasks spanning 9 categories across three groups (general service orchestration, multimodal perception and generation, and multi-turn professional dialogue). Every agent action is recorded through three independent evidence channels (execution traces, audit logs, and environment snapshots), enabling trajectory-aware grading over 2,159 fine-grained rubric items. The scoring protocol evaluates Completion, Safety, and Robustness, reporting Average Score, Pass@k, and Pass^k across three trials to distinguish genuine capability from lucky outcomes. Experiments on 14 frontier models reveal that: (1) trajectory-opaque evaluation is systematically unreliable, missing 44% of safety violations and 13% of robustness failures that our hybrid pipeline catches; (2) controlled error injection primarily degrades consistency rather than peak capability, with Pass^3 dropping up to 24% while Pass@3 remains stable; (3) multimodal performance varies sharply, with most models performing poorer on video than on document or image, and no single model dominating across all modalities. Beyond benchmarking, Claw-Eval highlights actionable directions for agent development, shedding light on what it takes to build agents that are not only capable but reliably deployable.",
+      "published_date": "2026-04-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.06132",
+      "pdf_url": "https://arxiv.org/pdf/2604.06132",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.06132",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 95,
+      "hot_score": 950,
+      "structured_summary": {
+        "chinese_title": "Claw-Eval: 朝向自主代理可信评估的解决方案",
+        "chinese_summary": "Claw-Eval 提供了一种新的评估方法，解决了现有自主代理评估的三个关键问题。",
+        "pain_point": "现有自主代理评估方法存在透明度不足、安全性评估不充分以及模态覆盖狭窄等问题。",
+        "core_value": "Claw-Eval 提供了全面的评估框架，能够更准确地评估自主代理的能力。",
+        "technical_architecture": "通过多证据通道记录每个代理动作，实现细粒度的轨迹感知评估。",
+        "quantitative_results": "实验表明，Claw-Eval 能够更准确地识别安全违规行为。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步扩展评估任务的范围。",
+        "key_contributions": [
+          "提出了一种新的评估框架，解决了现有评估方法的三个关键问题。",
+          "通过多证据通道记录每个代理动作，实现细粒度的轨迹感知评估。",
+          "提供了全面的评估指标，包括完成度、安全性和鲁棒性评估"
+        ],
+        "application_scenarios": [
+          "多步骤工作流执行",
+          "多模态感知与生成",
+          "多轮专业对话"
+        ],
+        "technical_highlights": [
+          "通过多证据通道记录每个代理动作，实现细粒度的轨迹感知评估。",
+          "提供了全面的评估指标，包括完成度、安全性和鲁棒性评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04949",
+      "source": "huggingface",
+      "title": "Learning to Retrieve from Agent Trajectories",
+      "authors": [
+        "Yuqi Zhou",
+        "Sunhao Dai",
+        "Changle Qu",
+        "Liang Pang",
+        "Jun Xu",
+        "Ji-Rong Wen"
+      ],
+      "abstract": "Information retrieval (IR) systems have traditionally been designed and trained for human users, with learning-to-rank methods relying heavily on large-scale human interaction logs such as clicks and dwell time. With the rapid emergence of large language model (LLM) powered search agents, however, retrieval is increasingly consumed by agents rather than human beings, and is embedded as a core component within multi-turn reasoning and action loops. In this setting, retrieval models trained under human-centric assumptions exhibit a fundamental mismatch with the way agents issue queries and consume results. In this work, we argue that retrieval models for agentic search should be trained directly from agent interaction data. We introduce learning to retrieve from agent trajectories as a new training paradigm, where supervision is derived from multi-step agent interactions. Through a systematic analysis of search agent trajectories, we identify key behavioral signals that reveal document utility, including browsing actions, unbrowsed rejections, and post-browse reasoning traces. Guided by these insights, we propose LRAT, a simple yet effective framework that mines high-quality retrieval supervision from agent trajectories and incorporates relevance intensity through weighted optimization. Extensive experiments on both in-domain and out-of-domain deep research benchmarks demonstrate that retrievers trained with LRAT consistently improve evidence recall, end-to-end task success, and execution efficiency across diverse agent architectures and scales. Our results highlight agent trajectories as a practical and scalable supervision source, pointing to a promising direction for retrieval in the era of agentic search.",
+      "published_date": "2026-03-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04949",
+      "pdf_url": "https://arxiv.org/pdf/2604.04949",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04949",
+      "category": "llm",
+      "tags": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "从智能体轨迹学习检索",
+        "chinese_summary": "提出了一种新的训练范式，直接从智能体交互数据中学习检索模型。",
+        "pain_point": "传统检索模型基于人类交互数据训练，与智能体查询和结果消费方式不匹配。",
+        "core_value": "通过智能体交互数据训练检索模型，提高检索效果。",
+        "technical_architecture": "提出LRAT框架，从多步智能体交互中提取监督信号。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于现有数据集进行研究，未来需要更多数据支持。",
+        "key_contributions": [
+          "提出从智能体轨迹学习检索的新范式",
+          "提出LRAT框架"
+        ],
+        "application_scenarios": [
+          "智能体辅助搜索",
+          "多轮对话系统"
+        ],
+        "technical_highlights": [
+          "利用多步交互数据进行监督",
+          "揭示文档实用性行为信号"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.03922",
+      "source": "huggingface",
+      "title": "ACES: Who Tests the Tests? Leave-One-Out AUC Consistency for Code Generation",
+      "authors": [
+        "Hui Sun",
+        "Yun-Ji Zhang",
+        "Zheng Xie",
+        "Ren-Biao Liu",
+        "Yali Du",
+        "Xin-Ye Li",
+        "Ming Li"
+      ],
+      "abstract": "Selecting LLM-generated code candidates using LLM-generated tests is challenging because the tests themselves may be incorrect. Existing methods either treat all tests equally or rely on ad-hoc heuristics to filter unreliable tests. Yet determining test correctness requires knowing which codes are correct, creating a circular dependency. Our key insight is that we need not determine test correctness at all: test votes should rank, not merely count. What matters is not how many codes pass a test, but whether the test can distinguish correct from incorrect code. We break the circular dependency via leave-one-out evaluation: hold out one test, rank codes by their aggregate scores on all remaining tests, and measure whether the held-out test's pass/fail pattern agrees with this ranking. We formalize this agreement as the leave-one-out AUC~(LOO-AUC) and prove that the expected LOO-AUC is proportional to each test's ability to separate correct code from incorrect code. Building on this, we propose ACES~(AUC ConsistEncy Scoring) with two complementary variants: ACES-C provides closed-form weights that provably approximate the oracle in expectation under a mild assumption on average test quality; ACES-O drops this assumption and iteratively optimizes a differentiable LOO-AUC objective. Both operate solely on the binary pass matrix with negligible overhead, and achieve state-of-the-art Pass@k on multiple code generation benchmarks.",
+      "published_date": "2026-04-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.03922",
+      "pdf_url": "https://arxiv.org/pdf/2604.03922",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.03922",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 46,
+      "hot_score": 460,
+      "structured_summary": {
+        "chinese_title": "ACES: 谁测试测试？代码生成中的Leave-One-Out AUC一致性",
+        "chinese_summary": "提出ACES方法，通过Leave-One-Out AUC一致性评估LLM生成的测试的有效性。",
+        "pain_point": "现有方法难以准确评估LLM生成的测试的正确性，存在循环依赖问题。",
+        "core_value": "通过Leave-One-Out AUC一致性，无需确定测试的正确性，直接评估其区分正确与错误代码的能力。",
+        "technical_architecture": "采用Leave-One-Out评估方法，计算每个测试的AUC一致性得分。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "假设平均测试质量满足一定条件。",
+        "key_contributions": [
+          "提出Leave-One-Out AUC一致性评估方法",
+          "无需确定测试正确性，直接评估其区分能力"
+        ],
+        "application_scenarios": [
+          "代码生成测试评估",
+          "自动化测试生成"
+        ],
+        "technical_highlights": [
+          "闭式权重提供近似最优解",
+          "理论证明一致性得分与测试区分能力正相关"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.02648",
+      "source": "huggingface",
+      "title": "GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers",
+      "authors": [
+        "Shufan Jiang",
+        "Chios Chen",
+        "Zhiyang Chen"
+      ],
+      "abstract": "The autonomous discovery of bugs remains a significant challenge in modern software development. Compared to code generation, the complexity of dynamic runtime environments makes bug discovery considerably harder for large language models (LLMs). In this paper, we take game development as a representative domain and introduce the Game Benchmark for Quality Assurance (GBQA), a benchmark containing 30 games and 124 human-verified bugs across three difficulty levels, to evaluate whether LLMs can autonomously detect software bugs. The benchmark is constructed using a multi-agent system that develops games and injects bugs in a scalable manner, with human experts in the loop to ensure correctness. Moreover, we provide a baseline interactive agent equipped with a multi-round ReAct loop and a memory mechanism, enabling long-horizon exploration of game environments for bug detection across different LLMs. Extensive experiments on frontier LLMs demonstrate that autonomous bug discovery remains highly challenging: the best-performing model, Claude-4.6-Opus in thinking mode, identifies only 48.39% of the verified bugs. We believe GBQA provides an adequate testbed and evaluation criterion, and that further progress on it will help close the gap in autonomous software engineering.",
+      "published_date": "2026-04-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.02648",
+      "pdf_url": "https://arxiv.org/pdf/2604.02648",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.02648",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": {
+        "chinese_title": "GBQA：评估大语言模型作为质量保证工程师的游戏基准",
+        "chinese_summary": "提出了一个包含30款游戏和124个人工验证的bug的基准GBQA，用于评估大语言模型在游戏开发中的bug发现能力。",
+        "pain_point": "大语言模型在动态运行时环境中自主发现bug的难度远超代码生成。",
+        "core_value": "提供了一个评估大语言模型bug发现能力的基准，填补了该领域的空白。",
+        "technical_architecture": "使用多代理系统开发游戏并注入bug，结合人类专家确保正确性。",
+        "quantitative_results": "最佳模型识别了48.39%的验证bug。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对游戏开发领域，未来需扩展到其他领域。",
+        "key_contributions": [
+          "提出了GBQA基准",
+          "提供了评估大语言模型bug发现能力的方法",
+          "展示了大语言模型在bug发现方面的局限性"
+        ],
+        "application_scenarios": [
+          "游戏开发中的bug检测",
+          "软件开发中的质量保证"
+        ],
+        "technical_highlights": [
+          "多代理系统开发和注入bug",
+          "人类专家在环确保正确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.01591",
+      "source": "huggingface",
+      "title": "ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement",
+      "authors": [
+        "Difan Jiao",
+        "Qianfeng Wen",
+        "Blair Yang",
+        "Zhenwei Tang",
+        "Ashton Anderson"
+      ],
+      "abstract": "We introduce ThinkTwice, a simple two-phase framework that jointly optimizes LLMs to solve reasoning problems and refine the answers, based on Group Relative Policy Optimization (GRPO). In each pair of training steps, ThinkTwice first optimizes the model on solving reasoning problems, then optimizes it on refining its own solutions to the same problems, using the same binary correctness reward in both phases without correctness signals or critique annotations. Across five mathematical reasoning benchmarks and two model families including Qwen3-4B and Olmo3-7B, ThinkTwice substantially improves both reasoning and refinement performance over competitive online policy optimization baselines. Specifically, on Qwen3-4B, ThinkTwice outperforms GRPO on AIME by 5 percentage points before refinement and by 11.5 points after one self-refinement step, measured by pass@4. Analysis of the training dynamics of ThinkTwice reveals an implicit rectify-then-fortify curriculum: refinement predominantly corrects errors early in training and naturally shifts toward preserving already-correct solutions as the model improves, yielding a more rectified reward signal. Our work establishes joint training of reasoning and self-refinement as a principled and effective methodology for RLVR.",
+      "published_date": "2026-04-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.01591",
+      "pdf_url": "https://arxiv.org/pdf/2604.01591",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.01591",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 32,
+      "hot_score": 320,
+      "structured_summary": {
+        "chinese_title": "ThinkTwice: 联合优化大型语言模型进行推理和自我修正",
+        "chinese_summary": "ThinkTwice 提出了一种两阶段框架，通过 Group Relative Policy Optimization (GRPO) 联合优化 LLMs 的推理和自我修正能力。",
+        "pain_point": "现有模型在推理和自我修正方面表现不佳。",
+        "core_value": "通过两阶段优化显著提升推理和自我修正性能。",
+        "technical_architecture": "基于 Group Relative Policy Optimization (GRPO) 的两阶段优化框架。",
+        "quantitative_results": "在 Qwen3-4B 上，ThinkTwice 在 AIME 上的 pass@4 在自我修正后提高了 11.5 个百分点。",
+        "competitors": "对比了在线策略优化基线。",
+        "limitations": "需要进一步研究更复杂的数据集。",
+        "key_contributions": [
+          "提出了一种新的两阶段优化框架",
+          "使用相同的奖励信号进行推理和自我修正",
+          "揭示了隐含的纠正-强化课程"
+        ],
+        "application_scenarios": [
+          "数学推理任务",
+          "大型语言模型的优化"
+        ],
+        "technical_highlights": [
+          "无需正确性信号或批评注释",
+          "自动从错误中学习并保持正确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.05404",
+      "source": "huggingface",
+      "title": "Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning",
+      "authors": [
+        "Qisheng Su",
+        "Shiting Huang",
+        "Zhen Fang",
+        "Ziyan Chen",
+        "Zehui Chen",
+        "Feng Zhao"
+      ],
+      "abstract": "In real-world Tool-Integrated Reasoning (TIR) scenarios, where LLMs interleave reasoning with external tool calls, a major source of inefficiency is that the toolcalls create pauses between LLM requests and cause KV-Cache eviction, forcing recomputation. Also, the long, unfiltered response returned by external tools inflates the KV-Cache, so each decode step spends more time loading the growing cache and thus becomes steadily slower as context length increases. However, existing efficiency metrics like token counts and toolcall counts fail to capture the real model inference latency. To address this, we introduce PTE (Prefill Token Equivalents), a hardware-aware TIR-efficiency metric that unifies internal reasoning and external tool-use costs while explicitly accounting for non-reusable KV-Cache and long-tool-response scenarios. Validation in a high-concurrency industrial setting indicates that PTE aligns significantly better with wall-clock latency than standard token counts, while maintaining consistent efficiency rankings across diverse hardware profiles. We conduct extensive experiments across five TIR benchmarks, quantify their PTE costs, and identify four inefficiency patterns that appear in TIR. We also discover that trajectories with higher PTE costs tend to have lower reasoning correctness, indicating that simply using more tools does not improve the quality of the answer.",
+      "published_date": "2026-04-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.05404",
+      "pdf_url": "https://arxiv.org/pdf/2604.05404",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.05404",
+      "category": "other",
+      "tags": [
+        "cs.PF",
+        "cs.SE"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "超越准确性：揭示工具集成推理中的低效模式",
+        "chinese_summary": "提出PTE（预填充令牌等效值）作为新的TIR效率度量标准，更好地反映实际模型推理延迟。",
+        "pain_point": "工具调用导致推理暂停和缓存失效，增加推理时间。",
+        "core_value": "提供一种新的度量标准PTE，更准确地评估TIR效率。",
+        "technical_architecture": "结合内部推理和外部工具使用成本，考虑非可重用缓存和长工具响应。",
+        "quantitative_results": "PTE在高并发工业环境中与实际延迟更一致，不同硬件表现一致。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证PTE的有效性。",
+        "key_contributions": [
+          "提出PTE作为新的TIR效率度量标准",
+          "考虑非可重用缓存和长工具响应",
+          "在高并发环境中验证PTE的有效性"
+        ],
+        "application_scenarios": [
+          "工具集成推理场景",
+          "高并发工业环境"
+        ],
+        "technical_highlights": [
+          "硬件感知的TIR效率度量",
+          "统一内部推理和外部工具使用成本"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04934",
+      "source": "huggingface",
+      "title": "Vanast: Virtual Try-On with Human Image Animation via Synthetic Triplet Supervision",
+      "authors": [
+        "Hyunsoo Cha",
+        "Wonjung Woo",
+        "Byungjun Kim",
+        "Hanbyul Joo"
+      ],
+      "abstract": "We present Vanast, a unified framework that generates garment-transferred human animation videos directly from a single human image, garment images, and a pose guidance video. Conventional two-stage pipelines treat image-based virtual try-on and pose-driven animation as separate processes, which often results in identity drift, garment distortion, and front-back inconsistency. Our model addresses these issues by performing the entire process in a single unified step to achieve coherent synthesis. To enable this setting, we construct large-scale triplet supervision. Our data generation pipeline includes generating identity-preserving human images in alternative outfits that differ from garment catalog images, capturing full upper and lower garment triplets to overcome the single-garment-posed video pair limitation, and assembling diverse in-the-wild triplets without requiring garment catalog images. We further introduce a Dual Module architecture for video diffusion transformers to stabilize training, preserve pretrained generative quality, and improve garment accuracy, pose adherence, and identity preservation while supporting zero-shot garment interpolation. Together, these contributions allow Vanast to produce high-fidelity, identity-consistent animation across a wide range of garment types.",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04934",
+      "pdf_url": "https://arxiv.org/pdf/2604.04934",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04934",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "Vanast: 基于合成三元组监督的人像动画虚拟试衣",
+        "chinese_summary": "通过单个人像、服装图像和姿态指导视频直接生成服装转移的人像动画视频。",
+        "pain_point": "现有两阶段流程导致身份漂移、服装失真和前后不一致。",
+        "core_value": "统一框架实现端到端合成，提高一致性。",
+        "technical_architecture": "构建大规模合成三元组监督，使用Dual Module架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提出统一框架实现端到端合成",
+          "构建大规模合成三元组监督",
+          "引入Dual Module架构"
+        ],
+        "application_scenarios": [
+          "虚拟试衣",
+          "人像动画生成"
+        ],
+        "technical_highlights": [
+          "大规模合成三元组监督",
+          "Dual Module架构"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.05117",
+      "source": "huggingface",
+      "title": "Watch Before You Answer: Learning from Visually Grounded Post-Training",
+      "authors": [
+        "Yuxuan Zhang",
+        "EunJeong Hwang",
+        "Huaisong Zhang",
+        "Penghui Du",
+        "Yiming Jia",
+        "Dongfu Jiang",
+        "Xuan He",
+        "Shenhui Zhang",
+        "Ping Nie",
+        "Peter West",
+        "Kelsey R. Allen"
+      ],
+      "abstract": "It is critical for vision-language models (VLMs) to comprehensively understand visual, temporal, and textual cues. However, despite rapid progress in multimodal modeling, video understanding performance still lags behind text-based reasoning. In this work, we find that progress is even worse than previously assumed: commonly reported long video understanding benchmarks contain 40-60% of questions that can be answered using text cues alone. Furthermore, we find that these issues are also pervasive in widely used post-training datasets, potentially undercutting the ability of post-training to improve VLM video understanding performance. Guided by this observation, we introduce VidGround as a simple yet effective solution: using only the actual visually grounded questions without any linguistic biases for post-training. When used in tandem with RL-based post-training algorithms, this simple technique improves performance by up to 6.2 points relative to using the full dataset, while using only 69.1% of the original post-training data. Moreover, we show that data curation with a simple post-training algorithm outperforms several more complex post-training techniques, highlighting that data quality is a major bottleneck for improving video understanding in VLMs. These results underscore the importance of curating post-training data and evaluation benchmarks that truly require visual grounding to advance the development of more capable VLMs. Project page: http://vidground.etuagi.com.",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.05117",
+      "pdf_url": "https://arxiv.org/pdf/2604.05117",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.05117",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "在回答之前观看：学习基于视觉的后训练",
+        "chinese_summary": "通过仅使用实际视觉接地问题进行后训练，显著提升视频理解性能。",
+        "pain_point": "视频理解基准中40-60%的问题仅需文本线索即可回答，影响后训练效果。",
+        "core_value": "提出VidGround方法，仅使用视觉接地问题进行后训练，提升性能。",
+        "technical_architecture": "使用RL后训练算法结合VidGround方法进行视频理解。",
+        "quantitative_results": "相对使用完整数据集，性能提升6.2分，仅使用69.1%的数据。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定视频理解任务上验证。",
+        "key_contributions": [
+          "提出VidGround方法",
+          "证明简单后训练算法优于复杂方法"
+        ],
+        "application_scenarios": [
+          "视频问答",
+          "视频理解"
+        ],
+        "technical_highlights": [
+          "仅使用视觉接地问题进行后训练",
+          "显著提升性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04323",
+      "source": "huggingface",
+      "title": "How Well Do Agentic Skills Work in the Wild: Benchmarking LLM Skill Usage in Realistic Settings",
+      "authors": [
+        "Yujian Liu",
+        "Jiabao Ji",
+        "Li An",
+        "Tommi Jaakkola",
+        "Yang Zhang",
+        "Shiyu Chang"
+      ],
+      "abstract": "Agent skills, which are reusable, domain-specific knowledge artifacts, have become a popular mechanism for extending LLM-based agents, yet formally benchmarking skill usage performance remains scarce. Existing skill benchmarking efforts focus on overly idealized conditions, where LLMs are directly provided with hand-crafted, narrowly-tailored task-specific skills for each task, whereas in many realistic settings, the LLM agent may have to search for and select relevant skills on its own, and even the closest matching skills may not be well-tailored for the task. In this paper, we conduct the first comprehensive study of skill utility under progressively challenging realistic settings, where agents must retrieve skills from a large collection of 34k real-world skills and may not have access to any hand-curated skills. Our findings reveal that the benefits of skills are fragile: performance gains degrade consistently as settings become more realistic, with pass rates approaching no-skill baselines in the most challenging scenarios. To narrow this gap, we study skill refinement strategies, including query-specific and query-agnostic approaches, and we show that query-specific refinement substantially recovers lost performance when the initial skills are of reasonable relevance and quality. We further demonstrate the generality of retrieval and refinement on Terminal-Bench 2.0, where they improve the pass rate of Claude Opus 4.6 from 57.7% to 65.5%. Our results, consistent across multiple models, highlight both the promise and the current limitations of skills for LLM-based agents. Our code is available at https://github.com/UCSB-NLP-Chang/Skill-Usage.",
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04323",
+      "pdf_url": "https://arxiv.org/pdf/2604.04323",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04323",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "代理技能在实际场景中的效果如何：LLM 技能使用基准测试",
+        "chinese_summary": "研究发现代理技能在实际场景中的效果脆弱，性能随环境挑战增加而下降。",
+        "pain_point": "现有技能基准测试多在理想条件下进行，忽视了实际场景中技能搜索和选择的复杂性。",
+        "core_value": "首次在逐步挑战性的实际场景中全面研究技能效用，揭示技能效果的脆弱性。",
+        "technical_architecture": "使用大规模技能集合进行技能检索和选择。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索进一步的技能精炼策略。",
+        "key_contributions": [
+          "首次在实际场景中全面研究技能效用",
+          "揭示技能效果的脆弱性",
+          "提出技能精炼策略"
+        ],
+        "application_scenarios": [
+          "代理技能检索",
+          "技能选择与应用"
+        ],
+        "technical_highlights": [
+          "大规模技能集合",
+          "技能精炼策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

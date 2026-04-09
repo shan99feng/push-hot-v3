@@ -1,0 +1,561 @@
+{
+  "date": "2026-04-09",
+  "generated_at": "2026-04-09T23:38:40.271297+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.04746",
+      "source": "huggingface",
+      "title": "Think in Strokes, Not Pixels: Process-Driven Image Generation via Interleaved Reasoning",
+      "authors": [
+        "Lei Zhang",
+        "Junjiao Tian",
+        "Zhipeng Fan",
+        "Kunpeng Li",
+        "Jialiang Wang",
+        "Weifeng Chen",
+        "Markos Georgopoulos",
+        "Felix Juefei-Xu",
+        "Yuxiang Bao",
+        "Julian McAuley",
+        "Manling Li",
+        "Zecheng He"
+      ],
+      "abstract": "Humans paint images incrementally: they plan a global layout, sketch a coarse draft, inspect, and refine details, and most importantly, each step is grounded in the evolving visual states. However, can unified multimodal models trained on text-image interleaved datasets also imagine the chain of intermediate states? In this paper, we introduce process-driven image generation, a multi-step paradigm that decomposes synthesis into an interleaved reasoning trajectory of thoughts and actions. Rather than generating images in a single step, our approach unfolds across multiple iterations, each consisting of 4 stages: textual planning, visual drafting, textual reflection, and visual refinement. The textual reasoning explicitly conditions how the visual state should evolve, while the generated visual intermediate in turn constrains and grounds the next round of textual reasoning. A core challenge of process-driven generation stems from the ambiguity of intermediate states: how can models evaluate each partially-complete image? We address this through dense, step-wise supervision that maintains two complementary constraints: for the visual intermediate states, we enforce the spatial and semantic consistency; for the textual intermediate states, we preserve the prior visual knowledge while enabling the model to identify and correct prompt-violating elements. This makes the generation process explicit, interpretable, and directly supervisable. To validate proposed method, we conduct experiments under various text-to-image generation benchmarks.",
+      "published_date": "2026-04-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04746",
+      "pdf_url": "https://arxiv.org/pdf/2604.04746",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04746",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 45,
+      "hot_score": 450,
+      "structured_summary": {
+        "chinese_title": "从笔画思考，而非像素：基于过程驱动的图像生成",
+        "chinese_summary": "提出了一种多步骤的图像生成方法，通过交错推理轨迹实现从文本规划到视觉细化的逐步生成。",
+        "pain_point": "现有模型难以捕捉和生成图像生成过程中的中间状态。",
+        "core_value": "通过交错推理，模型能够逐步生成图像并明确指导视觉状态的演变。",
+        "technical_architecture": "采用多阶段交错推理，包括文本规划、视觉草图、文本反思和视觉细化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "模型对中间状态的模糊性处理仍存在挑战。",
+        "key_contributions": [
+          "提出过程驱动的图像生成方法",
+          "实现多阶段交错推理"
+        ],
+        "application_scenarios": [
+          "艺术创作",
+          "图像合成"
+        ],
+        "technical_highlights": [
+          "逐步生成图像",
+          "明确指导视觉状态演变"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.06268",
+      "source": "huggingface",
+      "title": "RAGEN-2: Reasoning Collapse in Agentic RL",
+      "authors": [
+        "Zihan Wang",
+        "Chi Gui",
+        "Xing Jin",
+        "Qineng Wang",
+        "Licheng Liu",
+        "Kangrui Wang",
+        "Shiqi Chen",
+        "Linjie Li",
+        "Zhengyuan Yang",
+        "Pingyue Zhang",
+        "Yiping Lu",
+        "Jiajun Wu",
+        "Li Fei-Fei",
+        "Lijuan Wang",
+        "Yejin Choi",
+        "Manling Li"
+      ],
+      "abstract": "RL training of multi-turn LLM agents is inherently unstable, and reasoning quality directly determines task performance. Entropy is widely used to track reasoning stability. However, entropy only measures diversity within the same input, and cannot tell whether reasoning actually responds to different inputs. In RAGEN-2, we find that even with stable entropy, models can rely on fixed templates that look diverse but are input-agnostic. We call this template collapse, a failure mode invisible to entropy and all existing metrics. To diagnose this failure, we decompose reasoning quality into within-input diversity (Entropy) and cross-input distinguishability (Mutual Information, MI), and introduce a family of mutual information proxies for online diagnosis. Across diverse tasks, mutual information correlates with final performance much more strongly than entropy, making it a more reliable proxy for reasoning quality. We further explain template collapse with a signal-to-noise ratio (SNR) mechanism. Low reward variance weakens task gradients, letting regularization terms dominate and erase cross-input reasoning differences. To address this, we propose SNR-Aware Filtering to select high-signal prompts per iteration using reward variance as a lightweight proxy. Across planning, math reasoning, web navigation, and code execution, the method consistently improves both input dependence and task performance.",
+      "published_date": "2026-04-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.06268",
+      "pdf_url": "https://arxiv.org/pdf/2604.06268",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.06268",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": {
+        "chinese_title": "RAGEN-2: 代理型强化学习中的推理坍塌",
+        "chinese_summary": "提出了一种新的诊断方法，通过互信息代理来检测推理质量，解决了代理型强化学习中模板坍塌的问题。",
+        "pain_point": "代理型强化学习中的推理质量不稳定，模型可能依赖于固定的模板，导致输入无关的推理。",
+        "core_value": "通过引入互信息代理来更准确地诊断推理质量，提高了任务性能。",
+        "technical_architecture": "将推理质量分解为输入内多样性（熵）和输入间可区分性（互信息），并提出SNR感知过滤。",
+        "quantitative_results": "互信息与最终性能的相关性更强，优于熵。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多的应用场景验证。",
+        "key_contributions": [
+          "提出了模板坍塌的概念",
+          "引入了互信息代理来诊断推理质量",
+          "解释了SNR机制对推理质量的影响"
+        ],
+        "application_scenarios": [
+          "多轮对话系统",
+          "复杂任务的代理型强化学习"
+        ],
+        "technical_highlights": [
+          "将推理质量分解为两个维度",
+          "提出SNR感知过滤方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.07023",
+      "source": "huggingface",
+      "title": "MARS: Enabling Autoregressive Models Multi-Token Generation",
+      "authors": [
+        "Ziqi Jin",
+        "Lei Wang",
+        "Ziwei Luo",
+        "Aixin Sun"
+      ],
+      "abstract": "Autoregressive (AR) language models generate text one token at a time, even when consecutive tokens are highly predictable given earlier context. We introduce MARS (Mask AutoRegreSsion), a lightweight fine-tuning method that teaches an instruction-tuned AR model to predict multiple tokens per forward pass. MARS adds no architectural modifications, no extra parameters, and produces a single model that can still be called exactly like the original AR model with no performance degradation. Unlike speculative decoding, which maintains a separate draft model alongside the target, or multi-head approaches such as Medusa, which attach additional prediction heads, MARS requires only continued training on existing instruction data. When generating one token per forward pass, MARS matches or exceeds the AR baseline on six standard benchmarks. When allowed to accept multiple tokens per step, it maintains baseline-level accuracy while achieving 1.5-1.7x throughput. We further develop a block-level KV caching strategy for batch inference, achieving up to 1.71x wall-clock speedup over AR with KV cache on Qwen2.5-7B. Finally, MARS supports real-time speed adjustment via confidence thresholding: under high request load, the serving system can increase throughput on the fly without swapping models or restarting, providing a practical latency-quality knob for deployment.",
+      "published_date": "2026-04-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.07023",
+      "pdf_url": "https://arxiv.org/pdf/2604.07023",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.07023",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "MARS：使自回归模型能够多令牌生成",
+        "chinese_summary": "MARS 方法使自回归模型在每次前向传递中预测多个令牌，提高生成效率。",
+        "pain_point": "自回归模型每次只能生成一个令牌，即使后续令牌高度可预测。",
+        "core_value": "MARS 通过少量微调实现多令牌预测，提高生成效率和吞吐量。",
+        "technical_architecture": "MARS 通过继续在现有指令数据上训练实现多令牌预测。",
+        "quantitative_results": "在某些基准测试中，MARS 的吞吐量提高了 1.5-1.7 倍。",
+        "competitors": "暂无对比信息",
+        "limitations": "实时速度调整依赖于置信阈值。",
+        "key_contributions": [
+          "提出 MARS 方法，使自回归模型能够多令牌生成",
+          "无需额外参数和架构修改",
+          "支持实时速度调整"
+        ],
+        "application_scenarios": [
+          "自然语言生成",
+          "对话系统"
+        ],
+        "technical_highlights": [
+          "轻量级微调方法",
+          "保持与原模型相同的性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.04247",
+      "source": "huggingface",
+      "title": "Combee: Scaling Prompt Learning for Self-Improving Language Model Agents",
+      "authors": [
+        "Hanchen Li",
+        "Runyuan He",
+        "Qizheng Zhang",
+        "Changxiu Ji",
+        "Qiuyang Mang",
+        "Xiaokun Chen",
+        "Lakshya A Agrawal",
+        "Wei-Liang Liao",
+        "Eric Yang",
+        "Alvin Cheung",
+        "James Zou",
+        "Kunle Olukotun",
+        "Ion Stoica",
+        "Joseph E. Gonzalez"
+      ],
+      "abstract": "Recent advances in prompt learning allow large language model agents to acquire task-relevant knowledge from inference-time context without parameter changes. For example, existing methods (like ACE or GEPA) can learn system prompts to improve accuracy based on previous agent runs. However, these methods primarily focus on single-agent or low-parallelism settings. This fundamentally limits their ability to efficiently learn from a large set of collected agentic traces. It would be efficient and beneficial to run prompt learning in parallel to accommodate the growing trend of learning from many agentic traces or parallel agent executions. Yet without a principled strategy for scaling, current methods suffer from quality degradation with high parallelism. To improve both the efficiency and quality of prompt learning, we propose Combee, a novel framework to scale parallel prompt learning for self-improving agents. Combee speeds up learning and enables running many agents in parallel while learning from their aggregate traces without quality degradation. To achieve this, Combee leverages parallel scans and employs an augmented shuffle mechanism; Combee also introduces a dynamic batch size controller to balance quality and delay. Evaluations on AppWorld, Terminal-Bench, Formula, and FiNER demonstrate that Combee achieves up to 17x speedup over previous methods with comparable or better accuracy and equivalent cost.",
+      "published_date": "2026-04-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.04247",
+      "pdf_url": "https://arxiv.org/pdf/2604.04247",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.04247",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "Combee: 扩展自改进语言模型代理的提示学习",
+        "chinese_summary": "Combee 提高了并行提示学习的效率和质量，使多个代理能够并行学习而不降低质量。",
+        "pain_point": "现有方法在高并行度下会降低提示学习的质量。",
+        "core_value": "Combee 提供了一种新的框架，能够在保持质量的同时提高并行提示学习的效率。",
+        "technical_architecture": "Combee 使用并行扫描和增强洗牌机制来实现并行提示学习。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究如何在更大规模下保持质量。",
+        "key_contributions": [
+          "提出了一种新的并行提示学习框架 Combee",
+          "增强了并行提示学习的效率和质量",
+          "引入了动态批处理机制"
+        ],
+        "application_scenarios": [
+          "自改进语言模型代理的训练",
+          "多代理并行学习"
+        ],
+        "technical_highlights": [
+          "使用并行扫描提高学习速度",
+          "增强洗牌机制优化数据分布"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2603.25111",
+      "source": "huggingface",
+      "title": "SEVerA: Verified Synthesis of Self-Evolving Agents",
+      "authors": [
+        "Debangshu Banerjee",
+        "Changming Xu",
+        "Gagandeep Singh"
+      ],
+      "abstract": "Recent advances have shown the effectiveness of self-evolving LLM agents on tasks such as program repair and scientific discovery. In this paradigm, a planner LLM synthesizes an agent program that invokes parametric models, including LLMs, which are then tuned per task to improve performance. However, existing self-evolving agent frameworks provide no formal guarantees of safety or correctness. Because such programs are often executed autonomously on unseen inputs, this lack of guarantees raises reliability and security concerns. We formulate agentic code generation as a constrained learning problem, combining hard formal specifications with soft objectives capturing task utility. We introduce Formally Guarded Generative Models (FGGM), which allow the planner LLM to specify a formal output contract for each generative model call using first-order logic. Each FGGM call wraps the underlying model in a rejection sampler with a verified fallback, ensuring every returned output satisfies the contract for any input and parameter setting. Building on FGGM, we present SEVerA (Self-Evolving Verified Agents), a three-stage framework: Search synthesizes candidate parametric programs containing FGGM calls; Verification proves correctness with respect to hard constraints for all parameter values, reducing the problem to unconstrained learning; and Learning applies scalable gradient-based optimization, including GRPO-style fine-tuning, to improve the soft objective while preserving correctness. We evaluate SEVerA on Dafny program verification, symbolic math synthesis, and policy-compliant agentic tool use (τ^2-bench). Across tasks, SEVerA achieves zero constraint violations while improving performance over unconstrained and SOTA baselines, showing that formal behavioral constraints not only guarantee correctness but also steer synthesis toward higher-quality agents.",
+      "published_date": "2026-03-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2603.25111",
+      "pdf_url": "https://arxiv.org/pdf/2603.25111",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2603.25111",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.PL",
+        "cs.SE"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": {
+        "chinese_title": "SEVerA: 验证合成自演化智能体",
+        "chinese_summary": "提出了SEVerA框架，确保自演化智能体的安全性和正确性。",
+        "pain_point": "现有自演化智能体框架缺乏安全性和正确性保证。",
+        "core_value": "通过引入Formally Guarded Generative Models（FGGM），确保生成模型的输出满足形式化合同。",
+        "technical_architecture": "SEVerA框架包含三个阶段：搜索、合成候选参数化程序。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定任务上进行了验证。",
+        "key_contributions": [
+          "引入Formally Guarded Generative Models（FGGM）",
+          "提出SEVerA框架",
+          "确保生成模型输出满足形式化合同"
+        ],
+        "application_scenarios": [
+          "程序修复",
+          "科学发现"
+        ],
+        "technical_highlights": [
+          "结合硬形式规范与软目标",
+          "确保每项输出满足合同"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.07209",
+      "source": "huggingface",
+      "title": "INSPATIO-WORLD: A Real-Time 4D World Simulator via Spatiotemporal Autoregressive Modeling",
+      "authors": [
+        "InSpatio Team",
+        "Donghui Shen",
+        "Guofeng Zhang",
+        "Haomin Liu",
+        "Haoyu Ji",
+        "Hujun Bao",
+        "Hongjia Zhai",
+        "Jialin Liu",
+        "Jing Guo",
+        "Nan Wang",
+        "Siji Pan",
+        "Weihong Pan",
+        "Weijian Xie",
+        "Xianbin Liu",
+        "Xiaojun Xiang",
+        "Xiaoyu Zhang",
+        "Xinyu Chen",
+        "Yifu Wang",
+        "Yipeng Chen",
+        "Zhenzhou Fan",
+        "Zhewen Le",
+        "Zhichao Ye",
+        "Ziqiang Zhao"
+      ],
+      "abstract": "Building world models with spatial consistency and real-time interactivity remains a fundamental challenge in computer vision. Current video generation paradigms often struggle with a lack of spatial persistence and insufficient visual realism, making it difficult to support seamless navigation in complex environments. To address these challenges, we propose INSPATIO-WORLD, a novel real-time framework capable of recovering and generating high-fidelity, dynamic interactive scenes from a single reference video. At the core of our approach is a Spatiotemporal Autoregressive (STAR) architecture, which enables consistent and controllable scene evolution through two tightly coupled components: Implicit Spatiotemporal Cache aggregates reference and historical observations into a latent world representation, ensuring global consistency during long-horizon navigation; Explicit Spatial Constraint Module enforces geometric structure and translates user interactions into precise and physically plausible camera trajectories. Furthermore, we introduce Joint Distribution Matching Distillation (JDMD). By using real-world data distributions as a regularizing guide, JDMD effectively overcomes the fidelity degradation typically caused by over-reliance on synthetic data. Extensive experiments demonstrate that INSPATIO-WORLD significantly outperforms existing state-of-the-art (SOTA) models in spatial consistency and interaction precision, ranking first among real-time interactive methods on the WorldScore-Dynamic benchmark, and establishing a practical pipeline for navigating 4D environments reconstructed from monocular videos.",
+      "published_date": "2026-04-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.07209",
+      "pdf_url": "https://arxiv.org/pdf/2604.07209",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.07209",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": {
+        "chinese_title": "INSPATIO-WORLD: 一种基于时空自回归建模的实时4D世界模拟器",
+        "chinese_summary": "提出了一种时空自回归架构，能够从单个参考视频中生成高保真动态交互场景，支持实时导航。",
+        "pain_point": "现有视频生成方法难以保持空间一致性并提供足够的视觉真实性。",
+        "core_value": "通过时空自回归模型实现高保真、动态的实时交互场景生成。",
+        "technical_architecture": "采用时空自回归架构，结合隐式时空缓存和显式空间约束模块。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化以适应更复杂多变的环境。",
+        "key_contributions": [
+          "提出时空自回归模型",
+          "引入隐式时空缓存机制",
+          "设计显式空间约束模块"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "支持实时导航",
+          "生成高保真动态场景"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.06916",
+      "source": "huggingface",
+      "title": "FP4 Explore, BF16 Train: Diffusion Reinforcement Learning via Efficient Rollout Scaling",
+      "authors": [
+        "Yitong Li",
+        "Junsong Chen",
+        "Shuchen Xue",
+        "Pengcuo Zeren",
+        "Siyuan Fu",
+        "Dinghao Yang",
+        "Yangyang Tang",
+        "Junjie Bai",
+        "Ping Luo",
+        "Song Han",
+        "Enze Xie"
+      ],
+      "abstract": "Reinforcement-Learning-based post-training has recently emerged as a promising paradigm for aligning text-to-image diffusion models with human preferences. In recent studies, increasing the rollout group size yields pronounced performance improvements, indicating substantial room for further alignment gains. However, scaling rollouts on large-scale foundational diffusion models (e.g., FLUX.1-12B) imposes a heavy computational burden. To alleviate this bottleneck, we explore the integration of FP4 quantization into Diffusion RL rollouts. Yet, we identify that naive quantized pipelines inherently introduce risks of performance degradation. To overcome this dilemma between efficiency and training integrity, we propose Sol-RL (Speed-of-light RL), a novel FP4-empowered Two-stage Reinforcement Learning framework. First, we utilize high-throughput NVFP4 rollouts to generate a massive candidate pool and extract a highly contrastive subset. Second, we regenerate these selected samples in BF16 precision and optimize the policy exclusively on them. By decoupling candidate exploration from policy optimization, Sol-RL integrates the algorithmic mechanisms of rollout scaling with the system-level throughput gains of NVFP4. This synergistic algorithm-hardware design effectively accelerates the rollout phase while reserving high-fidelity samples for optimization. We empirically demonstrate that our framework maintains the training integrity of BF16 precision pipeline while fully exploiting the throughput gains enabled by FP4 arithmetic. Extensive experiments across SANA, FLUX.1, and SD3.5-L substantiate that our approach delivers superior alignment performance across multiple metrics while accelerating training convergence by up to 4.64times, unlocking the power of massive rollout scaling at a fraction of the cost.",
+      "published_date": "2026-04-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.06916",
+      "pdf_url": "https://arxiv.org/pdf/2604.06916",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.06916",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "FP4 探索，BF16 训练：通过高效展开缩放的扩散强化学习",
+        "chinese_summary": "提出 Sol-RL 框架，结合 FP4 和 BF16，高效提升扩散模型的性能。",
+        "pain_point": "大规模扩散模型强化学习训练效率低下。",
+        "core_value": "通过两阶段方法，高效提升模型性能，同时保持训练完整性。",
+        "technical_architecture": "FP4 量化加速探索，BF16 精度优化策略。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于特定场景下的扩散模型。",
+        "key_contributions": [
+          "提出 Sol-RL 框架",
+          "结合 FP4 和 BF16 提升效率"
+        ],
+        "application_scenarios": [
+          "文本到图像生成",
+          "强化学习模型训练"
+        ],
+        "technical_highlights": [
+          "两阶段训练策略",
+          "FP4 与 BF16 结合使用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.06425",
+      "source": "huggingface",
+      "title": "Neural Computers",
+      "authors": [
+        "Mingchen Zhuge",
+        "Changsheng Zhao",
+        "Haozhe Liu",
+        "Zijian Zhou",
+        "Shuming Liu",
+        "Wenyi Wang",
+        "Ernie Chang",
+        "Gael Le Lan",
+        "Junjie Fei",
+        "Wenxuan Zhang",
+        "Yasheng Sun",
+        "Zhipeng Cai",
+        "Zechun Liu",
+        "Yunyang Xiong",
+        "Yining Yang",
+        "Yuandong Tian",
+        "Yangyang Shi",
+        "Vikas Chandra",
+        "Jürgen Schmidhuber"
+      ],
+      "abstract": "We propose a new frontier: Neural Computers (NCs) -- an emerging machine form that unifies computation, memory, and I/O in a learned runtime state. Unlike conventional computers, which execute explicit programs, agents, which act over external execution environments, and world models, which learn environment dynamics, NCs aim to make the model itself the running computer. Our long-term goal is the Completely Neural Computer (CNC): the mature, general-purpose realization of this emerging machine form, with stable execution, explicit reprogramming, and durable capability reuse. As an initial step, we study whether early NC primitives can be learned solely from collected I/O traces, without instrumented program state. Concretely, we instantiate NCs as video models that roll out screen frames from instructions, pixels, and user actions (when available) in CLI and GUI settings. These implementations show that learned runtimes can acquire early interface primitives, especially I/O alignment and short-horizon control, while routine reuse, controlled updates, and symbolic stability remain open. We outline a roadmap toward CNCs around these challenges. If overcome, CNCs could establish a new computing paradigm beyond today's agents, world models, and conventional computers.",
+      "published_date": "2026-04-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.06425",
+      "pdf_url": "https://arxiv.org/pdf/2604.06425",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.06425",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "神经计算机",
+        "chinese_summary": "提出了一种新的机器形式——神经计算机，旨在使模型本身成为运行计算机。",
+        "pain_point": "现有计算机依赖于预编写的程序，缺乏自我学习和适应外部环境的能力。",
+        "core_value": "通过学习输入输出轨迹，实现早期接口功能的自动学习和控制。",
+        "technical_architecture": "视频模型从指令、像素和用户动作中生成屏幕帧。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要克服的挑战包括常规重用、受控更新和符号稳定性。",
+        "key_contributions": [
+          "提出神经计算机的概念",
+          "通过学习I/O轨迹实现早期接口功能",
+          "为完全神经计算机的实现奠定基础"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "用户界面交互"
+        ],
+        "technical_highlights": [
+          "从I/O轨迹学习接口功能",
+          "初步展示了神经计算机的可行性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.07340",
+      "source": "huggingface",
+      "title": "TC-AE: Unlocking Token Capacity for Deep Compression Autoencoders",
+      "authors": [
+        "Teng Li",
+        "Ziyuan Huang",
+        "Cong Chen",
+        "Yangfu Li",
+        "Yuanhuiyi Lyu",
+        "Dandan Zheng",
+        "Chunhua Shen",
+        "Jun Zhang"
+      ],
+      "abstract": "We propose TC-AE, a ViT-based architecture for deep compression autoencoders. Existing methods commonly increase the channel number of latent representations to maintain reconstruction quality under high compression ratios. However, this strategy often leads to latent representation collapse, which degrades generative performance. Instead of relying on increasingly complex architectures or multi-stage training schemes, TC-AE addresses this challenge from the perspective of the token space, the key bridge between pixels and image latents, through two complementary innovations: Firstly, we study token number scaling by adjusting the patch size in ViT under a fixed latent budget, and identify aggressive token-to-latent compression as the key factor that limits effective scaling. To address this issue, we decompose token-to-latent compression into two stages, reducing structural information loss and enabling effective token number scaling for generation. Secondly, to further mitigate latent representation collapse, we enhance the semantic structure of image tokens via joint self-supervised training, leading to more generative-friendly latents. With these designs, TC-AE achieves substantially improved reconstruction and generative performance under deep compression. We hope our research will advance ViT-based tokenizer for visual generation.",
+      "published_date": "2026-04-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.07340",
+      "pdf_url": "https://arxiv.org/pdf/2604.07340",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.07340",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": {
+        "chinese_title": "TC-AE: 解锁深度压缩自编码器的标记容量",
+        "chinese_summary": "TC-AE 通过标记空间创新解决深度压缩自编码器的生成性能下降问题。",
+        "pain_point": "现有方法通过增加通道数来保持高压缩比下的重建质量，导致标记表示坍塌。",
+        "core_value": "通过标记数量扩展和语义结构增强，有效提升生成性能。",
+        "technical_architecture": "基于 ViT 的架构，分解标记到潜在表示的压缩为两阶段。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "标记数量扩展",
+          "语义结构增强"
+        ],
+        "application_scenarios": [
+          "图像压缩",
+          "生成模型"
+        ],
+        "technical_highlights": [
+          "标记空间创新",
+          "两阶段压缩"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.05643",
+      "source": "huggingface",
+      "title": "Graph-Based Chain-of-Thought Pruning for Reducing Redundant Reflections in Reasoning LLMs",
+      "authors": [
+        "Hongyuan Yuan",
+        "Xinran He",
+        "Run Shao",
+        "Bolei He",
+        "Xianwei Xue",
+        "Mengke Chen",
+        "Qiutong Pan",
+        "Haiwei Wang",
+        "Haifeng Li"
+      ],
+      "abstract": "Extending CoT through RL has been widely used to enhance the reasoning capabilities of LLMs. However, due to the sparsity of reward signals, it can also induce undesirable thinking patterns such as overthinking, i.e., generating redundant intermediate reasoning content. In this work, we argue that a major source of such redundancy is inefficient reflection, which often manifests in two problematic patterns: Indiscriminate Reflection, where the model performs broad, low-impact checks throughout reasoning, and Repetitive Reflection, where it repeatedly re-verifies an already established conclusion. To address this, we introduce a graph-based CoT optimization framework. Specifically, we convert each linear CoT into a directed acyclic graph (DAG) with explicit dependency edges, and design a dual pruning strategy: branch-level pruning removes weakly contributing reflection branches, while depth-level pruning eliminates late-stage re-verification. We distill this behavior via a three-stage pipeline: (1) SFT to initialize the policy on pruned concise traces, (2) DPO to prefer correct but less redundant trajectories, and (3) GRPO with length penalty to jointly optimize answer correctness and efficiency. Experiments show that our approach reduces the average reasoning tokens by 42\\% while maintaining or improving accuracy.",
+      "published_date": "2026-04-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.05643",
+      "pdf_url": "https://arxiv.org/pdf/2604.05643",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.05643",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "基于图的链式思维剪枝方法以减少LLMs推理中的冗余反射",
+        "chinese_summary": "提出了一种基于图的链式思维优化框架，通过分支级和深度级剪枝减少冗余反射。",
+        "pain_point": "现有方法在增强LLMs推理能力的同时，容易产生冗余的中间推理内容。",
+        "core_value": "通过图结构和双重剪枝策略有效减少冗余反射，提升模型效率。",
+        "technical_architecture": "将线性链式思维转换为有向无环图，并设计分支级和深度级剪枝策略。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多任务上验证方法的有效性。",
+        "key_contributions": [
+          "提出了一种基于图的链式思维优化框架",
+          "设计了分支级和深度级剪枝策略",
+          "通过三阶段训练流程实现高效推理"
+        ],
+        "application_scenarios": [
+          "自然语言处理中的复杂推理任务",
+          "需要高效推理的对话系统"
+        ],
+        "technical_highlights": [
+          "利用图结构表示链式思维",
+          "设计了双重剪枝策略以减少冗余",
+          "通过多阶段训练优化模型性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

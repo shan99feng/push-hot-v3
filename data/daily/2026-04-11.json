@@ -1,0 +1,530 @@
+{
+  "date": "2026-04-11",
+  "generated_at": "2026-04-11T23:37:11.159699+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2604.08547v1",
+      "source": "arxiv",
+      "title": "GaussiAnimate: Reconstruct and Rig Animatable Categories with Level of Dynamics",
+      "authors": [
+        "Jiaxin Wang",
+        "Dongxin Lyu",
+        "Zeyu Cai",
+        "Zhiyang Dou",
+        "Cheng Lin",
+        "Anpei Chen",
+        "Yuliang Xiu"
+      ],
+      "abstract": "Free-form bones, that conform closely to the surface, can effectively capture non-rigid deformations, but lack a kinematic structure necessary for intuitive control. Thus, we propose a Scaffold-Skin Rigging System, termed \"Skelebones\", with three key steps: (1) Bones: compress temporally-consistent deformable Gaussians into free-form bones, approximating non-rigid surface deformations; (2) Skeleton: extract a Mean Curvature Skeleton from canonical Gaussians and refine it temporally, ensuring a category-agnostic, motion-adaptive, and topology-correct kinematic structure; (3) Binding: bind the skeleton and bones via non-parametric partwise motion matching (PartMM), synthesizing novel bone motions by matching, retrieving, and blending existing ones. Collectively, these three steps enable us to compress the Level of Dynamics of 4D shapes into compact skelebones that are both controllable and expressive. We validate our approach on both synthetic and real-world datasets, achieving significant improvements in reanimation performance across unseen poses-with 17.3% PSNR gains over Linear Blend Skinning (LBS) and 21.7% over Bag-of-Bones (BoB)-while maintaining excellent reconstruction fidelity, particularly for characters exhibiting complex non-rigid surface dynamics. Our Partwise Motion Matching algorithm demonstrates strong generalization to both Gaussian and mesh representations, especially under low-data regime (~1000 frames), achieving 48.4% RMSE improvement over robust LBS and outperforming GRU- and MLP-based learning methods by >20%. Code will be made publicly available for research purposes at cookmaker.cn/gaussianimate.",
+      "published_date": "2026-04-09T17:59:59Z",
+      "url": "https://arxiv.org/abs/2604.08547v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08547v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "GaussiAnimate: 重建和约束可动画类别级别的动态层次",
+        "chinese_summary": "提出了一种名为Skelebones的骨架-皮肤约束系统，显著提升了非刚性表面变形的捕捉和控制。",
+        "pain_point": "现有方法难以同时实现非刚性变形的精确捕捉和直观控制。",
+        "core_value": "通过骨架-皮肤约束系统，实现了非刚性变形的高效捕捉和控制。",
+        "technical_architecture": "采用压缩时空一致的可变形高斯、提取曲率骨架并匹配部分运动的方法。",
+        "quantitative_results": "在未见姿态上，PSNR提升17.3%，超过Linear Blend Skinning (LBS)和Bag-of-Bones (BoB)。",
+        "competitors": "对比了Linear Blend Skinning (LBS)和Bag-of-Bones (BoB)。",
+        "limitations": "仅在合成和真实数据集上进行了验证。",
+        "key_contributions": [
+          "提出了一种新的骨架-皮肤约束系统",
+          "实现了非刚性变形的高效捕捉和控制",
+          "显著提升了未见姿态的重建性能"
+        ],
+        "application_scenarios": [
+          "动画制作",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "结合时空一致的可变形高斯",
+          "提取运动适应的曲率骨架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08548v1",
+      "source": "arxiv",
+      "title": "ETCH-X: Robustify Expressive Body Fitting to Clothed Humans with Composable Datasets",
+      "authors": [
+        "Xiaoben Li",
+        "Jingyi Wu",
+        "Zeyu Cai",
+        "Yu Siyuan",
+        "Boqian Li",
+        "Yuliang Xiu"
+      ],
+      "abstract": "Human body fitting, which aligns parametric body models such as SMPL to raw 3D point clouds of clothed humans, serves as a crucial first step for downstream tasks like animation and texturing. An effective fitting method should be both locally expressive-capturing fine details such as hands and facial features-and globally robust to handle real-world challenges, including clothing dynamics, pose variations, and noisy or partial inputs. Existing approaches typically excel in only one aspect, lacking an all-in-one solution.We upgrade ETCH to ETCH-X, which leverages a tightness-aware fitting paradigm to filter out clothing dynamics (\"undress\"), extends expressiveness with SMPL-X, and replaces explicit sparse markers (which are highly sensitive to partial data) with implicit dense correspondences (\"dense fit\") for more robust and fine-grained body fitting. Our disentangled \"undress\" and \"dense fit\" modular stages enable separate and scalable training on composable data sources, including diverse simulated garments (CLOTH3D), large-scale full-body motions (AMASS), and fine-grained hand gestures (InterHand2.6M), improving outfit generalization and pose robustness of both bodies and hands. Our approach achieves robust and expressive fitting across diverse clothing, poses, and levels of input completeness, delivering a substantial performance improvement over ETCH on both: 1) seen data, such as 4D-Dress (MPJPE-All, 33.0% ) and CAPE (V2V-Hands, 35.8% ), and 2) unseen data, such as BEDLAM2.0 (MPJPE-All, 80.8% ; V2V-All, 80.5% ). Code and models will be released at https://xiaobenli00.github.io/ETCH-X/.",
+      "published_date": "2026-04-09T17:59:59Z",
+      "url": "https://arxiv.org/abs/2604.08548v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08548v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "ETCH-X: 增强表达性人体拟合以适应穿着人类的鲁棒方法",
+        "chinese_summary": "通过紧致感知拟合、扩展表达性和使用密集对应关系，改进了人体拟合方法。",
+        "pain_point": "现有方法在局部表达性和全局鲁棒性之间存在权衡。",
+        "core_value": "提出了一种新的方法，同时提高了局部细节捕捉和全局鲁棒性。",
+        "technical_architecture": "采用紧致感知拟合、扩展SMPL-X表达性和使用密集对应关系。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上进行测试。",
+        "key_contributions": [
+          "提出了一种紧致感知拟合方法",
+          "扩展了SMPL-X的表达性",
+          "使用了密集对应关系"
+        ],
+        "application_scenarios": [
+          "动画制作",
+          "纹理处理"
+        ],
+        "technical_highlights": [
+          "模块化设计，支持多种数据源",
+          "提高了人体和手部的拟合精度"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08546v1",
+      "source": "arxiv",
+      "title": "When Numbers Speak: Aligning Textual Numerals and Visual Instances in Text-to-Video Diffusion Models",
+      "authors": [
+        "Zhengyang Sun",
+        "Yu Chen",
+        "Xin Zhou",
+        "Xiaofan Li",
+        "Xiwu Chen",
+        "Dingkang Liang",
+        "Xiang Bai"
+      ],
+      "abstract": "Text-to-video diffusion models have enabled open-ended video synthesis, but often struggle with generating the correct number of objects specified in a prompt. We introduce NUMINA , a training-free identify-then-guide framework for improved numerical alignment. NUMINA identifies prompt-layout inconsistencies by selecting discriminative self- and cross-attention heads to derive a countable latent layout. It then refines this layout conservatively and modulates cross-attention to guide regeneration. On the introduced CountBench, NUMINA improves counting accuracy by up to 7.4% on Wan2.1-1.3B, and by 4.9% and 5.5% on 5B and 14B models, respectively. Furthermore, CLIP alignment is improved while maintaining temporal consistency. These results demonstrate that structural guidance complements seed search and prompt enhancement, offering a practical path toward count-accurate text-to-video diffusion. The code is available at https://github.com/H-EmbodVis/NUMINA.",
+      "published_date": "2026-04-09T17:59:57Z",
+      "url": "https://arxiv.org/abs/2604.08546v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08546v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "当数字发声：文本中的数字与视觉实例在文本到视频扩散模型中的对齐",
+        "chinese_summary": "NUMINA 提高了文本到视频扩散模型中对象计数的准确性，同时保持时间一致性。",
+        "pain_point": "文本到视频扩散模型在生成指定数量的物体时经常出错。",
+        "core_value": "通过结构化指导提高了计数准确性，补充了种子搜索和提示增强。",
+        "technical_architecture": "NUMINA 采用识别-然后引导框架，利用自注意力和交叉注意力机制。",
+        "quantitative_results": "在 CountBench 上，NUMINA 的 Wan2.1-1.3B 模型计数准确率提高 7.4%，5B 和 14B 模型分别提高 4.9% 和 5.5%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上进行测试。",
+        "key_contributions": [
+          "提出了一种无需训练的识别-然后引导框架",
+          "提高了文本到视频扩散模型中的计数准确性"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "数字内容创作"
+        ],
+        "technical_highlights": [
+          "利用自注意力和交叉注意力机制",
+          "保持时间一致性的同时提高计数准确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08545v1",
+      "source": "arxiv",
+      "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models",
+      "authors": [
+        "Shilin Yan",
+        "Jintao Tong",
+        "Hongwei Xue",
+        "Xiaojun Tang",
+        "Yangyang Wang",
+        "Kunyu Shi",
+        "Guannan Zhang",
+        "Ruixuan Li",
+        "Yixiong Zou"
+      ],
+      "abstract": "The advent of agentic multimodal models has empowered systems to actively interact with external environments. However, current agents suffer from a profound meta-cognitive deficit: they struggle to arbitrate between leveraging internal knowledge and querying external utilities. Consequently, they frequently fall prey to blind tool invocation, resorting to reflexive tool execution even when queries are resolvable from the raw visual context. This pathological behavior precipitates severe latency bottlenecks and injects extraneous noise that derails sound reasoning. Existing reinforcement learning protocols attempt to mitigate this via a scalarized reward that penalizes tool usage. Yet, this coupled formulation creates an irreconcilable optimization dilemma: an aggressive penalty suppresses essential tool use, whereas a mild penalty is entirely subsumed by the variance of the accuracy reward during advantage normalization, rendering it impotent against tool overuse. To transcend this bottleneck, we propose HDPO, a framework that reframes tool efficiency from a competing scalar objective to a strictly conditional one. By eschewing reward scalarization, HDPO maintains two orthogonal optimization channels: an accuracy channel that maximizes task correctness, and an efficiency channel that enforces execution economy exclusively within accurate trajectories via conditional advantage estimation. This decoupled architecture naturally induces a cognitive curriculum-compelling the agent to first master task resolution before refining its self-reliance. Extensive evaluations demonstrate that our resulting model, Metis, reduces tool invocations by orders of magnitude while simultaneously elevating reasoning accuracy.",
+      "published_date": "2026-04-09T17:59:57Z",
+      "url": "https://arxiv.org/abs/2604.08545v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08545v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "明智行动：培养代理多模态模型的元认知工具使用能力",
+        "chinese_summary": "提出HDPO框架，解决代理多模态模型在工具使用上的元认知缺陷。",
+        "pain_point": "当前代理在决策时难以平衡内部知识与外部查询，导致盲目工具调用。",
+        "core_value": "通过条件化奖励而非标量化奖励，有效减少工具使用中的过度或不足。",
+        "technical_architecture": "HDPO框架重新定义工具效率为条件性目标。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证在更复杂场景下的适用性。",
+        "key_contributions": [
+          "提出HDPO框架",
+          "解决工具使用中的元认知缺陷"
+        ],
+        "application_scenarios": [
+          "代理多模态模型交互",
+          "智能代理决策"
+        ],
+        "technical_highlights": [
+          "条件化奖励机制",
+          "避免优化困境"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08544v1",
+      "source": "arxiv",
+      "title": "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds",
+      "authors": [
+        "Yunsong Zhou",
+        "Hangxu Liu",
+        "Xuekun Jiang",
+        "Xing Shen",
+        "Yuanzhen Zhou",
+        "Hui Wang",
+        "Baole Fang",
+        "Yang Tian",
+        "Mulin Yu",
+        "Qiaojun Yu",
+        "Li Ma",
+        "Hengjie Li",
+        "Hanqing Wang",
+        "Jia Zeng",
+        "Jiangmiao Pang"
+      ],
+      "abstract": "Robotic manipulation with deformable objects represents a data-intensive regime in embodied learning, where shape, contact, and topology co-evolve in ways that far exceed the variability of rigids. Although simulation promises relief from the cost of real-world data acquisition, prevailing sim-to-real pipelines remain rooted in rigid-body abstractions, producing mismatched geometry, fragile soft dynamics, and motion primitives poorly suited for cloth interaction. We posit that simulation fails not for being synthetic, but for being ungrounded. To address this, we introduce SIM1, a physics-aligned real-to-sim-to-real data engine that grounds simulation in the physical world. Given limited demonstrations, the system digitizes scenes into metric-consistent twins, calibrates deformable dynamics through elastic modeling, and expands behaviors via diffusion-based trajectory generation with quality filtering. This pipeline transforms sparse observations into scaled synthetic supervision with near-demonstration fidelity. Experiments show that policies trained on purely synthetic data achieve parity with real-data baselines at a 1:15 equivalence ratio, while delivering 90% zero-shot success and 50% generalization gains in real-world deployment. These results validate physics-aligned simulation as scalable supervision for deformable manipulation and a practical pathway for data-efficient policy learning.",
+      "published_date": "2026-04-09T17:59:52Z",
+      "url": "https://arxiv.org/abs/2604.08544v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08544v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SIM1：物理对齐的模拟器作为变形世界中的零样本数据放大器",
+        "chinese_summary": "SIM1 将模拟与物理世界对齐，通过弹性建模和基于扩散的轨迹生成，将稀疏观察转化为与演示接近的合成监督，实现与真实数据相当的性能。",
+        "pain_point": "现有模拟器无法准确模拟变形物体的物理特性，导致合成数据与真实数据不匹配。",
+        "core_value": "通过物理对齐的模拟器，实现从少量演示到大量合成数据的高效转换，提高机器人操作中变形物体的性能。",
+        "technical_architecture": "基于物理对齐的模拟器，通过弹性建模和基于扩散的轨迹生成，实现从真实场景到合成数据的转换。",
+        "quantitative_results": "纯合成数据训练的策略与基于真实数据的基线性能相当，零样本成功率高达90%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了实验验证。",
+        "key_contributions": [
+          "提出了物理对齐的模拟器框架",
+          "通过弹性建模和基于扩散的轨迹生成实现数据扩展",
+          "展示了合成数据与真实数据的性能接近"
+        ],
+        "application_scenarios": [
+          "机器人操作中的变形物体处理",
+          "虚拟现实和增强现实中的物理模拟"
+        ],
+        "technical_highlights": [
+          "物理对齐的模拟器提高了合成数据的质量",
+          "基于扩散的轨迹生成有效扩展了行为多样性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08543v1",
+      "source": "arxiv",
+      "title": "E-3DPSM: A State Machine for Event-Based Egocentric 3D Human Pose Estimation",
+      "authors": [
+        "Mayur Deshmukh",
+        "Hiroyasu Akada",
+        "Helge Rhodin",
+        "Christian Theobalt",
+        "Vladislav Golyanik"
+      ],
+      "abstract": "Event cameras offer multiple advantages in monocular egocentric 3D human pose estimation from head-mounted devices, such as millisecond temporal resolution, high dynamic range, and negligible motion blur. Existing methods effectively leverage these properties, but suffer from low 3D estimation accuracy, insufficient in many applications (e.g., immersive VR/AR). This is due to the design not being fully tailored towards event streams (e.g., their asynchronous and continuous nature), leading to high sensitivity to self-occlusions and temporal jitter in the estimates. This paper rethinks the setting and introduces E-3DPSM, an event-driven continuous pose state machine for event-based egocentric 3D human pose estimation. E-3DPSM aligns continuous human motion with fine-grained event dynamics; it evolves latent states and predicts continuous changes in 3D joint positions associated with observed events, which are fused with direct 3D human pose predictions, leading to stable and drift-free final 3D pose reconstructions. E-3DPSM runs in real-time at 80 Hz on a single workstation and sets a new state of the art in experiments on two benchmarks, improving accuracy by up to 19% (MPJPE) and temporal stability by up to 2.7x. See our project page for the source code and trained models.",
+      "published_date": "2026-04-09T17:59:52Z",
+      "url": "https://arxiv.org/abs/2604.08543v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08543v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "E-3DPSM：基于事件的自视点3D人体姿态估计状态机",
+        "chinese_summary": "E-3DPSM通过融合事件驱动的姿态状态机和直接3D姿态预测，提高了自视点3D人体姿态估计的准确性。",
+        "pain_point": "现有方法对自遮挡和时间抖动敏感，导致3D姿态估计不准确。",
+        "core_value": "通过事件驱动的姿态状态机，提高了3D姿态估计的稳定性和准确性。",
+        "technical_architecture": "采用事件驱动的姿态状态机，融合事件动态和连续人体运动。",
+        "quantitative_results": "在两个基准测试中，E-3DPSM的MPJPE提高了19%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在单个工作站上实现了实时运行。",
+        "key_contributions": [
+          "提出了一种事件驱动的姿态状态机",
+          "融合了事件驱动的姿态预测和直接3D姿态预测",
+          "实现了实时运行"
+        ],
+        "application_scenarios": [
+          "增强现实",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "实时运行速度80Hz",
+          "显著提高3D姿态估计准确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08542v1",
+      "source": "arxiv",
+      "title": "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction",
+      "authors": [
+        "Tao Xie",
+        "Peishan Yang",
+        "Yudong Jin",
+        "Yingfeng Cai",
+        "Wei Yin",
+        "Weiqiang Ren",
+        "Qian Zhang",
+        "Wei Hua",
+        "Sida Peng",
+        "Xiaoyang Guo",
+        "Xiaowei Zhou"
+      ],
+      "abstract": "This paper addresses the task of large-scale 3D scene reconstruction from long video sequences. Recent feed-forward reconstruction models have shown promising results by directly regressing 3D geometry from RGB images without explicit 3D priors or geometric constraints. However, these methods often struggle to maintain reconstruction accuracy and consistency over long sequences due to limited memory capacity and the inability to effectively capture global contextual cues. In contrast, humans can naturally exploit the global understanding of the scene to inform local perception. Motivated by this, we propose a novel neural global context representation that efficiently compresses and retains long-range scene information, enabling the model to leverage extensive contextual cues for enhanced reconstruction accuracy and consistency. The context representation is realized through a set of lightweight neural sub-networks that are rapidly adapted during test time via self-supervised objectives, which substantially increases memory capacity without incurring significant computational overhead. The experiments on multiple large-scale benchmarks, including the KITTI Odometry~\\cite{Geiger2012CVPR} and Oxford Spires~\\cite{tao2025spires} datasets, demonstrate the effectiveness of our approach in handling ultra-large scenes, achieving leading pose accuracy and state-of-the-art 3D reconstruction accuracy while maintaining efficiency. Code is available at https://zju3dv.github.io/scal3r.",
+      "published_date": "2026-04-09T17:59:50Z",
+      "url": "https://arxiv.org/abs/2604.08542v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08542v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Scal3R: 大规模3D重建的可扩展测试时训练方法",
+        "chinese_summary": "提出了一种新的神经全局上下文表示方法，通过自监督目标在测试时快速适应，提高大规模3D重建的准确性和一致性。",
+        "pain_point": "现有方法难以在长视频序列中保持3D重建的准确性和一致性。",
+        "core_value": "通过自监督目标在测试时快速适应的轻量级神经子网络，有效压缩和保留长范围场景信息。",
+        "technical_architecture": "利用自监督目标在测试时快速适应的轻量级神经子网络实现高效的全局上下文表示。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能需要进一步优化自监督目标以提高适应性。",
+        "key_contributions": [
+          "提出了一种新的神经全局上下文表示方法",
+          "在测试时通过自监督目标快速适应",
+          "提高了大规模3D重建的准确性和一致性"
+        ],
+        "application_scenarios": [
+          "大规模3D场景重建",
+          "自动驾驶中的环境感知"
+        ],
+        "technical_highlights": [
+          "轻量级神经子网络",
+          "自监督目标在测试时快速适应"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08541v1",
+      "source": "arxiv",
+      "title": "Seeing but Not Thinking: Routing Distraction in Multimodal Mixture-of-Experts",
+      "authors": [
+        "Haolei Xu",
+        "Haiwen Hong",
+        "Hongxing Li",
+        "Rui Zhou",
+        "Yang Zhang",
+        "Longtao Huang",
+        "Hui Xue",
+        "Yongliang Shen",
+        "Weiming Lu",
+        "Yueting Zhuang"
+      ],
+      "abstract": "Multimodal Mixture-of-Experts (MoE) models have achieved remarkable performance on vision-language tasks. However, we identify a puzzling phenomenon termed Seeing but Not Thinking: models accurately perceive image content yet fail in subsequent reasoning, while correctly solving identical problems presented as pure text. Through systematic analysis, we first verify that cross-modal semantic sharing exists in MoE architectures, ruling out semantic alignment failure as the sole explanation. We then reveal that visual experts and domain experts exhibit layer-wise separation, with image inputs inducing significant routing divergence from text inputs in middle layers where domain experts concentrate. Based on these findings, we propose the Routing Distraction hypothesis: when processing visual inputs, the routing mechanism fails to adequately activate task-relevant reasoning experts. To validate this hypothesis, we design a routing-guided intervention method that enhances domain expert activation. Experiments on three multimodal MoE models across six benchmarks demonstrate consistent improvements, with gains of up to 3.17% on complex visual reasoning tasks. Our analysis further reveals that domain expert identification locates cognitive functions rather than sample-specific solutions, enabling effective transfer across tasks with different information structures.",
+      "published_date": "2026-04-09T17:59:44Z",
+      "url": "https://arxiv.org/abs/2604.08541v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08541v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "视觉但不思考：多模态专家混合模型中的路由干扰",
+        "chinese_summary": "提出路由干扰假设，通过干预方法提高视觉推理任务的性能。",
+        "pain_point": "多模态MoE模型在处理视觉输入时，推理专家激活不足，导致视觉推理能力弱。",
+        "core_value": "通过路由干预方法显著提升视觉推理任务的性能。",
+        "technical_architecture": "分析多模态MoE模型中的路由机制和层间分离。",
+        "quantitative_results": "在三个多模态MoE模型上获得3.17%的性能提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定多模态MoE模型上验证。",
+        "key_contributions": [
+          "提出路由干扰假设",
+          "设计路由引导干预方法",
+          "验证假设并取得显著性能提升"
+        ],
+        "application_scenarios": [
+          "视觉推理任务",
+          "多模态理解任务"
+        ],
+        "technical_highlights": [
+          "揭示视觉专家和领域专家的层间分离",
+          "提出并验证路由干扰假设"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08540v1",
+      "source": "arxiv",
+      "title": "AVGen-Bench: A Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation",
+      "authors": [
+        "Ziwei Zhou",
+        "Zeyuan Lai",
+        "Rui Wang",
+        "Yifan Yang",
+        "Zhen Xing",
+        "Yuqing Yang",
+        "Qi Dai",
+        "Lili Qiu",
+        "Chong Luo"
+      ],
+      "abstract": "Text-to-Audio-Video (T2AV) generation is rapidly becoming a core interface for media creation, yet its evaluation remains fragmented. Existing benchmarks largely assess audio and video in isolation or rely on coarse embedding similarity, failing to capture the fine-grained joint correctness required by realistic prompts. We introduce AVGen-Bench, a task-driven benchmark for T2AV generation featuring high-quality prompts across 11 real-world categories. To support comprehensive assessment, we propose a multi-granular evaluation framework that combines lightweight specialist models with Multimodal Large Language Models (MLLMs), enabling evaluation from perceptual quality to fine-grained semantic controllability. Our evaluation reveals a pronounced gap between strong audio-visual aesthetics and weak semantic reliability, including persistent failures in text rendering, speech coherence, physical reasoning, and a universal breakdown in musical pitch control. Code and benchmark resources are available at http://aka.ms/avgenbench.",
+      "published_date": "2026-04-09T17:59:39Z",
+      "url": "https://arxiv.org/abs/2604.08540v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08540v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "AVGen-Bench：面向多粒度评估的文本到音视频生成任务驱动基准",
+        "chinese_summary": "提出了一个面向多粒度评估的文本到音视频生成基准，填补了现有评估方法的空白。",
+        "pain_point": "现有评估方法未能捕捉到现实提示所需的细粒度联合正确性。",
+        "core_value": "提供了一个多粒度评估框架，结合轻量级专家模型和多模态大型语言模型，全面评估生成质量。",
+        "technical_architecture": "结合轻量级专家模型和多模态大型语言模型的多粒度评估框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以提高文本渲染和音乐音高控制的可靠性。",
+        "key_contributions": [
+          "提出了一个面向多粒度评估的文本到音视频生成基准",
+          "设计了结合轻量级专家模型和多模态大型语言模型的评估框架",
+          "揭示了音视频美学与语义可靠性之间的显著差距"
+        ],
+        "application_scenarios": [
+          "文本到音视频生成系统的评估",
+          "多模态内容生成的研究"
+        ],
+        "technical_highlights": [
+          "多粒度评估框架",
+          "轻量级专家模型与多模态大型语言模型的结合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.08539v1",
+      "source": "arxiv",
+      "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
+      "authors": [
+        "Wenbo Hu",
+        "Xin Chen",
+        "Yan Gao-Tian",
+        "Yihe Deng",
+        "Nanyun Peng",
+        "Kai-Wei Chang"
+      ],
+      "abstract": "Group Relative Policy Optimization (GRPO) has emerged as the de facto Reinforcement Learning (RL) objective driving recent advancements in Multimodal Large Language Models. However, extending this success to open-source multimodal generalist models remains heavily constrained by two primary challenges: the extreme variance in reward topologies across diverse visual tasks, and the inherent difficulty of balancing fine-grained perception with multi-step reasoning capabilities. To address these issues, we introduce Gaussian GRPO (G$^2$RPO), a novel RL training objective that replaces standard linear scaling with non-linear distributional matching. By mathematically forcing the advantage distribution of any given task to strictly converge to a standard normal distribution, $\\mathcal{N}(0,1)$, G$^2$RPO theoretically ensures inter-task gradient equity, mitigates vulnerabilities to heavy-tail outliers, and offers symmetric update for positive and negative rewards. Leveraging the enhanced training stability provided by G$^2$RPO, we introduce two task-level shaping mechanisms to seamlessly balance perception and reasoning. First, response length shaping dynamically elicits extended reasoning chains for complex queries while enforce direct outputs to bolster visual grounding. Second, entropy shaping tightly bounds the model's exploration zone, effectively preventing both entropy collapse and entropy explosion. Integrating these methodologies, we present OpenVLThinkerV2, a highly robust, general-purpose multimodal model. Extensive evaluations across 18 diverse benchmarks demonstrate its superior performance over strong open-source and leading proprietary frontier models.",
+      "published_date": "2026-04-09T17:59:39Z",
+      "url": "https://arxiv.org/abs/2604.08539v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08539v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "OpenVLThinkerV2: 多模态通用视觉任务的多域推理模型",
+        "chinese_summary": "提出G$^2$RPO，增强训练稳定性，平衡感知与推理。",
+        "pain_point": "多变的奖励拓扑结构和感知与推理的平衡难题。",
+        "core_value": "通过G$^2$RPO确保任务间梯度公平，提升模型鲁棒性。",
+        "technical_architecture": "引入G$^2$RPO和任务级塑造机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提出G$^2$RPO",
+          "增强训练稳定性",
+          "平衡感知与推理"
+        ],
+        "application_scenarios": [
+          "视觉任务推理",
+          "多模态理解"
+        ],
+        "technical_highlights": [
+          "非线性分布匹配",
+          "动态响应长度塑造"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

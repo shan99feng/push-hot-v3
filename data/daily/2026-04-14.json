@@ -1,0 +1,524 @@
+{
+  "date": "2026-04-14",
+  "generated_at": "2026-04-14T23:43:57.458783+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.08570",
+      "source": "huggingface",
+      "title": "QuanBench+: A Unified Multi-Framework Benchmark for LLM-Based Quantum Code Generation",
+      "authors": [
+        "Ali Slim",
+        "Haydar Hamieh",
+        "Jawad Kotaich",
+        "Yehya Ghosn",
+        "Mahdi Chehimi",
+        "Ammar Mohanna",
+        "Hasan Abed Al Kader Hammoud",
+        "Bernard Ghanem"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly used for code generation, yet quantum code generation is still evaluated mostly within single frameworks, making it difficult to separate quantum reasoning from framework familiarity. We introduce QuanBench+, a unified benchmark spanning Qiskit, PennyLane, and Cirq, with 42 aligned tasks covering quantum algorithms, gate decomposition, and state preparation.\n  We evaluate models with executable functional tests, report Pass@1 and Pass@5, and use KL-divergence-based acceptance for probabilistic outputs. We additionally study Pass@1 after feedback-based repair, where a model may revise code after a runtime error or wrong answer. Across frameworks, the strongest one-shot scores reach 59.5% in Qiskit, 54.8% in Cirq, and 42.9% in PennyLane; with feedback-based repair, the best scores rise to 83.3%, 76.2%, and 66.7%, respectively. These results show clear progress, but also that reliable multi-framework quantum code generation remains unsolved and still depends strongly on framework-specific knowledge.",
+      "published_date": "2026-03-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.08570",
+      "pdf_url": "https://arxiv.org/pdf/2604.08570",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.08570",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.PL",
+        "cs.SE",
+        "quant-ph"
+      ],
+      "upvotes": 109,
+      "hot_score": 1090,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.11297",
+      "source": "huggingface",
+      "title": "The Past Is Not Past: Memory-Enhanced Dynamic Reward Shaping",
+      "authors": [
+        "Yang Liu",
+        "Enxi Wang",
+        "Yufei Gao",
+        "Weixin Zhang",
+        "Bo Wang",
+        "Zhiyuan Zeng",
+        "Yikai Zhang",
+        "Yining Zheng",
+        "Xipeng Qiu"
+      ],
+      "abstract": "Despite the success of reinforcement learning for large language models, a common failure mode is reduced sampling diversity, where the policy repeatedly generates similar erroneous behaviors. Classical entropy regularization encourages randomness under the current policy, but does not explicitly discourage recurrent failure patterns across rollouts. We propose MEDS, a Memory-Enhanced Dynamic reward Shaping framework that incorporates historical behavioral signals into reward design. By storing and leveraging intermediate model representations, we capture features of past rollouts and use density-based clustering to identify frequently recurring error patterns. Rollouts assigned to more prevalent error clusters are penalized more heavily, encouraging broader exploration while reducing repeated mistakes. Across five datasets and three base models, MEDS consistently improves average performance over existing baselines, achieving gains of up to 4.13 pass@1 points and 4.37 pass@128 points. Additional analyses using both LLM-based annotations and quantitative diversity metrics show that MEDS increases behavioral diversity during sampling.",
+      "published_date": "2026-04-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.11297",
+      "pdf_url": "https://arxiv.org/pdf/2604.11297",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.11297",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 80,
+      "hot_score": 800,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.11804",
+      "source": "huggingface",
+      "title": "OmniShow: Unifying Multimodal Conditions for Human-Object Interaction Video Generation",
+      "authors": [
+        "Donghao Zhou",
+        "Guisheng Liu",
+        "Hao Yang",
+        "Jiatong Li",
+        "Jingyu Lin",
+        "Xiaohu Huang",
+        "Yichen Liu",
+        "Xin Gao",
+        "Cunjian Chen",
+        "Shilei Wen",
+        "Chi-Wing Fu",
+        "Pheng-Ann Heng"
+      ],
+      "abstract": "In this work, we study Human-Object Interaction Video Generation (HOIVG), which aims to synthesize high-quality human-object interaction videos conditioned on text, reference images, audio, and pose. This task holds significant practical value for automating content creation in real-world applications, such as e-commerce demonstrations, short video production, and interactive entertainment. However, existing approaches fail to accommodate all these requisite conditions. We present OmniShow, an end-to-end framework tailored for this practical yet challenging task, capable of harmonizing multimodal conditions and delivering industry-grade performance. To overcome the trade-off between controllability and quality, we introduce Unified Channel-wise Conditioning for efficient image and pose injection, and Gated Local-Context Attention to ensure precise audio-visual synchronization. To effectively address data scarcity, we develop a Decoupled-Then-Joint Training strategy that leverages a multi-stage training process with model merging to efficiently harness heterogeneous sub-task datasets. Furthermore, to fill the evaluation gap in this field, we establish HOIVG-Bench, a dedicated and comprehensive benchmark for HOIVG. Extensive experiments demonstrate that OmniShow achieves overall state-of-the-art performance across various multimodal conditioning settings, setting a solid standard for the emerging HOIVG task.",
+      "published_date": "2026-04-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.11804",
+      "pdf_url": "https://arxiv.org/pdf/2604.11804",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.11804",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "OmniShow: 统一多模态条件的人机物交互视频生成",
+        "chinese_summary": "OmniShow 提出了一种统一多模态条件的人机物交互视频生成框架，实现了高效可控的视频生成。",
+        "pain_point": "现有方法无法同时满足文本、参考图像、音频和姿态等多种条件要求。",
+        "core_value": "通过统一多模态条件和数据稀缺问题解决，实现了高质量的人机物交互视频生成。",
+        "technical_architecture": "引入统一通道条件和门控局部上下文注意力机制，结合分阶段训练策略。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化模型以适应更复杂的数据。",
+        "key_contributions": [
+          "提出统一通道条件机制",
+          "引入门控局部上下文注意力机制",
+          "开发分阶段训练策略"
+        ],
+        "application_scenarios": [
+          "电子商务演示",
+          "短视频制作",
+          "互动娱乐"
+        ],
+        "technical_highlights": [
+          "高效可控的多模态条件注入",
+          "精确的音频-视觉同步"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.10098",
+      "source": "huggingface",
+      "title": "Attention Sink in Transformers: A Survey on Utilization, Interpretation, and Mitigation",
+      "authors": [
+        "Zunhai Su",
+        "Hengyuan Zhang",
+        "Wei Wu",
+        "Yifan Zhang",
+        "Yaxiu Liu",
+        "He Xiao",
+        "Qingyao Yang",
+        "Yuxuan Sun",
+        "Rui Yang",
+        "Chao Zhang",
+        "Keyu Fan",
+        "Weihao Ye",
+        "Jing Xiong",
+        "Hui Shen",
+        "Chaofan Tao",
+        "Taiqiang Wu",
+        "Zhongwei Wan",
+        "Yulei Qian",
+        "Yuchen Xie",
+        "Ngai Wong"
+      ],
+      "abstract": "As the foundational architecture of modern machine learning, Transformers have driven remarkable progress across diverse AI domains. Despite their transformative impact, a persistent challenge across various Transformers is Attention Sink (AS), in which a disproportionate amount of attention is focused on a small subset of specific yet uninformative tokens. AS complicates interpretability, significantly affecting the training and inference dynamics, and exacerbates issues such as hallucinations. In recent years, substantial research has been dedicated to understanding and harnessing AS. However, a comprehensive survey that systematically consolidates AS-related research and offers guidance for future advancements remains lacking. To address this gap, we present the first survey on AS, structured around three key dimensions that define the current research landscape: Fundamental Utilization, Mechanistic Interpretation, and Strategic Mitigation. Our work provides a pivotal contribution by clarifying key concepts and guiding researchers through the evolution and trends of the field. We envision this survey as a definitive resource, empowering researchers and practitioners to effectively manage AS within the current Transformer paradigm, while simultaneously inspiring innovative advancements for the next generation of Transformers. The paper list of this work is available at https://github.com/ZunhaiSu/Awesome-Attention-Sink.",
+      "published_date": "2026-04-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.10098",
+      "pdf_url": "https://arxiv.org/pdf/2604.10098",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.10098",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "Transformer 中的注意力陷阱：AS 的利用、解释与缓解综述",
+        "chinese_summary": "本文首次系统地梳理了 AS 相关研究，为未来研究提供指导。",
+        "pain_point": "Transformer 中的 AS 导致注意力集中在不具信息性的少数特定令牌上，影响模型的可解释性与性能。",
+        "core_value": "提供 AS 的系统性综述，澄清关键概念，指导未来研究。",
+        "technical_architecture": "无特定架构，侧重于 AS 的利用、解释与缓解。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更多 AS 的应用场景与缓解方法。",
+        "key_contributions": [
+          "首次系统梳理 AS 相关研究",
+          "澄清 AS 的关键概念",
+          "指导未来研究"
+        ],
+        "application_scenarios": [
+          "Transformer 模型分析",
+          "AS 的缓解方法研究"
+        ],
+        "technical_highlights": [
+          "提供 AS 的系统性综述",
+          "指导未来研究"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.09132",
+      "source": "huggingface",
+      "title": "Strips as Tokens: Artist Mesh Generation with Native UV Segmentation",
+      "authors": [
+        "Rui Xu",
+        "Dafei Qin",
+        "Kaichun Qiao",
+        "Qiujie Dong",
+        "Huaijin Pi",
+        "Qixuan Zhang",
+        "Longwen Zhang",
+        "Lan Xu",
+        "Jingyi Yu",
+        "Wenping Wang",
+        "Taku Komura"
+      ],
+      "abstract": "Recent advancements in autoregressive transformers have demonstrated remarkable potential for generating artist-quality meshes. However, the token ordering strategies employed by existing methods typically fail to meet professional artist standards, where coordinate-based sorting yields inefficiently long sequences, and patch-based heuristics disrupt the continuous edge flow and structural regularity essential for high-quality modeling. To address these limitations, we propose Strips as Tokens (SATO), a novel framework with a token ordering strategy inspired by triangle strips. By constructing the sequence as a connected chain of faces that explicitly encodes UV boundaries, our method naturally preserves the organized edge flow and semantic layout characteristic of artist-created meshes. A key advantage of this formulation is its unified representation, enabling the same token sequence to be decoded into either a triangle or quadrilateral mesh. This flexibility facilitates joint training on both data types: large-scale triangle data provides fundamental structural priors, while high-quality quad data enhances the geometric regularity of the outputs. Extensive experiments demonstrate that SATO consistently outperforms prior methods in terms of geometric quality, structural coherence, and UV segmentation.",
+      "published_date": "2026-04-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.09132",
+      "pdf_url": "https://arxiv.org/pdf/2604.09132",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.09132",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.CG",
+        "cs.GR"
+      ],
+      "upvotes": 44,
+      "hot_score": 440,
+      "structured_summary": {
+        "chinese_title": "作为标记的条带：基于原生UV分割的艺术家网格生成",
+        "chinese_summary": "提出了一种新的标记顺序策略，显著提高了生成高质量艺术家网格的效果。",
+        "pain_point": "现有方法生成的网格序列效率低下且结构不连续。",
+        "core_value": "通过三角条带启发的标记顺序策略，自然保留了艺术家网格的有序边缘流动和语义布局。",
+        "technical_architecture": "基于三角条带的标记顺序策略，统一表示三角和四边形网格。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步优化模型的训练效率。",
+        "key_contributions": [
+          "提出了一种新的标记顺序策略",
+          "统一表示三角和四边形网格",
+          "自然保留艺术家网格的有序边缘流动和语义布局"
+        ],
+        "application_scenarios": [
+          "艺术家网格生成",
+          "高质量三维建模"
+        ],
+        "technical_highlights": [
+          "三角条带启发的标记顺序策略",
+          "统一表示三角和四边形网格"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.08121",
+      "source": "huggingface",
+      "title": "Uni-ViGU: Towards Unified Video Generation and Understanding via A Diffusion-Based Video Generator",
+      "authors": [
+        "Luozheng Qin",
+        "Jia Gong",
+        "Qian Qiao",
+        "Tianjiao Li",
+        "Li Xu",
+        "Haoyu Pan",
+        "Chao Qu",
+        "Zhiyu Tan",
+        "Hao Li"
+      ],
+      "abstract": "Unified multimodal models integrating visual understanding and generation face a fundamental challenge: visual generation incurs substantially higher computational costs than understanding, particularly for video. This imbalance motivates us to invert the conventional paradigm: rather than extending understanding-centric MLLMs to support generation, we propose Uni-ViGU, a framework that unifies video generation and understanding by extending a video generator as the foundation. We introduce a unified flow method that performs continuous flow matching for video and discrete flow matching for text within a single process, enabling coherent multimodal generation. We further propose a modality-driven MoE-based framework that augments Transformer blocks with lightweight layers for text generation while preserving generative priors. To repurpose generation knowledge for understanding, we design a bidirectional training mechanism with two stages: Knowledge Recall reconstructs input prompts to leverage learned text-video correspondences, while Capability Refinement fine-tunes on detailed captions to establish discriminative shared representations. Experiments demonstrate that Uni-ViGU achieves competitive performance on both video generation and understanding, validating generation-centric architectures as a scalable path toward unified multimodal intelligence. Project Page and Code: https://fr0zencrane.github.io/uni-vigu-page/.",
+      "published_date": "2026-04-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.08121",
+      "pdf_url": "https://arxiv.org/pdf/2604.08121",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.08121",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 39,
+      "hot_score": 390,
+      "structured_summary": {
+        "chinese_title": "Uni-ViGU：通过基于扩散的视频生成器实现统一的视频生成与理解",
+        "chinese_summary": "Uni-ViGU 通过扩展视频生成器来统一视频生成与理解，实现多模态生成。",
+        "pain_point": "视频生成的计算成本远高于理解，导致统一模型难以平衡。",
+        "core_value": "通过扩散模型实现统一的视频生成与理解，提高生成与理解的协同性。",
+        "technical_architecture": "引入统一流方法和模态驱动的 MoE 框架，实现视频和文本的连续与离散流匹配。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证模型在大规模数据集上的表现。",
+        "key_contributions": [
+          "提出 Uni-ViGU 框架，统一视频生成与理解",
+          "引入统一流方法和模态驱动的 MoE 框架",
+          "设计双向训练机制，增强生成知识的理解能力"
+        ],
+        "application_scenarios": [
+          "视频生成与理解",
+          "多模态内容生成"
+        ],
+        "technical_highlights": [
+          "实现视频和文本的连续与离散流匹配",
+          "模态驱动的 MoE 框架增强文本生成能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.10949",
+      "source": "huggingface",
+      "title": "Pseudo-Unification: Entropy Probing Reveals Divergent Information Patterns in Unified Multimodal Models",
+      "authors": [
+        "Songlin Yang",
+        "Xianghao Kong",
+        "Anyi Rao"
+      ],
+      "abstract": "Unified multimodal models (UMMs) were designed to combine the reasoning ability of large language models (LLMs) with the generation capability of vision models. In practice, however, this synergy remains elusive: UMMs fail to transfer LLM-like reasoning to image synthesis and exhibit divergent response behaviors. We term this phenomenon pseudo-unification. Diagnosing its internal causes is important, but existing probing methods either lack model-internal insight or ignore prompt-response dependencies. To address these limitations, we propose an information-theoretic probing framework that jointly analyzes how UMMs encode inputs and generate outputs. Applied to ten representative UMMs, our framework reveals that pseudo-unification stems from a dual divergence: (i) Modality-Asymmetric Encoding, where vision and language follow different entropy trajectories, and (ii) Pattern-Split Response, where text generation exhibits high-entropy creativity while image synthesis enforces low-entropy fidelity. Only models that unify both sides (e.g., via contextual prediction) achieve more genuine unification, enabling stronger reasoning-based text-to-image generation even with fewer parameters. Our work provides the first model-internal probing of unification, demonstrating that real multimodal synergy requires consistency in information flow, not just shared parameters.",
+      "published_date": "2026-04-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.10949",
+      "pdf_url": "https://arxiv.org/pdf/2604.10949",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.10949",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": {
+        "chinese_title": "伪统一：熵探针揭示统一多模态模型中的发散信息模式",
+        "chinese_summary": "提出熵探针框架揭示统一多模态模型中的伪统一现象。",
+        "pain_point": "统一多模态模型未能将语言模型的推理能力转移到图像生成中。",
+        "core_value": "通过熵探针揭示伪统一的根源，提出统一多模态模型的新视角。",
+        "technical_architecture": "提出信息论探针框架，分析输入编码和输出生成。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索更多模型的统一性。",
+        "key_contributions": [
+          "提出熵探针框架",
+          "揭示伪统一的根源",
+          "提出统一多模态模型的新视角"
+        ],
+        "application_scenarios": [
+          "文本到图像生成",
+          "多模态信息处理"
+        ],
+        "technical_highlights": [
+          "信息论探针框架",
+          "揭示模态不对称编码和模式分裂响应"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.11641",
+      "source": "huggingface",
+      "title": "CodeTracer: Towards Traceable Agent States",
+      "authors": [
+        "Han Li",
+        "Yifan Yao",
+        "Letian Zhu",
+        "Rili Feng",
+        "Hongyi Ye",
+        "Jiaming Wang",
+        "Yancheng He",
+        "Pengyu Zou",
+        "Lehan Zhang",
+        "Xinping Lei",
+        "Haoyang Huang",
+        "Ken Deng",
+        "Ming Sun",
+        "Zhaoxiang Zhang",
+        "He Ye",
+        "Jiaheng Liu"
+      ],
+      "abstract": "Code agents are advancing rapidly, but debugging them is becoming increasingly difficult. As frameworks orchestrate parallel tool calls and multi-stage workflows over complex tasks, making the agent's state transitions and error propagation hard to observe. In these runs, an early misstep can trap the agent in unproductive loops or even cascade into fundamental errors, forming hidden error chains that make it hard to tell when the agent goes off track and why. Existing agent tracing analyses either focus on simple interaction or rely on small-scale manual inspection, which limits their scalability and usefulness for real coding workflows. We present CodeTracer, a tracing architecture that parses heterogeneous run artifacts through evolving extractors, reconstructs the full state transition history as a hierarchical trace tree with persistent memory, and performs failure onset localization to pinpoint the failure origin and its downstream chain. To enable systematic evaluation, we construct CodeTraceBench from a large collection of executed trajectories generated by four widely used code agent frameworks on diverse code tasks (e.g., bug fixing, refactoring, and terminal interaction), with supervision at both the stage and step levels for failure localization. Experiments show that CodeTracer substantially outperforms direct prompting and lightweight baselines, and that replaying its diagnostic signals consistently recovers originally failed runs under matched budgets. Our code and data are publicly available.",
+      "published_date": "2026-04-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.11641",
+      "pdf_url": "https://arxiv.org/pdf/2604.11641",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.11641",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "CodeTracer: 朝着可追踪的代理状态迈进",
+        "chinese_summary": "CodeTracer 通过解析异构运行产物并构建持久化状态转换树，实现代理状态的可追踪性。",
+        "pain_point": "代码代理在复杂任务中的状态转换和错误传播难以观察。",
+        "core_value": "提供全面的状态转换历史和失败源头定位，增强调试能力。",
+        "technical_architecture": "采用动态提取器解析运行产物，构建层级状态转换树。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于四种常用代码代理框架的数据进行测试。",
+        "key_contributions": [
+          "提出 CodeTracer 架构",
+          "实现状态转换历史的全面重建",
+          "支持失败源头定位"
+        ],
+        "application_scenarios": [
+          "代码修复",
+          "重构",
+          "终端交互"
+        ],
+        "technical_highlights": [
+          "动态提取器",
+          "持久化状态转换树"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.11201",
+      "source": "huggingface",
+      "title": "CocoaBench: Evaluating Unified Digital Agents in the Wild",
+      "authors": [
+        "CocoaBench Team",
+        "Shibo Hao",
+        "Zhining Zhang",
+        "Zhiqi Liang",
+        "Tianyang Liu",
+        "Yuheng Zha",
+        "Qiyue Gao",
+        "Jixuan Chen",
+        "Zilong Wang",
+        "Zhoujun Cheng",
+        "Haoxiang Zhang",
+        "Junli Wang",
+        "Hexi Jin",
+        "Boyuan Zheng",
+        "Kun Zhou",
+        "Yu Wang",
+        "Feng Yao",
+        "Licheng Liu",
+        "Yijiang Li",
+        "Zhifei Li",
+        "Zhengtao Han",
+        "Pracha Promthaw",
+        "Tommaso Cerruti",
+        "Xiaohan Fu",
+        "Ziqiao Ma",
+        "Jingbo Shang",
+        "Lianhui Qin",
+        "Julian McAuley",
+        "Eric P. Xing",
+        "Zhengzhong Liu",
+        "Rupesh Kumar Srivastava",
+        "Zhiting Hu"
+      ],
+      "abstract": "LLM agents now perform strongly in software engineering, deep research, GUI automation, and various other applications, while recent agent scaffolds and models are increasingly integrating these capabilities into unified systems. Yet, most evaluations still test these capabilities in isolation, which leaves a gap for more diverse use cases that require agents to combine different capabilities. We introduce CocoaBench, a benchmark for unified digital agents built from human-designed, long-horizon tasks that require flexible composition of vision, search, and coding. Tasks are specified only by an instruction and an automatic evaluation function over the final output, enabling reliable and scalable evaluation across diverse agent infrastructures. We also present CocoaAgent, a lightweight shared scaffold for controlled comparison across model backbones. Experiments show that current agents remain far from reliable on CocoaBench, with the best evaluated system achieving only 45.1% success rate. Our analysis further points to substantial room for improvement in reasoning and planning, tool use and execution, and visual grounding.",
+      "published_date": "2026-04-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.11201",
+      "pdf_url": "https://arxiv.org/pdf/2604.11201",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.11201",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": {
+        "chinese_title": "CocoaBench: 评估统一数字代理在野外的表现",
+        "chinese_summary": "提出CocoaBench基准，评估统一数字代理在综合任务中的表现。",
+        "pain_point": "现有评估主要测试单一能力，缺乏对综合任务的评估。",
+        "core_value": "提供了一个新的基准，用于评估代理在复杂任务中的综合能力。",
+        "technical_architecture": "基于人类设计的长期任务，要求灵活组合视觉、搜索和编码能力。",
+        "quantitative_results": "当前代理在CocoaBench上的成功率仅为45.1%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步改进代理的推理和规划能力。",
+        "key_contributions": [
+          "提出CocoaBench基准",
+          "提供统一数字代理的综合评估",
+          "展示当前代理的局限性"
+        ],
+        "application_scenarios": [
+          "软件工程",
+          "深度研究",
+          "GUI自动化"
+        ],
+        "technical_highlights": [
+          "基于人类设计的长期任务",
+          "自动评估功能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.10905",
+      "source": "huggingface",
+      "title": "Audio Flamingo Next: Next-Generation Open Audio-Language Models for Speech, Sound, and Music",
+      "authors": [
+        "Sreyan Ghosh",
+        "Arushi Goel",
+        "Kaousheik Jayakumar",
+        "Lasha Koroshinadze",
+        "Nishit Anand",
+        "Zhifeng Kong",
+        "Siddharth Gururani",
+        "Sang-gil Lee",
+        "Jaehyeon Kim",
+        "Aya Aljafari",
+        "Chao-Han Huck Yang",
+        "Sungwon Kim",
+        "Ramani Duraiswami",
+        "Dinesh Manocha",
+        "Mohammad Shoeybi",
+        "Bryan Catanzaro",
+        "Ming-Yu Liu",
+        "Wei Ping"
+      ],
+      "abstract": "We present Audio Flamingo Next (AF-Next), the next-generation and most capable large audio-language model in the Audio Flamingo series, designed to advance understanding and reasoning over speech, environmental sounds and music. Compared to Audio Flamingo 3, AF-Next introduces: (i) a stronger foundational audio-language model that significantly improves accuracy across diverse audio understanding tasks; (ii) scalable strategies for constructing large-scale audio understanding and reasoning data beyond existing academic benchmarks; (iii) support for long and complex audio inputs up to 30 minutes; and (iv) Temporal Audio Chain-of-Thought, a new reasoning paradigm that explicitly grounds intermediate reasoning steps to timestamps in long audio, enabling fine-grained temporal alignment and improved interpretability. To enable these capabilities, we first conduct a systematic analysis of Audio Flamingo 3 to identify key gaps in audio understanding and reasoning. We then curate and scale new large-scale datasets totaling over 1 million hours to address these limitations and expand the existing AudioSkills-XL, LongAudio-XL, AF-Think and AF-Chat datasets. AF-Next is trained using a curriculum-based strategy spanning pre-training, mid-training and post-training stages. Extensive experiments across 20 audio understanding and reasoning benchmarks, including challenging long-audio tasks, show that AF-Next outperforms similarly sized open models by large margins and remains highly competitive with and sometimes surpasses, much larger open-weight and closed models. Beyond benchmark performance, AF-Next exhibits strong real-world utility and transfers well to unseen tasks, highlighting its robustness and generalization ability. In addition to all data, code and methods, we open-source 3 variants of AF-Next, including AF-Next-Instruct, AF-Next-Think and AF-Next-Captioner.",
+      "published_date": "2026-04-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.10905",
+      "pdf_url": "https://arxiv.org/pdf/2604.10905",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.10905",
+      "category": "llm",
+      "tags": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL",
+        "eess.AS"
+      ],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": null
+    }
+  ]
+}

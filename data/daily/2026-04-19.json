@@ -1,0 +1,417 @@
+{
+  "date": "2026-04-19",
+  "generated_at": "2026-04-19T23:40:35.537604+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2604.15312v1",
+      "source": "arxiv",
+      "title": "Bidirectional Cross-Modal Prompting for Event-Frame Asymmetric Stereo",
+      "authors": [
+        "Ninghui Xu",
+        "Fabio Tosi",
+        "Lihui Wang",
+        "Jiawei Han",
+        "Luca Bartolomei",
+        "Zhiting Yao",
+        "Matteo Poggi",
+        "Stefano Mattoccia"
+      ],
+      "abstract": "Conventional frame-based cameras capture rich contextual information but suffer from limited temporal resolution and motion blur in dynamic scenes. Event cameras offer an alternative visual representation with higher dynamic range free from such limitations. The complementary characteristics of the two modalities make event-frame asymmetric stereo promising for reliable 3D perception under fast motion and challenging illumination. However, the modality gap often leads to marginalization of domain-specific cues essential for cross-modal stereo matching. In this paper, we introduce Bi-CMPStereo, a novel bidirectional cross-modal prompting framework that fully exploits semantic and structural features from both domains for robust matching. Our approach learns finely aligned stereo representations within a target canonical space and integrates complementary representations by projecting each modality into both event and frame domains. Extensive experiments demonstrate that our approach significantly outperforms state-of-the-art methods in accuracy and generalization.",
+      "published_date": "2026-04-16T17:59:58Z",
+      "url": "https://arxiv.org/abs/2604.15312v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15312v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "事件-帧异构立体视觉中的双向跨模态提示",
+        "chinese_summary": "显著提高动态场景下3D感知的准确性和泛化能力。",
+        "pain_point": "传统帧相机在动态场景中受限于时间分辨率和运动模糊。",
+        "core_value": "通过双向跨模态提示，充分利用两种模态的互补特性。",
+        "technical_architecture": "学习精细对齐的立体表示，并在目标标准空间中整合互补表示。",
+        "quantitative_results": "显著优于现有方法。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多复杂场景的应用。",
+        "key_contributions": [
+          "提出双向跨模态提示框架",
+          "充分利用帧和事件相机的互补特性"
+        ],
+        "application_scenarios": [
+          "动态场景下的3D感知",
+          "复杂光照条件下的感知"
+        ],
+        "technical_highlights": [
+          "跨模态特征的精细对齐",
+          "互补表示的整合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.15311v1",
+      "source": "arxiv",
+      "title": "LeapAlign: Post-Training Flow Matching Models at Any Generation Step by Building Two-Step Trajectories",
+      "authors": [
+        "Zhanhao Liang",
+        "Tao Yang",
+        "Jie Wu",
+        "Chengjian Feng",
+        "Liang Zheng"
+      ],
+      "abstract": "This paper focuses on the alignment of flow matching models with human preferences. A promising way is fine-tuning by directly backpropagating reward gradients through the differentiable generation process of flow matching. However, backpropagating through long trajectories results in prohibitive memory costs and gradient explosion. Therefore, direct-gradient methods struggle to update early generation steps, which are crucial for determining the global structure of the final image. To address this issue, we introduce LeapAlign, a fine-tuning method that reduces computational cost and enables direct gradient propagation from reward to early generation steps. Specifically, we shorten the long trajectory into only two steps by designing two consecutive leaps, each skipping multiple ODE sampling steps and predicting future latents in a single step. By randomizing the start and end timesteps of the leaps, LeapAlign leads to efficient and stable model updates at any generation step. To better use such shortened trajectories, we assign higher training weights to those that are more consistent with the long generation path. To further enhance gradient stability, we reduce the weights of gradient terms with large magnitude, instead of completely removing them as done in previous works. When fine-tuning the Flux model, LeapAlign consistently outperforms state-of-the-art GRPO-based and direct-gradient methods across various metrics, achieving superior image quality and image-text alignment.",
+      "published_date": "2026-04-16T17:59:56Z",
+      "url": "https://arxiv.org/abs/2604.15311v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15311v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "LeapAlign: 在任何生成步骤构建两步轨迹以进行后训练流匹配模型对齐",
+        "chinese_summary": "通过设计两步跳跃减少长轨迹，使奖励梯度能直接传播到早期生成步骤。",
+        "pain_point": "直接梯度方法难以更新早期生成步骤，这些步骤对最终图像的全局结构至关重要。",
+        "core_value": "降低计算成本，使模型在任何生成步骤都能高效稳定地更新。",
+        "technical_architecture": "通过设计两步跳跃，将长轨迹缩短为两步。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证在更复杂场景下的适用性。",
+        "key_contributions": [
+          "设计两步跳跃减少长轨迹",
+          "随机化跳跃的起始和结束时间戳"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "文本生成"
+        ],
+        "technical_highlights": [
+          "高效稳定的模型更新",
+          "降低计算成本"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.15310v1",
+      "source": "arxiv",
+      "title": "TokenLight: Precise Lighting Control in Images using Attribute Tokens",
+      "authors": [
+        "Sumit Chaturvedi",
+        "Yannick Hold-Geoffroy",
+        "Mengwei Ren",
+        "Jingyuan Liu",
+        "He Zhang",
+        "Yiqun Mei",
+        "Julie Dorsey",
+        "Zhixin Shu"
+      ],
+      "abstract": "This paper presents a method for image relighting that enables precise and continuous control over multiple illumination attributes in a photograph. We formulate relighting as a conditional image generation task and introduce attribute tokens to encode distinct lighting factors such as intensity, color, ambient illumination, diffuse level, and 3D light positions. The model is trained on a large-scale synthetic dataset with ground-truth lighting annotations, supplemented by a small set of real captures to enhance realism and generalization. We validate our approach across a variety of relighting tasks, including controlling in-scene lighting fixtures and editing environment illumination using virtual light sources, on synthetic and real images. Our method achieves state-of-the-art quantitative and qualitative performance compared to prior work. Remarkably, without explicit inverse rendering supervision, the model exhibits an inherent understanding of how light interacts with scene geometry, occlusion, and materials, yielding convincing lighting effects even in traditionally challenging scenarios such as placing lights within objects or relighting transparent materials plausibly. Project page: vrroom.github.io/tokenlight/",
+      "published_date": "2026-04-16T17:59:50Z",
+      "url": "https://arxiv.org/abs/2604.15310v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15310v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "TokenLight：使用属性标记精确控制图像中的光照",
+        "chinese_summary": "通过属性标记实现对图像中多种光照属性的精确和连续控制。",
+        "pain_point": "现有图像重光照方法难以精确控制多种光照属性。",
+        "core_value": "通过引入属性标记，实现对光照强度、颜色、环境照明等属性的精确控制。",
+        "technical_architecture": "将重光照任务建模为条件图像生成任务，使用属性标记编码不同的光照因素。",
+        "quantitative_results": "在多种重光照任务上达到最先进的定量和定性性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何处理更复杂的光照场景。",
+        "key_contributions": [
+          "提出使用属性标记进行图像重光照的方法",
+          "在多种光照属性上实现精确控制",
+          "无需逆向渲染监督即可理解光照与场景几何、遮挡和材料的交互"
+        ],
+        "application_scenarios": [
+          "控制场景中的照明设备",
+          "使用虚拟光源编辑环境照明"
+        ],
+        "technical_highlights": [
+          "引入属性标记编码不同的光照因素",
+          "无需逆向渲染监督即可生成逼真的光照效果"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.15309v1",
+      "source": "arxiv",
+      "title": "MM-WebAgent: A Hierarchical Multimodal Web Agent for Webpage Generation",
+      "authors": [
+        "Yan Li",
+        "Zezi Zeng",
+        "Yifan Yang",
+        "Yuqing Yang",
+        "Ning Liao",
+        "Weiwei Guo",
+        "Lili Qiu",
+        "Mingxi Cheng",
+        "Qi Dai",
+        "Zhendong Wang",
+        "Zhengyuan Yang",
+        "Xue Yang",
+        "Ji Li",
+        "Lijuan Wang",
+        "Chong Luo"
+      ],
+      "abstract": "The rapid progress of Artificial Intelligence Generated Content (AIGC) tools enables images, videos, and visualizations to be created on demand for webpage design, offering a flexible and increasingly adopted paradigm for modern UI/UX. However, directly integrating such tools into automated webpage generation often leads to style inconsistency and poor global coherence, as elements are generated in isolation. We propose MM-WebAgent, a hierarchical agentic framework for multimodal webpage generation that coordinates AIGC-based element generation through hierarchical planning and iterative self-reflection. MM-WebAgent jointly optimizes global layout, local multimodal content, and their integration, producing coherent and visually consistent webpages. We further introduce a benchmark for multimodal webpage generation and a multi-level evaluation protocol for systematic assessment. Experiments demonstrate that MM-WebAgent outperforms code-generation and agent-based baselines, especially on multimodal element generation and integration. Code & Data: https://aka.ms/mm-webagent.",
+      "published_date": "2026-04-16T17:59:49Z",
+      "url": "https://arxiv.org/abs/2604.15309v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15309v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2604.15308v1",
+      "source": "arxiv",
+      "title": "RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework",
+      "authors": [
+        "Hao Gao",
+        "Shaoyu Chen",
+        "Yifan Zhu",
+        "Yuehao Song",
+        "Wenyu Liu",
+        "Qian Zhang",
+        "Xinggang Wang"
+      ],
+      "abstract": "High-level autonomous driving requires motion planners capable of modeling multimodal future uncertainties while remaining robust in closed-loop interactions. Although diffusion-based planners are effective at modeling complex trajectory distributions, they often suffer from stochastic instabilities and the lack of corrective negative feedback when trained purely with imitation learning. To address these issues, we propose RAD-2, a unified generator-discriminator framework for closed-loop planning. Specifically, a diffusion-based generator is used to produce diverse trajectory candidates, while an RL-optimized discriminator reranks these candidates according to their long-term driving quality. This decoupled design avoids directly applying sparse scalar rewards to the full high-dimensional trajectory space, thereby improving optimization stability. To further enhance reinforcement learning, we introduce Temporally Consistent Group Relative Policy Optimization, which exploits temporal coherence to alleviate the credit assignment problem. In addition, we propose On-policy Generator Optimization, which converts closed-loop feedback into structured longitudinal optimization signals and progressively shifts the generator toward high-reward trajectory manifolds. To support efficient large-scale training, we introduce BEV-Warp, a high-throughput simulation environment that performs closed-loop evaluation directly in Bird's-Eye View feature space via spatial warping. RAD-2 reduces the collision rate by 56% compared with strong diffusion-based planners. Real-world deployment further demonstrates improved perceived safety and driving smoothness in complex urban traffic.",
+      "published_date": "2026-04-16T17:59:44Z",
+      "url": "https://arxiv.org/abs/2604.15308v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15308v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2604.15306v1",
+      "source": "arxiv",
+      "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
+      "authors": [
+        "Yao Tong",
+        "Jiayuan Ye",
+        "Anastasia Borovykh",
+        "Reza Shokri"
+      ],
+      "abstract": "Whether language models can systematically generalize remains actively debated. Yet empirical performance is jointly shaped by multiple factors such as training data, training paradigms, and inference-time strategies, making failures difficult to interpret. We introduce a controlled synthetic environment based on shortest-path planning, a canonical composable sequential optimization problem. The setup enables clean separation of these factors and supports two orthogonal axes of generalization: spatial transfer to unseen maps and length scaling to longer-horizon problems. We find that models exhibit strong spatial transfer but consistently fail under length scaling due to recursive instability. We further analyze how distinct stages of the learning pipeline influence systematic problem-solving: for example, data coverage sets capability limits; reinforcement learning improves training stability but does not expand those limits; and inference-time scaling enhances performance but cannot rescue length-scaling failures.",
+      "published_date": "2026-04-16T17:59:43Z",
+      "url": "https://arxiv.org/abs/2604.15306v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15306v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2604.15302v1",
+      "source": "arxiv",
+      "title": "Diagnosing LLM Judge Reliability: Conformal Prediction Sets and Transitivity Violations",
+      "authors": [
+        "Manan Gupta",
+        "Dhruv Kumar"
+      ],
+      "abstract": "LLM-as-judge frameworks are increasingly used for automatic NLG evaluation, yet their per-instance reliability remains poorly understood. We present a two-pronged diagnostic toolkit applied to SummEval: $\\textbf{(1)}$ a transitivity analysis that reveals widespread per-input inconsistency masked by low aggregate violation rates ($\\barρ = 0.8$-$4.1\\%$), with $33$-$67\\%$ of documents exhibiting at least one directed 3-cycle; and $\\textbf{(2)}$ split conformal prediction sets over 1-5 Likert scores providing theoretically-guaranteed $\\geq(1{-}α)$ coverage, with set width serving as a per-instance reliability indicator ($r_s = {+}0.576$, $N{=}1{,}918$, $p < 10^{-100}$, pooled across all judges). Critically, prediction set width shows consistent cross-judge agreement ($\\bar{r} = 0.32$-$0.38$), demonstrating it captures document-level difficulty rather than judge-specific noise. Across four judges and four criteria, both diagnostics converge: criterion matters more than judge, with relevance judged most reliably (avg. set size $\\approx 3.0$) and coherence moderately so (avg. set size $\\approx 3.9$), while fluency and consistency remain unreliable (avg. set size $\\approx 4.9$). We release all code, prompts, and cached results.",
+      "published_date": "2026-04-16T17:58:21Z",
+      "url": "https://arxiv.org/abs/2604.15302v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15302v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "诊断 LLM 判决可靠性的工具包：基于一致性检验和置信集的方法",
+        "chinese_summary": "提出了一种两阶段诊断工具包，揭示了LLM判决的一致性问题，并提供了理论保证的置信集。",
+        "pain_point": "LLM-as-judge框架的实例可靠性尚未充分理解。",
+        "core_value": "通过一致性分析和置信集方法，提供了LLM判决可靠性的诊断工具。",
+        "technical_architecture": "采用一致性分析和分劈置信集方法进行诊断。",
+        "quantitative_results": "置信集宽度与实例可靠性高度相关，且跨评判者一致性良好。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在SummEval数据集上进行了验证。",
+        "key_contributions": [
+          "提出了一致性分析方法揭示LLM判决的一致性问题",
+          "提供了理论保证的置信集方法评估实例可靠性",
+          "展示了置信集宽度与文档难度的相关性"
+        ],
+        "application_scenarios": [
+          "自动自然语言生成评估",
+          "LLM判决可靠性诊断"
+        ],
+        "technical_highlights": [
+          "一致性分析揭示了广泛存在的输入不一致性",
+          "置信集方法提供了理论保证的可靠性评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.15301v1",
+      "source": "arxiv",
+      "title": "Think in Latent Thoughts: A New Paradigm for Gloss-Free Sign Language Translation",
+      "authors": [
+        "Yiyang Jiang",
+        "Li Zhang",
+        "Xiao-Yong Wei",
+        "Li Qing"
+      ],
+      "abstract": "Many SLT systems quietly assume that brief chunks of signing map directly to spoken-language words. That assumption breaks down because signers often create meaning on the fly using context, space, and movement. We revisit SLT and argue that it is mainly a cross-modal reasoning task, not just a straightforward video-to-text conversion. We thus introduce a reasoning-driven SLT framework that uses an ordered sequence of latent thoughts as an explicit middle layer between the video and the generated text. These latent thoughts gradually extract and organize meaning over time. On top of this, we use a plan-then-ground decoding method: the model first decides what it wants to say, and then looks back at the video to find the evidence. This separation improves coherence and faithfulness. We also built and released a new large-scale gloss-free SLT dataset with stronger context dependencies and more realistic meanings. Experiments across several benchmarks show consistent gains over existing gloss-free methods. Code and data will be released upon acceptance at https://github.com/fletcherjiang/SignThought.",
+      "published_date": "2026-04-16T17:57:24Z",
+      "url": "https://arxiv.org/abs/2604.15301v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15301v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "思考潜在思想：无手语词的新的手语翻译范式",
+        "chinese_summary": "提出了一种新的无手语词手语翻译框架，通过中间层的潜在思想逐步提取和组织意义。",
+        "pain_point": "现有手语翻译系统假设手语片段直接对应口语词汇，忽视了手语的即兴性和语境依赖性。",
+        "core_value": "通过引入潜在思想的中间层和计划-然后验证的解码方法，提高了翻译的连贯性和忠实度。",
+        "technical_architecture": "提出了一个基于潜在思想的推理驱动的手语翻译框架。",
+        "quantitative_results": "在多个基准测试中，该方法在无手语词手语翻译方面表现出一致的改进。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多的实际应用场景验证。",
+        "key_contributions": [
+          "提出了新的无手语词手语翻译框架",
+          "引入了潜在思想的中间层",
+          "使用了计划-然后验证的解码方法"
+        ],
+        "application_scenarios": [
+          "手语翻译系统",
+          "无障碍沟通辅助"
+        ],
+        "technical_highlights": [
+          "中间层的潜在思想逐步提取和组织意义",
+          "计划-然后验证的解码方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.15299v1",
+      "source": "arxiv",
+      "title": "AnimationBench: Are Video Models Good at Character-Centric Animation?",
+      "authors": [
+        "Leyi Wu",
+        "Pengjun Fang",
+        "Kai Sun",
+        "Yazhou Xing",
+        "Yinwei Wu",
+        "Songsong Wang",
+        "Ziqi Huang",
+        "Dan Zhou",
+        "Yingqing He",
+        "Ying-Cong Chen",
+        "Qifeng Chen"
+      ],
+      "abstract": "Video generation has advanced rapidly, with recent methods producing increasingly convincing animated results. However, existing benchmarks-largely designed for realistic videos-struggle to evaluate animation-style generation with its stylized appearance, exaggerated motion, and character-centric consistency. Moreover, they also rely on fixed prompt sets and rigid pipelines, offering limited flexibility for open-domain content and custom evaluation needs. To address this gap, we introduce AnimationBench, the first systematic benchmark for evaluating animation image-to-video generation. AnimationBench operationalizes the Twelve Basic Principles of Animation and IP Preservation into measurable evaluation dimensions, together with Broader Quality Dimensions including semantic consistency, motion rationality, and camera motion consistency. The benchmark supports both a standardized close-set evaluation for reproducible comparison and a flexible open-set evaluation for diagnostic analysis, and leverages visual-language models for scalable assessment. Extensive experiments show that AnimationBench aligns well with human judgment and exposes animation-specific quality differences overlooked by realism-oriented benchmarks, leading to more informative and discriminative evaluation of state-of-the-art I2V models.",
+      "published_date": "2026-04-16T17:57:08Z",
+      "url": "https://arxiv.org/abs/2604.15299v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15299v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "AnimationBench: 视频模型在角色中心动画生成方面的表现如何？",
+        "chinese_summary": "引入AnimationBench，首个针对动画图像到视频生成的系统性基准，解决现有基准无法全面评估动画风格生成的问题。",
+        "pain_point": "现有基准无法有效评估动画风格生成，因为它们主要针对现实视频，忽视了动画的特殊性。",
+        "core_value": "提供了一种新的评估方法，通过十二项动画基本原则和更广泛的质量维度来衡量动画生成模型。",
+        "technical_architecture": "将动画基本原则和质量维度转化为可测量的评估标准，支持标准化和灵活的评估。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于视觉语言模型的评估可能受限于模型的准确性和多样性。",
+        "key_contributions": [
+          "引入首个针对动画生成的系统性基准",
+          "将动画原则转化为可测量的评估维度",
+          "支持标准化和灵活的评估方法"
+        ],
+        "application_scenarios": [
+          "动画生成模型的评估",
+          "动画质量的诊断分析"
+        ],
+        "technical_highlights": [
+          "结合视觉语言模型进行评估",
+          "支持标准化和灵活的评估方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.15297v1",
+      "source": "arxiv",
+      "title": "Benchmarking Optimizers for MLPs in Tabular Deep Learning",
+      "authors": [
+        "Yury Gorishniy",
+        "Ivan Rubachev",
+        "Dmitrii Feoktistov",
+        "Artem Babenko"
+      ],
+      "abstract": "MLP is a heavily used backbone in modern deep learning (DL) architectures for supervised learning on tabular data, and AdamW is the go-to optimizer used to train tabular DL models. Unlike architecture design, however, the choice of optimizer for tabular DL has not been examined systematically, despite new optimizers showing promise in other domains. To fill this gap, we benchmark \\Noptimizers optimizers on \\Ndatasets tabular datasets for training MLP-based models in the standard supervised learning setting under a shared experiment protocol. Our main finding is that the Muon optimizer consistently outperforms AdamW, and thus should be considered a strong and practical choice for practitioners and researchers, if the associated training efficiency overhead is affordable. Additionally, we find exponential moving average of model weights to be a simple yet effective technique that improves AdamW on vanilla MLPs, though its effect is less consistent across model variants.",
+      "published_date": "2026-04-16T17:57:02Z",
+      "url": "https://arxiv.org/abs/2604.15297v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15297v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    }
+  ]
+}

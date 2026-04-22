@@ -1,0 +1,371 @@
+{
+  "date": "2026-04-22",
+  "generated_at": "2026-04-22T23:50:41.288550+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.19748",
+      "source": "huggingface",
+      "title": "Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items",
+      "authors": [
+        "Mengting Chen",
+        "Zhengrui Chen",
+        "Yongchao Du",
+        "Zuan Gao",
+        "Taihang Hu",
+        "Jinsong Lan",
+        "Chao Lin",
+        "Yefeng Shen",
+        "Xingjian Wang",
+        "Zhao Wang",
+        "Zhengtao Wu",
+        "Xiaoli Xu",
+        "Zhengze Xu",
+        "Hao Yan",
+        "Mingzhou Zhang",
+        "Jun Zheng",
+        "Qinye Zhou",
+        "Xiaoyong Zhu",
+        "Bo Zheng"
+      ],
+      "abstract": "Recent advances in image generation and editing have opened new opportunities for virtual try-on. However, existing methods still struggle to meet complex real-world demands. We present Tstars-Tryon 1.0, a commercial-scale virtual try-on system that is robust, realistic, versatile, and highly efficient. First, our system maintains a high success rate across challenging cases like extreme poses, severe illumination variations, motion blur, and other in-the-wild conditions. Second, it delivers highly photorealistic results with fine-grained details, faithfully preserving garment texture, material properties, and structural characteristics, while largely avoiding common AI-generated artifacts. Third, beyond apparel try-on, our model supports flexible multi-image composition (up to 6 reference images) across 8 fashion categories, with coordinated control over person identity and background. Fourth, to overcome the latency bottlenecks of commercial deployment, our system is heavily optimized for inference speed, delivering near real-time generation for a seamless user experience. These capabilities are enabled by an integrated system design spanning end-to-end model architecture, a scalable data engine, robust infrastructure, and a multi-stage training paradigm. Extensive evaluation and large-scale product deployment demonstrate that Tstars-Tryon1.0 achieves leading overall performance. To support future research, we also release a comprehensive benchmark. The model has been deployed at an industrial scale on the Taobao App, serving millions of users with tens of millions of requests.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.19748",
+      "pdf_url": "https://arxiv.org/pdf/2604.19748",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.19748",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 79,
+      "hot_score": 790,
+      "structured_summary": {
+        "chinese_title": "Tstars-Tryon 1.0: 耐用且真实的多样化时尚物品虚拟试穿系统",
+        "chinese_summary": "该系统实现了高成功率、高保真度的虚拟试穿，支持多种时尚品类和多图合成。",
+        "pain_point": "现有虚拟试穿方法难以应对复杂现实需求。",
+        "core_value": "系统具备高成功率、高保真度和高效性，支持多种时尚品类。",
+        "technical_architecture": "端到端模型架构和多图合成技术。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步提升模型泛化能力。",
+        "key_contributions": [
+          "支持多种时尚品类和多图合成",
+          "高成功率和高保真度",
+          "高效推理速度"
+        ],
+        "application_scenarios": [
+          "虚拟试衣",
+          "时尚设计"
+        ],
+        "technical_highlights": [
+          "支持多种时尚品类",
+          "高效推理速度"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.19636",
+      "source": "huggingface",
+      "title": "CoInteract: Physically-Consistent Human-Object Interaction Video Synthesis via Spatially-Structured Co-Generation",
+      "authors": [
+        "Xiangyang Luo",
+        "Xiaozhe Xin",
+        "Tao Feng",
+        "Xu Guo",
+        "Meiguang Jin",
+        "Junfeng Ma"
+      ],
+      "abstract": "Synthesizing human--object interaction (HOI) videos has broad practical value in e-commerce, digital advertising, and virtual marketing. However, current diffusion models, despite their photorealistic rendering capability, still frequently fail on (i) the structural stability of sensitive regions such as hands and faces and (ii) physically plausible contact (e.g., avoiding hand--object interpenetration). We present CoInteract, an end-to-end framework for HOI video synthesis conditioned on a person reference image, a product reference image, text prompts, and speech audio. CoInteract introduces two complementary designs embedded into a Diffusion Transformer (DiT) backbone. First, we propose a Human-Aware Mixture-of-Experts (MoE) that routes tokens to lightweight, region-specialized experts via spatially supervised routing, improving fine-grained structural fidelity with minimal parameter overhead. Second, we propose Spatially-Structured Co-Generation, a dual-stream training paradigm that jointly models an RGB appearance stream and an auxiliary HOI structure stream to inject interaction geometry priors. During training, the HOI stream attends to RGB tokens and its supervision regularizes shared backbone weights; at inference, the HOI branch is removed for zero-overhead RGB generation. Experimental results demonstrate that CoInteract significantly outperforms existing methods in structural stability, logical consistency, and interaction realism.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.19636",
+      "pdf_url": "https://arxiv.org/pdf/2604.19636",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.19636",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 59,
+      "hot_score": 590,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.13346",
+      "source": "huggingface",
+      "title": "AgentSPEX: An Agent SPecification and EXecution Language",
+      "authors": [
+        "Pengcheng Wang",
+        "Jerry Huang",
+        "Jiarui Yao",
+        "Rui Pan",
+        "Peizhi Niu",
+        "Yaowenqi Liu",
+        "Ruida Wang",
+        "Renhao Lu",
+        "Yuwei Guo",
+        "Tong Zhang"
+      ],
+      "abstract": "Language-model agent systems commonly rely on reactive prompting, in which a single instruction guides the model through an open-ended sequence of reasoning and tool-use steps, leaving control flow and intermediate state implicit and making agent behavior potentially difficult to control. Orchestration frameworks such as LangGraph, DSPy, and CrewAI impose greater structure through explicit workflow definitions, but tightly couple workflow logic with Python, making agents difficult to maintain and modify. In this paper, we introduce AgentSPEX, an Agent SPecification and EXecution Language for specifying LLM-agent workflows with explicit control flow and modular structure, along with a customizable agent harness. AgentSPEX supports typed steps, branching and loops, parallel execution, reusable submodules, and explicit state management, and these workflows execute within an agent harness that provides tool access, a sandboxed virtual environment, and support for checkpointing, verification, and logging. Furthermore, we provide a visual editor with synchronized graph and workflow views for authoring and inspection. We include ready-to-use agents for deep research and scientific research, and we evaluate AgentSPEX on 7 benchmarks. Finally, we show through a user study that AgentSPEX provides a more interpretable and accessible workflow-authoring paradigm than a popular existing agent framework.",
+      "published_date": "2026-04-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.13346",
+      "pdf_url": "https://arxiv.org/pdf/2604.13346",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.13346",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 49,
+      "hot_score": 490,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.19747",
+      "source": "huggingface",
+      "title": "AnyRecon: Arbitrary-View 3D Reconstruction with Video Diffusion Model",
+      "authors": [
+        "Yutian Chen",
+        "Shi Guo",
+        "Renbiao Jin",
+        "Tianshuo Yang",
+        "Xin Cai",
+        "Yawen Luo",
+        "Mingxin Yang",
+        "Mulin Yu",
+        "Linning Xu",
+        "Tianfan Xue"
+      ],
+      "abstract": "Sparse-view 3D reconstruction is essential for modeling scenes from casual captures, but remain challenging for non-generative reconstruction. Existing diffusion-based approaches mitigates this issues by synthesizing novel views, but they often condition on only one or two capture frames, which restricts geometric consistency and limits scalability to large or diverse scenes. We propose AnyRecon, a scalable framework for reconstruction from arbitrary and unordered sparse inputs that preserves explicit geometric control while supporting flexible conditioning cardinality. To support long-range conditioning, our method constructs a persistent global scene memory via a prepended capture view cache, and removes temporal compression to maintain frame-level correspondence under large viewpoint changes. Beyond better generative model, we also find that the interplay between generation and reconstruction is crucial for large-scale 3D scenes. Thus, we introduce a geometry-aware conditioning strategy that couples generation and reconstruction through an explicit 3D geometric memory and geometry-driven capture-view retrieval. To ensure efficiency, we combine 4-step diffusion distillation with context-window sparse attention to reduce quadratic complexity. Extensive experiments demonstrate robust and scalable reconstruction across irregular inputs, large viewpoint gaps, and long trajectories.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.19747",
+      "pdf_url": "https://arxiv.org/pdf/2604.19747",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.19747",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.19295",
+      "source": "huggingface",
+      "title": "TEMPO: Scaling Test-time Training for Large Reasoning Models",
+      "authors": [
+        "Qingyang Zhang",
+        "Xinke Kong",
+        "Haitao Wu",
+        "Qinghua Hu",
+        "Minghao Wu",
+        "Baosong Yang",
+        "Yu Cheng",
+        "Yun Luo",
+        "Ganqu Cui",
+        "Changqing Zhang"
+      ],
+      "abstract": "Test-time training (TTT) adapts model parameters on unlabeled test instances during inference time, which continuously extends capabilities beyond the reach of offline training. Despite initial gains, existing TTT methods for LRMs plateau quickly and do not benefit from additional test-time compute. Without external calibration, the self-generated reward signal increasingly drifts as the policy model evolves, leading to both performance plateaus and diversity collapse. We propose TEMPO, a TTT framework that interleaves policy refinement on unlabeled questions with periodic critic recalibration on a labeled dataset. By formalizing this alternating procedure through the Expectation-Maximization (EM) algorithm, we reveal that prior methods can be interpreted as incomplete variants that omit the crucial recalibration step. Reintroducing this step tightens the evidence lower bound (ELBO) and enables sustained improvement. Across diverse model families (Qwen3 and OLMO3) and reasoning tasks, TEMPO improves OLMO3-7B on AIME 2024 from 33.0% to 51.1% and Qwen3-14B from 42.3% to 65.8%, while maintaining high diversity.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.19295",
+      "pdf_url": "https://arxiv.org/pdf/2604.19295",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.19295",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "TEMPO: 扩展大型推理模型测试时训练的框架",
+        "chinese_summary": "TEMPO 提出了一种交替进行未标记问题策略优化和周期性标记数据集批评家重校准的 TTT 框架，显著提升了模型性能。",
+        "pain_point": "现有 TTT 方法在大型推理模型上效果迅速饱和，且缺乏外部校准导致性能停滞和多样性下降。",
+        "core_value": "通过引入批评家重校准步骤，TEMPO 紧化了证据下界，实现了持续性能提升。",
+        "technical_architecture": "交替执行未标记问题策略优化和标记数据集批评家重校准，利用 EM 算法形式化此过程。",
+        "quantitative_results": "TEMPO 在 AIME 2024 上显著提升了 OLMO3-7B 和 Qwen3-14B 的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多模型和任务的应用。",
+        "key_contributions": [
+          "提出了一种新的 TTT 框架 TEMPO",
+          "通过批评家重校准步骤紧化了证据下界",
+          "实现了大型推理模型的持续性能提升"
+        ],
+        "application_scenarios": [
+          "大型推理模型的测试时训练",
+          "复杂推理任务的性能优化"
+        ],
+        "technical_highlights": [
+          "交替执行未标记问题策略优化和标记数据集批评家重校准",
+          "利用 EM 算法形式化交替过程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.19742",
+      "source": "huggingface",
+      "title": "PlayCoder: Making LLM-Generated GUI Code Playable",
+      "authors": [
+        "Zhiyuan Peng",
+        "Wei Tao",
+        "Xin Yin",
+        "Chenhao Ying",
+        "Yuan Luo",
+        "Yiwen Guo"
+      ],
+      "abstract": "Large language models (LLMs) have achieved strong results in code generation, but their ability to generate GUI applications, especially games, remains insufficiently studied. Existing benchmarks mainly evaluate correctness through test cases, which are inadequate for GUI applications because these systems are interactive, event-driven, and require correct state transitions across sequences of user actions. Their evaluation therefore should consider interaction flows and UI logic rather than only pass/fail outcomes. To study this problem, we introduce PlayEval, a repository-aware benchmark built from 43 multilingual GUI applications in Python, TypeScript, and JavaScript. Unlike prior GUI benchmarks that are difficult to adapt to desktop environments, PlayEval covers six major GUI application categories and directly supports code-generation evaluation. We further propose Play@k, a metric that measures whether at least one of *k* generated candidates can be played end-to-end without logical errors. To support reliable evaluation, we develop PlayTester, an LLM-based agent that performs task-oriented GUI playthroughs and detects logic violations automatically. Experiments on 10 state-of-the-art code LLMs show that, despite high compilation rates, they achieve near-zero Play@3, revealing major weaknesses in generating logically correct GUI applications. To address this limitation, we present PlayCoder, a multi-agent, repository-aware framework that generates, evaluates, and iteratively repairs GUI application code in a closed loop. PlayCoder substantially improves both functional correctness and semantic alignment for open-source and closed-source models, reaching up to 38.1% Exec@3 and 20.3% Play@3. Case studies further show that it can uncover silent logic bugs missed by traditional metrics and fix them through targeted edits.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.19742",
+      "pdf_url": "https://arxiv.org/pdf/2604.19742",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.19742",
+      "category": "other",
+      "tags": [
+        "cs.SE"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "PlayCoder: 使LLM生成的GUI代码可执行",
+        "chinese_summary": "提出PlayEval基准和Play@k度量，评估LLM生成的GUI代码的可执行性。",
+        "pain_point": "现有基准主要通过测试用例评估代码正确性，但GUI应用需要考虑交互流程和UI逻辑。",
+        "core_value": "提出PlayEval基准和Play@k度量，直接支持代码生成评估。",
+        "technical_architecture": "开发PlayTester，一种基于LLM的代理，用于自动检测逻辑错误的GUI任务导向测试。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对Python、TypeScript和JavaScript的GUI应用。",
+        "key_contributions": [
+          "提出PlayEval基准，涵盖多种GUI应用类别",
+          "提出Play@k度量，评估生成代码的可执行性",
+          "开发PlayTester代理，自动检测逻辑错误"
+        ],
+        "application_scenarios": [
+          "代码生成评估",
+          "GUI应用开发"
+        ],
+        "technical_highlights": [
+          "多语言支持",
+          "直接支持代码生成评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.19254",
+      "source": "huggingface",
+      "title": "ShadowPEFT: Shadow Network for Parameter-Efficient Fine-Tuning",
+      "authors": [
+        "Xianming Li",
+        "Zongxi Li",
+        "Tsz-fung Andrew Lee",
+        "Jing Li",
+        "Haoran Xie",
+        "Qing Li"
+      ],
+      "abstract": "Parameter-efficient fine-tuning (PEFT) reduces the training cost of full-parameter fine-tuning for large language models (LLMs) by training only a small set of task-specific parameters while freezing the pretrained backbone. However, existing approaches, such as Low-Rank Adaptation (LoRA), achieve adaptation by inserting independent low-rank perturbations directly to individual weights, resulting in a local parameterization of adaptation. We propose ShadowPEFT, a centralized PEFT framework that instead performs layer-level refinement through a depth-shared shadow module. At each transformer layer, ShadowPEFT maintains a parallel shadow state and evolves it repeatedly for progressively richer hidden states. This design shifts adaptation from distributed weight-space perturbations to a shared layer-space refinement process. Since the shadow module is decoupled from the backbone, it can be reused across depth, independently pretrained, and optionally deployed in a detached mode, benefiting edge computing scenarios. Experiments on generation and understanding benchmarks show that ShadowPEFT matches or outperforms LoRA and DoRA under comparable trainable-parameter budgets. Additional analyses on shadow pretraining, cross-dataset transfer, parameter scaling, inference latency, and system-level evaluation suggest that centralized layer-space adaptation is a competitive and flexible alternative to conventional low-rank PEFT.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.19254",
+      "pdf_url": "https://arxiv.org/pdf/2604.19254",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.19254",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.19667",
+      "source": "huggingface",
+      "title": "Chat2Workflow: A Benchmark for Generating Executable Visual Workflows with Natural Language",
+      "authors": [
+        "Yi Zhong",
+        "Buqiang Xu",
+        "Yijun Wang",
+        "Zifei Shan",
+        "Shuofei Qiao",
+        "Guozhou Zheng",
+        "Ningyu Zhang"
+      ],
+      "abstract": "At present, executable visual workflows have emerged as a mainstream paradigm in real-world industrial deployments, offering strong reliability and controllability. However, in current practice, such workflows are almost entirely constructed through manual engineering: developers must carefully design workflows, write prompts for each step, and repeatedly revise the logic as requirements evolve-making development costly, time-consuming, and error-prone. To study whether large language models can automate this multi-round interaction process, we introduce Chat2Workflow, a benchmark for generating executable visual workflows directly from natural language, and propose a robust agentic framework to mitigate recurrent execution errors. Chat2Workflow is built from a large collection of real-world business workflows, with each instance designed so that the generated workflow can be transformed and directly deployed to practical workflow platforms such as Dify and Coze. Experimental results show that while state-of-the-art language models can often capture high-level intent, they struggle to generate correct, stable, and executable workflows, especially under complex or changing requirements. Although our agentic framework yields up to 5.34% resolve rate gains, the remaining real-world gap positions Chat2Workflow as a foundation for advancing industrial-grade automation. Code is available at https://github.com/zjunlp/Chat2Workflow.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.19667",
+      "pdf_url": "https://arxiv.org/pdf/2604.19667",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.19667",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.18240",
+      "source": "huggingface",
+      "title": "AJ-Bench: Benchmarking Agent-as-a-Judge for Environment-Aware Evaluation",
+      "authors": [
+        "Wentao Shi",
+        "Yu Wang",
+        "Yuyang Zhao",
+        "Yuxin Chen",
+        "Fuli Feng",
+        "Xueyuan Hao",
+        "Xi Su",
+        "Qi Gu",
+        "Hui Su",
+        "Xunliang Cai",
+        "Xiangnan He"
+      ],
+      "abstract": "As reinforcement learning continues to scale the training of large language model-based agents, reliably verifying agent behaviors in complex environments has become increasingly challenging. Existing approaches rely on rule-based verifiers or LLM-as-a-Judge models, which struggle to generalize beyond narrow domains. Agent-as-a-Judge addresses this limitation by actively interacting with environments and tools to acquire verifiable evidence, yet its capabilities remain underexplored.\n  We introduce a benchmark AJ-Bench to systematically evaluate Agent-as-a-Judge across three domains-search, data systems, and graphical user interfaces-comprising 155 tasks and 516 annotated trajectories. The benchmark comprehensively assesses judge agents' abilities in information acquisition, state verification, and process verification. Experiments demonstrate consistent performance gains over LLM-as-a-Judge baselines, while also revealing substantial open challenges in agent-based verification. Our data and code are available at https://aj-bench.github.io/.",
+      "published_date": "2026-04-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.18240",
+      "pdf_url": "https://arxiv.org/pdf/2604.18240",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.18240",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 11,
+      "hot_score": 110,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.18845",
+      "source": "huggingface",
+      "title": "Dual-View Training for Instruction-Following Information Retrieval",
+      "authors": [
+        "Qingcheng Zeng",
+        "Puxuan Yu",
+        "Aman Mehta",
+        "Fuheng Zhao",
+        "Rajhans Samdani"
+      ],
+      "abstract": "Instruction-following information retrieval (IF-IR) studies retrieval systems that must not only find documents relevant to a query, but also obey explicit user constraints such as required attributes, exclusions, or output preferences. However, most retrievers are trained primarily for semantic relevance and often fail to distinguish documents that match the topic from those that satisfy the instruction. We propose a dual-view data synthesis strategy based on polarity reversal: given a query, a document that is relevant under the instruction, and a hard negative that matches the query but violates the instruction, we prompt an LLM to generate a complementary instruction under which the two documents swap relevance labels. By presenting the same document pair under complementary instructions that invert their relevance labels, the training signal forces the retriever to reconsider the same candidate set through the instruction, rather than relying on fixed topical cues. On a 305M-parameter encoder, our method improves performance on the FollowIR benchmark by 45%, surpassing general-purpose embedding models of comparable or larger scale. Through head-to-head comparisons at matched data budgets, we further show that data diversity and instruction supervision play complementary roles: the former preserves general retrieval quality, while the latter improves instruction sensitivity. These results highlight the value of targeted data synthesis for building retrieval systems that are both broadly capable and instruction-aware.",
+      "published_date": "2026-04-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.18845",
+      "pdf_url": "https://arxiv.org/pdf/2604.18845",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.18845",
+      "category": "recsys",
+      "tags": [
+        "cs.IR"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": null
+    }
+  ]
+}

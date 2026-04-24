@@ -1,0 +1,441 @@
+{
+  "date": "2026-04-24",
+  "generated_at": "2026-04-24T23:41:56.011038+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.17295",
+      "source": "huggingface",
+      "title": "LLaTiSA: Towards Difficulty-Stratified Time Series Reasoning from Visual Perception to Semantics",
+      "authors": [
+        "Yueyang Ding",
+        "HaoPeng Zhang",
+        "Rui Dai",
+        "Yi Wang",
+        "Tianyu Zong",
+        "Kaikui Liu",
+        "Xiangxiang Chu"
+      ],
+      "abstract": "Comprehensive understanding of time series remains a significant challenge for Large Language Models (LLMs). Current research is hindered by fragmented task definitions and benchmarks with inherent ambiguities, precluding rigorous evaluation and the development of unified Time Series Reasoning Models(TSRMs). To bridge this gap, we formalize Time Series Reasoning (TSR) via a four-level taxonomy of increasing cognitive complexity. We introduce HiTSR, a hierarchical time series reasoning dataset comprising 83k samples with diverse task combinations and verified Chain-of-Thought (CoT) trajectories. Leveraging HiTSR, we propose LLaTiSA, a strong TSRM that integrates visualized patterns with precision-calibrated numerical tables to enhance the temporal perception of Vision-Language Models (VLMs). Through a multi-stage curriculum fine-tuning strategy, LLaTiSA achieves superior performance and exhibits robust out-of-distribution generalization across diverse TSR tasks and real-world scenarios. Our code is available at https://github.com/RainingNovember/LLaTiSA.",
+      "published_date": "2026-04-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.17295",
+      "pdf_url": "https://arxiv.org/pdf/2604.17295",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.17295",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 75,
+      "hot_score": 750,
+      "structured_summary": {
+        "chinese_title": "LLaTiSA: 从视觉感知到语义理解的时间序列推理难度分层方法",
+        "chinese_summary": "提出LLaTiSA，一种结合可视化模式和精度校准数值表的时间序列推理模型。",
+        "pain_point": "现有时间序列推理模型缺乏统一标准和评估基准。",
+        "core_value": "通过分层时间序列推理和多阶段微调策略提升模型性能。",
+        "technical_architecture": "结合视觉模式和精度校准数值表增强时间感知。",
+        "quantitative_results": "在多种时间序列推理任务上表现出色，具有良好的泛化能力。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了验证。",
+        "key_contributions": [
+          "提出分层时间序列推理框架",
+          "构建HiTSR数据集",
+          "提出LLaTiSA模型"
+        ],
+        "application_scenarios": [
+          "时间序列预测",
+          "事件检测"
+        ],
+        "technical_highlights": [
+          "多阶段微调策略",
+          "结合视觉和数值表信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.21686",
+      "source": "huggingface",
+      "title": "WorldMark: A Unified Benchmark Suite for Interactive Video World Models",
+      "authors": [
+        "Xiaojie Xu",
+        "Zhengyuan Lin",
+        "Kang He",
+        "Yukang Feng",
+        "Xiaofeng Mao",
+        "Yuanyang Yin",
+        "Kaipeng Zhang",
+        "Yongtao Ge"
+      ],
+      "abstract": "Interactive video generation models such as Genie, YUME, HY-World, and Matrix-Game are advancing rapidly, yet every model is evaluated on its own benchmark with private scenes and trajectories, making fair cross-model comparison impossible. Existing public benchmarks offer useful metrics such as trajectory error, aesthetic scores, and VLM-based judgments, but none supplies the standardized test conditions -- identical scenes, identical action sequences, and a unified control interface -- needed to make those metrics comparable across models with heterogeneous inputs. We introduce WorldMark, the first benchmark that provides such a common playing field for interactive Image-to-Video world models. WorldMark contributes: (1) a unified action-mapping layer that translates a shared WASD-style action vocabulary into each model's native control format, enabling apples-to-apples comparison across six major models on identical scenes and trajectories; (2) a hierarchical test suite of 500 evaluation cases covering first- and third-person viewpoints, photorealistic and stylized scenes, and three difficulty tiers from Easy to Hard spanning 20-60s; and (3) a modular evaluation toolkit for Visual Quality, Control Alignment, and World Consistency, designed so that researchers can reuse our standardized inputs while plugging in their own metrics as the field evolves. We will release all data, evaluation code, and model outputs to facilitate future research. Beyond offline metrics, we launch World Model Arena (warena.ai), an online platform where anyone can pit leading world models against each other in side-by-side battles and watch the live leaderboard.",
+      "published_date": "2026-04-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.21686",
+      "pdf_url": "https://arxiv.org/pdf/2604.21686",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.21686",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.19734",
+      "source": "huggingface",
+      "title": "UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling",
+      "authors": [
+        "Boyu Chen",
+        "Yi Chen",
+        "Lu Qiu",
+        "Jerry Bai",
+        "Yuying Ge",
+        "Yixiao Ge"
+      ],
+      "abstract": "Scaling humanoid foundation models is bottlenecked by the scarcity of robotic data. While massive egocentric human data offers a scalable alternative, bridging the cross-embodiment chasm remains a fundamental challenge due to kinematic mismatches. We introduce UniT (Unified Latent Action Tokenizer via Visual Anchoring), a framework that establishes a unified physical language for human-to-humanoid transfer. Grounded in the philosophy that heterogeneous kinematics share universal visual consequences, UniT employs a tri-branch cross-reconstruction mechanism: actions predict vision to anchor kinematics to physical outcomes, while vision reconstructs actions to filter out irrelevant visual confounders. Concurrently, a fusion branch synergies these purified modalities into a shared discrete latent space of embodiment-agnostic physical intents. We validate UniT across two paradigms: 1) Policy Learning (VLA-UniT): By predicting these unified tokens, it effectively leverages diverse human data to achieve state-of-the-art data efficiency and robust out-of-distribution (OOD) generalization on both humanoid simulation benchmark and real-world deployments, notably demonstrating zero-shot task transfer. 2) World Modeling (WM-UniT): By aligning cross-embodiment dynamics via unified tokens as conditions, it realizes direct human-to-humanoid action transfer. This alignment ensures that human data seamlessly translates into enhanced action controllability for humanoid video generation. Ultimately, by inducing a highly aligned cross-embodiment representation (empirically verified by t-SNE visualizations revealing the convergence of human and humanoid features into a shared manifold), UniT offers a scalable path to distill vast human knowledge into general-purpose humanoid capabilities.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.19734",
+      "pdf_url": "https://arxiv.org/pdf/2604.19734",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.19734",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.21689",
+      "source": "huggingface",
+      "title": "StyleID: A Perception-Aware Dataset and Metric for Stylization-Agnostic Facial Identity Recognition",
+      "authors": [
+        "Kwan Yun",
+        "Changmin Lee",
+        "Ayeong Jeong",
+        "Youngseo Kim",
+        "Seungmi Lee",
+        "Junyong Noh"
+      ],
+      "abstract": "Creative face stylization aims to render portraits in diverse visual idioms such as cartoons, sketches, and paintings while retaining recognizable identity. However, current identity encoders, which are typically trained and calibrated on natural photographs, exhibit severe brittleness under stylization. They often mistake changes in texture or color palette for identity drift or fail to detect geometric exaggerations. This reveals the lack of a style-agnostic framework to evaluate and supervise identity consistency across varying styles and strengths. To address this gap, we introduce StyleID, a human perception-aware dataset and evaluation framework for facial identity under stylization. StyleID comprises two datasets: (i) StyleBench-H, a benchmark that captures human same-different verification judgments across diffusion- and flow-matching-based stylization at multiple style strengths, and (ii) StyleBench-S, a supervision set derived from psychometric recognition-strength curves obtained through controlled two-alternative forced-choice (2AFC) experiments. Leveraging StyleBench-S, we fine-tune existing semantic encoders to align their similarity orderings with human perception across styles and strengths. Experiments demonstrate that our calibrated models yield significantly higher correlation with human judgments and enhanced robustness for out-of-domain, artist drawn portraits. All of our datasets, code, and pretrained models are publicly available at https://kwanyun.github.io/StyleID_page/",
+      "published_date": "2026-04-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.21689",
+      "pdf_url": "https://arxiv.org/pdf/2604.21689",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.21689",
+      "category": "cv",
+      "tags": [
+        "cs.GR",
+        "cs.CV",
+        "cs.HC",
+        "cs.MM"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.20987",
+      "source": "huggingface",
+      "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
+      "authors": [
+        "Xiyang Wu",
+        "Zongxia Li",
+        "Guangyao Shi",
+        "Alexander Duffy",
+        "Tyler Marques",
+        "Matthew Lyle Olson",
+        "Tianyi Zhou",
+        "Dinesh Manocha"
+      ],
+      "abstract": "Long horizon interactive environments are a testbed for evaluating agents skill usage abilities. These environments demand multi step reasoning, the chaining of multiple skills over many timesteps, and robust decision making under delayed rewards and partial observability. Games are a good testbed for evaluating agent skill usage in environments. Large Language Models (LLMs) offer a promising alternative as game playing agents, but they often struggle with consistent long horizon decision making because they lack a mechanism to discover, retain, and reuse structured skills across episodes. We present COSPLAY, a co evolution framework in which an LLM decision agent retrieves skills from a learnable skill bank to guide action taking, while an agent managed skill pipeline discovers reusable skills from the agents unlabeled rollouts to form a skill bank. Our framework improves both the decision agent to learn better skill retrieval and action generation, while the skill bank agent continually extracts, refines, and updates skills together with their contracts. Experiments across six game environments show that COSPLAY with an 8B base model achieves over 25.1 percent average reward improvement against four frontier LLM baselines on single player game benchmarks while remaining competitive on multi player social reasoning games.",
+      "published_date": "2026-04-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.20987",
+      "pdf_url": "https://arxiv.org/pdf/2604.20987",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.20987",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 14,
+      "hot_score": 140,
+      "structured_summary": {
+        "chinese_title": "共进化LLM决策与技能银行代理以应对长期任务",
+        "chinese_summary": "COSPLAY框架通过共进化LLM决策代理和技能银行代理，提高长期任务中的决策和技能使用能力。",
+        "pain_point": "现有LLM在长期任务中难以持续做出合理决策，缺乏技能发现、保留和重用机制。",
+        "core_value": "通过共进化机制，提升决策代理的技能检索和行动生成能力，同时不断优化技能银行。",
+        "technical_architecture": "COSPLAY框架包括LLM决策代理和技能银行代理，前者从后者获取技能以指导行动。",
+        "quantitative_results": "COSPLAY在6个游戏环境中，8B基模型实现了超过25.1%的平均奖励提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多任务和更复杂环境中验证框架的有效性。",
+        "key_contributions": [
+          "提出共进化框架以提升LLM长期任务决策能力",
+          "设计技能银行代理持续优化技能库"
+        ],
+        "application_scenarios": [
+          "游戏环境中的长期决策",
+          "需要多步骤推理的任务"
+        ],
+        "technical_highlights": [
+          "LLM与技能银行的共进化机制",
+          "技能库的持续学习与优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.21931",
+      "source": "huggingface",
+      "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
+      "authors": [
+        "Yen-Siang Wu",
+        "Rundong Luo",
+        "Jingsen Zhu",
+        "Tao Tu",
+        "Ali Farhadi",
+        "Matthew Wallingford",
+        "Yu-Chiang Frank Wang",
+        "Steve Marschner",
+        "Wei-Chiu Ma"
+      ],
+      "abstract": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
+      "published_date": "2026-04-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.21931",
+      "pdf_url": "https://arxiv.org/pdf/2604.21931",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.21931",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "快速与缓慢的视觉感知：学习视频中的时间流动",
+        "chinese_summary": "开发了能够检测速度变化、估计播放速度、生成不同速度视频以及进行时间超分辨率的模型。",
+        "pain_point": "现有视频处理技术对时间流动的感知和控制不足。",
+        "core_value": "通过学习视频中的时间流动，实现了对视频速度的精确控制和时间细节的增强。",
+        "technical_architecture": "利用多模态线索和时间结构进行自监督学习，开发了时间流推理模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集主要来源于高帧率摄像机拍摄的素材。",
+        "key_contributions": [
+          "开发了自监督学习方法来检测视频中的速度变化",
+          "构建了目前最大的慢动作视频数据集",
+          "提出了速度条件下的视频生成和时间超分辨率技术"
+        ],
+        "application_scenarios": [
+          "电影和视频编辑",
+          "体育赛事回放"
+        ],
+        "technical_highlights": [
+          "利用多模态线索进行自监督学习",
+          "生成不同速度的视频"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.21375",
+      "source": "huggingface",
+      "title": "VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation",
+      "authors": [
+        "Qijun Han",
+        "Haoqin Tu",
+        "Zijun Wang",
+        "Haoyue Dai",
+        "Yiyang Zhou",
+        "Nancy Lau",
+        "Alvaro A. Cardenas",
+        "Yuhui Xu",
+        "Ran Xu",
+        "Caiming Xiong",
+        "Zeyu Zheng",
+        "Huaxiu Yao",
+        "Yuyin Zhou",
+        "Cihang Xie"
+      ],
+      "abstract": "Autonomous GUI agents face two fundamental challenges: early stopping, where agents prematurely declare success without verifiable evidence, and repetitive loops, where agents cycle through the same failing actions without recovery. We present VLAA-GUI, a modular GUI agentic framework built around three integrated components that guide the system on when to Stop, Recover, and Search. First, a mandatory Completeness Verifier enforces UI-observable success criteria and verification at every finish step -- with an agent-level verifier that cross-examines completion claims with decision rules, rejecting those lacking direct visual evidence. Second, a mandatory Loop Breaker provides multi-tier filtering: switching interaction mode after repeated failures, forcing strategy changes after persistent screen-state recurrence, and binding reflection signals to strategy shifts. Third, an on-demand Search Agent searches online for unfamiliar workflows by directly querying a capable LLM with search ability, returning results as plain text. We additionally integrate a Coding Agent for code-intensive actions and a Grounding Agent for precise action grounding, both invoked on demand when required. We evaluate VLAA-GUI across five top-tier backbones, including Opus 4.5, 4.6 and Gemini 3.1 Pro, on two benchmarks with Linux and Windows tasks, achieving top performance on both (77.5% on OSWorld and 61.0% on WindowsAgentArena). Notably, three of the five backbones surpass human performance (72.4%) on OSWorld in a single pass. Ablation studies show that all three proposed components consistently improve a strong backbone, while a weaker backbone benefits more from these tools when the step budget is sufficient. Further analysis also shows that the Loop Breaker nearly halves wasted steps for loop-prone models.",
+      "published_date": "2026-04-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.21375",
+      "pdf_url": "https://arxiv.org/pdf/2604.21375",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.21375",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "VLAA-GUI: 知道何时停止、恢复和搜索，一种模块化的GUI自动化框架",
+        "chinese_summary": "VLAA-GUI 提供了一种模块化框架，通过三个组件指导系统何时停止、恢复和搜索。",
+        "pain_point": "GUI 自动化代理面临两大挑战：过早停止和重复循环。",
+        "core_value": "通过集成验证器、中断器和搜索代理，提供了一种新的自动化框架。",
+        "technical_architecture": "基于三个集成组件：验证器、中断器和搜索代理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证其在大规模复杂场景中的表现。",
+        "key_contributions": [
+          "提出了一种新的模块化框架",
+          "引入了验证器、中断器和搜索代理"
+        ],
+        "application_scenarios": [
+          "GUI测试",
+          "自动化脚本"
+        ],
+        "technical_highlights": [
+          "多级过滤机制",
+          "直接查询LLM进行搜索"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.21889",
+      "source": "huggingface",
+      "title": "TingIS: Real-time Risk Event Discovery from Noisy Customer Incidents at Enterprise Scale",
+      "authors": [
+        "Jun Wang",
+        "Ziyin Zhang",
+        "Rui Wang",
+        "Hang Yu",
+        "Peng Di",
+        "Rui Wang"
+      ],
+      "abstract": "Real-time detection and mitigation of technical anomalies are critical for large-scale cloud-native services, where even minutes of downtime can result in massive financial losses and diminished user trust. While customer incidents serve as a vital signal for discovering risks missed by monitoring, extracting actionable intelligence from this data remains challenging due to extreme noise, high throughput, and semantic complexity of diverse business lines. In this paper, we present TingIS, an end-to-end system designed for enterprise-grade incident discovery. At the core of TingIS is a multi-stage event linking engine that synergizes efficient indexing techniques with Large Language Models (LLMs) to make informed decisions on event merging, enabling the stable extraction of actionable incidents from just a handful of diverse user descriptions. This engine is complemented by a cascaded routing mechanism for precise business attribution and a multi-dimensional noise reduction pipeline that integrates domain knowledge, statistical patterns, and behavioral filtering. Deployed in a production environment handling a peak throughput of over 2,000 messages per minute and 300,000 messages per day, TingIS achieves a P90 alert latency of 3.5 minutes and a 95\\% discovery rate for high-priority incidents. Benchmarks constructed from real-world data demonstrate that TingIS significantly outperforms baseline methods in routing accuracy, clustering quality, and Signal-to-Noise Ratio.",
+      "published_date": "2026-04-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.21889",
+      "pdf_url": "https://arxiv.org/pdf/2604.21889",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.21889",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.20244",
+      "source": "huggingface",
+      "title": "Hybrid Policy Distillation for LLMs",
+      "authors": [
+        "Wenhong Zhu",
+        "Ruobing Xie",
+        "Rui Wang",
+        "Pengfei Liu"
+      ],
+      "abstract": "Knowledge distillation (KD) is a powerful paradigm for compressing large language models (LLMs), whose effectiveness depends on intertwined choices of divergence direction, optimization strategy, and data regime. We break down the design of existing KD methods and present a unified view that establishes connections between them, reformulating KD as a reweighted log-likelihood objective at the token level. We further propose Hybrid Policy Distillation (HPD), which integrates the complementary advantages of forward and reverse KL to balance mode coverage and mode-seeking, and combines off-policy data with lightweight, approximate on-policy sampling. We validate HPD on long-generation math reasoning as well as short-generation dialogue and code tasks, demonstrating improved optimization stability, computational efficiency, and final performance across diverse model families and scales. The code related to this work is available at https://github.com/zwhong714/Hybrid-Policy-Distillation.",
+      "published_date": "2026-04-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.20244",
+      "pdf_url": "https://arxiv.org/pdf/2604.20244",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.20244",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": {
+        "chinese_title": "LLMs 的混合策略蒸馏",
+        "chinese_summary": "提出了一种新的混合策略蒸馏方法，提高了优化稳定性和计算效率。",
+        "pain_point": "现有语言模型蒸馏方法在模式覆盖和模式寻找之间存在权衡。",
+        "core_value": "通过结合前向和后向KL的优势，HPD提高了不同模型家族和规模的性能。",
+        "technical_architecture": "HPD重新定义了蒸馏为目标函数，并结合了离策数据和轻量级采样。",
+        "quantitative_results": "在长生成数学推理、短生成对话和代码任务上表现出更好的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多任务上验证其泛化能力。",
+        "key_contributions": [
+          "提出了HPD方法",
+          "结合了前向和后向KL的优势",
+          "提高了优化稳定性和计算效率"
+        ],
+        "application_scenarios": [
+          "长生成数学推理",
+          "短生成对话",
+          "代码生成"
+        ],
+        "technical_highlights": [
+          "重新定义蒸馏为目标函数",
+          "结合离策数据和轻量级采样"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.21921",
+      "source": "huggingface",
+      "title": "Context Unrolling in Omni Models",
+      "authors": [
+        "Ceyuan Yang",
+        "Zhijie Lin",
+        "Yang Zhao",
+        "Fei Xiao",
+        "Hao He",
+        "Qi Zhao",
+        "Chaorui Deng",
+        "Kunchang Li",
+        "Zihan Ding",
+        "Yuwei Guo",
+        "Fuyun Wang",
+        "Fangqi Zhu",
+        "Xiaonan Nie",
+        "Shenhan Zhu",
+        "Shanchuan Lin",
+        "Hongsheng Li",
+        "Weilin Huang",
+        "Guang Shi",
+        "Haoqi Fan"
+      ],
+      "abstract": "We present Omni, a unified multimodal model natively trained on diverse modalities, including text, images, videos, 3D geometry, and hidden representations. We find that such training enables Context Unrolling, where the model explicitly reasons across multiple modal representations before producing predictions. This process enables the model to aggregate complementary information across heterogeneous modalities, facilitating a more faithful approximation of the shared multimodal knowledge manifold and improving downstream reasoning fidelity. As a result, Omni achieves strong performance on both multimodal generation and understanding benchmarks, while demonstrating advanced multimodal reasoning capabilities, including in-context generation of text, image, video, and 3D geometry.",
+      "published_date": "2026-04-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.21921",
+      "pdf_url": "https://arxiv.org/pdf/2604.21921",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.21921",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 5,
+      "hot_score": 50,
+      "structured_summary": {
+        "chinese_title": "全同一体模型中的上下文展开",
+        "chinese_summary": "Omni模型通过统一训练多种模态数据，实现跨模态推理，提升多模态理解和生成能力。",
+        "pain_point": "现有模型在处理多模态数据时，难以有效整合不同模态的信息。",
+        "core_value": "Omni模型通过统一训练和跨模态推理，显著提升了多模态任务的表现。",
+        "technical_architecture": "Omni模型统一训练多种模态数据，实现跨模态推理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多模态的数据整合方法。",
+        "key_contributions": [
+          "提出Omni模型，统一训练多种模态数据",
+          "实现跨模态推理，提升多模态任务表现"
+        ],
+        "application_scenarios": [
+          "多模态生成",
+          "多模态理解"
+        ],
+        "technical_highlights": [
+          "统一训练多种模态数据",
+          "跨模态推理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

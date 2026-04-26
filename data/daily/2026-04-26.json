@@ -1,0 +1,425 @@
+{
+  "date": "2026-04-26",
+  "generated_at": "2026-04-26T23:40:37.783756+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2604.21931v1",
+      "source": "arxiv",
+      "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
+      "authors": [
+        "Yen-Siang Wu",
+        "Rundong Luo",
+        "Jingsen Zhu",
+        "Tao Tu",
+        "Ali Farhadi",
+        "Matthew Wallingford",
+        "Yu-Chiang Frank Wang",
+        "Steve Marschner",
+        "Wei-Chiu Ma"
+      ],
+      "abstract": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
+      "published_date": "2026-04-23T17:59:57Z",
+      "url": "https://arxiv.org/abs/2604.21931v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21931v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2604.21930v1",
+      "source": "arxiv",
+      "title": "Temporal Taskification in Streaming Continual Learning: A Source of Evaluation Instability",
+      "authors": [
+        "Nicolae Filat",
+        "Ahmed Hussain",
+        "Konstantinos Kalogiannis",
+        "Elena Burceanu"
+      ],
+      "abstract": "Streaming Continual Learning (CL) typically converts a continuous stream into a sequence of discrete tasks through temporal partitioning. We argue that this temporal taskification step is not a neutral preprocessing choice, but a structural component of evaluation: different valid splits of the same stream can induce different CL regimes and therefore different benchmark conclusions. To study this effect, we introduce a taskification-level framework based on plasticity and stability profiles, a profile distance between taskifications, and Boundary-Profile Sensitivity (BPS), which diagnoses how strongly small boundary perturbations alter the induced regime before any CL model is trained. We evaluate continual finetuning, Experience Replay, Elastic Weight Consolidation, and Learning without Forgetting on network traffic forecasting with CESNET-Timeseries24, keeping the stream, model, and training budget fixed while varying only the temporal taskification. Across 9-, 30-, and 44-day splits, we observe substantial changes in forecasting error, forgetting, and backward transfer, showing that taskification alone can materially affect CL evaluation. We further find that shorter taskifications induce noisier distribution-level patterns, larger structural distances, and higher BPS, indicating greater sensitivity to boundary perturbations. These results show that benchmark conclusions in streaming CL depend not only on the learner and the data stream, but also on how that stream is taskified, motivating temporal taskification as a first-class evaluation variable.",
+      "published_date": "2026-04-23T17:59:54Z",
+      "url": "https://arxiv.org/abs/2604.21930v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21930v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "流式持续学习中的时间任务化：评估不稳定性的一个来源",
+        "chinese_summary": "研究时间任务化对流式持续学习评估的影响，发现不同任务划分会导致不同评估结果。",
+        "pain_point": "流式持续学习中时间任务化导致评估结果不稳定。",
+        "core_value": "提出任务化水平框架，量化任务划分对评估结果的影响。",
+        "technical_architecture": "基于可塑性和稳定性特征的任务划分框架。",
+        "quantitative_results": "不同任务划分导致预测误差、遗忘和反向迁移显著变化。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多任务划分方法及其影响。",
+        "key_contributions": [
+          "提出任务化水平框架",
+          "量化任务划分对评估结果的影响",
+          "发现任务划分显著影响评估结果"
+        ],
+        "application_scenarios": [
+          "网络流量预测",
+          "持续学习评估"
+        ],
+        "technical_highlights": [
+          "引入任务化水平框架",
+          "计算任务划分间的距离"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.21928v1",
+      "source": "arxiv",
+      "title": "Evaluation of Automatic Speech Recognition Using Generative Large Language Models",
+      "authors": [
+        "Thibault Bañeras-Roux",
+        "Shashi Kumar",
+        "Driss Khalil",
+        "Sergio Burdisso",
+        "Petr Motlicek",
+        "Shiran Liu",
+        "Mickael Rouvier",
+        "Jane Wottawa",
+        "Richard Dufour"
+      ],
+      "abstract": "Automatic Speech Recognition (ASR) is traditionally evaluated using Word Error Rate (WER), a metric that is insensitive to meaning. Embedding-based semantic metrics are better correlated with human perception, but decoder-based Large Language Models (LLMs) remain underexplored for this task. This paper evaluates their relevance through three approaches: (1) selecting the best hypothesis between two candidates, (2) computing semantic distance using generative embeddings, and (3) qualitative classification of errors. On the HATS dataset, the best LLMs achieve 92--94\\% agreement with human annotators for hypothesis selection, compared to 63\\% for WER, also outperforming semantic metrics. Embeddings from decoder-based LLMs show performance comparable to encoder models. Finally, LLMs offer a promising direction for interpretable and semantic ASR evaluation.",
+      "published_date": "2026-04-23T17:59:47Z",
+      "url": "https://arxiv.org/abs/2604.21928v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21928v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2604.21927v1",
+      "source": "arxiv",
+      "title": "Fine-Tuning Regimes Define Distinct Continual Learning Problems",
+      "authors": [
+        "Paul-Tiberiu Iordache",
+        "Elena Burceanu"
+      ],
+      "abstract": "Continual learning (CL) studies how models acquire tasks sequentially while retaining previously learned knowledge. Despite substantial progress in benchmarking CL methods, comparative evaluations typically keep the fine-tuning regime fixed. In this paper, we argue that the fine-tuning regime, defined by the trainable parameter subspace, is itself a key evaluation variable. We formalize adaptation regimes as projected optimization over fixed trainable subspaces, showing that changing the trainable depth alters the effective update signal through which both current task fitting and knowledge preservation operate. This analysis motivates the hypothesis that method comparisons need not be invariant across regimes. We test this hypothesis in task incremental CL, five trainable depth regimes, and four standard methods: online EWC, LwF, SI, and GEM. Across five benchmark datasets, namely MNIST, Fashion MNIST, KMNIST, QMNIST, and CIFAR-100, and across 11 task orders per dataset, we find that the relative ranking of methods is not consistently preserved across regimes. We further show that deeper adaptation regimes are associated with larger update magnitudes, higher forgetting, and a stronger relationship between the two. These results show that comparative conclusions in CL can depend strongly on the chosen fine-tuning regime, motivating regime-aware evaluation protocols that treat trainable depth as an explicit experimental factor.",
+      "published_date": "2026-04-23T17:59:34Z",
+      "url": "https://arxiv.org/abs/2604.21927v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21927v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "精细调整阶段定义了不同的持续学习问题",
+        "chinese_summary": "研究发现不同精细调整阶段会影响方法比较结果。",
+        "pain_point": "现有持续学习方法评估通常固定精细调整阶段，导致比较结果可能不一致。",
+        "core_value": "提出将可训练参数子空间作为关键评估变量，揭示不同精细调整阶段对方法性能的影响。",
+        "technical_architecture": "将适应阶段定义为投影优化过程，分析不同可训练深度对更新信号的影响。",
+        "quantitative_results": "在不同精细调整阶段，方法相对排名不一致。",
+        "competitors": "暂无对比信息",
+        "limitations": "实验仅在特定任务增量持续学习场景下进行。",
+        "key_contributions": [
+          "提出将可训练参数子空间作为关键评估变量",
+          "揭示不同精细调整阶段对方法性能的影响",
+          "测试了五种可训练深度和四种标准方法"
+        ],
+        "application_scenarios": [
+          "任务增量持续学习",
+          "持续学习方法比较"
+        ],
+        "technical_highlights": [
+          "分析不同可训练深度对更新信号的影响",
+          "发现更深的适应阶段与更大的更新幅度和更高的遗忘率相关"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.21926v1",
+      "source": "arxiv",
+      "title": "Seeing Without Eyes: 4D Human-Scene Understanding from Wearable IMUs",
+      "authors": [
+        "Hao-Yu Hsu",
+        "Tianhang Cheng",
+        "Jing Wen",
+        "Alexander G. Schwing",
+        "Shenlong Wang"
+      ],
+      "abstract": "Understanding human activities and their surrounding environments typically relies on visual perception, yet cameras pose persistent challenges in privacy, safety, energy efficiency, and scalability. We explore an alternative: 4D perception without vision. Its goal is to reconstruct human motion and 3D scene layouts purely from everyday wearable sensors. For this we introduce IMU-to-4D, a framework that repurposes large language models for non-visual spatiotemporal understanding of human-scene dynamics. IMU-to-4D uses data from a few inertial sensors from earbuds, watches, or smartphones and predicts detailed 4D human motion together with coarse scene structure. Experiments across diverse human-scene datasets show that IMU-to-4D yields more coherent and temporally stable results than SoTA cascaded pipelines, suggesting wearable motion sensors alone can support rich 4D understanding.",
+      "published_date": "2026-04-23T17:59:16Z",
+      "url": "https://arxiv.org/abs/2604.21926v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21926v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "无需眼睛的视觉：基于可穿戴IMUs的4D人体-场景理解",
+        "chinese_summary": "通过可穿戴传感器实现4D人体-场景理解，无需视觉感知。",
+        "pain_point": "现有视觉感知技术在隐私、安全、能耗和扩展性方面存在挑战。",
+        "core_value": "利用可穿戴传感器实现4D理解，提供丰富的人体运动和场景结构信息。",
+        "technical_architecture": "利用大型语言模型处理非视觉时空数据，构建IMU-to-4D框架。",
+        "quantitative_results": "实验结果显示IMU-to-4D比现有最佳方法更连贯、时间上更稳定。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在部分数据集上进行了实验验证。",
+        "key_contributions": [
+          "提出了一种基于可穿戴传感器的4D人体-场景理解框架",
+          "利用大型语言模型实现非视觉时空理解"
+        ],
+        "application_scenarios": [
+          "智能穿戴设备",
+          "虚拟现实与增强现实"
+        ],
+        "technical_highlights": [
+          "无需视觉传感器即可实现4D理解",
+          "利用可穿戴设备的IMU数据进行人体运动和场景结构预测"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.21923v1",
+      "source": "arxiv",
+      "title": "The Sample Complexity of Multicalibration",
+      "authors": [
+        "Natalie Collina",
+        "Jiuyao Lu",
+        "Georgy Noarov",
+        "Aaron Roth"
+      ],
+      "abstract": "We study the minimax sample complexity of multicalibration in the batch setting. A learner observes $n$ i.i.d. samples from an unknown distribution and must output a (possibly randomized) predictor whose population multicalibration error, measured by Expected Calibration Error (ECE), is at most $\\varepsilon$ with respect to a given family of groups. For every fixed $κ> 0$, in the regime $|G|\\le \\varepsilon^{-κ}$, we prove that $\\widetildeΘ(\\varepsilon^{-3})$ samples are necessary and sufficient, up to polylogarithmic factors. The lower bound holds even for randomized predictors, and the upper bound is realized by a randomized predictor obtained via an online-to-batch reduction. This separates the sample complexity of multicalibration from that of marginal calibration, which scales as $\\widetildeΘ(\\varepsilon^{-2})$, and shows that mean-ECE multicalibration is as difficult in the batch setting as it is in the online setting, in contrast to marginal calibration which is strictly more difficult in the online setting. In contrast we observe that for $κ= 0$, the sample complexity of multicalibration remains $\\widetildeΘ(\\varepsilon^{-2})$ exhibiting a sharp threshold phenomenon.   More generally, we establish matching upper and lower bounds, up to polylogarithmic factors, for a weighted $L_p$ multicalibration metric for all $1 \\le p \\le 2$, with optimal exponent $3/p$. We also extend the lower-bound template to a regular class of elicitable properties, and combine it with the online upper bounds of Hu et al. (2025) to obtain matching bounds for calibrating properties including expectiles and bounded-density quantiles.",
+      "published_date": "2026-04-23T17:59:01Z",
+      "url": "https://arxiv.org/abs/2604.21923v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21923v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "math.ST",
+        "stat.ML"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "多校准的样本复杂性",
+        "chinese_summary": "证明了多校准的样本复杂性在特定条件下为Θ̃(ε⁻³)",
+        "pain_point": "在批量设置中，如何有效减少多校准的样本需求",
+        "core_value": "提出了新的样本复杂性理论，区分了多校准与边际校准的复杂性",
+        "technical_architecture": "使用在线到批量的减少方法实现上界",
+        "quantitative_results": "证明了必要和充分的样本复杂性为Θ̃(ε⁻³)",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定条件下成立",
+        "key_contributions": [
+          "证明了多校准的样本复杂性",
+          "区分了多校准与边际校准的复杂性",
+          "提出了在线到批量的减少方法"
+        ],
+        "application_scenarios": [
+          "机器学习模型的校准优化",
+          "公平性与可解释性的提升"
+        ],
+        "technical_highlights": [
+          "提出了新的样本复杂性理论",
+          "展示了多校准的难度"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.21921v1",
+      "source": "arxiv",
+      "title": "Context Unrolling in Omni Models",
+      "authors": [
+        "Ceyuan Yang",
+        "Zhijie Lin",
+        "Yang Zhao",
+        "Fei Xiao",
+        "Hao He",
+        "Qi Zhao",
+        "Chaorui Deng",
+        "Kunchang Li",
+        "Zihan Ding",
+        "Yuwei Guo",
+        "Fuyun Wang",
+        "Fangqi Zhu",
+        "Xiaonan Nie",
+        "Shenhan Zhu",
+        "Shanchuan Lin",
+        "Hongsheng Li",
+        "Weilin Huang",
+        "Guang Shi",
+        "Haoqi Fan"
+      ],
+      "abstract": "We present Omni, a unified multimodal model natively trained on diverse modalities, including text, images, videos, 3D geometry, and hidden representations. We find that such training enables Context Unrolling, where the model explicitly reasons across multiple modal representations before producing predictions. This process enables the model to aggregate complementary information across heterogeneous modalities, facilitating a more faithful approximation of the shared multimodal knowledge manifold and improving downstream reasoning fidelity. As a result, Omni achieves strong performance on both multimodal generation and understanding benchmarks, while demonstrating advanced multimodal reasoning capabilities, including in-context generation of text, image, video, and 3D geometry.",
+      "published_date": "2026-04-23T17:58:38Z",
+      "url": "https://arxiv.org/abs/2604.21921v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21921v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "全视角模型中的上下文展开",
+        "chinese_summary": "Omni模型通过统一训练多种模态数据，实现跨模态信息聚合，提升多模态推理能力。",
+        "pain_point": "现有模型在处理多模态数据时，难以有效整合不同模态的信息。",
+        "core_value": "Omni模型通过统一训练实现跨模态推理，提升多模态任务性能。",
+        "technical_architecture": "Omni模型采用统一训练框架，支持文本、图像、视频、3D几何等多种模态数据。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多模态数据的整合方法。",
+        "key_contributions": [
+          "提出Omni模型，统一训练多种模态数据",
+          "实现跨模态信息聚合，提升多模态推理能力"
+        ],
+        "application_scenarios": [
+          "多模态生成任务",
+          "多模态理解任务"
+        ],
+        "technical_highlights": [
+          "支持多种模态数据统一训练",
+          "实现跨模态信息聚合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.21916v1",
+      "source": "arxiv",
+      "title": "MathDuels: Evaluating LLMs as Problem Posers and Solvers",
+      "authors": [
+        "Zhiqiu Xu",
+        "Shibo Jin",
+        "Shreya Arya",
+        "Mayur Naik"
+      ],
+      "abstract": "As frontier language models attain near-ceiling performance on static mathematical benchmarks, existing evaluations are increasingly unable to differentiate model capabilities, largely because they cast models solely as solvers of fixed problem sets. We introduce MathDuels, a self-play benchmark in which models occupy dual roles: each authors math problems under adversarial prompting and solves problems authored by every other participant. Problems are produced through a three-stage generation pipeline (meta-prompting, problem generation, and difficulty amplification), and validated by an independent verifier that excludes ill-posed questions. A Rasch model (Rasch, 1993) jointly estimates solver abilities and problem difficulties; author quality is derived from the difficulties of each model's authored problems. Experiments across 19 frontier models reveal that authoring and solving capabilities are partially decoupled, and that dual-role evaluation reveals capability separations invisible in single-role benchmarks. As newer models enter the arena, they produce problems that defeat previously dominant solvers, so the benchmark's difficulty co-evolves with participant strength rather than saturating at a fixed ceiling. We host a public leaderboard that updates as new models are released.",
+      "published_date": "2026-04-23T17:57:46Z",
+      "url": "https://arxiv.org/abs/2604.21916v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21916v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.SE"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2604.21915v1",
+      "source": "arxiv",
+      "title": "Vista4D: Video Reshooting with 4D Point Clouds",
+      "authors": [
+        "Kuan Heng Lin",
+        "Zhizheng Liu",
+        "Pablo Salamanca",
+        "Yash Kant",
+        "Ryan Burgert",
+        "Yuancheng Xu",
+        "Koichi Namekata",
+        "Yiwei Zhao",
+        "Bolei Zhou",
+        "Micah Goldblum",
+        "Paul Debevec",
+        "Ning Yu"
+      ],
+      "abstract": "We present Vista4D, a robust and flexible video reshooting framework that grounds the input video and target cameras in a 4D point cloud. Specifically, given an input video, our method re-synthesizes the scene with the same dynamics from a different camera trajectory and viewpoint. Existing video reshooting methods often struggle with depth estimation artifacts of real-world dynamic videos, while also failing to preserve content appearance and failing to maintain precise camera control for challenging new trajectories. We build a 4D-grounded point cloud representation with static pixel segmentation and 4D reconstruction to explicitly preserve seen content and provide rich camera signals, and we train with reconstructed multiview dynamic data for robustness against point cloud artifacts during real-world inference. Our results demonstrate improved 4D consistency, camera control, and visual quality compared to state-of-the-art baselines under a variety of videos and camera paths. Moreover, our method generalizes to real-world applications such as dynamic scene expansion and 4D scene recomposition. See our project page for results, code, and models: https://eyeline-labs.github.io/Vista4D",
+      "published_date": "2026-04-23T17:57:28Z",
+      "url": "https://arxiv.org/abs/2604.21915v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21915v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Vista4D：基于4D点云的视频重拍摄",
+        "chinese_summary": "Vista4D 提供了一种基于4D点云的视频重拍摄框架，能够从不同摄像机轨迹和视角重新合成具有相同动态的场景。",
+        "pain_point": "现有视频重拍摄方法难以处理真实动态视频的深度估计伪影，同时无法保持内容外观和精确的摄像机控制。",
+        "core_value": "通过4D点云和静态像素分割，Vista4D 显式地保留了已见内容并提供了丰富的摄像机信号，提高了4D一致性、摄像机控制和视觉质量。",
+        "technical_architecture": "Vista4D 使用4D点云表示法和多视图动态数据重建，以增强鲁棒性。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "方法主要针对真实世界的动态场景应用，未来可能需要扩展到更多场景。",
+        "key_contributions": [
+          "提出了基于4D点云的视频重拍摄框架",
+          "通过4D点云和多视图动态数据重建提高鲁棒性",
+          "显式保留已见内容并提供丰富的摄像机信号"
+        ],
+        "application_scenarios": [
+          "动态场景扩展",
+          "4D场景重组"
+        ],
+        "technical_highlights": [
+          "4D点云表示法",
+          "静态像素分割和4D重建"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2604.21911v1",
+      "source": "arxiv",
+      "title": "When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs",
+      "authors": [
+        "Pegah Khayatan",
+        "Jayneel Parekh",
+        "Arnaud Dapogny",
+        "Mustafa Shukor",
+        "Alasdair Newson",
+        "Matthieu Cord"
+      ],
+      "abstract": "Despite impressive progress in capabilities of large vision-language models (LVLMs), these systems remain vulnerable to hallucinations, i.e., outputs that are not grounded in the visual input. Prior work has attributed hallucinations in LVLMs to factors such as limitations of the vision backbone or the dominance of the language component, yet the relative importance of these factors remains unclear. To resolve this ambiguity, We propose HalluScope, a benchmark to better understand the extent to which different factors induce hallucinations. Our analysis indicates that hallucinations largely stem from excessive reliance on textual priors and background knowledge, especially information introduced through textual instructions. To mitigate hallucinations induced by textual instruction priors, we propose HalluVL-DPO, a framework for fine-tuning off-the-shelf LVLMs towards more visually grounded responses. HalluVL-DPO leverages preference optimization using a curated training dataset that we construct, guiding the model to prefer grounded responses over hallucinated ones. We demonstrate that our optimized model effectively mitigates the targeted hallucination failure mode, while preserving or improving performance on other hallucination benchmarks and visual capability evaluations. To support reproducibility and further research, we will publicly release our evaluation benchmark, preference training dataset, and code at https://pegah-kh.github.io/projects/prompts-override-vision/ .",
+      "published_date": "2026-04-23T17:54:36Z",
+      "url": "https://arxiv.org/abs/2604.21911v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21911v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    }
+  ]
+}

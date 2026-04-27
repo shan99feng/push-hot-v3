@@ -1,0 +1,406 @@
+{
+  "date": "2026-04-27",
+  "generated_at": "2026-04-27T23:57:16.492722+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.22748",
+      "source": "huggingface",
+      "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
+      "authors": [
+        "Meng Chu",
+        "Xuan Billy Zhang",
+        "Kevin Qinghong Lin",
+        "Lingdong Kong",
+        "Jize Zhang",
+        "Teng Tu",
+        "Weijian Ma",
+        "Ziqi Huang",
+        "Senqiao Yang",
+        "Wei Huang",
+        "Yeying Jin",
+        "Zhefan Rao",
+        "Jinhui Ye",
+        "Xinyu Lin",
+        "Xichen Zhang",
+        "Qisheng Hu",
+        "Shuai Yang",
+        "Leyang Shen",
+        "Wei Chow",
+        "Yifei Dong",
+        "Fengyi Wu",
+        "Quanyu Long",
+        "Bin Xia",
+        "Shaozuo Yu",
+        "Mingkang Zhu",
+        "Wenhu Zhang",
+        "Jiehui Huang",
+        "Haokun Gui",
+        "Haoxuan Che",
+        "Long Chen",
+        "Qifeng Chen",
+        "Wenxuan Zhang",
+        "Wenya Wang",
+        "Xiaojuan Qi",
+        "Yang Deng",
+        "Yanwei Li",
+        "Mike Zheng Shou",
+        "Zhi-Qi Cheng",
+        "See-Kiong Ng",
+        "Ziwei Liu",
+        "Philip Torr",
+        "Jiaya Jia"
+      ],
+      "abstract": "As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, coordinate with others, or design experiments require predictive environment models, yet the term world model carries different meanings across research communities. We introduce a \"levels x laws\" taxonomy organized along two axes. The first defines three capability levels: L1 Predictor, which learns one-step local transition operators; L2 Simulator, which composes them into multi-step, action-conditioned rollouts that respect domain laws; and L3 Evolver, which autonomously revises its own model when predictions fail against new evidence. The second identifies four governing-law regimes: physical, digital, social, and scientific. These regimes determine what constraints a world model must satisfy and where it is most likely to fail. Using this framework, we synthesize over 400 works and summarize more than 100 representative systems spanning model-based reinforcement learning, video generation, web and GUI agents, multi-agent social simulation, and AI-driven scientific discovery. We analyze methods, failure modes, and evaluation practices across level-regime pairs, propose decision-centric evaluation principles and a minimal reproducible evaluation package, and outline architectural guidance, open problems, and governance challenges. The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world models that can simulate, and ultimately reshape, the environments in which agents operate.",
+      "published_date": "2026-04-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.22748",
+      "pdf_url": "https://arxiv.org/pdf/2604.22748",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.22748",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 151,
+      "hot_score": 1510,
+      "structured_summary": {
+        "chinese_title": "代理世界建模：基础、能力、定律及更远",
+        "chinese_summary": "提出了一种“层次 x 定律”分类法，定义了三种能力层次和四种治理定律，以更好地理解世界模型的不同含义。",
+        "pain_point": "AI 系统通过持续交互实现目标时，环境动态建模成为主要瓶颈。",
+        "core_value": "提供了一种新的分类法，有助于统一世界模型的研究，并识别不同领域的约束和挑战。",
+        "technical_architecture": "提出了三种能力层次和四种治理定律，构建了一种新的世界模型分类框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅综述了现有研究，未进行具体实验验证。",
+        "key_contributions": [
+          "提出了‘层次 x 定律’分类法",
+          "定义了三种能力层次",
+          "识别了四种治理定律"
+        ],
+        "application_scenarios": [
+          "模型驱动的强化学习",
+          "视频生成",
+          "Web 和 GUI 代理",
+          "多代理社会模拟",
+          "AI 驱动的科学"
+        ],
+        "technical_highlights": [
+          "提供了一种新的分类框架",
+          "涵盖了多种应用场景"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.22554",
+      "source": "huggingface",
+      "title": "Video Analysis and Generation via a Semantic Progress Function",
+      "authors": [
+        "Gal Metzer",
+        "Sagi Polaczek",
+        "Ali Mahdavi-Amiri",
+        "Raja Giryes",
+        "Daniel Cohen-Or"
+      ],
+      "abstract": "Transformations produced by image and video generation models often evolve in a highly non-linear manner: long stretches where the content barely changes are followed by sudden, abrupt semantic jumps. To analyze and correct this behavior, we introduce a Semantic Progress Function, a one-dimensional representation that captures how the meaning of a given sequence evolves over time. For each frame, we compute distances between semantic embeddings and fit a smooth curve that reflects the cumulative semantic shift across the sequence. Departures of this curve from a straight line reveal uneven semantic pacing. Building on this insight, we propose a semantic linearization procedure that reparameterizes (or retimes) the sequence so that semantic change unfolds at a constant rate, yielding smoother and more coherent transitions. Beyond linearization, our framework provides a model-agnostic foundation for identifying temporal irregularities, comparing semantic pacing across different generators, and steering both generated and real-world video sequences toward arbitrary target pacing.",
+      "published_date": "2026-04-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.22554",
+      "pdf_url": "https://arxiv.org/pdf/2604.22554",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.22554",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.21518",
+      "source": "huggingface",
+      "title": "DiffNR: Diffusion-Enhanced Neural Representation Optimization for Sparse-View 3D Tomographic Reconstruction",
+      "authors": [
+        "Shiyan Su",
+        "Ruyi Zha",
+        "Danli Shi",
+        "Hongdong Li",
+        "Xuelian Cheng"
+      ],
+      "abstract": "Neural representations (NRs), such as neural fields and 3D Gaussians, effectively model volumetric data in computed tomography (CT) but suffer from severe artifacts under sparse-view settings. To address this, we propose DiffNR, a novel framework that enhances NR optimization with diffusion priors. At its core is SliceFixer, a single-step diffusion model designed to correct artifacts in degraded slices. We integrate specialized conditioning layers into the network and develop tailored data curation strategies to support model finetuning. During reconstruction, SliceFixer periodically generates pseudo-reference volumes, providing auxiliary 3D perceptual supervision to fix underconstrained regions. Compared to prior methods that embed CT solvers into time-consuming iterative denoising, our repair-and-augment strategy avoids frequent diffusion model queries, leading to better runtime performance. Extensive experiments show that DiffNR improves PSNR by 3.99 dB on average, generalizes well across domains, and maintains efficient optimization.",
+      "published_date": "2026-04-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.21518",
+      "pdf_url": "https://arxiv.org/pdf/2604.21518",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.21518",
+      "category": "cv",
+      "tags": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "DiffNR：增强稀视角3D断层重建的扩散增强神经表示优化",
+        "chinese_summary": "提出DiffNR框架，通过扩散先验增强神经表示优化，显著提升稀视角3D断层重建效果。",
+        "pain_point": "稀视角设置下，神经表示模型存在严重伪影。",
+        "core_value": "通过扩散先验增强神经表示优化，提高重建质量并优化运行时性能。",
+        "technical_architecture": "提出SliceFixer单步扩散模型，结合条件层和数据整理策略。",
+        "quantitative_results": "平均提升PSNR 3.99 dB。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定应用场景下进行了验证。",
+        "key_contributions": [
+          "提出DiffNR框架，结合扩散先验优化神经表示",
+          "设计SliceFixer单步扩散模型",
+          "开发专门的条件层和数据整理策略"
+        ],
+        "application_scenarios": [
+          "医学影像重建",
+          "工业CT检测"
+        ],
+        "technical_highlights": [
+          "避免频繁查询扩散模型，提高运行时性能",
+          "提供3D感知辅助监督，修复欠约束区域"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.18519",
+      "source": "huggingface",
+      "title": "LLM Safety From Within: Detecting Harmful Content with Internal Representations",
+      "authors": [
+        "Difan Jiao",
+        "Yilun Liu",
+        "Ye Yuan",
+        "Zhenwei Tang",
+        "Linfeng Du",
+        "Haolun Wu",
+        "Ashton Anderson"
+      ],
+      "abstract": "Guard models are widely used to detect harmful content in user prompts and LLM responses. However, state-of-the-art guard models rely solely on terminal-layer representations and overlook the rich safety-relevant features distributed across internal layers. We present SIREN, a lightweight guard model that harnesses these internal features. By identifying safety neurons via linear probing and combining them through an adaptive layer-weighted strategy, SIREN builds a harmfulness detector from LLM internals without modifying the underlying model. Our comprehensive evaluation shows that SIREN substantially outperforms state-of-the-art open-source guard models across multiple benchmarks while using 250 times fewer trainable parameters. Moreover, SIREN exhibits superior generalization to unseen benchmarks, naturally enables real-time streaming detection, and significantly improves inference efficiency compared to generative guard models. Overall, our results highlight LLM internal states as a promising foundation for practical, high-performance harmfulness detection.",
+      "published_date": "2026-04-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.18519",
+      "pdf_url": "https://arxiv.org/pdf/2604.18519",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.18519",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.22294",
+      "source": "huggingface",
+      "title": "Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets",
+      "authors": [
+        "Harshit Joshi",
+        "Priyank Shethia",
+        "Jadelynn Dao",
+        "Monica S. Lam"
+      ],
+      "abstract": "Real-world document question answering is challenging. Analysts must synthesize evidence across multiple documents and different parts of each document. However, any fixed LLM context window can be exceeded as document collections grow. A common workaround is to decompose documents into chunks and assemble answers from chunk-level outputs, but this introduces an aggregation bottleneck: as the number of chunks grows, systems must still combine and reason over an increasingly large body of extracted evidence. We present SLIDERS, a framework for question answering over long document collections through structured reasoning. SLIDERS extracts salient information into a relational database, enabling scalable reasoning over persistent structured state via SQL rather than concatenated text. To make this locally extracted representation globally coherent, SLIDERS introduces a data reconciliation stage that leverages provenance, extraction rationales, and metadata to detect and repair duplicated, inconsistent, and incomplete records. SLIDERS outperforms all baselines on three existing long-context benchmarks, despite all of them fitting within the context window of strong base LLMs, exceeding GPT-4.1 by 6.6 points on average. It also improves over the next best baseline by ~19 and ~32 points on two new benchmarks at 3.9M and 36M tokens, respectively.",
+      "published_date": "2026-04-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.22294",
+      "pdf_url": "https://arxiv.org/pdf/2604.22294",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.22294",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.22586",
+      "source": "huggingface",
+      "title": "FlowAnchor: Stabilizing the Editing Signal for Inversion-Free Video Editing",
+      "authors": [
+        "Ze Chen",
+        "Lan Chen",
+        "Yuanhang Li",
+        "Qi Mao"
+      ],
+      "abstract": "We propose FlowAnchor, a training-free framework for stable and efficient inversion-free, flow-based video editing. Inversion-free editing methods have recently shown impressive efficiency and structure preservation in images by directly steering the sampling trajectory with an editing signal. However, extending this paradigm to videos remains challenging, often failing in multi-object scenes or with increased frame counts. We identify the root cause as the instability of the editing signal in high-dimensional video latent spaces, which arises from imprecise spatial localization and length-induced magnitude attenuation. To overcome this challenge, FlowAnchor explicitly anchors both where to edit and how strongly to edit. It introduces Spatial-aware Attention Refinement, which enforces consistent alignment between textual guidance and spatial regions, and Adaptive Magnitude Modulation, which adaptively preserves sufficient editing strength. Together, these mechanisms stabilize the editing signal and guide the flow-based evolution toward the desired target distribution. Extensive experiments demonstrate that FlowAnchor achieves more faithful, temporally coherent, and computationally efficient video editing across challenging multi-object and fast-motion scenarios. The project page is available at https://cuc-mipg.github.io/FlowAnchor.github.io/.",
+      "published_date": "2026-04-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.22586",
+      "pdf_url": "https://arxiv.org/pdf/2604.22586",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.22586",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "FlowAnchor: 无需反演的稳定流基视频编辑框架",
+        "chinese_summary": "FlowAnchor 通过稳定编辑信号实现高效、无反演的视频编辑。",
+        "pain_point": "现有方法在多对象场景或帧数增加时编辑不稳定。",
+        "core_value": "通过空间感知注意力精炼和自适应幅度调制稳定编辑信号。",
+        "technical_architecture": "引入空间感知注意力精炼和自适应幅度调制机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多复杂场景的应用。",
+        "key_contributions": [
+          "提出空间感知注意力精炼",
+          "引入自适应幅度调制",
+          "实现稳定高效的无反演视频编辑"
+        ],
+        "application_scenarios": [
+          "视频编辑",
+          "视频合成"
+        ],
+        "technical_highlights": [
+          "无需反演",
+          "稳定编辑信号"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.22436",
+      "source": "huggingface",
+      "title": "AgentSearchBench: A Benchmark for AI Agent Search in the Wild",
+      "authors": [
+        "Bin Wu",
+        "Arastun Mammadli",
+        "Xiaoyu Zhang",
+        "Emine Yilmaz"
+      ],
+      "abstract": "The rapid growth of AI agent ecosystems is transforming how complex tasks are delegated and executed, creating a new challenge of identifying suitable agents for a given task. Unlike traditional tools, agent capabilities are often compositional and execution-dependent, making them difficult to assess from textual descriptions alone. However, existing research and benchmarks typically assume well-specified functionalities, controlled candidate pools, or only executable task queries, leaving realistic agent search scenarios insufficiently studied. We introduce AgentSearchBench, a large-scale benchmark for agent search in the wild, built from nearly 10,000 real-world agents across multiple providers. The benchmark formalizes agent search as retrieval and reranking problems under both executable task queries and high-level task descriptions, and evaluates relevance using execution-grounded performance signals. Experiments reveal a consistent gap between semantic similarity and actual agent performance, exposing the limitations of description-based retrieval and reranking methods. We further show that lightweight behavioral signals, including execution-aware probing, can substantially improve ranking quality, highlighting the importance of incorporating execution signals into agent discovery. Our code is available at https://github.com/Bingo-W/AgentSearchBench.",
+      "published_date": "2026-04-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.22436",
+      "pdf_url": "https://arxiv.org/pdf/2604.22436",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.22436",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.IR",
+        "cs.MA"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.21718",
+      "source": "huggingface",
+      "title": "Building a Precise Video Language with Human-AI Oversight",
+      "authors": [
+        "Zhiqiu Lin",
+        "Chancharik Mitra",
+        "Siyuan Cen",
+        "Isaac Li",
+        "Yuhan Huang",
+        "Yu Tong Tiffany Ling",
+        "Hewei Wang",
+        "Irene Pi",
+        "Shihang Zhu",
+        "Ryan Rao",
+        "George Liu",
+        "Jiaxi Li",
+        "Ruojin Li",
+        "Yili Han",
+        "Yilun Du",
+        "Deva Ramanan"
+      ],
+      "abstract": "Video-language models (VLMs) learn to reason about the dynamic visual world through natural language. We introduce a suite of open datasets, benchmarks, and recipes for scalable oversight that enable precise video captioning. First, we define a structured specification for describing subjects, scenes, motion, spatial, and camera dynamics, grounded by hundreds of carefully defined visual primitives developed with professional video creators such as filmmakers. Next, to curate high-quality captions, we introduce CHAI (Critique-based Human-AI Oversight), a framework where trained experts critique and revise model-generated pre-captions into improved post-captions. This division of labor improves annotation accuracy and efficiency by offloading text generation to models, allowing humans to better focus on verification. Additionally, these critiques and preferences between pre- and post-captions provide rich supervision for improving open-source models (Qwen3-VL) on caption generation, reward modeling, and critique generation through SFT, DPO, and inference-time scaling. Our ablations show that critique quality in precision, recall, and constructiveness, ensured by our oversight framework, directly governs downstream performance. With modest expert supervision, the resulting model outperforms closed-source models such as Gemini-3.1-Pro. Finally, we apply our approach to re-caption large-scale professional videos (e.g., films, commercials, games) and fine-tune video generation models such as Wan to better follow detailed prompts of up to 400 words, achieving finer control over cinematography including camera motion, angle, lens, focus, point of view, and framing. Our results show that precise specification and human-AI oversight are key to professional-level video understanding and generation. Data and code are available on our project page: https://linzhiqiu.github.io/papers/chai/",
+      "published_date": "2026-04-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.21718",
+      "pdf_url": "https://arxiv.org/pdf/2604.21718",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.21718",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.22085",
+      "source": "huggingface",
+      "title": "Memanto: Typed Semantic Memory with Information-Theoretic Retrieval for Long-Horizon Agents",
+      "authors": [
+        "Seyed Moein Abtahi",
+        "Rasa Rahnema",
+        "Hetkumar Patel",
+        "Neel Patel",
+        "Majid Fekri",
+        "Tara Khani"
+      ],
+      "abstract": "The transition from stateless language model inference to persistent, multi session autonomous agents has revealed memory to be a primary architectural bottleneck in the deployment of production grade agentic systems. Existing methodologies largely depend on hybrid semantic graph architectures, which impose substantial computational overhead during both ingestion and retrieval. These systems typically require large language model mediated entity extraction, explicit graph schema maintenance, and multi query retrieval pipelines. This paper introduces Memanto, a universal memory layer for agentic artificial intelligence that challenges the prevailing assumption that knowledge graph complexity is necessary to achieve high fidelity agent memory. Memanto integrates a typed semantic memory schema comprising thirteen predefined memory categories, an automated conflict resolution mechanism, and temporal versioning. These components are enabled by Moorcheh's Information Theoretic Search engine, a no indexing semantic database that provides deterministic retrieval within sub ninety millisecond latency while eliminating ingestion delay. Through systematic benchmarking on the LongMemEval and LoCoMo evaluation suites, Memanto achieves state of the art accuracy scores of 89.8 percent and 87.1 percent respectively. These results surpass all evaluated hybrid graph and vector based systems while requiring only a single retrieval query, incurring no ingestion cost, and maintaining substantially lower operational complexity. A five stage progressive ablation study is presented to quantify the contribution of each architectural component, followed by a discussion of the implications for scalable deployment of agentic memory systems.",
+      "published_date": "2026-04-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.22085",
+      "pdf_url": "https://arxiv.org/pdf/2604.22085",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.22085",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "Memanto：基于信息论检索的类型化语义记忆",
+        "chinese_summary": "Memanto 提供了一种高效的记忆架构，能够在亚 90 毫秒内实现确定性检索。",
+        "pain_point": "现有的基于知识图谱的记忆系统存在较高的计算开销。",
+        "core_value": "Memanto 通过信息论检索和类型化语义记忆减少了检索延迟。",
+        "technical_architecture": "Memanto 使用信息论搜索引擎和类型化语义记忆架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证其有效性。",
+        "key_contributions": [
+          "引入了类型化语义记忆",
+          "实现了信息论检索",
+          "减少了检索延迟"
+        ],
+        "application_scenarios": [
+          "长期规划的自主代理",
+          "需要高效记忆检索的AI系统"
+        ],
+        "technical_highlights": [
+          "自动冲突解决机制",
+          "支持时间版本管理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.18580",
+      "source": "huggingface",
+      "title": "Sessa: Selective State Space Attention",
+      "authors": [
+        "Liubomyr Horbatko"
+      ],
+      "abstract": "Modern sequence modeling is dominated by two families: Transformers, whose self-attention can access arbitrary elements of the visible sequence, and structured state-space models, which propagate information through an explicit recurrent state. These mechanisms face different limitations on long contexts: when attention is diffuse, the influence of individual tokens is diluted across the effective support, while recurrent state propagation can lose long-range sensitivity unless information is actively preserved. As a result, both mechanisms face challenges in preserving and selectively retrieving information over long contexts. We propose Sessa, a decoder that places attention inside a recurrent feedback path. This creates many attention-based paths through which past tokens can influence future states, rather than relying on a single attention read or a single recurrent chain. We prove that, under explicit assumptions and matched regimes, Sessa admits power-law memory tails O(ell^{-β}) for 0 < β< 1, with slower decay than in the corresponding Transformer and Mamba-style baselines. We further give an explicit construction that achieves this power-law rate. Under the same assumptions, Sessa is the only model class among those considered that realizes flexible selective retrieval, including profiles whose influence does not decay with distance. Consistent with this theoretical advantage, across matched experiments, Sessa achieves the strongest performance on long-context benchmarks while remaining competitive with Transformer and Mamba-style baselines on short-context language modeling.",
+      "published_date": "2026-04-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.18580",
+      "pdf_url": "https://arxiv.org/pdf/2604.18580",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.18580",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 4,
+      "hot_score": 40,
+      "structured_summary": null
+    }
+  ]
+}

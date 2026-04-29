@@ -1,0 +1,458 @@
+{
+  "date": "2026-04-29",
+  "generated_at": "2026-04-29T23:57:30.531976+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.25917",
+      "source": "huggingface",
+      "title": "Recursive Multi-Agent Systems",
+      "authors": [
+        "Xiyuan Yang",
+        "Jiaru Zou",
+        "Rui Pan",
+        "Ruizhong Qiu",
+        "Pan Lu",
+        "Shizhe Diao",
+        "Jindong Jiang",
+        "Hanghang Tong",
+        "Tong Zhang",
+        "Markus J. Buehler",
+        "Jingrui He",
+        "James Zou"
+      ],
+      "abstract": "Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation over latent states to deepen reasoning. We extend such scaling principle from a single model to multi-agent systems, and ask: Can agent collaboration itself be scaled through recursion? To this end, we introduce RecursiveMAS, a recursive multi-agent framework that casts the entire system as a unified latent-space recursive computation. RecursiveMAS connects heterogeneous agents as a collaboration loop through the lightweight RecursiveLink module, enabling in-distribution latent thoughts generation and cross-agent latent state transfer. To optimize our framework, we develop an inner-outer loop learning algorithm for iterative whole-system co-optimization through shared gradient-based credit assignment across recursion rounds. Theoretical analyses of runtime complexity and learning dynamics establish that RecursiveMAS is more efficient than standard text-based MAS and maintains stable gradients during recursive training. Empirically, we instantiate RecursiveMAS under 4 representative agent collaboration patterns and evaluate across 9 benchmarks spanning mathematics, science, medicine, search, and code generation. In comparison with advanced single/multi-agent and recursive computation baselines, RecursiveMAS consistently delivers an average accuracy improvement of 8.3%, together with 1.2times-2.4times end-to-end inference speedup, and 34.6%-75.6% token usage reduction. Code and Data are provided in https://recursivemas.github.io.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.25917",
+      "pdf_url": "https://arxiv.org/pdf/2604.25917",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.25917",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 123,
+      "hot_score": 1230,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.24819",
+      "source": "huggingface",
+      "title": "Programming with Data: Test-Driven Data Engineering for Self-Improving LLMs from Raw Corpora",
+      "authors": [
+        "Chenkai Pan",
+        "Xinglong Xu",
+        "Yuhang Xu",
+        "Yujun Wu",
+        "Siyuan Li",
+        "Jintao Chen",
+        "Conghui He",
+        "Jingxuan Wei",
+        "Cheng Tan"
+      ],
+      "abstract": "Reliably transferring specialized human knowledge from text into large language models remains a fundamental challenge in artificial intelligence. Fine-tuning on domain corpora has enabled substantial capability gains, but the process operates without feedback: when a model fails on a domain task, there is no method to diagnose what is deficient in the training data, and the only recourse is to add more data indiscriminately. Here we show that when a structured knowledge representation extracted from the source corpus serves as the shared foundation for both training data and evaluation, the complete data-engineering lifecycle maps onto the software development lifecycle in a precise and operative way: training data becomes source code specifying what the model should learn, model training becomes compilation, benchmarking becomes unit testing, and failure-driven data repair becomes debugging. Under this correspondence, model failures decompose into concept-level gaps and reasoning-chain breaks that can be traced back to specific deficiencies in the data and repaired through targeted patches, with each repair cycle producing consistent improvements across model scales and architectures without degrading general capabilities. We formalize this principle as Programming with Data and instantiate it across sixteen disciplines spanning the natural sciences, engineering, biomedicine, and the social sciences, releasing a structured knowledge base, benchmark suite, and training corpus as open resources. By demonstrating that the relationship between training data and model behaviour is structurally traceable and systematically repairable, this work establishes a principled foundation for the reliable engineering of human expertise into language models.",
+      "published_date": "2026-04-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.24819",
+      "pdf_url": "https://arxiv.org/pdf/2604.24819",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.24819",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "upvotes": 70,
+      "hot_score": 700,
+      "structured_summary": {
+        "chinese_title": "数据编程：基于结构化知识表示的自改进大语言模型数据工程",
+        "chinese_summary": "通过结构化知识表示，将数据工程生命周期与软件开发生命周期对应，实现模型自改进。",
+        "pain_point": "现有模型无法有效诊断和修复训练数据缺陷。",
+        "core_value": "提供了一种新的数据工程方法，使模型能够基于反馈进行自我改进。",
+        "technical_architecture": "将结构化知识表示用于数据和评估，映射到软件开发生命周期。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定应用场景下进行了验证。",
+        "key_contributions": [
+          "提出了一种新的数据工程方法",
+          "将数据工程与软件开发生命周期对应",
+          "实现了模型基于反馈的自我改进"
+        ],
+        "application_scenarios": [
+          "大语言模型训练",
+          "自改进模型开发"
+        ],
+        "technical_highlights": [
+          "结构化知识表示",
+          "数据工程与软件开发生命周期对应"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.25914",
+      "source": "huggingface",
+      "title": "DV-World: Benchmarking Data Visualization Agents in Real-World Scenarios",
+      "authors": [
+        "Jinxiang Meng",
+        "Shaoping Huang",
+        "Fangyu Lei",
+        "Jingyu Guo",
+        "Haoxiang Liu",
+        "Jiahao Su",
+        "Sihan Wang",
+        "Yao Wang",
+        "Enrui Wang",
+        "Ye Yang",
+        "Hongze Chai",
+        "Jinming Lv",
+        "Anbang Yu",
+        "Huangjing Zhang",
+        "Yitong Zhang",
+        "Yiming Huang",
+        "Zeyao Ma",
+        "Shizhu He",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "abstract": "Real-world data visualization (DV) requires native environmental grounding, cross-platform evolution, and proactive intent alignment. Yet, existing benchmarks often suffer from code-sandbox confinement, single-language creation-only tasks, and assumption of perfect intent. To bridge these gaps, we introduce DV-World, a benchmark of 260 tasks designed to evaluate DV agents across real-world professional lifecycles. DV-World spans three domains: DV-Sheet for native spreadsheet manipulation including chart and dashboard creation as well as diagnostic repair; DV-Evolution for adapting and restructuring reference visual artifacts to fit new data across diverse programming paradigms and DV-Interact for proactive intent alignment with a user simulator that mimics real-world ambiguous requirements. Our hybrid evaluation framework integrates Table-value Alignment for numerical precision and MLLM-as-a-Judge with rubrics for semantic-visual assessment. Experiments reveal that state-of-the-art models achieve less than 50% overall performance, exposing critical deficits in handling the complex challenges of real-world data visualization. DV-World provides a realistic testbed to steer development toward the versatile expertise required in enterprise workflows. Our data and code are available at https://github.com/DA-Open/DV-World{this project page}.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.25914",
+      "pdf_url": "https://arxiv.org/pdf/2604.25914",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.25914",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.25256",
+      "source": "huggingface",
+      "title": "AutoResearchBench: Benchmarking AI Agents on Complex Scientific Literature Discovery",
+      "authors": [
+        "Lei Xiong",
+        "Kun Luo",
+        "Ziyi Xia",
+        "Wenbo Zhang",
+        "Jin-Ge Yao",
+        "Zheng Liu",
+        "Jingying Shao",
+        "Jianlyu Chen",
+        "Hongjin Qian",
+        "Xi Yang",
+        "Qian Yu",
+        "Hao Li",
+        "Chen Yue",
+        "Xiaan Du",
+        "Yuyang Wang",
+        "Yesheng Liu",
+        "Haiyu Xu",
+        "Zhicheng Dou"
+      ],
+      "abstract": "Autonomous scientific research is significantly advanced thanks to the development of AI agents. One key step in this process is finding the right scientific literature, whether to explore existing knowledge for a research problem, or to acquire evidence for verifying assumptions and supporting claims. To assess AI agents' capability in driving this process, we present AutoResearchBench, a dedicated benchmark for autonomous scientific literature discovery. AutoResearchBench consists of two complementary task types: (1) Deep Research, which requires tracking down a specific target paper through a progressive, multi-step probing process, and (2) Wide Research, which requires comprehensively collecting a set of papers satisfying given conditions. Compared to previous benchmarks on agentic web browsing, AutoResearchBench is distinguished along three dimensions: it is research-oriented, calling for in-depth comprehension of scientific concepts; literature-focused, demanding fine-grained utilization of detailed information; and open-ended, involving an unknown number of qualified papers and thus requiring deliberate reasoning and search throughout. These properties make AutoResearchBench uniquely suited for evaluating autonomous research capabilities, and extraordinarily challenging. Even the most powerful LLMs, despite having largely conquered general agentic web-browsing benchmarks such as BrowseComp, achieve only 9.39% accuracy on Deep Research and 9.31% IoU on Wide Research, while many other strong baselines fall below 5%. We publicly release the dataset and evaluation pipeline to facilitate future research in this direction. We publicly release the dataset, evaluation pipeline, and code at https://github.com/CherYou/AutoResearchBench.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.25256",
+      "pdf_url": "https://arxiv.org/pdf/2604.25256",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.25256",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "AutoResearchBench：评估AI代理在复杂科学文献发现中的能力",
+        "chinese_summary": "AutoResearchBench 是一个专门用于自主科学文献发现的基准，评估 AI 代理的能力。",
+        "pain_point": "缺乏专门评估 AI 代理在科学文献发现能力的基准。",
+        "core_value": "提供了一个研究导向、文献聚焦且开放式的基准，评估 AI 代理在科学文献发现中的深度理解和精细利用信息的能力。",
+        "technical_architecture": "设计了两种任务类型：深度研究和广泛研究。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于科学文献发现，未来可能扩展到其他领域。",
+        "key_contributions": [
+          "提出了一个专门的基准 AutoResearchBench",
+          "设计了两种任务类型：深度研究和广泛研究"
+        ],
+        "application_scenarios": [
+          "评估 AI 代理在科学文献发现中的能力",
+          "促进自主科学研究的发展"
+        ],
+        "technical_highlights": [
+          "研究导向，要求深入理解科学概念",
+          "文献聚焦，要求精细利用详细信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.24625",
+      "source": "huggingface",
+      "title": "Meta-CoT: Enhancing Granularity and Generalization in Image Editing",
+      "authors": [
+        "Shiyi Zhang",
+        "Yiji Cheng",
+        "Tiankai Hang",
+        "Zijin Yin",
+        "Runze He",
+        "Yu Xu",
+        "Wenxun Dai",
+        "Yunlong Lin",
+        "Chunyu Wang",
+        "Qinglin Lu",
+        "Yansong Tang"
+      ],
+      "abstract": "Unified multi-modal understanding/generative models have shown improved image editing performance by incorporating fine-grained understanding into their Chain-of-Thought (CoT) process. However, a critical question remains underexplored: what forms of CoT and training strategy can jointly enhance both the understanding granularity and generalization? To address this, we propose Meta-CoT, a paradigm that performs a two-level decomposition of any single-image editing operation with two key properties: (1) Decomposability. We observe that any editing intention can be represented as a triplet - (task, target, required understanding ability). Inspired by this, Meta-CoT decomposes both the editing task and the target, generating task-specific CoT and traversing editing operations on all targets. This decomposition enhances the model's understanding granularity of editing operations and guides it to learn each element of the triplet during training, substantially improving the editing capability. (2) Generalizability. In the second decomposition level, we further break down editing tasks into five fundamental meta-tasks. We find that training on these five meta-tasks, together with the other two elements of the triplet, is sufficient to achieve strong generalization across diverse, unseen editing tasks. To further align the model's editing behavior with its CoT reasoning, we introduce the CoT-Editing Consistency Reward, which encourages more accurate and effective utilization of CoT information during editing. Experiments demonstrate that our method achieves an overall 15.8% improvement across 21 editing tasks, and generalizes effectively to unseen editing tasks when trained on only a small set of meta-tasks. Our code, benchmark, and model are released at https://shiyi-zh0408.github.io/projectpages/Meta-CoT/",
+      "published_date": "2026-04-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.24625",
+      "pdf_url": "https://arxiv.org/pdf/2604.24625",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.24625",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "upvotes": 23,
+      "hot_score": 230,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.25636",
+      "source": "huggingface",
+      "title": "Refinement via Regeneration: Enlarging Modification Space Boosts Image Refinement in Unified Multimodal Models",
+      "authors": [
+        "Jiayi Guo",
+        "Linqing Wang",
+        "Jiangshan Wang",
+        "Yang Yue",
+        "Zeyu Liu",
+        "Zhiyuan Zhao",
+        "Qinglin Lu",
+        "Gao Huang",
+        "Chunyu Wang"
+      ],
+      "abstract": "Unified multimodal models (UMMs) integrate visual understanding and generation within a single framework. For text-to-image (T2I) tasks, this unified capability allows UMMs to refine outputs after their initial generation, potentially extending the performance upper bound. Current UMM-based refinement methods primarily follow a refinement-via-editing (RvE) paradigm, where UMMs produce editing instructions to modify misaligned regions while preserving aligned content. However, editing instructions often describe prompt-image misalignment only coarsely, leading to incomplete refinement. Moreover, pixel-level preservation, though necessary for editing, unnecessarily restricts the effective modification space for refinement. To address these limitations, we propose Refinement via Regeneration (RvR), a novel framework that reformulates refinement as conditional image regeneration rather than editing. Instead of relying on editing instructions and enforcing strict content preservation, RvR regenerates images conditioned on the target prompt and the semantic tokens of the initial image, enabling more complete semantic alignment with a larger modification space. Extensive experiments demonstrate the effectiveness of RvR, improving Geneval from 0.78 to 0.91, DPGBench from 84.02 to 87.21, and UniGenBench++ from 61.53 to 77.41.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.25636",
+      "pdf_url": "https://arxiv.org/pdf/2604.25636",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.25636",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.25819",
+      "source": "huggingface",
+      "title": "Mutual Forcing: Dual-Mode Self-Evolution for Fast Autoregressive Audio-Video Character Generation",
+      "authors": [
+        "Yupeng Zhou",
+        "Lianghua Huang",
+        "Zhifan Wu",
+        "Jiabao Wang",
+        "Yupeng Shi",
+        "Biao Jiang",
+        "Daquan Zhou",
+        "Yu Liu",
+        "Ming-Ming Cheng",
+        "Qibin Hou"
+      ],
+      "abstract": "In this work, we propose Mutual Forcing, a framework for fast autoregressive audio-video generation with long-horizon audio-video synchronization. Our approach addresses two key challenges: joint audio-video modeling and fast autoregressive generation. To ease joint audio-video optimization, we adopt a two-stage training strategy: we first train uni-modal generators and then couple them into a unified audio-video model for joint training on paired data. For streaming generation, we ask whether a native fast causal audio-video model can be trained directly, instead of following existing streaming distillation pipelines that typically train a bidirectional model first and then convert it into a causal generator through multiple distillation stages. Our answer is Mutual Forcing, which builds directly on native autoregressive model and integrates few-step and multi-step generation within a single weight-shared model, enabling self-distillation and improved training-inference consistency. The multi-step mode improves the few-step mode via self-distillation, while the few-step mode generates historical context during training to improve training-inference consistency; because the two modes share parameters, these two effects reinforce each other within a single model. Compared with prior approaches such as Self-Forcing, Mutual Forcing removes the need for an additional bidirectional teacher model, supports more flexible training sequence lengths, reduces training overhead, and allows the model to improve directly from real paired data rather than a fixed teacher. Experiments show that Mutual Forcing matches or surpasses strong baselines that require around 50 sampling steps while using only 4 to 8 steps, demonstrating substantial advantages in both efficiency and quality. The project page is available at https://mutualforcing.github.io.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.25819",
+      "pdf_url": "https://arxiv.org/pdf/2604.25819",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.25819",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "互促机制：双模式自我进化快速自回归音频-视频角色生成",
+        "chinese_summary": "提出互促机制，实现快速自回归音频-视频生成，同时保持长时同步。",
+        "pain_point": "现有方法难以同时实现高效自回归生成和长时音频-视频同步。",
+        "core_value": "通过双模式自我进化框架，提高生成速度和同步精度。",
+        "technical_architecture": "采用两阶段训练策略和单体重叠模型实现自回归生成。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步优化模型性能。",
+        "key_contributions": [
+          "提出双模式自我进化框架",
+          "采用两阶段训练策略",
+          "实现自回归生成与同步优化"
+        ],
+        "application_scenarios": [
+          "音频-视频角色生成",
+          "实时音频-视频同步"
+        ],
+        "technical_highlights": [
+          "单体重叠模型",
+          "自回归生成与同步优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.25719",
+      "source": "huggingface",
+      "title": "Step-Audio-R1.5 Technical Report",
+      "authors": [
+        "Yuxin Zhang",
+        "Xiangyu Tony Zhang",
+        "Daijiao Liu",
+        "Fei Tian",
+        "Yayue Deng",
+        "Jun Chen",
+        "Qingjian Lin",
+        "Haoyang Zhang",
+        "Yuxin Li",
+        "Jinglan Gong",
+        "Yechang Huang",
+        "Liang Zhao",
+        "Chengyuan Yao",
+        "Hexin Liu",
+        "Eng Siong Chng",
+        "Xuerui Yang",
+        "Gang Yu",
+        "Xiangyu Zhang",
+        "Daxin Jiang"
+      ],
+      "abstract": "Recent advancements in large audio language models have extended Chain-of-Thought (CoT) reasoning into the auditory domain, enabling models to tackle increasingly complex acoustic and spoken tasks. To elicit and sustain these extended reasoning chains, the prevailing paradigm -- driven by the success of text-based reasoning models -- overwhelmingly relies on Reinforcement Learning with Verified Rewards (RLVR). However, as models are strictly optimized to distill rich, continuous auditory contexts into isolated, verifiable text labels, a fundamental question arises: are we fostering true audio intelligence, or merely reducing a continuous sensory medium into a discrete puzzle? We identify this as the \"verifiable reward trap.\" While RLVR yields remarkable scores on standardized objective benchmarks, it systematically degrades the real-world conversational feel of audio models. By prioritizing isolated correctness over acoustic nuance, RLVR reduces dynamic interactions to mechanical \"answering machines,\" severely compromising prosodic naturalness, emotional continuity, and user immersion, particularly in long-turn dialogues. To bridge the gap between mechanical objective verification and genuine sensory empathy, we introduce Step-Audio-R1.5, marking a paradigm shift toward Reinforcement Learning from Human Feedback (RLHF) in audio reasoning. Comprehensive evaluations demonstrate that Step-Audio-R1.5 not only maintains robust analytical reasoning but profoundly transforms the interactive experience, redefining the boundaries of deeply immersive long-turn spoken dialogue.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.25719",
+      "pdf_url": "https://arxiv.org/pdf/2604.25719",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.25719",
+      "category": "other",
+      "tags": [
+        "eess.AS"
+      ],
+      "upvotes": 12,
+      "hot_score": 120,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.24842",
+      "source": "huggingface",
+      "title": "Co-Director: Agentic Generative Video Storytelling",
+      "authors": [
+        "Yale Song",
+        "Yiwen Song",
+        "Nick Losier",
+        "Nathan Hodson",
+        "Ye Jin",
+        "Rhyard Zhu",
+        "Yan Xu",
+        "Daniel Vlasic",
+        "Carina Claassen",
+        "Jasmine Leon",
+        "Khanh G. LeViet",
+        "Zack Chomyn",
+        "Joe Timmons",
+        "Brett Slatkin",
+        "Scott Penberthy",
+        "Tomas Pfister"
+      ],
+      "abstract": "While diffusion models generate high-fidelity video clips, transforming them into coherent storytelling engines remains challenging. Current agentic pipelines automate this via chained modules but suffer from semantic drift and cascading failures due to independent, handcrafted prompting. We present Co-Director, a hierarchical multi-agent framework formalizing video storytelling as a global optimization problem. To ensure semantic coherence, we introduce hierarchical parameterization: a multi-armed bandit globally identifies promising creative directions, while a local multimodal self-refinement loop mitigates identity drift and ensures sequence-level consistency. This balances the exploration of novel narrative strategies with the exploitation of effective creative configurations. For evaluation, we introduce GenAD-Bench, a 400-scenario dataset of fictional products for personalized advertising. Experiments demonstrate that Co-Director significantly outperforms state-of-the-art baselines, offering a principled approach that seamlessly generalizes to broader cinematic narratives. Project Page: https://co-director-agent.github.io/",
+      "published_date": "2026-04-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.24842",
+      "pdf_url": "https://arxiv.org/pdf/2604.24842",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.24842",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.MA",
+        "cs.MM"
+      ],
+      "upvotes": 11,
+      "hot_score": 110,
+      "structured_summary": {
+        "chinese_title": "Co-Director: 代理生成视频叙事",
+        "chinese_summary": "Co-Director 提供了一种新的多代理框架，用于生成连贯的视频叙事。",
+        "pain_point": "现有的生成模型难以将高保真视频片段转化为连贯的叙事引擎。",
+        "core_value": "通过多代理框架确保语义连贯性，平衡探索与利用。",
+        "technical_architecture": "采用多臂老虎机和局部多模态自精炼循环。",
+        "quantitative_results": "实验表明 Co-Director 显著优于现有基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更广泛的叙事场景。",
+        "key_contributions": [
+          "提出了多代理框架",
+          "确保语义连贯性",
+          "平衡探索与利用"
+        ],
+        "application_scenarios": [
+          "个性化广告",
+          "电影叙事"
+        ],
+        "technical_highlights": [
+          "多臂老虎机全局识别创意方向",
+          "局部多模态自精炼循环"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.25203",
+      "source": "huggingface",
+      "title": "BARRED: Synthetic Training of Custom Policy Guardrails via Asymmetric Debate",
+      "authors": [
+        "Arnon Mazza",
+        "Elad Levi"
+      ],
+      "abstract": "Deploying guardrails for custom policies remains challenging, as generic safety models fail to capture task-specific requirements, while prompting LLMs suffers from inconsistent boundary-case performance and high inference costs. Training custom classifiers achieves both accuracy and efficiency, yet demands substantial labeled data that is costly to obtain. We present BARRED (Boundary Alignment Refinement through REflection and Debate), a framework for generating faithful and diverse synthetic training data using only a task description and a small set of unlabeled examples. Our approach decomposes the domain space into dimensions to ensure comprehensive coverage, and employs multi-agent debate to verify label correctness, yielding a high-fidelity training corpus. Experiments across diverse custom policies demonstrate that small language models finetuned on our synthetic data consistently outperform state-of-the-art proprietary LLMs (including reasoning models) and dedicated guardrail models. Ablation studies confirm that both dimension decomposition and debate-based verification are critical for ensuring the diversity and label fidelity required for effective fine-tuning. The BARRED framework eliminates the reliance on extensive human annotation, offering a scalable solution for accurate custom guardrails.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.25203",
+      "pdf_url": "https://arxiv.org/pdf/2604.25203",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.25203",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "BARRED: 通过辩论生成合成训练数据以训练定制策略护栏",
+        "chinese_summary": "通过辩论生成合成数据，实现高效且准确的定制策略护栏训练",
+        "pain_point": "现有方法难以捕捉任务特定要求，且生成合成数据成本高",
+        "core_value": "提供了一种低成本、高效率的生成合成训练数据的方法",
+        "technical_architecture": "分解领域空间并使用多代理辩论验证标签",
+        "quantitative_results": "小语言模型在合成数据上训练的表现优于最先进的LLM和专用护栏模型",
+        "competitors": "最先进的LLM和专用护栏模型",
+        "limitations": "需要进一步探索更复杂的任务",
+        "key_contributions": [
+          "提出了一种生成合成训练数据的新框架",
+          "通过多代理辩论提高标签准确性",
+          "验证了分解领域空间的重要性"
+        ],
+        "application_scenarios": [
+          "定制策略护栏训练",
+          "任务特定要求的合成数据生成"
+        ],
+        "technical_highlights": [
+          "仅需任务描述和少量未标记示例即可生成高质量合成数据",
+          "多代理辩论确保标签准确性和多样性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

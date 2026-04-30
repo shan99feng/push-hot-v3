@@ -1,0 +1,501 @@
+{
+  "date": "2026-04-30",
+  "generated_at": "2026-04-30T23:55:39.414972+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2604.26752",
+      "source": "huggingface",
+      "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents",
+      "authors": [
+        "V Team",
+        "Wenyi Hong",
+        "Xiaotao Gu",
+        "Ziyang Pan",
+        "Zhen Yang",
+        "Yuting Wang",
+        "Yue Wang",
+        "Yuanchang Yue",
+        "Yu Wang",
+        "Yanling Wang",
+        "Yan Wang",
+        "Xijun Liu",
+        "Wenmeng Yu",
+        "Weihan Wang",
+        "Wei Li",
+        "Shuaiqi Duan",
+        "Sheng Yang",
+        "Ruiliang Lv",
+        "Mingdao Liu",
+        "Lihang Pan",
+        "Ke Ning",
+        "Junhui Ji",
+        "Jinjiang Wang",
+        "Jing Chen",
+        "Jiazheng Xu",
+        "Jiale Zhu",
+        "Jiale Cheng",
+        "Ji Qi",
+        "Guobing Gan",
+        "Guo Wang",
+        "Cong Yao",
+        "Zijun Dou",
+        "Zihao Zhou",
+        "Zihan Wang",
+        "Zhiqi Ge",
+        "Zhijie Li",
+        "Zhenyu Hou",
+        "Zhao Xue",
+        "Zehui Wang",
+        "Zehai He",
+        "Yusen Liu",
+        "Yukuo Cen",
+        "Yuchen Li",
+        "Yuan Wang",
+        "Yijian Lu",
+        "Yanzi Wang",
+        "Yadong Xue",
+        "Xinyu Zhang",
+        "Xinyu Liu",
+        "Wenkai Li",
+        "Tianyu Tong",
+        "Tianshu Zhang",
+        "Shengdong Yan",
+        "Qinkai Zheng",
+        "Mingde Xu",
+        "Licheng Bao",
+        "Jiaxing Xu",
+        "Jiaxin Fan",
+        "Jiawen Qian",
+        "Jiali Chen",
+        "Jiahui Lin",
+        "Haozhi Zheng",
+        "Haoran Wang",
+        "Haochen Li",
+        "Fan Yang",
+        "Dan Zhang",
+        "Chuangxin Zhao",
+        "Chengcheng Wu",
+        "Boyan Shi",
+        "Bowei Jia",
+        "Baoxu Wang",
+        "Peng Zhang",
+        "Debing Liu",
+        "Bin Xu",
+        "Juanzi Li",
+        "Minlie Huang",
+        "Yuxiao Dong",
+        "Jie Tang"
+      ],
+      "abstract": "We present GLM-5V-Turbo, a step toward native foundation models for multimodal agents. As foundation models are increasingly deployed in real environments, agentic capability depends not only on language reasoning, but also on the ability to perceive, interpret, and act over heterogeneous contexts such as images, videos, webpages, documents, GUIs. GLM-5V-Turbo is built around this objective: multimodal perception is integrated as a core component of reasoning, planning, tool use, and execution, rather than as an auxiliary interface to a language model. This report summarizes the main improvements behind GLM-5V-Turbo across model design, multimodal training, reinforcement learning, toolchain expansion, and integration with agent frameworks. These developments lead to strong performance in multimodal coding, visual tool use, and framework-based agentic tasks, while preserving competitive text-only coding capability. More importantly, our development process offers practical insights for building multimodal agents, highlighting the central role of multimodal perception, hierarchical optimization, and reliable end-to-end verification.",
+      "published_date": "2026-04-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.26752",
+      "pdf_url": "https://arxiv.org/pdf/2604.26752",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.26752",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 71,
+      "hot_score": 710,
+      "structured_summary": {
+        "chinese_title": "GLM-V-Turbo:多多多一种面向多多态智能体的原生基础模型",
+        "chinese_summary": "提出GLM-5V-Turbo作为多 ",
+        "pain_point": "",
+        "core_value": "提出了 GLM-5V-Turbo to enhance multimmodal agent capabilities through multimodal perception, reasoning reasoning reasoning and hierarchical optimization",
+        "technical_architecture": "基于多模态感知和推理和执行架构",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "在端到端验证验上仍需挑战",
+        "key_contributions": [],
+        "application_scenarios": [],
+        "technical_highlights": [],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.24927",
+      "source": "huggingface",
+      "title": "Large Language Models Explore by Latent Distilling",
+      "authors": [
+        "Yuanhao Zeng",
+        "Ao Lu",
+        "Lufei Li",
+        "Zheng Zhang",
+        "Yexin Li",
+        "Kan Ren"
+      ],
+      "abstract": "Generating diverse responses is crucial for test-time scaling of large language models (LLMs), yet standard stochastic sampling mostly yields surface-level lexical variation, limiting semantic exploration. In this paper, we propose Exploratory Sampling (ESamp), a decoding approach that explicitly encourages semantic diversity during generation. ESamp is motivated by the well-known observation that neural networks tend to make lower-error predictions on inputs similar to those encountered before, and incur higher prediction error on novel ones. Building on this property, we train a lightweight Distiller at test time to predict deep-layer hidden representations of the LLM from its shallow-layer representations to model the LLM's depth-wise representation transitions. During decoding, the Distiller continuously adapts to the mappings induced by the current generation context. ESamp uses the prediction error as a novelty signal to reweight candidate token extensions conditioned on the current prefix, thereby biasing decoding toward less-explored semantic patterns. ESamp is implemented with an asynchronous training--inference pipeline, with less than 5% worst case overhead (1.2% in the optimized release). Empirical results show that ESamp significantly boosts the Pass@k efficiency of reasoning models, showing superior or comparable performance to strong stochastic and heuristic baselines. Notably, ESamp achieves robust generalization across mathematics, science, and code generation benchmarks and breaks the trade-off between diversity and coherence in creative writing. Our code has released at: https://github.com/LinesHogan/tLLM.",
+      "published_date": "2026-04-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.24927",
+      "pdf_url": "https://arxiv.org/pdf/2604.24927",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.24927",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 52,
+      "hot_score": 520,
+      "structured_summary": {
+        "chinese_title": "大型语言模型通过潜在蒸馏探索",
+        "chinese_summary": "提出了一种新的解码方法ESamp，通过预测深层隐藏表示来鼓励生成语义多样性。",
+        "pain_point": "现有方法生成的响应主要在词汇层面变化，限制了语义探索。",
+        "core_value": "通过预测深层隐藏表示，鼓励生成语义多样性，提高模型的语义探索能力。",
+        "technical_architecture": "利用轻量级蒸馏器预测深层隐藏表示，适应当前生成上下文。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更广泛的模型和任务。",
+        "key_contributions": [
+          "提出了一种新的解码方法ESamp",
+          "利用轻量级蒸馏器预测深层隐藏表示",
+          "鼓励生成语义多样性"
+        ],
+        "application_scenarios": [
+          "提高大型语言模型的语义探索能力",
+          "增强模型在生成任务中的表现"
+        ],
+        "technical_highlights": [
+          "轻量级蒸馏器模型",
+          "适应当前生成上下文的蒸馏器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.26067",
+      "source": "huggingface",
+      "title": "RADIO-ViPE: Online Tightly Coupled Multi-Modal Fusion for Open-Vocabulary Semantic SLAM in Dynamic Environments",
+      "authors": [
+        "Zaid Nasser",
+        "Mikhail Iumanov",
+        "Tianhao Li",
+        "Maxim Popov",
+        "Jaafar Mahmoud",
+        "Sergey Kolyubin"
+      ],
+      "abstract": "We present RADIO-ViPE (Reduce All Domains Into One -- Video Pose Engine), an online semantic SLAM system that enables geometry-aware open-vocabulary grounding, associating arbitrary natural language queries with localized 3D regions and objects in dynamic environments. Unlike existing approaches that require calibrated, posed RGB-D input, RADIO-ViPE operates directly on raw monocular RGB video streams, requiring no prior camera intrinsics, depth sensors, or pose initialization. The system tightly couples multi-modal embeddings -- spanning vision and language -- derived from agglomerative foundation models (e.g., RADIO) with geometric scene information. This coupling takes place in initialization, optimization and factor graph connections to improve the consistency of the map from multiple modalities. The optimization is wrapped within adaptive robust kernels, designed to handle both actively moving objects and agent-displaced scene elements (e.g., furniture rearranged during ego-centric session). Experiments demonstrate that RADIO-ViPE achieves state-of-the-art results on the dynamic TUM-RGBD benchmark while maintaining competitive performance against offline open-vocabulary methods that rely on calibrated data and static scene assumptions. RADIO-ViPE bridges a critical gap in real-world deployment, enabling robust open-vocabulary semantic grounding for autonomous robotics and unconstrained in-the-wild video streams. Project page: https://be2rlab.github.io/radio_vipe",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.26067",
+      "pdf_url": "https://arxiv.org/pdf/2604.26067",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.26067",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 49,
+      "hot_score": 490,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.26904",
+      "source": "huggingface",
+      "title": "ClawGym: A Scalable Framework for Building Effective Claw Agents",
+      "authors": [
+        "Fei Bai",
+        "Huatong Song",
+        "Shuang Sun",
+        "Daixuan Cheng",
+        "Yike Yang",
+        "Chuan Hao",
+        "Renyuan Li",
+        "Feng Chang",
+        "Yuan Wei",
+        "Ran Tao",
+        "Bryan Dai",
+        "Jian Yang",
+        "Wayne Xin Zhao"
+      ],
+      "abstract": "Claw-style environments support multi-step workflows over local files, tools, and persistent workspace states. However, scalable development around these environments remains constrained by the absence of a systematic framework, especially one for synthesizing verifiable training data and integrating it with agent training and diagnostic evaluation. To address this challenge, we present ClawGym, a scalable framework that supports the full lifecycle of Claw-style personal agent development. Concretely, we construct ClawGym-SynData, a diverse dataset of 13.5K filtered tasks synthesized from persona-driven intents and skill-grounded operations, paired with realistic mock workspaces and hybrid verification mechanisms. We then train a family of capable Claw-style models, termed ClawGym-Agents, through supervised fine-tuning on black-box rollout trajectories, and further explore reinforcement learning via a lightweight pipeline that parallelizes rollouts across per-task sandboxes.To support reliable evaluation, we further construct ClawGym-Bench, a benchmark of 200 instances calibrated through automated filtering and human-LLM review. Relevant resources will be soon released at https://github.com/ClawGym.",
+      "published_date": "2026-04-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.26904",
+      "pdf_url": "https://arxiv.org/pdf/2604.26904",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.26904",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.26951",
+      "source": "huggingface",
+      "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+      "authors": [
+        "Gongbo Zhang",
+        "Wen Wang",
+        "Ye Tian",
+        "Li Yuan"
+      ],
+      "abstract": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distillation methods for dLLMs reduce inference steps within a single architecture, none address cross-architecture knowledge transfer, in which the teacher and student differ in architecture, attention mechanism, and tokenizer. We present TIDE, the first framework for cross-architecture dLLM distillation, comprising three modular components: (1) TIDAL, which jointly modulates distillation strength across training progress and diffusion timestep to account for the teacher's noise-dependent reliability; (2) CompDemo, which enriches the teacher's context via complementary mask splitting to improve predictions under heavy masking; and (3) Reverse CALM, a cross-tokenizer objective that inverts chunk-level likelihood matching, yielding bounded gradients and dual-end noise filtering. Distilling 8B dense and 16B MoE teachers into a 0.6B student via two heterogeneous pipelines outperforms the baseline by an average of 1.53 points across eight benchmarks, yielding notable gains in code generation, where HumanEval scores reach 48.78 compared to 32.3 for the AR baseline.",
+      "published_date": "2026-04-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.26951",
+      "pdf_url": "https://arxiv.org/pdf/2604.26951",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.26951",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": {
+        "chinese_title": "跨架构扩散大语言模型蒸馏",
+        "chinese_summary": "提出TIDE框架，实现跨架构扩散大语言模型蒸馏，显著提升模型性能。",
+        "pain_point": "现有蒸馏方法仅在单一架构内减少推理步骤，未解决不同架构间的知识迁移。",
+        "core_value": "首次实现跨架构蒸馏，显著提升小模型性能。",
+        "technical_architecture": "提出TIDAL、CompDemo和Reverse CALM三个模块。",
+        "quantitative_results": "通过两个异构管道将8B稠密和16B MoE教师蒸馏至0.6B学生模型，平均提升1.53分。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在部分基准上进行了测试。",
+        "key_contributions": [
+          "首次提出跨架构蒸馏框架",
+          "引入TIDAL动态调整蒸馏强度",
+          "提出CompDemo和Reverse CALM模块"
+        ],
+        "application_scenarios": [
+          "代码生成",
+          "自然语言处理"
+        ],
+        "technical_highlights": [
+          "动态调整蒸馏强度",
+          "互补掩码分割增强上下文",
+          "反向CALM目标优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.25135",
+      "source": "huggingface",
+      "title": "FAMA: Failure-Aware Meta-Agentic Framework for Open-Source LLMs in Interactive Tool Use Environments",
+      "authors": [
+        "Amir Saeidi",
+        "Venkatesh Mishra",
+        "Souradeep Mukhopadhyay",
+        "Gaowen Liu",
+        "Ali Payani",
+        "Jayanth Srinivasa",
+        "Chitta Baral"
+      ],
+      "abstract": "Large Language Models are being increasingly deployed as the decision-making core of autonomous agents capable of effecting change in external environments. Yet, in conversational benchmarks, which simulate real-world customer-centric issue resolution scenarios, these agents frequently fail due to the cascading effects of incorrect decision-making. These challenges are particularly pronounced for open-source LLMs with smaller parameter sizes, limited context windows, and constrained inference budgets, which contribute to increased error accumulation in agentic settings. To tackle these challenges, we present the Failure-Aware Meta-Agentic (FAMA) framework. FAMA operates in two stages: first, it analyzes failure trajectories from baseline agents to identify the most prevalent errors; second, it employs an orchestration mechanism that activates a minimal subset of specialized agents tailored to address these failures by injecting a targeted context for the tool-use agent before the decision-making step. Experiments across open-source LLMs demonstrate performance gains up to 27% across evaluation modes over standard baselines. These results highlight that targeted curation of context through specialized agents to address common failures is a valuable design principle for building reliable, multi-turn tool-use LLM agents that simulate real-world conversational scenarios.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.25135",
+      "pdf_url": "https://arxiv.org/pdf/2604.25135",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.25135",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.24351",
+      "source": "huggingface",
+      "title": "Diffusion Templates: A Unified Plugin Framework for Controllable Diffusion",
+      "authors": [
+        "Zhongjie Duan",
+        "Hong Zhang",
+        "Yingda Chen"
+      ],
+      "abstract": "Controllable diffusion methods have substantially expanded the practical utility of diffusion models, but they are typically developed as isolated, backbone-specific systems with incompatible training pipelines, parameter formats, and runtime hooks. This fragmentation makes it difficult to reuse infrastructure across tasks, transfer capabilities across backbones, or compose multiple controls within a single generation pipeline. We present Diffusion Templates, a unified and open plugin framework that decouples base-model inference from controllable capability injection. The framework is organized around three components: Template models that map arbitrary task-specific inputs to an intermediate capability representation, a Template cache that functions as a standardized interface for capability injection, and a Template pipeline that loads, merges, and injects one or more Template caches into the base diffusion runtime. Because the interface is defined at the systems level rather than tied to a specific control architecture, heterogeneous capability carriers such as KV-Cache and LoRA can be supported under the same abstraction. Based on this design, we build a diverse model zoo spanning structural control, brightness adjustment, color adjustment, image editing, super-resolution, sharpness enhancement, aesthetic alignment, content reference, local inpainting, and age control. These case studies show that Diffusion Templates can unify a broad range of controllable generation tasks while preserving modularity, composability, and practical extensibility across rapidly evolving diffusion backbones. All resources will be open sourced, including code, models, and datasets.",
+      "published_date": "2026-04-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.24351",
+      "pdf_url": "https://arxiv.org/pdf/2604.24351",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.24351",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV",
+        "cs.SE"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "扩散模板：统一的可控扩散插件框架",
+        "chinese_summary": "提出了一种统一的插件框架，简化了可控扩散模型的开发和应用。",
+        "pain_point": "现有可控扩散方法存在碎片化问题，难以复用基础设施和转移能力。",
+        "core_value": "提供了一种统一的插件框架，支持多种可控能力的标准化注入。",
+        "technical_architecture": "基于模板模型、模板缓存和模板管道的架构设计。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于系统层面定义接口，未来可能需要更多具体控制架构的支持。",
+        "key_contributions": [
+          "提出了一种统一的插件框架",
+          "支持多种可控能力的标准化注入",
+          "简化了可控扩散模型的开发和应用"
+        ],
+        "application_scenarios": [
+          "扩散模型的可控生成",
+          "多种控制能力的组合应用"
+        ],
+        "technical_highlights": [
+          "支持异构能力载体",
+          "统一的插件框架设计"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.26694",
+      "source": "huggingface",
+      "title": "Unified 4D World Action Modeling from Video Priors with Asynchronous Denoising",
+      "authors": [
+        "Jun Guo",
+        "Qiwei Li",
+        "Peiyan Li",
+        "Zilong Chen",
+        "Nan Sun",
+        "Yifei Su",
+        "Heyun Wang",
+        "Yuan Zhang",
+        "Xinghang Li",
+        "Huaping Liu"
+      ],
+      "abstract": "We propose X-WAM, a Unified 4D World Model that unifies real-time robotic action execution and high-fidelity 4D world synthesis (video + 3D reconstruction) in a single framework, addressing the critical limitations of prior unified world models (e.g., UWM) that only model 2D pixel-space and fail to balance action efficiency and world modeling quality. To leverage the strong visual priors of pretrained video diffusion models, X-WAM imagines the future world by predicting multi-view RGB-D videos, and obtains spatial information efficiently through a lightweight structural adaptation: replicating the final few blocks of the pretrained Diffusion Transformer into a dedicated depth prediction branch for the reconstruction of future spatial information. Moreover, we propose Asynchronous Noise Sampling (ANS) to jointly optimize generation quality and action decoding efficiency. ANS applies a specialized asynchronous denoising schedule during inference, which rapidly decodes actions with fewer steps to enable efficient real-time execution, while dedicating the full sequence of steps to generate high-fidelity video. Rather than entirely decoupling the timesteps during training, ANS samples from their joint distribution to align with the inference distribution. Pretrained on over 5,800 hours of robotic data, X-WAM achieves 79.2% and 90.7% average success rate on RoboCasa and RoboTwin 2.0 benchmarks, while producing high-fidelity 4D reconstruction and generation surpassing existing methods in both visual and geometric metrics.",
+      "published_date": "2026-04-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.26694",
+      "pdf_url": "https://arxiv.org/pdf/2604.26694",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.26694",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 4,
+      "hot_score": 40,
+      "structured_summary": {
+        "chinese_title": "从视频先验统一建模4D世界动作",
+        "chinese_summary": "提出X-WAM，一种结合实时机器人动作执行和高保真4D世界合成的统一模型。",
+        "pain_point": "现有模型仅建模2D像素空间，无法平衡动作效率和世界建模质量。",
+        "core_value": "利用预训练视频扩散模型的视觉先验，高效预测多视角RGB-D视频，实现高效实时执行和高保真视频生成。",
+        "technical_architecture": "通过在预训练扩散变换器中复制最终几层构建深度预测分支，实现未来空间信息的高效重建。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索更多训练时间步长的解耦方法。",
+        "key_contributions": [
+          "提出X-WAM模型，结合实时动作执行和高保真4D世界合成",
+          "利用预训练视频扩散模型的视觉先验",
+          "提出异步噪声采样方法优化生成质量和解码效率"
+        ],
+        "application_scenarios": [
+          "机器人实时动作执行",
+          "高保真4D世界合成"
+        ],
+        "technical_highlights": [
+          "高效预测多视角RGB-D视频",
+          "异步噪声采样方法优化生成质量和解码效率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.26779",
+      "source": "huggingface",
+      "title": "Accelerating RL Post-Training Rollouts via System-Integrated Speculative Decoding",
+      "authors": [
+        "Hayate Iso",
+        "Tiyasa Mitra",
+        "Sudipta Mondal",
+        "Rasoul Shafipour",
+        "Venmugil Elango",
+        "Terry Kong",
+        "Yuki Huang",
+        "Seonjin Na",
+        "Izzy Putterman",
+        "Benjamin Chislett",
+        "Maor Ashkenazi",
+        "Joseph Guman",
+        "Gerald Shen",
+        "Tugrul Konuk",
+        "Ashwath Aithal",
+        "Ritika Borkar",
+        "Ran Zilberstein",
+        "Bita Rouhani"
+      ],
+      "abstract": "RL post-training of frontier language models is increasingly bottlenecked by autoregressive rollout generation, making rollout acceleration a central systems challenge. Many existing efficiency methods improve throughput by changing the rollout or optimization regime, for example, through off-policy execution, replay, or lower-precision generation. We study speculative decoding as a lossless acceleration primitive for RL rollouts that preserves the target model's output distribution. We implement speculative decoding in NeMo-RL with a vLLM backend, supporting both synchronous and asynchronous pipelines and enabling speculation during RL rollouts. This benefit is realizable across speculation mechanisms, such as pretrained MTP heads, small external draft models or even techniques such as Eagle3, which are traditionally applied after RL phase. This yields a deployment path for state-of-the-art speculative decoding inside RL training. In a reasoning post-training workload at 8B scale under synchronous RL, speculative decoding improves rollout throughput by 1.8x. Using a high-fidelity performance simulator, we project that combining speculative decoding with asynchronous RL yields up to 2.5x end-to-end training speedup at 235B scale.",
+      "published_date": "2026-04-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.26779",
+      "pdf_url": "https://arxiv.org/pdf/2604.26779",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.26779",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.26091",
+      "source": "huggingface",
+      "title": "Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital",
+      "authors": [
+        "T. J. Barton",
+        "Chris Constantakis",
+        "Patti Hauseman",
+        "Annie Mous",
+        "Alaska Hoffman",
+        "Brian Bergeron",
+        "Hunter Goodreau"
+      ],
+      "abstract": "We study reliability in autonomous language-model agents that translate user mandates into validated tool actions under real capital. The setting is DX Terminal Pro, a 21-day deployment in which 3,505 user-funded agents traded real ETH in a bounded onchain market. Users configured vaults through structured controls and natural-language strategies, but only agents could choose normal buy/sell trades. The system produced 7.5M agent invocations, roughly 300K onchain actions, about $20M in volume, more than 5,000 ETH deployed, roughly 70B inference tokens, and 99.9% settlement success for policy-valid submitted transactions. Long-running agents accumulated thousands of sequential decisions, including 6,000+ prompt-state-action cycles for continuously active agents, yielding a large-scale trace from user mandate to rendered prompt, reasoning, validation, portfolio state, and settlement. Reliability did not come from the base model alone; it emerged from the operating layer around the model: prompt compilation, typed controls, policy validation, execution guards, memory design, and trace-level observability. Pre-launch testing exposed failures that text-only benchmarks rarely measure, including fabricated trading rules, fee paralysis, numeric anchoring, cadence trading, and misread tokenomics. Targeted harness changes reduced fabricated sell rules from 57% to 3%, reduced fee-led observations from 32.5% to below 10%, and increased capital deployment from 42.9% to 78.0% in an affected test population. We show that capital-managing agents should be evaluated across the full path from user mandate to prompt, validated action, and settlement.",
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.26091",
+      "pdf_url": "https://arxiv.org/pdf/2604.26091",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.26091",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CE",
+        "cs.MA"
+      ],
+      "upvotes": 3,
+      "hot_score": 30,
+      "structured_summary": {
+        "chinese_title": "基于真实资本的链上语言模型代理的操作层控制",
+        "chinese_summary": "研究了在DX Terminal Pro中，通过结构化控制和自然语言策略配置的代理如何可靠地执行用户指令，实现7.5M代理调用和99.9%的结算成功率。",
+        "pain_point": "现有系统在真实资本环境下的代理可靠性不足。",
+        "core_value": "通过操作层控制提升了代理的可靠性，包括策略验证和执行保护等。",
+        "technical_architecture": "采用操作层控制，包括提示编译、类型化控制、策略验证、执行保护和内存设计。",
+        "quantitative_results": "产生了7.5M代理调用，约300K链上操作，交易量超过2000万美元。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定部署环境中进行了测试。",
+        "key_contributions": [
+          "引入操作层控制提升可靠性",
+          "实现大规模链上交易"
+        ],
+        "application_scenarios": [
+          "链上交易自动化",
+          "去中心化金融"
+        ],
+        "technical_highlights": [
+          "提示编译",
+          "策略验证"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

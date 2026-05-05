@@ -1,0 +1,528 @@
+{
+  "date": "2026-05-05",
+  "generated_at": "2026-05-05T23:49:54.735334+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2605.02881",
+      "source": "huggingface",
+      "title": "MolmoAct2: Action Reasoning Models for Real-world Deployment",
+      "authors": [
+        "Haoquan Fang",
+        "Jiafei Duan",
+        "Donovan Clay",
+        "Sam Wang",
+        "Shuo Liu",
+        "Weikai Huang",
+        "Xiang Fan",
+        "Wei-Chuan Tsai",
+        "Shirui Chen",
+        "Yi Ru Wang",
+        "Shanli Xing",
+        "Jaemin Cho",
+        "Jae Sung Park",
+        "Ainaz Eftekhar",
+        "Peter Sushko",
+        "Karen Farley",
+        "Angad Wadhwa",
+        "Cole Harrison",
+        "Winson Han",
+        "Ying-Chun Lee",
+        "Eli VanderBilt",
+        "Rose Hendrix",
+        "Suveen Ellawela",
+        "Lucas Ngoo",
+        "Joyce Chai",
+        "Zhongzheng Ren",
+        "Ali Farhadi",
+        "Dieter Fox",
+        "Ranjay Krishna"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models aim to provide a single generalist controller for robots, but today's systems fall short on the criteria that matter for real-world deployment. Frontier models are closed, open-weight alternatives are tied to expensive hardware, reasoning-augmented policies pay prohibitive latency for their grounding, and fine-tuned success rates remain below the threshold for dependable use. We present MolmoAct2, a fully open action reasoning model built for practical deployment, advancing its predecessor along five axes. We introduce MolmoER, a VLM backbone specialized for spatial and embodied reasoning, trained on a 3.3M-sample corpus with a specialize-then-rehearse recipe. We release three new datasets spanning low-to-medium cost platforms, including MolmoAct2-BimanualYAM, 720 hours of teleoperated bimanual trajectories that constitute the largest open bimanual dataset to date, together with quality-filtered Franka (DROID) and SO100/101 subsets. We provide OpenFAST, an open-weight, open-data action tokenizer trained on millions of trajectories across five embodiments. We redesign the architecture to graft a flow-matching continuous-action expert onto a discrete-token VLM via per-layer KV-cache conditioning. Finally, we propose MolmoThink, an adaptive-depth reasoning variant that re-predicts depth tokens only for scene regions that change between timesteps, retaining geometric grounding at a fraction of prior latency. In the most extensive empirical study of any open VLA to date, spanning 7 simulation and real-world benchmarks, MolmoAct2 outperforms strong baselines including Pi-05, while MolmoER surpasses GPT-5 and Gemini Robotics ER-1.5 across 13 embodied-reasoning benchmarks. We release model weights, training code, and complete training data. Project page: https://allenai.org/blog/molmoact2",
+      "published_date": "2026-05-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.02881",
+      "pdf_url": "https://arxiv.org/pdf/2605.02881",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.02881",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 161,
+      "hot_score": 1610,
+      "structured_summary": {
+        "chinese_title": "MolmoAct2: 用于实际部署的动作推理模型",
+        "chinese_summary": "MolmoAct2 是一种专为实际部署设计的开放动作推理模型。",
+        "pain_point": "现有系统在实际部署中存在封闭性、昂贵硬件依赖、推理延迟高和成功率不足的问题。",
+        "core_value": "MolmoAct2 提供了专为空间和体态推理优化的 VLM 骨干网，并发布了多个新数据集和开放数据动作分词器。",
+        "technical_architecture": "MolmoAct2 采用了一种新的架构，将流匹配连续动作专家嫁接到离散模型之上。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步提高模型的泛化能力和适应不同硬件平台的能力。",
+        "key_contributions": [
+          "提出了专为空间和体态推理优化的 MolmoER 骨干网",
+          "发布了多个新数据集，包括 MolmoAct2-BimanualYAM",
+          "提供了开放数据动作分词器 OpenFAST"
+        ],
+        "application_scenarios": [
+          "双臂操作",
+          "低成本平台"
+        ],
+        "technical_highlights": [
+          "采用 specialize-then-rehearse 训练方法",
+          "发布最大的开放双臂操作数据集"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2604.27660",
+      "source": "huggingface",
+      "title": "From Context to Skills: Can Language Models Learn from Context Skillfully?",
+      "authors": [
+        "Shuzheng Si",
+        "Haozhe Zhao",
+        "Yu Lei",
+        "Qingyi Wang",
+        "Dingwei Chen",
+        "Zhitong Wang",
+        "Zhenhailong Wang",
+        "Kangyang Luo",
+        "Zheng Wang",
+        "Gang Chen",
+        "Fanchao Qi",
+        "Minjia Zhang",
+        "Maosong Sun"
+      ],
+      "abstract": "Many real-world tasks require language models (LMs) to reason over complex contexts that exceed their parametric knowledge. This calls for context learning, where LMs directly learn relevant knowledge from the given context. An intuitive solution is inference-time skill augmentation: extracting the rules and procedures from context into natural-language skills. However, constructing such skills for context learning scenarios faces two challenges: the prohibitive cost of manual skill annotation for long, technically dense contexts, and the lack of external feedback for automated skill construction. In this paper, we propose Ctx2Skill, a self-evolving framework that autonomously discovers, refines, and selects context-specific skills without human supervision or external feedback. At its core, a multi-agent self-play loop has a Challenger that generates probing tasks and rubrics, a Reasoner that attempts to solve them guided by an evolving skill set, and a neutral Judge that provides binary feedback. Crucially, both the Challenger and the Reasoner evolve through accumulated skills: dedicated Proposer and Generator agents analyze failure cases and synthesize them into targeted skill updates for both sides, enabling automated skill discovery and refinement. To prevent adversarial collapse caused by increasingly extreme task generation and over-specialized skill accumulation, we further introduce a Cross-time Replay mechanism that identifies the skill set achieving the best balance across representative cases for the Reasoner side, ensuring robust and generalizable skill evolution. The resulting skills can be plugged into any language model to obtain better context learning capability. Evaluated on four context learning tasks from CL-bench, Ctx2Skill consistently improves solving rates across backbone models.",
+      "published_date": "2026-05-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.27660",
+      "pdf_url": "https://arxiv.org/pdf/2604.27660",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.27660",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 120,
+      "hot_score": 1200,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2604.28075",
+      "source": "huggingface",
+      "title": "Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling",
+      "authors": [
+        "Ansar Aynetdinov",
+        "Patrick Haller",
+        "Alan Akbik"
+      ],
+      "abstract": "Recent research has shown that filtering massive English web corpora into high-quality subsets significantly improves training efficiency. However, for high-resource non-English languages like German, French, or Japanese, aggressive filtering creates a strategic dilemma: should practitioners prioritize diversity by training once on large amounts of lightly filtered web data, or prioritize quality by strictly filtering for a high-quality core and repeating it over multiple epochs? We investigate this trade-off for German by constructing hierarchical quality filters applied to 500M web documents, comparing multi-epoch training on the filtered subsets against single-pass training on a diverse corpus. Our experiments across multiple model scales and token budgets show that repeating high-quality data consistently outperforms single-pass training on larger, less filtered sets. Notably, the performance gap persists even after 7 epochs. Our findings suggest that for non-English LLMs, semantic concentration through quality filtering offers a more viable path to efficient language modeling than simply maximizing unique data volume. We release our German language models (called Boldt), as well as our cleaned evaluation benchmarks to the research community. Our experiments indicate that they achieve state-of-the-art results despite training on 10-360x fewer tokens than comparable models.",
+      "published_date": "2026-04-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2604.28075",
+      "pdf_url": "https://arxiv.org/pdf/2604.28075",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2604.28075",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "重复胜于多样性：面向样本高效德语语言模型的高信号数据过滤",
+        "chinese_summary": "高质量数据重复训练在德语语言模型中优于单一过量数据训练。",
+        "pain_point": "在德语等高资源非英语语言中，数据过滤策略的选择成为难题。",
+        "core_value": "高质量数据重复训练比单一过量数据训练更有效。",
+        "technical_architecture": "构建分层质量过滤器应用于500M网页文档。",
+        "quantitative_results": "高质量数据重复训练在多个模型规模和标记预算下表现更优。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对德语模型，未来需扩展至其他语言。",
+        "key_contributions": [
+          "提出高质量数据重复训练策略",
+          "验证了质量过滤的优越性"
+        ],
+        "application_scenarios": [
+          "德语语言模型训练",
+          "样本高效语言模型构建"
+        ],
+        "technical_highlights": [
+          "分层质量过滤器",
+          "多轮高质量数据训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.00814",
+      "source": "huggingface",
+      "title": "Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs",
+      "authors": [
+        "Siyuan Huang",
+        "Xiaoye Qu",
+        "Yafu Li",
+        "Tong Zhu",
+        "Zefeng He",
+        "Muxin Fu",
+        "Daizong Liu",
+        "Wei-Long Zheng",
+        "Yu Cheng"
+      ],
+      "abstract": "While autoregressive Large Vision-Language Models (LVLMs) demonstrate remarkable proficiency in multimodal tasks, they face a \"Visual Signal Dilution\" phenomenon, where the accumulation of textual history expands the attention partition function, causing visual attention to decay inversely with generated sequence length. To counteract this, we propose Persistent Visual Memory (PVM), a lightweight learnable module designed to ensure sustained, on-demand visual perception. Integrated as a parallel branch alongside the Feed-Forward Network (FFN) in LVLMs, PVM establishes a distance-agnostic retrieval pathway that directly provides visual embeddings for precise visual perception, thereby structurally mitigating the signal suppression inherent to deep generation. Extensive experiments on Qwen3-VL models demonstrate that PVM brings notable improvements with negligible parameter overhead, delivering consistent average accuracy gains across both 4B and 8B scales, particularly in complex reasoning tasks that demand persistent visual perception. Furthermore, in-depth analysis reveals that PVM can resist length-induced signal decay and accelerate internal prediction convergence.",
+      "published_date": "2026-05-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.00814",
+      "pdf_url": "https://arxiv.org/pdf/2605.00814",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.00814",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 12,
+      "hot_score": 120,
+      "structured_summary": {
+        "chinese_title": "持久视觉记忆：在LVLMs中维持深度生成的感知",
+        "chinese_summary": "提出持久视觉记忆模块，显著提升复杂推理任务中的视觉感知精度。",
+        "pain_point": "视觉信号在生成序列长度增加时逐渐衰减。",
+        "core_value": "通过轻量级模块实现视觉感知的持续性，有效缓解信号抑制问题。",
+        "technical_architecture": "在LVLMs中引入距离无关的检索路径，直接提供视觉嵌入。",
+        "quantitative_results": "在Qwen3-VL模型上，PVM带来显著的准确率提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更复杂场景的应用。",
+        "key_contributions": [
+          "提出持久视觉记忆模块",
+          "缓解视觉信号衰减问题",
+          "提升复杂推理任务性能"
+        ],
+        "application_scenarios": [
+          "视觉感知要求高的多模态任务",
+          "需要持续视觉记忆的复杂推理任务"
+        ],
+        "technical_highlights": [
+          "轻量级设计",
+          "距离无关的检索路径"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.00877",
+      "source": "huggingface",
+      "title": "OceanPile: A Large-Scale Multimodal Ocean Corpus for Foundation Models",
+      "authors": [
+        "Yida Xue",
+        "Ningyu Zhang",
+        "Tingwei Wu",
+        "Zhe Ma",
+        "Daxiong Ji",
+        "Zhao Wang",
+        "Guozhou Zheng",
+        "Huajun Chen"
+      ],
+      "abstract": "The vast and underexplored ocean plays a critical role in regulating global climate and supporting marine biodiversity, yet artificial intelligence has so far delivered limited impact in this domain due to a fundamental data bottleneck. Specifically, ocean data are highly fragmented across disparate sources and inherently exhibit multi-modal, high-noise, and weakly labeled characteristics, lacking unified schemas and semantic alignment. Although Multimodal Large Language Models (MLLMs) have achieved remarkable success in general domains, their application to ocean science remains severely constrained by the absence of large-scale, well-aligned multimodal datasets tailored to marine environments. To bridge this gap, we introduce OceanPile, a large-scale multimodal corpus designed for ocean foundation models. It comprises three key components: OceanCorpus, a unified collection integrating sonar data, underwater imagery, marine science visuals, and scientific text from diverse authoritative sources; OceanInstruction, a high-quality instruction dataset synthesized via a novel pipeline guided by a hierarchical Ocean Concept Knowledge Graph; and OceanBenchmark, a manually curated evaluation benchmark for rigorous assessment. We establish a multi-stage quality control process to ensure scientific validity and alignment across modalities. Experimental validation demonstrates significant performance improvements for models trained on our data. All datasets are publicly released to advance the field of marine artificial intelligence and empower domain-specific MLLMs.",
+      "published_date": "2026-04-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.00877",
+      "pdf_url": "https://arxiv.org/pdf/2605.00877",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.00877",
+      "category": "llm",
+      "tags": [
+        "cs.MM",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "OceanPile: 用于基础模型的大型海洋多模态语料库",
+        "chinese_summary": "构建了一个大型海洋多模态语料库，以支持海洋科学领域的基础模型研究。",
+        "pain_point": "海洋数据高度碎片化且多模态、高噪声、弱标签。",
+        "core_value": "提供了一个统一的多模态数据集，填补了海洋科学领域的数据缺口。",
+        "technical_architecture": "构建了一个包含声纳数据、水下图像、海洋科学视觉和文本的统一集合。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步扩展数据集覆盖范围。",
+        "key_contributions": [
+          "构建了一个大型海洋多模态语料库",
+          "提出了一个高质量指令数据集"
+        ],
+        "application_scenarios": [
+          "海洋科学研究",
+          "海洋环境监测"
+        ],
+        "technical_highlights": [
+          "基于海洋概念知识图谱的指令合成",
+          "多模态数据的统一整合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.01428",
+      "source": "huggingface",
+      "title": "Hallucinations Undermine Trust; Metacognition is a Way Forward",
+      "authors": [
+        "Gal Yona",
+        "Mor Geva",
+        "Yossi Matias"
+      ],
+      "abstract": "Despite significant strides in factual reliability, errors -- often termed hallucinations -- remain a major concern for generative AI, especially as LLMs are increasingly expected to be helpful in more complex or nuanced setups. Yet even in the simplest setting -- factoid question-answering with clear ground truth-frontier models without external tools continue to hallucinate. We argue that most factuality gains in this domain have come from expanding the model's knowledge boundary (encoding more facts) rather than improving awareness of that boundary (distinguishing known from unknown). We conjecture that the latter is inherently difficult: models may lack the discriminative power to perfectly separate truths from errors, creating an unavoidable tradeoff between eliminating hallucinations and preserving utility.\n  This tradeoff dissolves under a different framing. If we understand hallucinations as confident errors -- incorrect information delivered without appropriate qualification -- a third path emerges beyond the answer-or-abstain dichotomy: expressing uncertainty. We propose faithful uncertainty: aligning linguistic uncertainty with intrinsic uncertainty. This is one facet of metacognition -- the ability to be aware of one's own uncertainty and to act on it. For direct interaction, acting on uncertainty means communicating it honestly; for agentic systems, it becomes the control layer governing when to search and what to trust. Metacognition is thus essential for LLMs to be both trustworthy and capable; we conclude by highlighting open problems for progress towards this objective.",
+      "published_date": "2026-05-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.01428",
+      "pdf_url": "https://arxiv.org/pdf/2605.01428",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.01428",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.02661",
+      "source": "huggingface",
+      "title": "AcademiClaw: When Students Set Challenges for AI Agents",
+      "authors": [
+        "Junjie Yu",
+        "Pengrui Lu",
+        "Weiye Si",
+        "Hongliang Lu",
+        "Jiabao Wu",
+        "Kaiwen Tao",
+        "Kun Wang",
+        "Lingyu Yang",
+        "Qiran Zhang",
+        "Xiuting Guo",
+        "Xuanyu Wang",
+        "Yang Wang",
+        "Yanjie Wang",
+        "Yi Yang",
+        "Zijian Hu",
+        "Ziyi Yang",
+        "Zonghan Zhou",
+        "Binghao Qiang",
+        "Borui Zhang",
+        "Chenning Li",
+        "Enchang Zhang",
+        "Feifan Chen",
+        "Feng Jian",
+        "Fengyin Sun",
+        "Hao Qiu",
+        "Hao Zheng",
+        "Haoran Zhu",
+        "Hongyu Liu",
+        "Jianbin Deng",
+        "Jiaxin Song",
+        "Jiaying Chi",
+        "Jiayou Shi",
+        "Jie Fang",
+        "Jinghui Zhong",
+        "Jingyu Zhou",
+        "Jinze Li",
+        "Junfeng Yi",
+        "Junyan Yu",
+        "Junzhi Xue",
+        "Ni Song",
+        "Pengyi Chen",
+        "Qi Chen",
+        "Quansheng Li",
+        "Rui Tao",
+        "Shenghai Gong",
+        "Shenhang Lu",
+        "Tianqi Shen",
+        "Tianxiang Zhu",
+        "Tiehan Kang",
+        "Tingyu Li",
+        "Wendi Wu",
+        "Xiao Shen",
+        "Xiao Zhou",
+        "Xiaotao Zhang",
+        "Xinrong Li",
+        "Xuankun Yang",
+        "Xun Zhang",
+        "Yan Li",
+        "Ye Lu",
+        "Yi Wang",
+        "Yibo Zhou",
+        "Yichi Zhang",
+        "Yihao Sun",
+        "Yijun Huang",
+        "Yixin Zhu",
+        "Yixuan Wu",
+        "Yuchen Sun",
+        "Yue Wu",
+        "Yuheng Sun",
+        "Yukun Li",
+        "Yutian Tu",
+        "Yuxuan Qin",
+        "Yuzhuo Wu",
+        "Zeyu Li",
+        "Zhengyu Lou",
+        "Zhenning Ran",
+        "Zizhu He",
+        "Pengfei Liu"
+      ],
+      "abstract": "Benchmarks within the OpenClaw ecosystem have thus far evaluated exclusively assistant-level tasks, leaving the academic-level capabilities of OpenClaw largely unexamined. We introduce AcademiClaw, a bilingual benchmark of 80 complex, long-horizon tasks sourced directly from university students' real academic workflows -- homework, research projects, competitions, and personal projects -- that they found current AI agents unable to solve effectively. Curated from 230 student-submitted candidates through rigorous expert review, the final task set spans 25+ professional domains, ranging from olympiad-level mathematics and linguistics problems to GPU-intensive reinforcement learning and full-stack system debugging, with 16 tasks requiring CUDA GPU execution. Each task executes in an isolated Docker sandbox and is scored on task completion by multi-dimensional rubrics combining six complementary techniques, with an independent five-category safety audit providing additional behavioral analysis. Experiments on six frontier models show that even the best achieves only a 55\\% pass rate. Further analysis uncovers sharp capability boundaries across task domains, divergent behavioral strategies among models, and a disconnect between token consumption and output quality, providing fine-grained diagnostic signals beyond what aggregate metrics reveal. We hope that AcademiClaw and its open-sourced data and code can serve as a useful resource for the OpenClaw community, driving progress toward agents that are more capable and versatile across the full breadth of real-world academic demands. All data and code are available at https://github.com/GAIR-NLP/AcademiClaw.",
+      "published_date": "2026-05-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.02661",
+      "pdf_url": "https://arxiv.org/pdf/2605.02661",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.02661",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CY"
+      ],
+      "upvotes": 8,
+      "hot_score": 80,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2405.13729",
+      "source": "huggingface",
+      "title": "ComboStoc: Combinatorial Stochasticity for Diffusion Generative Models",
+      "authors": [
+        "Rui Xu",
+        "Jiepeng Wang",
+        "Hao Pan",
+        "Yang Liu",
+        "Xin Tong",
+        "Shiqing Xin",
+        "Changhe Tu",
+        "Taku Komura",
+        "Wenping Wang"
+      ],
+      "abstract": "In this paper, we study an under-explored but important factor of diffusion generative models, i.e., the combinatorial complexity. Data samples are generally high-dimensional, and for various structured generation tasks, additional attributes are combined to associate with data samples. We show that the space spanned by the combination of dimensions and attributes can be insufficiently covered by existing training schemes of diffusion generative models, potentially limiting test time performance. We present a simple fix to this problem by constructing stochastic processes that fully exploit the combinatorial structures, hence the name ComboStoc. Using this simple strategy, we show that network training is significantly accelerated across diverse data modalities, including images and 3D structured shapes. Moreover, ComboStoc enables a new way of test time generation which uses asynchronous time steps for different dimensions and attributes, thus allowing for varying degrees of control over them. Our code is available at: https://github.com/Xrvitd/ComboStoc",
+      "published_date": "2026-04-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2405.13729",
+      "pdf_url": "https://arxiv.org/pdf/2405.13729",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2405.13729",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV",
+        "cs.GR"
+      ],
+      "upvotes": 7,
+      "hot_score": 70,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.02240",
+      "source": "huggingface",
+      "title": "PhysicianBench: Evaluating LLM Agents in Real-World EHR Environments",
+      "authors": [
+        "Ruoqi Liu",
+        "Imran Q. Mohiuddin",
+        "Austin J. Schoeffler",
+        "Kavita Renduchintala",
+        "Ashwin Nayak",
+        "Prasantha L. Vemu",
+        "Shivam C. Vedak",
+        "Kameron C. Black",
+        "John L. Havlik",
+        "Isaac Ogunmola",
+        "Stephen P. Ma",
+        "Roopa Dhatt",
+        "Jonathan H. Chen"
+      ],
+      "abstract": "We introduce PhysicianBench, a benchmark for evaluating LLM agents on physician tasks grounded in real clinical setting within electronic health record (EHR) environments. Existing medical agent benchmarks primarily focus on static knowledge recall, single-step atomic actions, or action intent without verifiable execution against the environment. As a result, they fail to capture the long-horizon, composite workflows that characterize real clinical systems. PhysicianBench comprises 100 long-horizon tasks adapted from real consultation cases between primary care and subspecialty physicians, with each task independently reviewed by a separate panel of physicians. Tasks are instantiated in an EHR environment with real patient records and accessed through the same standard APIs used by commercial EHR vendors. Tasks span 21 specialties (e.g., cardiology, endocrinology, oncology, psychiatry) and diverse workflow types (e.g., diagnosis interpretation, medication prescribing, treatment planning), requiring an average of 27 tool calls per task. Solving each task requires retrieving data across encounters, reasoning over heterogeneous clinical information, executing consequential clinical actions, and producing clinical documentation. Each task is decomposed into structured checkpoints (670 in total across the benchmark) capturing distinct stages of completion graded by task-specific scripts with execution-grounded verification. Across 13 proprietary and open-source LLM agents, the best-performing model achieves only 46% success rate (pass@1), while open-source models reach at most 19%, revealing a substantial gap between current agent capabilities and the demands of real-world clinical workflows. PhysicianBench provides a realistic and execution-grounded benchmark for measuring progress toward autonomous clinical agents.",
+      "published_date": "2026-05-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.02240",
+      "pdf_url": "https://arxiv.org/pdf/2605.02240",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.02240",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "PhysicianBench: 在电子健康记录环境中评估LLM代理的基准",
+        "chinese_summary": "引入了PhysicianBench，用于评估在真实临床环境中电子健康记录（EHR）环境中的LLM代理。",
+        "pain_point": "现有医疗代理基准主要关注静态知识回忆、单一步骤原子操作或未验证执行的动作意图。",
+        "core_value": "能够捕捉到长时序、复合的工作流，这些工作流是真实临床系统的特征。",
+        "technical_architecture": "通过在EHR环境中实例化任务，使用真实患者记录和相同的标准API。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步扩展任务范围以覆盖更多临床场景。",
+        "key_contributions": [
+          "提出了一个针对真实临床环境的LLM代理基准",
+          "包含100个长时序任务，来自实际咨询案例",
+          "每个任务由独立的医生小组审核"
+        ],
+        "application_scenarios": [
+          "评估医疗LLM代理在实际临床环境中的性能",
+          "促进医疗LLM代理的开发与改进"
+        ],
+        "technical_highlights": [
+          "使用真实患者记录和标准API实例化任务",
+          "涵盖21个专科和多种工作流类型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.02178",
+      "source": "huggingface",
+      "title": "T^2PO: Uncertainty-Guided Exploration Control for Stable Multi-Turn Agentic Reinforcement Learning",
+      "authors": [
+        "Haixin Wang",
+        "Hejie Cui",
+        "Chenwei Zhang",
+        "Xin Liu",
+        "Shuowei Jin",
+        "Shijie Geng",
+        "Xinyang Zhang",
+        "Nasser Zalmout",
+        "Zhenyu Shi",
+        "Yizhou Sun"
+      ],
+      "abstract": "Recent progress in multi-turn reinforcement learning (RL) has significantly improved reasoning LLMs' performances on complex interactive tasks. Despite advances in stabilization techniques such as fine-grained credit assignment and trajectory filtering, instability remains pervasive and often leads to training collapse. We argue that this instability stems from inefficient exploration in multi-turn settings, where policies continue to generate low-information actions that neither reduce uncertainty nor advance task progress. To address this issue, we propose Token- and Turn-level Policy Optimization (T^2PO), an uncertainty-aware framework that explicitly controls exploration at fine-grained levels. At the token level, T^2PO monitors uncertainty dynamics and triggers a thinking intervention once the marginal uncertainty change falls below a threshold. At the turn level, T^2PO identifies interactions with negligible exploration progress and dynamically resamples such turns to avoid wasted rollouts. We evaluate T^2PO in diverse environments, including WebShop, ALFWorld, and Search QA, demonstrating substantial gains in training stability and performance improvements with better exploration efficiency. Code is available at: https://github.com/WillDreamer/T2PO.",
+      "published_date": "2026-05-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.02178",
+      "pdf_url": "https://arxiv.org/pdf/2605.02178",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.02178",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 4,
+      "hot_score": 40,
+      "structured_summary": {
+        "chinese_title": "T^2PO：基于不确定性指导的多轮智能体强化学习探索控制",
+        "chinese_summary": "提出Token-和Turn-level Policy Optimization（T^2PO），通过控制探索来提高多轮智能体强化学习的训练稳定性和性能。",
+        "pain_point": "多轮强化学习中存在探索效率低下导致的不稳定性问题。",
+        "core_value": "通过监测不确定性动态并动态调整探索策略，提高训练稳定性和性能。",
+        "technical_architecture": "提出Token-和Turn-level Policy Optimization框架，分别在token和turn层面控制探索。",
+        "quantitative_results": "在WebShop、ALFWorld和Search QA环境中，展示了显著的训练稳定性和性能提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更复杂环境中进一步验证。",
+        "key_contributions": [
+          "提出Token-和Turn-level Policy Optimization框架",
+          "通过监测不确定性动态控制探索",
+          "显著提高多轮智能体强化学习的训练稳定性和性能"
+        ],
+        "application_scenarios": [
+          "复杂交互任务",
+          "多轮对话系统"
+        ],
+        "technical_highlights": [
+          "细粒度的探索控制",
+          "动态调整探索策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "date": "2026-05-08",
+  "generated_at": "2026-05-08T23:59:27.052324+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2605.06130",
+      "source": "huggingface",
+      "title": "Skill1: Unified Evolution of Skill-Augmented Agents via Reinforcement Learning",
+      "authors": [
+        "Yaorui Shi",
+        "Yuxin Chen",
+        "Zhengxi Lu",
+        "Yuchun Miao",
+        "Shugui Liu",
+        "Qi GU",
+        "Xunliang Cai",
+        "Xiang Wang",
+        "An Zhang"
+      ],
+      "abstract": "A persistent skill library allows language model agents to reuse successful strategies across tasks. Maintaining such a library requires three coupled capabilities. The agent selects a relevant skill, utilizes it during execution, and distills new skills from experience. Existing methods optimize these capabilities in isolation or with separate reward sources, resulting in partial and conflicting evolution. We propose Skill1, a framework that trains a single policy to co-evolve skill selection, utilization, and distillation toward a shared task-outcome objective. The policy generates a query to search the skill library, re-ranks candidates to select one, solves the task conditioned on it, and distills a new skill from the trajectory. All learning derives from a single task-outcome signal. Its low-frequency trend credits selection and its high-frequency variation credits distillation. Experiments on ALFWorld and WebShop show that Skill1 outperforms prior skill-based and reinforcement learning baselines. Training dynamics confirm the co-evolution of the three capabilities, and ablations show that removing any credit signal degrades the evolution.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06130",
+      "pdf_url": "https://arxiv.org/pdf/2605.06130",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06130",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 53,
+      "hot_score": 530,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.05242",
+      "source": "huggingface",
+      "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction",
+      "authors": [
+        "Zhuofeng Li",
+        "Haoxiang Zhang",
+        "Cong Wei",
+        "Pan Lu",
+        "Ping Nie",
+        "Yi Lu",
+        "Yuyang Bai",
+        "Shangbin Feng",
+        "Hangxiao Zhu",
+        "Ming Zhong",
+        "Yuyu Zhang",
+        "Jianwen Xie",
+        "Yejin Choi",
+        "James Zou",
+        "Jiawei Han",
+        "Wenhu Chen",
+        "Jimmy Lin",
+        "Dongfu Jiang",
+        "Yu Zhang"
+      ],
+      "abstract": "Modern retrieval systems, whether lexical or semantic, expose a corpus through a fixed similarity interface that compresses access into a single top-k retrieval step before reasoning. This abstraction is efficient, but for agentic search, it becomes a bottleneck: exact lexical constraints, sparse clue conjunctions, local context checks, and multi-step hypothesis refinement are difficult to implement by calling a conventional off-the-shelf retriever, and evidence filtered out early cannot be recovered by stronger downstream reasoning. Agentic tasks further exacerbate this limitation because they require agents to orchestrate multiple steps, including discovering intermediate entities, combining weak clues, and revising the plan after observing partial evidence. To tackle the limitation, we study direct corpus interaction (DCI), where an agent searches the raw corpus directly with general-purpose terminal tools (e.g., grep, file reads, shell commands, lightweight scripts), without any embedding model, vector index, or retrieval API. This approach requires no offline indexing and adapts naturally to evolving local corpora. Across IR benchmarks and end-to-end agentic search tasks, this simple setup substantially outperforms strong sparse, dense, and reranking baselines on several BRIGHT and BEIR datasets, and attains strong accuracy on BrowseComp-Plus and multi-hop QA without relying on any conventional semantic retriever. Our results indicate that as language agents become stronger, retrieval quality depends not only on reasoning ability but also on the resolution of the interface through which the model interacts with the corpus, with which DCI opens a broader interface-design space for agentic search.",
+      "published_date": "2026-05-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.05242",
+      "pdf_url": "https://arxiv.org/pdf/2605.05242",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.05242",
+      "category": "llm",
+      "tags": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "upvotes": 45,
+      "hot_score": 450,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.06548",
+      "source": "huggingface",
+      "title": "Continuous Latent Diffusion Language Model",
+      "authors": [
+        "Hongcan Guo",
+        "Qinyu Zhao",
+        "Yian Zhao",
+        "Shen Nie",
+        "Rui Zhu",
+        "Qiushan Guo",
+        "Feng Wang",
+        "Tao Yang",
+        "Hengshuang Zhao",
+        "Guoqiang Wei",
+        "Yan Zeng"
+      ],
+      "abstract": "Large language models have achieved remarkable success under the autoregressive paradigm, yet high-quality text generation need not be tied to a fixed left-to-right order. Existing alternatives still struggle to jointly achieve generation efficiency, scalable representation learning, and effective global semantic modeling. We propose Cola DLM, a hierarchical latent diffusion language model that frames text generation through hierarchical information decomposition. Cola DLM first learns a stable text-to-latent mapping with a Text VAE, then models a global semantic prior in continuous latent space with a block-causal DiT, and finally generates text through conditional decoding. From a unified Markov-path perspective, its diffusion process performs latent prior transport rather than token-level observation recovery, thereby separating global semantic organization from local textual realization. This design yields a more flexible non-autoregressive inductive bias, supports semantic compression and prior fitting in continuous space, and naturally extends to other continuous modalities. Through experiments spanning 4 research questions, 8 benchmarks, strictly matched ~2B-parameter autoregressive and LLaDA baselines, and scaling curves up to about 2000 EFLOPs, we identify an effective overall configuration of Cola DLM and verify its strong scaling behavior for text generation. Taken together, the results establish hierarchical continuous latent prior modeling as a principled alternative to strictly token-level language modeling, where generation quality and scaling behavior may better reflect model capability than likelihood, while also suggesting a concrete path toward unified modeling across discrete text and continuous modalities.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06548",
+      "pdf_url": "https://arxiv.org/pdf/2605.06548",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06548",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 43,
+      "hot_score": 430,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.06416",
+      "source": "huggingface",
+      "title": "MiA-Signature: Approximating Global Activation for Long-Context Understanding",
+      "authors": [
+        "Yuqing Li",
+        "Jiangnan Li",
+        "Mo Yu",
+        "Zheng Lin",
+        "Weiping Wang",
+        "Jie Zhou"
+      ],
+      "abstract": "A growing body of work in cognitive science suggests that reportable conscious access is associated with global ignition over distributed memory systems, while such activation is only partially accessible as individuals cannot directly access or enumerate all activated contents. This tension suggests a plausible mechanism that cognition may rely on a compact representation that approximates the global influence of activation on downstream processing. Inspired by this idea, we introduce the concept of Mindscape Activation Signature (MiA-Signature), a compressed representation of the global activation pattern induced by a query. In LLM systems, this is instantiated via submodular-based selection of high-level concepts that cover the activated context space, optionally refined through lightweight iterative updates using working memory. The resulting MiA-Signature serves as a conditioning signal that approximates the effect of the full activation state while remaining computationally tractable. Integrating MiA-Signatures into both RAG and agentic systems yields consistent performance gains across multiple long-context understanding tasks.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06416",
+      "pdf_url": "https://arxiv.org/pdf/2605.06416",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06416",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.04523",
+      "source": "huggingface",
+      "title": "RaguTeam at SemEval-2026 Task 8: Meno and Friends in a Judge-Orchestrated LLM Ensemble for Faithful Multi-Turn Response Generation",
+      "authors": [
+        "Ivan Bondarenko",
+        "Roman Derunets",
+        "Oleg Sedukhin",
+        "Mikhail Komarov",
+        "Ivan Chernov",
+        "Mikhail Kulakov"
+      ],
+      "abstract": "We present our winning system for Task~B (generation with reference passages) in SemEval-2026 Task~8: MTRAGEval. Our method is a heterogeneous ensemble of seven LLMs with two prompting variants, where a GPT-4o-mini judge selects the best candidate per instance. We ranked 1st out of 26 teams, achieving a conditioned harmonic mean of 0.7827 and outperforming the strongest baseline (gpt-oss-120b, 0.6390). Ablations show that diversity in model families, scales, and prompting strategies is essential, with the ensemble consistently beating any single model. We also introduce Meno-Lite-0.1, a 7B domain-adapted model with a strong cost--performance trade-off, and analyse MTRAGEval, highlighting annotation limitations and directions for improvement. Our code is publicly available: https://github.com/RaguTeam/ragu_mtrag_semeval",
+      "published_date": "2026-05-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.04523",
+      "pdf_url": "https://arxiv.org/pdf/2605.04523",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.04523",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "RaguTeam 在 SemEval-2026 任务 8 中的参赛系统：Meno 和朋友在法官指挥的 LLM 集合中的忠实多轮响应生成",
+        "chinese_summary": "我们的系统通过一个 GPT-4o-mini 判官选择最佳候选者，实现了 0.7827 的条件调和平均值，超越了最强基线。",
+        "pain_point": "多轮对话生成中忠实度不足。",
+        "core_value": "通过模型多样性提升多轮对话生成的忠实度。",
+        "technical_architecture": "一个包含七种不同 LLM 的异质集合，采用两种提示变体。",
+        "quantitative_results": "获得 0.7827 的条件调和平均值，优于最强基线 0.6390。",
+        "competitors": "最强基线为 gpt-oss-120b。",
+        "limitations": "成本性能权衡。",
+        "key_contributions": [
+          "提出了一种法官指挥的 LLM 集合方法。",
+          "引入了 Meno-Lite-0.1 模型。",
+          "分析了 MTRAGEval 的注释限制并提出改进方向"
+        ],
+        "application_scenarios": [
+          "多轮对话生成",
+          "对话系统"
+        ],
+        "technical_highlights": [
+          "使用 GPT-4o-mini 判官进行选择。",
+          "模型多样性对性能提升至关重要"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.06507",
+      "source": "huggingface",
+      "title": "MARBLE: Multi-Aspect Reward Balance for Diffusion RL",
+      "authors": [
+        "Canyu Zhao",
+        "Hao Chen",
+        "Yunze Tong",
+        "Yu Qiao",
+        "Jiacheng Li",
+        "Chunhua Shen"
+      ],
+      "abstract": "Reinforcement learning fine-tuning has become the dominant approach for aligning diffusion models with human preferences. However, assessing images is intrinsically a multi-dimensional task, and multiple evaluation criteria need to be optimized simultaneously. Existing practice deal with multiple rewards by training one specialist model per reward, optimizing a weighted-sum reward R(x)=sum_k w_k R_k(x), or sequentially fine-tuning with a hand-crafted stage schedule. These approaches either fail to produce a unified model that can be jointly trained on all rewards or necessitates heavy manually tuned sequential training. We find that the failure stems from using a naive weighted-sum reward aggregation. This approach suffers from a sample-level mismatch because most rollouts are specialist samples, highly informative for certain reward dimensions but irrelevant for others; consequently, weighted summation dilutes their supervision. To address this issue, we propose MARBLE (Multi-Aspect Reward BaLancE), a gradient-space optimization framework that maintains independent advantage estimators for each reward, computes per-reward policy gradients, and harmonizes them into a single update direction without manually-tuned reward weighting, by solving a Quadratic Programming problem. We further propose an amortized formulation that exploits the affine structure of the loss used in DiffusionNFT, to reduce the per-step cost from K+1 backward passes to near single-reward baseline cost, together with EMA smoothing on the balancing coefficients to stabilize updates against transient single-batch fluctuations. On SD3.5 Medium with five rewards, MARBLE improves all five reward dimensions simultaneously, turns the worst-aligned reward's gradient cosine from negative under weighted summation in 80% of mini-batches to consistently positive, and runs at 0.97X the training speed of baseline training.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06507",
+      "pdf_url": "https://arxiv.org/pdf/2605.06507",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06507",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.06222",
+      "source": "huggingface",
+      "title": "When to Trust Imagination: Adaptive Action Execution for World Action Models",
+      "authors": [
+        "Rui Wang",
+        "Yue Zhang",
+        "Jiehong Lin",
+        "Kuncheng Luo",
+        "Jianan Wang",
+        "Zhongrui Wang",
+        "Xiaojuan Qi"
+      ],
+      "abstract": "World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation by jointly predicting future visual observations and future actions. However, current WAMs typically execute a fixed number of predicted actions after each model inference, leaving the robot blind to whether the imagined future remains consistent with the actual physical rollout. In this work, we formulate adaptive WAM execution as a future-reality verification problem: the robot should execute longer when the WAM-predicted future remains reliable, and replan earlier when reality deviates from imagination. To this end, we propose Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted. FFDC enables adaptive action chunk sizes as an emergent consequence of prediction-observation consistency, preserving the efficiency of long-horizon execution while restoring responsiveness in contact-rich or difficult phases. We further introduce Mixture-of-Horizon Training to improve long-horizon trajectory coverage for adaptive execution. Experiments on the RoboTwin benchmark and in the real world demonstrate that our method achieves a strong robustness-efficiency trade-off: on RoboTwin, it reduces WAM forward passes by 69.10% and execution time by 34.02%, while improving success rate by 2.54% over the short-chunk baseline; in real-world experiments, it improves success rate by 35%.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06222",
+      "pdf_url": "https://arxiv.org/pdf/2605.06222",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06222",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "何时信任想象：世界动作模型的自适应行动执行",
+        "chinese_summary": "提出了一种轻量级的验证器FFDC，使机器人能够根据预测与现实的一致性自适应调整行动执行的长度。",
+        "pain_point": "当前WAMs在执行预测动作后无法感知实际物理过程与想象是否一致。",
+        "core_value": "通过预测-观察一致性实现自适应行动执行，提高接触密集或困难阶段的响应性。",
+        "technical_architecture": "提出Future Forward Dynamics Causal Attention (FFDC)作为轻量级验证器。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定应用场景下进行了验证。",
+        "key_contributions": [
+          "提出FFDC验证器",
+          "实现自适应行动执行",
+          "提高接触密集阶段的响应性"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "接触密集任务"
+        ],
+        "technical_highlights": [
+          "轻量级验证器FFDC",
+          "预测-观察一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.06376",
+      "source": "huggingface",
+      "title": "Continuous-Time Distribution Matching for Few-Step Diffusion Distillation",
+      "authors": [
+        "Tao Liu",
+        "Hao Yan",
+        "Mengting Chen",
+        "Taihang Hu",
+        "Zhengrong Yue",
+        "Zihao Pan",
+        "Jinsong Lan",
+        "Xiaoyong Zhu",
+        "Ming-Ming Cheng",
+        "Bo Zheng",
+        "Yaxing Wang"
+      ],
+      "abstract": "Step distillation has become a leading technique for accelerating diffusion models, among which Distribution Matching Distillation (DMD) and Consistency Distillation are two representative paradigms. While consistency methods enforce self-consistency along the full PF-ODE trajectory to steer it toward the clean data manifold, vanilla DMD relies on sparse supervision at a few predefined discrete timesteps. This restricted discrete-time formulation and mode-seeking nature of the reverse KL divergence tends to exhibit visual artifacts and over-smoothed outputs, often necessitating complex auxiliary modules -- such as GANs or reward models -- to restore visual fidelity. In this work, we introduce Continuous-Time Distribution Matching (CDM), migrating the DMD framework from discrete anchoring to continuous optimization for the first time. CDM achieves this through two continuous-time designs. First, we replace the fixed discrete schedule with a dynamic continuous schedule of random length, so that distribution matching is enforced at arbitrary points along sampling trajectories rather than only at a few fixed anchors. Second, we propose a continuous-time alignment objective that performs active off-trajectory matching on latents extrapolated via the student's velocity field, improving generalization and preserving fine visual details. Extensive experiments on different architectures, including SD3-Medium and Longcat-Image, demonstrate that CDM provides highly competitive visual fidelity for few-step image generation without relying on complex auxiliary objectives. Code is available at https://github.com/byliutao/cdm.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06376",
+      "pdf_url": "https://arxiv.org/pdf/2605.06376",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06376",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.06614",
+      "source": "huggingface",
+      "title": "SkillOS: Learning Skill Curation for Self-Evolving Agents",
+      "authors": [
+        "Siru Ouyang",
+        "Jun Yan",
+        "Yanfei Chen",
+        "Rujun Han",
+        "Zifeng Wang",
+        "Bhavana Dalvi Mishra",
+        "Rui Meng",
+        "Chun-Liang Li",
+        "Yizhu Jiao",
+        "Kaiwen Zha",
+        "Maohao Shen",
+        "Vishy Tirumalashetty",
+        "George Lee",
+        "Jiawei Han",
+        "Tomas Pfister",
+        "Chen-Yu Lee"
+      ],
+      "abstract": "LLM-based agents are increasingly deployed to handle streaming tasks, yet they often remain one-off problem solvers that fail to learn from past interactions. Reusable skills distilled from experience provide a natural substrate for self-evolution, where high-quality skill curation serves as the key bottleneck. Existing approaches either rely on manual skill curation, prescribe heuristic skill operations, or train for short-horizon skill operations. However, they still struggle to learn complex long-term curation policies from indirect and delayed feedback. To tackle this challenge, we propose SkillOS, an experience-driven RL training recipe for learning skill curation in self-evolving agents. SkillOS pairs a frozen agent executor that retrieves and applies skills with a trainable skill curator that updates an external SkillRepo from accumulated experience. To provide learning signals for curation, we design composite rewards and train on grouped task streams based on skill-relevant task dependencies, where earlier trajectories update the SkillRepo, and later related tasks evaluate these updates. Across multi-turn agentic tasks and single-turn reasoning tasks, SkillOS consistently outperforms memory-free and strong memory-based baselines in both effectiveness and efficiency, with the learned skill curator generalizing across different executor backbones and task domains. Further analyses show that the learned curator produces more targeted skill use, while the skills in SkillRepo evolve into more richly structured Markdown files that encode higher-level meta-skills over time.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06614",
+      "pdf_url": "https://arxiv.org/pdf/2605.06614",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06614",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "SkillOS: 学习技能编排以实现自我进化的智能体",
+        "chinese_summary": "通过经验驱动的强化学习方法，学习技能编排策略，以实现智能体的自我进化。",
+        "pain_point": "现有方法难以从间接和延迟反馈中学习复杂的长期技能编排策略。",
+        "core_value": "提供了一种新的技能编排方法，通过强化学习自动优化技能库。",
+        "technical_architecture": "结合了固定的智能体执行器和可训练的技能编排器，通过任务流训练。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在多轮交互任务和单轮推理任务上进行了验证。",
+        "key_contributions": [
+          "提出了一种新的经验驱动的强化学习方法",
+          "实现了智能体的自我进化能力",
+          "通过技能库的动态更新优化技能编排"
+        ],
+        "application_scenarios": [
+          "多轮交互任务",
+          "单轮推理任务"
+        ],
+        "technical_highlights": [
+          "结合固定执行器和可训练编排器",
+          "基于技能相关任务依赖的分组任务流训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.05566",
+      "source": "huggingface",
+      "title": "Nonsense Helps: Prompt Space Perturbation Broadens Reasoning Exploration",
+      "authors": [
+        "Langlin Huang",
+        "Chengsong Huang",
+        "Jinyuan Li",
+        "Donghong Cai",
+        "Yuyi Yang",
+        "Jiaxin Huang"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards, particularly Group Relative Policy Optimization (GRPO), has significantly advanced the reasoning capabilities of Large Language Models (LLMs). However, in complex tasks, GRPO frequently suffers from the ``zero-advantage problem'': when all sampled rollouts for a query fail, the relative advantage collapses to zero. Consequently, the model loses effective training signals for these questions, wasting the training data and computational budget. While simply increasing the sampling budget for these questions is a common remedy, the static sampling policy inherently constrains reasoning exploration, limiting the success rate. In this paper, we propose Lorem Perturbation for Exploration (LoPE), a simple yet effective training framework to break this exploration bottleneck. We posit that task-irrelevant prompt-space perturbations can shift the model's output distribution enough to unlock orthogonal reasoning pathways for hard questions. Specifically, LoPE prepends sequences stochastically assembled from Lorem Ipsum vocabulary (a pseudo-Latin placeholder text) to the prompts before resampling. Experiments across 1.7B, 4B, and 7B models demonstrate that LoPE significantly outperforms resampling with the original prompts. Further analysis reveals that other Latin-based random sequences with low perplexity are also effective perturbations. Our results establish LoPE as a strong baseline for broadening exploration in LLM reinforcement learning.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.05566",
+      "pdf_url": "https://arxiv.org/pdf/2605.05566",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.05566",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "无意义内容有助于提升：提示空间扰动扩展推理探索",
+        "chinese_summary": "提出Lorem Perturbation for Exploration (LoPE)框架，通过随机插入无意义文本扩展模型的推理路径。",
+        "pain_point": "在复杂任务中，Group Relative Policy Optimization (GRPO)常因零优势问题导致模型失去有效训练信号。",
+        "core_value": "通过任务无关的提示空间扰动，LoPE能够解锁新的推理路径，提高模型在困难问题上的表现。",
+        "technical_architecture": "LoPE通过在提示前随机插入Lorem Ipsum词汇来扩展模型的输出分布。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在1.7B, 4B, 和7B规模的模型上进行了实验。",
+        "key_contributions": [
+          "提出LoPE框架",
+          "通过无意义内容扩展推理路径"
+        ],
+        "application_scenarios": [
+          "大型语言模型的复杂任务处理"
+        ],
+        "technical_highlights": [
+          "简单有效的训练框架",
+          "利用无意义文本扩展推理探索"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

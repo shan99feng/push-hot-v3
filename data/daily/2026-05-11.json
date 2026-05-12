@@ -1,0 +1,416 @@
+{
+  "date": "2026-05-11",
+  "generated_at": "2026-05-12T00:01:38.419157+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2605.06169",
+      "source": "huggingface",
+      "title": "Mean Mode Screaming: Mean--Variance Split Residuals for 1000-Layer Diffusion Transformers",
+      "authors": [
+        "Pengqi Lu"
+      ],
+      "abstract": "Scaling Diffusion Transformers (DiTs) to hundreds of layers introduces a structural vulnerability: networks can enter a silent, mean-dominated collapse state that homogenizes token representations and suppresses centered variation. Through mechanistic auditing, we isolate the trigger event of this collapse as Mean Mode Screaming (MMS). MMS can occur even when training appears stable, with a mean-coherent backward shock on residual writers that opens deep residual branches and drives the network into a mean-dominated state. We show this behavior is driven by an exact decomposition of these gradients into mean-coherent and centered components, compounded by the structural suppression of attention-logit gradients through the null space of the Softmax Jacobian once values homogenize.\n  To address this, we propose Mean-Variance Split (MV-Split) Residuals, which combine a separately gained centered residual update with a leaky trunk-mean replacement. On a 400-layer single-stream DiT, MV-Split prevents the divergent collapse that crashes the un-stabilized baseline; it tracks close to the baseline's pre-crash trajectory while remaining substantially better than token-isotropic gating methods such as LayerScale across the full schedule. Finally, we present a 1000-layer DiT as a scale-validation run at boundary scales, establishing that the architecture remains stably trainable at extreme depth.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06169",
+      "pdf_url": "https://arxiv.org/pdf/2605.06169",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06169",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "upvotes": 101,
+      "hot_score": 1010,
+      "structured_summary": {
+        "chinese_title": "均值模式尖叫：均值-方差拆分残差在1000层扩散变换器中的应用",
+        "chinese_summary": "提出均值-方差拆分残差防止扩散变换器在大量层时的均值主导崩溃。",
+        "pain_point": "扩散变换器在大量层时容易进入均值主导的静默状态，导致表示同质化。",
+        "core_value": "通过均值-方差拆分残差，有效防止扩散变换器的均值主导崩溃。",
+        "technical_architecture": "提出均值-方差拆分残差，结合中心残差更新和泄漏主均值替换。",
+        "quantitative_results": "在400层扩散变换器上，均值-方差拆分残差防止了崩溃，保持了优于基线的表现。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证该方法的有效性。",
+        "key_contributions": [
+          "提出均值-方差拆分残差",
+          "有效防止扩散变换器的均值主导崩溃",
+          "通过机制审计识别均值模式尖叫"
+        ],
+        "application_scenarios": [
+          "大规模扩散变换器训练",
+          "需要深度表示学习的场景"
+        ],
+        "technical_highlights": [
+          "精确分解梯度为均值一致和中心化成分",
+          "通过抑制Softmax雅可比的零空间中的注意力分数梯度进行结构抑制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2512.18181",
+      "source": "huggingface",
+      "title": "MACE-Dance: Motion-Appearance Cascaded Experts for Music-Driven Dance Video Generation",
+      "authors": [
+        "Kaixing Yang",
+        "Jiashu Zhu",
+        "Xulong Tang",
+        "Ziqiao Peng",
+        "Xiangyue Zhang",
+        "Puwei Wang",
+        "Jiahong Wu",
+        "Xiangxiang Chu",
+        "Hongyan Liu",
+        "Jun He"
+      ],
+      "abstract": "With the rise of online dance-video platforms and rapid advances in AI-generated content (AIGC), music-driven dance generation has emerged as a compelling research direction. Despite substantial progress in related domains such as music-driven 3D dance generation, pose-driven image animation, and audio-driven talking-head synthesis, existing methods cannot be directly adapted to this task. Moreover, the limited studies in this area still struggle to jointly achieve high-quality visual appearance and realistic human motion. Accordingly, we present MACE-Dance, a music-driven dance video generation framework with cascaded Mixture-of-Experts (MoE). The Motion Expert performs music-to-3D motion generation while enforcing kinematic plausibility and artistic expressiveness, whereas the Appearance Expert carries out motion- and reference-conditioned video synthesis, preserving visual identity with spatiotemporal coherence. Specifically, the Motion Expert adopts a diffusion model with a BiMamba-Transformer hybrid architecture and a Guidance-Free Training (GFT) strategy, achieving state-of-the-art (SOTA) performance in 3D dance generation. The Appearance Expert employs a decoupled kinematic-aesthetic fine-tuning strategy, achieving state-of-the-art (SOTA) performance in pose-driven image animation. To better benchmark this task, we curate a large-scale and diverse dataset and design a motion-appearance evaluation protocol. Based on this protocol, MACE-Dance also achieves state-of-the-art performance. Code is available at https://github.com/AMAP-ML/MACE-Dance.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2512.18181",
+      "pdf_url": "https://arxiv.org/pdf/2512.18181",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2512.18181",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 80,
+      "hot_score": 800,
+      "structured_summary": {
+        "chinese_title": "MACE-Dance: 动捕-外观级联专家用于音乐驱动舞蹈视频生成",
+        "chinese_summary": "MACE-Dance框架通过级联专家实现高质量视觉外观和真实人体运动的联合生成。",
+        "pain_point": "现有方法难以同时实现高质量视觉外观和真实人体运动。",
+        "core_value": "通过级联Mixture-of-Experts实现音乐驱动舞蹈视频的高质量生成。",
+        "technical_architecture": "采用级联专家架构，Motion Expert生成3D运动，Appearance Expert合成视频。",
+        "quantitative_results": "Motion Expert在3D舞蹈生成中达到SOTA性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索更多应用场景。",
+        "key_contributions": [
+          "提出MACE-Dance框架",
+          "采用级联专家架构",
+          "实现高质量视觉外观和真实人体运动的联合生成"
+        ],
+        "application_scenarios": [
+          "在线舞蹈视频生成",
+          "虚拟舞蹈表演"
+        ],
+        "technical_highlights": [
+          "采用BiMamba-Transformer混合架构",
+          "Guidance-Free Training策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.08063",
+      "source": "huggingface",
+      "title": "Flow-OPD: On-Policy Distillation for Flow Matching Models",
+      "authors": [
+        "Zhen Fang",
+        "Wenxuan Huang",
+        "Yu Zeng",
+        "Yiming Zhao",
+        "Shuang Chen",
+        "Kaituo Feng",
+        "Yunlong Lin",
+        "Lin Chen",
+        "Zehui Chen",
+        "Shaosheng Cao",
+        "Feng Zhao"
+      ],
+      "abstract": "Existing Flow Matching (FM) text-to-image models suffer from two critical bottlenecks under multi-task alignment: the reward sparsity induced by scalar-valued rewards, and the gradient interference arising from jointly optimizing heterogeneous objectives, which together give rise to a 'seesaw effect' of competing metrics and pervasive reward hacking. Inspired by the success of On-Policy Distillation (OPD) in the large language model community, we propose Flow-OPD, the first unified post-training framework that integrates on-policy distillation into Flow Matching models. Flow-OPD adopts a two-stage alignment strategy: it first cultivates domain-specialized teacher models via single-reward GRPO fine-tuning, allowing each expert to reach its performance ceiling in isolation; it then establishes a robust initial policy through a Flow-based Cold-Start scheme and seamlessly consolidates heterogeneous expertise into a single student via a three-step orchestration of on-policy sampling, task-routing labeling, and dense trajectory-level supervision. We further introduce Manifold Anchor Regularization (MAR), which leverages a task-agnostic teacher to provide full-data supervision that anchors generation to a high-quality manifold, effectively mitigating the aesthetic degradation commonly observed in purely RL-driven alignment. Built upon Stable Diffusion 3.5 Medium, Flow-OPD raises the GenEval score from 63 to 92 and the OCR accuracy from 59 to 94, yielding an overall improvement of roughly 10 points over vanilla GRPO, while preserving image fidelity and human-preference alignment and exhibiting an emergent 'teacher-surpassing' effect. These results establish Flow-OPD as a scalable alignment paradigm for building generalist text-to-image models.",
+      "published_date": "2026-05-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.08063",
+      "pdf_url": "https://arxiv.org/pdf/2605.08063",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.08063",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 73,
+      "hot_score": 730,
+      "structured_summary": {
+        "chinese_title": "Flow-OPD：Flow匹配模型的在线策略蒸馏",
+        "chinese_summary": "提出Flow-OPD，一种将在线策略蒸馏集成到Flow匹配模型中的统一后训练框架。",
+        "pain_point": "现有Flow匹配模型在多任务对齐中面临奖励稀疏和梯度干扰问题。",
+        "core_value": "通过在线策略蒸馏解决多任务对齐中的瓶颈，提高模型性能。",
+        "technical_architecture": "采用两阶段对齐策略，包括单奖励GRPO微调和基于Flow的冷启动方案。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上验证模型的泛化能力。",
+        "key_contributions": [
+          "提出Flow-OPD框架",
+          "引入Manifold Anchor Regularization",
+          "两阶段对齐策略"
+        ],
+        "application_scenarios": [
+          "文本到图像生成",
+          "多任务对齐"
+        ],
+        "technical_highlights": [
+          "在线策略蒸馏",
+          "冷启动方案"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.07177",
+      "source": "huggingface",
+      "title": "HyperEyes: Dual-Grained Efficiency-Aware Reinforcement Learning for Parallel Multimodal Search Agents",
+      "authors": [
+        "Guankai Li",
+        "Jiabin Chen",
+        "Yi Xu",
+        "Xichen Zhang",
+        "Yuan Lu"
+      ],
+      "abstract": "Existing multimodal search agents process target entities sequentially, issuing one tool call per entity and accumulating redundant interaction rounds whenever a query decomposes into independent sub-retrievals. We argue that effective multimodal agents should search wider rather than longer: dispatching multiple grounded queries concurrently within a round. To this end, we present HyperEyes, a parallel multimodal search agent that fuses visual grounding and retrieval into a single atomic action, enabling concurrent search across multiple entities while treating inference efficiency as a first-class training objective. HyperEyes is trained in two stages. For cold-start supervision, we develop a Parallel-Amenable Data Synthesis Pipeline covering visual multi-entity and textual multi-constraint queries, curating efficiency-oriented trajectories via Progressive Rejection Sampling. Building on this, our central contribution, a Dual-Grained Efficiency-Aware Reinforcement Learning framework, operates at two levels. At the macro level, we propose TRACE (Tool-use Reference-Adaptive Cost Efficiency), a trajectory-level reward whose reference is monotonically tightened during training to suppress superfluous tool calls without restricting genuine multi-hop search. At the micro level, we adapt On-Policy Distillation to inject dense token-level corrective signals from an external teacher on failed rollouts, mitigating the credit-assignment deficiency of sparse outcome rewards. Since existing benchmarks evaluate accuracy as the sole metric, omitting inference cost, we introduce IMEB, a human-curated benchmark of 300 instances that jointly evaluates search capability and efficiency. Across six benchmarks, HyperEyes-30B surpasses the strongest comparable open-source agent by 9.9% in accuracy with 5.3x fewer tool-call rounds on average.",
+      "published_date": "2026-05-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.07177",
+      "pdf_url": "https://arxiv.org/pdf/2605.07177",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.07177",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 57,
+      "hot_score": 570,
+      "structured_summary": {
+        "chinese_title": "HyperEyes: 并行多模态搜索代理的粒度化效率感知强化学习",
+        "chinese_summary": "HyperEyes 通过并发搜索多个实体并将其视觉接地和检索融合为单个原子动作，提高了多模态搜索的效率。",
+        "pain_point": "现有方法按顺序处理目标实体，导致查询分解时产生冗余交互轮次。",
+        "core_value": "通过并发搜索和效率感知强化学习，提高了多模态搜索的效率。",
+        "technical_architecture": "采用双重粒度的效率感知强化学习框架，结合视觉接地和检索。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上进行了实验，未来需要更广泛的应用验证。",
+        "key_contributions": [
+          "开发了并行可调数据合成管道",
+          "提出了TRACE奖励机制",
+          "实现了双重粒度的效率感知强化学习框架"
+        ],
+        "application_scenarios": [
+          "多模态搜索",
+          "视觉接地和检索"
+        ],
+        "technical_highlights": [
+          "并发搜索多个实体",
+          "融合视觉接地和检索"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.06139",
+      "source": "huggingface",
+      "title": "Listwise Policy Optimization: Group-based RLVR as Target-Projection on the LLM Response Simplex",
+      "authors": [
+        "Yun Qu",
+        "Qi Wang",
+        "Yixiu Mao",
+        "Heming Zou",
+        "Yuhang Jiang",
+        "Yingyue Li",
+        "Wutong Xu",
+        "Lizhou Cai",
+        "Weijie Liu",
+        "Clive Bai",
+        "Kai Yang",
+        "Yangkun Chen",
+        "Saiyong Yang",
+        "Xiangyang Ji"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become a standard approach for large language models (LLMs) post-training to incentivize reasoning capacity. Among existing recipes, group-based policy gradient is prevalent, which samples a group of responses per prompt and updates the policy via group-relative advantage signals. This work reveals that these optimization strategies share a common geometric structure: each implicitly defines a target distribution on the response simplex and projects toward it via first-order approximation. Building on this insight, we propose Listwise Policy Optimization (LPO) to explicitly conduct the target-projection, which demystifies the implicit target by restricting the proximal RL objective to the response simplex, and then projects the policy via exact divergence minimization. This framework provides (i) monotonic improvement on the listwise objective with bounded, zero-sum, and self-correcting projection gradients, and (ii) flexibility in divergence selection with distinct structural properties through the decoupled projection step. On diverse reasoning tasks and LLM backbones, LPO consistently improves training performance over typical policy gradient baselines under matched targets, while intrinsically preserving optimization stability and response diversity.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06139",
+      "pdf_url": "https://arxiv.org/pdf/2605.06139",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06139",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 57,
+      "hot_score": 570,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.08083",
+      "source": "huggingface",
+      "title": "LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling",
+      "authors": [
+        "Tong Zheng",
+        "Haolin Liu",
+        "Chengsong Huang",
+        "Huiwen Bao",
+        "Sheng Zhang",
+        "Rui Liu",
+        "Runpeng Dai",
+        "Ruibo Chen",
+        "Chenxi Liu",
+        "Tianyi Xiong",
+        "Xidong Wu",
+        "Hongming Zhang",
+        "Heng Huang"
+      ],
+      "abstract": "Test-time scaling (TTS) has become an effective approach for improving large language model performance by allocating additional computation during inference. However, existing TTS strategies are largely hand-crafted: researchers manually design reasoning patterns and tune heuristics by intuition, leaving much of the computation-allocation space unexplored. We propose an environment-driven framework, AutoTTS, that changes what researchers design: from individual TTS heuristics to environments where TTS strategies can be discovered automatically. The key to AutoTTS lies in environment construction: the discovery environment must make the control space tractable and provide cheap, frequent feedback for TTS search. As a concrete instantiation, we formulate width--depth TTS as controller synthesis over pre-collected reasoning trajectories and probe signals, where controllers decide when to branch, continue, probe, prune, or stop and can be evaluated cheaply without repeated LLM calls. We further introduce beta parameterization to make the search tractable and fine-grained execution trace feedback to improve discovery efficiency by helping the agent diagnose why a TTS program fails. Experiments on mathematical reasoning benchmarks show that the discovered strategies improve the overall accuracy--cost tradeoff over strong manually designed baselines. The discovered strategies generalize to held-out benchmarks and model scales, while the entire discovery costs only $39.9 and 160 minutes. Our data, and code will be open-source at https://github.com/zhengkid/AutoTTS.",
+      "published_date": "2026-05-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.08083",
+      "pdf_url": "https://arxiv.org/pdf/2605.08083",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.08083",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 53,
+      "hot_score": 530,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.06747",
+      "source": "huggingface",
+      "title": "HumanNet: Scaling Human-centric Video Learning to One Million Hours",
+      "authors": [
+        "Yufan Deng",
+        "Daquan Zhou"
+      ],
+      "abstract": "Progress in embodied intelligence increasingly depends on scalable data infrastructure. While vision and language have scaled with internet corpora, learning physical interaction remains constrained by the lack of large, diverse, and richly annotated human activity data. We present HumanNet, a one-million-hour human-centric video corpus that captures how humans interact with the physical world at scale. HumanNet spans both first-person and third-person perspectives and covers fine-grained activities, human-object interactions, tool use, and long-horizon behaviors across diverse real-world environments. Beyond raw video, the dataset provides interaction-centric annotations, including captions, motion descriptions, and hand and body-related signals, enabling motion-aware and interaction-aware learning. Beyond scale, HumanNet introduces a systematic data curation paradigm for embodied learning, where human-centric filtering, temporal structuring, viewpoint diversity, and annotation enrichment are treated as first-class design principles. This design transforms unstructured internet video into a scalable substrate for representation learning, activity understanding, motion generation, and human-to-robot transfer. We conduct a first-step validation on the value of this design through controlled vision-language-action ablation: under a fixed set of validation data, continued training from the Qwen VLM model with 1000 hours of egocentric video drawn from HumanNet surpasses the continued training with 100 hours of real-robot data from Magic Cobot, indicating that egocentric human video could be a scalable and cost-effective substitute for robot data. By building this project, we aim to explore the opportunity to scale embodied foundation models using human-centric videos, rather than relying solely on robot-specific data.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06747",
+      "pdf_url": "https://arxiv.org/pdf/2605.06747",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06747",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 40,
+      "hot_score": 400,
+      "structured_summary": {
+        "chinese_title": "HumanNet: 将人类为中心的视频学习扩展到一百万小时",
+        "chinese_summary": "构建了一个包含一百万小时的人类活动视频数据集，用于大规模学习物理交互。",
+        "pain_point": "缺乏大规模、多样性和丰富标注的人类活动数据限制了物理交互的学习。",
+        "core_value": "提供了一个大规模的人类活动数据集，支持运动感知和交互感知的学习。",
+        "technical_architecture": "采用系统化数据整理方法，涵盖第一人称和第三人称视角，丰富标注。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集依赖互联网视频，可能存在数据质量不均的问题。",
+        "key_contributions": [
+          "构建了一个大规模的人类活动视频数据集",
+          "引入了系统化数据整理方法",
+          "提供了丰富的标注信息"
+        ],
+        "application_scenarios": [
+          "物理交互学习",
+          "行为理解"
+        ],
+        "technical_highlights": [
+          "涵盖第一人称和第三人称视角",
+          "提供丰富的标注信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.07825",
+      "source": "huggingface",
+      "title": "Anisotropic Modality Align",
+      "authors": [
+        "Xiaomin Yu",
+        "Yijiang Li",
+        "Yuhui Zhang",
+        "Hanzhen Zhao",
+        "Yue Yang",
+        "Hao Tang",
+        "Yue Song",
+        "Xiaobin Hu",
+        "Chengwei Qin",
+        "Shuicheng Yan",
+        "Hui Xiong"
+      ],
+      "abstract": "Training multimodal large language models has long been limited by the scarcity of high-quality paired multimodal data. Recent studies show that the shared representation space of pretrained multimodal contrastive models can serve as a bridge, enabling models to perform multimodal training with unimodal data. However, the key premise of this paradigm remains insufficiently understood: can representations from different modalities be reliably interchanged? The core obstacle lies in the persistent Modality Gap in the shared space. In this work, we revisit the geometric nature of the modality gap. We find that modality representations already share compatible dominant semantic geometry. What truly hinders modality interchangeability is not a simple global shift, but an anisotropic residual structure concentrated along a small number of dominant directions. Based on this finding, we further propose the principle of anisotropic modality gap alignment: effective modality alignment should align with the target-modality distribution while preserving the semantic structure of the source modality. Guided by this principle, we propose an anisotropic geometric correction framework, AnisoAlign, for unpaired modality alignment. This framework leverages the internal geometric prior of the target modality and performs bounded correction on source-modality representations, thereby constructing substitute representations in the target modality. Experiments confirm its benefits in both geometric diagnostics and text-only MLLM training. Overall, this work recasts the modality gap from an empirical observation into a correctable, structured geometric phenomenon and provides a new representation alignment perspective for training multimodal models with unimodal data.",
+      "published_date": "2026-05-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.07825",
+      "pdf_url": "https://arxiv.org/pdf/2605.07825",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.07825",
+      "category": "cv",
+      "tags": [
+        "cs.MM",
+        "cs.CV"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.04615",
+      "source": "huggingface",
+      "title": "Beyond Retrieval: A Multitask Benchmark and Model for Code Search",
+      "authors": [
+        "Siqiao Xue",
+        "Zihan Liao",
+        "Jin Qin",
+        "Ziyin Zhang",
+        "Yixiang Mu",
+        "Fan Zhou",
+        "Hang Yu"
+      ],
+      "abstract": "Code search has usually been evaluated as first-stage retrieval, even though production systems rely on broader pipelines with reranking and developer-style queries. Existing benchmarks also suffer from data contamination, label noise, and degenerate binary relevance. In this paper, we introduce CoREB, a contamination-limited, multitask code retrieval and reranking benchmark, together with a fine-tuned code reranker, that goes beyond retrieval to cover the full code search pipeline. CoREB is built from counterfactually rewritten LiveCodeBench problems in five programming languages and delivered as timed releases with graded relevance judgments. We benchmark eleven embedding models and five rerankers across three tasks: text-to-code, code-to-text, and code-to-code. Our experiments reveal that: \\circone code-specialised embeddings dominate code-to-code retrieval ({sim}2{times} over general encoders), yet no single model wins all three tasks; \\circtwo short keyword queries, the format closest to real developer search, collapse every model to near-zero nDCG@10; \\circthree off-the-shelf rerankers are task-asymmetric, with a 12-point swing on code-to-code and no baseline net-positive across all tasks; \\circfour our fine-tuned CoREB-Reranker is the first to achieve consistent gains across all three tasks. The data and model are released.",
+      "published_date": "2026-05-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.04615",
+      "pdf_url": "https://arxiv.org/pdf/2605.04615",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.04615",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.07748",
+      "source": "huggingface",
+      "title": "TextLDM: Language Modeling with Continuous Latent Diffusion",
+      "authors": [
+        "Jiaxiu Jiang",
+        "Jingjing Ren",
+        "Wenbo Li",
+        "Bo Wang",
+        "Haoze Sun",
+        "Yijun Yang",
+        "Jianhui Liu",
+        "Yanbing Zhang",
+        "Shenghe Zheng",
+        "Yuan Zhang",
+        "Haoyang Huang",
+        "Nan Duan",
+        "Wangmeng Zuo"
+      ],
+      "abstract": "Diffusion Transformers (DiT) trained with flow matching in a VAE latent space have unified visual generation across images and videos. A natural next step toward a single architecture for both generation (visual synthesis) and understanding (text generation) is to apply this framework to language modeling. We propose TextLDM, which transfers the visual latent diffusion recipe to text generation with minimal architectural modification. A Transformer-based VAE maps discrete tokens to continuous latents, enhanced by Representation Alignment (REPA) with a frozen pretrained language model to produce representations effective for conditional denoising. A standard DiT then performs flow matching in this latent space, identical in architecture to its visual counterpart. The central challenge we address is obtaining high-quality continuous text representations: we find that reconstruction fidelity alone is insufficient, and that aligning latent features with a pretrained language model via REPA is critical for downstream generation quality. Trained from scratch on OpenWebText2, TextLDM substantially outperforms prior diffusion language models and matches GPT-2 under the same settings. Our results establish that the visual DiT recipe transfers effectively to language, taking a concrete step toward unified diffusion architectures for multimodal generation and understanding.",
+      "published_date": "2026-05-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.07748",
+      "pdf_url": "https://arxiv.org/pdf/2605.07748",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.07748",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": null
+    }
+  ]
+}

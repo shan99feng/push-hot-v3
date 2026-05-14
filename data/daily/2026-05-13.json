@@ -1,0 +1,491 @@
+{
+  "date": "2026-05-13",
+  "generated_at": "2026-05-14T00:01:44.465551+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2605.09530",
+      "source": "huggingface",
+      "title": "MemPrivacy: Privacy-Preserving Personalized Memory Management for Edge-Cloud Agents",
+      "authors": [
+        "Yining Chen",
+        "Jihao Zhao",
+        "Bo Tang",
+        "Haofen Wang",
+        "Feiyu Xiong",
+        "Zhiyu Li"
+      ],
+      "abstract": "As LLM-powered agents are increasingly deployed in edge-cloud environments, personalized memory has become a key enabler of long-term adaptation and user-centric interaction. However, cloud-assisted memory management exposes sensitive user information, while existing privacy protection methods typically rely on aggressive masking that removes task-relevant semantics and consequently degrades memory utility and personalization quality. To address this challenge, We propose MemPrivacy, which identifies privacy-sensitive spans on edge devices, replaces them with semantically structured type-aware placeholders for cloud-side memory processing, and restores the original values locally when needed. By decoupling privacy protection from semantic destruction, MemPrivacy minimizes sensitive data exposure while retaining the information required for effective memory formation and retrieval. We also construct MemPrivacy-Bench for systematic evaluation, a dataset covering 200 users and over 52k privacy instances, and introduce a four-level privacy taxonomy for configurable protection policies. Experiments show that MemPrivacy achieves strong performance in privacy information extraction, substantially surpassing strong general-purpose models such as GPT-5.2 and Gemini-3.1-Pro, while also reducing inference latency. Across multiple widely used memory systems, MemPrivacy limits utility loss to within 1.6%, outperforming baseline masking strategies. Overall, MemPrivacy offers an effective balance between privacy protection and personalized memory utility for edge-cloud agents, enabling secure, practical, and user-transparent deployment.",
+      "published_date": "2026-05-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.09530",
+      "pdf_url": "https://arxiv.org/pdf/2605.09530",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.09530",
+      "category": "llm",
+      "tags": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "upvotes": 124,
+      "hot_score": 1240,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.12500",
+      "source": "huggingface",
+      "title": "SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture",
+      "authors": [
+        "Haiwen Diao",
+        "Penghao Wu",
+        "Hanming Deng",
+        "Jiahao Wang",
+        "Shihao Bai",
+        "Silei Wu",
+        "Weichen Fan",
+        "Wenjie Ye",
+        "Wenwen Tong",
+        "Xiangyu Fan",
+        "Yan Li",
+        "Yubo Wang",
+        "Zhijie Cao",
+        "Zhiqian Lin",
+        "Zhitao Yang",
+        "Zhongang Cai",
+        "Yuwei Niu",
+        "Yue Zhu",
+        "Bo Liu",
+        "Chengguang Lv",
+        "Haojia Yu",
+        "Haozhe Xie",
+        "Hongli Wang",
+        "Jianan Fan",
+        "Jiaqi Li",
+        "Jiefan Lu",
+        "Jingcheng Ni",
+        "Junxiang Xu",
+        "Kaihuan Liang",
+        "Lianqiang Shi",
+        "Linjun Dai",
+        "Linyan Wang",
+        "Oscar Qian",
+        "Peng Gao",
+        "Pengfei Liu",
+        "Qingping Sun",
+        "Rui Shen",
+        "Ruisi Wang",
+        "Shengnan Ma",
+        "Shuang Yang",
+        "Siyi Xie",
+        "Siying Li",
+        "Tianbo Zhong",
+        "Xiangli Kong",
+        "Xuanke Shi",
+        "Yang Gao",
+        "Yongqiang Yao",
+        "Yves Wang",
+        "Zhengqi Bai",
+        "Zhengyu Lin",
+        "Zixin Yin",
+        "Wenxiu Sun",
+        "Ruihao Gong",
+        "Quan Wang",
+        "Lewei Lu",
+        "Lei Yang",
+        "Ziwei Liu",
+        "Dahua Lin"
+      ],
+      "abstract": "Recent large vision-language models (VLMs) remain fundamentally constrained by a persistent dichotomy: understanding and generation are treated as distinct problems, leading to fragmented architectures, cascaded pipelines, and misaligned representation spaces. We argue that this divide is not merely an engineering artifact, but a structural limitation that hinders the emergence of native multimodal intelligence. Hence, we introduce SenseNova-U1, a native unified multimodal paradigm built upon NEO-unify, in which understanding and generation evolve as synergistic views of a single underlying process. We launch two native unified variants, SenseNova-U1-8B-MoT and SenseNova-U1-A3B-MoT, built on dense (8B) and mixture-of-experts (30B-A3B) understanding baselines, respectively. Designed from first principles, they rival top-tier understanding-only VLMs across text understanding, vision-language perception, knowledge reasoning, agentic decision-making, and spatial intelligence. Meanwhile, they deliver strong semantic consistency and visual fidelity, excelling in conventional or knowledge-intensive any-to-image (X2I) synthesis, complex text-rich infographic generation, and interleaved vision-language generation, with or without think patterns. Beyond performance, we show detailed model design, data preprocessing, pre-/post-training, and inference strategies to support community research. Last but not least, preliminary evidence demonstrates that our models extend beyond perception and generation, performing strongly in vision-language-action (VLA) and world model (WM) scenarios. This points toward a broader roadmap where models do not translate between modalities, but think and act across them in a native manner. Multimodal AI is no longer about connecting separate systems, but about building a unified one and trusting the necessary capabilities to emerge from within.",
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.12500",
+      "pdf_url": "https://arxiv.org/pdf/2605.12500",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.12500",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 110,
+      "hot_score": 1100,
+      "structured_summary": {
+        "chinese_title": "SenseNova-U1: 采用NEO-unify架构统一多模态理解和生成",
+        "chinese_summary": "提出SenseNova-U1，一种基于NEO-unify架构的统一多模态模型，实现理解和生成的协同进化。",
+        "pain_point": "现有模型将理解和生成视为独立问题，导致架构碎片化和表示空间不一致。",
+        "core_value": "实现理解和生成的统一，提升多模态智能水平。",
+        "technical_architecture": "基于NEO-unify架构，实现理解和生成的统一。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索更多应用场景。",
+        "key_contributions": [
+          "提出SenseNova-U1模型",
+          "实现理解和生成的统一",
+          "提升多模态智能水平"
+        ],
+        "application_scenarios": [
+          "文本理解",
+          "视觉语言感知",
+          "知识推理",
+          "决策制定",
+          "空间智能"
+        ],
+        "technical_highlights": [
+          "基于NEO-unify架构",
+          "理解和生成的协同进化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.12357",
+      "source": "huggingface",
+      "title": "δ-mem: Efficient Online Memory for Large Language Models",
+      "authors": [
+        "Jingdi Lei",
+        "Di Zhang",
+        "Junxian Li",
+        "Weida Wang",
+        "Kaixuan Fan",
+        "Xiang Liu",
+        "Qihan Liu",
+        "Xiaoteng Ma",
+        "Baian Chen",
+        "Soujanya Poria"
+      ],
+      "abstract": "Large language models increasingly need to accumulate and reuse historical information in long-term assistants and agent systems. Simply expanding the context window is costly and often fails to ensure effective context utilization. We propose δ-mem, a lightweight memory mechanism that augments a frozen full-attention backbone with a compact online state of associative memory. δ-mem compresses past information into a fixed-size state matrix updated by delta-rule learning, and uses its readout to generate low-rank corrections to the backbone's attention computation during generation. With only an 8times8 online memory state, δ-mem improves the average score to 1.10times that of the frozen backbone and 1.15times that of the strongest non-δ-mem memory baseline. It achieves larger gains on memory-heavy benchmarks, reaching 1.31times on MemoryAgentBench and 1.20times on LoCoMo, while largely preserving general capabilities. These results show that effective memory can be realized through a compact online state directly coupled with attention computation, without full fine-tuning, backbone replacement, or explicit context extension.",
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.12357",
+      "pdf_url": "https://arxiv.org/pdf/2605.12357",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.12357",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 87,
+      "hot_score": 870,
+      "structured_summary": {
+        "chinese_title": "δ-mem: 高效在线内存机制",
+        "chinese_summary": "δ-mem 提高了大型语言模型的上下文利用效率，显著提升了生成质量。",
+        "pain_point": "大型语言模型在长对话中难以有效利用历史信息。",
+        "core_value": "通过紧凑的在线记忆机制，δ-mem 提升了模型的生成质量和通用能力。",
+        "technical_architecture": "δ-mem 结合了全注意力骨干网络和紧凑的关联记忆在线状态。",
+        "quantitative_results": "δ-mem 在多个基准测试中显著提升了生成质量，达到 1.10 到 1.31 倍。",
+        "competitors": "对比了非 δ-mem 的记忆基线模型。",
+        "limitations": "仅使用了 8x8 的在线内存状态。",
+        "key_contributions": [
+          "提出了紧凑的在线记忆机制 δ-mem",
+          "显著提升了生成质量和通用能力",
+          "无需全量微调或扩展上下文"
+        ],
+        "application_scenarios": [
+          "长对话助手系统",
+          "智能代理系统"
+        ],
+        "technical_highlights": [
+          "紧凑的在线记忆状态直接与注意力计算耦合",
+          "无需全量微调或扩展上下文"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.10899",
+      "source": "huggingface",
+      "title": "RubricEM: Meta-RL with Rubric-guided Policy Decomposition beyond Verifiable Rewards",
+      "authors": [
+        "Gaotang Li",
+        "Bhavana Dalvi Mishra",
+        "Zifeng Wang",
+        "Jun Yan",
+        "Yanfei Chen",
+        "Chun-Liang Li",
+        "Long T. Le",
+        "Rujun Han",
+        "George Lee",
+        "Hanghang Tong",
+        "Chen-Yu Lee",
+        "Tomas Pfister"
+      ],
+      "abstract": "Training deep research agents, namely systems that plan, search, evaluate evidence, and synthesize long-form reports, pushes reinforcement learning beyond the regime of verifiable rewards. Their outputs lack ground-truth answers, their trajectories span many tool-augmented decisions, and standard post-training offers little mechanism for turning past attempts into reusable experience. In this work, we argue that rubrics should serve not merely as final-answer evaluators, but as the shared interface that structures policy execution, judge feedback, and agent memory. Based on this view, we introduce RubricEM, a rubric-guided reinforcement learning framework that combines stagewise policy decomposition with reflection-based meta-policy evolution. RubricEM first makes research trajectories stage-aware by conditioning planning, evidence gathering, review, and synthesis on self-generated rubrics. It then assigns credit with Stage-Structured GRPO, which uses stagewise rubric judgments to provide denser semantic feedback for long-horizon optimization. In parallel, RubricEM trains a shared-backbone reflection meta-policy that distills judged trajectories into reusable rubric-grounded guidance for future attempts. The resulting RubricEM-8B achieves strong performance across four long-form research benchmarks, outperforming comparable open models and approaching proprietary deep-research systems. Beyond final performance, we perform thorough analyses to understand the key ingredients of RubricEM.",
+      "published_date": "2026-05-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.10899",
+      "pdf_url": "https://arxiv.org/pdf/2605.10899",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.10899",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 65,
+      "hot_score": 650,
+      "structured_summary": {
+        "chinese_title": "RubricEM：超越可验证奖励的元强化学习框架",
+        "chinese_summary": "RubricEM 是一种基于评分表的元强化学习框架，通过阶段化策略分解和基于阶段的元策略进化，提高长期优化的语义反馈密度。",
+        "pain_point": "现有强化学习框架难以处理缺乏真实答案、涉及多步骤决策且缺乏有效经验回用机制的研究型智能体。",
+        "core_value": "通过引入评分表作为结构化接口，RubricEM 提高了策略执行、反馈和智能体记忆的效率，增强了长期优化能力。",
+        "technical_architecture": "RubricEM 结合阶段化策略分解和基于阶段的元策略进化，使用阶段评分表提供更密集的语义反馈。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多复杂任务上验证其有效性和泛化能力。",
+        "key_contributions": [
+          "提出基于评分表的元强化学习框架",
+          "引入阶段化策略分解和基于阶段的元策略进化",
+          "提供更密集的语义反馈以优化长期决策"
+        ],
+        "application_scenarios": [
+          "研究型智能体训练",
+          "多步骤决策优化"
+        ],
+        "technical_highlights": [
+          "评分表作为结构化接口",
+          "阶段化策略分解和元策略进化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.12178",
+      "source": "huggingface",
+      "title": "Do Enterprise Systems Need Learned World Models? The Importance of Context to Infer Dynamics",
+      "authors": [
+        "Jishnu Sethumadhavan Nair",
+        "Patrice Bechard",
+        "Rishabh Maheshwary",
+        "Surajit Dasgupta",
+        "Sravan Ramachandran",
+        "Aakash Bhagat",
+        "Shruthan Radhakrishna",
+        "Pulkit Pattnaik",
+        "Johan Obando-Ceron",
+        "Shiva Krishna Reddy Malay",
+        "Sagar Davasam",
+        "Seganrasan Subramanian",
+        "Vipul Mittal",
+        "Sridhar Krishna Nemala",
+        "Christopher Pal",
+        "Srinivas Sunkara",
+        "Sai Rajeswar"
+      ],
+      "abstract": "World models enable agents to anticipate the effects of their actions by internalizing environment dynamics. In enterprise systems, however, these dynamics are often defined by tenant-specific business logic that varies across deployments and evolves over time, making models trained on historical transitions brittle under deployment shift. We ask a question the world-models literature has not addressed: when the rules can be read at inference time, does an agent still need to learn them? We argue, and demonstrate empirically, that in settings where transition dynamics are configurable and readable, runtime discovery complements offline training by grounding predictions in the active system instance. We propose enterprise discovery agents, which recover relevant transition dynamics at runtime by reading the system's configuration rather than relying solely on internalized representations. We introduce CascadeBench, a reasoning-focused benchmark for enterprise cascade prediction that adopts the evaluation methodology of World of Workflows on diverse synthetic environments, and use it together with deployment-shift evaluation to show that offline-trained world models can perform well in-distribution but degrade as dynamics change, whereas discovery-based agents are more robust under shift by grounding their predictions in the current instance. Our findings suggest that, in configurable enterprise environments, agents should not rely solely on fixed internalized dynamics, but should incorporate mechanisms for discovering relevant transition logic at runtime.",
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.12178",
+      "pdf_url": "https://arxiv.org/pdf/2605.12178",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.12178",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 52,
+      "hot_score": 520,
+      "structured_summary": {
+        "chinese_title": "企业系统需要学习世界模型吗？推理时规则可读性对动态推断的重要性",
+        "chinese_summary": "在企业系统中，通过读取系统配置而非依赖内部化表示来恢复相关转换动态，从而提高预测准确性。",
+        "pain_point": "企业系统中环境动态随部署和时间变化，历史训练模型在部署转移时表现脆弱。",
+        "core_value": "提出企业发现代理，通过读取系统配置在运行时恢复相关转换动态，补充离线训练。",
+        "technical_architecture": "提出企业发现代理，通过读取系统配置而非依赖内部化表示来恢复相关转换动态。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在可读规则的场景下验证，未来需在更广泛场景下测试。",
+        "key_contributions": [
+          "提出企业发现代理，通过读取系统配置恢复相关转换动态",
+          "提出CascadeBench基准，用于企业级级联预测"
+        ],
+        "application_scenarios": [
+          "企业系统配置管理",
+          "企业级级联预测"
+        ],
+        "technical_highlights": [
+          "通过读取系统配置恢复相关转换动态",
+          "提出CascadeBench基准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.12090",
+      "source": "huggingface",
+      "title": "World Action Models: The Next Frontier in Embodied AI",
+      "authors": [
+        "Siyin Wang",
+        "Junhao Shi",
+        "Zhaoyang Fu",
+        "Xinzhe He",
+        "Feihong Liu",
+        "Chenchen Yang",
+        "Yikang Zhou",
+        "Zhaoye Fei",
+        "Jingjing Gong",
+        "Jinlan Fu",
+        "Mike Zheng Shou",
+        "Xuanjing Huang",
+        "Xipeng Qiu",
+        "Yu-Gang Jiang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have achieved strong semantic generalization for embodied policy learning, yet they learn reactive observation-to-action mappings without explicitly modeling how the physical world evolves under intervention. A growing body of work addresses this limitation by integrating world models, predictive models of environment dynamics, into the action generation pipeline. We term this emerging paradigm World Action Models (WAMs): embodied foundation models that unify predictive state modeling with action generation, targeting a joint distribution over future states and actions rather than actions alone. However, the literature remains fragmented across architectures, learning objectives, and application scenarios, lacking a unified conceptual framework. We formally define WAMs and disambiguate them from related concepts, and trace the foundations and early integration of VLA and world model research that gave rise to this paradigm. We organize existing methods into a structured taxonomy of Cascaded and Joint WAMs, with further subdivision by generation modality, conditioning mechanism, and action decoding strategy. We systematically analyze the data ecosystem fueling WAMs development, spanning robot teleoperation, portable human demonstrations, simulation, and internet-scale egocentric video, and synthesize emerging evaluation protocols organized around visual fidelity, physical commonsense, and action plausibility. Overall, this survey provides the first systematic account of the WAMs landscape, clarifies key architectural paradigms and their trade-offs, and identifies open challenges and future opportunities for this rapidly evolving field.",
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.12090",
+      "pdf_url": "https://arxiv.org/pdf/2605.12090",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.12090",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 47,
+      "hot_score": 470,
+      "structured_summary": {
+        "chinese_title": "世界行动模型：实体AI的下一个前沿",
+        "chinese_summary": "提出了世界行动模型（WAMs），结合预测状态建模与行动生成，旨在联合分布未来状态和行动。",
+        "pain_point": "现有VLA模型未明确建模物理世界在干预下的演变。",
+        "core_value": "提供统一的概念框架，区分WAMs与其他相关概念。",
+        "technical_architecture": "构建了Cascaded和Joint WAMs的分类体系。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作需进一步探索具体应用。",
+        "key_contributions": [
+          "定义了WAMs",
+          "区分了WAMs与其他相关概念",
+          "构建了WAMs的分类体系"
+        ],
+        "application_scenarios": [
+          "实体AI",
+          "环境动态预测"
+        ],
+        "technical_highlights": [
+          "统一的概念框架",
+          "Cascaded和Joint WAMs分类"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.06546",
+      "source": "huggingface",
+      "title": "Efficient Pre-Training with Token Superposition",
+      "authors": [
+        "Bowen Peng",
+        "Théo Gigant",
+        "Jeffrey Quesnelle"
+      ],
+      "abstract": "Pre-training of Large Language Models is often prohibitively expensive and inefficient at scale, requiring complex and invasive modifications in order to achieve high data throughput. In this work, we present Token-Superposition Training (TST), a simple drop-in method that significantly improves the data throughput per FLOPs during pre-training without modifying the parallelism, optimizer, tokenizer, data, or model architecture. TST is done in two phases: (i) A highly efficient superposition phase where we combine many contiguous tokens into one bag and train using a multi-hot cross-entropy (MCE) objective, and (ii) a recovery phase where we revert back to standard training. We extensively evaluate TST on the scale of 270M and 600M parameters and validate on 3B and a 10B A1B mixture of experts model, demonstrating that it is highly robust in different settings. Ultimately, TST consistently outperforms baseline loss and downstream evaluations, and under equal-loss settings, TST yields up to a 2.5x reduction in total pre-training time at the 10B A1B scale.",
+      "published_date": "2026-05-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.06546",
+      "pdf_url": "https://arxiv.org/pdf/2605.06546",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.06546",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.12495",
+      "source": "huggingface",
+      "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
+      "authors": [
+        "Runhui Huang",
+        "Jie Wu",
+        "Rui Yang",
+        "Zhe Liu",
+        "Hengshuang Zhao"
+      ],
+      "abstract": "In this paper, we propose AlphaGRPO, a novel framework that applies Group Relative Policy Optimization (GRPO) to AR-Diffusion Unified Multimodal Models (UMMs) to enhance multimodal generation capabilities without an additional cold-start stage. Our approach unlocks the model's intrinsic potential to perform advanced reasoning tasks: Reasoning Text-to-Image Generation, where the model actively infers implicit user intents, and Self-Reflective Refinement, where it autonomously diagnoses and corrects misalignments in generated outputs. To address the challenge of providing stable supervision for real-world multimodal generation, we introduce the Decompositional Verifiable Reward (DVReward). Unlike holistic scalar rewards, DVReward utilizes an LLM to decompose complex user requests into atomic, verifiable semantic and quality questions, which are then evaluated by a general MLLM to provide reliable and interpretable feedback. Extensive experiments demonstrate that AlphaGRPO yields robust improvements across multimodal generation benchmarks, including GenEval, TIIF-Bench, DPG-Bench and WISE, while also achieving significant gains in editing tasks on GEdit without training on editing tasks. These results validate that our self-reflective reinforcement approach effectively leverages inherent understanding to guide high-fidelity generation. Project page: https://huangrh99.github.io/AlphaGRPO/",
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.12495",
+      "pdf_url": "https://arxiv.org/pdf/2605.12495",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.12495",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "AlphaGRPO：通过分解验证奖励解锁UMMs的自省式多模态生成",
+        "chinese_summary": "AlphaGRPO通过GRPO和DVReward提升UMMs的多模态生成能力，实现高级推理和自省式修正。",
+        "pain_point": "现有方法需要冷启动阶段，难以稳定监督复杂的多模态生成任务。",
+        "core_value": "无需冷启动，通过分解验证奖励提供稳定监督，提升生成质量和自省能力。",
+        "technical_architecture": "采用Group Relative Policy Optimization和Decompositional Verifiable Reward。",
+        "quantitative_results": "在多个多模态生成基准上取得显著改进，包括GenEval、TIIF-Bench等。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究在更多场景下的应用。",
+        "key_contributions": [
+          "提出AlphaGRPO框架",
+          "引入分解验证奖励机制",
+          "提升多模态生成和自省修正能力"
+        ],
+        "application_scenarios": [
+          "文本到图像生成",
+          "自省式修正"
+        ],
+        "technical_highlights": [
+          "无需冷启动阶段",
+          "利用LLM分解验证奖励"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.10780",
+      "source": "huggingface",
+      "title": "Beyond the Last Layer: Multi-Layer Representation Fusion for Visual Tokenization",
+      "authors": [
+        "Xuanyu Zhu",
+        "Yan Bai",
+        "Yang Shi",
+        "Yihang Lou",
+        "Yuanxing Zhang",
+        "Jing Jin",
+        "Yuan Zhou"
+      ],
+      "abstract": "Representation autoencoders that reuse frozen pretrained vision encoders as visual tokenizers have achieved strong reconstruction and generation quality. However, existing methods universally extract features from only the last encoder layer, discarding the rich hierarchical information distributed across intermediate layers. We show that low-level visual details survive in the last layer merely as attenuated residuals after multiple layers of semantic abstraction, and that explicitly fusing multi-layer features can substantially recover this lost information. We propose DRoRAE (Depth-Routed Representation AutoEncoder), a lightweight fusion module that adaptively aggregates all encoder layers via energy-constrained routing and incremental correction, producing an enriched latent compatible with a frozen pretrained decoder. A three-phase decoupled training strategy first learns the fusion under the implicit distributional constraint of the frozen decoder, then fine-tunes the decoder to fully exploit the enriched representation. On ImageNet-256, DRoRAE reduces rFID from 0.57 to 0.29 and improves generation FID from 1.74 to 1.65 (with AutoGuidance), with gains also transferring to text-to-image synthesis. Furthermore, we uncover a log-linear scaling law (R^2{=}0.86) between fusion capacity and reconstruction quality, identifying representation richness as a new, predictably scalable dimension for visual tokenizers analogous to vocabulary size in NLP.",
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.10780",
+      "pdf_url": "https://arxiv.org/pdf/2605.10780",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.10780",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.09131",
+      "source": "huggingface",
+      "title": "MCP-Cosmos: World Model-Augmented Agents for Complex Task Execution in MCP Environments",
+      "authors": [
+        "Giridhar Ganapavarapu",
+        "Dhaval Patel"
+      ],
+      "abstract": "The Model Context Protocol (MCP) has unified the interface between Large Language Models (LLMs) and external tools, yet a fundamental gap remains in how agents conceptualize the environments within which they operate. Current paradigms are bifurcated: Task-level planning often ignores execution-time dynamics, while reactive execution lacks long-horizon foresight. We present MCP-Cosmos, a framework that infuses generative World Models (WM) into the MCP ecosystem to enable predictive task automation. By unifying three disparate technologies, namely MCP, World Model, and Agent, we demonstrate that a \"Bring Your Own World Model\" (BYOWM) strategy allows agents to simulate state transitions and refine plans in a latent space before execution. We conducted experiments using two strategies, namely ReAct and SPIRAL with 2 planning models and 3 representative world models over 20+ MCP-Bench tasks. We observed improvements in Agent's environment interaction KPI such as tool success rate and tool parameter accuracy. The framework also offers new metrics such as Execution Quality to generate new insights about the effectiveness of world models compared to baseline.",
+      "published_date": "2026-05-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.09131",
+      "pdf_url": "https://arxiv.org/pdf/2605.09131",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.09131",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": null
+    }
+  ]
+}

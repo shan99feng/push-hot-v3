@@ -1,0 +1,488 @@
+{
+  "date": "2026-05-14",
+  "generated_at": "2026-05-15T00:00:09.700066+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2605.13779",
+      "source": "huggingface",
+      "title": "MinT: Managed Infrastructure for Training and Serving Millions of LLMs",
+      "authors": [
+        "Mind Lab",
+        "Song Cao",
+        "Vic Cao",
+        "Andrew Chen",
+        "Kaijie Chen",
+        "Cleon Cheng",
+        "Steven Chiang",
+        "Kaixuan Fan",
+        "Hera Feng",
+        "Huan Feng",
+        "Arthur Fu",
+        "Jun Gao",
+        "Hongquan Gu",
+        "Aaron Guan",
+        "Nolan Ho",
+        "Mutian Hong",
+        "Hailee Hou",
+        "Peixuan Hua",
+        "Charles Huang",
+        "Miles Jiang",
+        "Nora Jiang",
+        "Yuyi Jiang",
+        "Qiuyu Jin",
+        "Fancy Kong",
+        "Andrew Lei",
+        "Kyrie Lei",
+        "Alexy Li",
+        "Lucian Li",
+        "Ray Li",
+        "Theo Li",
+        "Zhihui Li",
+        "Jiayi Lin",
+        "Kairus Liu",
+        "Kieran Liu",
+        "Logan Liu",
+        "Xiang Liu",
+        "Irvine Lu",
+        "Maeve Luo",
+        "Runze Lv",
+        "Pony Ma",
+        "Verity Niu",
+        "Anson Qiu",
+        "Vincent Wang",
+        "Rio Yang",
+        "Maxwell Yao",
+        "Carrie Ye",
+        "Regis Ye",
+        "Wenlin Ye",
+        "Josh Ying",
+        "Danney Zeng",
+        "Yuhan Zhan",
+        "Anya Zhang",
+        "Di Zhang",
+        "Ruijia Zhang",
+        "Sueky Zhang",
+        "Ya Zhang",
+        "Wei Zhao",
+        "Ada Zhou",
+        "Changhai Zhou",
+        "Yuhua Zhou",
+        "Xinyue Zhu",
+        "Murphy Zhuang"
+      ],
+      "abstract": "We present MindLab Toolkit (MinT), a managed infrastructure system for Low-Rank Adaptation (LoRA) post-training and online serving. MinT targets a setting where many trained policies are produced over a small number of expensive base-model deployments. Instead of materializing each policy as a merged full checkpoint, MinT keeps the base model resident and moves exported LoRA adapter revisions through rollout, update, export, evaluation, serving, and rollback, hiding distributed training, serving, scheduling, and data movement behind a service interface. MinT scales this path along three axes. Scale Up extends LoRA RL to frontier-scale dense and MoE architectures, including MLA and DSA attention paths, with training and serving validated beyond 1T total parameters. Scale Down moves only the exported LoRA adapter, which can be under 1% of base-model size in rank-1 settings; adapter-only handoff reduces the measured step by 18.3x on a 4B dense model and 2.85x on a 30B MoE, while concurrent multi-policy GRPO shortens wall time by 1.77x and 1.45x without raising peak memory. Scale Out separates durable policy addressability from CPU/GPU working sets: a tensor-parallel deployment supports 10^6-scale addressable catalogs (measured single-engine sweeps through 100K) and thousand-adapter active waves at cluster scale, with cold loading treated as scheduled service work and packed MoE LoRA tensors improving live engine loading by 8.5-8.7x. MinT thus manages million-scale LoRA policy catalogs while training and serving selected adapter revisions over shared 1T-class base models.",
+      "published_date": "2026-05-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.13779",
+      "pdf_url": "https://arxiv.org/pdf/2605.13779",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.13779",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.DC"
+      ],
+      "upvotes": 143,
+      "hot_score": 1430,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.10616",
+      "source": "huggingface",
+      "title": "MulTaBench: Benchmarking Multimodal Tabular Learning with Text and Image",
+      "authors": [
+        "Alan Arazi",
+        "Eilam Shapira",
+        "Shoham Grunblat",
+        "Mor Ventura",
+        "Elad Hoffer",
+        "Gioia Blayer",
+        "David Holzmüller",
+        "Lennart Purucker",
+        "Gaël Varoquaux",
+        "Frank Hutter",
+        "Roi Reichart"
+      ],
+      "abstract": "Tabular Foundation Models have recently established the state of the art in supervised tabular learning, by leveraging pretraining to learn generalizable representations of numerical and categorical structured data. However, they lack native support for unstructured modalities such as text and image, and rely on frozen, pretrained embeddings to process them. On established Multimodal Tabular Learning benchmarks, we show that tuning the embeddings to the task improves performance. Existing benchmarks, however, often focus on the mere co-occurrence of modalities; this leads to high variance across datasets and masks the benefits of task-specific tuning. To address this gap, we introduce MulTaBench, a benchmark of 40 datasets, split equally between image-tabular and text-tabular tasks. We focus on predictive tasks where the modalities provide complementary predictive signal, and where generic embeddings lose critical information, necessitating Target-Aware Representations that are aligned with the task. Our experimental results demonstrate that the gains from target-aware representation tuning generalize across both text and image modalities, several tabular learners, encoder scales, and embedding dimensions. MulTaBench constitutes the largest image-tabular benchmarking effort to date, spanning high-impact domains such as healthcare and e-commerce. It is designed to enable the research of novel architectures which incorporate joint modeling and target-aware representations, paving the way for the development of novel Multimodal Tabular Foundation Models.",
+      "published_date": "2026-05-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.10616",
+      "pdf_url": "https://arxiv.org/pdf/2605.10616",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.10616",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 118,
+      "hot_score": 1180,
+      "structured_summary": {
+        "chinese_title": "MulTaBench：基于文本和图像的多模态表格学习基准测试",
+        "chinese_summary": "引入MulTaBench基准，包含40个数据集，专注于文本和图像模态的互补预测信号。",
+        "pain_point": "现有基准主要关注模态共现，导致数据集间性能波动大，掩盖了任务特定调优的好处。",
+        "core_value": "提供一个专注于模态互补预测信号的基准，促进任务特定的表征调优。",
+        "technical_architecture": "设计了40个数据集，平衡图像-表格和文本-表格任务。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对特定类型的预测任务，未来可扩展至更多任务类型。",
+        "key_contributions": [
+          "引入了专注于模态互补预测信号的基准",
+          "展示了目标感知表征调优的泛化能力",
+          "平衡了图像-表格和文本-表格任务的数据集"
+        ],
+        "application_scenarios": [
+          "多模态表格学习",
+          "任务特定的表征调优"
+        ],
+        "technical_highlights": [
+          "设计了40个数据集，平衡图像-表格和文本-表格任务",
+          "展示了目标感知表征调优的泛化能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.13724",
+      "source": "huggingface",
+      "title": "AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation",
+      "authors": [
+        "Yuchao Gu",
+        "Guian Fang",
+        "Yuxin Jiang",
+        "Weijia Mao",
+        "Song Han",
+        "Han Cai",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Few-step video generation has been significantly advanced by consistency distillation. However, the performance of consistency-distilled models often degrades as more sampling steps are allocated at test time, limiting their effectiveness for any-step video diffusion. This limitation arises because consistency distillation replaces the original probability-flow ODE trajectory with a consistency-sampling trajectory, weakening the desirable test-time scaling behavior of ODE sampling. To address this limitation, we introduce AnyFlow, the first any-step video diffusion distillation framework based on flow maps. Instead of distilling a model for only a few fixed sampling steps, AnyFlow optimizes the full ODE sampling trajectory. To this end, we shift the distillation target from endpoint consistency mapping (z_{t}rightarrow z_{0}) to flow-map transition learning (z_{t}rightarrow z_{r}) over arbitrary time intervals. We further propose Flow Map Backward Simulation, which decomposes a full Euler rollout into shortcut flow-map transitions, enabling efficient on-policy distillation that reduces test-time errors (i.e., discretization error in few-step sampling and exposure bias in causal generation). Extensive experiments across both bidirectional and causal architectures, at scales ranging from 1.3B to 14B parameters, demonstrate that AnyFlow achieves performance matches or surpasses consistency-based counterparts in the few-step regime, while scaling with sampling step budgets.",
+      "published_date": "2026-05-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.13724",
+      "pdf_url": "https://arxiv.org/pdf/2605.13724",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.13724",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 76,
+      "hot_score": 760,
+      "structured_summary": {
+        "chinese_title": "AnyFlow: 任意步长视频扩散模型的基于流图的策略性蒸馏",
+        "chinese_summary": "AnyFlow 提出了一个基于流图的任意步长视频扩散蒸馏框架，解决了现有模型在更多采样步骤下性能下降的问题。",
+        "pain_point": "现有模型在更多采样步骤下性能下降，限制了其在任意步长视频扩散中的应用。",
+        "core_value": "AnyFlow 优化了完整的 ODE 采样轨迹，提高了模型在任意步长下的性能。",
+        "technical_architecture": "基于流图的策略性蒸馏框架，优化完整的 ODE 采样轨迹。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证在更多实际场景中的应用效果。",
+        "key_contributions": [
+          "提出了基于流图的任意步长视频扩散蒸馏框架",
+          "优化了完整的 ODE 采样轨迹",
+          "提出了流图反向模拟方法"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "视频增强"
+        ],
+        "technical_highlights": [
+          "流图反向模拟方法提高了效率",
+          "解决了现有模型在更多采样步骤下的性能下降问题"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.13831",
+      "source": "huggingface",
+      "title": "Training Long-Context Vision-Language Models Effectively with Generalization Beyond 128K Context",
+      "authors": [
+        "Zhaowei Wang",
+        "Lishu Luo",
+        "Haodong Duan",
+        "Weiwei Liu",
+        "Sijin Wu",
+        "Ji Luo",
+        "Shen Yan",
+        "Shuai Peng",
+        "Sihang Yuan",
+        "Chaoyi Huang",
+        "Yi Lin",
+        "Yangqiu Song"
+      ],
+      "abstract": "Long-context modeling is becoming a core capability of modern large vision-language models (LVLMs), enabling sustained context management across long-document understanding, video analysis, and multi-turn tool use in agentic workflows. Yet practical training recipes remain insufficiently explored, particularly for designing and balancing long-context data mixtures. In this work, we present a systematic study of long-context continued pre-training for LVLMs, extending a 7B model from 32K to 128K context with extensive ablations on long-document data. We first show that long-document VQA is substantially more effective than OCR transcription. Building on this observation, our ablations further yield three key findings: i) for sequence-length distribution, balanced data outperforms target-length-focused data (e.g., 128K), suggesting that long-context ability requires generalizable key-information retrieval across various lengths and positions; ii) retrieval remains the primary bottleneck, favoring retrieval-heavy mixtures with modest reasoning data for task diversity; and iii) pure long-document VQA largely preserves short-context capabilities, suggesting that instruction-formatted long data reduces the need for short-data mixing. Based on these findings, we introduce MMProLong, obtained by long-context continued pre-training from Qwen2.5-VL-7B with only a 5B-token budget. MMProLong improves long-document VQA scores by 7.1% and maintains strong performance at 256K and 512K contexts beyond its 128K training window, without additional training. It further generalizes to webpage-based multimodal needle retrieval, long-context vision-text compression, and long-video understanding without task-specific supervision. Overall, our study establishes a practical LongPT recipe and an empirical foundation for advancing long-context vision-language models.",
+      "published_date": "2026-05-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.13831",
+      "pdf_url": "https://arxiv.org/pdf/2605.13831",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.13831",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 73,
+      "hot_score": 730,
+      "structured_summary": {
+        "chinese_title": "有效训练长上下文视觉-语言模型，超越128K上下文泛化能力",
+        "chinese_summary": "通过平衡数据和重视检索，将模型上下文从32K扩展到128K。",
+        "pain_point": "现有训练方法对长上下文数据混合设计和平衡不足。",
+        "core_value": "提出系统性研究，提升长上下文视觉-语言模型的泛化能力。",
+        "technical_architecture": "通过大量消融实验优化长文档数据混合。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多任务多样性。",
+        "key_contributions": [
+          "提出平衡数据优于目标长度数据",
+          "强调检索在长上下文中的重要性",
+          "保持短上下文能力的同时扩展长上下文"
+        ],
+        "application_scenarios": [
+          "长文档理解",
+          "视频分析",
+          "多轮工具使用"
+        ],
+        "technical_highlights": [
+          "系统性研究长上下文预训练",
+          "平衡数据优于目标长度数据"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.13841",
+      "source": "huggingface",
+      "title": "EVA-Bench: A New End-to-end Framework for Evaluating Voice Agents",
+      "authors": [
+        "Tara Bogavelli",
+        "Gabrielle Gauthier Melançon",
+        "Katrina Stankiewicz",
+        "Oluwanifemi Bamgbose",
+        "Fanny Riols",
+        "Hoang H. Nguyen",
+        "Raghav Mehndiratta",
+        "Lindsay Devon Brin",
+        "Joseph Marinier",
+        "Hari Subramani",
+        "Anil Madamala",
+        "Sridhar Krishna Nemala",
+        "Srinivas Sunkara"
+      ],
+      "abstract": "Voice agents, artificial intelligence systems that conduct spoken conversations to complete tasks, are increasingly deployed across enterprise applications. However, no existing benchmark jointly addresses two core evaluation challenges: generating realistic simulated conversations, and measuring quality across the full scope of voice-specific failure modes. We present EVA-Bench, an end-to-end evaluation framework that addresses both. On the simulation side, EVA-Bench orchestrates bot-to-bot audio conversations over dynamic multi-turn dialogues, with automatic simulation validation that detects user simulator error and appropriately regenerates conversations before scoring. On the measurement side, EVA-Bench introduces two composite metrics: EVA-A (Accuracy), capturing task completion, faithfulness, and audio-level speech fidelity; and EVA-X (Experience), capturing conversation progression, spoken conciseness, and turn-taking timing. Both metrics apply to different agent architectures, enabling direct cross-architecture comparison. EVA-Bench includes 213 scenarios across three enterprise domains, a controlled perturbation suite for accent and noise robustness, and pass@1, pass@k, pass^k measurements that distinguish peak from reliable capability. Across 12 systems spanning all three architectures, we find: (1) no system simultaneously exceeds 0.5 on both EVA-A pass@1 and EVA-X pass@1; (2) peak and reliable performance diverge substantially (median pass@k - pass^k gap of 0.44 on EVA-A); and (3) accent and noise perturbations expose substantial robustness gaps, with effects varying across architectures, systems, and metrics (mean up to 0.314). We release the full framework, evaluation suite, and benchmark data under an open-source license.",
+      "published_date": "2026-05-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.13841",
+      "pdf_url": "https://arxiv.org/pdf/2605.13841",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.13841",
+      "category": "llm",
+      "tags": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.12411",
+      "source": "huggingface",
+      "title": "Predicting Decisions of AI Agents from Limited Interaction through Text-Tabular Modeling",
+      "authors": [
+        "Eilam Shapira",
+        "Moshe Tennenholtz",
+        "Roi Reichart"
+      ],
+      "abstract": "AI agents negotiate and transact in natural language with unfamiliar counterparts: a buyer bot facing an unknown seller, or a procurement assistant negotiating with a supplier. In such interactions, the counterpart's LLM, prompts, control logic, and rule-based fallbacks are hidden, while each decision can have monetary consequences. We ask whether an agent can predict an unfamiliar counterpart's next decision from a few interactions. To avoid real-world logging confounds, we study this problem in controlled bargaining and negotiation games, formulating it as target-adaptive text-tabular prediction: each decision point is a table row combining structured game state, offer history, and dialogue, while K previous games of the same target agent, i.e., the counterpart being modeled, are provided in the prompt as labeled adaptation examples. Our model is built on a tabular foundation model that represents rows using game-state features and LLM-based text representations, and adds LLM-as-Observer as an additional representation: a small frozen LLM reads the decision-time state and dialogue; its answer is discarded, and its hidden state becomes a decision-oriented feature, making the LLM an encoder rather than a direct few-shot predictor. Training on 13 frontier-LLM agents and testing on 91 held-out scaffolded agents, the full model outperforms direct LLM-as-Predictor prompting and game+text features baselines. Within this tabular model, Observer features contribute beyond the other feature schemes: at K=16, they improve response-prediction AUC by about 4 points across both tasks and reduce bargaining offer-prediction error by 14%. These results show that formulating counterpart prediction as a target-adaptive text-tabular task enables effective adaptation, and that hidden LLM representations expose decision-relevant signals that direct prompting does not surface.",
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.12411",
+      "pdf_url": "https://arxiv.org/pdf/2605.12411",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.12411",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.13565",
+      "source": "huggingface",
+      "title": "Qwen-Image-VAE-2.0 Technical Report",
+      "authors": [
+        "Zekai Zhang",
+        "Deqing Li",
+        "Kuan Cao",
+        "Yujia Wu",
+        "Chenfei Wu",
+        "Yu Wu",
+        "Liang Peng",
+        "Hao Meng",
+        "Jiahao Li",
+        "Jie Zhang",
+        "Kaiyuan Gao",
+        "Kun Yan",
+        "Lihan Jiang",
+        "Ningyuan Tang",
+        "Shengming Yin",
+        "Tianhe Wu",
+        "Xiao Xu",
+        "Xiaoyue Chen",
+        "Yan Shu",
+        "Yanran Zhang",
+        "Yilei Chen",
+        "Yixian Xu",
+        "Yuxiang Chen",
+        "Zhendong Wang",
+        "Zihao Liu",
+        "Zikai Zhou",
+        "Yiliang Gu",
+        "Yi Wang",
+        "Xiaoxiao Xu",
+        "Lin Qu"
+      ],
+      "abstract": "We present Qwen-Image-VAE-2.0, a suite of high-compression Variational Autoencoders (VAEs) that achieve significant advances in both reconstruction fidelity and diffusability. To address the reconstruction bottlenecks of high compression, we adopt an improved architecture featuring Global Skip Connections (GSC) and expanded latent channels. Moreover, we scale training to billions of images and incorporate a synthetic rendering engine to improve performance in text-rich scenarios. To tackle the convergence challenges of high-dimensional latent space, we implement an enhanced semantic alignment strategy to make the latent space highly amenable to diffusion modeling. To optimize computational efficiency, we leverage an asymmetric and attention-free encoder-decoder backbone to minimize encoding overhead. We present a comprehensive evaluation of Qwen-Image-VAE-2.0 on public reconstruction benchmarks. To evaluate performance in text-rich scenarios, we propose OmniDoc-TokenBench, a new benchmark comprising a diverse collection of real-world documents coupled with specialized OCR-based evaluation metrics. Qwen-Image-VAE-2.0 achieves state-of-the-art reconstruction performance, demonstrating exceptional capabilities in both general domains and text-rich scenarios at high compression ratio. Furthermore, downstream DiT experiments reveal our models possess superior diffusability, significantly accelerating convergence compared to existing high-compression baselines. These establish Qwen-Image-VAE-2.0 as a leading model with high compression, superior reconstruction, and exceptional diffusability.",
+      "published_date": "2026-05-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.13565",
+      "pdf_url": "https://arxiv.org/pdf/2605.13565",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.13565",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 41,
+      "hot_score": 410,
+      "structured_summary": {
+        "chinese_title": "Qwen-图像-VAE--.2",
+        "chinese_summary": "显著提高重建精度与扩散性",
+        "pain_point": "现有高压缩VAE在重建精度与扩散性方面存在瓶颈。",
+        "core_value": "",
+        "technical_architecture": "采用用采用采用全局跳连结构与扩展潜空间。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "",
+        "key_contributions": [],
+        "application_scenarios": [
+          "丰富文档重建",
+          "复杂场景文本富",
+          "technical_highights"
+        ],
+        "technical_highlights": [],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2605.13062",
+      "source": "huggingface",
+      "title": "Edit-Compass & EditReward-Compass: A Unified Benchmark for Image Editing and Reward Modeling",
+      "authors": [
+        "Xuehai Bai",
+        "Yang Shi",
+        "Yi-Fan Zhang",
+        "Xuanyu Zhu",
+        "Yuran Wang",
+        "Yifan Dai",
+        "Xinyu Liu",
+        "Yiyan Ji",
+        "Xiaoling Gu",
+        "Yuanxing Zhang"
+      ],
+      "abstract": "Recent image editing models have achieved remarkable progress in instruction following, multimodal understanding, and complex visual editing. However, existing benchmarks often fail to faithfully reflect human judgment, especially for strong frontier models, due to limited task difficulty and coarse-grained evaluation protocols. In parallel, reward models have become increasingly important for RL-based image editing optimization, yet existing reward model benchmarks still rely on unrealistic evaluation settings that deviate from practical RL scenarios. These limitations hinder reliable assessment of both image editing models and reward models. To address these challenges, we introduce Edit-Compass and EditReward-Compass, a unified evaluation suite for image editing and reward modeling. Edit-Compass contains 2,388 carefully annotated instances spanning six progressively challenging task categories, covering capabilities such as world knowledge reasoning, visual reasoning, and multi-image editing. Beyond broad task coverage, Edit-Compass adopts a fine-grained multidimensional evaluation framework based on structured reasoning and carefully designed scoring rubrics. In parallel, EditReward-Compass contains 2,251 preference pairs that simulate realistic reward modeling scenarios during RL optimization.",
+      "published_date": "2026-05-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.13062",
+      "pdf_url": "https://arxiv.org/pdf/2605.13062",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.13062",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.12587",
+      "source": "huggingface",
+      "title": "TrackCraft3R: Repurposing Video Diffusion Transformers for Dense 3D Tracking",
+      "authors": [
+        "Jisu Nam",
+        "Jahyeok Koo",
+        "Soowon Son",
+        "Jaewoo Jung",
+        "Honggyu An",
+        "Junhwa Hur",
+        "Seungryong Kim"
+      ],
+      "abstract": "Dense 3D tracking from monocular video is fundamental to dynamic scene understanding. While recent 3D foundation models provide reliable per-frame geometry, recovering object motion in this geometry remains challenging and benefits from strong motion priors learned from real-world videos. Existing 3D trackers either follow iterative paradigms trained from scratch on synthetic data or fine-tune 3D reconstruction models learned from static multi-view images, both lacking real-world motion priors. Pre-trained video diffusion transformers (video DiTs) offer rich spatio-temporal priors from internet-scale videos, making them a promising foundation for 3D tracking. However, their frame-anchored formulation, which generates each frame's content, is fundamentally mismatched with reference-anchored dense 3D tracking, which must follow the same physical points from a reference frame across time. We present TrackCraft3R, the first method to repurpose a video DiT as a feed-forward dense 3D tracker. Given a monocular video and its frame-anchored reconstruction pointmap, TrackCraft3R predicts a reference-anchored tracking pointmap that follows every pixel of the first frame across time in a single forward pass, along with its visibility. We achieve this through two designs: (i) a dual-latent representation that uses per-frame geometry latents and reference-anchored track latents as dense queries, and (ii) temporal RoPE alignment, which specifies the target timestamp of each track latent. Together, these designs convert the per-frame generative paradigm of video DiTs into a reference-anchored tracking formulation with LoRA fine-tuning. TrackCraft3R achieves state-of-the-art performance on standard sparse and dense 3D tracking benchmarks, while running 1.3x faster and using 4.6x less peak memory than the strongest prior method. We further demonstrate robustness to large motions and long videos.",
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.12587",
+      "pdf_url": "https://arxiv.org/pdf/2605.12587",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.12587",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.13511",
+      "source": "huggingface",
+      "title": "Many-Shot CoT-ICL: Making In-Context Learning Truly Learn",
+      "authors": [
+        "Tsz Ting Chung",
+        "Lemao Liu",
+        "Mo Yu",
+        "Dit-Yan Yeung"
+      ],
+      "abstract": "In-context learning (ICL) adapts large language models (LLMs) to new tasks by conditioning on demonstrations in the prompt without parameter updates. With long-context models, many-shot ICL can use dozens to hundreds of examples and achieve performance comparable to fine-tuning, yet current understanding of its scaling behavior is largely derived from non-reasoning tasks. We study many-shot chain-of-thought in-context learning (CoT-ICL) for reasoning and show that standard many-shot rules do not transfer. Across non-reasoning and reasoning-oriented LLMs and across non-reasoning and reasoning tasks, we find: (i) a setting-dependent scaling effect, where increasing the number of CoT demonstrations is unstable for non-reasoning LLMs and benefits mainly reasoning-oriented LLMs; (ii) similarity-based retrieval helps on non-reasoning tasks but fails on reasoning, since semantic similarity poorly predicts procedural (i.e., CoT) compatibility; and (iii) an order-scaling effect, where performance variance grows with more CoT demonstrations. We interpret these behaviors by viewing many-shot CoT-ICL as in-context test-time learning rather than scaled pattern matching, and suggests two principles: (i) demonstrations should be easy for the target model to understand, and (ii) they should be ordered to support a smooth conceptual progression. Guided by the principle, we propose Curvilinear Demonstration Selection (CDS), a simple ordering method that yields up to a 5.42 percentage-point gain on geometry with 64 demonstrations. Overall, our results reframe the long context window from a retrieval buffer into a structured curriculum for in-context test-time learning.",
+      "published_date": "2026-05-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.13511",
+      "pdf_url": "https://arxiv.org/pdf/2605.13511",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.13511",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "Many-Shot CoT-ICL: 让在上下文学习真正学习",
+        "chinese_summary": "研究发现标准的多示例在上下文学习规则在推理任务中不适用。",
+        "pain_point": "当前理解的在上下文学习（ICL）主要基于非推理任务，对于推理任务效果不稳定。",
+        "core_value": "揭示了在上下文学习中的多示例链式思考（CoT-ICL）在推理任务中的行为差异。",
+        "technical_architecture": "通过分析不同模型和任务下的CoT-ICL表现，提出新的理解方式。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究CoT-ICL在更多任务和模型上的表现。",
+        "key_contributions": [
+          "发现CoT-ICL在推理任务中的行为与非推理任务不同",
+          "提出CoT-ICL在上下文学习中的新理解",
+          "揭示了CoT-ICL的设置依赖性缩放效应"
+        ],
+        "application_scenarios": [
+          "大型语言模型的推理任务优化",
+          "在上下文学习中的新方法探索"
+        ],
+        "technical_highlights": [
+          "通过实验分析不同模型和任务下的CoT-ICL表现",
+          "提出CoT-ICL在上下文学习中的新理解"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

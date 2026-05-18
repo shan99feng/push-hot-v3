@@ -1,0 +1,441 @@
+{
+  "date": "2026-05-17",
+  "generated_at": "2026-05-18T00:00:42.808534+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2605.15199v1",
+      "source": "arxiv",
+      "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
+      "authors": [
+        "Ruozhen He",
+        "Meng Wei",
+        "Ziyan Yang",
+        "Vicente Ordonez"
+      ],
+      "abstract": "Multi-shot video generation extends single-shot generation to coherent visual narratives, yet maintaining consistent characters, objects, and locations across shots remains a challenge over long sequences. Existing evaluations typically use independently generated prompt sets with limited entity coverage and simple consistency metrics, making standardized comparison difficult. We introduce EntityBench, a benchmark of 140 episodes (2,491 shots) derived from real narrative media, with explicit per-shot entity schedules tracking characters, objects, and locations simultaneously across easy / medium / hard tiers of up to 50 shots, 13 cross-shot characters, 8 cross-shot locations, 22 cross-shot objects, and recurrence gaps spanning up to 48 shots. It is paired with a three-pillar evaluation suite that disentangles intra-shot quality, prompt-following alignment, and cross-shot consistency, with a fidelity gate that admits only accurate entity appearances into cross-shot scoring. As a baseline, we propose EntityMem, a memory-augmented generation system that stores verified per-entity visual references in a persistent memory bank before generation begins. Experiments show that cross-shot entity consistency degrades sharply with recurrence distance in existing methods, and that explicit per-entity memory yields the highest character fidelity (Cohen's d = +2.33) and presence among methods evaluated. Code and data are available at https://github.com/Catherine-R-He/EntityBench/.",
+      "published_date": "2026-05-14T17:59:55Z",
+      "url": "https://arxiv.org/abs/2605.15199v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15199v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "EntityBench: 朝向实体一致的长序列多轮视频生成",
+        "chinese_summary": "提出EntityBench基准，解决多轮视频生成中角色、物体和地点在长序列中的一致性问题。",
+        "pain_point": "现有方法难以保持多轮视频中角色、物体和地点的一致性。",
+        "core_value": "提供全面的实体跟踪和评估框架，提升多轮视频生成的质量。",
+        "technical_architecture": "基于实体记忆的生成系统，存储验证过的视觉参考。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对特定类型叙事媒体，未来需扩展数据集。",
+        "key_contributions": [
+          "提出EntityBench基准",
+          "设计全面的实体跟踪和评估框架",
+          "提出EntityMem生成系统"
+        ],
+        "application_scenarios": [
+          "电影和电视剧的多轮视频生成",
+          "虚拟现实和增强现实中的连续场景生成"
+        ],
+        "technical_highlights": [
+          "包含140集（2491个镜头）的基准数据集",
+          "多维度评估框架，包括镜头内质量、指令跟随和跨镜头一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2605.15198v1",
+      "source": "arxiv",
+      "title": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "authors": [
+        "Ziyu Guo",
+        "Rain Liu",
+        "Xinyan Chen",
+        "Pheng-Ann Heng"
+      ],
+      "abstract": "Visual reasoning, often interleaved with intermediate visual states, has emerged as a promising direction in the field. A straightforward approach is to directly generate images via unified models during reasoning, but this is computationally expensive and architecturally non-trivial. Recent alternatives include agentic reasoning through code or tool calls, and latent reasoning with learnable hidden embeddings. However, agentic methods incur context-switching latency from external execution, while latent methods lack task generalization and are difficult to train with autoregressive parallelization. To combine their strengths while mitigating their limitations, we propose ATLAS, a framework in which a single discrete 'word', termed as a functional token, serves both as an agentic operation and a latent visual reasoning unit. Each functional token is associated with an internalized visual operation, yet requires no visual supervision and remains a standard token in the tokenizer vocabulary, which can be generated via next-token prediction. This design avoids verbose intermediate visual content generation, while preserving compatibility with the vanilla scalable SFT and RL training, without architectural or methodological modifications. To further address the sparsity of functional tokens during RL, we introduce Latent-Anchored GRPO (LA-GRPO), which stabilizes the training by anchoring functional tokens with a statically weighted auxiliary objective, providing stronger gradient updates. Extensive experiments and analyses demonstrate that ATLAS achieves superior performance on challenging benchmarks while maintaining clear interpretability. We hope ATLAS offers a new paradigm inspiring future visual reasoning research.",
+      "published_date": "2026-05-14T17:59:55Z",
+      "url": "https://arxiv.org/abs/2605.15198v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15198v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2605.15196v1",
+      "source": "arxiv",
+      "title": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
+      "authors": [
+        "Xiang Fan",
+        "Yuheng Wang",
+        "Bohan Fang",
+        "Zhongzheng Ren",
+        "Ranjay Krishna"
+      ],
+      "abstract": "Video generation powers a vast array of downstream applications. However, while the de facto standard, i.e., latent diffusion models, typically employ heavily conditioned denoising networks, their decoders often remain unconditional. We observe that this architectural asymmetry leads to significant loss of detail and inconsistency relative to the input image. To address this, we argue that the decoder requires equal conditioning to preserve structural integrity. We introduce RefDecoder, a reference-conditioned video VAE decoder by injecting high-fidelity reference image signal directly into the decoding process via reference attention. Specifically, a lightweight image encoder maps the reference frame into the detail-rich high-dimensional tokens, which are co-processed with the denoised video latent tokens at each decoder up-sampling stage. We demonstrate consistent improvements across several distinct decoder backbones (e.g., Wan 2.1 and VideoVAE+), achieving up to +2.1dB PSNR over the unconditional baselines on the Inter4K, WebVid, and Large Motion reconstruction benchmarks. Notably, RefDecoder can be directly swapped into existing video generation systems without additional fine-tuning, and we report across-the-board improvements in subject consistency, background consistency, and overall quality scores on the VBench I2V benchmark. Beyond I2V, RefDecoder generalizes well to a wide range of visual generation tasks such as style transfer and video editing refinement.",
+      "published_date": "2026-05-14T17:59:52Z",
+      "url": "https://arxiv.org/abs/2605.15196v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15196v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "RefDecoder：通过条件视频解码增强视觉生成",
+        "chinese_summary": "RefDecoder 通过在解码过程中注入高保真参考图像信号，显著提升了视频生成的质量。",
+        "pain_point": "现有视频生成模型的解码器未充分条件化，导致细节丢失和不一致性。",
+        "core_value": "RefDecoder 通过条件化解码器显著提升了视频生成的质量和一致性。",
+        "technical_architecture": "RefDecoder 通过参考注意力机制将高保真参考图像信号直接注入解码过程。",
+        "quantitative_results": "在 Inter4K、WebVid 和 Large Motion 重建基准上，RefDecoder 达到了 +2.1dB PSNR 的提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定的解码器架构上进行了验证。",
+        "key_contributions": [
+          "引入了参考条件化的视频 VAE 解码器",
+          "通过参考注意力机制提升解码质量"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "视频重建"
+        ],
+        "technical_highlights": [
+          "直接将高保真参考图像信号注入解码过程",
+          "显著提升视频生成质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2605.15195v1",
+      "source": "arxiv",
+      "title": "VGGT-$Ω$",
+      "authors": [
+        "Jianyuan Wang",
+        "Minghao Chen",
+        "Shangzhan Zhang",
+        "Nikita Karaev",
+        "Johannes Schönberger",
+        "Patrick Labatut",
+        "Piotr Bojanowski",
+        "David Novotny",
+        "Andrea Vedaldi",
+        "Christian Rupprecht"
+      ],
+      "abstract": "Recent feed-forward reconstruction models, such as VGGT, have proven competitive with traditional optimization-based reconstructors while also providing geometry-aware features useful for other tasks. Here, we show that the quality of these models scales predictably with model and data size. We do so by introducing VGGT-$Ω$, which substantially improves reconstruction accuracy, efficiency, and capabilities for both static and dynamic scenes. To enable training this model at an unprecedented scale, we introduce architectural changes that improve training efficiency, a high-quality data annotation pipeline that supports dynamic scenes, and a self-supervised learning protocol. We simplify VGGT's architecture by using a single dense prediction head with multi-task supervision and removing the expensive high-resolution convolutional layers. We also use registers to aggregate scene information into a compact representation and introduce register attention, which restricts inter-frame information exchange to these registers, in part replacing global attention. In this way, during training, VGGT-$Ω$ uses only about 30% of the GPU memory of its predecessor, allowing us to train with 15x more supervised data than prior work and to leverage vast amounts of unlabeled video data. VGGT-$Ω$ achieves strong results for reconstruction of static and dynamic scenes across multiple benchmarks, for example, improving over the previous best camera estimation accuracy on Sintel by 77%. We also show that the learned registers can improve vision-language-action models and support alignment with language, suggesting that reconstruction can be a powerful and scalable proxy task for spatial understanding. Project Page: http://vggt-omega.github.io/",
+      "published_date": "2026-05-14T17:59:51Z",
+      "url": "https://arxiv.org/abs/2605.15195v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15195v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "VGGT-$Ω$",
+        "chinese_summary": "通过引入VGGT-$Ω$，显著提高重建精度、效率和动态场景能力。",
+        "pain_point": "现有模型在处理动态场景时重建精度和效率不足。",
+        "core_value": "通过简化架构和引入新机制，提高模型在静态和动态场景下的重建性能。",
+        "technical_architecture": "使用单个密集预测头和注册注意力机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步优化模型在大规模数据上的训练效率。",
+        "key_contributions": [
+          "简化VGGT架构，使用单个密集预测头",
+          "引入注册注意力机制",
+          "提高训练效率"
+        ],
+        "application_scenarios": [
+          "静态场景重建",
+          "动态场景重建"
+        ],
+        "technical_highlights": [
+          "使用单个密集预测头",
+          "引入注册注意力机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2605.15193v1",
+      "source": "arxiv",
+      "title": "Aligning Latent Geometry for Spherical Flow Matching in Image Generation",
+      "authors": [
+        "Tuna Han Salih Meral",
+        "Kaan Oktay",
+        "Hidir Yesiltepe",
+        "Adil Kaan Akan",
+        "Pinar Yanardag"
+      ],
+      "abstract": "Latent flow matching for image generation usually transports Gaussian noise to variational autoencoder latents along linear paths. Both endpoints, however, concentrate in thin spherical shells, and a Euclidean chord leaves those shells even when preprocessing aligns their radii. By decomposing each latent token into radial and angular components, we show through component-swap probes that decoded perceptual and semantic content is carried predominantly by direction, with radius contributing much less. We therefore project data latents onto a fixed token radius, use the radial projection of Gaussian noise as the spherical prior, finetune the decoder with the encoder frozen, and replace linear interpolation with spherical linear interpolation. The resulting geodesic paths stay on the sphere at every timestep, and their velocity targets are purely angular by construction. Under matched training, the method consistently improves class-conditional ImageNet-256 FID across different image tokenizers, leaves the diffusion architecture unchanged, and requires no auxiliary encoder or representation-alignment objective.",
+      "published_date": "2026-05-14T17:59:37Z",
+      "url": "https://arxiv.org/abs/2605.15193v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15193v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "用于图像生成的球面流匹配中的潜在几何对齐",
+        "chinese_summary": "通过球面线性插值和固定半径投影，改进了图像生成中的潜在空间几何对齐。",
+        "pain_point": "现有方法中，潜在空间的端点集中在薄的球壳上，导致生成的图像质量下降。",
+        "core_value": "通过球面线性插值和固定半径投影，提高了图像生成的质量。",
+        "technical_architecture": "使用球面线性插值和固定半径投影的方法改进了潜在空间几何对齐。",
+        "quantitative_results": "在不同图像分词器下，该方法在ImageNet-256上的FID分数有所提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多类型的图像生成任务。",
+        "key_contributions": [
+          "提出了通过球面线性插值和固定半径投影的方法改进潜在空间几何对齐。",
+          "在不同图像分词器下，该方法在ImageNet-256上的FID分数有所提升。"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像质量提升"
+        ],
+        "technical_highlights": [
+          "使用球面线性插值确保生成的路径始终保持在球面上。",
+          "通过固定半径投影简化了潜在空间的几何对齐。"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2605.15190v1",
+      "source": "arxiv",
+      "title": "RAVEN: Real-time Autoregressive Video Extrapolation with Consistency-model GRPO",
+      "authors": [
+        "Yanzuo Lu",
+        "Ronglai Zuo",
+        "Jiankang Deng"
+      ],
+      "abstract": "Causal autoregressive video diffusion models support real-time streaming generation by extrapolating future chunks from previously generated content. Distilling such generators from high-fidelity bidirectional teachers yields competitive few-step models, yet a persistent gap between the history distributions encountered during training and those arising at inference constrains generation quality over long horizons. We introduce the Real-time Autoregressive Video Extrapolation Network (RAVEN), a training-time test framework that repacks each self rollout into an interleaved sequence of clean historical endpoints and noisy denoising states. This formulation aligns training attention with inference-time extrapolation and allows downstream chunk losses to supervise the history representations on which future predictions depend. We further propose Consistency-model Group Relative Policy Optimization (CM-GRPO), which reformulates a consistency sampling step as a conditional Gaussian transition and applies online Reinforcement Learning (RL) directly to this kernel, avoiding the Euler-Maruyama auxiliary process adopted in prior flow-model RL formulations. Experiments demonstrate that RAVEN surpasses recent causal video distillation baselines across quality, semantic, and dynamic degree evaluations, and that CM-GRPO provides further gains when combined with RAVEN.",
+      "published_date": "2026-05-14T17:59:30Z",
+      "url": "https://arxiv.org/abs/2605.15190v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15190v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2605.15188v1",
+      "source": "arxiv",
+      "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+      "authors": [
+        "Shashwat Goel",
+        "Nikhil Chandak",
+        "Arvindh Arun",
+        "Ameya Prabhu",
+        "Steffen Staab",
+        "Moritz Hardt",
+        "Maksym Andriushchenko",
+        "Jonas Geiping"
+      ],
+      "abstract": "AI agents are being increasingly deployed in dynamic, open-ended environments that require adapting to new information as it arrives. To efficiently measure this capability for realistic use-cases, we propose building grounded simulations that replay real-world events in the order they occurred. We build FutureSim, where agents forecast world events beyond their knowledge cutoff while interacting with a chronological replay of the world: real news articles arriving and questions resolving over the simulated period. We evaluate frontier agents in their native harness, testing their ability to predict world events over a three-month period from January to March 2026. FutureSim reveals a clear separation in their capabilities, with the best agent's accuracy being 25%, and many having worse Brier skill score than making no prediction at all. Through careful ablations, we show how FutureSim offers a realistic setting to study emerging research directions like long-horizon test-time adaptation, search, memory, and reasoning about uncertainty. Overall, we hope our benchmark design paves the way to measure AI progress on open-ended adaptation spanning long time-horizons in the real world.",
+      "published_date": "2026-05-14T17:59:28Z",
+      "url": "https://arxiv.org/abs/2605.15188v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15188v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "FutureSim: 重演世界事件以评估适应性智能体",
+        "chinese_summary": "通过重演真实事件来评估智能体的适应能力。",
+        "pain_point": "现有评估方法难以高效测量智能体在动态环境中的适应能力。",
+        "core_value": "提供了一种新的评估框架，能够更真实地测试智能体的长期预测能力。",
+        "technical_architecture": "构建了一个基于真实事件的时间顺序重演模拟环境。",
+        "quantitative_results": "最佳智能体的准确率为25%，许多智能体的表现甚至不如随机猜测。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于特定时间范围内的预测，未来需扩展到更长时间。",
+        "key_contributions": [
+          "提出了FutureSim框架",
+          "展示了智能体在长期预测中的表现",
+          "为研究长期适应性提供了新视角"
+        ],
+        "application_scenarios": [
+          "智能体适应性评估",
+          "长期预测能力测试"
+        ],
+        "technical_highlights": [
+          "使用真实新闻和事件进行模拟",
+          "评估智能体在未见过的信息下的预测能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2605.15187v1",
+      "source": "arxiv",
+      "title": "Articraft: An Agentic System for Scalable Articulated 3D Asset Generation",
+      "authors": [
+        "Matt Zhou",
+        "Ruining Li",
+        "Xiaoyang Lyu",
+        "Zhaomou Song",
+        "Zhening Huang",
+        "Chuanxia Zheng",
+        "Christian Rupprecht",
+        "Andrea Vedaldi",
+        "Shangzhe Wu"
+      ],
+      "abstract": "A bottleneck in learning to understand articulated 3D objects is the lack of large and diverse datasets. In this paper, we propose to leverage large language models (LLMs) to close this gap and generate articulated assets at scale. We reduce the problem of generating an articulated 3D asset to that of writing a program that builds it. We then introduce a new agentic system, Articraft, that writes such programs automatically. We design a programmatic interface and harness to help the LLM do so effectively. The LLM writes code against a domain-specific SDK for defining parts, composing geometry, specifying joints, and writing tests to validate the resulting assets. The harness exposes a restricted workspace and interface to the LLM, validates the resulting assets, and returns structured feedback. In this way, the LLM is not distracted by details such as authoring a URDF file or managing a complex software environment. We show that this produces higher-quality assets than both state-of-the-art articulated-asset generators and general-purpose coding agents. Using Articraft, we build Articraft-10K, a curated dataset of over 10K articulated assets spanning 245 categories, and show its utility both for training models of articulated assets and in downstream applications such as robotics simulation and virtual reality.",
+      "published_date": "2026-05-14T17:59:18Z",
+      "url": "https://arxiv.org/abs/2605.15187v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15187v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.GR",
+        "cs.RO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Articraft：一种用于生成大规模 articulated 3D 资产的自主系统",
+        "chinese_summary": "通过利用大型语言模型生成大规模 articulated 3D 资产，提高生成质量。",
+        "pain_point": "缺乏大规模和多样化的 articulated 3D 数据集。",
+        "core_value": "利用大型语言模型生成高质量 articulated 3D 资产。",
+        "technical_architecture": "通过编程接口和框架帮助大型语言模型自动生成 articulated 3D 资产。",
+        "quantitative_results": "生成的资产质量优于最先进的生成器和通用编程代理。",
+        "competitors": "最先进的 articulated-asset 生成器和通用编程代理。",
+        "limitations": "需要进一步扩展数据集的覆盖范围。",
+        "key_contributions": [
+          "提出了一种新的自主系统 Articraft",
+          "设计了一种编程接口和框架",
+          "生成了 Articraft-10K 数据集"
+        ],
+        "application_scenarios": [
+          "3D 资产生成",
+          "虚拟现实和增强现实"
+        ],
+        "technical_highlights": [
+          "利用大型语言模型自动生成 articulated 3D 资产",
+          "设计了编程接口和框架简化生成过程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2605.15186v1",
+      "source": "arxiv",
+      "title": "VGGT-Edit: Feed-forward Native 3D Scene Editing with Residual Field Prediction",
+      "authors": [
+        "Kaixin Zhu",
+        "Yiwen Tang",
+        "Yifan Yang",
+        "Renrui Zhang",
+        "Bohan Zeng",
+        "Ziyu Guo",
+        "Ruichuan An",
+        "Zhou Liu",
+        "Qizhi Chen",
+        "Delin Qu",
+        "Jaehong Yoon",
+        "Wentao Zhang"
+      ],
+      "abstract": "High-quality 3D scene reconstruction has recently advanced toward generalizable feed-forward architectures, enabling the generation of complex environments in a single forward pass. However, despite their strong performance in static scene perception, these models remain limited in responding to dynamic human instructions, which restricts their use in interactive applications. Existing editing methods typically rely on a 2D-lifting strategy, where individual views are edited independently and then lifted back into 3D space. This indirect pipeline often leads to blurry textures and inconsistent geometry, as 2D editors lack the spatial awareness required to preserve structure across viewpoints. To address these limitations, we propose VGGT-Edit, a feed-forward framework for text-conditioned native 3D scene editing. VGGT-Edit introduces depth-synchronized text injection to align semantic guidance with the backbone's spatial poses, ensuring stable instruction grounding. This semantic signal is then processed by a residual transformation head, which directly predicts 3D geometric displacements to deform the scene while preserving background stability. To ensure high-fidelity results, we supervise the framework with a multi-term objective function that enforces geometric accuracy and cross-view consistency. We also construct the DeltaScene Dataset, a large-scale dataset generated through an automated pipeline with 3D agreement filtering to ensure ground-truth quality. Experiments show that VGGT-Edit substantially outperforms 2D-lifting baselines, producing sharper object details, stronger multi-view consistency, and near-instant inference speed.",
+      "published_date": "2026-05-14T17:59:04Z",
+      "url": "https://arxiv.org/abs/2605.15186v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15186v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "VGGT-Edit：基于残差场预测的前馈原生3D场景编辑",
+        "chinese_summary": "提出了一种基于文本条件的前馈原生3D场景编辑框架，直接预测3D几何位移以变形场景。",
+        "pain_point": "现有方法依赖于2D提升策略，导致纹理模糊和几何不一致。",
+        "core_value": "通过深度同步文本注入和残差变换头，实现稳定指令接地和高保真结果。",
+        "technical_architecture": "引入深度同步文本注入和残差变换头，直接预测3D几何位移。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步提高编辑的复杂性和多样性。",
+        "key_contributions": [
+          "深度同步文本注入",
+          "残差变换头直接预测3D几何位移",
+          "保持背景稳定性"
+        ],
+        "application_scenarios": [
+          "交互式应用",
+          "动态场景编辑"
+        ],
+        "technical_highlights": [
+          "前馈原生3D场景编辑",
+          "直接预测3D几何位移"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2605.15185v1",
+      "source": "arxiv",
+      "title": "Quantitative Video World Model Evaluation for Geometric-Consistency",
+      "authors": [
+        "Jiaxin Wu",
+        "Yihao Pi",
+        "Yinling Zhang",
+        "Yuheng Li",
+        "Xueyan Zou"
+      ],
+      "abstract": "Generative video models are increasingly studied as implicit world models, yet evaluating whether they produce physically plausible 3D structure and motion remains challenging. Most existing video evaluation pipelines rely heavily on human judgment or learned graders, which can be subjective and weakly diagnostic for geometric failures. We introduce PDI-Bench (Perspective Distortion Index), a quantitative framework for auditing geometric coherence in generated videos. Given a generated clip, we obtain object-centric observations via segmentation and point tracking (e.g., SAM 2, MegaSaM, and CoTracker3), lift them to 3D world-space coordinates via monocular reconstruction, and compute a set of projective-geometry residuals capturing three failure dimensions: scale-depth alignment, 3D motion consistency, and 3D structural rigidity. To support systematic evaluation, we build PDI-Dataset, covering diverse scenarios designed to stress these geometric constraints. Across state-of-the-art video generators, PDI reveals consistent geometry-specific failure modes that are not captured by common perceptual metrics, and provides a diagnostic signal for progress toward physically grounded video generation and physical world model. Our code and dataset can be found at https://pdi-bench.github.io/.",
+      "published_date": "2026-05-14T17:59:04Z",
+      "url": "https://arxiv.org/abs/2605.15185v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15185v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    }
+  ]
+}

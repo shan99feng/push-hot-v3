@@ -1,0 +1,287 @@
+{
+  "date": "2026-06-01",
+  "generated_at": "2026-06-02T00:18:04.026849+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2605.29307",
+      "source": "huggingface",
+      "title": "GrepSeek: Training Search Agents for Direct Corpus Interaction",
+      "authors": [
+        "Alireza Salemi",
+        "Chang Zeng",
+        "Atharva Nijasure",
+        "Jui-Hui Chung",
+        "Razieh Rahimi",
+        "Fernando Diaz",
+        "Hamed Zamani"
+      ],
+      "abstract": "Large Language Model (LLM) search agents have shown strong promise for knowledge-intensive language tasks through multiple rounds of reasoning and information retrieval. Most existing systems access information using a retriever that takes a keyword or natural language query and returns a ranked list of documents using an index of pre-computed document representations. In this work, we explore a complementary perspective in which the search agent treats the corpus itself as the search environment and finds evidence by issuing executable shell commands. We introduce GrepSeek, an optimized direct corpus interaction (DCI) search agent that trains a compact search agent to find, filter, and compose evidence from large text corpora. To address the instability of learning behavior directly with reinforcement learning on large corpora, we propose a two-stage training pipeline. First, we construct a cold-start dataset using an answer-aware Tutor and answer-blind Planner to generate verified, causally grounded search trajectories. Second, we refine the initialized policy with Group Relative Policy Optimization (GRPO), allowing the agent to improve its task-oriented search behavior through direct interaction with the corpus. To make DCI practical at scale, we further use a semantics-preserving sharded-parallel execution engine that accelerates shell-based retrieval by up to 7.6times while preserving byte-exact equivalence with sequential execution of the shell command. Experiments across seven open-domain question answering benchmarks show that GrepSeek achieves the strongest overall token-level F_1 and Exact Match. Our analysis also highlights the limitations of purely lexical interaction on queries with substantial surface-form variation, suggesting DCI as a practical and competitive method for search agents that can complement existing retrieval paradigms in the real world.",
+      "published_date": "2026-05-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.29307",
+      "pdf_url": "https://arxiv.org/pdf/2605.29307",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.29307",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "upvotes": 86,
+      "hot_score": 860,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.31264",
+      "source": "huggingface",
+      "title": "COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation",
+      "authors": [
+        "Tianyi Zhou",
+        "Dongrui Liu",
+        "Leitao Yuan",
+        "Jing Shao",
+        "Xia Hu"
+      ],
+      "abstract": "LLM agents are increasingly expected not only to complete isolated tasks, but also to carry bounded representations of human expertise, judgment, and interaction style. Building such person-grounded agents remains difficult because actionable knowledge associated with a person or role is usually embedded in heterogeneous traces rather than written as clean instructions. Existing memory and persona systems capture fragments of this evidence, while skill frameworks provide portable packaging formats; however, there is no end-to-end workflow for distilling these traces into inspectable, correctable, and agent-usable skills. We present an automated trace-to-skill distillation system for generating person-grounded AI skills via expert knowledge distillation. Given materials from a target person or role, COLLEAGUE.SKILL produces a versioned skill package with two coordinated tracks: a capability track for practices, mental models, and decision heuristics, and a bounded behavior track for communication style, interaction rules, and correction history. The package can be inspected, invoked, updated through natural-language feedback, rolled back, installed across agent hosts, and optionally prepared for controlled distribution. We describe the artifact contract, generation workflow, correction lifecycle, deployment surface, and domain presets implemented in the open-source system. At the time of writing, the public repository has approximately 18.5k GitHub stars; the gallery lists 215 skills from 165 contributors and more than 100k cumulative stars across listed skill cards. The system illustrates how person-grounded skills can be represented as portable, correctable packages rather than opaque prompts or hidden memories.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.31264",
+      "pdf_url": "https://arxiv.org/pdf/2605.31264",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.31264",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 71,
+      "hot_score": 710,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.31159",
+      "source": "huggingface",
+      "title": "Trust-Region Behavior Blending for On-Policy Distillation",
+      "authors": [
+        "Daniil Plyusov",
+        "Alexey Gorbatovski",
+        "Alexey Malakhov",
+        "Nikita Balagansky",
+        "Boris Shaposhnikov",
+        "Daria Korotyshova",
+        "Daniil Gavrilov"
+      ],
+      "abstract": "On-policy distillation (OPD) trains a student on prefixes sampled from its own policy while matching a stronger teacher. This addresses the prefix mismatch of offline distillation, but early student rollouts can still be poor, placing teacher supervision on weak or low-quality prefixes. We propose Trust-Region behavior Blending (TRB), a warmup method that replaces the early rollout policy with the closest-to-teacher behavior policy inside a student-centered KL trust region, while keeping the per-prefix reverse-KL OPD loss unchanged. The KL budget is annealed to zero, so training returns to pure student rollouts after warmup. Across two math-reasoning distillation settings, TRB attains the strongest average among the compared methods.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.31159",
+      "pdf_url": "https://arxiv.org/pdf/2605.31159",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.31159",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 51,
+      "hot_score": 510,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.31604",
+      "source": "huggingface",
+      "title": "Representation Forcing for Bottleneck-Free Unified Multimodal Models",
+      "authors": [
+        "Yuqing Wang",
+        "Zhijie Lin",
+        "Ceyuan Yang",
+        "Yang Zhao",
+        "Fei Xiao",
+        "Hao He",
+        "Qi Zhao",
+        "Zihan Ding",
+        "Fuyun Wang",
+        "Shuai Wang",
+        "Youliang Zhang",
+        "Haoqi Fan",
+        "Xihui Liu"
+      ],
+      "abstract": "Unified multimodal models (UMMs) aim to handle perception and generation in a single model. Yet existing UMMs still rely on a frozen, separately pretrained VAE for image generation, imposing a structural bottleneck. Naively removing it introduces a quality gap, as the model must learn both high-level structure and low-level details from raw pixels. In this paper, we propose Representation Forcing (RF), a technique that closes this gap by making representation prediction a native capability of the model. Concretely, RF forces the decoder to autoregressively predict visual representations as intermediate tokens before pixels; these tokens then stay in context to guide pixel diffusion within the same backbone. By turning representations from perception outputs into generation targets, RF eliminates the need for any external generative latent space. We find that RF benefits both understanding and generation. On image generation, our pixel-space model with RF matches state-of-the-art VAE-based unified models. On image understanding, pixel-space RF generally outperforms its VAE-based variant. Together, these results offer an effective step toward end-to-end, bottleneck-free UMMs.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.31604",
+      "pdf_url": "https://arxiv.org/pdf/2605.31604",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.31604",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.30993",
+      "source": "huggingface",
+      "title": "SwanVoice: Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
+      "authors": [
+        "Ruiqi Li",
+        "Yu Zhang",
+        "Changhao Pan",
+        "Ke Lei",
+        "Xiang Yin",
+        "Cheng Yang"
+      ],
+      "abstract": "Zero-shot text-to-speech (TTS) has improved substantially for single-speaker synthesis, yet expressive long-form multi-speaker dialogue remains difficult. A common workaround is to synthesize each turn with a monologue TTS model and stitch the outputs together. This adds inference cost and often breaks acoustic consistency, conversational coherence, and affective continuity across turns. Recent dialogue TTS systems have begun to address this setting, but they still struggle to keep expressive coherence, controllable speaker switching, and monologue quality at the same time. We present SwanData-Speech and SwanVoice. SwanData-Speech builds monologue and dialogue corpora from in-the-wild audio, using Swan Forced Aligner for pause-aware word-level alignment and RobustMegaTTS3 for pronunciation-hard cases. Built on these data, SwanVoice is a zero-shot TTS model for 1--4 speakers, combining a 25 Hz VAE, raw-text conditioning with pause-aware symbols and pinyin substitution, and a flow-matching DiT with speaker-turn conditioning. Training starts from monologue speech, moves through mixed and real dialogue data, and then uses DiffusionNFT post-training with phone-level and speaker-similarity rewards. On SwanBench-Speech, SwanVoice obtains higher richness and hierarchy scores than all evaluated open-source baselines in both monologue and dialogue settings, while content accuracy remains the main limitation. Audio demos are available at https://swanaigc.github.io//#swanvoice.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.30993",
+      "pdf_url": "https://arxiv.org/pdf/2605.30993",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.30993",
+      "category": "other",
+      "tags": [
+        "eess.AS"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.31268",
+      "source": "huggingface",
+      "title": "Mellum2 Technical Report",
+      "authors": [
+        "Marko Kojic",
+        "Ivan Bondyrev",
+        "Aral de Moor",
+        "Joseph Shtok",
+        "Petr Borovlev",
+        "Kseniia Lysaniuk",
+        "Madeeswaran Kannan",
+        "Ivan Dolgov",
+        "Nikita Pavlichenko"
+      ],
+      "abstract": "We present Mellum 2, an open-weight 12B-parameter Mixture-of-Experts (MoE) language model with 2.5B active parameters per token. Mellum 2 is a general-purpose language model specialized in software engineering, spanning code generation and editing, debugging, multi-step reasoning, tool use and function calling, agentic coding, and conversational programming assistance, and it is the successor to the completion-focused 4B dense Mellum model. The architecture builds on the Mixture-of-Experts (64 experts, 8 active) and combines Grouped-Query Attention with 4 KV heads, Sliding Window Attention on three of every four layers, and a single Multi-Token Prediction head that doubles as both an auxiliary pre-training objective and a built-in draft model for speculative decoding; each choice was validated by ablation with inference efficiency on commodity GPUs as a design constraint. Pre-training spans approximately 10.6 trillion tokens through a three-phase curriculum that progressively shifts the mixture from diverse web data toward curated code and mathematical content, optimized with Muon under FP8 hybrid precision and a Warmup-Hold-Decay schedule with linear decay to zero. The pre-trained base is extended to a 128K context window via a layer-selective YaRN and then post-trained in two stages (supervised fine-tuning followed by RLVR), yielding two released variants: an Instruct model that answers directly and a Thinking model that emits an explicit reasoning trace before its final answer. Across code generation, math and reasoning, tool use, knowledge, and safety benchmarks, Mellum 2 is competitive with open-weight baselines in the 4B-14B range while running at the per-token compute of a 2.5B dense model. We release the base, instruct, and thinking checkpoints, together with this report on the architecture decisions, data pipeline, and training recipe behind them, under the Apache 2.0 license.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.31268",
+      "pdf_url": "https://arxiv.org/pdf/2605.31268",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.31268",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.31584",
+      "source": "huggingface",
+      "title": "LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards",
+      "authors": [
+        "Nianyi Lin",
+        "Jiajie Zhang",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "abstract": "Long-context reasoning remains a central challenge for large language models, which often fail to locate and integrate key information in extensive distracting content. Reinforcement learning with verifiable rewards (RLVR) has shown promise for this task, yet existing methods are limited by low-confusability distractors and sparse, outcome-only reward signals that cannot supervise intermediate reasoning steps. To address these issues, we introduce LongTraceRL. For data construction, we generate multi-hop questions via knowledge graph random walks and leverage search agent trajectories to build tiered distractors: documents the agent read but did not cite (high confusability) and documents that appeared in search results but were never opened (low confusability), producing training contexts that are far more challenging than those built by random sampling or one-shot search. For reward design, we propose a rubric reward that uses the gold entities along each reasoning chain as fine-grained, entity-level process supervision. This rubric reward is applied only to responses with correct final answers (positive-only strategy), distinguishing the reasoning quality among correct responses and preventing reward hacking. Experiments on three reasoning LLMs (4B--30B) across five long-context benchmarks demonstrate that LongTraceRL consistently outperforms strong baselines and encourages comprehensive, evidence-grounded reasoning. Codes, datasets and models are available at https://github.com/THU-KEG/LongTraceRL{https://github.com/THU-KEG/LongTraceRL}.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.31584",
+      "pdf_url": "https://arxiv.org/pdf/2605.31584",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.31584",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 32,
+      "hot_score": 320,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.30819",
+      "source": "huggingface",
+      "title": "Function2Scene: 3D Indoor Scene Layout from Functional Specifications",
+      "authors": [
+        "Ruiqi Wang",
+        "Qimin Chen",
+        "Daniel Ritchie",
+        "Angel X. Chang",
+        "Manolis Savva",
+        "Kai Wang",
+        "Hao Zhang"
+      ],
+      "abstract": "Most text-driven 3D indoor scene synthesis methods generate rooms from object-centric prompts, asking what furniture should be placed rather than how the space is used. Yet in real interior design, a layout is judged by how well it supports its occupants, e.g., their activities and physical needs. We introduce Function2Scene, a framework for generating 3D indoor layouts from functional specifications, i.e., natural-language design briefs describing who will use a room and what they need to do there. Given such a specification, our system parses occupant personas and activities, derives a customized set of functional design constraints from a taxonomy of 17 criteria spanning spatial, ergonomic, activity, and environmental considerations, and uses these constraints to guide layout generation. Rather than relying on an LLM to directly produce a final scene, Function2Scene performs iterative evaluation and refinement through a tool-augmented check-and-repair loop, combining geometric measurements, LLM-based contextual reasoning, and VLM-based visual assessment. Experiments on 30 professionally written interior-design cases show that Function2Scene produces layouts that better satisfy functional requirements than recent LLM-based scene synthesis baselines, with our results preferred in 94.3% of pairwise comparisons. Our work reframes text-driven indoor scene synthesis from placing plausible objects to designing spaces that support human use.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.30819",
+      "pdf_url": "https://arxiv.org/pdf/2605.30819",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.30819",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 31,
+      "hot_score": 310,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.31039",
+      "source": "huggingface",
+      "title": "GGT-100K: Generative Ground Truth for Generalizable Real-World Image Restoration",
+      "authors": [
+        "Xiangtao Kong",
+        "Jixin Zhao",
+        "Lingchen Sun",
+        "Rongyuan Wu",
+        "Lei Zhang"
+      ],
+      "abstract": "Real-world image restoration (IR) is bottlenecked by the scarcity of high-quality paired training data. Synthetic datasets are abundant but often fail to model real-world degradations, while real-world paired datasets are expensive and difficult to capture. As a result, IR models trained on these datasets show limited generalization in real-world scenarios. In this work, we propose Generative Ground Truth (GGT) by using generative multimodal foundation models (MFMs) to produce high-quality (HQ) targets from real-world low-quality (LQ) images. We first conduct a systematic evaluation of nine state-of-the-art MFMs, including Nano-Banana-2 and GPT-Image-2, on images of various scenes and degradation types. The results demonstrate that Nano-Banana-2 with VLM-based adaptive prompting shows the highest capability to synthesize perceptually realistic and content-faithful HQ targets, which can serve as the GGT for the LQ input. We then employ Nano-Banana-2 to build a GGT synthesis pipeline, which involves multi-stage quality control to ensure data reliability, and construct GGT-100K, an LQ-HQ paired dataset comprising 103,707 training pairs and covering diverse scenes and complex real-world degradations. A test set of 500 image pairs is also established. Extensive experiments show that GGT-100K consistently improves the real-world generalization of a wide range of IR models, with particularly strong benefits for finetuning generative models for IR tasks. Our results suggest that MFMs can serve as practical tools for restoration-oriented data generation, and GGT-100K is a useful resource to expand the generalization boundaries of real-world IR models.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.31039",
+      "pdf_url": "https://arxiv.org/pdf/2605.31039",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.31039",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2605.30940",
+      "source": "huggingface",
+      "title": "Towards Streaming Synchronized Spatial Audio Generation via Autoregressive Diffusion Transformer",
+      "authors": [
+        "Ke Lei",
+        "Yu Zhang",
+        "Changhao Pan",
+        "Xueyi Pu",
+        "Wenxiang Guo",
+        "Ruiqi Li",
+        "Zhou Zhao"
+      ],
+      "abstract": "Real-time and accurate spatial audio generation is pivotal for delivering an immersive experience. However, existing spatial audio synthesis technologies are often encumbered by a tradeoff between generation quality and high inference latency, as well as difficulty in capturing precise spatial information from multimodal inputs. To address these challenges, we propose SwanSphere, a unified streaming framework for high-fidelity spatial audio generation from panoramic videos and text prompts. SwanSphere mainly makes the following contributions: 1) We introduce a causal autoregressive diffusion transformer architecture that enables streaming high-quality spatial audio generation. 2) We design a Spatial Video-Audio Contrastive (SVAC) learning strategy to align the video encoder with the acoustic domain, and further employ a multi-objective online direct preference optimization (ODPO) scheme, resulting in strong spatial perception and robust multimodal spatial audio synthesis. 3) To alleviate the current scarcity of spatial audio datasets, we also develop an automated annotation pipeline for generating detailed spatial captions. Experimental results demonstrate that SwanSphere achieves superior performance in both video-to-spatial and text-to-spatial audio generation tasks. Demos can be found at: https://swanaigc.github.io.",
+      "published_date": "2026-05-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.30940",
+      "pdf_url": "https://arxiv.org/pdf/2605.30940",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2605.30940",
+      "category": "other",
+      "tags": [
+        "eess.AS",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": null
+    }
+  ]
+}

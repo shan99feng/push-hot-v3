@@ -1,0 +1,348 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "2026-06-12T00:21:54.849981+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2606.12397",
+      "source": "huggingface",
+      "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+      "authors": [
+        "Songhao Wu",
+        "Ang Lv",
+        "Ruobing Xie",
+        "Yankai Lin"
+      ],
+      "abstract": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
+      "published_date": "2026-06-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.12397",
+      "pdf_url": "https://arxiv.org/pdf/2606.12397",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.12397",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 74,
+      "hot_score": 740,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.11926",
+      "source": "huggingface",
+      "title": "Toward Generalist Autonomous Research via Hypothesis-Tree Refinement",
+      "authors": [
+        "Jiajie Jin",
+        "Yuyang Hu",
+        "Kai Qiu",
+        "Qi Dai",
+        "Chong Luo",
+        "Guanting Dong",
+        "Xiaoxi Li",
+        "Tong Zhao",
+        "Xiaolong Ma",
+        "Gongrui Zhang",
+        "Zhirong Wu",
+        "Bei Liu",
+        "Zhengyuan Yang",
+        "Linjie Li",
+        "Lijuan Wang",
+        "Hongjin Qian",
+        "Yutao Zhu",
+        "Zhicheng Dou"
+      ],
+      "abstract": "Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction. Researchers test candidate directions, interpret the evidence, and carry the resulting lessons into later attempts. We study how an AI agent can run this loop autonomously over long horizons. We introduce Arbor, a general framework for autonomous research that combines a long-lived coordinator, short-lived executors, and Hypothesis Tree Refinement (HTR), a persistent tree that links hypotheses, artifacts, evidence, and distilled insights across time. The coordinator manages global research strategy over the tree, while executors implement and test individual hypotheses in isolated worktrees. As results return, Arbor updates the tree, propagates reusable lessons, refines the search frontier, and admits verified improvements. This design turns autonomous research from a sequence of local attempts into a cumulative process in which strategy, execution, and evidence are carried across time. We evaluate Arbor under Autonomous Optimization (AO), an operational setting where an agent improves an initial research artifact through iterative experimentation without step-level human supervision. Across six real research tasks in model training, harness engineering, and data synthesis, Arbor achieves the best held-out result on all six tasks, attaining more than 2.5x the average relative held-out gain of Codex and Claude Code under the same task interface and resource budget. On MLE-Bench Lite, Arbor reaches 86.36% Any Medal with GPT-5.5, the strongest result in our comparison.",
+      "published_date": "2026-06-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.11926",
+      "pdf_url": "https://arxiv.org/pdf/2606.11926",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.11926",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 68,
+      "hot_score": 680,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.12191",
+      "source": "huggingface",
+      "title": "Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application",
+      "authors": [
+        "Jiachun Li",
+        "Zhuoran Jin",
+        "Tianyi Men",
+        "Yupu Hao",
+        "Kejian Zhu",
+        "Lingshuai Wang",
+        "Dongqi Huang",
+        "Longxiang Wang",
+        "Shengjia Hua",
+        "Lu Wang",
+        "Jinshan Gao",
+        "Hongbang Yuan",
+        "Ruilin Xu",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "abstract": "Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities. Despite this importance, existing work lacks a systematic categorization and deep analysis. This paper systematically studies current researches on agentic environments from the perspective of the environment engineering lifecycle, covering their modeling, synthesis, evaluation and application. Specifically, the paper first introduces representative environments from the perspectives of eight attributes and eight domains, providing detailed analyses of their development paths and highlighting their core capabilities. Second, for automated environment synthesis, two paradigms are introduced, such as symbolic synthesis and neural synthesis. This paper also shows different environment evaluation methods in each paradigm. Thirdly, the corresponding environment applications from the perspective of agent-environment co-evolution are discussed. In specific, the paper characterizes the primary pathways for agent evolution in dynamic environments from four complementary perspectives: memory-centric experience evolution, orchestration-centric workflow evolution, trajectory-centric offline evolution, and exploration-centric online evolution. And three paradigms of environment evolution are identified, namely neural-driven, difficulty-driven, and scaling-driven approaches. At last, several promising future directions are discussed, including Environment-as-a-Service, Multi-agent Environments, and Neural-Symbolic Environments.",
+      "published_date": "2026-06-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.12191",
+      "pdf_url": "https://arxiv.org/pdf/2606.12191",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.12191",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 56,
+      "hot_score": 560,
+      "structured_summary": {
+        "chinese_title": "代理环境工程化对大型语言模型：",
+        "chinese_summary": "系统化研究代理环境工程化",
+        "pain_point": "",
+        "core_value": "",
+        "technical_architecture": "环境工程生命周期视角，",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来研究可能需进一步探索",
+        "key_contributions": "环境模型化",
+        "application_scenarios": "多场景应用 ",
+        "technical_highlights": "系统系统环境工程生命周期视角 ",
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2606.12344",
+      "source": "huggingface",
+      "title": "Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks",
+      "authors": [
+        "Mengyu Zheng",
+        "Kai Han",
+        "Boxun Li",
+        "Haiyang Xu",
+        "Yuchuan Tian",
+        "Wei He",
+        "Hang Zhou",
+        "Jianyuan Guo",
+        "Hailin Hu",
+        "Lin Ma",
+        "Chao Xu",
+        "Guohao Dai",
+        "Lixue Xia",
+        "Yunchao Wei",
+        "Yunhe Wang",
+        "Yu Wang"
+      ],
+      "abstract": "General-purpose agents such as OpenClaw are increasingly used as autonomous tool users, but their coding ability is difficult to measure under SWE-bench: a generic agent does not by itself satisfy the clean Docker workspace, patch, and prediction contract required for scoring. We introduce Claw-SWE-Bench, a multilingual SWE-bench-style benchmark and adapter protocol that makes heterogeneous agent harnesses, or claws, comparable under fair settings including a fixed prompt, runtime budget, workspace contract, patch extraction procedure, and evaluator. The full benchmark contains 350 GitHub issue-resolution instances across 8 languages and 43 repositories, drawn from SWE-bench-Multilingual and SWE-bench-Verified-Mini after future-commit cleanup. We also release Claw-SWE-Bench Lite for faster validation, which is an 80-instance subset selected by a cost-aware, rank-aware procedure over 17 calibration columns. On the full benchmark, OpenClaw with a minimal direct-diff adapter scores only 19.1% Pass@1, whereas the full adapter reaches 73.4% with the same GLM 5.1 backbone, showing that adapter design is essential for enabling OpenClaw-style harnesses to perform coding tasks effectively. Across an OpenClaw times nine-model sweep and a five-claw times two-model sweep, model choice changes Pass@1 by 29.4 pp and harness choice by 27.4 pp under fixed models; systems with similar accuracy can differ substantially in total API cost. Claw-SWE-Bench therefore treats harness and cost accounting as first-class axes of SWE-style coding-agent evaluation, providing both a full benchmark and a low-cost reference set for reproducible comparison. The data is available at https://github.com/opensquilla/claw-swe-bench and https://huggingface.co/datasets/TokenRhythm/Claw-SWE-Bench.",
+      "published_date": "2026-06-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.12344",
+      "pdf_url": "https://arxiv.org/pdf/2606.12344",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.12344",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "Claw-SWE-Bench:编码任务上 Cl aired风格代理评估基准",
+        "chinese_summary": ":提供多语言编码任务评估基准",
+        "pain_point": "现有评估基准难以全面评估代理在编码任务上的的能力",
+        "core_value": "提供一个多语言的评估基准，",
+        "technical_architecture": "多语言代理评估框架",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "",
+        "limitations": "仅包含有限的 GitHub 问题",
+        "key_contributions": [],
+        "application_scenarios": [],
+        "technical_highlights": [],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2606.09076",
+      "source": "huggingface",
+      "title": "Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions",
+      "authors": [
+        "Xin Jin",
+        "Huanqia Cai",
+        "Zhen Li",
+        "Zechao Zhan",
+        "Dengyang Jiang",
+        "Aiming Hao",
+        "Yuming Jiang",
+        "Chunle Guo",
+        "Peng Gao",
+        "Ming-Ming Cheng",
+        "Steven C. H. Hoi"
+      ],
+      "abstract": "Reward models are central to text-to-image post-training, but visual preference is subjective and better represented as a distribution over rubric scores than as a deterministic scalar. Existing scalar, score-token, and pairwise reward models over-compress uncertainty and fine-grained score differences, while reasoning-based generative rewards provide stronger judgments but are costly to deploy and difficult to use as direct optimization signals. We propose Z-Reward, a teacher-student reward modeling framework that decouples reasoning-heavy judgment from efficient reward deployment. The teacher is a large VLM that uses reasoning to infer rubric-aligned score distributions, and is trained with Group-wise Direct Score Optimization (GDSO), which combines policy-gradient rewards from distribution expectations with direct pointwise and pairwise supervision on score distributions and score gaps. The student is trained with Reasoning-Internalized Score Distillation (RISD), which transfers the teacher's reasoning-conditioned score distribution into a compact VLM without requiring explicit reasoning chains at inference time. On our internally annotated evaluation set, the 27B GDSO teacher reaches 89.6% human preference accuracy, outperforming SFT, RewardDance, and GRPO, while the 9B RISD student reaches 88.6%, outperforming the OPD baseline and closely matching the larger teacher. We further show that Z-Reward can serve as a differentiable reward signal for text-to-image optimization, yielding a 41.3% net human-preference improvement over the SFT baseline.",
+      "published_date": "2026-06-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.09076",
+      "pdf_url": "https://arxiv.org/pdf/2606.09076",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.09076",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 51,
+      "hot_score": 510,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.09323",
+      "source": "huggingface",
+      "title": "TRL-Bench: Standardizing Cross-Paradigm Representation-Level Evaluation of Tabular Encoders",
+      "authors": [
+        "Wei Pang",
+        "Xiangru Jian",
+        "Hehan Li",
+        "Zhixuan Yu",
+        "Alex Xue",
+        "Jinyang Li",
+        "Zhengyuan Dong",
+        "Xinjian Zhao",
+        "Hao Xu",
+        "Chao Zhang",
+        "Reynold Cheng",
+        "M. Tamer Özsu",
+        "Tianshu Yu"
+      ],
+      "abstract": "Tabular encoders are usually evaluated inside task-specific end-to-end pipelines, so models from different training paradigms are difficult to compare directly even when they operate on similar tabular signals. We introduce TRL-Bench, a multi-granular tabular representation learning (TRL) benchmark that standardizes cross-paradigm representation-level evaluation: each encoder exports row-, column-, or table embeddings through its supported wrapper, and shared lightweight heads probe them across three suites: TRL-CTbench (column/table), TRL-Rbench (row), and TRL-DLTE (compositional Data-Lake Table Enrichment spanning all three granularities). To support this standardized setting, we release curated benchmark assets and task reformulations, including 50 OpenML tables with 123 verified targets, 16 row-pair linkage rewrites, and a 47,772-table DLTE lake derived from 1,379 parent tables. Across 20 models and 16 tasks, TRL-Bench shows that once downstream conditions are standardized, encoder quality is capability-specific rather than captured by a single leaderboard. In TRL-CTbench, generic text encoders often lead on tasks with strong surface-text signal, while tabular specialists win where their pretraining objective aligns with the task. In TRL-Rbench, within-table prediction and cross-table linkage favor different training regimes, with atomic linkage performance correlating strongly with the row-matching stage of DLTE pipelines. In TRL-DLTE, the strongest pipelines combine capability-matched specialists rather than reuse a single encoder, and top end-to-end quality depends on non-additive compositional fit rather than per-stage marginal rank alone. TRL-Bench provides a common protocol for measuring reusable signal in exported tabular representations under shared downstream conditions. Code and data: https://github.com/LOGO-CUHKSZ/TRL-Bench",
+      "published_date": "2026-06-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.09323",
+      "pdf_url": "https://arxiv.org/pdf/2606.09323",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.09323",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.DB"
+      ],
+      "upvotes": 47,
+      "hot_score": 470,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.11683",
+      "source": "huggingface",
+      "title": "Reason, Then Re-reason: Cross-view Revisiting Improves Spatial Reasoning",
+      "authors": [
+        "Chaofan Ma",
+        "Zhenjie Mao",
+        "Yuhuan Yang",
+        "Fanqin Zeng",
+        "Yue Shi",
+        "Yingjie Zhou",
+        "Xiaofeng Cao",
+        "Jiangchao Yao"
+      ],
+      "abstract": "Spatial reasoning from egocentric videos is inherently challenging because the observable evidence is constrained by the camera trajectory. Existing methods rely on single-turn inference, forcing models to resolve geometric ambiguity through semantic priors rather than verifiable evidence. We argue that spatial reasoning should be revisitable: conclusions formed under limited evidence should remain open to revision when complementary viewpoints become available. Building on this insight, we propose Reason, then Re-reason (ReRe), a training-free, inference-time framework with two phases: in the Reason Phase, an MLLM forms a spatial hypothesis from the original video; in the Re-reason Phase, it verifies or revises the hypothesis by observing a synthesized novel-view video. To enable effective cross-view revisiting, we design a Geometry-to-Video pipeline that renders strategically complementary novel views from predicted 3D geometry. These views feature an elevated, oblique perspective with scene-spanning coverage, while preserving the MLLM's native video interface without architectural modifications. Extensive evaluations on VSI-Bench and STI-Bench demonstrate that ReRe substantially boosts open-source MLLMs to rival proprietary state-of-the-art performance. Project page: https://zhenjiemao.github.io/ReRe/",
+      "published_date": "2026-06-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.11683",
+      "pdf_url": "https://arxiv.org/pdf/2606.11683",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.11683",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.10728",
+      "source": "huggingface",
+      "title": "DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch",
+      "authors": [
+        "Jiale Zhao",
+        "Guoxin Chen",
+        "Fanzhe Meng",
+        "Wayne Xin Zhao",
+        "Ruihua Song",
+        "Ji-Rong Wen",
+        "Kai Jia"
+      ],
+      "abstract": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories from high-level specifications. However, training agents for such long-horizon software engineering tasks remains difficult due to the scarcity of large-scale, verifiable whole-repository generation data. In this paper, we introduce DeNovoSWE, a large-scale dataset for whole-repository generation. DeNovoSWE comprises 4,818 high-quality instances, where each instance requires generating a complete repository from documentation. Our dataset is automatically constructed through a carefully designed sandboxed agentic workflow, enabling scalable curation without human annotation. DeNovoSWE is constructed with \"divide and conquer\" and critic-repair philosophy. To balance data quality and diversity, we further introduce a difficulty-aware trajectory filtering strategy. Fine-tuning Qwen3-30B-A3B on DeNovoSWE substantially improves long-horizon SWE performance, raising its score on the challenging BeyondSWE-Doc2Repo benchmark from 5.8% to 47.2%.",
+      "published_date": "2026-06-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.10728",
+      "pdf_url": "https://arxiv.org/pdf/2606.10728",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.10728",
+      "category": "other",
+      "tags": [
+        "cs.SE"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.12403",
+      "source": "huggingface",
+      "title": "World Pilot: Steering Vision-Language-Action Models with World-Action Priors",
+      "authors": [
+        "Zefu Lin",
+        "Rongxu Cui",
+        "Junjia Xu",
+        "Xiaojuan Jin",
+        "Wenling Li",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models inherit semantic grounding from large-scale pretraining and perform competently across in-distribution manipulation tasks. This grounding, however, is built on static image-text pairs, whereas manipulation is a continuous, contact-rich process whose dynamics this pretraining cannot capture. We present World Pilot, a VLA framework that augments the policy with priors from a World-Action Model (WAM), routed into the decision chain through two complementary pathways. Latent Steering conditions the perception layer on a scene-evolution latent, and Action Steering supplies an anticipated trajectory as a motion prior to the action generator. Together the two priors equip the VLA with an anticipated view of the scene and a trajectory-level motion hint alongside its semantic conditioning, and the scene-evolution prior remains effective even when supplied by a video-pretrained world model that has not been action-post-trained. World Pilot attains a state-of-the-art Total success rate of 84.7% on the LIBERO-Plus zero-shot OOD benchmark and the highest success rate on every real-robot setting across four manipulation tasks, with the largest margins under shifts in viewpoint, geometry, deformable state, and pose. Project Website: https://world-pilot.github.io/",
+      "published_date": "2026-06-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.12403",
+      "pdf_url": "https://arxiv.org/pdf/2606.12403",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.12403",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.12364",
+      "source": "huggingface",
+      "title": "On Subquadratic Architectures: From Applications to Principles",
+      "authors": [
+        "Anamaria-Roberta Hartl",
+        "Levente Zólyomi",
+        "David Stap",
+        "Pieter-Jan Hoedt",
+        "Niklas Schmidinger",
+        "Lukas Hauzenberger",
+        "Sebastian Böck",
+        "Günter Klambauer",
+        "Sepp Hochreiter"
+      ],
+      "abstract": "Transformers dominate modern sequence modeling, but their quadratic attention incurs substantial computational cost. Subquadratic architectures offer a scalable alternative. However, it remains unclear which designs yield the most effective sequence models. We compare three leading approaches: xLSTM, Mamba-2, and Gated DeltaNet. We evaluate these models on tasks with complex dependencies: (1) code-model pre-training, (2) distillation of code models from large language models, and (3) pre-training of time-series foundation models. Across these settings, xLSTM delivers the strongest overall performance. To explain xLSTM's advantage, we present a unified formulation and analyze the underlying architectural mechanisms, focusing on state tracking and memory dynamics. Our results show that xLSTM enables more flexible and stable memory correction via its gating scheme. We corroborate these findings on controlled synthetic length-generalization tasks. Overall, our findings indicate that xLSTM's gains on complex tasks stem from robust state tracking and accumulation.",
+      "published_date": "2026-06-10T17:33:55.000Z",
+      "url": "https://arxiv.org/abs/2606.12364",
+      "pdf_url": "https://arxiv.org/pdf/2606.12364",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.12364",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": null
+    }
+  ]
+}

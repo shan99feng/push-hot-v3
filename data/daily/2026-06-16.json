@@ -1,0 +1,324 @@
+{
+  "date": "2026-06-16",
+  "generated_at": "2026-06-17T00:20:41.049069+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2606.14777",
+      "source": "huggingface",
+      "title": "JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence",
+      "authors": [
+        "Dingyu Yao",
+        "Junhao Zhou",
+        "Chenxu Yang",
+        "Chuanyu Qin",
+        "Haowen Hou",
+        "Zheming Liang",
+        "Congcong Wang",
+        "Yuhang Cao",
+        "Shenglong Ye",
+        "Shuai Xie",
+        "Shuhuan Gu",
+        "Haoyang Huang",
+        "Qingyi Si",
+        "Nan Duan",
+        "Jiaqi Wang"
+      ],
+      "abstract": "Many moments in the real world do not wait for a user to ask. A fire starts on a security monitor, an expression flickers across a video call, or a product a viewer wants flashes by in a livestream. Yet today's large models remain mostly turn-based by design: they answer only when addressed, and even video-call apps that appear interactive still operate as question-answer systems, reacting only when polled or prompted. We argue for a different paradigm: a model that is present in the world like a person. It continuously watches what is happening now, decides on its own whether to speak or stay silent, interacts in real time, and delegates to a background model when the problem is hard. To advance interaction models and their adoption across domains, we make two fully open-sourced contributions. First, we release JoyAI-VL-Interaction, an 8B-scale, vision-first VL-interaction model. The model makes the response decision internally, choosing each second to stay silent, respond, or delegate to a background model, and it excels at vision-triggered responsiveness and time awareness. We pair it with a transferable training recipe, from which capabilities we never trained for emerge, such as guiding a shopper through changing app screens or improvising a lecture from a slide deck. Second, we release a complete, deployable system built around that model. The system streams any ongoing video into the model, making it genuinely present in the world. All other components are pluggable, including ASR/TTS modules, memory, visualization UI, and a background brain that can connect to any API or agent. Across six real-world scenarios, human raters prefer JoyAI-VL-Interaction over the in-app video-call assistants of Doubao and Gemini by a wide margin. To our knowledge, this is the first open, vision-driven interaction model released together with its training recipe, data, and complete deployable system.",
+      "published_date": "2026-06-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.14777",
+      "pdf_url": "https://arxiv.org/pdf/2606.14777",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.14777",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 157,
+      "hot_score": 1570,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.11176",
+      "source": "huggingface",
+      "title": "Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories",
+      "authors": [
+        "Kevin Qinghong Lin",
+        "Batu EI",
+        "Yuhong Shi",
+        "Pan Lu",
+        "Philip Torr",
+        "James Zou"
+      ],
+      "abstract": "Data tells stories that shape society; the data journalist's job is to turn raw information into stories non-experts can trust. A high-quality news feature takes a newsroom team weeks: hunting for context, running statistics, choosing an angle, and designing visuals. Recent agents handle individual steps well: data-science agents close the analysis loop, while design agents synthesize beautiful websites. But can an agent serve as a data journalist end to end? We introduce Data Journalist Agent (Data2Story), a multi-agent framework that orchestrates specialized roles into a single virtual newsroom. Data2Story contributes two innovations. (i) Claims are evidence-grounded: an Inspector links every number, angle, and asset back to data, code, or an external reference. (ii) Articles are multimodally generative: rather than defaulting to plain text and static charts, Data2Story reasons about what readers will want to see, then deploys multimodal tools, such as interactive maps for geography and audio for music. We evaluate Data2Story on 18 articles, each paired with the originally published expert piece, along four axes: (a) human-agent angle coverage; (b) rubric evaluation with 53 participants across five dimensions; (c) computer-use agents as judges, a cost-saving proxy for how readers navigate interactive articles; and (d) verifiability, where a coding verifier re-executes statements against the data and checks claims against references. Data2Story produces competitive, evidence-traceable multimedia stories, with particular strength in transparency and auditability. Human articles retain an edge in editorial angle, creative design, and presentation. We position Data2Story as a collaborator for journalists, enabling more evidence-based, transparent, and verifiable reporting. Code and demos are available at https://data2story.github.io.",
+      "published_date": "2026-06-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.11176",
+      "pdf_url": "https://arxiv.org/pdf/2606.11176",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.11176",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "upvotes": 100,
+      "hot_score": 1000,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.17046",
+      "source": "huggingface",
+      "title": "Geometric Action Model for Robot Policy Learning",
+      "authors": [
+        "Jisang Han",
+        "Seonghu Jeon",
+        "Jaewoo Jung",
+        "René Zurbrügg",
+        "Honggyu An",
+        "Tifanny Portela",
+        "Marco Hutter",
+        "Marc Pollefeys",
+        "Seungryong Kim",
+        "Sunghwan Hong"
+      ],
+      "abstract": "Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and robot actions interact in the 3D physical world. Recent vision-language-action models (VLAs) and video world-action models (WAMs) inherit strong semantic or temporal priors from large-scale foundation models, but they still operate primarily on 2D image frames or 2D-derived latent spaces, leaving implicit the 3D geometry required for contact-rich manipulation. We propose the Geometric Action Model (GAM), a language-conditioned manipulation policy that directly repurposes a pretrained geometric foundation model (GFM) as a shared substrate for perception, temporal prediction, and action decoding. GAM splits the GFM at an intermediate layer: the shallow layers serve as an observation encoder, and a causal future predictor inserted at the split layer forecasts future latent tokens conditioned on language, proprioception, and action history. The predicted future tokens are then routed through the remaining GFM blocks for feature propagation and decoding, allowing a single backbone to produce both future geometry and actions. This design equips the GFM with language-conditioned temporal world modeling through minimal architectural modification while preserving its rich geometric priors. Across a broad suite of simulation and real-robot manipulation benchmarks, GAM is more accurate, more robust, faster, and lighter than current foundation-model-scale baselines.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17046",
+      "pdf_url": "https://arxiv.org/pdf/2606.17046",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.17046",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 86,
+      "hot_score": 860,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.16993",
+      "source": "huggingface",
+      "title": "DreamX-World 1.0: A General-Purpose Interactive World Model",
+      "authors": [
+        "DreamX Team",
+        "Yancheng Bai",
+        "Rui Chen",
+        "Xiangxiang Chu",
+        "Rujing Dang",
+        "Hao Dou",
+        "Bingjie Gao",
+        "Qiwen Gu",
+        "Siyu Hong",
+        "Jiachen Lei",
+        "Geng Li",
+        "Jifan Li",
+        "Ruimin Lin",
+        "Qingfeng Shi",
+        "Bingze Song",
+        "Lei Sun",
+        "Jing Tang",
+        "Ruitian Tian",
+        "Jun Wang",
+        "Jiahong Wu",
+        "Pengfei Zhang",
+        "Shen Zhang",
+        "Jiashu Zhu"
+      ],
+      "abstract": "DreamX-World 1.0 is a general-purpose interactive text/image-to-video world model for controllable long-horizon generation. It supports camera navigation, revisits to previously observed regions, and promptable events across photorealistic, game-style, and stylized domains. Our data engine combines camera-accurate Unreal Engine rendering, action-rich gameplay recordings, and real-world videos with recovered camera geometry. For camera control, we introduce E-PRoPE, a lightweight variant of projective positional encoding that retains PRoPE's projective camera geometry while applying camera-aware attention to spatially reduced tokens. We convert a bidirectional video generator into a few-step autoregressive world model using causal forcing, DMD-style distillation, and long-rollout training. Training on self-generated long-horizon contexts exposes the model to its own generated history and reduces the style and color drift that accumulates across autoregressive chunks. Memory-Conditioned Scene Persistence retrieves earlier views through camera-geometry-based retrieval, while residual recycling makes the conditioning path less sensitive to imperfect memory latents. Event Instruction Tuning adds composable event control, and reinforcement learning alignment recovers camera control and visual quality after distillation. With mixed-precision DiT execution, residual reuse, 75\\%-pruned VAE decoding, and asynchronous pipeline parallelism, DreamX-World 1.0 reaches up to 16\\,FPS on eight RTX\\,5090 GPUs. On our 5-second basic evaluation, DreamX-World 1.0 achieves a camera-control score of 73.75 and an overall score of 84.76, outperforming HY-WorldPlay 1.5 and LingBot-World in overall score, which achieve 80.79 and 80.45, respectively.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.16993",
+      "pdf_url": "https://arxiv.org/pdf/2606.16993",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.16993",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 78,
+      "hot_score": 780,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.14066",
+      "source": "huggingface",
+      "title": "FastContext: Training Efficient Repository Explorer for Coding Agents",
+      "authors": [
+        "Shaoqiu Zhang",
+        "Maoquan Wang",
+        "Yuling Shi",
+        "Yuhang Wang",
+        "Xiaodong Gu",
+        "Yongqiang Yao",
+        "Rao Fu",
+        "Shengyu Fu"
+      ],
+      "abstract": "Large Language Model (LLM) coding agents have achieved strong results on software engineering tasks, yet repository exploration remains a major bottleneck: locating relevant code consumes substantial token budget and pollutes the agent's context with irrelevant snippets. In most agents, the same model explores the repository and solves the task, leaving exploratory reads and searches in the solver's history. We present FastContext, a dedicated exploration subagent that separates repository exploration from solving. Invoked on demand, FastContext issues parallel tool calls and returns concise file paths and line ranges as focused context. FastContext is powered by specialized exploration models spanning 4B--30B parameters. We bootstrap them from strong reference-model trajectories and refine them with task-grounded rewards for broad first-turn search, multi-turn evidence gathering, and precise citation generation. Across SWE-bench Multilingual, SWE-bench Pro, and SWE-QA, integrating FastContext into Mini-SWE-Agent improves end-to-end resolution rates up to 5.5\\% while reducing coding-agent token consumption up to 60\\%, with marginal overhead. These results show that repository exploration can be separated from solving and handled effectively by specialized models. Code and data: https://github.com/microsoft/fastcontext",
+      "published_date": "2026-06-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.14066",
+      "pdf_url": "https://arxiv.org/pdf/2606.14066",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.14066",
+      "category": "other",
+      "tags": [
+        "cs.SE"
+      ],
+      "upvotes": 76,
+      "hot_score": 760,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.16140",
+      "source": "huggingface",
+      "title": "VibeThinker-3B: Exploring the Frontier of Verifiable Reasoning in Small Language Models",
+      "authors": [
+        "Sen Xu",
+        "Shixi Liu",
+        "Wei Wang",
+        "Jixin Min",
+        "Yingwei Dai",
+        "Zhibin Yin",
+        "Yirong Chen",
+        "Xin Zhou",
+        "Junlin Zhang"
+      ],
+      "abstract": "This technical report introduces VibeThinker-3B, a compact dense model with 3B parameters developed to investigate how far verifiable reasoning can be pushed within a strictly small-model regime. Building upon the Spectrum-to-Signal post-training paradigm, we systematically enhance the model through an optimized pipeline that includes curriculum-based supervised fine-tuning, multi-domain reinforcement learning, and offline self-distillation. Experimental evaluations demonstrate that VibeThinker-3B achieves frontier-level performance on highly demanding verifiable tasks. Specifically, it attains a score of 94.3 on AIME26 (improving to 97.1 with claim-level test-time scaling), an 80.2 Pass@1 on LiveCodeBench v6, and exhibits strong out-of-distribution generalization with a 96.1\\% acceptance rate on recent unseen LeetCode contests. This effectively places it in the performance band of first-tier reasoning systems, matching or exceeding flagship models that are orders of magnitude larger, such as DeepSeek V3.2, GLM-5, and Gemini 3 Pro. Furthermore, a score of 93.4 on IFEval confirms that this extreme reasoning enhancement does not compromise strict instruction controllability. Extending our previous 1.5B work, these findings motivate the Parametric Compression-Coverage Hypothesis, which views verifiable reasoning as compressible into compact reasoning cores, while open-domain knowledge and general-purpose competence require broad parameter coverage over facts, concepts, and long-tail scenarios. This perspective suggests that compact models are not merely deployment-efficient substitutes, but a complementary path toward frontier-level performance in parameter-dense capability regimes.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.16140",
+      "pdf_url": "https://arxiv.org/pdf/2606.16140",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.16140",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 62,
+      "hot_score": 620,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.17049",
+      "source": "huggingface",
+      "title": "BRDFusion: Physics Meets Generation for Urban Scene Inverse Rendering",
+      "authors": [
+        "Yi-Ruei Liu",
+        "Jie-Ying Lee",
+        "Zheng-Hui Huang",
+        "Yu-Lun Liu",
+        "Chih-Hao Lin"
+      ],
+      "abstract": "Inverse rendering of urban scenes from captured videos enables numerous applications, including content creation and autonomous driving simulation. Physically-based rendering methods follow and control lighting physics, but suffer from reconstruction and rendering artifacts. While generative models produce realistic videos, they offer limited consistency and controllability. We present BRDFusion, a unified framework that combines two complementary models for inverse and forward rendering. Specifically, BRDFusion recovers explicit, consistent scene properties with physical modeling and alleviates optimization ambiguity with generative priors. During forward rendering, the physical model provides controllable rendering from the scene configuration, and the generative model denoises and fixes artifacts. Therefore, our method produces high-quality videos while allowing precise control, outperforming baselines in real and synthetic scenes. Moreover, BRDFusion supports novel-view relighting, night simulation, and dynamic object insertion/editing. Project page: https://shigon255.github.io/brdfusion-page/",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17049",
+      "pdf_url": "https://arxiv.org/pdf/2606.17049",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.17049",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.16281",
+      "source": "huggingface",
+      "title": "Who Should Lead Decoding Now? Tracking Reliable Trajectories for Ensembling Masked Diffusion Language Models",
+      "authors": [
+        "Heecheol Yun",
+        "Joonhyung Park",
+        "Joowon Kim",
+        "Eunho Yang"
+      ],
+      "abstract": "Masked Diffusion Language Models (MDLMs) have emerged as a distinct paradigm for sequence generation. As MDLMs become diverse in capabilities and knowledge coverage, an important question is how to combine their knowledge. Toward this, we first investigate the unique decoding dynamics of MDLMs. We find that successful generations exhibit stable confidence dynamics over answer-relevant positions, while unreliable trajectories can often be corrected by injecting promising intermediate states from other models. Guided by this observation, we propose TIE (Trajectory-based Iterative Ensembling), a knowledge fusion framework in which MDLMs iteratively identify reliable decoding trajectories and relay them across models. TIE tracks confidence dynamics over answer-relevant positions to determine which model currently follows a more reliable trajectory and selectively transfers partially denoised sequences across models. As the model on the more promising trajectory often changes across denoising steps, TIE allows different models to contribute complementary strengths at different stages of generation. Strong performance across diverse reasoning tasks, along with our analyses, suggests that TIE offers a practical approach to the underexplored problem of MDLM ensembling.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.16281",
+      "pdf_url": "https://arxiv.org/pdf/2606.16281",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.16281",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 23,
+      "hot_score": 230,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.16295",
+      "source": "huggingface",
+      "title": "VisualClaw: A Real-Time, Personalized Agent for the Physical World",
+      "authors": [
+        "Haoqin Tu",
+        "Jianwen Chen",
+        "Zijun Wang",
+        "Siwei Han",
+        "Juncheng Wu",
+        "Hardy Chen",
+        "Haonian Ji",
+        "Kaiwen Xiong",
+        "Jiaqi Liu",
+        "Peng Xia",
+        "Jieru Mei",
+        "Hongliang Fei",
+        "Jason Eshraghian",
+        "Zeyu Zheng",
+        "Yuyin Zhou",
+        "Huaxiu Yao",
+        "Cihang Xie"
+      ],
+      "abstract": "Vision language models are serving as general-purpose interfaces for complex multimodal tasks. However, deployment still faces three gaps: VLMs typically incur high latency and cost when processing dense video frames and long prompts, the agent scaffold remains static after deployment, and standard video-QA benchmarks do not test whether agents can use visual evidence inside tool-using workspaces. We present VisualClaw, a self-evolving multimodal agent built around two principles. First, hybrid encoding reduces deployment cost by filtering less informative streaming frames with a cascaded gate and compressing the text skill bank through hot/cold top-k injection. Second, skill evolution lets the agent learn from failures: retrieved memories condition an evolver as direct concatenated context or as guided evidence, producing skill-bank updates that help future questions. Across 4 video-QA benchmarks with 2 VLMs, VisualClaw cuts per-question API cost by an average -98% versus full-frame upload and by -25.9% over the offline uniform 8 frame baseline, while boosting accuracy in most settings, e.g., an average +3.85% and a peak +15.80% on EgoSchema with Gemini 3 Flash. To address the gap, we curate VisualClawArena, a 200-scenario multimodal agentic benchmark built through a strict five-stage pipeline; models must use video evidence, documents, dynamic updates, and executable checks inside a workspace. On VisualClawArena, the same framework with computer-use agent backends improves macro accuracy by +2.9% for Codex (GPT-5.5) and +3.2% for Claude Code (Sonnet 4.6) over no-evolution baselines, with a -9.5% cost reduction compared to the uniform-sampled baseline. These properties make VisualClaw a natural fit for edge applications, where the cascade reduces a 1-hour streaming session from ~3,600 API uploads down to only 5-20 calls and the self-evolution makes it a perfect personalized assistant.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.16295",
+      "pdf_url": "https://arxiv.org/pdf/2606.16295",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.16295",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.16838",
+      "source": "huggingface",
+      "title": "OneRank: Unified Transformer-Native Ranking Architecture for Multi-Task Recommendation",
+      "authors": [
+        "Jiakai Tang",
+        "Sunhao Dai",
+        "Kun Wang",
+        "Zhiluohan Guo",
+        "Yu Zhao",
+        "Cong Fu",
+        "Kangle Wu",
+        "Yabo Ni",
+        "Anxiang Zeng",
+        "Xu Chen",
+        "Jun Xu"
+      ],
+      "abstract": "Multi-task learning (MTL) is essential in recommender systems to enable complementary learning among diverse user feedback. While modern industrial practices have shifted from DNNs to Transformer-centric architectures to strengthen sequence modeling and scaling capacity, they still decouple feature encoding from multi-task prediction, treating the Transformer as a task-agnostic encoder. This design fundamentally limits the performance and scalability by (1) creating an information bottleneck under heterogeneous task objectives, (2) inducing gradient interference that leads to the seesaw phenomenon, and (3) forcing a dataflow transition in which attention-based, context-adaptive representation learning is converted to static feed-forward task prediction with incompatible information read-write dynamics.\n  We propose OneRank, a Transformer-native multi-task ranking framework that eliminates encoder-predictor separation and introduces task-private channels for forward representation learning and backward optimization, enabling task-specialized learning while reducing inter-task interference. In the forward pass, OneRank learns task-specific representations bottom-up through task-conditioned information selection, candidate-aware contextualization, and controlled cross-task interaction. In the backward pass, cross-task gradient detachment isolates task-private parameter updates from shared knowledge extraction modules, preventing negative transfer. We further replace static task-specific MLP scorers with dynamic matching-based scoring for context-aware personalized ranking. By internalizing multi-task reasoning within the Transformer stack, OneRank establishes a unified and scalable architectural paradigm. Offline and online experiments on large-scale industrial datasets show that OneRank significantly outperforms state-of-the-art baselines while maintaining computational efficiency.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.16838",
+      "pdf_url": "https://arxiv.org/pdf/2606.16838",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.16838",
+      "category": "recsys",
+      "tags": [
+        "cs.IR"
+      ],
+      "upvotes": 14,
+      "hot_score": 140,
+      "structured_summary": null
+    }
+  ]
+}

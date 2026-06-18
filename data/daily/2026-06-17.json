@@ -1,0 +1,338 @@
+{
+  "date": "2026-06-17",
+  "generated_at": "2026-06-18T00:20:38.822207+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2606.18023",
+      "source": "huggingface",
+      "title": "LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling",
+      "authors": [
+        "Jian Yang",
+        "Shawn Guo",
+        "Wei Zhang",
+        "Tianyu Zheng",
+        "Yaxin Du",
+        "Haau-Sing Li",
+        "Jiajun Wu",
+        "Yue Song",
+        "Yan Xing",
+        "Qingsong Cai",
+        "Zelong Huang",
+        "Chuan Hao",
+        "Ran Tao",
+        "Xianglong Liu",
+        "Wayne Xin Zhao",
+        "Mingjie Tang",
+        "Weifeng Lv",
+        "Ming Zhou",
+        "Bryan Dai"
+      ],
+      "abstract": "Looped Transformers scale latent computation by repeatedly applying shared blocks, but sequential looping increases latency and KV-cache memory with the loop count. Parallel loop Transformers (PLT) alleviate this cost through cross-loop position offsets (CLP) and shared-KV gated sliding-window attention, making loop count a practical design choice. We therefore study PLT loop-count selection through a gain--cost view: an extra loop may refine representations, but CLP also introduces a positional mismatch at each loop boundary. We instantiate this study by training LoopCoder-v2, a family of 7B PLT coders with different loop counts, from scratch on 18T tokens, followed by matched instruction tuning and evaluation. Empirically, the two-loop variant delivers broad gains over the non-looped baseline across code generation, code reasoning, agentic software engineering, and tool-use benchmarks, improving SWE-bench Verified from 43.0 to 64.4 points and Multi-SWE from 14.0 to 31.0 points. In contrast, variants with three or more loops regress, revealing a strongly non-monotonic loop-count effect. Our diagnostics show that loop 2 provides the main productive refinement, while later loops yield diminishing, oscillatory updates and reduced representational diversity. Because the CLP-induced mismatch remains roughly fixed as refinement gains shrink, the offset cost increasingly dominates. This gain--cost trade-off explains PLT's saturation at two loops and provides diagnostics for loop-count selection.",
+      "published_date": "2026-06-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.18023",
+      "pdf_url": "https://arxiv.org/pdf/2606.18023",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.18023",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 113,
+      "hot_score": 1130,
+      "structured_summary": {
+        "chinese_title": "LoopCoder-v2:仅循环一次以提高测试时计算扩展",
+        "chinese_summary": "高效测试时时计算",
+        "pain_point": "现有模型测试时计算效率低下",
+        "core_value": "通过循环机制提高测试时计算效率",
+        "technical_architecture": "平行循环变压器 (PLT) 结架构",
+        "quantitative_results": "SWE-bbench 提升43.1到64.4, 分",
+        "competitors": "暂无对比信息",
+        "limitations": "多",
+        "key_contributions": [],
+        "application_scenarios": [],
+        "technical_highlights": [],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2606.18216",
+      "source": "huggingface",
+      "title": "Zone of Proximal Policy Optimization: Teacher in Prompts, Not Gradients",
+      "authors": [
+        "Byung-Kwan Lee",
+        "Ximing Lu",
+        "Shizhe Diao",
+        "Minki Kang",
+        "Saurav Muralidharan",
+        "Karan Sapra",
+        "Andrew Tao",
+        "Pavlo Molchanov",
+        "Yejin Choi",
+        "Yu-Chiang Frank Wang",
+        "Ryo Hachiuma"
+      ],
+      "abstract": "Knowledge distillation transfers a teacher's competence to a small student but is brittle in the small-student regime: forcing the student to imitate logits from a much larger teacher concentrates it on the teacher's sharpest modes, hurting generalization on benchmark families beyond the training corpus. Reinforcement learning (RL) avoids logit imitation by training on the student's own rollouts. However, on questions where every rollout fails-yielding zero advantage and being silently discarded-injecting a stronger teacher's response into the policy gradient breaks the on-policy assumption and induces drift. We introduce Zone of Proximal Policy Optimization (ZPPO), inspired by Vygotsky's zone of proximal development, which keeps the teacher inside the prompt rather than the policy gradient. On hard questions, ZPPO constructs two reformulated prompts: a Binary Candidate-included Question (BCQ) pairs one correct teacher response with one incorrect student response as anonymized candidates the student must discriminate, and a Negative Candidate-included Question (NCQ) aggregates the student's wrong rollouts into a single prompt to surface their shared failure modes. A prompt replay buffer recirculates each hard question until it either graduates-the student's mean rollout accuracy on it reaches half- or is FIFO-evicted under finite capacity, amplifying BCQ and NCQ inside the student's current zone of proximal development. On the Qwen3.5 family at four student scales (0.8B-9B) with a 27B teacher, post-trained as vision-language models and evaluated on a 31-benchmark suite (16 VLM, 10 LLM, 5 Video), ZPPO outperforms off/on-policy distillation and GRPO, with the largest gains at the smallest scale.",
+      "published_date": "2026-06-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.18216",
+      "pdf_url": "https://arxiv.org/pdf/2606.18216",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.18216",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 40,
+      "hot_score": 400,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.17200",
+      "source": "huggingface",
+      "title": "ACE-Ego-0: Unifying Egocentric Human and Robotic Data for VLA Pretraining",
+      "authors": [
+        "Hao Li",
+        "Ganlong Zhao",
+        "Yufei Liu",
+        "Haotian Hou",
+        "Guoquan Ye",
+        "Tongyan Fang",
+        "Chunxiao Liu",
+        "Siyuan Huang",
+        "Jianbo Liu",
+        "Xiaogang Wang",
+        "Hongsheng Li"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models benefit from large-scale and diverse embodied data, yet scaling robot trajectory collection is costly and labor-intensive. Recent advances show that large-scale egocentric human videos provide complementary real-world supervision in pretraining. However, joint training on human and robot data remains challenging due to divergences in action spaces, embodiment structures, temporal dynamics, and supervision quality. We introduce ACE-EGO-0, a unified VLA pretraining framework jointly leveraging heterogeneous data sources. To extract large-scale pretraining supervision from egocentric human videos, we build a scalable egocentric video-to-action pipeline that converts raw human videos into robot-format pseudo-action trajectories. To make these labels comparable with robot demonstrations, ACE-EGO-0 uses a unified action representation based on camera-space actions, morphology conditioning, and time-aligned action chunking. To robustly leverage noisy pseudo-action supervision from egocentric human videos, we formulate a reliability-aware training objective with a human auxiliary loss that concentrates supervision on reliable signals. We instantiate ACE-EGO-0 on 4.53K hours of robot and simulation data, together with 1.48K hours of pseudo-action-labeled egocentric human data. Experiments show that incorporating large-scale human supervision under reliability-aware weighting consistently improves both unified joint pretraining and supervised fine-tuning. ACE-EGO-0 achieves state-of-the-art performance on RoboCasa GR1 TableTop and RoboTwin 2.0, while demonstrating strong transfer to real-world bimanual manipulation.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17200",
+      "pdf_url": "https://arxiv.org/pdf/2606.17200",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.17200",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 40,
+      "hot_score": 400,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.17861",
+      "source": "huggingface",
+      "title": "GameCraft-Bench: Can Agents Build Playable Games End-to-End in a Real Game Engine?",
+      "authors": [
+        "Tongxu Luo",
+        "Rongsheng Wang",
+        "Jiaxi Bi",
+        "Chenming Xu",
+        "Zhengyang Tang",
+        "Jianlong Chen",
+        "Juhao Liang",
+        "Ke Ji",
+        "Shuqi Guo",
+        "Yuhao Du",
+        "Fan Bu",
+        "Wenyu Du",
+        "Xiaotong Zhang",
+        "Kyle Li",
+        "Shaobo Wang",
+        "Linfeng Zhang",
+        "Yuxuan Liu",
+        "Xin Lai",
+        "Chenxin Li",
+        "Yiduo Guo",
+        "Zhexin Zhang",
+        "Xinyuan Wang",
+        "Tianyi Bai",
+        "Ziniu Li",
+        "Benyou Wang"
+      ],
+      "abstract": "Game generation is an emerging application of coding agents, requiring models to transform natural-language specifications into playable interactive systems. Unlike traditional coding tasks, game generation takes place within a game engine, where scripts, scenes, assets, rendering, and runtime interactions must jointly produce coherent gameplay. We formalize end-to-end game generation as the problem of producing a complete game artifact that realizes a specification through observable player-game interaction in a target environment. We argue that evaluating this setting requires three desiderata: Engine Grounding, Artifact Completeness, and Interactive Verification. We propose an interaction-grounded evaluation framework that assesses executable gameplay through replayed demonstrations and rubric-guided multimodal judging. We instantiate this framework as GameCraft-Bench, a benchmark comprising 140 Godot tasks across 15 game families. Evaluations of frontier coding agents show that end-to-end game generation remains highly challenging: the strongest agent achieves only 41.46%, and most agents score below 40%. Further analysis reveals that while agents often implement recognizable mechanics, they struggle to deliver complete games with sufficient content, functional visual feedback, and coherent presentation. See https://tongxuluo.github.io/gamecraft-bench-website for demos, code, and data.",
+      "published_date": "2026-06-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17861",
+      "pdf_url": "https://arxiv.org/pdf/2606.17861",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.17861",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.16428",
+      "source": "huggingface",
+      "title": "LectūraAgents: A Multi-Agent Framework for Adaptive Personalized AI-Assisted Learning and Embodied Teaching",
+      "authors": [
+        "Jaward Sesay",
+        "Yue Yu",
+        "Siwei Dong",
+        "Yemin Shi",
+        "Guangyao Chen",
+        "Börje F. Karlsson"
+      ],
+      "abstract": "Effective personalized AI-assisted learning demands systems that can not only generate accurate learner-specific educational materials, but also dynamically adapt their instruction to diverse learners. However, existing educational agents have primarily focused on lecture content automation and simulations, which often fall short of modelling multimodal and embodied instructional methods tailored for the individual learner. To this end, we propose LectūraAgents - a multi-agent framework that enables personalized learning through end-to-end adaptive embodied teaching. At its core, LectūraAgents mirrors a professor-student relationship, in which a ProfessorAgent leads a collaborative team of specialized subordinate agents through research, planning, review, and embodied delivery of lecture contents that adapt to a learner's needs. The framework offers three main contributions: (1) a hierarchical multi-agent architecture for end-to-end personalized learning; (2) an adaptive embodied teaching mechanism, wherein the ProfessorAgent executes visible and pedagogically motivated teaching actions (e.g., handwrite, highlight, underline, etc.) over contents in a teaching environment; and (3) a Teaching Action-Speech Alignment (TASA) algorithm that employs salience-based heuristics and temporal semantic segmentation to generate coherent teaching action sequences aligned with learner profiles. We evaluate LectūraAgents on diverse courses at high school, undergraduate, and graduate levels using sample-specific rubric-based analysis; with generated lecture materials and teaching actions assessed and validated by expert educators. Experimental results show consistent gains in lecture content quality, embodied teaching quality, assessment, and personalization over existing approaches, positioning LectūraAgents as a pedagogically well-grounded framework for personalized learning at scale.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.16428",
+      "pdf_url": "https://arxiv.org/pdf/2606.16428",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.16428",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "upvotes": 31,
+      "hot_score": 310,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.09030",
+      "source": "huggingface",
+      "title": "TRIAGE: Dialectical Reasoning for Explainable Risk Prediction on Irregularly Sampled Medical Time Series with LLMs",
+      "authors": [
+        "Hyeongwon Jang",
+        "Gyouk Chu",
+        "Changhun Kim",
+        "Joonhyung Park",
+        "Hangyul Yoon",
+        "Eunho Yang"
+      ],
+      "abstract": "Clinical early warning systems built on electronic health records, in which clinical observations are recorded as irregularly sampled medical time series (ISMTS), must deliver both calibrated risk scores for patient triage and interpretable rationales that clinicians can verify. Large Language Models (LLMs) have been explored for this task, yet they collapse graded clinical risk into overconfident binary predictions. This risk polarization undermines both calibration and cross-patient comparability. To address this, we propose TRIAGE, a framework that trains an LLM to generate dialectical reasoning over competing clinical outcomes by eliciting outcome-specific rationales. This dialectical formulation mitigates risk polarization, enabling a single LLM to yield continuous risk scores grounded in explicit clinical reasoning. Evaluated on three ISMTS benchmarks, TRIAGE achieves an average AUPRC improvement of 3.3% and reduces calibration error by 81% compared to the competitive baselines. An LLM-as-a-judge assessment further shows that our rationales surpass post-hoc explanations from the baseline by 20% in clinical reasoning quality. The source code is available at https://github.com/HyeongWon-Jang/TRIAGE .",
+      "published_date": "2026-06-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.09030",
+      "pdf_url": "https://arxiv.org/pdf/2606.09030",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.09030",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "",
+        "chinese_summary": "提高临床风险预测的解释性与可-",
+        "pain_point": "",
+        "core_value": "",
+        "technical_architecture": "使用大型语言模型训练进行对话推理 ",
+        "quantitative_results": "在三个基准上 上提高 A.0 ",
+        "competitors": "对比主要基 on 瞋模型 ",
+        "limitations": "需要进一步验证和推理的有效性 ",
+        "key_contributions": [],
+        "application_scenarios": "应用于医疗风险预测 ",
+        "technical_highlights": [],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2606.18195",
+      "source": "huggingface",
+      "title": "Learning from the Self-future: On-policy Self-distillation for dLLMs",
+      "authors": [
+        "Yifu Luo",
+        "Zeyu Chen",
+        "Haoyu Wang",
+        "Xinhao Hu",
+        "Yuxuan Zhang",
+        "Zhizhou Sha",
+        "Shiwei Liu"
+      ],
+      "abstract": "On-policy self-distillation (OPSD) has proven effective for post-training large language models (LLMs), yet its application to diffusion LLMs (dLLMs) remains unexplored. Existing OPSD methods are inherently autoregressive-centric. They inject privileged information via left-to-right prefix conditioning with token-level divergence supervision, a design that fundamentally conflicts with the arbitraryorder generation of dLLMs. We introduce d-OPSD, the first OPSD framework tailored for dLLMs. Our approach makes two core contributions. First, we reframe self-teacher construction by using self-generated answers as suffix conditioning, enabling the student model to learn from \"self future-experience\" rather than privileged prefixes. Second, we shift supervision from token-level to step-level, aligning training with the iterative denoising process of dLLMs. Experiments across four reasoning benchmarks show that d-OPSD consistently outperforms RLVR and SFT baselines with superior sample efficiency, requiring only around 10% of the optimization steps by RLVR and opening a promising pathway for dLLM posttraining. The code is available at https://github.com/xingzhejun/d-OPSD.",
+      "published_date": "2026-06-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.18195",
+      "pdf_url": "https://arxiv.org/pdf/2606.18195",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.18195",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.17628",
+      "source": "huggingface",
+      "title": "OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation",
+      "authors": [
+        "Guibin Zhang",
+        "Xun Xu",
+        "Yanwei Yue",
+        "Zikun Su",
+        "Wangchunshu Zhou",
+        "Xiaobin Hu",
+        "Shuicheng Yan"
+      ],
+      "abstract": "Memory has become a standard substrate for self-evolving agents, yet retaining experience is not the same as learning how to evolve through it. Existing memory agents can store trajectories, retrieve reflections, or accumulate skills, but often lack the holistic competence to select useful experience, act on it, write reusable knowledge, and maintain a growing repository. We introduce OPD-Evolver, a slow-fast co-evolution framework that cultivates such an agent evolver through on-policy self-distillation. In the fast loop, OPD-Evolver interacts with a four-level memory hierarchy to read, use, write, and maintain experience for rapid test-time evolution. In the slow loop, outcome-calibrated memory attribution and privileged hindsight distill these four abilities into the deployable policy. Across multi-domain benchmarks, OPD-Evolver surpasses memory systems such as ReasoningBank by up to 11.5%, and training-based methods such as Skill0 by ~5.8%. Further analysis shows that OPD-Evolver internalizes high-value experience and memory management, enabling OPD-Evolver-9B to challenge giant counterparts such as Qwen3.5-397B-A17B and Step-3.5-Flash, pointing beyond memory-augmented agents toward genuinely qualified agent evolvers.",
+      "published_date": "2026-06-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17628",
+      "pdf_url": "https://arxiv.org/pdf/2606.17628",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.17628",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.15236",
+      "source": "huggingface",
+      "title": "Show the Signal, Hide the Noise: Spectral Forcing for Pixel-Space Diffusion",
+      "authors": [
+        "Weichen Fan",
+        "Haiwen Diao",
+        "Penghao Wu",
+        "Ziwei Liu"
+      ],
+      "abstract": "Pixel-space diffusion models are trained on full-bandwidth noisy images, yet the useful signal available to the denoiser is strongly frequency dependent. Under rectified-flow diffusion and natural-image power-law spectra, the per-band data-to-noise contour k^{*}(t) = (1-t)^{-2/α} separates a signal-bearing low-frequency region from a noise-dominated high-frequency region at each time t. We show that this implicit coarse-to-fine structure is not merely descriptive: it induces a capacity-allocation problem. A standard pixel-space denoiser must discover the moving bandwidth boundary internally and can spend computation on frequency-time regions where the optimal prediction collapses to deterministic baselines rather than data-distribution modeling. To make this boundary explicit, we introduce Spectral Forcing, a parameter-free, time-conditional 2D-DCT low-pass operator applied to the noisy input before the patch embedder. Its cutoff expands monotonically with the diffusion time and becomes the identity at the data endpoint. Through controlled synthetic experiments, we identify the regime in which the operator is beneficial: coarse patch tokenization and data whose high-frequency content is predominantly noise rather than essential signal. On ImageNet-256 with JiT-700M/32, Spectral Forcing consistently improves both FID and Inception Score across different training epochs, demonstrating robust gains throughout training; at finer tokenization, the spectral forcing is still competitive. We further insert the unchanged operator into SenseNova-U1, a unified text-to-image model, where it improves DPG-Bench and GenEval, showing that the input-side spectral prior transfers beyond class-conditional generation. These results suggest a route to capacity-efficient pixel-space diffusion by showing the signal and hiding the noise.",
+      "published_date": "2026-06-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.15236",
+      "pdf_url": "https://arxiv.org/pdf/2606.15236",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.15236",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.16767",
+      "source": "huggingface",
+      "title": "Text-Vision Co-Instructed Image Editing",
+      "authors": [
+        "Chenxi Xie",
+        "Yuhui Wu",
+        "Qiaosi Yi",
+        "Lei Zhang"
+      ],
+      "abstract": "Existing image editing methods can be generally categorized into textual instruction-based and visual prompt-based ones. Textual instructions are semantically expressive, but are limited by the coarse granularity of spatial control of the editing results. In contrast, visual prompts such as drag and point can provide precise spatial guidance, but are limited by the inherent ambiguity in semantic intent. To unify the strength of textual and visual prompts, we present Text-Vision Co-Instructed Image Editing, which jointly models textual instructions as semantic intent and sparse visual instructions as spatial guidance, aiming to achieve precise and intent-faithful image manipulation. To this end, we first construct a textual-visual instruction paired dataset with more than 23K samples derived from dynamic videos, enabling aligned supervision for cross-modal instruction. We then propose TV-Edit, a Textual-Visual instruction unified Editing framework to contextualize drag or point-based visual instructions with image-text semantics and lift them into semantic-aware control representations for pretrained editing backbones. By integrating semantic intent and spatial constraints, TV-Edit leads to more precise spatial control, less instruction ambiguity, and stronger structural consistency than text-only or drag-based alternatives. Finally, we establish TV-Edit-Bench, a deliberately designed benchmark to evaluate semantic faithfulness, spatial alignment, and visual consistency with ground-truth references and controlled textual-visual variations for reliable assessment. Our experiments across multiple editing backbones demonstrate that TV-Edit consistently yields more precise and intent-faithful edits, significantly outperforming state-of-the-art instruction-based and drag-based baselines.",
+      "published_date": "2026-06-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.16767",
+      "pdf_url": "https://arxiv.org/pdf/2606.16767",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.16767",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 12,
+      "hot_score": 120,
+      "structured_summary": null
+    }
+  ]
+}

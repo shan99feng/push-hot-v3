@@ -1,0 +1,281 @@
+{
+  "date": "2026-06-21",
+  "generated_at": "2026-06-22T00:15:45.382724+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2606.20563v1",
+      "source": "arxiv",
+      "title": "JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising",
+      "authors": [
+        "Siang-Ling Zhang",
+        "Huai-Hsun Cheng",
+        "Tsung-Ju Yang",
+        "Yu-Lun Liu"
+      ],
+      "abstract": "Creating 3D visual illusions, a single 3D mesh that reveals entirely different semantics from various viewing angles, is a fascinating but tough challenge. Existing optimization-based methods are slow and can produce oversaturated colors. In contrast, naive stitching approaches fail to produce geometrically coherent objects. This results in visible unnatural seams and semantic leaks. In this paper, we present a fast and training-free framework for generating text-driven 3D visual illusions. Our approach decouples the generation into two stages. First, we propose a cross-space dual-branch denoising process. This process dynamically decodes 3D latents into voxel space for CLIP-guided orientation alignment and Signed Distance Field (SDF) blending, which ensures seamless geometric fusion. Second, we introduce a view-conditioned texture synthesis module that projects and aggregates view-specific 2D diffusion priors onto the fused geometry. Extensive experiments demonstrate that our method generates highly realistic, dual-semantic 3D illusions in just 3-5 minutes. It significantly outperforms existing methods in geometric integrity, semantic recognizability, and efficiency. Project page: https://siang1105.github.io/JanusMesh.github.io/",
+      "published_date": "2026-06-18T17:59:55Z",
+      "url": "https://arxiv.org/abs/2606.20563v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20563v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2606.20561v1",
+      "source": "arxiv",
+      "title": "TimeProVe: Propose, then Verify for Efficient Long Video Temporal Reasoning in Activities of Daily Living",
+      "authors": [
+        "Arkaprava Sinha",
+        "Dominick Reilly",
+        "Siddharth Krishnan",
+        "Hieu Le",
+        "Srijan Das"
+      ],
+      "abstract": "Long Video Question Answering (LVQA) requires identifying sparse, query-relevant evidence within hours-long untrimmed videos. Existing approaches either process videos densely with large vision-language models (VLMs), incurring prohibitive computational cost, or rely on sparse caption-based reasoning, which often misses temporally localized and motion-centric evidence. We introduce TimeProVe, a cost-efficient hybrid framework for temporally grounded reasoning in long videos. TimeProVe first employs lightweight modules to generate action-grounded answer--evidence hypotheses and subsequently invokes an expensive VLM only for targeted verification. The core of our framework lies in the Action-based Candidate Evidence (ACE) module, which converts temporally localized actions into query-conditioned candidate answers and supporting evidence windows through lightweight LLM reasoning. We further introduce OpenTSUBench (OTB), an open-ended benchmark designed to evaluate temporally grounded reasoning in real-world Activities of Daily Living (ADL) scenarios. Experiments show that TimeProVe outperforms the strongest baseline on OTB by 7.3%, while reducing VLM calls by 75% and inference cost by 93%. Furthermore, without explicit temporal grounding training, TimeProVe achieves competitive performance on Charades-STA, and reaches state-of-the-art results when enhanced with grounding VLMs.",
+      "published_date": "2026-06-18T17:59:48Z",
+      "url": "https://arxiv.org/abs/2606.20561v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20561v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "TimeProVe: 提出验证方法提高长视频日常生活活动时间推理效率",
+        "chinese_summary": "提出 TimeProVe 提高验证方法",
+        "pain_point": "现有方法处理长视频效率低下， ",
+        "core_value": "通过轻轻轻轻框架提高验证效率并 提高验证方法",
+        "technical_architecture": "提出轻轻轻轻轻轻轻轻轻轻轻轻轻轻轻轻轻轻 ",
+        "quantitative_results": "提高 3.%, 凔 9",
+        "competitors": "暂无对比信息",
+        "limitations": "",
+        "key_contributions": [],
+        "application_scenarios": "长视频日常生活活动 活动推理 ",
+        "technical_highlights": "轻轻轻 ",
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2606.20560v1",
+      "source": "arxiv",
+      "title": "How Transparent is DiffusionGemma?",
+      "authors": [
+        "Joshua Engels",
+        "Callum McDougall",
+        "Bilal Chughtai",
+        "Janos Kramar",
+        "Senthoran Rajamanoharan",
+        "Cindy Wu",
+        "Arthur Conmy",
+        "Asic Q Chen",
+        "Jean Tarbouriech",
+        "Min Ma",
+        "Brendan O'Donoghue",
+        "João Gabriel Lopes de Oliveira",
+        "Rohin Shah",
+        "Neel Nanda"
+      ],
+      "abstract": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a larger fraction of its computation in a continuous latent space; does this make its reasoning less transparent? We study this question by decomposing transparency into two components: variable transparency, whether we understand intermediate snapshots of a model's computational state; and algorithmic transparency, whether we can use these snapshots to reconstruct the process by which the model arrived at its outputs. Naively, DiffusionGemma has poor variable transparency: its opaque serial depth, the amount of serial computation that occurs in between interpretable model states, seems at first 28.6X higher than the corresponding autoregressive Gemma 4 model. However, we show that we can map the information flowing between denoising steps through an interpretable token bottleneck with no decrease in downstream performance. Treating these intermediate states as interpretable reduces the opaque serial depth to just 1.1X that of Gemma 4. Algorithmic transparency is harder for diffusion models than for autoregressive models because all token predictions in the canvas can change at every denoising step, giving the model the power to implement complicated distributed algorithms during the denoising process. To begin bridging this gap, we conduct a suite of interpretability case studies, uncovering initial evidence of novel diffusion-specific phenomena such as non-chronological reasoning, token and sequence smearing, and intermediate-context reasoning. Finally, we test monitorability, a key application of transparency that measures whether model outputs are useful for downstream tasks. We find that DiffusionGemma is similarly monitorable to Gemma 4.",
+      "published_date": "2026-06-18T17:59:46Z",
+      "url": "https://arxiv.org/abs/2606.20560v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20560v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2606.20559v1",
+      "source": "arxiv",
+      "title": "UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning",
+      "authors": [
+        "Wenhao Chi",
+        "Arkaprava Sinha",
+        "Dominick Reilly",
+        "Hieu Le",
+        "Srijan Das"
+      ],
+      "abstract": "Egocentric video understanding is inherently limited by the narrow perspective of wearable cameras: a single viewpoint, a single modality, a single model cannot capture the full richness of human action. We argue that a truly expressive egocentric representation must subsume complementary knowledge across viewpoints, modalities, and foundation model representations, yet remain deployable from egocentric video alone. To this end, we introduce a hierarchical multi-teacher distillation framework that produces UNIEGO, a unified egocentric encoder trained with nine teachers spanning ego-exo viewpoints, RGB, depth, and skeleton modalities, and four foundation models. Rather than distilling directly from heterogeneous teachers whose incompatible architectures and feature geometries induce conflicting gradients, our framework interposes a layer of representation-specific Proxy models that translate diverse teacher knowledge into a homogeneous egocentric space. A second distillation stage, Selective Proxy Distillation (SPD), then adaptively selects, for each training sample, the subset of proxies that are both correct and confident, distilling exclusively from reliable supervision and suppressing erroneous signals. SPD is further stabilized by initializing UNIEGO as a learned convex combination of proxy parameters, placing the unified model in a well-conditioned region of the loss landscape before distillation begins. UNIEGO achieves state-of-the-art performance across three egocentric video understanding tasks - action recognition, video retrieval, and action segmentation on three challenging ego-exo benchmarks, outperforming naive multi-teacher distillation baselines and demonstrating that structured, proxy-mediated knowledge transfer yields richer and more discriminative egocentric representations.",
+      "published_date": "2026-06-18T17:59:45Z",
+      "url": "https://arxiv.org/abs/2606.20559v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20559v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2606.20557v1",
+      "source": "arxiv",
+      "title": "Optimal Deterministic Multicalibration and Omniprediction",
+      "authors": [
+        "Georgy Noarov",
+        "Aaron Roth"
+      ],
+      "abstract": "A model is multicalibrated on a collection of group weights $G$ if it is calibrated -- i.e. unbiased even conditional on its prediction -- not just overall, but also after reweighting contexts by each $g \\in G$. It is a useful property for many downstream applications and is a basic desideratum of trustworthy machine learning. Before this work, all predictors known to attain the minimax-optimal $\\widetilde O(\\varepsilon^{-3})$ sample complexity rate for $\\varepsilon$-multicalibration were randomized, while deterministic predictors were known only with substantially worse sample complexity. Whether randomization is necessary for optimal sample complexity in multicalibration was explicitly asked by [CLNR26] and implicitly in several prior works.   We resolve this open problem by giving a minimax-optimal multicalibration algorithm that outputs a deterministic predictor. We then generalize the algorithm to produce optimal deterministic predictors that satisfy outcome indistinguishability (OI) with respect to finite or finitely covered collections of tests. As an application, this also gives deterministic omnipredictors and panpredictors with optimal sample complexity, resolving open problems posed by [OKK25] and [BHHLZ25].",
+      "published_date": "2026-06-18T17:59:31Z",
+      "url": "https://arxiv.org/abs/2606.20557v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20557v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "math.ST",
+        "stat.ML"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2606.20556v1",
+      "source": "arxiv",
+      "title": "Thinking in Boxes: 3D Editing in Real Images Made Easy",
+      "authors": [
+        "Pradhaan S Bhat",
+        "Naveen Chandra R",
+        "Rishubh Parihar",
+        "Vaibhav Vavilala",
+        "R. Venkatesh Babu",
+        "D. A. Forsyth",
+        "Anand Bhattad"
+      ],
+      "abstract": "Text and 2D-conditioning interfaces provide weak, ambiguous control over spatial transformations in image editing -- particularly under large object motions and camera changes. Prior work has used 3D primitives such as boxes, but only as loose conditioning signals indicating approximate object location rather than specifying the transformation. We instead use 3D boxes as structured specifications: the user provides the input and output boxes of the edit, casting editing as a well-posed geometry problem. This ``thinking in boxes'' interface, where each box face is color-coded to convey 3D orientation, gives precise control over translation, rotation, scaling, and viewpoint changes in real images while preserving scene and object identity, and recovering previously unseen object regions. To ground transformations in scene appearance, we introduce a depth-aligned planar floor as a global reference frame, shaded with depth-aware cues. Conditioned on this structure, an image generator produces consistent results under large transformations. Trained in two stages -- on synthetic multi-object scenes and a small set of real-world videos from Objectron -- the system generalizes to complex, in-the-wild real images. Our method operates directly on real photographs and substantially outperforms recent state-of-the-art methods on large 3D edits.",
+      "published_date": "2026-06-18T17:59:05Z",
+      "url": "https://arxiv.org/abs/2606.20556v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20556v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2606.20554v1",
+      "source": "arxiv",
+      "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+      "authors": [
+        "Ruizhong Qiu",
+        "Yinglong Xia",
+        "Dongqi Fu",
+        "Hanqing Zeng",
+        "Ren Chen",
+        "Xiangjun Fan",
+        "Hong Li",
+        "Hong Yan",
+        "Hanghang Tong"
+      ],
+      "abstract": "Generative recommendation is an emerging paradigm that has shown promise in industrial recommendation systems, aiming to predict users' next interactions from their historical behaviors. At the core of generative recommendation lies item tokenization, which bridges item semantics and recommendation models. However, existing methods often struggle to effectively organize and inject complex user-behavioral and item-semantic contexts into recommendation models simultaneously. On the one hand, existing graph-based integration methods, such as graph serialization and graph neural networks, either suffer from scalability issues or exploit only local graph information. On the other hand, existing semantic tokenization methods typically rely on heuristics and lack explicit supervision signals, which may lead to inaccurate or suboptimal semantic representations. To address these limitations in user interest context modeling, we propose G2Rec, a scalable framework that unifies holistic graph-based user co-engagement modeling with semantic tokenization for industrial-scale generative recommendation. Overall, G2Rec enables recommendation models to capture holistic and semantically grounded user interest prototypes without requiring ground-truth user interests, thereby providing more comprehensive and accurate modeling of user behavior contexts in industrial sequential recommendation. Online deployment across product surfaces and extensive experiments on public datasets demonstrate the superiority of G2Rec over existing methods.",
+      "published_date": "2026-06-18T17:58:32Z",
+      "url": "https://arxiv.org/abs/2606.20554v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20554v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2606.20550v1",
+      "source": "arxiv",
+      "title": "Easy Reads: A Python program for making Scientific Papers on arXiv more Reader Friendly and Accessible",
+      "authors": [
+        "Vishal Verma"
+      ],
+      "abstract": "Scientific papers are frequently dense and characterized by features such as small fonts and line spacing, double columns of text, and tightly arranged figures. While these features make papers more compact, they can hinder readability, make them less accessible, and can strain the reader. arXiv is a premier open-access repository for scientific papers across different fields and is used extensively by researchers, including those in the physics and astrophysics communities.   Easy Reads is an automated, end-to-end, open-source Python program that helps address the stated challenge by making papers from arXiv more reader-friendly and accessible. Easy Reads can automatically fetch a paper from arXiv via its URL and work with the source TeX file to allow custom formatting of the paper features, primarily the font size, and the number of columns used. The main goal of Easy Reads is to facilitate ease of reading of scientific papers.",
+      "published_date": "2026-06-18T17:57:26Z",
+      "url": "https://arxiv.org/abs/2606.20550v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20550v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "recsys",
+      "tags": [
+        "cs.DL",
+        "cs.HC",
+        "cs.IR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2606.20547v1",
+      "source": "arxiv",
+      "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
+      "authors": [
+        "Przemyslaw Musialski"
+      ],
+      "abstract": "We place the attention token on the group: a token is an element $g_i$ of a matrix Lie group $G$ -- a bare transformation, with no feature payload and no external action $ρ(g)$ carrying it. To our knowledge this is the first attention construction whose tokens are bare matrix Lie group elements: their score is the closed-form algebra norm of the relative pose rather than a learned kernel, and it reaches the affine full-frame groups that every irrep- or surjective-exp-based method must exclude. We call it Lie-Algebra Attention. Once tokens are group elements, the rest follows with none of the usual representation-theoretic machinery. The relative geometry of a pair is canonical, $g_i^{-1} g_j$, so the pairwise invariant $w_{ij} = \\log(g_i^{-1} g_j)$ is intrinsic rather than designed; equivariance under the diagonal $G$-action is tautological, and the cocycle condition holds automatically. The attention score is the negative squared algebra norm, $s_{ij} = -\\|\\log(g_i^{-1} g_j)\\|_λ^2/τ$: the canonical proximity kernel under a block-weighted Frobenius inner product, with no irreducible representations, spherical harmonics, Clebsch-Gordan products, or learned kernel. The construction applies to any matrix Lie group on a chosen logarithm chart containing the relative poses, including the non-compact non-abelian affine groups with scale and shear that no vector-token attention method reaches: neither the irrep tradition nor surjective-exp methods. Three sequence-completion experiments, on SE(2), SO(3), and Aff(2), bear this out: the closed-form score matches a learned MLP kernel on the same invariant and outperforms it on SE(2), using 50 to 80x fewer score parameters, while a vector-token baseline breaks invariance by five to twelve orders of magnitude.",
+      "published_date": "2026-06-18T17:56:17Z",
+      "url": "https://arxiv.org/abs/2606.20547v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20547v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CV",
+        "cs.GR",
+        "cs.RO",
+        "math.DG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2606.20546v1",
+      "source": "arxiv",
+      "title": "Predictability as a Fine-Grained Measure for Privacy",
+      "authors": [
+        "Linda Lu",
+        "Karthik Sridharan"
+      ],
+      "abstract": "Differential privacy (DP) ensures rigorous individual-level privacy guarantees against even the most knowledgeable attackers, but its worst-case nature can impose a costly privacy-accuracy tradeoff. We introduce privacy via predictability, a fine-grained framework that explicitly incorporates the attacker's core knowledge, a compromised portion of the dataset generated by a stochastic process, and a specified family of queries. Predictability measures privacy leakage as the incremental gain in an attacker's ability to predict sensitive information about unknown individuals after observing the algorithm's output, beyond what can already be inferred from the compromised data. We show that predictability and DP are generally incomparable: each can be small while the other is large. However, in the worst-case regime where all but one individual is compromised, and all binary queries are considered sensitive, predictability implies mutual-information DP. More generally, predictability provides a finer-grained privacy metric tailored to specific sensitive information and specific attacker models. We introduce a general framework, using the generalized method of moments (GMM), to analyze asymptotic predictability when the compromised data is generated by a stationary, ergodic, mixing process. Using this analysis, we derive a predictability-calibrated output perturbation scheme for ERM. Our approach is complementary to DP and can be used alongside DP to provide fine-grained privacy control.",
+      "published_date": "2026-06-18T17:55:31Z",
+      "url": "https://arxiv.org/abs/2606.20546v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20546v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "date": "2026-06-23",
+  "generated_at": "2026-06-24T00:02:16.286043+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2606.22388",
+      "source": "huggingface",
+      "title": "PlanBench-XL: Evaluating Long-Horizon Planning of LLM Tool-Use Agents in Large-Scale Tool Ecosystems",
+      "authors": [
+        "Jiayu Liu",
+        "Qihan Lin",
+        "Cheng Qian",
+        "Rui Wang",
+        "Emre Can Acikgoz",
+        "Xiaocheng Yang",
+        "Jiateng Liu",
+        "Zhenhailong Wang",
+        "Xiusi Chen",
+        "Heng Ji",
+        "Dilek Hakkani-Tür"
+      ],
+      "abstract": "LLM agents increasingly operate in large tool ecosystems, where real-world tasks require discovering relevant tools, inferring implicit sub-goals, and adapting to dynamic environments over long horizons. However, existing benchmarks rarely evaluate planning under retrieval-limited tool visibility. To address this gap, we introduce PlanBench-XL, an interactive benchmark of 327 retail tasks over 1,665 tools that tests whether agents can iteratively retrieve usable tools, invoke them to uncover intermediate evidence for subsequent calls toward the final goal. PlanBench-XL further features an optional blocking mechanism that simulates real-world unpredictability through missing, failing, or distracting tool functions, forcing agents to detect disrupted paths and adapt at runtime. Experiments on ten leading LLMs show that massive-tool planning remains challenging: while GPT-5.4 achieves 51.90% accuracy in block-free settings, it collapses to 11.36% under the most severe blocking condition. Further analysis shows that agents are especially vulnerable when failures lack explicit error signals or when recovery requires longer alternative tool-use paths. These results establish PlanBench-XL as a testbed for diagnosing agentic planning failures and highlight the need for robust adaptive planning in long-horizon tasks with large, imperfect tool environments.",
+      "published_date": "2026-06-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.22388",
+      "pdf_url": "https://arxiv.org/pdf/2606.22388",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.22388",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 78,
+      "hot_score": 780,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.19409",
+      "source": "huggingface",
+      "title": "OpenRath: Session-Centered Runtime State for Agent Systems",
+      "authors": [
+        "Fukang Wen",
+        "Zhijie Wang",
+        "Ruilin Xu"
+      ],
+      "abstract": "Modern agent systems often suffer from fragmented runtime state: transcripts, tool effects, memory events, workspace placement, branch provenance, and replay evidence are recorded separately and become difficult to inspect or reproduce. OpenRath addresses this issue with a PyTorch-like programming model for multi-agent, multi-session systems. The analogy concerns the role of a central first-class runtime abstraction, not tensor computation. Its core abstraction is Session, the runtime value passed between agents and workflows. A Session is branchable, inspectable, replayable, backend-aware, and composable. It records conversation chunks, sandbox placement, lineage metadata, token usage, pending work, and tool evidence, while defining where memory interactions enter the runtime record. Since this state is carried by the same value used in program execution, fork, merge, and replay become explicit runtime operations rather than states reconstructed from external traces. OpenRath further defines Sandbox, Tool, Agent, Memory, Workflow, and Selector, with Selector turning control flow into runtime-routed decisions. This report presents the programming model, architecture, audited milestones, and evidence protocol. Its claims are limited to controlled runtime properties, while broad quantitative comparisons, live-provider quality, optional-backend availability, and memory quality are left for follow-on evaluation. The central thesis is that Session provides agent systems with a first-class runtime value for auditable composition.",
+      "published_date": "2026-06-17T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.19409",
+      "pdf_url": "https://arxiv.org/pdf/2606.19409",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.19409",
+      "category": "other",
+      "tags": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "upvotes": 68,
+      "hot_score": 680,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.21337",
+      "source": "huggingface",
+      "title": "DataClaw0: Agentic Tailoring Multimodal Data from Raw Streams",
+      "authors": [
+        "Cong Wan",
+        "Zeyu Guo",
+        "Zijian Cai",
+        "Jiangyang Li",
+        "SongLin Dong",
+        "Lin Peng",
+        "Xiangyang Luo",
+        "Zhiheng Ma",
+        "Yihong Gong"
+      ],
+      "abstract": "Massive unstructured multimodal streams suffer from high \"data entropy,\" impeding both efficient human knowledge acquisition and high-quality AI post-training. Existing passive annotation paradigms, heavily reliant on heuristic rules or general VLMs, are costly, monotonous, and fail to unlock the deep procedural logic embedded in raw data. We elevate data processing to a learnable capability, proposing a paradigm shift towards Agentic Data Tailoring, which actively refining and structuring data to align with diverse user and downstream intents. To overcome the data scarcity bottleneck in training such high-order capabilities, we design a two-stage pipeline grounding generative semantic synthesis in deterministic Factual Anchors, yielding a large-scale dataset spanning five core physical and digital domains. Building upon this, DataClaw_0-9B model synergizes Supervised Fine-Tuning (SFT) with Group Relative Policy Optimization (GRPO), achieving robust alignment with complex refinement and tailoring intents. To systematically quantify this capability, we construct DataClaw_0-val, the first benchmark dedicated to data refinement. Crucially, we adopt downstream post-training as the ultimate validation touchstone. Evaluations on video generation, real-world VQA, and GUI navigation confirm that DataClaw_0 delivers high-information-density tailored data, facilitating efficient model adaptation to new tasks under limited training data regimes. Project page: https://czjdsg.github.io/MakeAnyData",
+      "published_date": "2026-06-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.21337",
+      "pdf_url": "https://arxiv.org/pdf/2606.21337",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.21337",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 65,
+      "hot_score": 650,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.23654",
+      "source": "huggingface",
+      "title": "EnterpriseClawBench: Benchmarking Agents from Real Workplace Sessions",
+      "authors": [
+        "Jincheng Zhong",
+        "Weizhi Wang",
+        "Che Jiang",
+        "Kai Tian",
+        "Zhenzhao Yuan",
+        "Junlin Yang",
+        "Dianqiao Lei",
+        "Kaiyan Zhang"
+      ],
+      "abstract": "Enterprise agents increasingly operate inside workspaces: they read heterogeneous files, invoke tools, and deliver business artifacts. We introduce EnterpriseClawBench, an enterprise agent benchmark constructed from proprietary, real-world agent sessions. Starting from a large archive of workplace sessions, the EnterpriseClawBench produces 852 reproducible tasks, each paired with recovered fixtures, rewritten prompts, role classes, skill subclasses, hard rules, and semantic rubrics. Because the sessions contain internal enterprise content, we do not release the benchmark data; instead, our reusable contribution is the construction and evaluation protocol. On EnterpriseClawBench, the best configuration reaches only 0.663 (Codex with GPT-5.5). These results show that enterprise agent evaluation must report harness--model combinations, artifact delivery, visual quality, cost, runtime, and skill-transfer behavior, rather than collapsing performance into a single score. Code: https://github.com/FrontisAI/EnterpriseClawBench",
+      "published_date": "2026-06-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.23654",
+      "pdf_url": "https://arxiv.org/pdf/2606.23654",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.23654",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.SE"
+      ],
+      "upvotes": 56,
+      "hot_score": 560,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.20945",
+      "source": "huggingface",
+      "title": "Grouped Query Experts: Mixture-of-Experts on GQA Self-Attention",
+      "authors": [
+        "Vishesh Tripathi",
+        "Abhay Kumar"
+      ],
+      "abstract": "Self-attention is central to Transformer performance and is often the most expensive part of the Transformer at long context lengths because its pairwise token interactions scale quadratically with sequence length. Standard dense attention also applies the same set of attention heads to every token regardless of token difficulty or information content. This uniform activation can waste compute, especially as sequences grow longer and attention cost increases rapidly. We propose Grouped Query Experts (GQE), a mixture-of-experts layer on top of grouped-query attention (GQA). Within each GQA group, a router selects k query-head experts per token while all key-value (KV) heads remain dense and unchanged. Thus, GQE keeps the KV cache benefits of GQA and reduces only the active query-head computation. On a fixed 30B token budget at the 250M parameter scale, GQE matches the all-active GQA baseline in downstream accuracy while activating half the query heads per token.",
+      "published_date": "2026-06-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.20945",
+      "pdf_url": "https://arxiv.org/pdf/2606.20945",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.20945",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.22807",
+      "source": "huggingface",
+      "title": "KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking",
+      "authors": [
+        "Xinping Zhao",
+        "Jiaxin Xu",
+        "Ziqi Dai",
+        "Xin Zhang",
+        "Shouzheng Huang",
+        "Danyu Tang",
+        "Xinshuo Hu",
+        "Meishan Zhang",
+        "Baotian Hu",
+        "Min Zhang"
+      ],
+      "abstract": "As retrieval systems scale, high-quality reranking becomes increasingly important. However, most existing rerankers, whether encoder-based or decoder-based, jointly encode the query and passage, tightly coupling their computation and limiting deployment efficiency as well as flexibility. We present KaLM-Reranker-V1, a fast but not late-interaction (FBNL) reranker that decouples query and passage computation while retaining expressive relevance modeling. Built on an encoder-decoder architecture, KaLM-Reranker-V1 uses the encoder to pre-encode passages with Matryoshka embedding pooling, while the decoder models the system instruction, user instruction, and query intent; cross-attention then captures relevance between the query context and passage representations. This design makes KaLM-Reranker-V1 efficient through decoupled passage encoding, yet not late interaction, by preserving rich relevance modeling through cross-attention. We instantiate KaLM-Reranker-V1 in three sizes, Nano, Small, and Large, with 0.27B, 1B, and 4B activated parameters, respectively. Extensive experiments on BEIR, MIRACL, and LMEB demonstrate that KaLM-Reranker-V1 achieves strong reranking performance with superior efficiency. On BEIR, KaLM-Reranker-V1 achieves state-of-the-art performance, on par with strong industrial models such as the Qwen3-Reranker series; on MIRACL, despite not being extensively trained on multilingual data, KaLM-Reranker-V1 still shows excellent reranking performance. Moreover, on LMEB, reranking models demonstrate a clear advantage, with even the 0.27B Nano model remaining competitive with 7-12B embedding models.",
+      "published_date": "2026-06-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.22807",
+      "pdf_url": "https://arxiv.org/pdf/2606.22807",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.22807",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 39,
+      "hot_score": 390,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.20781",
+      "source": "huggingface",
+      "title": "World Action Models: A Survey",
+      "authors": [
+        "Qiuhong Shen",
+        "Shihua Zhang",
+        "Yue Liao",
+        "Qi Li",
+        "Zhenxiong Tan",
+        "Shizun Wang",
+        "Shuicheng Yan",
+        "Xinchao Wang"
+      ],
+      "abstract": "World Action Models (WAMs) are embodied predictive-action models that make a forecast of the future available to action. Recent WAMs repurpose large video generation models, and a parallel line relies on language or vision-language backbones without a video-generation core. This rapid expansion has blurred the boundary among broad world models, video generation models, action-grounded video world models, Vision-Language-Action policies, and WAMs. This survey gives the field a common account. It first clarifies these boundaries, then organizes existing works through two complementary views. The first view asks what each method is required to generate, spanning rendered futures, latent futures, and video-generation-free action reasoning. The second view decomposes each method by predictive substrate, backbone, action coupling, and deployment regime. This anatomy supports a unified discussion of interactability, causality, persistence, physical plausibility, and generalization, followed by data, evaluation, and open challenges. Across these axes, a consistent design pattern emerges: WAMs are not simply video generators with action heads, but predictive-action methods whose design choices trade representational richness against compute, memory, latency, and action-label cost. The field is moving toward methods that generate less of the future while preserving what control requires. The survey homepage is available at https://world-action-models.github.io/.",
+      "published_date": "2026-06-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.20781",
+      "pdf_url": "https://arxiv.org/pdf/2606.20781",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.20781",
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.22883",
+      "source": "huggingface",
+      "title": "CLI-Universe: Towards Verifiable Task Synthesis Engine for Terminal Agents",
+      "authors": [
+        "Zhanbo Hua",
+        "Yifan Yao",
+        "Weihao Xie",
+        "Yongchi Zhao",
+        "Minghao Liu",
+        "Ruizhi Qiu",
+        "Zhewei Huang",
+        "Zun Wang",
+        "Yiyan Ji",
+        "Yunhai Ye",
+        "Letian Zhu",
+        "Xinping Lei",
+        "Han Li",
+        "Zhiyuan Ma",
+        "Zili Wang",
+        "Zhaoxiang Zhang",
+        "Jiaheng Liu"
+      ],
+      "abstract": "While recent LLM-based terminal agents have demonstrated promising capabilities, the scarcity of high-quality, executable training data remains a critical bottleneck. Existing synthesis pipelines typically scale by retrofitting surface-level artifacts into tasks, frequently yielding ambiguous instructions, shallow execution paths, and brittle tests that provide weak learning signals. To overcome this, we introduce CLI-Universe, a principled synthesis engine that constructs terminal-agent tasks. CLI-Universe generates candidate tasks by sampling combinations across a multi-dimensional capability taxonomy (domain, skill type, capability, and engineering pillar), then grounds each candidate through evidence-guided deep research over real-world technical materials. To ensure rigorous supervision, validated blueprints are instantiated into Dockerized environments and subjected to a multi-stage executable verification pipeline featuring rubric-gated test construction, hint-conditional filtering, and strict fail-to-pass checking. Across the full pipeline, from candidate generation to verification, approximately two-thirds of candidates are discarded, retaining only those that are genuine, verifiable, and non-trivially challenging. To validate our framework, we instantiate a highly distilled dataset of 6,000 trajectories called CLI-Universe-6K. Remarkably, fine-tuning Qwen3-32B on CLI-Universe-6K achieves 33.4% on Terminal-Bench 2.0. This sets a new state-of-the-art for models trained on open-source data at or below 32B parameters, and outperforms several models an order of magnitude larger, demonstrating the profound data efficiency of structured, high-fidelity synthesis.",
+      "published_date": "2026-06-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.22883",
+      "pdf_url": "https://arxiv.org/pdf/2606.22883",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.22883",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.21649",
+      "source": "huggingface",
+      "title": "EvoEmbedding: Evolvable Representations for Long-Context Retrieval and Agentic Memory",
+      "authors": [
+        "Chang Nie",
+        "Chaoyou Fu",
+        "Junlan Feng",
+        "Caifeng Shan"
+      ],
+      "abstract": "Existing embedding models are inherently static: they encode text segments in isolation, ignoring their surrounding context and temporal order. This paper introduces EvoEmbedding, a novel embedding model that generates evolvable representations for retrieval. It is tailored for long-context scenarios, where information is dynamic, sequential, and requires continuous state tracking. Our design is simple: EvoEmbedding maintains a continuously updated latent memory as it sequentially processes inputs, and uses it alongside the raw content to jointly generate evolvable embeddings. Consequently, for the same query, our model adapts its representation to retrieve distinct targets based on the evolving context, going beyond static semantic search. To equip the model with this capability, we construct EvoTrain-180K, a diverse dataset for the joint optimization of latent memory and retrieval. Furthermore, we introduce a memory queue to prevent representation collapse during recurrent encoding, alongside segment-batching techniques that tackle significant length variance and accelerate training by 3.8times. Extensive experiments show that our model not only outperforms larger-scale specialists (e.g., Qwen3-Embedding-8B and KaLM-Embedding-Gemma3-12B) across a range of long-context retrieval benchmarks, but also generalizes well to downstream tasks (e.g., personalization) with contexts 10times longer than its training window. Notably, EvoEmbedding seamlessly integrates into agentic workflows to boost performance. For instance, a naive RAG pipeline equipped with our model surpasses dedicated agentic memory systems. Project Page: https://clare-nie.github.io/EvoEmbedding.",
+      "published_date": "2026-06-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.21649",
+      "pdf_url": "https://arxiv.org/pdf/2606.21649",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.21649",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2606.22138",
+      "source": "huggingface",
+      "title": "BioMatrix: Towards a Comprehensive Biological Foundation Model Spanning the Modality Matrix of Sequences, Structures, and Language",
+      "authors": [
+        "Qizhi Pei",
+        "Zhimeng Zhou",
+        "Yi Duan",
+        "Yiyang Zhao",
+        "Wei Li",
+        "Han Guo",
+        "Liang He",
+        "Chengping Li",
+        "Chang-Yu Hsieh",
+        "Conghui He",
+        "Rui Yan",
+        "Lijun Wu"
+      ],
+      "abstract": "We present BioMatrix, the first multimodal foundation model that natively integrates sequences, structures, and natural language for both molecules and proteins within a single decoder-only architecture. Existing biological foundation models pursue native multimodality and broad entity coverage separately: those that fuse multiple modalities under a shared objective remain confined to a single entity type, while those spanning multiple entity types either omit explicit structural modeling or rely on adapter-based designs in which the model cannot natively generate the very modalities it can read. BioMatrix closes this gap by mapping molecular sequences (supporting both SMILES and SELFIES notations), molecular structures, protein sequences, protein structures, and natural language into a shared discrete token space through a unified tokenization scheme, so that all modalities are consumed and produced uniformly under a single next-token prediction objective -- without external encoders, projection adapters, or modality-specific output heads. Built upon the Qwen3 language model (1.7B and 4B), BioMatrix is continually pretrained on 304.4 billion tokens spanning general and domain-specific text, sequence and structure views of molecules and proteins, and cross-modal corpora that interleave biomolecular entities with scientific text and link distinct entities through molecule-protein and protein-protein interaction data. After tuning on a comprehensive suite of downstream applications covering 80 tasks across 6 categories -- encompassing single-entity and multi-entity understanding and generation tasks across and within modalities -- BioMatrix achieves state-of-the-art or competitive performance on 77 out of 80 tasks, demonstrating that a single, natively multimodal generalist model can effectively match or surpass specialized approaches across a wide range of biological tasks.",
+      "published_date": "2026-06-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.22138",
+      "pdf_url": "https://arxiv.org/pdf/2606.22138",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2606.22138",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "q-bio.BM"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": null
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "date": "2026-08-06",
+  "generated_at": "2026-08-07T01:45:37.378445+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2608.05102",
+      "source": "huggingface",
+      "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+      "authors": [
+        "Yijun Lu",
+        "Rui Ye",
+        "Jiajun Wang",
+        "Yuwen Du",
+        "Tian Jin",
+        "Songhua Liu",
+        "Siheng Chen"
+      ],
+      "abstract": "Long-horizon search agents must make multiple sequential actions (steps) to search, retrieve, verify, and integrate evidence to reach a final answer. However, existing methods for training these agents typically treat all steps within a trajectory uniformly during both supervised fine-tuning (SFT) and reinforcement learning (RL), failing to distinguish useful actions from erroneous or redundant ones. In this paper, we propose Answer-Backtracked Credit Assignment (ABC), a fine-grained credit assignment framework for training long-horizon search agents by converting sparse trajectory-level outcomes into dense step-level supervision that rewards useful actions (even in failed trajectories) while suppressing erroneous or redundant actions. Specifically, given a potentially obscure query and its corresponding ground-truth answer, ABC first performs Answer-Backtracked Clue Recovery, which traces back from the answer to recover intermediate clues required to solve the question. It then applies Clue-Anchored Step Scoring to evaluate each search step against these clues, converting sparse binary outcome supervision into dense step-level rewards. Based on these rewards, we develop ABC-SFT, which reweights the loss of each turn, and ABC-GRPO, which uses the step-level scores as rewards in GRPO. Building on this framework, we train ABSeeker based on Qwen3.5-4B with only 8.5k examples. ABSeeker achieves 37.3% on BrowseComp and 39.1% on BrowseComp-ZH. With context management, the scores further improve to 55.3% and 52.9%, respectively, significantly outperforming same-scale (4B) agents and even matching the performance of larger ones (approximately 30B). These results demonstrate the effectiveness of answer-backtracked step-level credit assignment for training long-horizon search agents.",
+      "published_date": "2026-08-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.05102",
+      "pdf_url": "https://arxiv.org/pdf/2608.05102",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.05102",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.04436",
+      "source": "huggingface",
+      "title": "ToolArtist: Tool-Using Unified Multimodal Models for Agentic Image Generation",
+      "authors": [
+        "Jiahao Zhao",
+        "Xiaomin Yu",
+        "Zhongxiang Sun",
+        "Fengwei Teng",
+        "Chengwei Qin",
+        "Xiaobin Hu",
+        "Jun Xu",
+        "Shuicheng Yan"
+      ],
+      "abstract": "Text-to-image (T2I) models can produce visually compelling images, yet they remain limited on open-world tasks that require complex semantic understanding, multi-step reasoning, and the integration of external world knowledge. Existing efforts introduce agent capabilities into image generation, but they either prescribe a fixed workflow or place only a subset of the open-world image generation process under agent control. Consequently, reasoning, tool invocation, and image generation are not coordinated by a single policy. We propose ToolArtist, a fully agentic image generation model obtained by post-training a Unified Multimodal Model (UMM). ToolArtist dynamically orchestrates reasoning, external tool use, and native image generation within one unified policy. During Supervised Fine-Tuning (SFT), we equip a teacher agent with search tools alongside an image-generation tool. We then convert the collected trajectories into a UMM compatible format, where the image-generation tool is concealed while the resulting generated images are retained. During Reinforcement Learning (RL), we develop an agentic RL infrastructure for UMMs and introduce Reason-Act-Draw GRPO (RAD-GRPO), which uses complementary intent and quality rewards to jointly optimize the model. Experiments show that placing the entire open-world image-generation process under an agent policy consistently outperforms approaches with fixed pipelines or only partially agent-controlled components. We release the training data and the complete post-training infrastructure.",
+      "published_date": "2026-08-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.04436",
+      "pdf_url": "https://arxiv.org/pdf/2608.04436",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.04436",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 46,
+      "hot_score": 460,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.05000",
+      "source": "huggingface",
+      "title": "Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes",
+      "authors": [
+        "Junlin Han",
+        "Shengbang Tong",
+        "David Fan",
+        "Minghao Chen",
+        "Philip Torr",
+        "Filippos Kokkinos",
+        "Mike Lewis"
+      ],
+      "abstract": "Vision offers a critical axis for advancing foundation models, driving a shift towards natively unified multimodal pretraining. Despite this momentum, the design space and the fundamental mechanisms of how modalities interact during unified training remain underexplored. We provide empirical clarity through a systematic exploration of multimodal pretraining. Our controlled experiments on both synthetic and large-scale real-world datasets yield four key insights into the physics of multimodal pretraining: (i) Knowledge Flow: We disentangle how language, visual understanding, and visual generation transfer knowledge across modalities, revealing distinct patterns of influence and asymmetry; (ii) Synergy vs. Competition: We show that data \"complexity\" largely determines whether modalities are synergistic, identify architectural choices that promote synergy: such as shared attention and normalization with modality-specific feed-forward layers, and find that these behaviors generalize across different visual tokenizer designs; (iii) Early Unification: Unifying modalities from the very early stages and training them jointly is shown to be more effective than late alignment or sequential training. This process uncovers a vision laziness phenomenon, where delayed integration leads models to rely on language priors; (iv) Recipes: We derive efficient pretraining recipes that achieve strong generative performance using only 5% of the compute budget. These core findings are subsequently validated at scale by training multiple 13.5B MoE models on 2T tokens. We hope this study provides a principled foundation for understanding and scaling multimodal pretraining.",
+      "published_date": "2026-08-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.05000",
+      "pdf_url": "https://arxiv.org/pdf/2608.05000",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.05000",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.04570",
+      "source": "huggingface",
+      "title": "The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads",
+      "authors": [
+        "Yushi Sun",
+        "Yanjie Zhang",
+        "Rui Sheng"
+      ],
+      "abstract": "Personalized LLMs with persistent memory are increasingly deployed, yet the faithfulness of their user models remains unexamined. We study over-inference (OI): the phenomenon where LLMs fabricate user attributes beyond what evidence supports. We introduce MirageBench, comprising 150 personas balanced across stereotypical, counter-stereotypical, and neutral profiles, 6 personalization tasks spanning an ``imagination gradient'', a four-way faithfulness taxonomy operationalized by an independent judge (validated against a blind human annotator on 400 claims: Cohen's kappa = 0.863 four-class, kappa = 0.900 binary), and a leaderboard of 12 models across 7 families on 143616 judged claims. We find that over-inference is pervasive: every one of the 12 models over-infers 35%--49% of its claims (cross-model mean 41.6%; claim-weighted 41.8%), with no model in this evaluation escaping it. Most strikingly, we surface a Self-Monitoring Inversion: at the model-selection level, models' self-assessed OI is negatively rank-correlated with their judge-measured OI (rho = -0.60, p = 0.044; exploratory, wide bootstrap CI [-0.90, +0.06], n = 12). The models that report the least over-inference tend to be flagged as fabricating the most, so self-reported confidence is a misleading signal for comparing models, even though within a single model self-audit still ranks that model's own claims moderately well (AUROC 0.58--0.83). We further show that OI is task-dependent (27%--59%) and that, in a multi-turn pilot, inferred attributes accumulate approximately linearly with little revision. MirageBench positions external verification, rather than model self-report, as a more reliable foundation for trustworthy personalization.",
+      "published_date": "2026-08-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.04570",
+      "pdf_url": "https://arxiv.org/pdf/2608.04570",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.04570",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.05013",
+      "source": "huggingface",
+      "title": "OneDayAgent: Towards a Long-Horizon Harness for Autonomous Agents",
+      "authors": [
+        "Jingsheng Zheng",
+        "Xinyuan Fang",
+        "Jintian Zhang",
+        "Zhengke Gui",
+        "Huajun Chen",
+        "Ningyu Zhang"
+      ],
+      "abstract": "LLM agents are increasingly applied to open-ended everyday requests that span work, study, and life. These tasks are long-horizon, cross-environment, and multimodal, forcing the agent to preserve goals and constraints across many steps while navigating heterogeneous tools and attachments. While prior work has addressed individual failure modes such as goals drift, states loss, and context overflow, whether a single harness can manage them jointly and remain effective across backends has received less study. We present OneDayAgent, a long-horizon harness for autonomous agents. OneDayAgent turns an open-ended request into a managed execution process that decomposes tasks into bounded subtasks, maintains execution memory under context pressure, and verifies and repairs the final deliverable. We evaluate OneDayAgent on AgentIF-OneDay across 104 tasks. With the GLM-5.2 backend, OneDayAgent sets a new state of the art with an overall score of 0.821. The same harness runs across five backend LLMs from three model families, indicating the harness generalizes across backends without tuning, even as different models induce distinct execution styles under the same workflow.",
+      "published_date": "2026-08-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.05013",
+      "pdf_url": "https://arxiv.org/pdf/2608.05013",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.05013",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": {
+        "chinese_title": "OneDayAgent:长时视视视时时线长时时任务框架为自主自主代理",
+        "chinese_summary": "构建长期任务执行框架",
+        "pain_point": "现有代理在长期任务中易迷失目标",
+        "core_value": "提供提供统一框架管理长期任务，",
+        "technical_architecture": "任务分解与上下文管理",
+        "quantitative_results": "8.8",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定任务上 ",
+        "key_contributions": [],
+        "application_scenarios": "日常长期任务执行",
+        "technical_highlights": [],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2608.05139",
+      "source": "huggingface",
+      "title": "Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning",
+      "authors": [
+        "Yinghui He",
+        "Ling Yang",
+        "Jiarui Liu",
+        "Yongjin Yang",
+        "Lechen Zhang",
+        "Yingcheng Wu",
+        "Zhenfei Yin",
+        "Mengdi Wang",
+        "Sanjeev Arora"
+      ],
+      "abstract": "Long-horizon reasoning in recent LLMs demands that the model switch between distinct skills inside a reasoning chain, such as first doing a math derivation, then using the result to plan a schedule. We call such problems cross-skill long-horizon tasks: multi-step tasks whose steps require different reasoning skills and depend on earlier outputs. Existing benchmarks often evaluate individual skills, lacking a principled way to measure how well a model switches between skills. We address this gap from both the evaluation and training sides. We introduce Skill Entropy, a measure of the difficulty of switching from one skill to another. We then propose Skill^2-Bench, a benchmark of cross-skill long-horizon tasks built over 558 skills across 9 verifiable and open-ended domains. Each task is assigned a task-level skill-entropy score and grouped into three difficulty levels. Evaluating 8 frontier and 4 open-source models on Skill^2-Bench reveals a skill-switching gap: accuracy decreases on higher-entropy tasks. We then turn skill entropy from a benchmark scale into a training signal. We propose Skill-Entropy RL, an RL framework where the model predicts not only the answer at each step but also the skill used to produce it. The reward combines step-level correctness with a skill-entropy reward that measures the alignment between the model-predicted skill sequence and the gold skill sequence. On Qwen3-4B-Instruct and Qwen3-1.7B, Skill-Entropy RL improves the Skill^2-Bench score from 34.4% to 68.4% and from 14.6% to 40.1%, respectively, outperforming competitive baselines. The same pipeline can be applied to off-the-shelf training data such as OpenR1-Math, indicating that skill entropy is a reusable training signal. Code available at: https://github.com/Gen-Verse/Skill-Entropy-RL",
+      "published_date": "2026-08-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.05139",
+      "pdf_url": "https://arxiv.org/pdf/2608.05139",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.05139",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.03764",
+      "source": "huggingface",
+      "title": "GDPevo: Evaluating Agent Self-Evolution on Real Business Tasks",
+      "authors": [
+        "Leijun Zhou",
+        "Zhihao Liu",
+        "Xiang Qu",
+        "Chenxu Liu",
+        "Yifei Liu",
+        "Yanke Yu",
+        "Jingzhe Xu",
+        "Xuejun Wu",
+        "Buyue Qian",
+        "Xi Chen",
+        "Yaowei Zheng",
+        "Junhao Hu"
+      ],
+      "abstract": "Agent self-evolution updates an agent's persistent state from prior experience and reuses it to solve related tasks more effectively. Evaluating self-evolution is difficult: existing benchmarks provide limited coverage of economically valuable task domains, do not always design training and test tasks such that test-time gains can be attributed to training experience, and remain vulnerable to data contamination. We present GDPevo, an evolution-native benchmark grounded in GDP-related enterprise workflows, together with the fully automated data pipeline that generates it. Its core mechanism, rule hybridization, decomposes each enterprise workflow into atomic business rules, distributes subsets of these rules across training tasks, and recombines them in held-out test tasks so that test-time gains are attributable. GDPevo spans CRM, ERP, finance, healthcare, legal, and data-centric workflows. Its V1 release contains 120 tasks in 12 groups, with five training and five held-out test tasks per group. Full automation enables the pipeline to expand the suite to 240 tasks in 24 groups (V2) within two days, providing a practical response to contamination. Using GDPevo, we evaluate four agents, each comprising a harness and a model, under four supervision types. Self-evolution consistently improves held-out accuracy by up to 16.44 percentage points. But the best evolved agents remain far below the fully informed oracle ceiling of 91.6%, indicating that the self-evolution ability of current agents remains far from fully realized. We publicly release the pipeline, benchmark, and full evaluation results at https://github.com/Prism-Shadow/GDPevo.",
+      "published_date": "2026-08-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.03764",
+      "pdf_url": "https://arxiv.org/pdf/2608.03764",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.03764",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.03632",
+      "source": "huggingface",
+      "title": "When Teachers Mislead: Spurious-Signal-Aware On-Policy Distillation",
+      "authors": [
+        "Yinuo Jiang",
+        "Yongjie Ye",
+        "Zhou Tao",
+        "Xiang Zhuang",
+        "Qiang Zhang",
+        "Huajun Chen",
+        "Tiankai Li"
+      ],
+      "abstract": "On-Policy distillation (OPD) transfers teacher capabilities by supervising student-sampled trajectories with dense token-level teacher signals. Recent selective OPD methods improve this process by prioritizing signals that are confident, informative, or learnable. However, the assumptions overlook a fundamental failure mode of language models: their token-level judgments can be driven by input-agnostic language priors, formatting conventions, or stereotyped reasoning templates rather than task-specific evidence. We refer to such optimization-relevant but weakly input-grounded supervision as spurious signals in OPD, which may produce large gradients while contributing little task-improving direction. To mitigate this issue, we propose SA-OPD, a Spurious-Signal-Aware On-Policy Distillation framework that identifies and filters misleading token-level supervision based on input-groundedness and optimization impact. SA-OPD introduces a lightweight input-groundedness proxy estimating whether a token-level distillation signal truly depends on the input. It then filters only tokens that simultaneously exhibit low input-groundedness and extreme distillation divergence, thereby removing high-impact spurious updates and achieving fine-grained OPD optimization. Extensive experiments on both large language model (LLM) and vision-language model (VLM) settings demonstrate that SA-OPD consistently outperforms Vanilla OPD and competitive selective methods. These results establish input-groundedness as a key dimension for OPD supervision selection and offer a simple, effective strategy for mitigating spurious updates.",
+      "published_date": "2026-08-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.03632",
+      "pdf_url": "https://arxiv.org/pdf/2608.03632",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.03632",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.02580",
+      "source": "huggingface",
+      "title": "Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data",
+      "authors": [
+        "Ye Wang",
+        "Pei Lin",
+        "Xiong-Hui Chen",
+        "Haoqi Yuan",
+        "Zhixuan Liang",
+        "Yiyang Huang",
+        "Anzhe Chen",
+        "Zixing Lei",
+        "Jie Zhang",
+        "Tao Zhang",
+        "Haoyang Li",
+        "Tong Zhang",
+        "Chenxi Xiao",
+        "Ziyuan Jiao",
+        "Qin Jin"
+      ],
+      "abstract": "Learning generalizable robot manipulation policies requires large-scale and diverse demonstration data. Egocentric human manipulation videos offer rich scene and task diversity, and prior work has shown that retargeting and rendering such videos into robot-format data can yield effective per-task policies at small scale. However, whether this approach can provide pretraining benefits for vision-language-action models at scale remains unexplored. We present Ego2Robot, a scalable pipeline that converts egocentric human manipulation videos into robot training data through action retargeting, robot-arm visual synthesis, and multi-level quality curation. Ego2Robot supports both curated datasets and in-the-wild videos, producing 18,561 hours of robot training data spanning 15 robot morphologies, making it the largest ego-to-robot dataset to date. To evaluate generalization, we extend RoboTwin2.0 with disentangled perturbation axes covering visual appearance, scene layout, embodiment morphology, and task semantics. Experiments show that joint pretraining on Ego2Robot-synthesized and robot data consistently improves out-of-distribution generalization across multiple perturbation types, with benefits validated on real-robot deployment. Project page: https://www-ye.github.io/ego2robot_blog/",
+      "published_date": "2026-08-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.02580",
+      "pdf_url": "https://arxiv.org/pdf/2608.02580",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.02580",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.04397",
+      "source": "huggingface",
+      "title": "NOLLI: A Difficulty-Calibrated Puzzle Benchmark for Diagnosing the English-Korean Performance Gap",
+      "authors": [
+        "Dasol Choi",
+        "Joonyong Park",
+        "Daegon Yu",
+        "Soo Yong Kim",
+        "Youngsook Song",
+        "Seunghyeok Hong"
+      ],
+      "abstract": "We introduce NOLLI, a procedurally generated English-Korean puzzle benchmark designed to diagnose where Korean performance gaps arise. It comprises 15 puzzle types (25 tasks; 7,500 items), with every instance seed-regenerable, verified to have a unique solution, and scored deterministically. Rather than equating harder with bigger, we calibrate difficulty behaviorally, tuning each generator until a fixed reference model lands in target accuracy bands. Its three-level design combines matched direct translations, script adaptations over Hangul jamo (sub-syllabic letters), and Korean-only tasks grounded in Korean culture or orthography. We evaluate 15 frontier, open-weight, and Korean-developed models; among the 12 above a 3% overall-accuracy floor, matched English-Korean accuracy is statistically equivalent within a +/- 10 pp margin (TOST), suggesting little cost from presentation language alone. Writing-system-intensive tasks show sharper gaps: Korean Cipher falls behind English by up to 68.7 pp, whereas Cryptarithmetic over the same jamo shows no systematic penalty, and Jamo Composition accuracy predicts Korean Cipher accuracy. These contrasts are diagnostic rather than causal, consistent with difficulty in multi-step sub-syllabic execution. Korean-only tasks separate rule-application deficits, which vary in sign, from a Kinship deficit positive in all 12. Finally, a salient size measure fails to grow from Easy to Hard in 7 of 15 types, making structural size an unreliable proxy for empirical difficulty.",
+      "published_date": "2026-08-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.04397",
+      "pdf_url": "https://arxiv.org/pdf/2608.04397",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.04397",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": null
+    }
+  ]
+}

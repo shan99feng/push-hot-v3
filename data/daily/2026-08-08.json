@@ -1,0 +1,274 @@
+{
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T23:33:15.147060+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2608.06377v1",
+      "source": "arxiv",
+      "title": "Learning When to Trust via Selective Context Preference Optimization",
+      "authors": [
+        "Xian Sun",
+        "Wei Chow",
+        "Yingshuo Wang",
+        "Junhao Liu",
+        "Wei Gao",
+        "Qing Wu",
+        "Lingdong Kong"
+      ],
+      "abstract": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchmark that renders each reasoning item under four matched conditions (clean, misleading, correct-context, and irrelevant-context), together with SC2W, a paired metric counting how often a misleading signal flips a clean-correct answer to wrong. Across a comprehensive benchmark study, we observe that such a susceptibility is universal. We then propose SCOPE, which mines clean-correct/misleading-wrong failures and optimizes a standard Direct Preference Optimization (DPO) objective over matched preference pairs balanced equally across all four conditions, rather than over misleading items alone. Our approach substantially reduces SC2W on popular open-sourced models while preserving accuracy when the added context is clean, correct, or irrelevant. With this work, we argue that models should be judged on selective trust, not on resistance alone.",
+      "published_date": "2026-08-06T17:59:58Z",
+      "url": "https://arxiv.org/abs/2608.06377v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06377v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06370v1",
+      "source": "arxiv",
+      "title": "The Bitter Lesson of Tool Calling",
+      "authors": [
+        "Ishan Patel",
+        "Sahil Sen",
+        "Elias Lumer",
+        "Vamse Kumar Subbiah"
+      ],
+      "abstract": "Tool use transforms LLMs into agents that act beyond their training data, and for code-capable models, programmatic tool calling extends this further by replacing rigid JSON calls with scripts that chain and parallelize naturally. However, a systematic evaluation of tools as code on an established benchmark across current and prior model generations under real-world task conditions has not been conducted. In this work, we empirically compare programmatic tool calling (PTC) to native JSON tool calling across 14 language models on BFCL v4. In the programmatic tool calling paradigm, tools are exposed as typed Python stubs that the model invokes through code, with execution and results handled in a single agent turn. Programmatic tool calling matches or exceeds native JSON tool calling in 11 of 14 models on BFCL v4, with the GPT-5.6 family achieving a 10.6% improvement over the JSON tool calling baseline. Further, it matches or outperforms baseline in 13 of 14 models under parallel fan-out, and holds stable under context rot conditions where baseline degrades 2.3% on average. Our results demonstrate that programmatic tool calling is a viable and robust alternative to JSON tool calling, with performance tracking model capability across release generations.",
+      "published_date": "2026-08-06T17:58:32Z",
+      "url": "https://arxiv.org/abs/2608.06370v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06370v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06366v1",
+      "source": "arxiv",
+      "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
+      "authors": [
+        "Soorya Ram Shimgekar",
+        "Michelle Hu",
+        "Dorisa Shehi",
+        "Daniel Kang",
+        "Roy Ka-Wei Lee",
+        "Koustuv Saha",
+        "Christian Poellabauer",
+        "Christopher Lee",
+        "Sajeev Singh",
+        "Piyum Zonooz",
+        "Navin Kumar",
+        "Zeeshan Ahmed",
+        "Priyadarshini Kachroo"
+      ],
+      "abstract": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language model (LLM)-based approaches offer only partial automation with limited maintainability and evidence traceability. We developed the Nimblemind Multi-Agent System (nMAS), an evidence-linked, rubric-grounded pipeline for automated heart-failure feature engineering, and evaluated it on 500 dummy patient records from nine EHR source tables. nMAS generated 132 structured and 70 rubric-scored aggregated features, verified for structural integrity, rubric compliance, and provenance, and audited by a restricted LLM. Adding the aggregated features improved held-out AUROC from 0.895 to 0.963 for HFrEF and 0.870 to 0.910 for HFpEF phenotyping, and an independent LLM-based rubric assessment of evidence support and methodological soundness scored the features at 81.5% of maximum points. These results demonstrate the feasibility of automated, auditable feature engineering for complex cardiovascular EHR data, though evaluation was limited to a single-institution cohort and external validation is needed.",
+      "published_date": "2026-08-06T17:57:37Z",
+      "url": "https://arxiv.org/abs/2608.06366v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06366v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06364v1",
+      "source": "arxiv",
+      "title": "Investigating Artificial Intelligence Digital Sovereignty in Mobile Shopping Apps: A Case Study of Nigeria",
+      "authors": [
+        "George Grispos",
+        "Sajda Qureshi"
+      ],
+      "abstract": "The use of e-commerce mobile applications is expanding in Nigeria, creating both opportunities and risks, including fraud and reduced user control over digital technologies, raising concerns about digital sovereignty. This research examines how Artificial Intelligence (AI) in Nigerian mobile applications affects digital sovereignty, examined through platform transparency as a key indicator of user awareness and control. Using an interpretive approach, the research combines the forensic analysis of selected Android applications with contextual document analysis to identify AI features and evaluate disclosure practices. The findings show that AI is widely implemented in the applications, yet transparency about its use remains limited. A socio-economic analysis of Nigeria further shows an increasing dependence on consumer digital platforms, moderate AI awareness, and uneven patterns of interaction. By providing empirical evidence on AI transparency and platform practices, this study advances understanding of individual digital sovereignty and highlights challenges for protecting user control in AI-driven digital environments.",
+      "published_date": "2026-08-06T17:57:28Z",
+      "url": "https://arxiv.org/abs/2608.06364v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06364v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06363v1",
+      "source": "arxiv",
+      "title": "An Optimal Agnostic PAC Algorithm",
+      "authors": [
+        "Markus Engelund Mathiasen",
+        "Jian Qian",
+        "Nikita Zhivotovskiy"
+      ],
+      "abstract": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk bound: from an i.i.d.\\ sample of size $n$, for every $0<δ\\le 1/2$, with probability at least $1-δ$, \\[   L(\\widehat h)   \\le L^*+ 7\\cdot10^8\\left(   \\sqrt{\\frac{L^*(d+\\log(1/δ))}{n}}   +\\frac{d+\\log(1/δ)}{n}   \\right). \\] This settles the sample complexity of agnostic PAC learning up to universal constants at every fixed $L^*$, matching the lower bounds of Devroye, Györfi, and Lugosi [A Probabilistic Theory of Pattern Recognition, Springer, 1996].",
+      "published_date": "2026-08-06T17:57:25Z",
+      "url": "https://arxiv.org/abs/2608.06363v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06363v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.DS",
+        "math.ST"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06362v1",
+      "source": "arxiv",
+      "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+      "authors": [
+        "Boning Li",
+        "Yu Chen",
+        "Longbo Huang"
+      ],
+      "abstract": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the stated level. We make such an evaluation stop as soon as its evidence suffices, with the guarantee intact. The Action-Informed Value Assessment Tool (AIVAT) reduces variance in imperfect-information games through conditional mean-zero corrections, by a median $54\\times$ across 15 LLM agent configurations spanning 71,439 paired Heads-Up No-Limit Hold'em (HUNL) hands, but does not say when to stop. We combine AIVAT with continuously monitored Confidence Sequences (CSs) into anytime-valid AIVAT (AV-AIVAT), whose online value model learns only from past games so that no game scores its own correction. At the nominal 95\\% level and a target precision of $\\pm1$ Big Blind, raw outcomes need a median $74\\times$ as many hands as AIVAT-corrected outcomes to stop under the Asymptotic CS (AsympCS). Exact finite-sample certification uses the Empirical-Bernstein CS (EB-CS), which needs an independently justified bound on corrected payoffs. We establish such a bound structurally for Leduc hold'em and characterize a width floor set by the CS's bet cap and that bound, which governs how much of a variance gain becomes earlier stopping; the descriptive HUNL EB-CS runs show a median $1.37\\times$ stopping-time ratio. AV-AIVAT turns variance reduction into efficient, auditable early stopping while separating asymptotic screening from exact certification, so an evaluation can stop the moment its evidence suffices and hand a third party everything needed to recheck the verdict at that very stopping time.",
+      "published_date": "2026-08-06T17:57:11Z",
+      "url": "https://arxiv.org/abs/2608.06362v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06362v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.GT",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06361v1",
+      "source": "arxiv",
+      "title": "The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping",
+      "authors": [
+        "Sarvesh Baskar",
+        "Zikui Cai",
+        "Shayan Shabihi",
+        "Anirudh Satheesh",
+        "Muhammad R. Islam",
+        "Udari Madhushani Sehwag",
+        "Tom Goldstein",
+        "Furong Huang"
+      ],
+      "abstract": "Real-world video benchmarks provide broad coverage, but their fixed clips entangle event count, rate, duration, and visual complexity, making failure modes hard to isolate. While existing programmatic benchmarks offer better control, they score only the final answer rather than auditing reported events against executable ground truth. To bridge this gap, we introduce trace-grounded parametric profiling for event counting in three controlled video tasks: bouncing-ball wall contacts, visual blinks, and categorical state transitions. Across 2,190 videos, we vary event count N and frequency F while holding rendering fixed. Each video includes an executable event trace for capability-surface estimation and timestamp-level evaluation. Our results reveal a staged temporal failure. At an 80% reliability threshold, Gemini 3.6 Flash reliably counts persistent state transitions up to 12 events at 0.5 and 1.0 Hz, yet demonstrates no reliable positive-count region for transient blinking events. Thus, event representation dictates whether a model initially accesses evidence -- a limitation that compounds as count and frequency increase. In the high-count, high-frequency regime, only 0.2% of final counts are correct and the model recovers just 18.1% of true events. To test if visual access is the primary bottleneck, we increase sampling rate. Although this boosts Bounce Ball accuracy from 19.6% to 29.3%, the reported sequence agrees with ground truth only 3.7% of the time. Extra frames can therefore inflate final scores without producing faithful event recovery. Different prompting strategies yield similarly limited gains, and real-world video evaluations show the same concentration of success at low event counts. Ultimately, trace-grounded profiling shifts video evaluation from aggregate accuracy metrics to a detailed diagnostic of where temporal reasoning fails.",
+      "published_date": "2026-08-06T17:57:06Z",
+      "url": "https://arxiv.org/abs/2608.06361v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06361v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06353v1",
+      "source": "arxiv",
+      "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
+      "authors": [
+        "Praphul Chandra",
+        "Sujit Gujar",
+        "Ganesh Ghalme"
+      ],
+      "abstract": "We give a formal mechanism design model for the continuous participatory governance of a deployed AI agent. The mechanism is built on the principle that governance should control an AI agent through resource allocation so as to make authorization self enforcing via compute budgets. The mechanism seeks to establish the Safe AI paradigm that compute is an effective governance lever. We situate our work as a compliance or commons overlay on a deployer. One governance period is an extensive form game in which verified human stakeholders arrive sequentially and contribute, on a provision or a rejection market, in a governance currency that is deliberately distinct from the agents compute. A funding aggregator turns raw contributions into breadth weighted effective supports - a two threshold gate with hysteresis converts net support into a binary authorization that, through a coupling map bounded by an exogenously certified safety ceiling, releases a metered compute budget - realized in hardware as a signed compute license so that the decision is self-enforcing. We characterize the class of agents the mechanism can govern and isolate manipulation of the governing electorate by the governed agent as the central open problem. We also introduce several challenges addressing manipulation of governing electorate by the governed agents.",
+      "published_date": "2026-08-06T17:53:24Z",
+      "url": "https://arxiv.org/abs/2608.06353v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06353v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.GT",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06352v1",
+      "source": "arxiv",
+      "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
+      "authors": [
+        "Fanzhe Meng",
+        "Guoxin Chen",
+        "Jiale Zhao",
+        "Shuang Sun",
+        "Zhiyu Lin",
+        "Wayne Xin Zhao",
+        "Ruihua Song",
+        "Ji-Rong Wen",
+        "Kai Jia"
+      ],
+      "abstract": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we present CalibForge, an autonomous terminal-task synthesis system that uses verified solver behavior to revise candidate tasks through adversarial solver calibration. Multi-solver calibration targets disagreement within a heterogeneous solver pool, whereas contrastive solver calibration targets a designated strong-pass/weak-fail relation; both operationalize a solver-relative learnable zone anchored in demonstrated solvability. Using CalibForge, we construct 5,431 calibrated terminal tasks. Our ablations show that both strategies yield more effective supervision than authoring and validation alone or ordinary single-solver feedback. Models trained on the full collection achieve 32.58% and 47.57% on Terminal-Bench 2.0. The largest improvements over the corresponding base model reach 24.71 percentage points on Terminal-Bench 2.0, 27.68 points on SWE-bench Pro, and 30.04 points on Doc2Repo. Together, these results support solver-relative learnability as a practical target for constructing effective and transferable agent training data.",
+      "published_date": "2026-08-06T17:53:18Z",
+      "url": "https://arxiv.org/abs/2608.06352v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06352v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "arxiv-2608.06351v1",
+      "source": "arxiv",
+      "title": "Challenges in Evaluating Explanation Methods for Static and Evolving Data",
+      "authors": [
+        "Jerzy Stefanowski"
+      ],
+      "abstract": "This paper addresses the limitations of Explainable Artificial Intelligence (XAI) with respect to insufficient evaluation. They are illustrated through the DetoxAI image recognition system for bias detection and concept unlearning. Then, an example of a human-grounded evaluation of methods for explaining image classification is presented. The paper further explores methods for adapting explanations to evolving data streams with concept drift. Experiences with adapting counterfactuals for this problem are discussed. Finally it is related to the challenges of tracking the co-evolution of data, models, and explanations.\\footnote{This paper has been accepted for a publication in J.Nalepa (ed) Explainable AI in Space. Proceedings of EASi 2026 Workshop at IJCAI-ECAI 2026 Bremen, Springer CCIS vol 3107 (2016).}",
+      "published_date": "2026-08-06T17:53:10Z",
+      "url": "https://arxiv.org/abs/2608.06351v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06351v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": null
+    }
+  ]
+}

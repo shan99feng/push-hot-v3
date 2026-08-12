@@ -1,0 +1,310 @@
+{
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T23:44:41.233141+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2608.10915",
+      "source": "huggingface",
+      "title": "ComBodied Agents: a New Paradigm of Human-Centric Agentic AI",
+      "authors": [
+        "Qianggang Ding",
+        "Xingyao Wang",
+        "Rui Feng",
+        "Zhibin Wang",
+        "Feixiang Wang",
+        "Kelong Mao",
+        "Hao Sun",
+        "Zhiyao Luo",
+        "Jiankai Tang",
+        "Lei Li",
+        "Jiadong Guo",
+        "Minheng Ni",
+        "Weicong Lin",
+        "Chenxi Yang",
+        "Hongxiang Gao",
+        "Zhenghua Chen",
+        "Yang Bai",
+        "Min Wu",
+        "Jun Cheng",
+        "Huazhu Fu",
+        "Dacheng Tao",
+        "Bang Liu"
+      ],
+      "abstract": "After an older adult misses a medication dose, a software agent can send another reminder and an embodied agent can bring the medication. Yet neither explains whether the person forgot, is confused, has side effects, or deliberately refused, nor what support is appropriate. This reveals a structural gap in Agentic AI: Digital Agents primarily transform software states, while Embodied Agents transform physical states; neither makes a person's evolving state and agency the primary object of modeling, intervention, and evaluation. We introduce Combodied Agents, a human-centered paradigm that perceives, models, predicts, and supports individual human-state trajectories over time, using software tools, sensors, wearables, robots, and human services as action channels rather than end goals. We unify fragmented capabilities across personal assistants, health agents, AI companions, and adaptive human--AI systems into a closed loop: event-based multimodal perception reconstructs meaningful personal events; longitudinal, correctable memory provides temporal context; Personal World Models estimate future personal states and outcomes under alternative decisions and interventions; and an admissible intervention policy selects proportionate support under consent, uncertainty, safety, reversibility, and user control. Feedback from the person and environment updates the loop. Rather than requiring an exhaustive Human Digital Twin, the framework uses purpose-bounded, uncertainty-aware, user-correctable representations. We organize the design space by human-state targets, relational contexts, and agent roles, and propose scenario-centered evaluation, agency-preservation metrics, benchmark requirements, edge-native personal models, and governance directions. Combodied Agents shift Agentic AI from external task completion toward sustained human benefit.",
+      "published_date": "2026-08-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.10915",
+      "pdf_url": "https://arxiv.org/pdf/2608.10915",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.10915",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 166,
+      "hot_score": 1660,
+      "structured_summary": {
+        "chinese_title": "具身代理人的身体化化人中心的人工智能范式",
+        "chinese_summary": "提出具身代理范式",
+        "pain_point": "",
+        "core_value": "",
+        "technical_architecture": "",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证其有效性",
+        "key_contributions": [],
+        "application_scenarios": "适用于老年人用药提醒",
+        "technical_highlights": "结合多模态感知和重建个人事件; 順建时间上下文; 娡建个人世界模型预测和结果; ",
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2608.10299",
+      "source": "huggingface",
+      "title": "Co-Evolution in Agentic Systems: Toward Self-Directed Evolution Beyond Human Design",
+      "authors": [
+        "Qing Zong",
+        "Jiayu Liu",
+        "Junhao Shen",
+        "Zecong Tang",
+        "Linsi Wu",
+        "Yuxuan Liu",
+        "Rui Wang",
+        "Zhaowei Wang",
+        "Weiqi Wang",
+        "Cheng Qian",
+        "Xiusi Chen",
+        "Yangqiu Song"
+      ],
+      "abstract": "Agentic systems are increasingly expected to improve after deployment, yet single-entity self-evolution is often bounded by a static learning context, such as fixed tasks and feedback. This survey focuses on co-evolution in agentic systems, a multi-component form of self-evolution in which multiple agents and their environment impose adaptive pressure on one another. To organize existing papers, we propose a progressive three-stage taxonomy that traces how the system gradually sheds human-engineered constraints. Agent--Agent Co-Evolution studies how agents adapt through dynamic peers, including adversarial, collaborative, and organizational adaptation. Agent--Environment Co-Evolution extends this loop to adaptive tasks, feedback, and interaction spaces that change with the agents. Meta Co-Evolution further explores the possibility of making the evolution mechanism itself evolvable. We also discuss open challenges in evaluating such systems, scaling them across multiple components, and keeping increasingly autonomous evolutionary processes safe and controllable. This survey provides a unified foundation for building robust and open-ended agentic systems that can improve beyond fixed human-designed paths.",
+      "published_date": "2026-08-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.10299",
+      "pdf_url": "https://arxiv.org/pdf/2608.10299",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.10299",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 108,
+      "hot_score": 1080,
+      "structured_summary": {
+        "chinese_title": "代理系统中的共进化：超越人类设计的自主自驱动进化",
+        "chinese_summary": "探讨代理系统的共进化机制",
+        "pain_point": "现有代理系统往往受限于固定任务和反馈",
+        "core_value": "",
+        "technical_architecture": "提出共进化的三阶段分类法",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "",
+        "key_contributions": [],
+        "application_scenarios": ":适用于需要自适应的系统",
+        "technical_highlights": ":三阶段共进化分类法",
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2608.10744",
+      "source": "huggingface",
+      "title": "Beyond Pixels: From Video Priors to 4D Worlds",
+      "authors": [
+        "Zihao Liu",
+        "Xiaolong Shen",
+        "Zhenglin Zhou",
+        "Ruijie Quan",
+        "Yi Yang"
+      ],
+      "abstract": "4D generation synthesizes dynamic 3D scenes from conditions such as text or images. Existing methods either reconstruct generated RGB videos with a separate 4D model or adapt a particular video generator to predict geometry directly. The former suffers from distribution mismatch and error propagation, whereas the latter ties 4D prediction to a specific generator and may require retraining when the generator or conditioning regime changes. We ask whether the final denoised latents of video models that share a variational autoencoder (VAE) can instead provide a reusable interface to explicit 4D prediction. Building on this insight, we introduce direct latent-to-4D generation and instantiate it as Latent-to-4D, which bypasses RGB by aligning a video latent with the token grid of a pretrained 4D decoder and refining it through frame-wise and global spatiotemporal attention. Trained on roughly 1K existing reconstruction clips, a single checkpoint transfers unchanged across multiple video diffusion transformers within the same VAE family. On Text4D-200 and I4D-200, Latent-to-4D surpasses matched same-latent Wan+4RC cascades in projection-based DINO-F1 by 2.88--3.45 and 5.81 points, respectively, while also being preferred by human raters for geometry, temporal stability, and overall quality.",
+      "published_date": "2026-08-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.10744",
+      "pdf_url": "https://arxiv.org/pdf/2608.10744",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.10744",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 102,
+      "hot_score": 1020,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2607.27749",
+      "source": "huggingface",
+      "title": "Articulated Object Reconstruction from Rest-State Observation",
+      "authors": [
+        "Daeun Lee",
+        "Jaeah Lee",
+        "Woosung Kim",
+        "Haebeom Jung",
+        "Jaesik Park"
+      ],
+      "abstract": "Building interactive digital twins requires recovering both 3D geometry and the kinematic structures that govern how objects articulate. Yet existing methods for articulated object reconstruction require explicitly observable motion from multiple articulation states. We introduce a rest-state formulation that reconstructs articulated objects from a single closed configuration, an inherently ill-posed setting where geometry, semantics, and motion priors compensate for the absence of motion cues. Our framework adopts an explicit mesh as an intermediate representation for cross-model verification and fusion, reconciling noisy outputs from vision-language and segmentation models into spatially consistent part structures. To estimate joint parameters without observed motion, we use a video diffusion model to synthesize articulation hypotheses and validate them through geometric consistency. Our approach achieves accurate part decomposition and physically plausible articulation, performing competitively with motion-observing reconstruction-based, generation-based, and modular pretrained-model baselines.",
+      "published_date": "2026-07-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2607.27749",
+      "pdf_url": "https://arxiv.org/pdf/2607.27749",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2607.27749",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.11205",
+      "source": "huggingface",
+      "title": "AdvFD: Boosting Visual Generation via Adversarial Fr'echet Distance Loss",
+      "authors": [
+        "Mingju Gao",
+        "Jingkai Zhou",
+        "Kun Gai",
+        "Changqian Yu",
+        "Hao Tang"
+      ],
+      "abstract": "Fréchet distance has recently emerged as an effective distribution-level objective for generator post-training, complementing the conventional sample-level diffusion and flow-matching losses. However, directly optimizing Fréchet objectives can cause Fréchet hacking. The target metrics keep improving, but visual quality and Fréchet alignment in other feature spaces may stagnate or deteriorate. We attribute this failure to the static pretrained feature spaces used by existing Fréchet losses. These feature spaces provide incomplete and fixed views of the differences between real and generated distributions. To address this limitation, we propose Adversarial Fréchet Distance (AdvFD), which complements the static representation targets in FD-Loss with a calibrated adversarially learned representation. AdvFD augments the original static Fréchet objective with a learnable representation that adversarially maximizes the Fréchet discrepancy between real and generated samples, while the generator minimizes the same discrepancy in the resulting adaptive feature space. To prevent the adversarial representation from trivially increasing the objective through feature amplification, we further introduce real-feature whitening, which normalizes its scale and covariance geometry and stabilizes the min--max optimization. Extensive experiments show that AdvFD consistently improves one-step generator post-training across both JiT and pMF backbones and across different model scales.",
+      "published_date": "2026-08-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.11205",
+      "pdf_url": "https://arxiv.org/pdf/2608.11205",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.11205",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.07645",
+      "source": "huggingface",
+      "title": "Mendel Gödel Machine: Recursive Self-Improving Coding Agents via Comparative Evolution",
+      "authors": [
+        "Changzhi Liu",
+        "Yilun Liu",
+        "Sikuan Yan",
+        "Volker Tresp",
+        "Yunpu Ma"
+      ],
+      "abstract": "Self-improving coding agents that iteratively rewrite their own source code have demonstrated impressive performance on coding tasks. However, existing solutions generally derive self-modification from a single failure trajectory at a time, overlooking rich comparative signals available in the agent's expanding archive of past attempts. According to Mendelian principles of controlled inheritance, we introduce Mendel Gödel Machine (MGM). In addition to the general single-trajectory clonal mutation, MGM includes two new types of self-modification that better utilizes evidences accumulated: the reaction-norm mutation edits an agent based on its trajectories on multiple tasks simultaneously, and the cross-lineage hybridization edits an agent using the trajectory of a reference agent from another lineage on the same task. Under an additive fitness landscape model, we prove theoretically and demonstrate via controlled surrogate simulation that the new strategies facilitate a faster and better convergence over single-trajectory baselines. Experiments on SWE-bench and Polyglot confirm MGM's consistent improvement in performance, efficiency, and generalizability.",
+      "published_date": "2026-08-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.07645",
+      "pdf_url": "https://arxiv.org/pdf/2608.07645",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.07645",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.10875",
+      "source": "huggingface",
+      "title": "VibeLifeBench: Can Your Life Agent Be Proactive and Persistent in a Living World?",
+      "authors": [
+        "Xiaohongshu Inc"
+      ],
+      "abstract": "Large language model (LLM) agents are increasingly deployed as personal assistants. Existing evaluations, however, mostly use short, self-contained requests in static environments. Everyday life assistance is different. A task runs for weeks rather than minutes. The world keeps changing while the agent is not being prompted. Many constraints are never stated outright. An agent that merely answers the request in front of it will fail at such a task. What is needed instead is an agent that stays proactive and consistent. It decides on its own when to act, when to ask, and when to stay silent. It notices changes that nobody announced. It keeps one plan coherent from the first day to the last. No current benchmark measures this. We introduce VibeLifeBench, a benchmark of 200 long-horizon tasks across ten everyday-life domains. Each task is a scripted multi-week timeline in a simulated world of 22 mock services. The world advances on its own clock, and many of its changes are silent, so only an agent that re-inspects the world discovers them. Every task is graded by fine-grained, weighted checks that read only what the agent actually left behind, covering the end state, the timeliness of its actions, and whether it upheld the implicit constraints. We evaluate seven frontier models. All of them score low, which shows how far current agents are from assisting with real life. We will open-source all tasks, environments, and the evaluation framework.",
+      "published_date": "2026-08-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.10875",
+      "pdf_url": "https://arxiv.org/pdf/2608.10875",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.10875",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 11,
+      "hot_score": 110,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.10720",
+      "source": "huggingface",
+      "title": "Ex-Omni-2D: Expressive Omni-Modal Dialogue Models with Native Visual Presence",
+      "authors": [
+        "Haoyu Zhang",
+        "Zhipeng Li",
+        "Xiaoying Tang",
+        "Tianshu Yu",
+        "Yiwen Guo"
+      ],
+      "abstract": "Omni-modal dialogue models can understand multimodal inputs and synthesize spoken replies, yet their responses remain visually disembodied. We introduce Ex-Omni-2D, an omni-modal dialogue framework that generates a coordinated response comprising text, personalized speech, and reference-conditioned video. Given a multimodal query, reference image, and reference audio, the model predicts a structured Visual Thought Plan (VTP) describing scene, emotion, and motion, followed by response text and native multi-codebook speech units. These units form a shared acoustic-temporal interface: they are decoded into speech and aligned online with video frames. This interface enables the response and avatar pathways to be learned from heterogeneous speech, dialogue, and avatar-video data, avoiding the need for large-scale query--text--speech--video supervision. A full-sequence Video Generator serves as the primary Teacher. For efficient incremental generation, we further distill it into a few-step block-causal Streaming Student whose Prefix Streaming mechanism carries a clean latent across consecutive chunks to reduce cumulative late-chunk degradation. With four-step inference, the complete four-GPU pipeline achieves an end-to-end RTF of 1.293 at 400times720/720times400, providing a practical quality--efficiency operating point.",
+      "published_date": "2026-08-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.10720",
+      "pdf_url": "https://arxiv.org/pdf/2608.10720",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.10720",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.09900",
+      "source": "huggingface",
+      "title": "Decoding-Level Taboo: A Diagnostic Stress Test for LLM Robustness",
+      "authors": [
+        "Tadanobu Chuyo Kamijo",
+        "Ori Rottenstreich",
+        "Javier Conde",
+        "Gonzalo Martínez",
+        "Pedro Reviriego"
+      ],
+      "abstract": "Large language model evaluations typically focus on performance under nominal conditions, creating an illusion of capability where models comfortably walk a narrow, highly optimized generation corridor. In real-world deployments, however, complex system prompts, safety guardrails, and structural constraints continuously force models off this nominal path, driving a divergence between benchmark scores and deployment performance. To address this issue, we introduce Decoding-Level Taboo, a zero-prompt diagnostic stress test that intervenes directly in logit space at runtime, forcing models out of their nominal paths. By dynamically masking primary candidate tokens at word boundaries, Taboo forces machine circumlocution.\n  Evaluating Taboo across several open-weight model families reveals that off-path robustness is heavily influenced by both parameter scale and post-training instruction alignment, with robustness generally improving with model size and alignment. Beyond the results presented in this paper, Taboo provides a novel primitive for generating diverse synthetic datasets, stress-testing runtime safety guardrails, and auditing model reliability prior to real-world deployment.",
+      "published_date": "2026-08-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.09900",
+      "pdf_url": "https://arxiv.org/pdf/2608.09900",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.09900",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 7,
+      "hot_score": 70,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.11079",
+      "source": "huggingface",
+      "title": "SkillZip: Evaluation-Free Skill Compression for Self-Evolving Agents by Discovering Reusable Structure",
+      "authors": [
+        "Xiaofan Bai",
+        "Hongqiang Lin",
+        "Chao Liu",
+        "Yantao Zhang",
+        "Xuan Jin",
+        "Xipeng Cao",
+        "Yuhong Li"
+      ],
+      "abstract": "Self-evolving agents accumulate reusable skills by appending successful procedures and failure fixes. Over time, the same requirement is often restated in several branches, examples, and warnings, while common action sequences are copied rather than reused. The resulting skill becomes expensive to inject and difficult to maintain. Generic prompt compression is ill-suited to this setting because a skill is not a flat passage: its name and description define when it applies, its workflow controls execution, its tool and output contracts constrain validity, and rare exceptions may remain essential even when no sampled task activates them. Evaluation-guided compression can test these behaviors, but it introduces rollouts, cost, and dependence on the compression-time evaluation set. We present SkillZip, an evaluation-free method that compresses a skill by finding its shortest faithful structural explanation. The intuition is explain once, reference many: state a repeated rule once at the scope where it applies, factor a repeated action sequence into a shared procedure, and keep only the differences as explicit exceptions. We formalize this intuition as a typed minimum description-length objective over a skill contract and a residual, subject to a hard coverage constraint for every extracted trigger, workflow edge, tool requirement, obligation, and output field. The formulation provides simple sharing thresholds, preserves unique rare rules by construction, and supports efficient local updates. SkillZip has a one-shot mode with one structured extraction call and deterministic optimization, and a continual Zip-on-Write mode that integrates each self-evolution patch without replaying tasks or reparsing the full history. Through comprehensive experimental evaluations, we demonstrate the effectiveness and superiority of SkillZip in compression performance, generalizability, and cost overhead.",
+      "published_date": "2026-08-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.11079",
+      "pdf_url": "https://arxiv.org/pdf/2608.11079",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.11079",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": null
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T23:25:20.253460+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2608.14036",
+      "source": "huggingface",
+      "title": "Demystifying Agent Skills: Why They Work-Until They Don't",
+      "authors": [
+        "Zhiyuan Jiang",
+        "Fangrui Huang",
+        "Hanwen Xing",
+        "Xander Wu",
+        "Yipeng Gao",
+        "Rui Cao",
+        "Mengdi Wang",
+        "Shilong Liu",
+        "Yijiang Li"
+      ],
+      "abstract": "Skills have emerged as a practical and effective approach for enhancing LLM agents at inference time through structured packages of knowledge. However, existing evaluations largely measure whether skills improve aggregated task success, leaving a more fundamental question underexplored: \\textbf{When do skills help, why do they work, and where do they fail?} Through controlled experiments across various benchmarks, agent harnesses and LLMs, we isolate the effects of representation, outcome annotation, retrieval difficulty, and cross-framework robustness of skills. To further answer this question, we design a contrastive study that combines controlled quantitative experiments with paired trajectory analysis. We normalize 8,135 trial records from controlled experiments and retain 238 valid unique labels from 240 open-coded records. We consolidate these observations into a taxonomy of three high-level categories and twelve skill-use modes: skills work when noisy trajectories become procedural anchors that stabilize execution. Skills improve over Workflow Memory by 6.06 points in matched comparisons. Procedural anchoring accounts for 65.7\\% of skill cases, versus 4.5\\% for explicit knowledge injection, showing that skills stabilize action rather than inject missing facts. Retrieval is a separate bottleneck: as pools grow from 5 to 100, actual-use precision falls from 29.6\\% to 3.3\\%. Confusable distractors impair offline identification, yet downstream success remains stable; exact ground-truth invocation is neither sufficient nor necessary. Skills fail under brittle assumptions, incompatible contexts, or insufficient adaptation. These findings move evaluation beyond aggregate success rates and guide reliable self-evolving agents.",
+      "published_date": "2026-08-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.14036",
+      "pdf_url": "https://arxiv.org/pdf/2608.14036",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.14036",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 125,
+      "hot_score": 1250,
+      "structured_summary": {
+        "chinese_title": "揭秘智能体技能：技能何时有用，何时无效",
+        "chinese_summary": "技能何时有用，何时无效",
+        "pain_point": "现有评估方法未能深入探究技能在不同场景下的实际效果",
+        "core_value": "通过控制实验和揭示了技能在不同场景下的实际效果",
+        "technical_architecture": "通过控制实验 和结合定量分析与配对轨迹分析",
+        "quantitative_results": "技能改善工作流程记忆6.6分点",
+        "competitors": "暂无对比信息",
+        "limitations": "未详细探讨技能在不同框架中的鲁棒性",
+        "key_contributions": "1 1 ",
+        "application_scenarios": "智能体技能在不同任务和  , ",
+        "technical_highlights": [],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2608.17310",
+      "source": "huggingface",
+      "title": "Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements",
+      "authors": [
+        "Zhi Zheng",
+        "Rongsheng Chen",
+        "Yunpeng Ba",
+        "Zhenkun Wang",
+        "Yee Whye Teh",
+        "Wee Sun Lee"
+      ],
+      "abstract": "Reinforcement Learning (RL) has been promising in single-turn LLM fine-tuning. However, long-horizon agentic reasoning introduces increasingly branching interactions and sparse rewards, exposing several limitations of RL: its heavyweight backpropagation-based training stack makes it impractical to fine-tune larger LLMs, and longer-horizon trajectories make credit assignment in RL substantially harder. This paper argues that evolution strategies (ES) can be a better choice for fine-tuning long-horizon LLM agents. Compared with agentic RL, ES offers three key advantages: 1) Model Scalability: ES enables full-parameter optimization with only minimal, inference-level GPU memory, making it possible to fine-tune large LLMs. 2) Flexibility: its lightweight, black-box feedback interface makes ES fine-tuning easy to compose with prompt-space evolution (e.g., skill optimization & test-time compute); and 3) Long-Horizon Scalability: ES performs trajectory-level parameter attribution without decomposing rewards across horizons, yielding better scalability than Agentic RL as the horizon length grows. Based on this insight, we propose Agentic ESOpt, a full-parameter agentic fine-tuning framework tailored to flexible parameter--context co-evolution. At each step, Agentic ESOpt samples perturbations around the current LLM parameters, evaluates the resulting agents with rewards, and applies an online reward-weighted update. To improve the exploration--adaptation trade-off, Agentic ESOpt further introduces a cosine decay schedule of the perturbation scale σ. On WebArena-Lite, full-parameter optimization of Qwen-3.5-27B improves the No Skill baseline by 6.69%. In test-time automatic heuristic design, Agentic ESOpt performs online prompt--parameter co-evolution, improving its matched baseline in 28 of 36 settings.",
+      "published_date": "2026-08-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.17310",
+      "pdf_url": "https://arxiv.org/pdf/2608.17310",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.17310",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 91,
+      "hot_score": 910,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.16157",
+      "source": "huggingface",
+      "title": "FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution",
+      "authors": [
+        "Shuo Yang",
+        "Xiaoze Fan",
+        "Melissa Pan",
+        "Haocheng Xi",
+        "Zhe Wang",
+        "Shanlin Sun",
+        "Kurt Keutzer",
+        "Song Han",
+        "Matei Zaharia",
+        "Chenfeng Xu",
+        "Ion Stoica"
+      ],
+      "abstract": "Frontier open-weight models are increasingly available, but serving them still largely assumes datacenter infrastructure. We present FreeToken, an edge-native MoE serving system that treats a personal machine not as a small GPU, but as a unified, elastic inference platform. FreeToken co-designs the full serving stack, including model layout and loading, expert residency, CPU--GPU execution, agentic state reuse, and runtime memory management, around two realities of local AI: agent workloads continuously change their execution pattern, and edge hardware exposes heterogeneous resources whose balance differs from machine to machine. Rather than committing to a fixed offloading strategy, FreeToken continuously maps computation and model state onto the resources actually available. FreeToken supports more than 20 MoE models and real coding and tool-using agents across hardware ranging from an 8GB laptop GPU to a single workstation GPU. More importantly, it changes what these machines can practically serve, from a 35B model on a laptop to a 284B model on a gaming desktop and the 753B GLM-5.2 on a single workstation GPU. FreeToken turns open weights into deployable local software, making the machines users already own a practical platform for frontier-scale intelligence. We release the system at flashml.ai.",
+      "published_date": "2026-08-17T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.16157",
+      "pdf_url": "https://arxiv.org/pdf/2608.16157",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.16157",
+      "category": "other",
+      "tags": [
+        "cs.DC"
+      ],
+      "upvotes": 58,
+      "hot_score": 580,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.17271",
+      "source": "huggingface",
+      "title": "ASI-Bench: At the Dawn of Artificial Superintelligence",
+      "authors": [
+        "Junwei Zhou",
+        "Zhen Sun",
+        "Binyu Li",
+        "Jiangyu Zhou",
+        "Yuexi Pan",
+        "Hengyu Wang",
+        "Honghe Ren",
+        "Xiaohan Jia",
+        "Xueyang Zhou",
+        "Xiaoyu Cao",
+        "Yongchao Chen",
+        "Yuanning Feng",
+        "Junhao Wu",
+        "Cheng Zhang",
+        "Sijia Chen",
+        "Haoyu Xue",
+        "Chengsong You",
+        "Huan Wang",
+        "Koutian Wu",
+        "Peigan Gao",
+        "Jiakun Wu",
+        "Wenzhe Li",
+        "Ergan Shang",
+        "Qingyuan Zheng",
+        "Jingjing Zhou",
+        "Ruixuan Jia",
+        "Yan Xu",
+        "Hongrui Zhang",
+        "Xiao-Han Ma",
+        "Zhengxiang Cheng",
+        "Yuexing Hao",
+        "Liting Mai",
+        "Xianglin Ji",
+        "Wenjun Zhang",
+        "Zhuofan Chen",
+        "Yixiao Huang",
+        "Chi Wang",
+        "Wenyue Hua",
+        "Yilun Hao",
+        "Yuantao Zhai",
+        "Ziyan Zhao",
+        "Jingyan Xie"
+      ],
+      "abstract": "Artificial superintelligence (ASI) requires AI to move beyond mastering existing knowledge toward exploring the unknown, creating new knowledge, and turning new ideas into verifiable results. However, the capabilities of today's AI systems are still largely built on learning, compressing, and applying existing human knowledge. Accordingly, existing benchmarks primarily test whether AI can produce correct answers based on learned knowledge, or whether it can complete tasks under extensive human guidance. We therefore introduce ASI-Bench, the first benchmark to jointly evaluate AI systems' capabilities of innovative exploration and autonomous scientific execution across general research domains, and the first to progressively withdraw human methodological guidance within the same research project to test how far AI can proceed on its own. Built by over 40 experts with the cost of 31,000+ human hours, ASI-Bench contains 60 project-level research tasks across 11 scientific domains and progressively reduces methodological guidance to test whether AI can independently select methods, conduct research, and produce verifiable results. All tasks undergo expert review, AI-assisted auditing, sandbox execution, and scorer validation. Across 18 state-of-the-art agent--model configurations, the average score drops from 50.91 with full methodological guidance to 29.10 with only the method specified and 26.62 when agents must determine the method themselves. This sharp decline shows that current systems remain heavily dependent on human guidance and are still far from autonomously conducting end-to-end, project-level scientific research. ASI-Bench is open to the world. We invite researchers and builders everywhere to contribute new tasks, challenge the limits of today's AI, and help accelerate humanity's collective path toward artificial superintelligence at https://asibench.apexin.ai/submit.",
+      "published_date": "2026-08-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.17271",
+      "pdf_url": "https://arxiv.org/pdf/2608.17271",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.17271",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 51,
+      "hot_score": 510,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.17512",
+      "source": "huggingface",
+      "title": "Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation",
+      "authors": [
+        "Hongyan Feng",
+        "Sunlai Chen",
+        "Xuanyu Liu",
+        "Miao Pan",
+        "Yangfan Xie",
+        "Yuxiang Cui",
+        "Zhongxiang Zhou",
+        "Rong Xiong",
+        "Wenqi Zhang",
+        "Jianwei Yin",
+        "Yueting Zhuang",
+        "Xuhong Zhang"
+      ],
+      "abstract": "Although Large Vision-Language Models (VLMs) have significantly advanced embodied navigation, their direct deployment remains challenging, as existing methods often force VLMs into unnatural action spaces that misalign with their 2D pre-training priors, compounded by rigid reasoning schedules and inefficient memory management. To overcome these limitations, we propose TAMP-Nav, a unified framework for efficient embodied navigation. First, we introduce a Pixel-to-3D Action Formulation (Point) that reformulates navigation into 2D visual prompting. Specifically, the VLM merely selects 2D pixels, which are then projected into 3D coordinates for a low-level SLAM controller. This design naturally aligns embodied execution with the VLM's inherent 2D visual capabilities. Second, we propose an integrated Selective Reasoning and Anchor-Trajectory Memory mechanism (Think and Memorize), which dynamically triggers Chain-of-Thought and retains high-fidelity memory only at critical nodes, compressing redundant trajectories into lightweight Space-Time Indicators, thereby preserving critical historical information and enhancing spatio-temporal perception. Finally, we design an efficient Two-Level Alignment Paradigm (Align) via Group Relative Policy Optimization (GRPO). By superimposing global outcome rewards with fine-grained process rewards, this dense supervision tightly aligns the agent's cognitive planning with physical environmental feedback, endowing the model with adaptive reasoning capabilities. Experiments demonstrate that TAMP-Nav achieves state-of-the-art performance (e.g., 66.2% SR on R2R-CE) with high runtime and sample efficiency (requiring only 90k training trajectories).",
+      "published_date": "2026-08-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.17512",
+      "pdf_url": "https://arxiv.org/pdf/2608.17512",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.17512",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 44,
+      "hot_score": 440,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.12313",
+      "source": "huggingface",
+      "title": "AVA-Encoder: Towards Agent-Native Video Representation Learning",
+      "authors": [
+        "Chuyue Li",
+        "Jinpeng Yu",
+        "Haozhe Wang",
+        "Tian Xueyun",
+        "Zhijing Zhang",
+        "Bingnan Li",
+        "Shuqi Gu",
+        "Kan Ren",
+        "Jiaming Liu",
+        "Ruihua Hua"
+      ],
+      "abstract": "Creative agents still lack an effective way to learn from high-quality human films, limiting their ability to produce cinematic-grade videos. A key challenge is the absence of a structured video representation that is both faithful to film content and directly usable for agentic reasoning and manipulation. To address the challenge, we propose the Agentic Video Auto-Encoder (AVA-Encoder), a framework for learning agent-native video representations via agentic auto-encoding.\n  AVA-Encoder transforms a video into a knowledge graph (KG) representation and then reconstructs it back into video. Its hierarchy and state nodes store structured text, while a linked asset layer holds generated images, audio, and video. Typed edges preserve the relations between these text descriptions and assets in a form that agents can easily understand, query, and edit. The video reconstruction differences drive a textual-gradient optimization framework, which expresses evaluation feedback as natural-language update directions for Data-Independent Encoding Policy Pseudo-Training in the outer loop and optional Data-Dependent KG Representation Refinement in the test-time inner loop.\n  Extensive experiments show that AVA-Encoder improves by 20.7 percentage points over the strongest external baseline. In the controlled policy-only setting, its pseudo-trained shot-level Agentic Video Encoder policy also outperforms a carefully human-tuned policy while using 74.3% fewer system-prompt tokens. We release the complete AVA-Encoder framework, a reliable agentic video reconstruction benchmark, and the first dataset of high-quality film KG representations.",
+      "published_date": "2026-08-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.12313",
+      "pdf_url": "https://arxiv.org/pdf/2608.12313",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.12313",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.18063",
+      "source": "huggingface",
+      "title": "EDITBRIDGE: Towards Faithful and Efficient Ultra-High-Resolution Image Editing",
+      "authors": [
+        "Jiayi Song",
+        "Shijie Huang",
+        "Fangtai Wu",
+        "Yubo Huang",
+        "Zhenxiong Tan",
+        "Songhua Liu",
+        "Jiaming Liu",
+        "Ruihua Huang"
+      ],
+      "abstract": "High-resolution image editing is increasingly demanded in professional workflows, yet existing diffusion-based models remain constrained to resolutions below 1K due to quadratic attention complexity and prohibitive memory requirements. A prevalent workaround employs a two-stage pipeline: editing at low resolution followed by independent super-resolution. However, this approach suffers from two critical issues: information divergence, where hallucinated details contradict the original high-resolution (HR) source, and texture degradation, manifesting as over-smoothed or over-sharpened artifacts. We propose EditBridge, a diffusion bridge framework for efficient ultra high-resolution editing. Unlike conventional diffusion that regenerates from noise, we formulate refinement as structured data-to-data translation from the low-resolution (LR) edited result to its HR counterpart, explicitly conditioned on the original HR source to preserve authentic details. To efficiently incorporate HR source guidance, we introduce a prior-guided block-wise sparse attention mechanism that exploits semantic correspondence from first-stage editing to constrain cross-image interactions to spatially aligned regions, significantly reducing computational overhead. Extensive experiments demonstrate that EditBridge achieves high-fidelity editing with superior perceptual quality at resolutions up to 4K, delivering 3.6--8.4times speedup at 2K and enabling practical 4K editing in 61 seconds.",
+      "published_date": "2026-08-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.18063",
+      "pdf_url": "https://arxiv.org/pdf/2608.18063",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.18063",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.17528",
+      "source": "huggingface",
+      "title": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
+      "authors": [
+        "Zhiyuan He",
+        "Siwei Zhang",
+        "Zhiwen Zhou",
+        "Yuqing Yang",
+        "Yu Kang",
+        "Yuge Zhang",
+        "Luna K. Qiu",
+        "Tin Yan Tsui",
+        "Jiahang Xu",
+        "Chong Luo"
+      ],
+      "abstract": "Modern agents operate inside agent harnesses that manage tools, context, and control flow, making the harness a critical part of the agent system. Our original Agent Lightning introduced a disaggregated architecture that connects arbitrary agents to RL training through an LLM endpoint proxy, an approach later adopted by frameworks such as verl Uni-Agent, AReaL 2.0, slime, and Polar. We refer to this paradigm as harnessed agentic RL, where the deploy-time harness directly participates in model post-training. Harnessed agentic RL differs fundamentally from traditional agentic RL: the harness, rather than the training engine, owns the environment interaction loop, while the trainer observes only sequences of LLM request-response pairs. This introduces challenges in retokenization, sample merging, advantage calculation, loss normalization, and backend scheduling, which can substantially affect training stability and effectiveness. We present Agent Lightning v1.0, a lightweight framework for harnessed agentic RL implemented in approximately 3,500 lines of code. It supports arbitrary agent harnesses and serves as a practical testbed for studying these challenges. We evaluate it on instruction-following, search, and coding agents, and provide a complete reproducible pipeline for coding-agent RL. Using only 6K training examples and modest compute, RL improves Qwen3.5-9B on SWE-bench Verified from 41.8% to 56.4%, a 14.6-point absolute gain. We release the complete workflow and training scripts to facilitate reproducible research on harnessed agentic RL.",
+      "published_date": "2026-08-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.17528",
+      "pdf_url": "https://arxiv.org/pdf/2608.17528",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.17528",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.17067",
+      "source": "huggingface",
+      "title": "DiSCO: Defending text-to-image generation through distribution-guided contrastive prompt optimization",
+      "authors": [
+        "Tong Zhang",
+        "Motasem Alfarra",
+        "Carlos Hinojosa",
+        "Christos Louizos",
+        "Bernard Ghanem"
+      ],
+      "abstract": "As text-to-image generative models advance, they raise critical safety concerns, particularly the generation of Not-Safe-For-Work (NSFW) content such as violence and nudity, further exacerbated by red-teaming adversarial attacks. Existing defenses predominantly operate under white-box assumptions, relying on text encoder optimization, weight editing, or inference-time intervention, and fundamentally cannot scale to proprietary models. Black-box alternatives based on LLM prompt rewriting offer broader applicability, yet fail in a critical regime we identify as the benign adversarial problem: prompts that are linguistically safe but still trigger harmful generation due to the model's learned data distribution. We propose DiSCO, a zero-shot, strictly black-box defense that operates entirely at the prompt level as a plug-and-play module, requiring no model retraining, fine-tuning, or access to model internals. DiSCO performs distribution-guided suffix expansion via beam search, optimized through contrastive scoring over safe and unsafe image pools generated by the target model itself, with iterative adaptive feedback until safe content is produced. We demonstrate that DiSCO consistently enhances the safety of both undefended and defended models on the I2P benchmark under multiple red-teaming attacks, achieving 37.7% and 25.13% ASR reduction, respectively, while maintaining semantic fidelity and improving image coherence. As a black-box, architecture-agnostic module, DiSCO can be readily applied to any text-to-image system without necessitating any changes to the model itself.",
+      "published_date": "2026-08-17T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.17067",
+      "pdf_url": "https://arxiv.org/pdf/2608.17067",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.17067",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2608.13556",
+      "source": "huggingface",
+      "title": "V-RAE: Rethinking Video Latent Spaces for Generation",
+      "authors": [
+        "Minghui Guo",
+        "Shengqiong Wu",
+        "Hao Fei"
+      ],
+      "abstract": "Latent video generation relies on autoencoders to define a compact space in which generative models operate. Although video autoencoder architectures have evolved substantially, their latent spaces are still optimized primarily for pixel-level reconstruction and provide limited high-level semantic organization. A reconstruction-optimal latent space, however, need not be well suited to generative modeling. We propose V-RAE, a video representation autoencoder that builds compact generative latents on top of frozen vision foundation model representations. A lightweight temporal pooling module removes temporal redundancy while preserving semantic structure, and a video decoder reconstructs continuous motion from the compressed features. We evaluate V-RAE with four representative frozen encoders on video reconstruction, semantic probing, and class-conditional generation. V-RAE achieves 2.13 rFVD on K600, outperforming all evaluated large-scale pretrained video VAEs. Its latents retain substantially more semantic information than conventional video tokenizer latents. Under matched generation settings, our best variant achieves gFVD scores of 117.86 and 19.16 on UCF101 and K600, respectively, while converging up to 6x faster}. We further show that reconstruction quality alone is insufficient to characterize generative utility and introduce tFVD, a temporal-coherence diagnostic that correlates more reliably with downstream generation quality. Beyond video generation, V-RAE also improves future video prediction on Cityscapes over the Wan 2.2 VAE latent space under matched prediction settings. Taken together, the experiments show that frozen semantic representations can support video reconstruction, generation, and predictive modeling. The project page: https://v-rae.github.io/.",
+      "published_date": "2026-08-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.13556",
+      "pdf_url": "https://arxiv.org/pdf/2608.13556",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.13556",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": null
+    }
+  ]
+}

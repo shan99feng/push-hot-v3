@@ -1,0 +1,295 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-11T00:55:29.546342+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.10522",
+      "source": "huggingface",
+      "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+      "authors": [
+        "Yanzhe Chen",
+        "Zechen Bai",
+        "Zhijun Cao",
+        "Wenzheng Zeng",
+        "Kevin Qinghong Lin",
+        "Yiqi Lin",
+        "Guoqiang Liang",
+        "Kevin Yuchen Ma",
+        "Qiming Huang",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Foundation vision-language models (VLMs) exhibit broad intelligence about the world, yet translating this intelligence into robot control remains challenging. We present Show-Harness, an Embodied Harness that enables VLMs to \"play\" robots through a compact semantic interface linking intent to action. Show-Harness exposes discrete semantic action units that VLMs can naturally reason over, while embodiment-specific interpreters deterministically ground them into local robot actions, keeping the VLM directly responsible for fine-grained physical decisions. Through the same interface, Show-Harness demonstrates the feasibility of (1) directly unlocking closed-source frontier VLMs for zero-shot robot control, and (2) adapting small-scale open-source VLMs for low-cost deployment with just a few GPU-hours of fine-tuning. We further develop GUMI (GUI Manipulation Interface), which extends the same semantic action space to GUI-based demonstration collection, allowing humans and agents to \"play\" robots across embodiments without specialized teleoperation hardware. Extensive experiments show that Show-Harness-equipped VLM agents generalize robustly across tasks, embodiments, and environments, outperforming representative agentic and VLA paradigms. These results suggest that the right interface can unlock substantial embodied capability from foundation VLMs, without requiring additional model capacity or costly embodiment-specific pretraining.",
+      "published_date": "2026-09-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.10522",
+      "pdf_url": "https://arxiv.org/pdf/2609.10522",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.10522",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "upvotes": 125,
+      "hot_score": 1250,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.08572",
+      "source": "huggingface",
+      "title": "AgentGrad: Intervention-guided Prompt Optimization for Multi Agent Systems",
+      "authors": [
+        "Jaewon Chu",
+        "Jinwoo Seo",
+        "Jaewon Cho",
+        "Jeehye Na",
+        "Yunyang Xiong",
+        "Youngdae Kim",
+        "Hyunwoo J. Kim"
+      ],
+      "abstract": "Large language model (LLM)-based multi-agent systems (MAS) achieve strong performance by employing specialized multiple agents, yet their performance depends on the prompt design of each agent. For MAS prompt optimization, textual gradient methods that guide prompt updates using natural-language feedback have emerged as a leading paradigm. In this paper, we identify limitations in two stages of existing textual gradient approaches: gradient extraction and gradient aggregation. In gradient extraction, previous works select a target prompt without verifying whether modifying it resolves the failure, and derive gradients without agent-level supervision over the corresponding agent's intermediate output. In gradient aggregation, individual gradients are randomly grouped and concatenated, often mixing unrelated failure modes and producing prompts that fail to generalize. To address these limitations, we propose AgentGrad, a prompt optimization framework for multi-agent systems based on sequential intervention and semantic textual gradient abstraction. For each failure, sequential intervention modifies the behavior of one agent at a time to identify the target agent whose modification resolves the failure. The modified output of the target agent then serves as agent-level supervision for extracting a fine-grained gradient. Semantic textual gradient abstraction clusters semantically similar gradients to prevent mixing unrelated failure modes, and abstracts each cluster into a generalized gradient that captures the shared corrective pattern. Experimental results show that AgentGrad achieves state-of-the-art performance across five MAS benchmarks and reduces wall-clock optimization time by 2.5times on average compared to the next-fastest baseline.",
+      "published_date": "2026-09-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.08572",
+      "pdf_url": "https://arxiv.org/pdf/2609.08572",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.08572",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 83,
+      "hot_score": 830,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.10540",
+      "source": "huggingface",
+      "title": "Programmable World Model",
+      "authors": [
+        "Zheng-Hui Huang",
+        "Guixu Lin",
+        "Jiacheng Lin",
+        "Yi-Chuan Huang",
+        "Ruihan Yu",
+        "Muyao Niu",
+        "Siqi Yang",
+        "Yu-Lun Liu",
+        "Yung-Yu Chuang",
+        "Kaipeng Zhang",
+        "Zhixiang Wang"
+      ],
+      "abstract": "Recent video world models generate increasingly realistic and interactive visual experiences, yet lack reliable mechanisms for maintaining persistent world state and enforcing programmable rules over extended interactions. We introduce Programmable World Model, a framework that decouples world-state evolution from visual observation generation. An agent translates natural-language instructions into executable programs that specify entity states and state-transition rules, enabling direct control over individual entities and their interactions. A lightweight engine executes these programs to update and maintain an explicit, persistent global world state, including off-screen entities and non-visual attributes. To connect world state with visual generation, we introduce state-augmented 3D oriented bounding boxes (OBBs) as an intermediate representation. This representation, together with the target camera trajectory, is deterministically compiled into pixel-aligned spatiotemporal conditioning signals for a pretrained video model serving as the generative renderer. This design allows users to create playable games with predefined mechanics, direct control over individual entities, and persistent world state throughout gameplay. We further introduce CombatStateBench, a benchmark for evaluating programmable world models. On CombatStateBench, our method achieves 94% Count Accuracy and 98% State Accuracy, substantially outperforming existing interactive video world models while supporting coherent long-horizon generation. These results demonstrate the effectiveness of separating explicit state evolution from generative rendering for building persistent, programmable worlds.",
+      "published_date": "2026-09-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.10540",
+      "pdf_url": "https://arxiv.org/pdf/2609.10540",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.10540",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 81,
+      "hot_score": 810,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.05405",
+      "source": "huggingface",
+      "title": "WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data",
+      "authors": [
+        "Ji Soo Lee",
+        "Xilun Chen",
+        "Pierce Chuang",
+        "Ashish Shenoy",
+        "Jason Wei",
+        "Dohwan Ko",
+        "Hyunwoo J. Kim",
+        "Benoit Corda"
+      ],
+      "abstract": "Recent advances in wearable sensing enable continuous monitoring of physiological and behavioral signals, yet existing benchmarks rarely evaluate whether AI systems can reason over a real user's longitudinal wearable record. We introduce WearableQA, a benchmark comprising 4,084 10-option multiple-choice questions constructed from the wearable time series, blood biomarkers, and demographics of 200 real users, each with up to 500 days of daily measurements. WearableQA preserves authentic wearable distributions that include device noise and inter-individual variability. To evaluate distinct reasoning capabilities, we introduce 16 question types organized along two complementary axes: data versus health reasoning, which distinguishes computation over longitudinal measurements from physiological interpretation; and single- versus cross-signal reasoning, which separates reasoning about individual signals from the integration of multiple signals. To construct reliable questions at scale, we adopt a dual-grounding framework that combines literature-grounded physiological findings with statistically validated population-grounded physiological patterns. This enables the capture of meaningful relationships observed in real-world wearable data. Evaluation of 14 proprietary and open-source LLMs demonstrates that WearableQA effectively differentiates model capabilities, with performance ranging from 19.6% to 72.9% against a 10% chance baseline. Moreover, WearableQA remains far from solved: most models achieve accuracies below 60%. Overall, WearableQA provides a realistic and diagnostic benchmark for evaluating LLM reasoning over real-world wearable data.",
+      "published_date": "2026-09-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.05405",
+      "pdf_url": "https://arxiv.org/pdf/2609.05405",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.05405",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.08149",
+      "source": "huggingface",
+      "title": "SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents",
+      "authors": [
+        "Pujun Zheng",
+        "Zixin Shang",
+        "Shufan Jiang",
+        "Wenhui Tian",
+        "Dongsheng Zhu",
+        "Zerun Ma",
+        "Dingbo Yuan",
+        "Qi Zhang"
+      ],
+      "abstract": "SWE-Bench Pro has emerged as a standard benchmark for evaluating software engineering agents on challenging repository-level tasks. However, our analysis work show that its evaluation is undermined by two sources of unreliability: reward hacking, enabled by leakage of gold solutions or hidden evaluation information, and task quality issues, including misleading problem statements and improperly scoped tests. These issues can inflate benchmark performance and obscure agents' true coding ability. We present SWE-Bench Pro Verified, a verified version of SWE-Bench Pro that addresses both problems. Our approach combines anti-hacking safeguards that eliminate major leakage channels without disrupting normal agent functionality, with task refinement that minimally corrects inconsistencies within flawed instances. Evaluations on SWE-Bench Pro Verified reveal that some models perform substantially worse than previously reported, suggesting that existing results on SWE-Bench Pro may overestimate real software engineering capability. SWE-Bench Pro Verified offers a more trustworthy benchmark for assessing software engineering agents.",
+      "published_date": "2026-09-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.08149",
+      "pdf_url": "https://arxiv.org/pdf/2609.08149",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.08149",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.09113",
+      "source": "huggingface",
+      "title": "SAEScientist-Bench: Can AI Agents Conduct Autonomous SAE Interpretability Research?",
+      "authors": [
+        "Yuqiao Tan",
+        "Shizhu He",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "abstract": "While research on recursive self-improvement (RSI) has predominantly automated model training pipelines, reliable autonomous development demands a missing pillar: post-hoc monitoring and auditing to understand what models learn and ensure safe alignment. Mechanistic interpretability tools are essential to bridge this gap, among which Sparse Autoencoders (SAEs) serve as a cornerstone by isolating interpretable features for model inspection and steering. In this paper, we introduce SAEScientist-Bench to evaluate whether AI agents can act as scientists utilizing SAE tools for autonomous mechanistic discovery. Given a target concept, an agent designs contrastive probes and navigates a Gemma Scope dictionary of 131K+ features in Gemma-2-9B-IT to discover the optimal feature, evaluated against curated expert reference features anchored on Neuronpedia across activation rank, concept selectivity on contrastive texts, and causal steering. Across 10 agent configurations and 20 tasks, frontier agents demonstrate genuine discovery capabilities and lead different evaluation dimensions, but remain well behind the expert baseline, approaching expert levels on separating target concepts from contrastive controls while lagging substantially in causal generation steering. Further analysis reveals that although agents can design contrasts to rule out spurious candidates, they frequently misinterpret experimental measurements. These results establish experimental model understanding as a measurable capability for closed-loop autonomous AI R&D. Our code is available at https://github.com/Trae1ounG/SAEScientist.",
+      "published_date": "2026-09-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.09113",
+      "pdf_url": "https://arxiv.org/pdf/2609.09113",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.09113",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.00369",
+      "source": "huggingface",
+      "title": "Puppeteer: Object-Grounded Posture-Aware Co-Speech Gesture Generation",
+      "authors": [
+        "Vida Adeli",
+        "Soroush Mehraban",
+        "Jacob Rommann",
+        "Harrison Sanborn",
+        "Cole Clifford",
+        "Babak Taati"
+      ],
+      "abstract": "Generating co-speech gestures that are temporally coherent, semantically aligned with speech, and grounded with surrounding objects remains challenging. Prior speech-driven gesture models emphasize audio-gesture alignment but do not explicitly account for posture constraints or surrounding objects, failing to capture the inherent correlation between body gestures and the physical space. We present Puppeteer, a posture-aware, object-grounded co-speech gesture diffusion model operating in a causal latent space. We decompose long gestures into structured primitives and learn a causal variational autoencoder that encodes them into temporally ordered latent tokens, each depending only on the past. We then perform conditional diffusion directly in the causal latent space, conditioning on speech signals, motion history, an initial posture reference, and object geometry to synthesize physically consistent gestures. This temporally ordered latent formulation enables explicit temporal control and supports tasks such as gesture in-betweening and gesture completion. To better assess co-speech gesture synthesis beyond existing measures, we introduce new evaluation metrics tailored to this task. We also created SceneGes, the first curated synthetic 3D dataset of embodied co-speech gestures and corresponding 3D objects, enabling object-grounded gesture generation. Experiments show that Puppeteer generates more diverse and temporally synchronized gestures than prior methods, while enabling object-grounded gesture synthesis.",
+      "published_date": "2026-08-31T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.00369",
+      "pdf_url": "https://arxiv.org/pdf/2609.00369",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.00369",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.09219",
+      "source": "huggingface",
+      "title": "Scores Alone Do Not Prove Discovery: The Discovery Certification Protocol for Auditing AI Research Agents",
+      "authors": [
+        "Jingjie Ning",
+        "Shanshan Zhong",
+        "Xiaochuan Li",
+        "Ji Zeng"
+      ],
+      "abstract": "AI research agents combine prior knowledge, public sources, and experimental feedback to produce useful results. The Discovery Certification Protocol (DCP) turns claims about these results into executable recovery and feedback tests. Gate 1 validates useful improvement on sealed evaluation. Gate 2 gives matched agents the registered starting information and observed Web content while withholding the target research history. Every valid method reaching the numerical target supplies a recovery witness and triggers the Core veto. DCP Core requires adequate controls, zero observed recoveries, and a finite-sample bound on recovery in one fresh registered episode. Optional Gate 3 measures the average effect of truthful feedback relative to a specified neutral policy from a shared checkpoint. DCP Evidence adds this effect after independent null calibration and a registered effect margin. Two controlled audits exercise the complete protocol in SQLite optimization and virtual catalyst control under different models. Each produced zero recoveries in 96 episodes, with an upper bound of 0.0468. Each paired study yielded 30 truthful recoveries and zero neutral recoveries, with passing 60-pair null studies. Additional cases exercise Core, recovered, and audit-incomplete decisions. A deterministic, LLM-free verifier reproduces the decisions from frozen evidence. DCP provides a common evidence language for useful outcomes, alternative routes, and feedback effects across AI research.",
+      "published_date": "2026-09-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.09219",
+      "pdf_url": "https://arxiv.org/pdf/2609.09219",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.09219",
+      "category": "llm",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.09155",
+      "source": "huggingface",
+      "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+      "authors": [
+        "Yuncong Yang",
+        "Zhengtao Han",
+        "Furkan Ozyurt",
+        "Zeyuan Yang",
+        "Han Yang",
+        "Junyi Cao",
+        "Haoyu Zhen",
+        "Yilun Du",
+        "Chuang Gan"
+      ],
+      "abstract": "World models are increasingly used as policy-in-the-loop imagination environments, where reliable rollouts require fine-grained controllability with respect to low-level robot actions. A key obstacle to scaling such models in robotics is that actions are not a universal language in pixel space: changes in visual environment, camera view, robot placement, or embodiment alter how the same numerical action manifests visually, leading to conflicting supervision under mixed training and brittle generalization at deployment. We introduce SyncWorld, an action-conditioned world model that serves as a zero-shot simulator across unseen environments without any additional training. SyncWorld leverages a visual calibration episode---paired frames and actions that showcase all the controllable degrees of freedom---to specify the setup-specific Action--Visual Mapping in context. Training with visual calibration contexts teaches the model to interpret actions through visual evidence and to leverage interaction history when explicit calibration is unavailable. Experiments show that SyncWorld can accurately simulate action outcomes in previously unseen settings, and that its capability of simulating rollouts enables test-time policy improvement without training.",
+      "published_date": "2026-09-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.09155",
+      "pdf_url": "https://arxiv.org/pdf/2609.09155",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.09155",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 11,
+      "hot_score": 110,
+      "structured_summary": null
+    },
+    {
+      "paper_id": "hf-paper-2609.10226",
+      "source": "huggingface",
+      "title": "Φ-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?",
+      "authors": [
+        "Leilei Ding",
+        "Shumin Wang",
+        "Yuting Huang",
+        "Fanqi Wan",
+        "Yinmin Zhang",
+        "Qi Han",
+        "Yiming Xu",
+        "Feiyuan Zhang",
+        "Xiaomeng Chu",
+        "Guoliang You",
+        "Wuyang Zhang",
+        "Daxin Jiang",
+        "Yanyong Zhang"
+      ],
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in reasoning and code generation, raising the prospect that they could assist in developing and optimizing the very infrastructure that powers them. However, existing benchmarks mainly focus on isolated kernels, predefined operators, or pre-specified optimization targets, and therefore fail to evaluate the ability of LLMs to perform open-ended, long-horizon LLM infrastructure engineering. To address this gap, we present Φ-Bench, a benchmark for systematically evaluating LLMs on engineering the LLM infrastructure stack. Derived from optimization problems studied in frontier research and grounded in real-world code repositories, Φ-Bench provides broad coverage of the LLM infrastructure stack and spans tasks of varying complexity, ranging from localized kernel-level function completion to long-horizon implementation and end-to-end system optimization. Extensive experiments on frontier LLMs reveal their current capabilities and limitations in engineering complex LLM infrastructure, offering insights into the challenges that remain on the path toward autonomous optimization of future AI infrastructure.",
+      "published_date": "2026-09-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.10226",
+      "pdf_url": "https://arxiv.org/pdf/2609.10226",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.10226",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": null
+    }
+  ]
+}

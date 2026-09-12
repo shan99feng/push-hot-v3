@@ -1,0 +1,556 @@
+{
+  "date": "2026-09-11",
+  "generated_at": "2026-09-12T00:58:00.097906+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.10715",
+      "source": "huggingface",
+      "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
+      "authors": [
+        "NCP Team",
+        "Jiaqi Cao",
+        "Chiyu Chen",
+        "Shuang Cheng",
+        "Xu Cheng",
+        "Beiya Dai",
+        "Yufan Feng",
+        "Kewen Ge",
+        "Ruijun Ge",
+        "Jiayi Huang",
+        "Yang Jiao",
+        "Dahua Lin",
+        "Zhouhan Lin",
+        "Yifan Liu",
+        "Yuliang Liu",
+        "Biqing Qi",
+        "Mowen Ruan",
+        "Junzhe Shen",
+        "Yunchong Song",
+        "Hao Sun",
+        "Zhongbo Tian",
+        "Yixuan Wang",
+        "Rubin Wei",
+        "Jiaxin Xiong",
+        "Kangyu Yang",
+        "Qian Yao",
+        "Qi Zhang",
+        "Bowen Zhou"
+      ],
+      "abstract": "We introduce NCP-ArchPreview, a latent-space language model that pushes autoregressive pretraining beyond standard next-token prediction (NTP). Alongside NTP, the model learns through Next Concept Prediction (NCP) to predict discrete concepts that span multiple tokens, introducing an explicit and more challenging concept-level objective while preserving standard token-level autoregressive generation. NCP-ArchPreview builds a latent space by constructing a product-quantized concept vocabulary directly from its hidden states, and subsequently learns to predict future concepts via a dedicated Concept Module. These predicted concepts are then fed back to the token level to guide subsequent generation, with NTP and NCP trained jointly end-to-end. We scale this architecture to 8.9B parameters and train it on 5.73T tokens from the Dolma-3 dataset, marking the largest demonstration of a latent-space language model to date. Remarkably, by consuming only 51.3% of the total training tokens, NCP-ArchPreview achieves the final pretraining loss of OLMo-3-7B. Following full pretraining, it outperforms OLMo-3-7B by 2.45 points on the downstream macro-average, including a notable 5.99-point gain on GSM8K. Controlled experiments isolate a clear progression of performance gains stemming from both the latent architecture and the NCP objective. Furthermore, utilizing only 85% of the standard computation, NCP-ArchPreview approaches the training loss of a strictly parameter-aligned 8.9B baseline. The learned latent space remains highly valuable after the pretraining stage: updating just the 17M-parameter VQ module yields a novel, lightweight interface for domain adaptation, while a simple injection of concept representations into a DFlash2 drafter improves the mean accepted length by 4.17% with negligible overhead.",
+      "published_date": "2026-09-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.10715",
+      "pdf_url": "https://arxiv.org/pdf/2609.10715",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.10715",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 177,
+      "hot_score": 1770,
+      "structured_summary": {
+        "chinese_title": "NCP-ArchPreview 技术报告：通过下一个概念预测迈向潜在空间语言模型",
+        "chinese_summary": "NCP-ArchPreview 通过引入 Next Concept Prediction (NCP) 推动自回归预训练超越标准的下一个标记预测。",
+        "pain_point": "现有自回归预训练方法主要依赖于下一个标记预测，缺乏对更高层次概念的理解。",
+        "core_value": "通过 NCP，模型能够学习跨多个标记的概念，提升潜在空间语言模型的能力。",
+        "technical_architecture": "构建潜在空间并通过概念模块预测未来概念，指导后续生成。",
+        "quantitative_results": "NCP-ArchPreview 在下游任务上优于 OLMo-3-7B，特别是在某些任务上表现出显著提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上进行了验证，未来需要在更多数据集上进行测试。",
+        "key_contributions": [
+          "引入 Next Concept Prediction (NCP) 方法",
+          "构建潜在空间并指导生成",
+          "在大规模参数下进行训练"
+        ],
+        "application_scenarios": [
+          "自然语言生成",
+          "文本理解"
+        ],
+        "technical_highlights": [
+          "结合 NTP 和 NCP 进行联合训练",
+          "使用产品量化构建概念词汇表"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.11929",
+      "source": "huggingface",
+      "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
+      "authors": [
+        "Haiwen Diao",
+        "Jiahao Wang",
+        "Chenjing Ding",
+        "Hanming Deng",
+        "Jiangnan Chen",
+        "Ruixi Zhang",
+        "Ruohui Wang",
+        "Wenwen Tong",
+        "Xiangyu Fan",
+        "Yubo Wang",
+        "Yue Zhu",
+        "Yuwei Niu",
+        "Zhengqi Bai",
+        "Zhiqian Lin",
+        "Zhitao Yang",
+        "Zhongang Cai",
+        "Bo Yang",
+        "Chen Feng",
+        "Chengguang Lv",
+        "Guangjia Liu",
+        "Guanlin Wang",
+        "Hanyu Zhang",
+        "Haojia Yu",
+        "Hongcan Xiao",
+        "Hongli Wang",
+        "Huan Wu",
+        "Huaping Zhong",
+        "Jian Fang",
+        "Jianan Fan",
+        "Jiaqi Li",
+        "Jiefan Lu",
+        "Jing Zuo",
+        "Jingcheng Ni",
+        "Junxiang Xu",
+        "Linjun Dai",
+        "Mutian Xu",
+        "Peishen Yan",
+        "Penghao Wu",
+        "Ruijie Mao",
+        "Ruisi Wang",
+        "Shihao Bai",
+        "Shuang Yang",
+        "Shuya Yang",
+        "Shuyan Zheng",
+        "Silei Wu",
+        "Siying Li",
+        "Tao Chu",
+        "Tianbo Zhong",
+        "Tongxi Zhou",
+        "Weichao Luo",
+        "Weichen Fan",
+        "Wenhao Jia",
+        "Wenjie Gao",
+        "Xiangli Kong",
+        "Yan Li",
+        "Yang Yong",
+        "Zimo Wen",
+        "Zixuan Qian",
+        "Wenxiu Sun",
+        "Ruihao Gong",
+        "Quan Wang",
+        "Lewei Lu",
+        "Lei Yang",
+        "Ziwei Liu",
+        "Dahua Lin"
+      ],
+      "abstract": "We launch SenseNova-U1.5, an 8B-MoT native unified multimodal model that understands, reasons about, and generates visual content within an encoder-free and VAE-free architecture. We strengthen its visual interface through spatially coherent patch reconstruction and scale its training with carefully curated generation and editing data, improved task formulation, structural prompt enhancement, and native resolutions of up to 4K. For post-training, we optimize specialized experts for visual aesthetics, bilingual text rendering, infographic generation, and image editing, and consolidate their capabilities through multi-expert on-policy distillation. Across extensive evaluations, SenseNova-U1.5 largely advances image fidelity, text rendering, complex composition, multi-reference editing, and interleaved generation, while improving instruction following and preserving subject identity, geometry, and unmodified regions. Despite limited exposure to structured formats in its generation data, SenseNova-U1.5 generalizes effectively to long, complex, and structured visual instructions, further proving that multimodal understanding can transfer to visual planning and creation. Together, these findings position native unified modelling as a promising path towards systems that perceive, reason and create within a fully end-to-end framework. We will open-source training code, including supervised fine-tuning, reinforcement learning, and on-policy distillation.",
+      "published_date": "2026-09-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.11929",
+      "pdf_url": "https://arxiv.org/pdf/2609.11929",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.11929",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 139,
+      "hot_score": 1390,
+      "structured_summary": {
+        "chinese_title": "SenseNova-U1.5: 向原生统一视觉智能迈进",
+        "chinese_summary": "SenseNova-U1.5 是一个 8B-MoT 的原生统一多模态模型，能够理解、推理和生成视觉内容。",
+        "pain_point": "现有模型在处理视觉内容时存在架构复杂、训练数据有限等问题。",
+        "core_value": "通过增强视觉接口和优化训练数据，提升视觉内容生成的质量。",
+        "technical_architecture": "采用无编码器和无 VAE 的架构，增强视觉接口。",
+        "quantitative_results": "在多项实验中，SenseNova-U1.5 显著提高了图像保真度和文本渲染质量。",
+        "competitors": "暂无对比信息",
+        "limitations": "在生成数据中缺乏结构化格式的暴露。",
+        "key_contributions": [
+          "提出无编码器和无 VAE 的架构",
+          "增强视觉接口并通过多专家策略优化",
+          "提升视觉内容生成的质量"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像编辑"
+        ],
+        "technical_highlights": [
+          "采用无编码器和无 VAE 的架构",
+          "通过多专家策略优化视觉内容生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.07064",
+      "source": "huggingface",
+      "title": "SpatialBlock: Enhancing Spatial Intelligence in LVLMs via Synthetic Block-Stacking Problem",
+      "authors": [
+        "Soohyun Ryu",
+        "Sohee Kim",
+        "Eunho Yang"
+      ],
+      "abstract": "Large Vision-Language Models (LVLMs) have achieved strong performance on diverse visual tasks, yet their ability to reconstruct and reason about the 3D structure of the scene depicted in 2D images -- referred to as spatial intelligence -- remains limited. Existing approaches attempt to address this gap by using real-scene spatial question answering datasets that require dense geometric annotations. However, constructing such labels is costly, time-consuming, and often noisy due to reliance on external perception modules. In this work, we propose a novel paradigm inspired by human cognitive development: learning foundational spatial skills through structured block-manipulation tasks. We introduce SpatialBlock-15k, a synthetic dataset of 15,000 block-stacking problems covering 3D-to-2D projection, viewpoint transformation, and structural combination. The dataset further incorporates controlled color modulation as visual cues to encourage anchor-based reasoning in visually complex conditions. Experiments demonstrate that LVLMs trained on our dataset through either direct answering or reasoning-based prediction significantly outperform baselines and generalize to real-world spatial tasks, despite the dataset's synthetic and compact nature. Code and data are available at https://github.com/rsoohyun/SpatialBlock.",
+      "published_date": "2026-09-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.07064",
+      "pdf_url": "https://arxiv.org/pdf/2609.07064",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.07064",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 68,
+      "hot_score": 680,
+      "structured_summary": {
+        "chinese_title": "SpatialBlock：通过合成积木堆叠问题增强LVLMs的空间智能",
+        "chinese_summary": "通过合成积木堆叠问题训练的LVLMs在空间推理任务上显著优于基线并具有更好的泛化能力。",
+        "pain_point": "现有方法依赖于昂贵且耗时的密集几何标注，导致LVLMs在重建和推理2D图像所描绘场景的3D结构方面表现受限。",
+        "core_value": "提出了一种新的基于结构化积木操作任务的训练范式，构建了一个包含15,000个积木堆叠问题的合成数据集，有效提升了LVLMs的空间智能。",
+        "technical_architecture": "通过合成积木堆叠问题训练LVLMs，涵盖3D到2D投影、视角变换和结构组合。",
+        "quantitative_results": "实验表明，基于合成数据集训练的LVLMs在空间推理任务上显著优于基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于合成数据集，未来需要进一步验证其在真实场景中的泛化能力。",
+        "key_contributions": [
+          "提出了一个新的基于积木堆叠问题的合成数据集",
+          "展示了LVLMs在空间推理任务上的显著提升",
+          "提供了新的训练范式以增强空间智能"
+        ],
+        "application_scenarios": [
+          "视觉场景理解",
+          "三维重建"
+        ],
+        "technical_highlights": [
+          "构建了大规模合成积木堆叠问题数据集",
+          "引入了颜色调制作为视觉提示"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.05903",
+      "source": "huggingface",
+      "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
+      "authors": [
+        "Nanxi Li",
+        "Yingzi Ma",
+        "Yulong Cao",
+        "Edward Suh",
+        "Bo Li",
+        "Dawn Song",
+        "Chaowei Xiao"
+      ],
+      "abstract": "Large Language Model (LLM) agents are turning language into real-world effects, making safety necessary against both indirect prompt injections and direct harmful requests. System-level safety harnesses add an enforcement layer beyond model-level defenses, but existing harnesses are usually designed once by experts and applied across heterogeneous models and domains. Effective protection is deployment-dependent: models differ in how much enforcement they need before utility declines, while domains differ in the effects, state, and action sequences that must be governed. A harness that is strict enough for one model may over-block another, and a policy that transfers across domains may miss application-specific safety relations.\n  We present EvoSafeHarness, a safety-specific optimization framework that synthesizes a deployable harness for a frozen model in a target domain. It jointly searches a natural-language policy and executable code logic, guided by model behavior, domain specifications, and fresh-context adversarial review to reject benchmark-specific rules. Across four agent benchmark families, EvoSafeHarness achieves a stronger safety-utility frontier than fixed expert-designed defenses. On DecodingTrust-Agent, it reduces average attack success rate from 45.6% to 10.0% at a 3.3-point utility cost and achieves the best score in 14 of 15 cells. On AgentDojo, it reaches 82.8% utility at 0.0% ASR, twice CaMeL's utility at the same operating point, and transfers unchanged to unseen AgentDyn suites. It also achieves the best score on Agent-SafetyBench for every victim and keeps mean ASR below 20% under adaptive PAIR attacks with a refinement budget of 16. Analysis shows that domain semantics determine which safety relations and trajectory state are needed, while model and runtime behavior determine how and where those relations should be enforced.",
+      "published_date": "2026-09-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.05903",
+      "pdf_url": "https://arxiv.org/pdf/2609.05903",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.05903",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": {
+        "chinese_title": "EvoSafeHarness: 为安全代理生成模型和领域特定框架",
+        "chinese_summary": "EvoSafeHarness 通过联合搜索自然语言策略和可执行代码逻辑，为特定领域生成可部署的安全框架。",
+        "pain_point": "现有安全框架通常由专家设计并适用于多种模型和领域，但效果依赖于具体部署场景。",
+        "core_value": "EvoSafeHarness 能够根据模型特性和领域需求自动生成安全框架，提供更强的安全-效用平衡。",
+        "technical_architecture": "采用联合搜索自然语言策略和可执行代码逻辑的方法，结合模型行为、领域规范和对抗性审查。",
+        "quantitative_results": "在四个代理基准族中，EvoSafeHarness 达到了更强的安全-效用边界。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究如何处理更复杂的模型和领域。",
+        "key_contributions": [
+          "自动生成模型和领域特定的安全框架",
+          "结合自然语言策略和可执行代码逻辑",
+          "提供更强的安全-效用平衡"
+        ],
+        "application_scenarios": [
+          "大型语言模型代理的安全保护",
+          "不同领域和模型的安全策略定制"
+        ],
+        "technical_highlights": [
+          "联合搜索自然语言策略和可执行代码逻辑",
+          "动态适应模型和领域需求"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.11317",
+      "source": "huggingface",
+      "title": "Mi-Ripple: Restoring Images Degraded by Iterative AI Editing",
+      "authors": [
+        "Jiayin Chen",
+        "Yicheng Xu",
+        "Muting Wang"
+      ],
+      "abstract": "Iterative reference-conditioned image editing can introduce grid-like and granular textures, commonly described as digital ripple. We present Mi-Ripple, a diagnosis-guided restoration workflow that suppresses this digital ripple while protecting image structure. Mi-Ripple separates periodic lattice artifacts from content-entangled granular texture, then combines selective spectral notching, structure-aware smoothing, and cleaned-reference regeneration. This separation enables low-distortion filtering when artifacts are spectrally isolated and visual reconstruction when filtering would erase legitimate detail. Across fourteen notch-only executions, whole-image residual standard deviation is 0.08--0.44 in CIELAB lightness units. In a paired regeneration example, reference cleaning reduces output debris density by 45\\%. Mi-Ripple links measurable artifact reduction to visibly cleaner generated images, rather than optimizing a spectral score alone.",
+      "published_date": "2026-09-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.11317",
+      "pdf_url": "https://arxiv.org/pdf/2609.11317",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.11317",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "Mi-Ripple：修复由迭代AI编辑引起的图像退化",
+        "chinese_summary": "Mi-Ripple通过诊断引导的修复流程抑制数字涟漪，同时保护图像结构。",
+        "pain_point": "迭代AI编辑导致的图像退化，如网格状和颗粒状纹理。",
+        "core_value": "通过分离周期性晶格伪影和内容纠缠的颗粒状纹理，实现低失真过滤和视觉重建。",
+        "technical_architecture": "结合选择性频谱削峰、结构感知平滑和清洁参考再生。",
+        "quantitative_results": "整图残差标准差在CIELAB亮度单位中为0.08--0.44。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更多应用场景。",
+        "key_contributions": [
+          "提出Mi-Ripple修复流程",
+          "分离周期性晶格伪影和颗粒状纹理",
+          "实现低失真过滤和视觉重建"
+        ],
+        "application_scenarios": [
+          "图像修复",
+          "图像增强"
+        ],
+        "technical_highlights": [
+          "诊断引导的修复流程",
+          "结合选择性频谱削峰和结构感知平滑"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.11412",
+      "source": "huggingface",
+      "title": "X-AuT: Progressive Audio-Encoder Compression for Speech LLMs with Cross-Scale Distillation",
+      "authors": [
+        "Haojun Zhang",
+        "Yi Zou",
+        "Min Chen",
+        "Qize Yu",
+        "Lianrui Fan",
+        "Xini Ding",
+        "Hao Li",
+        "Shuchang Zhou",
+        "Xianming Liu",
+        "Shiyu Huang"
+      ],
+      "abstract": "Reducing audio-encoder depth lowers the inference cost of speech large language models, but removing complete blocks perturbs the embeddings consumed by the decoder and can cause deletion and premature end-of-sequence errors. We introduce X-AuT, a progressive framework that selects layer combinations through short behavioral probes and restores the pruned model through representation alignment, cross-scale distillation, scheduled student-policy supervision, and LoRA finetuning. The language-model backbone remains frozen, while attention LoRA adapters and the tied output embedding adapt during distillation. Training uses the highest-agreement tier from a transcript-consistency pipeline, followed by source reweighting during finetuning. On ten public Chinese--English benchmarks, compressing Qwen3-ASR-0.6B from 18 to 16 audio-encoder layers reduces macro-average error from 5.61% to 5.27%. The 14-layer model reaches 5.75% with 20.7% fewer audio-tower parameters. Under the matched recipe, the 1.7B teacher yields 5.55% mean error, compared with 8.45% for self-distillation, and progressive 18rightarrow14 pruning outperforms direct pruning (5.75% vs. 6.73%). These single-run results establish two practical operating points and show that the accuracy effects vary across benchmarks. Project website: https://xpeng-ai.github.io/x-aut",
+      "published_date": "2026-09-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.11412",
+      "pdf_url": "https://arxiv.org/pdf/2609.11412",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.11412",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "X-AuT: 一种用于语音大语言模型的渐进式音频编码压缩框架",
+        "chinese_summary": "通过交叉尺度蒸馏等方法，将Qwen3-ASR-0.6B模型的音频编码层从18层压缩到16层，错误率从5.61%降低到5.27%。",
+        "pain_point": "减少音频编码器深度会降低语音大语言模型的推理成本，但会扰动解码器消耗的嵌入，导致删除和提前序列结束错误。",
+        "core_value": "通过交叉尺度蒸馏和渐进式框架，有效减少音频编码器参数量同时保持模型性能。",
+        "technical_architecture": "采用交叉尺度蒸馏、代表对齐、计划学生策略监督和LoRA微调等技术。",
+        "quantitative_results": "压缩后的14层模型错误率为5.75%，比直接压缩减少20.7%的音频塔参数。",
+        "competitors": "对比了自蒸馏和渐进式压缩方法，显示了其优越性。",
+        "limitations": "实验结果基于单次运行。",
+        "key_contributions": [
+          "提出了一种渐进式音频编码压缩框架",
+          "通过交叉尺度蒸馏恢复模型性能",
+          "保持语言模型主干冻结，仅调整注意力LoRA适配器和输出嵌入"
+        ],
+        "application_scenarios": [
+          "语音大语言模型的高效推理",
+          "资源受限环境下的语音识别"
+        ],
+        "technical_highlights": [
+          "使用转录一致性管道的最高一致层进行训练",
+          "在微调期间进行源重加权"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.11561",
+      "source": "huggingface",
+      "title": "Memory as Plans: World-Action Modeling with Memory-Grounded Planning",
+      "authors": [
+        "Sizhe Zhao",
+        "Haozhe Xie",
+        "Weiyu Zhao",
+        "Chenchu Zhang",
+        "Huan Wang",
+        "Chenyang Wang",
+        "Qinglin Liu",
+        "Shengping Zhang"
+      ],
+      "abstract": "Mainstream robotic policies often adopt a Markovian formulation, but many complex real-world manipulation tasks are inherently non-Markovian, requiring long-horizon memory beyond the current observation. Existing memory mechanisms often rely on language summaries, growing visual windows, or their combinations, and may therefore lose fine-grained visual evidence or face a trade-off between history coverage and execution efficiency. We introduce MaP-WAM, a Memory-as-Plans framework that decomposes memory-dependent world-action modeling into memory-grounded planning and plan-conditioned execution, and uses long-term multimodal episodic context as planning-time evidence rather than repeatedly conditioning the executor on the full history. MaP-WAM represents memory as completed segment records containing language instructions and sparse visual context, and converts this episodic memory into compact plans comprising the next segment-level language plan and corresponding visual guidance. A World-Action-Progress (WAP) model executes each plan over an unknown duration by jointly predicting action chunks and corresponding execution progress at inference time, calibrating predicted progress through plan-observation alignment for adaptive segment transitions and closed-loop context updates. MaP-WAM keeps the executor context length fixed, while structured attention further enables key-value caching in both planning and execution. MaP-WAM achieves state-of-the-art performance on RMBench with an 83.3% success rate and attains 78.0% success on real-robot tasks, while maintaining approximately constant executor inference latency as task history grows.",
+      "published_date": "2026-09-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.11561",
+      "pdf_url": "https://arxiv.org/pdf/2609.11561",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.11561",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "记忆即计划：基于记忆的规划的世界-动作建模",
+        "chinese_summary": "引入MaP-WAM框架，通过记忆地规划和计划条件执行，解决复杂任务的长期记忆问题。",
+        "pain_point": "现有记忆机制在处理复杂任务时容易丢失细节或效率低下。",
+        "core_value": "通过记忆地规划和计划条件执行，提高复杂任务处理的效率和准确性。",
+        "technical_architecture": "采用长期多模态情景记忆进行规划，将记忆表示为段落记录并转化为紧凑的计划。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证在更广泛场景下的适用性。",
+        "key_contributions": [
+          "引入记忆地规划框架",
+          "提出计划条件执行机制",
+          "使用多模态情景记忆"
+        ],
+        "application_scenarios": [
+          "复杂机器人操作",
+          "多步骤任务执行"
+        ],
+        "technical_highlights": [
+          "长期记忆的高效利用",
+          "计划与执行的分离"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.11499",
+      "source": "huggingface",
+      "title": "Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs",
+      "authors": [
+        "Zhiqi Li",
+        "Yuxuan Liao",
+        "Bo Zhu"
+      ],
+      "abstract": "Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world. We introduce Recursive Code World Models (RCWM), a framework for reconstructing complex 3D worlds in code from a single reference image. RCWM couples a Recursive Scene Program (RSP) representation with a construction solver that recursively calls itself. An RSP represents the executable world as compositional scene code, while each solver call follows the same complete process: establish the whole, recursively reconstruct unresolved parts, and revisit the whole to refine their composition. This global-local-global recursion gives fine-scale structures their own perception-and-editing loops while preserving scene-wide geometry and relationships. Reference-aligned views propagate a shared camera projection across levels, while parent revisitation addresses boundaries, spatial relations, and shared errors that emerge after local refinement. A vision-language coding agent directly compares reference images with scene renders to guide refinement, recursive descent, and return. Across complex scenes, RCWM outperforms prior code-based image-to-scene reconstruction methods. Ablation studies further support the benefits of recursive construction and suggest that deeper calls can improve finer-scale reconstruction. RCWM provides a recursive construction principle for building complex executable worlds from visual evidence.",
+      "published_date": "2026-09-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.11499",
+      "pdf_url": "https://arxiv.org/pdf/2609.11499",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.11499",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 7,
+      "hot_score": 70,
+      "structured_summary": {
+        "chinese_title": "递归代码世界模型：通过递归场景程序构建复杂世界",
+        "chinese_summary": "递归代码世界模型能够从单张参考图像重建复杂3D世界。",
+        "pain_point": "现有方法无法高效构建复杂的3D世界。",
+        "core_value": "通过递归场景程序和构建求解器，实现复杂3D世界的高效重建。",
+        "technical_architecture": "结合递归场景程序和构建求解器，实现全局-局部-全局的递归重建。",
+        "quantitative_results": "在复杂场景中，递归代码世界模型优于先前的代码基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何处理更复杂的边界和关系。",
+        "key_contributions": [
+          "引入递归场景程序",
+          "提出构建求解器框架",
+          "实现全局-局部-全局的递归重建"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "游戏开发"
+        ],
+        "technical_highlights": [
+          "共享相机投影",
+          "父级重访"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.10712",
+      "source": "huggingface",
+      "title": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics",
+      "authors": [
+        "Ivan Moshkov",
+        "Stephen Ge",
+        "George Armstrong",
+        "Wei Du",
+        "Sadegh Mahdavi",
+        "Igor Gitman"
+      ],
+      "abstract": "We study how model post-training and test-time inference design affect natural-language proof generation for hard olympiad mathematics. Starting from Nemotron 3 Ultra, we train two specialist checkpoints using supervised fine-tuning and reinforcement learning, and evaluate checkpoint choice, verification, and refinement. Based on these findings, we present an open-model test-time-compute pipeline. The system operates entirely in natural language, with no formal prover, external tools, or internet access. Three Nemotron 3 Ultra checkpoints - the general-availability model and two post-trained specialists - power an iterative search that generates, verifies, and refines candidate proofs; a separate high-compute stage then selects each final submission. The system scored 30 out of 42 points at IMO 2026, reaching the gold-medal threshold. We release the two post-trained checkpoints as well as the training data, the training and inference code, the submitted solutions, and Nemotron-IMO-Bench, a new benchmark of 200 novel olympiad-level problems.",
+      "published_date": "2026-09-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.10712",
+      "pdf_url": "https://arxiv.org/pdf/2609.10712",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.10712",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "IMO金牌秘方：训练Nemotron进行奥林匹克数学证明",
+        "chinese_summary": "该系统通过自然语言生成、验证和优化候选证明，最终在IMO 2026中获得30分，达到金牌标准。",
+        "pain_point": "现有模型在处理复杂奥林匹克数学证明时表现不佳。",
+        "core_value": "通过模型微调和强化学习，提高模型在自然语言证明生成中的表现。",
+        "technical_architecture": "采用自然语言处理和强化学习技术，完全在自然语言环境中运行。",
+        "quantitative_results": "在IMO 2026中获得30分，达到金牌标准。",
+        "competitors": "暂无对比信息",
+        "limitations": "系统依赖于特定的Nemotron模型。",
+        "key_contributions": [
+          "提出了一种自然语言证明生成的开放模型测试管道",
+          "展示了模型微调和强化学习的有效性"
+        ],
+        "application_scenarios": [
+          "奥林匹克数学竞赛",
+          "复杂数学问题求解"
+        ],
+        "technical_highlights": [
+          "完全自然语言处理",
+          "无外部工具或互联网访问"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.01515",
+      "source": "huggingface",
+      "title": "TempCloze: Can Video-LLMs Identify the Missing Middle?",
+      "authors": [
+        "Wenqi Pei",
+        "Henry Hengyuan Zhao",
+        "Yilai Liu",
+        "Jiahao Meng",
+        "Han Chen",
+        "Ziyu Wang",
+        "Hongyang Du"
+      ],
+      "abstract": "Temporal reasoning benchmarks for Video-LLMs are often mediated by language, leaving room for linguistic shortcuts from option wording, answer correlations, or language priors. To reduce such shortcuts, we introduce TempCloze, a video cloze benchmark for evaluating visual temporal reasoning in Video-LLMs. Given the beginning and ending clips of a video, models must identify the true missing middle from four candidates. TempCloze contains 1,521 carefully filtered videos from seven sources, mainly long-take and egocentric videos. We construct same-source distractors along three dimensions: Semantic asks what event should happen, Alignment probes when it should occur, and Progression tests how it should unfold, while shared scenes and objects reduce appearance cues. Our evaluation of 10 proprietary and 21 open-source Video-LLMs reveals Alignment as the primary bottleneck: models often recognize plausible semantic content and local event progression but struggle with temporal alignment. We further conduct error pattern and behavioral sensitivity analyses on TempCloze-Mixed and TempCloze-Hard with four representative models to examine where errors arise and how candidate order, context direction, visible span, frame density, and test-time scaling influence model choices.",
+      "published_date": "2026-09-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.01515",
+      "pdf_url": "https://arxiv.org/pdf/2609.01515",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.01515",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "TempCloze: 视频LLMs能否识别缺失的中间部分？",
+        "chinese_summary": "提出TempCloze基准，评估视频LLMs的视觉时间推理能力。",
+        "pain_point": "现有视频LLM基准依赖语言，容易受到语言捷径的影响。",
+        "core_value": "通过视频Cloze任务，减少语言捷径，评估视觉时间推理能力。",
+        "technical_architecture": "设计了基于视频Cloze的任务，包含四个候选中间片段。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了部分视频LLM模型。",
+        "key_contributions": [
+          "提出TempCloze基准",
+          "减少语言捷径影响",
+          "评估视觉时间推理能力"
+        ],
+        "application_scenarios": [
+          "视频理解",
+          "时间序列预测"
+        ],
+        "technical_highlights": [
+          "多维度构建干扰项",
+          "揭示时间对齐为主要瓶颈"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

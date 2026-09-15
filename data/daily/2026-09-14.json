@@ -1,0 +1,581 @@
+{
+  "date": "2026-09-14",
+  "generated_at": "2026-09-15T01:14:01.208314+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.06107",
+      "source": "huggingface",
+      "title": "DataFlex-RL: An Evaluation Platform for RLVR Data Policies",
+      "authors": [
+        "Hao Liang",
+        "Mingrui Chen",
+        "Hengyi Feng",
+        "Meiyi Qiang",
+        "Wentao Zhang"
+      ],
+      "abstract": "Data policies for reinforcement learning with verifiable rewards (RLVR) determine which rollouts are used, how strongly they are weighted, and which domains contribute to subsequent training batches. We introduce DataFlex-RL, an evaluation platform for comparing these choices under a common GRPO recipe. Our primary experiment evaluates 13 configurations across 12 matched seeds using Qwen2.5-7B-Base and 12 mathematics, logic, and science benchmarks. Uniform GRPO improves the domain-balanced average accuracy by 7.76 percentage points over the untrained checkpoint. None of the eight rollout-selection or reweighting methods achieves a paired 95% confidence interval that excludes zero relative to uniform sampling, and none of the three adaptive mixtures outperforms a fixed equal mixture at the same level of precision. A corrected 12-seed extension on Llama-3.1-8B-Base places the additional methods on the same score scale as the original controls, but does not reveal a consistent winner in terms of observed mean performance. We also quantify evaluation sensitivity by rescoring nine Qwen2.5-7B-Instruct runs using a math-heavy six-benchmark summary, consisting of five mathematics benchmarks and GPQA-Diamond but no logic benchmark, and comparing it with the domain-balanced 12-benchmark summary. The resulting rankings are negatively correlated, with a correlation coefficient of -0.33, whereas summaries that retain all 12 benchmarks largely agree. Across the controlled settings studied here, changing the data policy measurably changes the training process but does not produce a reproducible improvement over uniform training.",
+      "published_date": "2026-09-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.06107",
+      "pdf_url": "https://arxiv.org/pdf/2609.06107",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.06107",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 96,
+      "hot_score": 960,
+      "structured_summary": {
+        "chinese_title": "DataFlex-RL：一种评估可验证奖励强化学习数据策略的平台",
+        "chinese_summary": "评估13种配置在12个基准测试上的表现，发现均匀GRPO显著提升平均准确性。",
+        "pain_point": "现有强化学习方法难以平衡不同领域的数据使用。",
+        "core_value": "提供统一的评估平台，评估数据策略的有效性。",
+        "technical_architecture": "基于GRPO的评估框架。",
+        "quantitative_results": "均匀GRPO提高平均准确性7.76个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多种子数验证结果的稳定性。",
+        "key_contributions": [
+          "提出统一的评估平台",
+          "评估数据策略的有效性",
+          "量化不同方法的表现"
+        ],
+        "application_scenarios": [
+          "强化学习算法评估",
+          "数据策略优化"
+        ],
+        "technical_highlights": [
+          "使用Qwen2.5-7B-Base和数学逻辑科学基准",
+          "评估多种数据策略配置"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.11115",
+      "source": "huggingface",
+      "title": "Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation",
+      "authors": [
+        "Koutian Wu",
+        "Junjie Zhou",
+        "Ergan Shang",
+        "Jiayu Wang",
+        "Pengqian Han",
+        "Junkai Wang",
+        "Wanghan Xu"
+      ],
+      "abstract": "Benchmark researchers and developers of large language models (LLMs) and other AI systems need to find relevant evaluations, locate their benchmark datasets and code, and understand the settings behind reported scores. We present Benchmark Radar, a living database and search engine for retrieval and discovery of AI benchmarks, covering LLM evaluation, agentic and tool-use benchmarks, coding, reasoning, safety, and domain-specific evaluations. The system combines daily discovery of benchmark papers, repositories, datasets, and releases with a searchable benchmark catalog, mentions in model cards and technical reports, and score histories. It retains source identities and citations so readers can inspect candidate benchmarks and their evaluation evidence. Daily discovery draws on 37 sources: 13 direct connectors and 24 first-party research and engineering feeds. The catalog contains 1,283 source records drawn from 4 benchmark catalogs and 12,916 numeric observations on 790 records. We describe collection and retrieval, audit the full catalog, and examine benchmark saturation, adoption trends, and the limits of score comparisons. A worked example walks through a complete prior-art search, showing how to query the catalog and inspect benchmark evidence when designing a new evaluation. We release the web dashboard with a benchmark leaderboard, a Pareto frontier view of score against measured use, saturation and trend views, daily feeds, downloadable evidence, a command-line interface (CLI) for offline queries, and reproducible analysis.",
+      "published_date": "2026-09-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.11115",
+      "pdf_url": "https://arxiv.org/pdf/2609.11115",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.11115",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 83,
+      "hot_score": 830,
+      "structured_summary": {
+        "chinese_title": "基准雷达：一个用于AI基准测试和评估的活数据库和搜索引擎",
+        "chinese_summary": "提供了一个活数据库和搜索引擎，用于检索和发现AI基准测试，涵盖大语言模型评估等。",
+        "pain_point": "研究人员和开发者难以找到相关评估、定位基准数据集和代码以及理解报告分数背后的设置。",
+        "core_value": "提供了一个全面的基准测试目录和每日发现机制，便于检索和发现AI基准测试。",
+        "technical_architecture": "结合了每日发现基准论文、存储库、数据集和发布与可搜索基准目录。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要持续更新和维护以保持基准测试的最新性。",
+        "key_contributions": [
+          "提供了一个全面的基准测试目录",
+          "结合了每日发现机制"
+        ],
+        "application_scenarios": [
+          "AI基准测试检索",
+          "大语言模型评估"
+        ],
+        "technical_highlights": [
+          "结合了37个数据源",
+          "包含1,283个来源记录"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.08418",
+      "source": "huggingface",
+      "title": "Feyospace-v1: How the Cyber Mercury Seven Trained Frontier Cyber Models",
+      "authors": [
+        "Zongjie Li",
+        "Alan Z. W",
+        "John Nicolas J",
+        "Walter H. F",
+        "Scott Donald L",
+        "Gordon Y. P",
+        "Deke X Jr"
+      ],
+      "abstract": "Training capable cyber agents is often treated primarily as a problem of model scale, yet open-weight post-training is constrained more directly by the cost of executable environments, reliable multi-turn supervision, and access to strong teachers. We present a data-centric framework that addresses these bottlenecks through five complementary systems: Choulea analyzes hidden reasoning signatures, SkyReal reduces teacher-sampling cost, Hongzwang bypasses API restrictions on teacher execution, PSBreakup restores capabilities weakened by model merging, and Kreator converts expert interventions into trainable reasoning. Our data engine constructs resettable coding, vulnerability, CTF, kernel-history, full-exploit, firmware, and device-backed environments. Candidate trajectories are retained only after execution verification and evidence auditing, yielding 164,269 trajectories for long-context supervised fine-tuning. The three checkpoints improve over their starting models by an average of 23.76% on the full CyberGym suite and 10.49% across the pooled CTF suites. As of September 1, 2026, Feyospace-s1 achieves a verified success rate of 63.24% and ranks 10th on the official CyberGym leaderboard, while all three checkpoints rank 1st among models at comparable parameter scales. To our knowledge, this is the first end-to-end demonstration that a seven-person independent team can train open-weight models with leading agentic cyber capability.",
+      "published_date": "2026-09-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.08418",
+      "pdf_url": "https://arxiv.org/pdf/2609.08418",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.08418",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 75,
+      "hot_score": 750,
+      "structured_summary": {
+        "chinese_title": "Feyospace-v1：网络汞七如何训练前沿网络模型",
+        "chinese_summary": "通过五种互补系统解决执行环境成本、多轮监督和强教师访问等瓶颈，提升网络代理性能。",
+        "pain_point": "执行环境成本高、多轮监督困难和强教师访问受限。",
+        "core_value": "提供数据为中心的框架，有效提升网络代理性能。",
+        "technical_architecture": "通过五种系统（Choulea、SkyReal、Hongzwang、PSBreakup、Kreator）解决瓶颈。",
+        "quantitative_results": "三个检查点在CyberGym和CTF套件中分别提升23.76%和10.49%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上测试。",
+        "key_contributions": [
+          "提出数据为中心的框架",
+          "设计五种互补系统",
+          "构建多种执行环境"
+        ],
+        "application_scenarios": [
+          "网络代理训练",
+          "网络安全模型开发"
+        ],
+        "technical_highlights": [
+          "多系统互补解决瓶颈",
+          "构建多种执行环境"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.12641",
+      "source": "huggingface",
+      "title": "Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models",
+      "authors": [
+        "Jianman Lin",
+        "Shailesh Shailesh",
+        "Zhongyi Luo",
+        "Jiafei Duan"
+      ],
+      "abstract": "Robot foundation models achieve strong in-distribution performance but often degrade under visual distribution shifts. When learning to generate actions from pretrained visual representations, models may exploit task-irrelevant visual cues that correlate with demonstrated actions within the training distribution. Such vision-action shortcuts can undermine generalization when these correlations change under distribution shifts. Mitigating these shortcuts requires constraining how visual information is used for action generation while preserving task-relevant spatial information. We propose Latent Interface Training (LIT), a framework-agnostic two-stage strategy that first establishes a spatial-goal-conditioned action prior without images, then constrains visual conditioning through a pose-supervised latent interface. Stage 1 trains the action expert to generate action chunks conditioned on language, robot state, and each demonstrated chunk's terminal SE(3) end-effector pose, learning goal-directed action generation independently of visual cues. Stage 2 introduces a latent interface that aggregates visual and semantic representations and serves as the pretrained action expert's only visual conditioning pathway. The interface is supervised to reconstruct the terminal pose previously used to condition Stage 1, encouraging it to retain the goal-relevant spatial information needed for action generation. Across four vision-language-action and world-action architectures (Pi0.5, MolmoAct2, FAST-WAM, and ImageWAM), LIT improves overall LIBERO-Plus success by 3.87-10.70 percentage points while preserving or improving average LIBERO success. Real-world evaluations show 13.30-16.70 percentage-point gains in success aggregated across three tasks under unseen camera configurations, lighting variations, and distractors.",
+      "published_date": "2026-09-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.12641",
+      "pdf_url": "https://arxiv.org/pdf/2609.12641",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.12641",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 63,
+      "hot_score": 630,
+      "structured_summary": {
+        "chinese_title": "打破视觉-动作捷径：用于通用机器人基础模型的潜在界面训练",
+        "chinese_summary": "提出了一种框架无关的两阶段策略，通过潜在界面训练，增强机器人模型在视觉分布变化下的泛化能力。",
+        "pain_point": "机器人模型在视觉分布变化下表现下降。",
+        "core_value": "通过潜在界面训练，减少视觉-动作捷径，提高模型的泛化能力。",
+        "technical_architecture": "两阶段策略，第一阶段不使用图像建立空间目标条件下的动作先验，第二阶段引入潜在界面。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了实验验证。",
+        "key_contributions": [
+          "提出了一种新的两阶段训练框架，减少视觉-动作捷径。",
+          "通过潜在界面训练，增强模型在视觉分布变化下的泛化能力。",
+          "在不依赖视觉信息的情况下，学习目标导向的动作生成"
+        ],
+        "application_scenarios": [
+          "机器人操作任务",
+          "自动化生产线"
+        ],
+        "technical_highlights": [
+          "框架无关性",
+          "两阶段训练策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.13141",
+      "source": "huggingface",
+      "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+      "authors": [
+        "Zhiwei Li",
+        "Lei Zhu",
+        "Hao Gu",
+        "Xiang Hu",
+        "Yan Wang",
+        "Haitao Mi",
+        "Sirui Han",
+        "Leo Liang",
+        "Zhijiang Guo"
+      ],
+      "abstract": "Post-training attention sparsification reduces the quadratic cumulative attention cost of pretrained Transformers by selecting a small set of context units (tokens or blocks) for each query. Existing trainable methods usually use a lightweight selector to score context units, followed by hard Top-K selection that blocks gradients from the language modeling loss. Consequently, these methods commonly distill layer-wise dense attention distributions. Although this encourages the selector to rank context units by dense attention weights in the original model, the ranking is not directly aligned with their impact on predictions under a fixed attention budget (i.e., the number of attended context units per query), potentially wasting the limited budget on less useful units. To address this misalignment, we propose Simple Attention Sparsification (SAS), a gated sparse attention mechanism that optimizes context ranking end-to-end with the language modeling loss. The key idea is to inject the selector's continuous scores into attention logits during training, allowing the loss to update the selector through standard backpropagation. We identify several choices crucial for this simple design to work well in practice: placing the gate inside the attention softmax in log form, using normalized softmax gates to calibrate historical context against the always-retained current block, and preserving continuous selector scores so the model learns relative priorities rather than only hard selections. To support long-sequence training, we implement a memory-efficient Triton kernel that integrates SAS into FlashAttention-style computation. Across reasoning, long-context understanding, and agentic tasks, SAS consistently outperforms trainable sparse attention baselines across attention budgets, with especially large gains under tight budgets, demonstrating more effective context ranking for downstream tasks.",
+      "published_date": "2026-09-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.13141",
+      "pdf_url": "https://arxiv.org/pdf/2609.13141",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.13141",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 50,
+      "hot_score": 500,
+      "structured_summary": {
+        "chinese_title": "SAS: 简单的端到端上下文排名优化的注意力稀疏化",
+        "chinese_summary": "通过端到端优化上下文排名，SAS 提高了注意力稀疏化的效果。",
+        "pain_point": "现有方法在固定预算下未能有效选择对预测影响最大的上下文单元。",
+        "core_value": "SAS 通过端到端优化上下文排名，直接优化预测性能。",
+        "technical_architecture": "SAS 通过将选择器的连续评分注入注意力权重，实现端到端优化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在预训练模型上进行了实验。",
+        "key_contributions": [
+          "提出了一种端到端优化上下文排名的注意力稀疏化方法",
+          "通过将选择器的评分直接注入注意力权重，优化了选择过程"
+        ],
+        "application_scenarios": [
+          "预训练模型的注意力稀疏化",
+          "减少Transformer模型的计算成本"
+        ],
+        "technical_highlights": [
+          "简单的端到端优化设计",
+          "直接优化预测性能而非仅关注注意力权重"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.11682",
+      "source": "huggingface",
+      "title": "COBRA-Skills: Contextual Bandit-Guided Evolution for Agent Skill Optimization",
+      "authors": [
+        "Pingchen Lu",
+        "Xiangyi Wang",
+        "Xiang Li",
+        "Jie Mao",
+        "Zikun Qu",
+        "Junfeng Luo",
+        "Yao Shu",
+        "Bryan Kian Hsiang Low",
+        "Zhongxiang Dai"
+      ],
+      "abstract": "Large language model (LLM) agents can benefit from reusable skills distilled from prior task experience, yet existing skill optimization methods often rely on costly execution-based evaluation and substantial task data. We introduce COBRA-Skills, an efficient framework that formulates skill optimization as budgeted sequential optimization over a dynamically evolving candidate space. COBRA-Skills couples contextual-bandit-guided prioritization with evidence-grounded skill evolution, selectively allocating evaluations to promising or informative candidates while continually refining the skill population from execution feedback. Across six heterogeneous agent benchmarks and three target models, COBRA-Skills consistently achieves the strongest average performance among compared methods, while reducing optimization cost by 55--58\\% relative to SkillOpt and using only 50 unique optimization examples per benchmark. Further analyses show that COBRA-Skills remains robust to changes in the agent harness and performs effectively when the target model itself is used for skill generation and refinement.",
+      "published_date": "2026-09-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.11682",
+      "pdf_url": "https://arxiv.org/pdf/2609.11682",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.11682",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "COBRA-Skills: 基于上下文臂博弈引导的进化代理技能优化框架",
+        "chinese_summary": "COBRA-Skills 通过上下文臂博弈引导的优先级排序与基于证据的技能进化，显著降低了技能优化成本并提高了性能。",
+        "pain_point": "现有技能优化方法依赖于昂贵的执行评估和大量任务数据。",
+        "core_value": "COBRA-Skills 通过动态优化候选空间和高效分配评估，实现了成本降低和性能提升。",
+        "technical_architecture": "结合上下文臂博弈和证据引导的技能进化。",
+        "quantitative_results": "在六个不同代理基准和三种目标模型上，COBRA-Skills 的平均性能最佳，成本降低 55-58%。",
+        "competitors": "与 SkillOpt 等方法相比，COBRA-Skills 表现更优。",
+        "limitations": "对代理框架和目标模型的依赖性。",
+        "key_contributions": [
+          "提出了一种基于上下文臂博弈的技能优化框架",
+          "实现了技能优化成本的显著降低",
+          "在多个基准上展示了优异的性能"
+        ],
+        "application_scenarios": [
+          "大型语言模型代理技能优化",
+          "多任务学习中的技能迁移"
+        ],
+        "technical_highlights": [
+          "动态候选空间优化",
+          "高效评估分配策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.12945",
+      "source": "huggingface",
+      "title": "StepAudio 3 Gen Technical Report",
+      "authors": [
+        "Bin Lin",
+        "Bo Zhao",
+        "Boyang Wang",
+        "Boyang Zhang",
+        "Boyong Wu",
+        "Chao Yan",
+        "Chen Geng",
+        "Chen Wu",
+        "Cheng Yi",
+        "Chengli Feng",
+        "Chenglin Zhu",
+        "DanNi Wan",
+        "Daxin Jiang",
+        "Dongqing Pang",
+        "Fei Tian",
+        "Feng Tian",
+        "Future Li",
+        "Gang Yu",
+        "Guanglong Yang",
+        "Jia Peng",
+        "Jiahao Song",
+        "Jiamin Fan",
+        "Jiangjie Zhen",
+        "Jianzheng Gao",
+        "Jun Chen",
+        "Li Xie",
+        "Lifang Zhang",
+        "Lingli Ji",
+        "Liying Shi",
+        "Lun Cai",
+        "Min Xu",
+        "Na Wang",
+        "Peilin Li",
+        "Peng Yang",
+        "Pengfei Tan",
+        "Qingjian Lin",
+        "Ruijie Xiong",
+        "Runze Li",
+        "Shenghua Hu",
+        "Shi Qiu",
+        "Siqi Tu",
+        "Siyi Zhou",
+        "Tianjiao Deng",
+        "Wanying Lu",
+        "Weiming Niu",
+        "Wen Sun",
+        "WenWen Qu",
+        "Xiangyu Zhang",
+        "Xianwei Zhang",
+        "XiaoSu Su",
+        "Xing Chen",
+        "Xinyu Liu",
+        "Xuerui Yang",
+        "Yang Li",
+        "Yang Yang",
+        "Yechang Huang",
+        "Yibo Zhu",
+        "Yifan Zhang",
+        "Yiyang Xu",
+        "Yu Fu",
+        "Yu Luo",
+        "Yu Zhou",
+        "Yumang Wang",
+        "Yunzhou Ju",
+        "Yuxiang Yang",
+        "Zekai Liu",
+        "Zengwei Yao",
+        "Zhenwei Mou",
+        "Zheqi Dai",
+        "Zhiyue Wu",
+        "Zichao Zhou"
+      ],
+      "abstract": "We introduce StepAudio 3 Gen, a general-purpose audio generation model that supports zero-shot text-to-speech (TTS), voice design, vocal generation, sound effects, music, vibe speech, and mixtures of multiple audio types within a unified framework. At its core, StepAudio 3 Gen is a discrete autoregressive generator that models audio directly over residual vector quantization (RVQ) tokens, departing from the diffusion Transformer-based continuous generation paradigm prevalent in recent general audio models. Its StepAudio Tokenizer represents general audio at 12.5 Hz in a shared 16 times 2048 residual code space, jointly quantizing semantic and waveform-level acoustic features so that each code layer preserves both types of information. For generation, the backbone predicts the first codebook along the time axis using autoregressive modeling, while a lightweight causal Transformer completes the remaining fifteen codebooks along the codebook axis. Our study further identifies three key design principles: (1) interference-aware progressive pretraining for acquiring audio capabilities while preserving the textual abilities of the large language model, (2) RVQ Adaptor for effectively incorporating multi-codebook acoustic representations, and (3) discrete autoregressive modeling over a shared representation across general audio domains. With progressive pretraining, multi-task instruction training, and supervised fine-tuning, StepAudio 3 Gen achieves state-of-the-art performance on both TTS and voice design, while retaining strong generation capabilities across speech, vocals, sound effects, and music. Audio samples are available at https://stepaudiollm.github.io/step-audio-3-gen/.",
+      "published_date": "2026-09-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.12945",
+      "pdf_url": "https://arxiv.org/pdf/2609.12945",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.12945",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": {
+        "chinese_title": "StepAudio 3 Gen 技术报告",
+        "chinese_summary": "StepAudio 3 Gen 是一个支持零样本文本到语音、声音设计、歌声生成、音效、音乐、氛围语音及多种音频类型混合的统一框架。",
+        "pain_point": "现有音频生成模型难以同时支持多种音频类型且保持文本生成能力。",
+        "core_value": "通过离散自回归生成器和残差向量量化技术，实现高效且多样化的音频生成。",
+        "technical_architecture": "基于残差向量量化和轻量级因果Transformer的统一音频生成架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步优化模型性能和应用范围。",
+        "key_contributions": [
+          "提出干扰感知渐进式预训练方法",
+          "采用残差向量量化技术",
+          "设计轻量级因果Transformer"
+        ],
+        "application_scenarios": [
+          "文本到语音生成",
+          "声音设计与编辑"
+        ],
+        "technical_highlights": [
+          "统一框架支持多种音频类型",
+          "高效离散自回归生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2608.30597",
+      "source": "huggingface",
+      "title": "PLC-DPO: Posterior Label Correction in Noisy and Ambiguous Preference Optimization",
+      "authors": [
+        "Boryeong Cho",
+        "Sumyeong Ahn",
+        "Se-Young Yun"
+      ],
+      "abstract": "Direct Preference Optimization (DPO) simplifies alignment through pairwise comparisons but assumes all observed preferences are reliable. Real data often violates this assumption, leading to reversed, weak, or ambiguous labels that cause harmful policy updates. To address this, we propose Posterior Label Correction DPO (PLC-DPO) to robustly optimize preferences by routing each pair's training signal as a clean, flip, or tie case. The key idea is to use the calibrated policy-reference margin as online evidence to take appropriate correction actions. This reframes noisy preference learning as actively correcting supervision direction and strength rather than merely filtering suspicious examples. Across 57 dataset-model-benchmark cells, PLC-DPO obtains the best mean win rate against DPO (60.5 vs. 55.5 for the next-best method). Injected-noise and tie stress tests, human disagreement analysis, and self-confirmation diagnostics further show that the routing remains stable and distinguishes flipped from weakly directional pairs.",
+      "published_date": "2026-08-31T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.30597",
+      "pdf_url": "https://arxiv.org/pdf/2608.30597",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.30597",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "PLC-DPO: 噪声和模糊偏好优化中的后验标签校正",
+        "chinese_summary": "PLC-DPO 通过将每对训练信号路由为干净、翻转或平局情况，实现偏好优化。",
+        "pain_point": "实际数据中的噪声和模糊偏好导致有害的策略更新。",
+        "core_value": "通过校正监督方向和强度，提高偏好优化的鲁棒性。",
+        "technical_architecture": "使用校准的策略-参考差距作为在线证据进行校正。",
+        "quantitative_results": "在57个数据集-模型-基准单元中，PLC-DPO 的平均胜率优于 DPO。",
+        "competitors": "对比 DPO，PLC-DPO 在多个测试中表现更优。",
+        "limitations": "需要进一步研究以适应更复杂的数据环境。",
+        "key_contributions": [
+          "提出后验标签校正方法",
+          "优化偏好学习中的监督信号",
+          "提高策略的鲁棒性"
+        ],
+        "application_scenarios": [
+          "强化学习中的策略优化",
+          "推荐系统中的偏好建模"
+        ],
+        "technical_highlights": [
+          "动态校正监督信号",
+          "稳定区分翻转与弱方向性对"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.11977",
+      "source": "huggingface",
+      "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+      "authors": [
+        "Wenhui Chen",
+        "Shiwen Cheng",
+        "Hao Dong",
+        "Chenda Duan",
+        "Ruixiang Feng",
+        "Zhong Guan",
+        "Boqiang Guo",
+        "Xueyuan Han",
+        "Haojie Hao",
+        "Liangmeng Huang",
+        "Zhelong Huang",
+        "Xinke Kong",
+        "Hongyu Li",
+        "Jiazheng Li",
+        "Junbo Li",
+        "Qingchuan Li",
+        "Yukun Lian",
+        "Chang Liu",
+        "Tianyu Liu",
+        "Zicheng Liu",
+        "Shuyi Ouyang",
+        "Yijun Pan",
+        "Kunyu Shi",
+        "Xiaojun Tang",
+        "Bingquan Wang",
+        "Kesu Wang",
+        "Yuchen Wang",
+        "Sibo Wei",
+        "Sicong Xie",
+        "Xiaoying Xing",
+        "Yi Xu",
+        "Zhijun Xu",
+        "Hongwei Xue",
+        "Qingcheng Zeng",
+        "Di Zhang",
+        "Guannan Zhang",
+        "Haochen Zhang",
+        "Tianlong Zhang",
+        "Tianyu Zhao",
+        "Tianyu Zhao",
+        "Yanjun Zheng",
+        "Jialong Zhu",
+        "Zijian Zou"
+      ],
+      "abstract": "Co-work agents execute complex workflows that combine information gathering, tool use, coding, and file manipulation across many model invocations. Because cost and latency accumulate over the full episode, their practical value depends not only on peak capability but also on how efficiently that capability is delivered. Yet many steps in everyday work emphasize state tracking, coordination, recovery, and follow-through rather than frontier-scale reasoning. We present Occamy-1.0, a cost-efficient co-work model obtained by further training the post-trained Qwen3.6-35B-A3B checkpoint. We construct execution-grounded data and environments, capture replayable long-horizon trajectories across multiple harnesses, and use staged post-training to develop and consolidate complementary execution capabilities. Across a broad suite of co-work benchmarks, Occamy-1.0 is consistently among the strongest comparably sized models and remains competitive with substantially larger frontier systems on several tasks. Under our stated evaluation and pricing protocol, its aggregate performance across four representative benchmarks places it at the low-cost knee of the observed cost--performance Pareto frontier. Supporting evaluations in tool calling, coding, and instruction following further show that this specialization preserves broad agentic capability. We release the model weights and a subset of the training data to support research on practical co-work agents and agentic post-training.",
+      "published_date": "2026-09-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.11977",
+      "pdf_url": "https://arxiv.org/pdf/2609.11977",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.11977",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 23,
+      "hot_score": 230,
+      "structured_summary": {
+        "chinese_title": "Occamy-1.0: 开放前沿35B智能用于协同工作",
+        "chinese_summary": "Occamy-1.0 是一种成本高效的协同工作模型，能够在多种协同工作基准测试中表现出色。",
+        "pain_point": "协同工作中，状态跟踪、协调、恢复和持续跟进的重要性超过前沿规模的推理。",
+        "core_value": "Occamy-1.0 在保持强大性能的同时，显著降低了成本。",
+        "technical_architecture": "通过进一步训练 Qwen3.6-35B-A3B 检查点，构建基于执行的数据和环境。",
+        "quantitative_results": "在四个代表性基准测试中，Occamy-1.0 的综合性能位于成本-性能帕累托前沿的低成本拐点。",
+        "competitors": "与更大规模的前沿系统相比，Occamy-1.0 在某些任务上保持竞争力。",
+        "limitations": "未来需要进一步探索更广泛的协同工作场景。",
+        "key_contributions": [
+          "开发了一种成本高效的协同工作模型",
+          "通过执行导向的数据和环境构建",
+          "使用分阶段后训练方法"
+        ],
+        "application_scenarios": [
+          "复杂工作流执行",
+          "多模型调用的信息收集和工具使用"
+        ],
+        "technical_highlights": [
+          "低成本高性能",
+          "分阶段后训练方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.10895",
+      "source": "huggingface",
+      "title": "ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs",
+      "authors": [
+        "Yizhan Li",
+        "Jianxin You",
+        "Mengyang Xiong",
+        "Yinhuan Chen",
+        "Zicheng Zhao",
+        "Dekun Wu",
+        "Dongqing Zhang",
+        "Bang Liu"
+      ],
+      "abstract": "Reacting to sudden physical hazards (catching a slipping plate, dodging a falling knife) is both a meaningful test of embodied intelligence and a hard requirement for deploying multimodal large language models (MLLMs) as the decision coreof household robots. Existing evaluations, however, probe intuitive physics passively through question answering over videos, or target deliberate, long-horizon tasks such as navigation and rearrangement; none measure whether a model can turn physical understanding into immediate, safety-critical action. We introduce ReactHuman, the first physics-grounded benchmark for human-like reactive decision-making, in which the evaluated MLLM acts as the brain of a simulated humanoid facing sudden household hazards; it spans 17 event families and over 1,000 bit-for-bit reproducible scenes with exact, annotation-free ground truth derived from 240 Hz rigid-body simulation, including adversarial objects whose appearance contradicts their physics (a foam anvil, a steel apple). We further design a five-metric suite that scores each reaction along three axes: reasonable, safe, and physically grounded. We physically execute every committed plan so that decisions have observable consequences. With this harness we evaluate seven representative MLLMs. Results show that reactive safety is far from solved: models mishandle roughly one hazard in three, act from fixed dispositions rather than the observed scene, trust appearance over motion, and miss interception points at meter scale even when the chosen action is correct; none of these failures shrink with model scale. ReactHuman thus offers both a fine-grained diagnosis and a scalable training signal toward physically grounded, safety-aware embodied agents. The benchmark can be found here: https://huggingface.co/datasets/Alan123/reacthuman-benchmark-scaled",
+      "published_date": "2026-09-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.10895",
+      "pdf_url": "https://arxiv.org/pdf/2609.10895",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.10895",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": {
+        "chinese_title": "ReactHuman：面向体感多模态大语言模型的人类反应决策基准",
+        "chinese_summary": "首次提出ReactHuman基准，评估模型在面对突发物理危险时的即时反应能力。",
+        "pain_point": "现有评估方法未能有效测试模型在面对突发物理危险时的即时反应能力。",
+        "core_value": "提供了一个新的基准，用于评估体感多模态大语言模型在面对突发物理危险时的即时反应能力。",
+        "technical_architecture": "基于物理的基准，模拟人类面对突发家庭危险场景。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅涵盖特定的物理场景，未来需扩展更多场景。",
+        "key_contributions": [
+          "首次提出物理导向的基准",
+          "评估模型在面对突发物理危险时的即时反应能力",
+          "提供五项评估指标"
+        ],
+        "application_scenarios": [
+          "家庭机器人决策核心",
+          "安全关键任务"
+        ],
+        "technical_highlights": [
+          "包含物理矛盾对象",
+          "精确无标注的地面真相"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

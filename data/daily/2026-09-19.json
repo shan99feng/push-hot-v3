@@ -1,0 +1,500 @@
+{
+  "date": "2026-09-19",
+  "generated_at": "2026-09-20T00:45:09.303362+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2609.20822v1",
+      "source": "arxiv",
+      "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+      "authors": [
+        "Bingxin Xu",
+        "Yuzhang Shang",
+        "Zhen Dong",
+        "Emilio Ferrara"
+      ],
+      "abstract": "Coding agents have emerged as a promising paradigm for robot manipulation: a language model writes the robot controller as a program, and agents built in this way now operate robots without robot-specific training.Whether this paradigm is also safe, however, has not been asked. We evaluate coding agent under a safety constraint, where each task pairs a manipulation goal with an obstacle the robot must not touch. The agent pursues the goal but collides with the obstacle in most cases, treating task completion as its sole objective while neglecting safety. The agent reasons about the obstacle in its traces, and the prompt already forbids touching it, so neither perception nor instruction is at fault; the fault lies in the planning, where the stated constraint never becomes a priority. By decomposing manipulation into a route phase and a contact-rich moment, we locate the source of the failure. Along the route, the model cannot prioritize the safety constraint, having no notion of a clearing route and none of replanning once a chosen route becomes infeasible. At the contact, it is unaware that contact execution is bounded by the same constraint. To close this gap, we present SafeHarness, which equips the model with two obstacle-aware harnesses that enable it to prioritize the safety constraint. Obstacle-aware route planning grounds the objects as bounding boxes and draws candidate routes over them as sequences of waypoints. The agent then plans a route in advance, verifies it, replans when necessary, and only then executes it. Obstacle-aware contact execution instead selects the contact position so that the contact itself avoids the obstacle. SafeHarness attains 71.9% task success and 87.5% collision avoidance, surpassing the previous SOTA by 6.5% and 27.0%, respectively. These results are $2.3\\times$ and $1.5\\times$ those of the same agent without harnesses.",
+      "published_date": "2026-09-17T17:59:58Z",
+      "url": "https://arxiv.org/abs/2609.20822v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20822v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于障碍感知缰绳的编码代理实现安全机器人操作",
+        "chinese_summary": "提出了一种新的方法SafeHarness，解决了编码代理在机器人操作中忽视安全的问题。",
+        "pain_point": "编码代理在执行任务时忽视安全，经常与障碍物发生碰撞。",
+        "core_value": "通过引入SafeHarness，确保机器人在执行任务时不会触碰障碍物。",
+        "technical_architecture": "将机器人操作分解为路径规划和接触执行两个阶段。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前方法仅适用于特定类型的机器人操作任务。",
+        "key_contributions": [
+          "提出了SafeHarness方法",
+          "将机器人操作分解为路径规划和接触执行两个阶段"
+        ],
+        "application_scenarios": [
+          "工业自动化",
+          "家庭服务机器人"
+        ],
+        "technical_highlights": [
+          "引入了障碍感知机制",
+          "实现了路径规划与接触执行的分离"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20821v1",
+      "source": "arxiv",
+      "title": "Embedding Models Measure in Peculiar Ways",
+      "authors": [
+        "Juri Opitz",
+        "Andrianos Michail"
+      ],
+      "abstract": "Embedding spaces define notions of semantic similarity and distance. We study whether those embeddings reflect physical measurements of mass, distance, time and volume, which admit a unique, objective notion of semantic equivalence and distance. We find that physical measurement is only weakly modeled in the embedding space, and that instead quite peculiar measurement patterns can be observed. Further analysis indicates that embedding representations of physical measurements are strongly influenced by superficial string similarity, and recalibration of similarity does not substantially improve the alignment.",
+      "published_date": "2026-09-17T17:59:54Z",
+      "url": "https://arxiv.org/abs/2609.20821v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20821v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "嵌入模型以独特方式衡量",
+        "chinese_summary": "嵌入空间中的物理测量模式与实际物理测量有弱关联，且主要受表面字符串相似性影响。",
+        "pain_point": "嵌入模型未能准确反映物理测量的客观性。",
+        "core_value": "揭示了嵌入模型在物理测量上的独特模式及其与表面相似性的关联。",
+        "technical_architecture": "通过分析嵌入模型中的物理测量模式来研究其表现。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以改善嵌入模型对物理测量的表示。",
+        "key_contributions": [
+          "揭示了嵌入模型在物理测量上的独特模式",
+          "发现嵌入模型主要受表面字符串相似性影响"
+        ],
+        "application_scenarios": [
+          "自然语言处理",
+          "信息检索"
+        ],
+        "technical_highlights": [
+          "深入分析嵌入模型中的物理测量",
+          "强调表面字符串相似性的影响"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20820v1",
+      "source": "arxiv",
+      "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision",
+      "authors": [
+        "Nitish Dashora",
+        "Douglas Chen",
+        "Idan Shenfeld",
+        "John Marangola",
+        "Pulkit Agrawal",
+        "Max Simchowitz"
+      ],
+      "abstract": "Complex robotic manipulation tasks frequently require a long-term memory of past events and actions. As conditioning on full histories renders policies prone to spurious correlations and degrades performance, many approaches to policy memory involve compressing historical information through expensive VLM queries in-the-loop to process only task-salient information. In this paper, we propose an alternative approach in which computationally intensive VLM queries are made during train-time to learn a lightweight latent memory that can be efficiently queried at deployment time. Our representation, which we call the \\textbf{workspace token}, is trained by (1) using a VLM to identify current and historical information necessary for completing a task, then (2) distilling these into the workspace token using a set-reconstruction decoder loss. In both simulation and hardware, we show that the workspace token can be used as a drop-in replacement for observations during deployment, enabling policies to solve memory-intensive tasks without the need for VLM reasoning in-the-loop. Interestingly, we found that workspace tokens are not only more lightweight but also lead to better policy performance.",
+      "published_date": "2026-09-17T17:59:53Z",
+      "url": "https://arxiv.org/abs/2609.20820v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20820v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "工作空间模型：通过注意力驱动监督的轻量级机器人记忆",
+        "chinese_summary": "通过训练轻量级的workspace token，使机器人在部署时无需实时进行昂贵的VLM查询，从而解决长期记忆问题。",
+        "pain_point": "复杂机器人操作任务需要长期记忆，但实时处理全历史信息会导致模型性能下降。",
+        "core_value": "提出了一种轻量级的workspace token，通过训练学习任务相关的必要信息，提高性能并减少计算成本。",
+        "technical_architecture": "利用VLM在训练时识别任务相关信息，并通过解码器损失将其压缩到workspace token中。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在模拟和硬件环境中进行了验证，未来需要更多实际应用场景测试。",
+        "key_contributions": [
+          "提出了轻量级的workspace token",
+          "通过注意力驱动监督学习任务相关信息",
+          "在部署时无需实时进行昂贵的VLM查询"
+        ],
+        "application_scenarios": [
+          "复杂机器人操作任务",
+          "需要长期记忆的机器人应用"
+        ],
+        "technical_highlights": [
+          "轻量级的workspace token",
+          "注意力驱动的监督学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20819v1",
+      "source": "arxiv",
+      "title": "Can 4D Foundation Models Remember?",
+      "authors": [
+        "Guangzhao He",
+        "Hadar Averbuch-Elor",
+        "Wei-Chiu Ma"
+      ],
+      "abstract": "Perceiving and remembering the visual world is fundamental to navigating and interacting with our environment. Current 4D foundation models, such as camera-controllable video models or 4D reconstruction models, can perceive and reconstruct dynamic environments, but how well they remember what they have perceived remains an open question. Existing benchmarks largely rely on pixel-level metrics and lack ground truth for objects once they leave the field of view, making them unable to evaluate visual memory in an object-centric manner against references. To fill this gap, we introduce PersistBench, a dataset and metric suite that leverages 360° videos as omniscient ground truth and proposes three evaluation aspects: object permanence, motion continuity, and appearance preservation. Evaluating various models across diverse categories reveals that current models can only maintain short-term consistency that degrades significantly once objects leave the field of view. Our findings highlight the gap between current model capabilities and robust visual memory (\"seeing is not remembering\"), providing guidance for future development of 4D foundation models. Dataset and code are available on the project page: https://guangzhaohe.com/persistbench.",
+      "published_date": "2026-09-17T17:59:50Z",
+      "url": "https://arxiv.org/abs/2609.20819v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20819v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "4D基础模型能否记住？",
+        "chinese_summary": "引入PersistBench，评估4D模型的视觉记忆能力。",
+        "pain_point": "现有4D模型在对象离开视野后无法保持长期一致性。",
+        "core_value": "提供了一种新的基准PersistBench，评估对象持久性、运动连续性和外观保持。",
+        "technical_architecture": "利用360°视频作为全知的地面真相。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了短期一致性。",
+        "key_contributions": [
+          "提出PersistBench基准",
+          "评估4D模型的视觉记忆",
+          "揭示当前模型的局限性"
+        ],
+        "application_scenarios": [
+          "动态环境重建",
+          "智能监控"
+        ],
+        "technical_highlights": [
+          "使用360°视频作为地面真相",
+          "多维度评估视觉记忆"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20818v1",
+      "source": "arxiv",
+      "title": "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos",
+      "authors": [
+        "Peiyu Liu",
+        "Dingxi Zhang",
+        "Federico Tombari",
+        "Marc Pollefeys",
+        "Christina Tsalicoglou",
+        "Daniel Barath"
+      ],
+      "abstract": "A splash lives for a fraction of a second: sheets tear into ligaments and droplets, appearance is view-dependent and nearly textureless, and little persists long enough to track. Reconstruction research has consequently focused on smoke, synthetic liquids, or gently deforming surfaces. To our knowledge, no synchronized multi-view dataset of splashing liquids exists. We therefore introduce a benchmark of 20 real scenes, from coherent streams to violent splashes, captured by seven synchronized, calibrated 4K cameras at 60 fps, with manually refined per-view liquid and container masks and fixed evaluation splits. We further present SplashSplat, built on a single principle: impose physical structure only where the observations can constrain it. Per-frame liquid SDFs fused from the masks provide the geometry, level-set transport between consecutive SDFs yields a coarse velocity field, and Lagrangian carriers advected along this flow, corrected against each new observation and reseeded where coverage is lost, decode local Gaussians for differentiable rendering. SplashSplat outperforms state-of-the-art dynamic Gaussian splatting methods on our real captures and on a synthetic benchmark, with physically more plausible motion and a lower training cost. The same representation supports temporal interpolation and style transfer without re-optimization.",
+      "published_date": "2026-09-17T17:59:41Z",
+      "url": "https://arxiv.org/abs/2609.20818v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20818v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SplashSplat: 从多视角视频重建飞溅液体",
+        "chinese_summary": "提出了一种基于物理结构约束的飞溅液体重建方法，显著提升了重建效果。",
+        "pain_point": "缺乏同步多视角飞溅液体数据集，现有方法难以处理飞溅液体的快速变化。",
+        "core_value": "提供了首个同步多视角飞溅液体数据集，提出了基于物理结构约束的重建方法。",
+        "technical_architecture": "采用物理结构约束，结合SDF融合、水平集传输和拉格朗日载体追踪实现液体重建。",
+        "quantitative_results": "在真实数据和合成基准上均优于现有动态高斯点云方法。",
+        "competitors": "现有动态高斯点云方法，如Dynamic Gaussian Splatting。",
+        "limitations": "仅针对特定场景的飞溅液体进行重建，未来需扩展更多场景。",
+        "key_contributions": [
+          "首个同步多视角飞溅液体数据集",
+          "基于物理结构约束的重建方法"
+        ],
+        "application_scenarios": [
+          "虚拟现实中的液体效果",
+          "电影特效中的飞溅效果"
+        ],
+        "technical_highlights": [
+          "物理结构约束",
+          "多视角数据融合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20817v1",
+      "source": "arxiv",
+      "title": "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+      "authors": [
+        "Kevin Qu",
+        "Tao Sun",
+        "Massimiliano Viola",
+        "Liyuan Zhu",
+        "Zhizhuo Zhou",
+        "Sayan Deb Sarkar",
+        "Konrad Schindler",
+        "Iro Armeni"
+      ],
+      "abstract": "Modeling articulated objects from sparse monocular views is challenging because each observation reveals only partial geometry and motion evidence. Most feed-forward methods infer articulation from a single observation and therefore rely heavily on learned category-level shape priors. We present FAMOS, a feed-forward model that predicts movable-part segmentation and joint parameters from a sparse, unordered set of partial point clouds. Our model jointly reasons over multiple observations and naturally supports a variable number of inputs, including a single view. To aggregate articulation cues across observations, we introduce a Multi-state Articulation Transformer with alternating state-wise and global attention. We further propose an observed articulation span objective that supervises the motion range each part exhibits across the input observations, encouraging the model to leverage the full observation set. To overcome the limited scale and diversity of existing datasets, we introduce a procedural data generator that synthesizes self-annotated assets during training. Experiments on PartNet-Mobility, ACD, and ArtiCraft-10K demonstrate consistent improvements over both feed-forward and optimization-based baselines. Project page: https://kevinqu7.github.io/famos",
+      "published_date": "2026-09-17T17:59:40Z",
+      "url": "https://arxiv.org/abs/2609.20817v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20817v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "FAMOS: 从稀疏观测中进行前馈3D关节建模",
+        "chinese_summary": "FAMOS通过稀疏点云预测可动部件分割和关节参数，支持多观测输入。",
+        "pain_point": "从稀疏单目视图中建模关节结构具有挑战性。",
+        "core_value": "支持多观测输入，利用全观测集信息。",
+        "technical_architecture": "引入多状态关节变换器，结合局部和全局注意力。",
+        "quantitative_results": "在PartNet-Mobility、ACD和ArtiCraft-10K上表现优于现有方法。",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集规模和多样性有限。",
+        "key_contributions": [
+          "引入多状态关节变换器",
+          "支持多观测输入"
+        ],
+        "application_scenarios": [
+          "3D建模",
+          "机器人视觉"
+        ],
+        "technical_highlights": [
+          "交替状态和全局注意力",
+          "自标注资产合成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20816v1",
+      "source": "arxiv",
+      "title": "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+      "authors": [
+        "Ji Xie",
+        "Dewei Zhou",
+        "Xinyu Huang",
+        "Zhennan Chen",
+        "Xun Wang"
+      ],
+      "abstract": "Professional design requires any-color control: the ability to specify an object's target color with any 24-bit hex value for image generation and editing. Prior work has explored color generation, editing, and colorization, but often relies on dedicated color representations or specialized inference procedures. Advances in large language models offer a simpler starting point: even compact models can associate hex values with color semantics. We present Paint-Anything, which learns a shared hex-prompt interface for generation and editing through object-level color supervision. We develop a data pipeline that constructs Paint-500K from real images through object grounding, perceptual color labeling, and editing-pair synthesis. Since shadows make real-image labels only approximate colors, we complement this supervision with pure-color anchors whose pixels exactly match their paired hex values. These anchors are used only at high-noise timesteps, leaving low-noise training to natural images. We further introduce Any Color Benchmark (ACBench), comprising ACBench-T2I and ACBench-Edit, to measure object-level hex color fidelity across both tasks. On FLUX.2-4B, Paint-Anything improves ACBench-T2I and ACBench-Edit scores by 85.3% and 28.3%, respectively, relative to the base model, with ablations supporting the training recipe. It also achieves the highest average CompColor score among the compared methods.",
+      "published_date": "2026-09-17T17:59:30Z",
+      "url": "https://arxiv.org/abs/2609.20816v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20816v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Paint-Anything: 统一任意颜色控制的图像生成与编辑",
+        "chinese_summary": "提出了一种新的方法，通过对象级颜色监督学习共享的十六进制提示接口，实现图像生成和编辑中的任意颜色控制。",
+        "pain_point": "现有方法依赖于专门的颜色表示或复杂的推理过程，难以实现精确的任意颜色控制。",
+        "core_value": "通过对象级颜色监督学习共享的十六进制提示接口，简化了颜色控制过程，提高了颜色精度。",
+        "technical_architecture": "开发了一种数据管道，从真实图像构建Paint-500K，并结合纯色锚点进行训练。",
+        "quantitative_results": "在FLUX.2-4B上，Paint-Anything提高了ACBench的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于真实图像的标签，可能受到阴影等因素的影响。",
+        "key_contributions": [
+          "提出了一种新的十六进制提示接口",
+          "开发了数据管道和纯色锚点",
+          "构建了任意颜色基准（ACBench）"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像编辑"
+        ],
+        "technical_highlights": [
+          "通过对象级颜色监督简化颜色控制",
+          "结合纯色锚点进行训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20815v1",
+      "source": "arxiv",
+      "title": "ERCPMP-Gx: Endoscopic Image and Video Dataset for Morphological, Histopathological, and Genomic Characterization of Colorectal Polyposis",
+      "authors": [
+        "Zahra Ghaffari",
+        "Massih Bahar",
+        "Mojgan Forootan",
+        "Ali Darvishi",
+        "Hamidreza Bolhasani"
+      ],
+      "abstract": "Hereditary polyposis syndromes can be precursor lesions to colorectal cancer and are associated with a broad spectrum of extracolonic tumors. Early identification and accurate classification of these syndromes are essential for timely diagnosis, individualized patient management, and targeted surveillance strategies for affected families. However, public endoscopic datasets are largely organized around the individual sporadic polyp, and none links the polyposis phenotype to histopathology and germline findings at the patient level. Here, we present ERCPMP-Gx, an endoscopic, histopathological, and genomic dataset developed to support the application of artificial intelligence (AI) in the recognition, characterization, and classification of colorectal polyposis. Most procedures were performed using the Olympus EVIS X1 system with white-light endoscopy (WLE), narrow-band imaging (NBI), magnifying NBI (M-NBI), and NBI with near focus modes, yielding 160 images and accompanying video clips. Approximately eighty percent of cases represent clinically and/or genetically confirmed hereditary polyposis syndromes (PG), including familial adenomatous polyposis (FAP), Peutz-Jeghers syndrome (PJS), juvenile polyposis syndrome (JPS), and ganglioneuroma syndrome (GNS), while the remaining twenty percent comprise non-hereditary polyps and polyp-mimicking lesions with overlapping morphological features (Non-PG), included to support differential classification. Each released record is linked, where available, to standardized endoscopic annotations, representative histopathology, and clinically reported germline findings, forming an AI-ready, patient-level annotation framework. The dataset is publicly accessible at Mendeley (https://doi.org/10.17632/nzyfc544bx.2). For the latest updates and further information, readers are referred to the DataBioX website: https://databiox.com.",
+      "published_date": "2026-09-17T17:59:28Z",
+      "url": "https://arxiv.org/abs/2609.20815v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20815v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "ERCPMP-Gx：用于结肠多发性息肉形态学、组织病理学和基因组表征的内镜图像和视频数据集",
+        "chinese_summary": "ERCPMP-Gx 数据集支持人工智能在结肠多发性息肉识别、表征和分类中的应用。",
+        "pain_point": "现有公共内镜数据集主要围绕单个息肉组织，未将多发性息肉表型与病理和基因组学关联起来。",
+        "core_value": "提供了一个综合的数据集，支持多发性息肉的精准识别和分类，有助于早期诊断和个性化管理。",
+        "technical_architecture": "使用Olympus EVIS X1系统进行白光内镜、窄带成像、放大窄带成像和近焦点模式的内镜检查。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集主要包含已确认的遗传性多发性息肉综合征病例。",
+        "key_contributions": [
+          "提供了一个综合的数据集",
+          "支持多发性息肉的精准识别和分类",
+          "有助于早期诊断和个性化管理"
+        ],
+        "application_scenarios": [
+          "结肠多发性息肉的识别",
+          "结肠多发性息肉的表征和分类"
+        ],
+        "technical_highlights": [
+          "使用多种内镜技术获取数据",
+          "包含病理和基因组学信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20814v1",
+      "source": "arxiv",
+      "title": "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+      "authors": [
+        "Pochinapeddi Sai Bhargav",
+        "Nithin Somasekharan",
+        "Rohit Sunil Kanchi",
+        "Sicheng He",
+        "Shaowu Pan"
+      ],
+      "abstract": "Pretraining a neural PDE surrogate can reduce the amount of new CFD data needed when geometry or modeled physics changes. However, it remains unclear how different components of distribution shift affect this benefit. We pretrain a surrogate on 254,909 RANS solutions from one airfoil family and fine-tune it on a new family under two target settings with matched freestream ranges: the same Spalart-Allmaras (SA) modeling and SA with added $e^N$ transition modeling. At $N=1000$, the pretrained model matches the accuracy of a model trained from scratch on $3.25\\times$ as many samples for the same-SA target, but $2.58\\times$ as many for the transition-modeled target. By $N=5000$, this ordering reverses ($1.56\\times$ versus $1.86\\times$). At $N=1000$, sampling more distinct airfoils lowers error on both targets, but only for the same-SA target is the gain increase larger than the observed draw-to-draw variation ($3.3\\times$ to $4.0\\times$). These results show that pretraining value depends jointly on target-data budget, target-data coverage, and whether source and target differ in modeled physics.",
+      "published_date": "2026-09-17T17:59:24Z",
+      "url": "https://arxiv.org/abs/2609.20814v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20814v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "physics.comp-ph",
+        "cs.LG",
+        "physics.flu-dyn"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "如何通过分布偏移塑造神经PDE代理的预训练收益？",
+        "chinese_summary": "通过预训练模型在不同空气动力翼型下的湍流解决方案，展示了预训练对新翼型数据需求的影响。",
+        "pain_point": "当几何形状或物理模型改变时，如何有效减少新CFD数据的需求。",
+        "core_value": "揭示了不同分布偏移组件如何影响预训练收益，为模型迁移提供了理论依据。",
+        "technical_architecture": "通过预训练和微调神经PDE代理模型，研究不同数据集的影响。",
+        "quantitative_results": "在相同Spalart-Allmaras模型下，预训练模型的准确度与从头训练模型相当，但在过渡模型下则需要更多数据。",
+        "competitors": "暂无对比信息",
+        "limitations": "实验仅在特定翼型和模型下进行，未来需扩展到更多场景。",
+        "key_contributions": [
+          "揭示了不同分布偏移组件对预训练收益的影响。",
+          "提出了预训练价值取决于目标数据预算、覆盖范围和物理模型差异的观点。",
+          "展示了预训练在不同目标数据集下的效果差异。"
+        ],
+        "application_scenarios": [
+          "空气动力学设计优化",
+          "流体力学模拟"
+        ],
+        "technical_highlights": [
+          "使用大规模湍流解决方案进行预训练研究。",
+          "通过对比不同模型设置评估预训练效果。"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.20812v1",
+      "source": "arxiv",
+      "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+      "authors": [
+        "Nolan Smyth",
+        "Yorguin-Jose Mantilla-Ramos",
+        "Pascal Jr Tikeng Notsawo",
+        "Saskia Helbling",
+        "Alberto Tosato",
+        "Mohamed Amine Merzouk",
+        "Nouha Dziri",
+        "Gauthier Gidel",
+        "Tommaso Tosato"
+      ],
+      "abstract": "Frontier coding agents are increasingly trusted to work autonomously for long periods, yet an agent's final response is often the only account of that work a user sees. We quantify the propensity of frontier agents to \\emph{overclaim} task completion, a misrepresentation that can mislead the user. An agent overclaims when its final response contradicts information in its context. This definition requires no inference about intent and is independent of task success. We introduce \\emph{OverclaimBench}, an evaluation suite composed of five file-review scenarios, transcript-based coverage measurements, and registered planted defects. We evaluate eight proprietary frontier models in their own production command-line interfaces, and four open-weight models under a single fixed harness on OverclaimBench and find that 1) agents do not read all the files they were asked to review in 67.9\\% of runs; 2) among runs where not all files are read, agents are \\emph{misleading} 80.4\\% of the time (59--96\\% per model), either falsely claiming to have read all files or omitting that coverage is incomplete; 3) requiring delegation to subagents increased reading coverage, but among reviews that remained incomplete, a large majority were still misleading; and 4) agents that falsely claimed a complete review missed planted defects at about 1.8 times the rate of agents that read every file, showing that claims of completion can conceal substantive failures. Together, these results show that agents' final responses are not reliable accounts of their actions.",
+      "published_date": "2026-09-17T17:59:04Z",
+      "url": "https://arxiv.org/abs/2609.20812v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20812v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "量化前沿大模型代理的过度声称倾向",
+        "chinese_summary": "研究发现前沿大模型代理在任务完成时过度声称现象普遍存在，引入OverclaimBench评估框架。",
+        "pain_point": "用户仅能看到大模型代理的最终响应，但这些响应可能与实际工作内容不符。",
+        "core_value": "量化过度声称倾向，提供评估大模型代理准确性的新方法。",
+        "technical_architecture": "设计OverclaimBench评估框架，包含文件审查场景和覆盖度测量。",
+        "quantitative_results": "80.4%的代理在部分文件未读的情况下误导用户，认为已完整覆盖。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了部分模型，未来需扩大评估范围。",
+        "key_contributions": [
+          "提出OverclaimBench评估框架",
+          "量化大模型代理的过度声称倾向"
+        ],
+        "application_scenarios": [
+          "大模型代理的任务完成评估",
+          "提高代理透明度和可信度"
+        ],
+        "technical_highlights": [
+          "引入文件审查场景和覆盖度测量",
+          "评估多个前沿模型和开源模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

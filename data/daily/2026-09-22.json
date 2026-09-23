@@ -1,0 +1,543 @@
+{
+  "date": "2026-09-22",
+  "generated_at": "2026-09-23T01:17:37.430697+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.24972",
+      "source": "huggingface",
+      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+      "authors": [
+        "Peng Xia",
+        "Rujun Han",
+        "Zifeng Wang",
+        "Yanfei Chen",
+        "Yufan Zhang",
+        "Yoonho Lee",
+        "Chengsong Huang",
+        "Han Yu",
+        "Zhongying CuiZhu",
+        "Yifei Ming",
+        "Huaxiu Yao",
+        "Burak Gokturk",
+        "Tomas Pfister",
+        "Chen-Yu Lee"
+      ],
+      "abstract": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level. However, such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks. We introduce Regularized Recursive Self-Improvement of Agent Harnesses (RRSI), which incorporates the principles of regularizations into harness self-improvement by constraining the evolution candidate proposal and selection. The proposer operates with a temporally annealed budget, limiting how many edits a candidate can bundle, and it encourages unexplored trajectories based on evolution history. The selector is equipped with a critic and a pruner: the critic screens benchmark-specific proposals, while the pruner, removes changes that are too small, too expensive, or no longer useful. Together these constraints favor reusable agent mechanisms over benchmark-specific ones or even noises. Across eight benchmarks spanning coding, agentic workspace and engineering design tasks, RRSI gains up to 14.1 points on the split it evolves against and up to 4.7 points on the five out-of-distribution benchmarks, while producing a harness that runs on 30% fewer policy tokens than the unregularized evolution. Code is available at https://github.com/google-research/rrsi and project page is https://regularized-rsi.com/.",
+      "published_date": "2026-09-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.24972",
+      "pdf_url": "https://arxiv.org/pdf/2609.24972",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.24972",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 154,
+      "hot_score": 1540,
+      "structured_summary": {
+        "chinese_title": "RRSI: 规则化递归自我改进的智能体框架",
+        "chinese_summary": "引入规则化递归自我改进（RRSI），通过约束候选改进方案和选择过程，解决智能体框架过度拟合的问题。",
+        "pain_point": "智能体框架的递归自我改进可能过度拟合训练任务，导致在新任务上的表现下降。",
+        "core_value": "通过规则化约束，提升智能体框架在新任务上的泛化能力。",
+        "technical_architecture": "通过限制候选改进方案的编辑数量和鼓励未探索的改进路径，结合批评者和修剪器进行选择。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证在更多任务上的有效性。",
+        "key_contributions": [
+          "引入规则化约束机制",
+          "提出递归自我改进框架",
+          "增强智能体框架的泛化能力"
+        ],
+        "application_scenarios": [
+          "智能体能力提升",
+          "自动化智能体优化"
+        ],
+        "technical_highlights": [
+          "规则化约束候选改进方案",
+          "鼓励未探索的改进路径"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.24984",
+      "source": "huggingface",
+      "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
+      "authors": [
+        "Wangbo Yu",
+        "Kunhao Liu",
+        "Wenbo Hu",
+        "Shenghai Yuan",
+        "Chaoran Feng",
+        "Haiyang Zhou",
+        "Yukun Huang",
+        "Yiran Wang",
+        "Wang Zhao",
+        "Yingmin Luo",
+        "Ying Shan"
+      ],
+      "abstract": "Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world model that learns a camera-queryable implicit 3D-aware memory for this purpose. The key insight is to let the requested viewpoint shape how multi-view evidence is compressed into the video generator's limited token budget. Trained jointly with the video generator, a memory encoder and pose-conditioned readout module integrate historical observations into a fixed set of target view-specific tokens before denoising, without explicit depth-based correspondences. By combining this memory with recent temporal context and few-step distillation, WorldCrafter enables streaming scene exploration from a single input image or text prompt. Experiments across static and dynamic scenes show substantial gains in long-horizon consistency and camera-control accuracy while preserving visual quality during minute-scale exploration.",
+      "published_date": "2026-09-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.24984",
+      "pdf_url": "https://arxiv.org/pdf/2609.24984",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.24984",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "upvotes": 113,
+      "hot_score": 1130,
+      "structured_summary": {
+        "chinese_title": "WorldCrafter: 具有隐式3D感知记忆的一致视频世界模型",
+        "chinese_summary": "通过结合记忆与近期时间上下文和少量步骤蒸馏，WorldCrafter 实现了从单张输入图像或文本提示进行流式场景探索。",
+        "pain_point": "现有视频世界模型难以在长时间范围内和不同视角下保持一致性和准确性。",
+        "core_value": "通过学习相机查询的隐式3D感知记忆，WorldCrafter 提高了长时间一致性和相机控制精度。",
+        "technical_architecture": "通过相机查询的隐式3D感知记忆，结合近期时间上下文和少量步骤蒸馏。",
+        "quantitative_results": "在静态和动态场景实验中，WorldCrafter 在长时间一致性方面取得了显著改进。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更复杂的场景和更长时间的探索。",
+        "key_contributions": [
+          "提出了一种相机查询的隐式3D感知记忆",
+          "结合近期时间上下文和少量步骤蒸馏",
+          "实现了从单张输入图像或文本提示进行流式场景探索"
+        ],
+        "application_scenarios": [
+          "虚拟现实中的场景探索",
+          "增强现实中的交互体验"
+        ],
+        "technical_highlights": [
+          "隐式3D感知记忆提高了长时间一致性",
+          "相机查询机制优化了多视角证据压缩"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.25001",
+      "source": "huggingface",
+      "title": "GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay",
+      "authors": [
+        "Yiran Wang",
+        "Xingyilang Yin",
+        "Junfu Pu",
+        "Guangzhi Wang",
+        "Kaifeng Li",
+        "Mingyu Ouyang",
+        "Huiqiang Sun",
+        "Lingen Li",
+        "Cheng Cheng",
+        "Wangbo Yu",
+        "Honghao Chen",
+        "Xiaodong Cun",
+        "Chi-Man Pun",
+        "Zhiguo Cao",
+        "Ying Shan"
+      ],
+      "abstract": "Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal horizons. Existing datasets and benchmarks, however, either cover a narrow range of games, lack language instructions, or rely on high-variance online rollouts. To address these challenges, we introduce GameHorizon, a unified data and evaluation suite that measures gameplay capabilities at different horizons for diverse model families. GameHorizon Suite consists of three components. First, GameHorizon-Annotator is a scalable and automated annotation pipeline for multi-horizon instructions. Second, utilizing the pipeline, we construct GameHorizon-Data, the first large-scale AAA gameplay dataset with temporally aligned videos, player actions, and multi-horizon instructions. It comprises 5,000 hours of recordings from 21 games, collected by 100 human expert players. Third, we build GameHorizon-Bench with reproducible offline and stepwise online testing. The offline track enables reproducible evaluation using thousands of standardized questions organized into three primary tasks and a series of diagnostic variants, while the online track tests whether offline scores reflect actual gameplay capabilities and localizes failures to specific steps within long-horizon gameplay. Based on our GameHorizon Suite, we evaluate 47 models through more than one million model invocations, revealing a meaningful hierarchy of task difficulty and pronounced differences in model capabilities. Our work can provide a standardized yardstick for evaluating gameplay capabilities across horizons and model families. We will release our dataset, annotator, and benchmark to facilitate future research.",
+      "published_date": "2026-09-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.25001",
+      "pdf_url": "https://arxiv.org/pdf/2609.25001",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.25001",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 111,
+      "hot_score": 1110,
+      "structured_summary": {
+        "chinese_title": "GameHorizon Suite: 多时间尺度游戏数据与评估套件",
+        "chinese_summary": "构建了一个包含多时间尺度指令的大规模AAA级游戏数据集和评估套件。",
+        "pain_point": "现有游戏数据集覆盖范围窄，缺乏语言指令，依赖高变异性在线滚动。",
+        "core_value": "提供了一个统一的数据和评估套件，衡量不同时间尺度的游戏能力。",
+        "technical_architecture": "包含自动标注管道、大规模游戏数据集和可重复的离线/在线测试。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能包括扩展更多游戏和增加更多时间尺度。",
+        "key_contributions": [
+          "构建了大规模多时间尺度游戏数据集",
+          "开发了自动标注多时间尺度指令的管道",
+          "提供了可重复的离线和逐步在线测试"
+        ],
+        "application_scenarios": [
+          "用于评估和训练多时间尺度游戏AI模型",
+          "支持游戏开发中的多时间尺度任务"
+        ],
+        "technical_highlights": [
+          "大规模多时间尺度游戏数据集",
+          "自动标注多时间尺度指令的管道"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.22966",
+      "source": "huggingface",
+      "title": "Transferring the Intelligence of VLMs to Robotic Control",
+      "authors": [
+        "Meng-Hao Guo",
+        "Zhe-Han Mo",
+        "Jia-Jun Wang",
+        "Yi Zhang",
+        "Kejin Wang",
+        "Yi-Xuan Deng",
+        "Jia-Peng Zhang",
+        "Yongming Rao",
+        "Shi-Min Hu"
+      ],
+      "abstract": "Humans can seamlessly adapt to both physical and digital worlds, suggesting that while a digital-to-real gap exists in embodiment, environment and task, human intelligence itself may transfer across this gap. This naturally raises a fundamental question: can the intelligence of vision-language models (VLMs) similarly generalize from the digital world to the physical world for robotic control? We investigate this question through RoboDawn, a human-intuitive interface that exposes robotic control to an agentic VLM through a compact set of discrete translation, rotation, and gripper commands. Using this interface, the VLM controls a robot in a closed loop: it observes the current visual state, reasons about the next action, executes it, and adapts subsequent decisions to the resulting state. Furthermore, we introduce an in-context learning (ICL) scheme that uses a few demonstrations to ground the VLM in both interface usage and task-solving strategies. Experiments on RoboTwin 2.0 C2R and RoboDojo demonstrate that RoboDawn achieves strong performance without task-specific robot training. In the zero-shot setting, RoboDawn outperforms several strong policies trained on benchmarkspecific robot data, while a single in-context demonstration further yields substantial performance gains and establishes state-of-the-art (SOTA) results. On RoboTwin 2.0 C2R, the success rate increases from 53.2% zero-shot to 73.6% one-shot, exceeding the solid baseline π0.5 (46.0%). Similar gains are observed on RoboDojo, where success rate improves from 35.67% zero-shot to 47.17% one-shot. The same framework also transfers to real-world robots, performing block-in-basket and block stacking on Franka.",
+      "published_date": "2026-09-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.22966",
+      "pdf_url": "https://arxiv.org/pdf/2609.22966",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.22966",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 101,
+      "hot_score": 1010,
+      "structured_summary": {
+        "chinese_title": "将VLMs的智能转移到机器人控制",
+        "chinese_summary": "RoboDawn通过紧凑的离散命令集将VLMs的智能从数字世界转移到物理世界，实现机器人控制。",
+        "pain_point": "现有方法难以将VLMs的智能无缝应用于机器人控制。",
+        "core_value": "通过RoboDawn，VLMs能够在无需特定机器人训练的情况下实现强大的机器人控制性能。",
+        "technical_architecture": "RoboDawn采用紧凑的离散命令集和在上下文学习方案，使VLMs能够进行机器人控制。",
+        "quantitative_results": "RoboDawn在RoboTwin 2.0 C2R和RoboDojo实验中表现出色，优于基准特定的多项策略。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更复杂的任务和环境。",
+        "key_contributions": [
+          "提出了一种新的方法将VLMs的智能转移到机器人控制",
+          "引入了在上下文学习方案以提高VLMs的适应性"
+        ],
+        "application_scenarios": [
+          "机器人抓取和放置任务",
+          "机器人导航和操作"
+        ],
+        "technical_highlights": [
+          "紧凑的离散命令集简化了VLMs与机器人控制的接口",
+          "在上下文学习方案提高了VLMs的适应性和泛化能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.23088",
+      "source": "huggingface",
+      "title": "OmniEdu: Open Foundation Models for Learning and Teaching",
+      "authors": [
+        "Hao Liang",
+        "Qihan Lin",
+        "Meiyi Qiang",
+        "Linzhuang Sun",
+        "Hengyi Feng",
+        "Mingrui Chen",
+        "Sizhe Qiu",
+        "Wentao Zhang"
+      ],
+      "abstract": "Educational foundation models must solve problems, understand curriculum structure, diagnose learner difficulties, and provide appropriate instructional support. Existing educational language models often focus on either problem solving or tutoring, with training mixtures organized by source or task rather than capability. We present OmniEdu, an open family of foundation models for K-12 learning and teaching. Its instruction-tuning corpus combines over 100 educational resources and general instruction sources, organized around four capabilities: subject competence, curriculum grounding, diagnostic reasoning, and pedagogical action and scaffolding. Our pipeline integrates deterministic cleaning, semantic auditing and rewriting, task-specific quality scoring, token-budgeted diversity selection, and pedagogical instruction assignment. It yields 69,999 examples and 15.96M supervised response tokens, including 60,951 education-specific examples. We fine-tune 4B, 9B, and 27B models and evaluate curriculum grounding, K-12 problem solving, and pedagogical tutoring, alongside general capability. Education-oriented tuning consistently improves all three educational benchmark groups across model scales. OmniEdu-27B achieves 63.12% EM and 76.69% F1 on K12-Bench, 85.89% on MathFish, 86.95% on EDUMATH, and 78.74% in MathTutorBench's Scaffold setting. It also achieves the highest Teaching average on LongTutor among the evaluated models, at 3.02. These results demonstrate the value of curated, capability-balanced supervision for adapting general language models to educational tasks spanning problem solving, curriculum understanding, and instructional support.",
+      "published_date": "2026-09-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.23088",
+      "pdf_url": "https://arxiv.org/pdf/2609.23088",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.23088",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 72,
+      "hot_score": 720,
+      "structured_summary": {
+        "chinese_title": "OmniEdu: 开放的基础模型用于学习与教学",
+        "chinese_summary": "OmniEdu 是一个开放的基础模型家族，旨在解决教育中的核心问题。",
+        "pain_point": "现有教育语言模型主要集中在问题解决或辅导，缺乏全面的教育能力支持。",
+        "core_value": "OmniEdu 提供了涵盖四个教育能力的基础模型，旨在全面支持学习和教学。",
+        "technical_architecture": "OmniEdu 通过整合确定性清理、语义审计和重写、任务特定质量评分等技术构建。",
+        "quantitative_results": "实验结果表明，教育导向的微调在三个教育基准测试中均有所提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更多教育场景的应用。",
+        "key_contributions": [
+          "构建了一个包含四个教育能力的指令调优语料库",
+          "开发了一种综合的管道来生成高质量的教育指令",
+          "在多个教育基准测试中展示了改进"
+        ],
+        "application_scenarios": [
+          "K-12 学习和教学",
+          "个性化教育支持"
+        ],
+        "technical_highlights": [
+          "结合了多种教育资源和通用指令来源",
+          "实现了从数据预处理到模型微调的端到端流程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.24220",
+      "source": "huggingface",
+      "title": "Document Retrieval-Aware Chunking (D-RAC): Universal Retrieval-Aware Ingestion of Enterprise Documents via PDF Normalization and Multimodal Markdown Conversion",
+      "authors": [
+        "Uday Allu",
+        "Abhivanth Sivaprakash",
+        "Pratik Singh",
+        "Aman Manocha"
+      ],
+      "abstract": "Retrieval-Augmented Generation (RAG) systems over enterprise knowledge bases must ingest heterogeneous document formats -- PDFs, Word documents, presentations, and scans -- whose content is locked inside complex visual layouts, multi-column pages, and dense tables. Rule-based extraction and OCR destroy reading order, flatten tables, and lose heading hierarchy, while fully agentic chunking over extracted text incurs high token costs and hallucination risk. We present Document Retrieval-Aware Chunking (D-RAC), an extension of our Web Retrieval-Aware Chunking (W-RAC) framework to arbitrary document formats. D-RAC first normalizes any input document into PDF, exploiting the fact that virtually every format has a faithful, deterministic PDF rendering. A single multimodal LLM pass then converts rendered pages into retrieval-optimized Markdown -- rewriting tables as self-contained prose statements and preserving heading hierarchy -- after which chunking proceeds exactly as in W-RAC: deterministic parsing into ID-addressable units followed by lightweight LLM-based chunk planning over identifiers rather than text. Source text is never regenerated during chunking, preserving W-RAC's cost, determinism, and observability benefits while unlocking every renderable format as a first-class input. On the 236-document, 795-page PDF subset of the RAG-Multi-Corpus benchmark spanning five enterprise domains, D-RAC converts and chunks the entire corpus in 72 minutes with zero errors, producing 1,748 retrieval-ready chunks. Compared to agentic chunking with frontier LLMs, D-RAC reduces chunking-stage output tokens by 95.7%, cutting chunking cost by 77.8% (GPT-4.1 pricing) to 85.6% (Gemini 2.5 Pro pricing) and chunking time by 75%. D-RAC scales linearly to documents of 500+ pages.",
+      "published_date": "2026-09-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.24220",
+      "pdf_url": "https://arxiv.org/pdf/2609.24220",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.24220",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 48,
+      "hot_score": 480,
+      "structured_summary": {
+        "chinese_title": "面向文档检索的分块（D-RAC）：通过PDF归一化和多模态Markdown转换的企业知识库文档检索增强摄入",
+        "chinese_summary": "D-RAC通过PDF归一化和多模态Markdown转换，实现企业文档的检索增强摄入。",
+        "pain_point": "现有方法破坏阅读顺序、压平表格和丢失标题层次。",
+        "core_value": "D-RAC保持文档结构，降低生成成本并减少幻觉风险。",
+        "technical_architecture": "D-RAC首先将任何输入文档归一化为PDF，然后使用单个LLM将渲染页面转换为检索优化的Markdown。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多样化的数据集上进行测试。",
+        "key_contributions": [
+          "提出D-RAC框架",
+          "实现文档的检索增强摄入",
+          "保持文档结构和阅读顺序"
+        ],
+        "application_scenarios": [
+          "企业知识库文档管理",
+          "文档检索增强生成"
+        ],
+        "technical_highlights": [
+          "PDF归一化",
+          "多模态Markdown转换"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.24997",
+      "source": "huggingface",
+      "title": "VideoGen-Agent: Reinforcing Video Generation Agents",
+      "authors": [
+        "Binxu Li",
+        "Haoyi Duan",
+        "Yuhui Zhang",
+        "Yaohui Zhang",
+        "Zihao Lin",
+        "Kaituo Feng",
+        "Suozhi Huang",
+        "Xiangyi Li",
+        "Yu Li",
+        "Chunyuan Li",
+        "Shilong Liu",
+        "Mengdi Wang"
+      ],
+      "abstract": "Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, specific identities, physical consistency, or ordered events. In this paper, we present VideoGen-Agent, a multimodal agent trained through multitask agentic reinforcement learning to use external tools for video generation. The agent coordinates augmentation, generation, and verification tools through multi-turn interactions, using the prompt and intermediate observations to guide its decisions. We train a shared policy on a category-balanced dataset spanning six tasks. Supervised fine-tuning on teacher-generated trajectories establishes tool-use behavior, which is then refined through reinforcement learning. A category-aware hybrid reward evaluates tool-call validity, task-appropriate tool use, and generated video quality. We further introduce VABench, a held-out benchmark of 600 prompts covering procedural knowledge, single- and multi-entity identity preservation, physical consistency, scene composition, and multi-shot temporal structure. On VABench, VideoGen-Agent improves over its base text-to-video generator by 19.1 points, from 56.5 to 75.6. Upgrading the generation tools further raises the score to 86.1 without additional agent training. Human raters prefer the upgraded configuration over the strongest standalone baseline in 84.3% of comparisons. These results support learning tool use across video-generation tasks and show that the trained agent can benefit from subsequent advances in generation tools.",
+      "published_date": "2026-09-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.24997",
+      "pdf_url": "https://arxiv.org/pdf/2609.24997",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.24997",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "VideoGen-Agent: 提升视频生成代理的强化学习方法",
+        "chinese_summary": "VideoGen-Agent 通过多任务代理强化学习和外部工具使用，提高了视频生成的质量和多样性。",
+        "pain_point": "现有视频生成模型难以满足需要特定知识、身份、物理一致性和有序事件的提示。",
+        "core_value": "通过多任务代理强化学习和外部工具使用，显著提升了视频生成的质量和多样性。",
+        "technical_architecture": "采用多任务代理强化学习框架，结合外部工具进行视频生成和验证。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多数据和计算资源来进一步优化模型。",
+        "key_contributions": [
+          "引入多任务代理强化学习框架",
+          "使用外部工具进行视频生成和验证",
+          "提出类别感知混合奖励机制"
+        ],
+        "application_scenarios": [
+          "视频内容生成",
+          "虚拟现实和增强现实"
+        ],
+        "technical_highlights": [
+          "多任务代理强化学习",
+          "外部工具使用",
+          "类别感知混合奖励机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.24983",
+      "source": "huggingface",
+      "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
+      "authors": [
+        "Lei Yang",
+        "Mengyin Liu",
+        "Jia Wang",
+        "Hangyu Guo",
+        "Liang Zhao",
+        "Zheng Ge",
+        "Kang An",
+        "Binxing Jiao",
+        "Qi Han",
+        "Daxin Jiang",
+        "Siqi Shen",
+        "Xiangyu Zhang"
+      ],
+      "abstract": "We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model response, the annotator locates the first inappropriate token and either picks a substitute from the model's candidate tokens or types the correct text via free-form editing. The system then truncates everything after that position and continues generation from the corrected prefix, repeating this locate-correct-continue loop until a satisfactory response is obtained. This mechanism lets annotators precisely steer model outputs at low cost: a small controlled study suggests that onPanda reduces median annotation time by 52% over manual post-editing. Since the vast majority of tokens in the final response are generated by the model itself, the resulting data largely preserves the model's sampling distribution and is well suited for constructing on-policy SFT and preference data. Furthermore, the token-level corrections recorded during annotation provide fine-grained supervision with precise positions and naturally paired positive--negative samples. onPanda also connects to external tools and harnesses, enabling interactive trajectory annotation in realistic environments. In addition, we release Panda-CVL, a dataset annotated with onPanda, together with a benchmark for token-level correction.",
+      "published_date": "2026-09-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.24983",
+      "pdf_url": "https://arxiv.org/pdf/2609.24983",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.24983",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "onPanda：通过标记级别修正高效标注LLM对齐数据",
+        "chinese_summary": "onPanda通过标记级别修正高效标注LLM对齐数据和代理轨迹。",
+        "pain_point": "现有方法在标注LLM对齐数据时效率低下。",
+        "core_value": "onPanda通过标记级别修正显著降低了标注时间，保留了模型的采样分布。",
+        "technical_architecture": "采用标记级别修正机制，标注者在阅读模型响应时进行修正。",
+        "quantitative_results": "研究表明，onPanda将标注时间减少了52%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅进行了小规模研究。",
+        "key_contributions": [
+          "引入标记级别修正机制",
+          "保留模型采样分布"
+        ],
+        "application_scenarios": [
+          "LLM对齐数据标注",
+          "代理轨迹标注"
+        ],
+        "technical_highlights": [
+          "低成本精确引导模型输出",
+          "提供细粒度监督和正负样本对"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.23863",
+      "source": "huggingface",
+      "title": "Grounded Action Model: 3D Grounding as a Foundation for Robotics",
+      "authors": [
+        "Gehao Zhang",
+        "Weikai Huang",
+        "Shailesh Shailesh",
+        "Yiyan Peng",
+        "Jiafei Duan",
+        "Ranjay Krishna"
+      ],
+      "abstract": "Manipulation policies must know which objects matter and where they are, yet the pretrained backbones that current robot foundation models build on, from language in vision-language-action models (VLAs) to video generation in world-action models (WAMs), do not directly require this metric grounding, leaving it to be learned implicitly from robot demonstrations. We propose Grounded Action Models (GAMs), a new paradigm of robot foundation models built with 3D grounding. GAM can be conditioned using language, points, or box prompts, which are first transformed into a shared object-centric representation of the selected objects. This representation captures target-focused visual features and metric object geometry, which is mixed with robot state history through a multi-stream transformer to predict action chunks. Although GAMs can be run autonomously, they can also serve as a low-level controller that a high-level planner controls using its various input modalities, allowing for long-horizon and memory-dependent manipulation. On RoboTwin 2.0, GAM achieves an average success rate of 55.3% across 50 tasks (vs. 52.0% for Spatial Forcing), including 47.6% under scene randomization (vs. 30.4% for Abot-M0), with its action policy trained only on clean-scene demonstrations. On LIBERO-PRO, it achieves a state-of-the-art average success rate of 61% (vs. 53% for π_{0.5}) across 16 perturbation settings, with the largest gains when targets are relocated or newly designated. On two real robots, GAM retains 17/20 successes under visual shift on a bimanual YAM versus 4/20 for π_{0.5}, while its composition with a Molmo2 planner on a Franka achieves 64.7% ID and 49.8% OOD step completion on long-horizon and memory-dependent tasks.",
+      "published_date": "2026-09-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.23863",
+      "pdf_url": "https://arxiv.org/pdf/2609.23863",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.23863",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "基于3D定位的动作模型：机器人基础模型的新范式",
+        "chinese_summary": "提出了一种新的基于3D定位的动作模型，提高了机器人的物体识别和操作能力。",
+        "pain_point": "当前机器人模型缺乏明确的物体定位和操作指导。",
+        "core_value": "通过3D定位，提高了机器人在复杂环境中的操作精度和灵活性。",
+        "technical_architecture": "利用多流变换器融合物体特征和机器人状态历史，预测操作序列。",
+        "quantitative_results": "在RoboTwin 2.0上，GAM的平均成功率达到了55.3%，优于Spatial Forcing。",
+        "competitors": "Spatial Forcing作为主要基线进行对比。",
+        "limitations": "需要进一步优化在随机场景下的表现。",
+        "key_contributions": [
+          "提出了基于3D定位的动作模型",
+          "实现了语言、点或框提示的多模态条件",
+          "提高了长时记忆依赖操作的成功率"
+        ],
+        "application_scenarios": [
+          "复杂环境下的物体操作",
+          "需要精确物体定位的机器人任务"
+        ],
+        "technical_highlights": [
+          "多流变换器融合物体特征和机器人状态",
+          "支持多模态条件输入"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.23377",
+      "source": "huggingface",
+      "title": "One to More, More to One: Category-Aware Iterative Expert Training for Software Engineering Agents",
+      "authors": [
+        "Jie Zhao",
+        "Ziyu Jiang",
+        "Suhang Zheng",
+        "Minghui Shan",
+        "Xiaoxiao Xu",
+        "Lin Qu"
+      ],
+      "abstract": "Repository-level software engineering (SWE) comprises heterogeneous task categories, whose progress under pooled agentic reinforcement learning can be uneven: gains in some categories coincide with regressions in others, while aggregate resolution obscures these changes. Motivated by this category see-saw, we develop a category-aware expert-training and policy-integration framework. Executable task construction and SWE Labeler, an evidence-grounded multi-axis labeling system, organize the training pools. Initial category-specific RL improves average training success while leaving uneven instance-level progress, motivating explicit consolidation of successful behavior and policy-adaptive task selection. Same-origin category experts alternate long-horizon Agentic-miniRL with Refresh-Repair-Expand (RRE): the updated policy refreshes instance mastery, reuses its own verified successful trajectories for Repair SFT, and reselects tasks for further RL. Label-routed multi-teacher on-policy distillation (MOPD) consolidates the experts into one deployable student, with ReLU-gated reward extrapolation keeping only each teacher's improving direction over the reference. Expert training and policy integration require no external model to provide solution trajectories or action targets. We evaluate Pooled RL and Balanced RL, expert development, and single-model integration through aggregate and per-category resolution, the minimum category lift over each joint-RL baseline, and expert-gain recovery. The final MOPD policy achieves mean resolution of 58.04% on Pro-618 and 59.00% on SWE-bench Multilingual, improving over the base model by 5.39 and 2.78 percentage points, respectively.",
+      "published_date": "2026-09-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.23377",
+      "pdf_url": "https://arxiv.org/pdf/2609.23377",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.23377",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "从一到多，从多到一：面向软件工程代理的类别感知迭代专家训练",
+        "chinese_summary": "开发了一种类别感知的专家训练和策略集成框架，以解决软件工程代理任务类别间进展不均衡的问题。",
+        "pain_point": "软件工程代理在不同任务类别间的进展存在不平衡现象。",
+        "core_value": "通过类别感知的专家训练和策略集成，提高了软件工程代理在不同任务类别间的整体表现。",
+        "technical_architecture": "采用类别特定的强化学习和基于证据的多轴标签系统进行训练。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证该方法在大规模软件工程任务中的适用性。",
+        "key_contributions": [
+          "提出了类别感知的专家训练和策略集成框架",
+          "设计了基于证据的多轴标签系统",
+          "开发了刷新-修复-扩展（RRE）策略"
+        ],
+        "application_scenarios": [
+          "软件工程任务自动化",
+          "代码质量提升"
+        ],
+        "technical_highlights": [
+          "采用类别特定的强化学习方法",
+          "设计了证据支持的多轴标签系统",
+          "实现了专家策略的逐步优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

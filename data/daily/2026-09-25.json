@@ -1,0 +1,611 @@
+{
+  "date": "2026-09-25",
+  "generated_at": "2026-09-26T01:14:24.712444+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.28654",
+      "source": "huggingface",
+      "title": "Training Object Permanence in World Models",
+      "authors": [
+        "Haotian Zhang",
+        "Fengyuan Yu",
+        "Dezhi Luo",
+        "Haoran Sun",
+        "Zehong Zhao",
+        "Qingying Gao",
+        "Yihan Li",
+        "Siyuan An",
+        "Huayi Qin",
+        "Yilan Zhang",
+        "Zhengze Jiang",
+        "Pinyuan Feng",
+        "Renrui Zhang",
+        "Ziyu Guo",
+        "Letian Wang",
+        "Mengyue Yang",
+        "Kangfu Mei",
+        "Maijunxian Wang",
+        "Ran Ji",
+        "Vikash Kumar",
+        "Freda Shi",
+        "Chandra Sripada",
+        "Vincent C. Muller",
+        "Philip Torr",
+        "Alan Yuille",
+        "Nikolaus Kriegeskorte",
+        "Felix Juefei-Xu",
+        "Lvmin Zhang",
+        "Jieneng Chen",
+        "Yilun Du",
+        "Hokin Deng"
+      ],
+      "abstract": "Object permanence and solidity are hallmarks of human cognitive priors. Recent studies show that video generation models, a paradigmatic class of current world models, have begun to show emerged reasoning abilities, making them ideal candidates for building human-like physical intelligence. Do video models have emerged object permanence in them? If not, could we train them with a core-cognition inspired dataset? We introduce WROP (World Reasoning with Object Permanence), a data infrastructure of 150 hand-designed cognitive science inspired tasks, divided into six cognitive categories. We build Blender generators that randomize speed, lighting, camera angle, and other nuisance parameters while preserving each task's cognitive structure, yielding 10,000+ samples per task. We release a 1.5M-sample training corpus and a 300-question exam. On this exam we evaluate 14 video models: 3 reference-to-video, 7 edit, and 4 continuation, among which PWM-WROP, our 16B world model. In a blind pairwise Elo study, PWM-WROP ranks first among continuation models and third overall, behind only a statistical tie between two reference-to-video models. We release the data, exam, model answers, scores, weights, and PWM, our native-PyTorch training stack on AWS Trainium2.",
+      "published_date": "2026-09-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.28654",
+      "pdf_url": "https://arxiv.org/pdf/2609.28654",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.28654",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 185,
+      "hot_score": 1850,
+      "structured_summary": {
+        "chinese_title": "训练世界模型中的物体持久性",
+        "chinese_summary": "介绍了一个包含150个任务的数据集，用于训练视频生成模型的物体持久性。",
+        "pain_point": "现有视频生成模型缺乏物体持久性和固体感的认知基础。",
+        "core_value": "通过设计认知科学启发的任务，提升视频生成模型的物理智能。",
+        "technical_architecture": "构建了Blender生成器，随机化任务参数同时保持认知结构。",
+        "quantitative_results": "在300题考试中，14个视频模型中PWM-WROP排名第三。",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集和模型评估方法依赖于特定认知任务。",
+        "key_contributions": [
+          "构建了WROP数据集",
+          "提出了物体持久性训练方法"
+        ],
+        "application_scenarios": [
+          "增强现实",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "使用Blender生成器",
+          "大规模样本生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.29845",
+      "source": "huggingface",
+      "title": "Your Transformer Can Hold Two Thoughts at Once: Evidence of Linear Superposition in LLMs",
+      "authors": [
+        "Pavel Tikhonov",
+        "Anton Korznikov",
+        "Matvey Mikhalchuk",
+        "Nikita Dragunov",
+        "Temurbek Rahmatullaev",
+        "Polina Druzhinina",
+        "Anton Razzhigaev",
+        "Ivan Oseledets",
+        "Elena Tutubalina"
+      ],
+      "abstract": "While Large Language Models (LLMs) rely on highly non-linear components, in this work we demonstrate that they exhibit fundamental linearity: when inputs from distinct text streams are linearly combined, the model outputs a superposition of the individual next-token distributions. We term this the Superposition Linearity Hypothesis. We provide evidence that superposition is an intrinsic property of the Transformer architecture rather than an emergent consequence of training; in fact, we observe that it tends to diminish as pretraining progresses. However, we demonstrate that linearity can be substantially restored through lightweight fine-tuning, significantly reducing the divergence between the predicted next-token distribution and the average of the individual next-token distributions. Finally, we introduce a guided decoding procedure that disentangles superposed outputs, enabling the simultaneous generation of two coherent continuations from a single forward pass.",
+      "published_date": "2026-09-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.29845",
+      "pdf_url": "https://arxiv.org/pdf/2609.29845",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.29845",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "你的Transformer可以同时思考两个想法：LLMs中的线性叠加证据",
+        "chinese_summary": "证明大型语言模型在输入线性组合时输出为个体分布的叠加。",
+        "pain_point": "大型语言模型在处理多任务或并行任务时表现不佳。",
+        "core_value": "通过轻量级微调恢复线性叠加，提高模型的多任务处理能力。",
+        "technical_architecture": "Transformer架构的线性叠加特性。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "线性叠加现象在预训练过程中减弱。",
+        "key_contributions": [
+          "证明Transformer的线性叠加特性",
+          "提出并验证线性叠加假设",
+          "提出轻量级微调方法"
+        ],
+        "application_scenarios": [
+          "多任务处理",
+          "并行任务生成"
+        ],
+        "technical_highlights": [
+          "线性叠加现象",
+          "轻量级微调"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.30221",
+      "source": "huggingface",
+      "title": "WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation",
+      "authors": [
+        "Yubo Zhu",
+        "Yawen Shao",
+        "Ziyun Dai",
+        "Zixun Fang",
+        "Kai Zhu",
+        "Siyang Sun",
+        "Haolan Xue",
+        "Chuxin Wang",
+        "Tingyu Weng",
+        "Jingming Luo",
+        "Chen Shi",
+        "Lianghua Huang",
+        "Yufeng Ai",
+        "Yuzheng Wang",
+        "Wenyuan Zhang",
+        "Yu Shang",
+        "Yuxiang Bao",
+        "Zoubin Bi",
+        "Jie Xiao",
+        "Jinbo Xing",
+        "Jiaxing Zhao",
+        "Chongyang Zhong",
+        "Hengjian Chen",
+        "Chenwei Xie",
+        "Akide Liu",
+        "Zhehan Kan",
+        "Yu Liu",
+        "Wei Zhai",
+        "Sheng Zhong",
+        "Wei Tong"
+      ],
+      "abstract": "Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels. As contemporary video generators scale to 30 seconds and faithfully follow complex conditions, the textual prompt largely directs the production, planning how actions, camera trajectories, lighting, and sound unfold across multi-shot sequences. In this paper, we present WanPE, a 397B-parameter prompt enhancement model trained on 1.05M real-world videos to master director-level cinematic planning. WanPE formulates shot-level cinematic plans via video-grounded reverse construction and employs Semantic-Consistency GRPO (SC-GRPO) to faithfully preserve user requirements across shots and over time. To benchmark this capability, we curate WanPEval, a human-annotated testbed covering durations from 5 to 30 seconds across varying intent granularities, supported by approximately 11K blind pairwise assessments. When powering Wan3.0's video generator, WanPE-397B boosts human preference over raw user prompts by 10.66-18.84 points at 5-15 seconds and by a dramatic 50.86 points in the 30-second arena. Ablation studies show that reverse construction demonstrates clear superiority over forward rewriting, while SC-GRPO robustly preserves semantic fidelity across model scales. Ultimately, WanPE leads all evaluated commercial offerings at 5-15 seconds and remains competitive with Seedance 2.5 at 30 seconds.",
+      "published_date": "2026-09-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.30221",
+      "pdf_url": "https://arxiv.org/pdf/2609.30221",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.30221",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "WanPE: 面向现代文本到视频生成的电影级提示增强",
+        "chinese_summary": "WanPE 提升了 5-30 秒视频生成的用户偏好，显著优于基线模型。",
+        "pain_point": "当前文本到视频生成模型依赖复杂文本提示，难以精确控制多镜头序列的细节。",
+        "core_value": "WanPE 通过大规模训练和逆向构建方法，实现了高级别的电影级规划，显著提升了生成质量。",
+        "technical_architecture": "WanPE 采用 397B 参数的提示增强模型和 SC-GRPO 方法。",
+        "quantitative_results": "WanPE 在 5-15 秒视频生成中提升了 10.66-18.84 个点的用户偏好，30 秒视频中提升 50.86 个点。",
+        "competitors": "对比了基线模型，WanPE 在多个场景下表现更优。",
+        "limitations": "仅在特定数据集上进行了测试，未来需在更广泛的数据集上验证。",
+        "key_contributions": [
+          "提出了 WanPE 模型，显著提升文本到视频生成的质量。",
+          "引入了视频接地逆向构建方法和 SC-GRPO 方法。",
+          "构建了 WanPEval 数据集，用于评估模型性能"
+        ],
+        "application_scenarios": [
+          "电影预告片生成",
+          "广告视频生成"
+        ],
+        "technical_highlights": [
+          "大规模参数训练",
+          "视频接地逆向构建",
+          "SC-GRPO 方法确保语义一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.23407",
+      "source": "huggingface",
+      "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+      "authors": [
+        "Ruixun Liu",
+        "Yuxuan Wang",
+        "Jiacheng Xie",
+        "Yuhuan You",
+        "Donghua Cai",
+        "Junming Lin",
+        "Xiong-Hui Chen",
+        "Zhifang Guo",
+        "Yunfei Chu",
+        "Qize Yang",
+        "Xize Cheng",
+        "Jin Xu",
+        "Yiwu Zhong"
+      ],
+      "abstract": "Humans can effortlessly localize the direction of a sound source and integrate it with visual cues for reasoning, yet this remains challenging for embodied agents. In particular, it is still unclear how to effectively evaluate and model spatial audio understanding in embodied settings. To address this gap, we introduce OmniEchoBench, a unified benchmark for spatial audio-visual perception and audio-vision-language navigation. OmniEchoBench comprises six tasks over 197 real-world spatial audio-visual scenes, 2,972 question-answer pairs, and 900 navigation samples with first-order ambisonics (FOA) audio collected from 30 real-world environments. To enable scalable training supervision, we develop a controllable rendering pipeline for spatial audio. It preserves geometric consistency among sound sources, visual observations, and agent trajectories. Building on this, we propose OmniEcho, a spatially aware omni-modal model. It introduces an FOA spatial encoder alongside a pretrained semantic audio pathway. Extensive experiments show that OmniEcho achieves state-of-the-art performance on spatial audio-visual perception. For our sound-guided navigation, OmniEcho reaches a performance level close to that of traditional vision-language navigation. These results demonstrate that spatial audio can serve as a valuable signal for embodied scene reasoning and navigation, while also highlighting fine-grained spatial localization and distance estimation as important open challenges.",
+      "published_date": "2026-09-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.23407",
+      "pdf_url": "https://arxiv.org/pdf/2609.23407",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.23407",
+      "category": "llm",
+      "tags": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "OmniEcho：面向具身代理的全方位声学理解",
+        "chinese_summary": "提出了OmniEchoBench基准和OmniEcho模型，显著提升了具身代理的声学理解能力。",
+        "pain_point": "具身代理在声源定位和多模态融合推理方面存在挑战。",
+        "core_value": "通过构建统一的声视语言导航基准和提出全方位感知模型，解决了具身代理的声学理解难题。",
+        "technical_architecture": "开发了可控渲染管道和全方位感知模型，包含空间声编码器和预训练语义声路径。",
+        "quantitative_results": "在声视感知任务中达到最先进的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在30个真实环境场景中进行了测试。",
+        "key_contributions": [
+          "提出了OmniEchoBench基准",
+          "开发了可控渲染管道",
+          "提出了全方位感知模型"
+        ],
+        "application_scenarios": [
+          "声源定位",
+          "声视语言导航"
+        ],
+        "technical_highlights": [
+          "几何一致性保留",
+          "全方位声编码器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.28416",
+      "source": "huggingface",
+      "title": "Agent-Editing World Model: Rethinking World Modeling for LLM Agents",
+      "authors": [
+        "Shuang Sun",
+        "Guoxin Chen",
+        "Fanzhe Meng",
+        "Jia Deng",
+        "Huatong Song",
+        "Jinhao Jiang",
+        "Wayne Xin Zhao",
+        "Hongteng Xu",
+        "Ji-Rong Wen"
+      ],
+      "abstract": "Recent advances in large language models (LLMs) have enabled agents to tackle long-horizon tasks across diverse environments. To further improve agent performance, existing language world models typically predict environment observations, yet reconstructing high-entropy, execution-dependent tool responses offers limited value when real feedback is available. Meanwhile, agents suffer from task-state contamination, where unsupported assumptions and outdated plans persist in history and distort subsequent decisions. We propose the Agent-Editing World Model (AEWM), which models how reasoning and actions shape future task progress rather than simulating tool responses. AEWM combines Action Judge to distinguish Critical, Exploratory, and Noisy decisions with State Revision to edit noisy reasoning--action continuations from the same observed history. EditAct integrates these capabilities with real execution, directly changing the state underlying subsequent decisions rather than merely providing critiques. We train AEWM across Search, Terminal, and Software Engineering through mid-training and supervised fine-tuning. AEWM achieves 70.5\\% macro-F1 on our Action Judge benchmark, exceeding the strongest frontier baseline by 10.6 points. Across six benchmarks and three agent backbones, EditAct improves average scores by 3.2--6.7 points over the strongest baseline. Furthermore, rejection sampling fine-tuning on verified EditAct trajectories, termed AEWM-RFT, improves over Self-RFT by 2.2--2.6 points across three domains without online AEWM guidance.",
+      "published_date": "2026-09-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.28416",
+      "pdf_url": "https://arxiv.org/pdf/2609.28416",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.28416",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "代理编辑世界模型：重思LLM代理的世界建模",
+        "chinese_summary": "提出代理编辑世界模型（AEWM），通过编辑推理和动作的延续来改进代理性能。",
+        "pain_point": "现有代理存在任务状态污染问题，导致决策偏差。",
+        "core_value": "AEWM通过编辑推理和动作的延续，直接改变后续决策的基础状态，提高代理性能。",
+        "technical_architecture": "结合Action Judge和State Revision，通过编辑历史观察中的噪声推理和动作延续。",
+        "quantitative_results": "AEWM在Action Judge基准测试中达到70.5%的宏F1分数。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索AEWM在更多任务环境中的应用。",
+        "key_contributions": [
+          "提出代理编辑世界模型（AEWM）",
+          "结合Action Judge和State Revision",
+          "通过编辑历史观察中的噪声推理和动作延续"
+        ],
+        "application_scenarios": [
+          "搜索任务",
+          "终端任务",
+          "软件工程"
+        ],
+        "technical_highlights": [
+          "直接改变后续决策的基础状态",
+          "结合Action Judge和State Revision"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.29362",
+      "source": "huggingface",
+      "title": "Parts-of-Speech as Emergent Categories in SAE Latent Space",
+      "authors": [
+        "Alessandro Bondielli",
+        "Lucia Passaro",
+        "Serena Auriemma",
+        "Alessandro Lenci"
+      ],
+      "abstract": "Sparse AutoEncoders (SAEs) offer a promising way to inspect language model representations, but it is still unclear what kind of linguistic structure their latents expose. We use part-of-speech (PoS) categories as a controlled test case to study whether morpho-syntactic information is encoded by individual latents or by structured groups of features. We find that PoS distinctions are highly recoverable from SAE activations, but do not align with one-to-one latent / category mappings. This recoverability is not reducible to lexical memorisation, and Open and Closed PoS classes differ substantially. Categories are supported by compact groups of sparse latents, with substantial variation across tags. These groups remain stable on held-out data, while also showing overlap between related categories. Our results show that SAEs localise morpho-syntactic information in a distributed and category-dependent form rather than through atomic grammatical features.",
+      "published_date": "2026-09-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.29362",
+      "pdf_url": "https://arxiv.org/pdf/2609.29362",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.29362",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "SAE隐空间中词性作为涌现类别",
+        "chinese_summary": "SAE能够从激活中恢复词性类别，但不具一对一映射关系。",
+        "pain_point": "现有方法难以明确SAE隐空间中词性信息的编码方式。",
+        "core_value": "展示了SAE在分布式而非原子语法特征中定位词性信息的能力。",
+        "technical_architecture": "使用稀疏自编码器（SAE）研究词性类别。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "词性类别在不同标签上存在显著差异。",
+        "key_contributions": [
+          "展示了SAE在分布式而非原子语法特征中定位词性信息的能力。",
+          "发现词性类别由紧凑的稀疏隐特征组支持。",
+          "词性类别在不同标签上存在显著差异"
+        ],
+        "application_scenarios": [
+          "自然语言处理中的特征表示",
+          "语言模型的结构分析"
+        ],
+        "technical_highlights": [
+          "稀疏自编码器能够从激活中恢复词性类别",
+          "词性类别由紧凑的稀疏隐特征组支持"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.29892",
+      "source": "huggingface",
+      "title": "Qwen-Planner-Agent: A Closed-Loop AI-for-AI Framework for Real-World Mobile Planner Agents",
+      "authors": [
+        "Tingyu Qu",
+        "Weigao Sun",
+        "Yuecheng Liu",
+        "Yucheng Zhao",
+        "Yi Zhu",
+        "Yifeng Ding",
+        "Qiyi Wang",
+        "Sihan Cao",
+        "Pengkun Jiao",
+        "Hanlei Xie",
+        "Xiongwei Wu",
+        "Qichao Wang",
+        "Haodong Zhang",
+        "Jiajun Liu",
+        "Yuhao Wang",
+        "Yuqing Xie",
+        "Junpeng Zhao",
+        "Long Chen",
+        "Ming Ma",
+        "Sihan Yang",
+        "Ziwang Zhao",
+        "Yanhao Jia",
+        "Liangquan Gong",
+        "Feida Zhu",
+        "Yiran Zhong",
+        "Steven Hoi"
+      ],
+      "abstract": "The rapid progression of large language models is extending AI from passive content generation into the active workflows of engineering and scientific discovery. This shift raises a compelling question: can AI be both the object of development and an active participant in building next-generation AI systems? We explore this question by building Qwen-Planner-Agent within a closed-loop AI-for-AI framework for scalable development and iterative improvement. Mobile planning offers a demanding test of this approach: complex, long-horizon tasks challenge agent reliability, while costly real-device interaction limits development scalability. The framework connects data production, model training, and deployment through a shared action-feedback-verification contract. (i) AI for Data builds a human-gated agentic data flywheel in which specialized agents construct tasks, collect interaction trajectories, curate and balance training data, and use training feedback to guide subsequent data generation. (ii) AI for Training combines a supervised planning cold start with hybrid-environment online agentic reinforcement learning, where we introduce Competence-Aware Reward-and-Advantage Engineering (CARE) to reduce reasoning and tool-use costs while preserving task performance. (iii) AI drives model--harness co-evolution through an execution-evidence-driven loop that orchestrates memory, skills, and tools at runtime and feeds structured action feedback and preserved failure traces back into coordinated model and harness adaptation. Qwen-Planner-Agent achieves the best overall performance among all evaluated models and systems on MobilePA-Bench, improving over its base model across tool use, memory, skills, and sub-agent coordination. Further evaluations of our model show improvements across non-mobile agentic benchmarks while largely preserving general capabilities.",
+      "published_date": "2026-09-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.29892",
+      "pdf_url": "https://arxiv.org/pdf/2609.29892",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.29892",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": {
+        "chinese_title": "Qwen-Planner-Agent: 实现闭环AI辅助AI的移动规划代理框架",
+        "chinese_summary": "构建了一个闭环AI辅助AI框架，通过数据生成、模型训练和部署的共享合同实现移动规划代理的可靠性和可扩展性。",
+        "pain_point": "移动规划任务复杂且耗时，同时实际设备交互成本高，限制了开发的可扩展性。",
+        "core_value": "通过闭环框架提高了移动规划代理的可靠性和可扩展性。",
+        "technical_architecture": "通过数据生成、模型训练和部署的共享合同实现闭环框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证框架在更复杂任务中的适用性。",
+        "key_contributions": [
+          "构建了一个闭环AI辅助AI框架",
+          "通过数据生成、模型训练和部署的共享合同实现移动规划代理的可靠性和可扩展性",
+          "引入了能力感知的奖励和优势工程"
+        ],
+        "application_scenarios": [
+          "移动规划任务",
+          "工程和科学发现中的主动工作流"
+        ],
+        "technical_highlights": [
+          "数据生成、模型训练和部署的共享合同",
+          "能力感知的奖励和优势工程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.29444",
+      "source": "huggingface",
+      "title": "IterSynth: Rethinking Deep Search Agents via Role-Decoupled Iterative Synthesis",
+      "authors": [
+        "Xingyu Wu",
+        "Yuchen Yan",
+        "Zhengxi Lu",
+        "Siqi Chen",
+        "Xin ZHANG",
+        "Aiting Liu",
+        "Chao Deng",
+        "Jie Liu",
+        "Jin Ma",
+        "Jian Shao",
+        "Jun Xiao",
+        "Yongliang Shen"
+      ],
+      "abstract": "Deep search requires LLM agents to decompose complex queries, search for evidence, and synthesize grounded answers, yet existing ReAct-style agents suffer from two limitations: role coupling, where one policy must handle planning, evidence use, and synthesis; and context accumulation, where growing search histories introduce noise and obscure useful information. To address these issues, we propose IterSynth, a role-decoupled and summary-based paradigm that alternates between a Planner for identifying information needs and a Synthesizer for integrating evidence into an evolving summary state. This design separates planning from synthesis while using the summary as the persistent state of search, reducing both capability coupling and context noise. To train IterSynth effectively, we further introduce Role-Decoupled Policy Optimization (RDPO) for reinforcement learning, which combines terminal outcome rewards with turn-level rubric evaluations and computes role-specific advantages for more precise credit assignment. Experiments on five long-horizon deep-search benchmarks such as BrowseComp and Xbench-DS show that IterSynth-8B achieves an average score of 50.7, surpassing the strongest prior leq8B agent by +4.2\\%. Moreover, IterSynth serves as a model-agnostic prompting paradigm, delivering substantial zero-shot gains over ReAct and similar prompting paradigms on frontier proprietary models.",
+      "published_date": "2026-09-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.29444",
+      "pdf_url": "https://arxiv.org/pdf/2609.29444",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.29444",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 8,
+      "hot_score": 80,
+      "structured_summary": {
+        "chinese_title": "IterSynth: 重新思考深度搜索代理的迭代合成角色解耦方法",
+        "chinese_summary": "IterSynth 通过角色解耦和基于摘要的迭代合成，解决了现有 ReAct 模式代理的角色耦合和上下文累积问题。",
+        "pain_point": "现有 ReAct 模式代理存在角色耦合和上下文累积问题，导致规划、证据使用和合成能力耦合，以及搜索历史中的噪声增加。",
+        "core_value": "IterSynth 通过角色解耦和使用摘要作为持久状态，减少了能力耦合和上下文噪声，提高了搜索性能。",
+        "technical_architecture": "IterSynth 交替使用规划者和合成器，分别处理信息需求识别和证据整合。",
+        "quantitative_results": "IterSynth-8B 在五个长周期深度搜索基准测试中平均得分为 50.7，超过最强基线。",
+        "competitors": "对比了现有的 ReAct 模式代理。",
+        "limitations": "未来工作可能需要进一步优化角色解耦策略。",
+        "key_contributions": [
+          "提出角色解耦的迭代合成方法",
+          "引入角色解耦策略优化",
+          "在多个基准测试中表现出色"
+        ],
+        "application_scenarios": [
+          "复杂查询处理",
+          "证据搜索与合成"
+        ],
+        "technical_highlights": [
+          "角色解耦的设计",
+          "基于摘要的状态更新机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.29421",
+      "source": "huggingface",
+      "title": "Rufus-Air: An Open LLM Post-Training Recipe",
+      "authors": [
+        "Chia-Yuan Chang",
+        "Renyuan Cheng",
+        "Rui Feng",
+        "Xiaotian Han",
+        "Yuan He",
+        "Hongye Jin",
+        "Linwei Li",
+        "Shiyang Li",
+        "Fenglin Liu",
+        "Xin Liu",
+        "Priyanka Nigam",
+        "Haoyang Wen",
+        "Zhenghao Xu",
+        "Zhuocheng Xu",
+        "Bing Yin",
+        "Qingyu Yin",
+        "Chao Zhang",
+        "Rongzhi Zhang",
+        "Zhihan Zhang",
+        "Zixuan Zhang",
+        "Zixuan Zhang",
+        "Tuo Zhao"
+      ],
+      "abstract": "Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL, Instruction-Following RL, General Agent, Coding Agent, Search Agent, and RLHF. We document the data, reward design, infrastructure, stage order, and stagewise results needed to reproduce the recipe. Stages progress from basic to advanced capabilities and from hard, verifiable rewards to softer judge-based signals. Training builds on open-source components and public data, much of it used as released, without new human annotation or an in-house distillation teacher. Our main findings are that (i) diverse, high-quality SFT establishes a strong capability floor; (ii) difficulty filtering keeps RL prompts within a productive learning range; (iii) reward reliability provides a practical principle for ordering stages; and (iv) infrastructure and engineering choices are part of the recipe, not just an implementation detail. Rufus-Air improves over the official GLM-4.5-Air post-trained release and is competitive with similarly sized open models.",
+      "published_date": "2026-09-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.29421",
+      "pdf_url": "https://arxiv.org/pdf/2609.29421",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.29421",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 7,
+      "hot_score": 70,
+      "structured_summary": {
+        "chinese_title": "Rufus-Air: 一个开放的后训练LLM食谱",
+        "chinese_summary": "Rufus-Air 提供了一个开放且可复现的后训练食谱，改进了 GLM-4.5-Air-Base，并与类似规模的开放模型竞争。",
+        "pain_point": "缺乏开放且可复现的后训练方法来提升大模型性能。",
+        "core_value": "提供了一个从基础到高级能力的后训练阶段序列，确保了模型性能的逐步提升。",
+        "technical_architecture": "采用八阶段流水线：SFT、推理RL、编程RL等，逐步提升模型能力。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于开源组件和公共数据，可能在特定领域表现不如定制化模型。",
+        "key_contributions": [
+          "提供了详细的后训练阶段和数据说明",
+          "展示了从SFT到RLHF的逐步提升过程",
+          "强调了基础设施和工程选择的重要性"
+        ],
+        "application_scenarios": [
+          "大模型的后训练优化",
+          "开放模型的性能提升"
+        ],
+        "technical_highlights": [
+          "开放且可复现的后训练食谱",
+          "逐步提升模型能力的多阶段流水线"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.29028",
+      "source": "huggingface",
+      "title": "RGBD20K: A Large-Scale Benchmark for RGB-D Semantic Segmentation",
+      "authors": [
+        "Shaohua Dong",
+        "Zexuan Meng",
+        "Haiyan Sun",
+        "Bing Fan",
+        "Cuicui Zhang",
+        "Dylan Joseph",
+        "Kewei Sha",
+        "Yunhe Feng",
+        "Heng Fan"
+      ],
+      "abstract": "In this paper, we propose RGBD20K, a novel dataset for facilitating the development of more robust and general RGB-D semantic segmentation by encompassing abundant categories and high-quality annotations. RGBD20K possesses several attractive properties: (1) Expanded Semantic Space. In particular, it covers 160 fine-grained categories, largely surpassing the category diversity of existing popular RGB-D benchmarks (e.g., NYUv2 with 40 classes and SUN RGB-D with 37 classes). With such enriched semantic coverage, we expect to promote the learning of more generalizable segmentation models. (2) Larger Scale. Compared with current benchmarks, RGBD20K offers 20,000 RGB-D image pairs, providing a substantially larger training resource that benefits the development of more powerful deep models. (3) High-Fidelity Annotation. We perform rigorous re-evaluation and correction of existing labels to resolve long-standing annotation noise, resulting in a clean and reliable ground-truth foundation. Furthermore, we propose a novel score-purified fusion (SPF) method, which achieves state-of-the-art performance across all evaluated benchmarks, demonstrating the effectiveness of our approach in leveraging high-quality multimodal information for RGB-D semantic segmentation. The dataset is here: https://github.com/ShaohuaDong2021/RGBD20K/.",
+      "published_date": "2026-09-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.29028",
+      "pdf_url": "https://arxiv.org/pdf/2609.29028",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.29028",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "RGBD20K：用于RGB-D语义分割的大型基准数据集",
+        "chinese_summary": "提出了包含160个细粒度类别的RGBD20K数据集，大幅提升了RGB-D语义分割模型的泛化能力。",
+        "pain_point": "现有RGB-D语义分割数据集类别有限，难以训练出泛化能力强的模型。",
+        "core_value": "通过提供大量高质量标注和丰富类别，促进更强大泛化能力的模型开发。",
+        "technical_architecture": "提出了新的分数净化融合方法（SPF），提升了分割性能。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集仅用于语义分割任务。",
+        "key_contributions": [
+          "提供了160个细粒度类别的RGB-D数据集",
+          "提出了分数净化融合方法SPF",
+          "数据集规模达到20,000对RGB-D图像"
+        ],
+        "application_scenarios": [
+          "用于训练和评估RGB-D语义分割模型",
+          "促进模型泛化能力的提升"
+        ],
+        "technical_highlights": [
+          "包含大量高质量标注",
+          "丰富了语义类别覆盖"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

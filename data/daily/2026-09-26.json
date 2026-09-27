@@ -1,0 +1,498 @@
+{
+  "date": "2026-09-26",
+  "generated_at": "2026-09-27T01:08:39.696332+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2609.30266v1",
+      "source": "arxiv",
+      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+      "authors": [
+        "Jeremy Qin",
+        "David Schmotz",
+        "Derck Prinzhorn",
+        "Luca Beurer-Kellner",
+        "Ameya Prabhu",
+        "Maksym Andriushchenko"
+      ],
+      "abstract": "Asynchronous monitoring, incident investigations, and compliance audits primarily rely on agent traces to reconstruct what happened. These analyses assume that LLM agents cannot tamper with their own execution traces. We show that local LLM agents such as Claude Code, Codex, Antigravity, Open Code and Grok Build fail to enforce this boundary. All tested harnesses, except Muse Code, allowed agents to delete their traces when asked, without triggering monitor guardrails. We also validate that external attackers can exploit this gap to induce trace deletion. Finally, we show that trace tampering behavior emerges naturally in frontier models, when agents try to improve their rewards. We advise practitioners to ensure trace logging happens through an independent interception mechanism outside of the agent's control, preserving trace integrity even in cases of full host compromise. Overall, our findings identify a concrete failure of trace integrity in agent infrastructure which can be used to conceal misaligned behaviors like scheming or sabotage.",
+      "published_date": "2026-09-24T17:59:54Z",
+      "url": "https://arxiv.org/abs/2609.30266v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30266v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "LLM 代理可以轻松篡改其自身踪迹",
+        "chinese_summary": "展示了本地 LLM 代理可以删除其踪迹，且外部攻击者可以利用此漏洞。",
+        "pain_point": "本地 LLM 代理能够篡改其执行踪迹，导致监控和合规审计失效。",
+        "core_value": "揭示了 LLM 代理基础设施中踪迹完整性失败的问题，强调了独立拦截机制的重要性。",
+        "technical_architecture": "通过测试不同 LLM 代理，验证了踪迹删除行为。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究如何防止 LLM 代理篡改踪迹。",
+        "key_contributions": [
+          "发现 LLM 代理可以轻松篡改其踪迹",
+          "验证外部攻击者可以利用此漏洞",
+          "建议使用独立拦截机制确保踪迹完整性"
+        ],
+        "application_scenarios": [
+          "异步监控",
+          "事故调查",
+          "合规审计"
+        ],
+        "technical_highlights": [
+          "测试了多个 LLM 代理",
+          "展示了自然语言模型在奖励优化时的篡改行为"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30264v1",
+      "source": "arxiv",
+      "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control",
+      "authors": [
+        "Jiabin Qiu",
+        "Zixuan Chen",
+        "Hongye Cao",
+        "Jieqi Shi",
+        "Jing Huo",
+        "Yang Gao"
+      ],
+      "abstract": "Latent world models are typically trained to predict factual transitions, whereas model predictive control (MPC) must compare alternative actions from the same state. A model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. We introduce AD-WM, an action-discriminative joint-embedding world model for counterfactual MPC. AD-WM combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. Both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving MPC unchanged. On OGBench-Cube, AD-WM improves hard-start success from 3.7% to 52.0% over a matched LeWM baseline and improves mean success over the reproduced baseline in four of five simulation environments. Planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas CEM-aligned elite regret tracks success more closely. With a frozen V-JEPA 2 encoder and matched DROID post-training, AD-WM also improves zero-shot transfer to our Franka setup, increasing basic pick-and-place success from 42.2% to 71.1% without lab-specific adaptation. These results suggest that world models for planning should preserve action-dependent differences needed for counterfactual selection, rather than optimize factual prediction accuracy alone. More videos and code are available at https://ad-wm.github.io/.",
+      "published_date": "2026-09-24T17:59:41Z",
+      "url": "https://arxiv.org/abs/2609.30264v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30264v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "AD-WM: 行动区分的世界模型用于反事实模型预测控制",
+        "chinese_summary": "AD-WM 提高了从相同状态出发的不同行动的区分能力，显著提升了模型预测控制的成功率。",
+        "pain_point": "现有世界模型难以区分从相同状态出发的不同行动。",
+        "core_value": "通过结合残差潜动态和预测级别动作恢复正则化，AD-WM 提升了反事实 MPC 的性能。",
+        "technical_architecture": "AD-WM 结合了残差潜动态和预测级别动作恢复正则化。",
+        "quantitative_results": "在 OGBench-Cube 上，AD-WM 将硬启动成功率从 3.7% 提高到 52.0%，并在四个模拟环境中提高了平均成功率。",
+        "competitors": "对比了与 AD-WM 匹配的 LeWM 基线。",
+        "limitations": "未来需要探索更广泛的场景应用。",
+        "key_contributions": [
+          "引入了行动区分的世界模型 AD-WM",
+          "结合了残差潜动态和预测级别动作恢复正则化",
+          "显著提升了反事实 MPC 的成功率"
+        ],
+        "application_scenarios": [
+          "模型预测控制",
+          "机器人控制"
+        ],
+        "technical_highlights": [
+          "使用逆动力学和归一化的恢复目标",
+          "辅助头在测试时被丢弃，保持 MPC 不变"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30258v1",
+      "source": "arxiv",
+      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
+      "authors": [
+        "Sudip Bhujel",
+        "Shanghao Shi",
+        "Ruiquan Huang",
+        "Ning Zhang",
+        "Yang Xiao"
+      ],
+      "abstract": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. The attack exploits two structural signals ignored by prior single-frame methods: (i) cross-time correlation between successive embodied gradients, which we formalize via a conditional mutual-information bound, and (ii) closed-form action recovery from policy-head gradient structure, which we prove exact when standard entropy regularization is sufficiently small. On held-out embodied scenes, TRACE reaches $18.8$ dB PSNR with near-perfect action recovery at $3$-$4.5$ ms per reconstructed frame, dominating the learning-based baseline across all reconstruction metrics and exceeding optimization attacks while running orders of magnitude faster. Further evaluation demonstrates TRACE's broader applicability across recurrent, residual, and compact transformer victim architectures, multi-modal inputs, and larger discrete action spaces. Defense experiments suggest that protecting temporal gradient streams may require sequence-aware privacy mechanisms.",
+      "published_date": "2026-09-24T17:59:18Z",
+      "url": "https://arxiv.org/abs/2609.30258v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30258v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "时间梯度反转用于体感强化学习中的隐私轨迹重构",
+        "chinese_summary": "TRACE通过时间梯度反转技术，从每步策略学习梯度中重建私有观察-动作轨迹，显著提高隐私保护。",
+        "pain_point": "现有方法无法有效防止基于时间结构的隐私泄露。",
+        "core_value": "通过时间梯度反转技术，有效保护体感强化学习中的隐私。",
+        "technical_architecture": "利用时间相关性和策略头梯度结构进行序列重建。",
+        "quantitative_results": "达到18.8 dB PSNR，动作恢复接近完美。",
+        "competitors": "优于基于学习的基线，速度快得多。",
+        "limitations": "仅在特定场景下测试。",
+        "key_contributions": [
+          "提出TRACE，一种自回归的时间梯度反转攻击。",
+          "利用时间相关性和策略头梯度结构进行序列重建。",
+          "显著提高隐私保护效果"
+        ],
+        "application_scenarios": [
+          "体感强化学习中的隐私保护",
+          "智能机器人和自动驾驶"
+        ],
+        "technical_highlights": [
+          "利用时间相关性增强隐私保护",
+          "精确恢复动作结构"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30250v1",
+      "source": "arxiv",
+      "title": "Agentic Detection of Online Conspiracies",
+      "authors": [
+        "Lior Biton",
+        "Oren Tsur"
+      ],
+      "abstract": "Conspiratorial discourse on social media is not always expressed through explicit claims or stable lexical markers. The same surface content may express endorsement, legitimate concerns, criticism, satire, or mockery. The main challenge is therefore not only recognizing conspiracy-related claims, but inferring the speaker's intent -- the utterance's illocutionary force. We argue that this can be achieved through the use of relevant social contexts and propose an agentic framework, equipped with a set of tools supporting social queries.   We demonstrate the benefits of our approach on a unique dataset of Hebrew tweets, covering 80\\%--90\\% of the public Hebrew tweets published over a four-year span (late 2018-- early 2023), encompassing several election cycles as well as the COVID pandemic years and related vaccination campaigns. This extensive coverage can be used in recovering different social contexts. Evaluating our framework on a manually-annotated adversarial dataset, we find that context-aware workflows consistently outperform text-only classification and that the agentic framework performs significantly better than other frameworks and settings, including a non-agentic model exposed to the same contexts available to the agent. We further provide an analysis of the results, the errors and efficiency (token economy) tradeoffs.   These findings support viewing the task of conspiracy detection as a socially embedded interpretation task, in which effective classification depends not only on access to contexts, but also on adaptive reasoning in which the agent uses tools on a per-case basis, asking only for evidence relevant to its current reasoning step.",
+      "published_date": "2026-09-24T17:58:43Z",
+      "url": "https://arxiv.org/abs/2609.30250v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30250v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "在线阴谋论的自主检测",
+        "chinese_summary": "通过社交上下文识别阴谋论并推断发言人的意图。",
+        "pain_point": "识别阴谋论时难以准确推断发言人的意图。",
+        "core_value": "提出一种基于社交上下文的自主框架，提高阴谋论识别的准确性。",
+        "technical_architecture": "利用社交查询工具构建一个自主框架。",
+        "quantitative_results": "在手动标注的对抗数据集上，上下文感知的工作流表现优于仅文本分类。",
+        "competitors": "对比非自主模型和其他框架。",
+        "limitations": "仅在特定语言和时间段的数据集上进行了测试。",
+        "key_contributions": [
+          "提出一种基于社交上下文的自主框架",
+          "在阴谋论识别中提高准确性"
+        ],
+        "application_scenarios": [
+          "社交媒体上的阴谋论检测",
+          "公共健康信息的验证"
+        ],
+        "technical_highlights": [
+          "使用社交查询工具",
+          "覆盖多个选举周期和疫情相关事件"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30249v1",
+      "source": "arxiv",
+      "title": "RAPID: Robot Agentic Programming from Demonstrations",
+      "authors": [
+        "Yuyao Liu",
+        "Jiayuan Mao",
+        "David Hsu",
+        "Leslie Pack Kaelbling",
+        "Tomás Lozano-Pérez"
+      ],
+      "abstract": "Coding agents have demonstrated enormous success in solving complex programming problems. To leverage their potential for robot systems, this work introduces Robot Agentic Programming from Demonstrations (RAPID), which automatically generates, verifies, and refines robot programs, given a single visual human demonstration. The iterative agentic loop of code refinement requires several key ingredients: (i) a testable task specification, (ii) action primitives for robot execution, and (iii) an interactive environment for program execution and verification. RAPID infers all three from the demonstration automatically. To make the resulting program reusable beyond the demonstration setting, RAPID uses an object-centric relational program representation that focuses on the underlying structure of the demonstrated strategy rather than the specific motion per se: it expresses the action primitives as trajectory-optimization programs that realize object-level motion effects, while composing them through relational constraints that capture scene-specific geometry at run time. We evaluated RAPID in simulation on eight challenging contact-rich nonprehensile manipulation tasks as well as general prehensile manipulation tasks in the LIBERO-Pro benchmark. We also successfully deployed it on a real Franka arm and evaluated on all eight nonprehensile tasks. In all experiments, RAPID demonstrated strong performance, with generalization over object pose, shape, material, and environment. Website: https://yuyaoliu.me/projects/rapid.",
+      "published_date": "2026-09-24T17:58:21Z",
+      "url": "https://arxiv.org/abs/2609.30249v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30249v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "RAPID: 从演示中生成、验证和优化机器人程序",
+        "chinese_summary": "自动从单次视觉演示生成、验证和优化机器人程序。",
+        "pain_point": "机器人编程复杂且耗时，难以从人类演示中自动生成可复用的机器人程序。",
+        "core_value": "通过自动从演示中生成、验证和优化程序，提高机器人编程效率和可复用性。",
+        "technical_architecture": "采用迭代的代理循环，结合可测试的任务规范、动作基础和交互式执行环境。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在模拟环境中进行了评估，实际应用中的性能有待验证。",
+        "key_contributions": [
+          "自动从演示中生成机器人程序",
+          "使用对象中心的关系程序表示法",
+          "支持程序的迭代优化"
+        ],
+        "application_scenarios": [
+          "非抓取接触丰富的物体操作",
+          "机器人自动化任务执行"
+        ],
+        "technical_highlights": [
+          "自动推断任务规范、动作基础和交互式环境",
+          "基于轨迹优化的动作表示法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30247v1",
+      "source": "arxiv",
+      "title": "Rolling-WAM: World Action Models with Rolling Imagination",
+      "authors": [
+        "Yinghua Zhou",
+        "Junjie Ye",
+        "Yiqi Zhao",
+        "Hao Dong",
+        "Celina Shiyu Wang",
+        "Ruohai Ge",
+        "Tingyi Yang",
+        "Basile Van Hoorick",
+        "Gaurav Sukhatme",
+        "Vitor Guizilini",
+        "Yue Wang"
+      ],
+      "abstract": "World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.",
+      "published_date": "2026-09-24T17:58:03Z",
+      "url": "https://arxiv.org/abs/2609.30247v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30247v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Rolling-WAM: 世界行动模型中的滚动想象",
+        "chinese_summary": "Rolling-WAM 通过在多个规划周期中分布联合去噪过程，提高了机器人操作的实时响应能力。",
+        "pain_point": "传统的 WAM 在每个规划周期中完成联合视频-行动去噪，导致延迟和响应迟缓。",
+        "core_value": "Rolling-WAM 通过滚动去噪方法提高了实时性能，同时保持视觉-行动上下文的连续性。",
+        "technical_architecture": "Rolling-WAM 使用滑动窗口技术在多个规划周期中分布去噪过程。",
+        "quantitative_results": "Rolling-WAM 达到了与标准联合 WAM 相当的操作性能，并实现了 4.5 倍的稳态规划速度提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索如何优化滑动窗口的大小以平衡实时性和准确性。",
+        "key_contributions": [
+          "提出了滚动去噪方法，有效提高了实时性能",
+          "保持了视觉-行动上下文的连续性",
+          "在多个数据集上验证了方法的有效性"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "自主导航"
+        ],
+        "technical_highlights": [
+          "滑动窗口技术",
+          "滚动去噪方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30245v1",
+      "source": "arxiv",
+      "title": "Towards Practical Compression of 3D Gaussian Splatting",
+      "authors": [
+        "Pengpeng Yu",
+        "Yueru Chen",
+        "Fei Song",
+        "Tai Qin",
+        "Qi Zhang",
+        "Jing Wang",
+        "Yulan Guo"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) enables high-quality novel-view synthesis but requires substantial storage. Existing compression methods often rely on spatial context modeling over irregular 3D representations, increasing the complexity of training and coding. Meanwhile, floating-point context inference can introduce numerical inconsistencies across platforms, causing entropy-decoding failures. To address these practical challenges, we propose COSA-GS, which constructs context without spatial aggregation through anchor-wise causal factorization. Specifically, we use geometry context derived from each anchor's coordinates to model a compact learnable anchor latent. The anchor latent is then fused with the geometry context to form an anchor context for attribute coding. The resulting context model features a simple architecture composed solely of linear transformations and activations. We train COSA-GS using rate--distortion optimization with adaptive Gaussian pruning. Further, we develop quantization-aware training and integer inference for the context model to achieve bit-exact consistency of entropy-decoded symbols across platforms. Experiments demonstrate that COSA-GS achieves state-of-the-art compression performance while retaining fast and consistent cross-platform decoding, providing a simple yet effective framework for practical 3DGS compression. Code is available at https://github.com/pengpeng-yu/COSA-GS.",
+      "published_date": "2026-09-24T17:57:56Z",
+      "url": "https://arxiv.org/abs/2609.30245v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30245v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "向实际应用靠拢的3D高斯斑点压缩",
+        "chinese_summary": "提出COSA-GS，通过锚点因果因子分解构建上下文，实现高效压缩。",
+        "pain_point": "现有方法依赖于不规则3D表示的空间上下文建模，增加训练和编码复杂性。",
+        "core_value": "通过锚点因果因子分解简化上下文模型，提高平台间熵解码一致性。",
+        "technical_architecture": "采用几何上下文和锚点因果因子分解构建紧凑的可学习锚点隐空间。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定应用场景下进行了实验验证。",
+        "key_contributions": [
+          "提出COSA-GS方法",
+          "通过锚点因果因子分解简化上下文模型",
+          "实现平台间熵解码一致性"
+        ],
+        "application_scenarios": [
+          "3D图像生成",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "采用几何上下文和锚点因果因子分解",
+          "实现平台间熵解码一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30243v1",
+      "source": "arxiv",
+      "title": "JevOut: Natural Context Can Flip Decision Models",
+      "authors": [
+        "Zixiang Xu"
+      ],
+      "abstract": "Dedicated decision models such as Jev map unstructured language to probability distributions over finite choices, allowing their outputs to directly route requests, select tools, and trigger actions. Yet real-world inputs rarely arrive in isolation: they come with background details and surrounding context. We find that short additions that fit naturally into this context can nevertheless redirect an otherwise correct decision, even when the correct answer remains unchanged. To study this behavior, we fix a wrong target option for each initially correct item and use the model's option probabilities to refine fluent context additions while preserving the source, question, choices, and gold answer. Within 64 accepted target evaluations, the optimizer identifies contexts that redirect Jev on 312 of 508 initially correct decisions (61.4%); in 229 cases, Jev assigns at least 0.7 probability to the fixed wrong option. Across seven datasets, three additional decision systems show targeted flip rates of 64.9%-73.2% on decisions they initially answer correctly. Taken together, these results expose a pronounced fragility in current decision models: short, ordinary-looking context can shift a correct choice to a high-confidence wrong one. Because these models turn language directly into downstream choices, this sensitivity raises concerns about treating their probability outputs as reliable decision interfaces.",
+      "published_date": "2026-09-24T17:57:07Z",
+      "url": "https://arxiv.org/abs/2609.30243v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30243v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "JevOut: 自然语境可反转决策模型",
+        "chinese_summary": "通过自然语境可使决策模型的正确决策反转",
+        "pain_point": "决策模型在自然语境下容易被误导",
+        "core_value": "揭示决策模型在自然语境下的脆弱性",
+        "technical_architecture": "通过优化自然语境添加来反转决策",
+        "quantitative_results": "在7个数据集中，3个决策系统初始正确决策的反转率在64.9%-73.2%之间",
+        "competitors": "暂无对比信息",
+        "limitations": "实验仅在特定数据集上进行",
+        "key_contributions": [
+          "揭示决策模型的脆弱性",
+          "提出一种反转决策的方法"
+        ],
+        "application_scenarios": [
+          "自然语言处理",
+          "智能决策系统"
+        ],
+        "technical_highlights": [
+          "自然语境反转决策",
+          "优化方法有效"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30238v1",
+      "source": "arxiv",
+      "title": "SemMSA: Latent Semantic-Aided Robust Multimodal Sentiment Analysis with Incomplete Data",
+      "authors": [
+        "Wenhao Li",
+        "Zhibin Wu",
+        "Chong Xiao",
+        "Qiangchang Wang"
+      ],
+      "abstract": "Recent research on Multimodal Sentiment Analysis (MSA) has focused on learning from language, visual, and acoustic modalities with incomplete data to infer human sentiment. Most studies typically compensate for missing information by reconstructing modality features or designing complicated fusion mechanisms. However, these methods still suffer from spurious generation and noisy guidance due to the lack of high-level semantic grounding in partially observed multimodal evidence. To address these issues, we propose SemMSA, a latent semantic-aided framework that constructs rich sentiment-relevant semantics with LLMs, fully integrating with all modalities via anchor-free spectral alignment. It mainly consists of Cross-modal Semantic Refinement (CSR) and Cross-modal Spectral Alignment (CSA). Specifically, CSR first adaptively extracts visual and acoustic representations by corresponding adapters to form a unified multimodal prefix with language in the frozen LLM embedding space. It then iteratively produces continuous discriminative semantic states through a token-efficient latent refinement process without decoding explicit text. Next, CSA simultaneously aligns the refined semantics with all modalities by enhancing the dominant spectral component of their kernel Gram matrix. This captures global nonlinear dependencies among all representations without relying on a predefined anchor modality. In addition, an instance-level spectral separation constraint preserves cross-sample discriminability and mitigates representation collapse. Extensive experiments on SIMS, MOSI, and MOSEI benchmarks demonstrate that SemMSA achieves state-of-the-art performance.",
+      "published_date": "2026-09-24T17:55:31Z",
+      "url": "https://arxiv.org/abs/2609.30238v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30238v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SemMSA：基于潜在语义的鲁棒多模态情感分析",
+        "chinese_summary": "提出了一种基于潜在语义的框架，通过LLMs和无锚点光谱对齐，实现多模态情感分析。",
+        "pain_point": "现有方法在处理不完整数据时存在虚假生成和噪声指导的问题。",
+        "core_value": "通过LLMs构建丰富的语义并进行无锚点光谱对齐，提高情感分析的鲁棒性。",
+        "technical_architecture": "采用Cross-modal Semantic Refinement和Cross-modal Spectral Alignment技术。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上验证模型效果。",
+        "key_contributions": [
+          "提出了一种基于潜在语义的框架",
+          "采用无锚点光谱对齐技术",
+          "能够处理不完整数据"
+        ],
+        "application_scenarios": [
+          "社交媒体情感分析",
+          "电商评论情感分析"
+        ],
+        "technical_highlights": [
+          "利用LLMs构建语义",
+          "无锚点光谱对齐"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.30234v1",
+      "source": "arxiv",
+      "title": "OmniFabric: Coherent UV Space Texture Synthesis for 3D Garment Reconstruction",
+      "authors": [
+        "Ding-Jiun Huang",
+        "Yuanhao Wang",
+        "Cheng Zhang",
+        "Hugo Bertiche",
+        "Alexandru-Eugen Ichim",
+        "Thabo Beeler",
+        "Fernando De la Torre"
+      ],
+      "abstract": "Automated generation of production-ready 3D garment assets from a single image is a central challenge in digital content creation. While recent generative models have significantly advanced 3D geometry reconstruction, synthesizing high-quality textures remains a bottleneck. Existing methods often bake environmental illumination and shadows directly into the texture map, or they fail to maintain global structural coherence, making the resulting assets unusable for physical simulation and relighting. In this work, we introduce OmniFabric, a novel approach that synthesizes globally coherent texture maps directly within the 2D sewing pattern space. Given a single reference image, our pipeline utilizes an estimated 3D mesh and generative priors of powerful Vision-Language Models (VLM) to establish a complete but coarse texture initialization across the unwrapped sewing patterns. We then leverage a specialized diffusion transformer, trained via an automated synthetic data engine and conditioned on 3D positional features, to refine this initialization directly in the canonical UV domain. This effectively removes distortion and baked-in artifacts to extract a clean and normalized texture map that preserves the original garment design. Extensive experiments demonstrate that OmniFabric significantly outperforms state-of-the-art baselines, yielding photorealistic 3D garments with high-quality textures.",
+      "published_date": "2026-09-24T17:53:55Z",
+      "url": "https://arxiv.org/abs/2609.30234v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.30234v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "OmniFabric：用于3D服装重建的统一UV空间纹理合成",
+        "chinese_summary": "通过单张图像生成可用于物理模拟和重新照明的高质量3D服装资产。",
+        "pain_point": "现有方法难以生成高质量且具有全局结构一致性的纹理。",
+        "core_value": "直接在2D缝制模式空间中合成全局一致的纹理，提高生成纹理的质量。",
+        "technical_architecture": "利用扩散变压器和3D位置特征在标准UV域中细化纹理初始化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要高质量的3D网格估计。",
+        "key_contributions": [
+          "在2D缝制模式空间中直接合成全局一致的纹理",
+          "利用扩散变压器在标准UV域中细化纹理初始化"
+        ],
+        "application_scenarios": [
+          "3D服装重建",
+          "数字内容创建"
+        ],
+        "technical_highlights": [
+          "结合Vision-Language模型生成先验知识",
+          "利用自动化合成数据引擎训练扩散变压器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

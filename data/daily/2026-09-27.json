@@ -1,0 +1,487 @@
+{
+  "date": "2026-09-27",
+  "generated_at": "2026-09-28T01:27:13.803862+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2609.31371v1",
+      "source": "arxiv",
+      "title": "Towards Understanding LLM-Based Log Anomaly Detection: An Empirical Study of Performance, Efficiency, and Robustness",
+      "authors": [
+        "Bin Li",
+        "Dongdong Wang",
+        "Siyang Lu"
+      ],
+      "abstract": "Large language models (LLMs) have demonstrated promising performance in log anomaly detection, yet how their adaptation strategies, architectures, and deployment configurations affect detection effectiveness remains insufficiently understood. To investigate these factors, we conduct a systematic empirical analysis across three public log datasets, examining different adaptation strategies, model architectures, parameter scales, and quantization settings. Our results reveal substantial performance differences across adaptation strategies, while model scaling yields varying detection gains across datasets. We further observe that models with comparable detection accuracy can exhibit markedly different computational costs, and that low-bit quantization largely preserves detection performance in the evaluated configurations. Finally, we examine detection robustness under structural, semantic, and label noise at different perturbation levels. These findings provide empirical insights into the performance, efficiency, and robustness of LLM-based log anomaly detection, highlighting practical considerations beyond conventional accuracy-oriented evaluation.",
+      "published_date": "2026-09-25T15:08:16Z",
+      "url": "https://arxiv.org/abs/2609.31371v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31371v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于大语言模型的日志异常检测理解：性能、效率和鲁棒性实证研究",
+        "chinese_summary": "研究发现不同适应策略、模型架构和量化设置对大语言模型日志异常检测性能、效率和鲁棒性的影响。",
+        "pain_point": "现有研究对大语言模型在日志异常检测中的适应策略、架构和部署配置影响理解不足。",
+        "core_value": "提供大语言模型日志异常检测的实证分析，揭示其性能、效率和鲁棒性。",
+        "technical_architecture": "系统性地分析了不同适应策略、模型架构、参数规模和量化设置。",
+        "quantitative_results": "发现不同适应策略性能差异显著，模型缩放对不同数据集检测效果影响不同。",
+        "competitors": "暂无对比信息",
+        "limitations": "未全面覆盖所有可能的噪声类型。",
+        "key_contributions": [
+          "揭示不同适应策略对检测性能的影响",
+          "发现模型缩放对不同数据集检测效果的影响",
+          "观察到低比特量化对检测性能的保留效果"
+        ],
+        "application_scenarios": [
+          "日志异常检测",
+          "系统监控与故障诊断"
+        ],
+        "technical_highlights": [
+          "系统性实证分析",
+          "全面评估适应策略、模型架构和量化设置"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31368v1",
+      "source": "arxiv",
+      "title": "Equation discovery with Bayesian tree-adjoining grammars",
+      "authors": [
+        "Christopher A. Lindley",
+        "Nikolaos Dervilis",
+        "Keith Worden"
+      ],
+      "abstract": "Tree-Adjoining Grammars (TAGs) have recently been introduced to Nonlinear System Identification (NLSI) as a means of encoding an entire model class as a finite set of grammatical rules, from which candidate models are assembled as trees. Existing TAG-based identifiers rely on evolutionary optimisation and return point estimates of the model structure. This paper instead proposes the TAG framework within a Bayesian setting. A generative prior is defined over tree structures and their parameters, and a Reversible-Jump MCMC sampler with structure-preserving tree moves is used to infer the joint posterior over model structure, parameters and predictions. Two training objectives are considered; that is, a one-step-ahead objective with conjugate parameter proposals, and a simulation-based objective handled by likelihood-free inference. The approach is validated on a simulated polynomial NARX system, the Silverbox benchmark, and wave-loading data from the Christchurch Bay Tower, where embedding Morison's equation as a fixed initial tree yields a grey-box model that outperforms the physics-driven baseline. The results demonstrate that Bayesian TAGs are well suited to quantifying uncertainty in equation discovery for dynamical systems and to fitting physics-informed models.",
+      "published_date": "2026-09-25T15:04:40Z",
+      "url": "https://arxiv.org/abs/2609.31368v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31368v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "stat.ML",
+        "cs.LG",
+        "eess.SY",
+        "stat.CO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于贝叶斯树归结文法的方程发现",
+        "chinese_summary": "提出基于贝叶斯树归结文法的方程发现方法，通过结构保留的树移动和Reversible-Jump MCMC采样器进行模型结构、参数和预测的联合后验推断。",
+        "pain_point": "现有方法依赖进化优化，仅提供点估计，缺乏不确定性量化。",
+        "core_value": "提出贝叶斯框架下的树归结文法，能够进行联合后验推断，量化不确定性。",
+        "technical_architecture": "使用Reversible-Jump MCMC采样器和结构保留的树移动进行后验推断。",
+        "quantitative_results": "在模拟系统和实际数据上表现优于物理驱动基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定系统上验证。",
+        "key_contributions": [
+          "提出贝叶斯树归结文法",
+          "使用Reversible-Jump MCMC采样器",
+          "进行联合后验推断"
+        ],
+        "application_scenarios": [
+          "非线性系统识别",
+          "物理驱动模型优化"
+        ],
+        "technical_highlights": [
+          "结构保留的树移动",
+          "Reversible-Jump MCMC采样器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31364v1",
+      "source": "arxiv",
+      "title": "OpenVAM: Open-World Visual Attention Modeling with VLMs",
+      "authors": [
+        "Kiana Hooshanfar",
+        "Amirhossein Kazerouni",
+        "Alireza Hosseini",
+        "Michael Brudno",
+        "Babak Taati"
+      ],
+      "abstract": "Predicting human gaze is a core capability for applications ranging from web/UI design analysis to robotics and human-computer interaction. Yet, most visual attention modeling methods output only a dense saliency map, which is often insufficient for action: practitioners need to connect attention peaks to discrete elements in the scene (what) and understand the drivers of those peaks in context (why), while remaining robust to domain shift across natural images, commercial content, and UI/web layouts. We, therefore, introduce OpenVAM (Open-world Visual Attention Modeling with VLMs), a unified framework that jointly addresses universality and explainability across heterogeneous domains (natural scenes, commercial imagery, and UI/web layouts) and supervision modalities. OpenVAM adopts a decoupled-but-aligned design: a dedicated dense visual pathway provides stable, spatially precise localization, while an instruction-following vision--language semantic head generates grounded what/why explanations conditioned on the same image and data-type prompts. A three-stage training strategy preserves strong localization priors while progressively introducing language grounding and improving explanation alignment via parameter-efficient adaptation without perturbing the saliency branch. We further propose a scalable pipeline to generate multi-domain saliency-reason annotations for training and systematic evaluation. Experiments across diverse datasets show that OpenVAM improves robustness under domain shift while producing image-grounded explanations that make saliency predictions more interpretable.",
+      "published_date": "2026-09-25T14:59:14Z",
+      "url": "https://arxiv.org/abs/2609.31364v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31364v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "OpenVAM: 开放世界视觉注意力建模",
+        "chinese_summary": "提出了一种统一框架OpenVAM，能够跨不同领域和监督模态进行视觉注意力建模。",
+        "pain_point": "现有方法仅输出密集的注意力图，难以连接注意力峰值与场景中的离散元素，并理解其上下文驱动因素。",
+        "core_value": "提供了一种同时解决通用性和可解释性的统一框架，适用于自然场景、商业图像和UI/网页布局。",
+        "technical_architecture": "采用解耦但对齐的设计，结合稳定的视觉路径和指令跟随的视觉-语言语义头。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证在更多样化场景中的鲁棒性。",
+        "key_contributions": [
+          "提出了一种统一框架OpenVAM",
+          "结合视觉路径和视觉-语言语义头",
+          "支持跨不同领域和监督模态"
+        ],
+        "application_scenarios": [
+          "网页设计分析",
+          "机器人",
+          "人机交互"
+        ],
+        "technical_highlights": [
+          "解耦但对齐的设计",
+          "指令跟随的视觉-语言语义头"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31363v1",
+      "source": "arxiv",
+      "title": "Brenier Meets Adversarial Training: Optimal Transport Geometry for Robust Learning",
+      "authors": [
+        "Alireza Abdollahpoorrostam",
+        "Ehsan Sharifian",
+        "Buse Şen",
+        "Marco Cuturi",
+        "Daniel Kuhn"
+      ],
+      "abstract": "Distributionally robust optimization (DRO) provides a principled framework for learning under distribution shift, but its practical use is hindered by the difficulty of evaluating worst-case risks for nonconvex loss functions. We study a penalized DRO formulation in which the adversary may choose any distribution but incurs a Wasserstein penalty for deviating from the empirical distribution. We show that the adversary's problem can be reformulated as an optimization problem over transport maps that push empirical samples to adversarial ones, and we prove that optimal maps are cyclically monotone. We also show that standard adversarial training---based on per-sample local optimization---violates cyclical monotonicity and wastes transport costs unless the adversary is severely restricted. We propose two remedies. First, we introduce multi-start particle ascent, which alternates parallel gradient ascent with reassignment to enforce cyclical monotonicity across samples. Second, we parameterize adversarial maps as gradients of input-convex neural networks, which guarantees cyclical monotonicity by construction. Experiments on robust regression, image classification, and robust control show that our methods consistently outperform standard adversarial training and state-of-the-art baselines, achieving improved robustness and better generalization under distribution shift.",
+      "published_date": "2026-09-25T14:57:04Z",
+      "url": "https://arxiv.org/abs/2609.31363v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31363v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "math.OC",
+        "stat.ML"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Brenier 遇上对抗训练：稳健学习的最优传输几何",
+        "chinese_summary": "提出了一种基于最优传输的分布鲁棒优化方法，通过推导运输映射优化对抗样本，改进了标准对抗训练。",
+        "pain_point": "现有分布鲁棒优化方法难以处理非凸损失函数的最坏情况风险评估。",
+        "core_value": "通过最优传输映射优化对抗样本，提高了对抗训练的效率和效果。",
+        "technical_architecture": "基于最优传输的分布鲁棒优化框架，通过推导运输映射优化对抗样本。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前方法主要应用于回归、图像分类和控制领域，未来可扩展性有待验证。",
+        "key_contributions": [
+          "提出了一种基于最优传输的分布鲁棒优化方法",
+          "证明了最优运输映射的循环单调性",
+          "提出了多启动粒子上升算法和基于输入凸神经网络的对抗映射参数化"
+        ],
+        "application_scenarios": [
+          "回归任务",
+          "图像分类",
+          "控制任务"
+        ],
+        "technical_highlights": [
+          "优化运输映射以生成对抗样本",
+          "保证循环单调性的对抗映射参数化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31360v1",
+      "source": "arxiv",
+      "title": "Programs-of-Layers in LLMs through the Lens of Cortical Areas",
+      "authors": [
+        "Justus Westerhoff",
+        "Stephan Olbrich",
+        "Hatem Oraby",
+        "Matthew Evan Larkum",
+        "Felix Alexander Gers"
+      ],
+      "abstract": "Inference in LLMs is conventionally a fixed-depth, fixed-order forward pass through every layer, regardless of how difficult the input is. The human brain does not work this way: using the thalamus as a central hub, it routes information flexibly to all regions of the cortex according to demand. Li et al. (2026) recently showed, with a system they call program-of-layers (PoLar), that transformers can be given an analogous flexibility if their layers are treated as a library of functions rather than a fixed sequence. Performance improves over the standard forward pass when each input is dynamically routed through an adaptive sequence of skipped or repeated contiguous layer blocks. We reconstructed PoLar's diagnostic MCTS in more detail than the original paper and applied it across 5 models. We reproduced several of PoLar's findings: skipping outperformed the standard pass, repeating outperformed skipping, and combining both outperformed either alone. Shorter programs sufficed for easier questions, while harder questions required more layer repeats. However, we failed to replicate the main claim regarding their learned router for single-shot inference: its top-ranked prediction consistently collapsed back to the standard pass, even though its top-k predicted programs, taken together, did show a real accuracy gain. Beyond reproduction, we find that a small number of generic programs are enough to solve most of the questions. We also provide a much deeper analysis of these programs' structure and robustness: for example, we found that programs that correct errors are highly brittle: undoing even a single edit inside a program typically breaks the correction. Connecting this to the brain's routing mechanisms, PoLar mirrors principles of thalamo-cortical coordination between cortical-area-like transformer layers. We publicly release the code at https://datexis.github.io/RE-PoLar/",
+      "published_date": "2026-09-25T14:55:50Z",
+      "url": "https://arxiv.org/abs/2609.31360v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31360v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "通过皮层区域视角看LLMs中的Programs-of-Layers",
+        "chinese_summary": "通过动态路由机制，LLMs在处理不同难度输入时表现出更优性能。",
+        "pain_point": "现有LLMs在处理不同难度输入时缺乏灵活性。",
+        "core_value": "提出Programs-of-Layers方法，使LLMs能够根据输入动态调整处理流程。",
+        "technical_architecture": "将Transformer的层视为函数库，动态路由信息至不同层块。",
+        "quantitative_results": "动态路由比固定顺序处理更优，组合策略优于单一策略。",
+        "competitors": "暂无对比信息",
+        "limitations": "未能完全复制关于单次推理中学习路由器的主要发现。",
+        "key_contributions": [
+          "提出Programs-of-Layers方法",
+          "动态路由机制提高模型性能",
+          "不同难度问题需要不同长度的处理程序"
+        ],
+        "application_scenarios": [
+          "自然语言生成",
+          "对话系统"
+        ],
+        "technical_highlights": [
+          "动态路由机制",
+          "灵活处理不同难度输入"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31358v1",
+      "source": "arxiv",
+      "title": "A Safety-Bounded SDC-to-MCP Gateway for Medical AI Agents",
+      "authors": [
+        "Bennet Gerlach",
+        "Stefan Fischer"
+      ],
+      "abstract": "The Model Context Protocol (MCP) provides a common interface through which AI applications discover and use external resources and tools. It allows language-model agents to ground their reasoning in current system state and interact with heterogeneous services. In medical environments, however, exposing device state and action affordances requires deterministic constraints on possible effects. We present an IEEE 11073 Service-Oriented Device Connectivity (SDC)-to-MCP gateway that exposes metrics, alarms, context references, and semantic metadata as read-only resources, while representing selected action affordances as policy-validated dry-run tools. The term safety-bounded denotes a narrow no-execution property: agent-facing requests dispatch no SDC device operation. A Python prototype supports simulated fault and lifecycle experiments, a software-reference protocol path spanning independent Java and Python implementations, deterministic baselines, representation ablations, and multi-model agent evaluation. The results show semantically explicit resource exposure, visible rejection of invalid or outdated state, and preservation of the no-execution boundary across resource, proposal, and authorization paths. Explicit semantic metadata improved conformity to required metric identifiers in structured alarm outputs relative to a generic representation, while retained structured-output failures reveal a distinction between plausible narrative answers and task-compliant machine-readable results.",
+      "published_date": "2026-09-25T14:54:21Z",
+      "url": "https://arxiv.org/abs/2609.31358v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31358v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "医疗AI代理的安全边界SDC到MCP网关",
+        "chinese_summary": "提出了一种安全边界SDC到MCP网关，确保AI代理仅访问读取资源而不执行任何操作。",
+        "pain_point": "医疗环境中，暴露设备状态和操作能力需要确定性的约束。",
+        "core_value": "提供了一种安全边界机制，确保AI代理仅访问读取资源而不执行任何操作。",
+        "technical_architecture": "采用Python原型实现，支持模拟故障和生命周期实验。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在模拟环境中进行了实验。",
+        "key_contributions": [
+          "提出了一种安全边界SDC到MCP网关",
+          "实现了读取资源的严格无执行边界",
+          "支持多模型代理评估"
+        ],
+        "application_scenarios": [
+          "医疗环境中的AI代理",
+          "医疗设备状态监控"
+        ],
+        "technical_highlights": [
+          "支持多模型代理评估",
+          "实现严格的无执行边界"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31356v1",
+      "source": "arxiv",
+      "title": "Open Vocabulary Domain Unlearning",
+      "authors": [
+        "Sumanth Udupa",
+        "Mehrtash Harandi",
+        "Yadan Luo",
+        "Mahsa Baktashmotlagh"
+      ],
+      "abstract": "Vision-Language Models (VLMs) exhibit remarkable zero-shot generalization, yet they often encode unwanted or hazardous stylistic domains such as idealized textbook diagrams in medical AI or cartoon vehicles in autonomous driving. Approximate Domain Unlearning (ADU) aims to selectively erase a model's recognition of a target visual domain while preserving accuracy on the remaining domains. However, existing ADU methods operate under a flawed closed-vocabulary assumption: they evaluate unlearning solely on the specific object classes seen during the unlearning fine-tuning phase. Consequently, these methods do not unlearn the domain itself; they merely overfit to seen class-domain pairs, leaving the domain easily recognizable for unseen classes and providing a false sense of removal. We argue that true domain erasure must be class-agnostic. To address this, we formalize Open-Vocabulary Domain Unlearning (OVDU), a rigorous protocol that mandates domain forgetting must transfer to held-out classes. To solve the OVDU challenge, we propose a surgical parameter-editing framework. First, a Fisher Information mask isolates domain-sensitive weights, mathematically protecting foundational zero-shot generalization. Second, our Targeted Manifold Scattering (TMS) objective uses preference-based mining to locally scatter the forget domain's stylistic geometry. Evaluated across PACS, OfficeHome, and DomainNet, our method vastly improves open-vocabulary generalization over existing baselines. Crucially, it delivers exceptional sample efficiency, outperforming peak 8-shot baseline results with only 4 shots.",
+      "published_date": "2026-09-25T14:52:36Z",
+      "url": "https://arxiv.org/abs/2609.31356v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31356v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "开放词汇域遗忘",
+        "chinese_summary": "提出了一种新的开放词汇域遗忘方法，确保遗忘特定视觉域的同时不损害未见过类别的识别准确性。",
+        "pain_point": "现有方法仅在见过的类别上进行遗忘，导致未见过的类别仍能识别特定视觉域。",
+        "core_value": "提出开放词汇域遗忘方法，确保遗忘特定视觉域的同时不损害未见过类别的识别准确性。",
+        "technical_architecture": "提出了一种手术参数编辑框架，使用Fisher信息掩码隔离敏感权重。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "方法仅在特定场景下进行了验证。",
+        "key_contributions": [
+          "提出开放词汇域遗忘方法",
+          "使用Fisher信息掩码隔离敏感权重"
+        ],
+        "application_scenarios": [
+          "医疗AI",
+          "自动驾驶"
+        ],
+        "technical_highlights": [
+          "确保遗忘特定视觉域的同时不损害未见过类别的识别准确性",
+          "使用Fisher信息掩码隔离敏感权重"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31354v1",
+      "source": "arxiv",
+      "title": "Mutable Transcripts: Mitigating Context Pollution through Editable Conversation State",
+      "authors": [
+        "Dan Barry",
+        "Andrew Hines"
+      ],
+      "abstract": "Contemporary large language model (LLM) chat systems treat conversation history as an immutable sequence of turns that defines the model's working context. However, user intent in real interactions is not static: it evolves through correction, refinement, and shifting constraints. This mismatch between dynamic intent and static transcripts can result in context pollution, where outdated or irrelevant information persists and continues to influence subsequent responses. We introduce mutable transcripts, a new interaction paradigm that enables users to revise prior turns through natural language edit requests, allowing the conversation history itself to be updated rather than appended. This reframes the transcript from a passive record into an editable representation of conversational state. We present a working prototype that integrates transcript-level revision into a standard chat interface and evaluate its feasibility through a controlled user study (n=17) and an illustrative transcript analysis of representative interaction scenarios. Participants significantly preferred mutable transcripts over standard chat across measures of clarity, confidence, and ease of use, with reduced intent to restart conversations. Transcript analysis of representative user study conversations shows that mutable transcripts can reduce conversation length and eliminate obsolete retained context. These findings provide initial evidence that user-driven revision of conversational history can improve interaction quality and help maintain a more current representation of user intent. The source code and prototype can be accessed at https://github.com/QxLabIreland/ReChat",
+      "published_date": "2026-09-25T14:51:49Z",
+      "url": "https://arxiv.org/abs/2609.31354v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31354v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "可变转录本：通过可编辑对话状态缓解上下文污染",
+        "chinese_summary": "通过自然语言编辑请求更新对话历史，提高对话清晰度和用户满意度。",
+        "pain_point": "现有聊天系统中静态对话记录导致上下文污染，影响对话质量。",
+        "core_value": "提供一种可编辑的对话历史，使用户能够动态调整对话状态，提高对话的准确性和流畅性。",
+        "technical_architecture": "通过自然语言编辑请求实现对话历史的实时更新。",
+        "quantitative_results": "用户研究显示，可变转录本在清晰度、自信度和易用性方面优于标准聊天。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于有限的用户研究，未来需要更多实际应用验证。",
+        "key_contributions": [
+          "提出了一种新的交互模式，允许用户通过自然语言编辑请求修改对话历史。",
+          "展示了可变转录本在提高对话质量和用户满意度方面的有效性。",
+          "提供了一个可编辑对话历史的原型实现"
+        ],
+        "application_scenarios": [
+          "客户服务对话",
+          "虚拟助手交互"
+        ],
+        "technical_highlights": [
+          "自然语言编辑请求",
+          "对话历史实时更新"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31351v1",
+      "source": "arxiv",
+      "title": "Progressive Memory Transformer: Memory-Aware Attention for Time-Series",
+      "authors": [
+        "Tord Sture Stangeland",
+        "Andreas Köhler",
+        "Steffen Mæland",
+        "Adín Ramíres Rivera"
+      ],
+      "abstract": "Time-series carry structure simultaneously at multiple scales (fine-grained variation, mid-range motifs, and global properties) and downstream tasks operate at correspondingly different scales. Most existing self-supervised learning approaches supervise representations globally via instance-level contrastive losses and limited temporal neighborhood supervision, but do not explicitly exploit the structural hierarchy. We propose a learning framework that explicitly enforces a structural hierarchy across three scales independently: a local objective for token continuity, a mid-range objective for window-level motifs, and a global objective for sequence-level agreement. Realizing this framework requires the backbone to expose a representation at each scale; we introduce \\textbf{Progressive Memory Transformer} (PMT), which augments a transformer with writable, window-aligned memory that exposes the mid-range scale alongside the token and sequence-level representations conventional transformers already provide. Across seven UCR/UEA/UCI classification benchmarks, a cue-retention probe, and forecasting benchmarks, PMT learns representations that probe well at the global, mid-range, and local scales---strong low-label classification (1--5\\% labels), competitive forecasting performance across multiple horizons, and quantitative and qualitative evidence that memory states capture mid-range motifs.",
+      "published_date": "2026-09-25T14:49:42Z",
+      "url": "https://arxiv.org/abs/2609.31351v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31351v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "渐进式记忆变换器：面向时间序列的记忆感知注意力",
+        "chinese_summary": "PMT 通过多尺度结构化学习，提升时间序列的全局、中尺度和局部表示能力。",
+        "pain_point": "现有方法未能充分利用时间序列的多尺度结构，导致表示能力不足。",
+        "core_value": "通过独立的多尺度目标学习框架，提升时间序列表示的全面性。",
+        "technical_architecture": "PMT 引入可写入的窗口对齐记忆，扩展传统 Transformer 的多尺度表示能力。",
+        "quantitative_results": "在多个基准测试中，PMT 表现优于现有方法。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更复杂的时间序列场景。",
+        "key_contributions": [
+          "提出多尺度结构化学习框架",
+          "引入窗口对齐记忆机制",
+          "提升时间序列表示的全面性"
+        ],
+        "application_scenarios": [
+          "时间序列分类",
+          "时间序列预测"
+        ],
+        "technical_highlights": [
+          "多尺度注意力机制",
+          "窗口对齐记忆"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2609.31349v1",
+      "source": "arxiv",
+      "title": "DyMD: Preserving Interaction Dynamics through Distribution Matching Distillation in Few-Step Video World Models",
+      "authors": [
+        "Haojun Xu",
+        "Jie Huang",
+        "Xin Lu",
+        "Mingchen Zhong",
+        "Zihao Fan",
+        "Linjiang Huang",
+        "Si Liu"
+      ],
+      "abstract": "Large video diffusion models offer expressive priors for embodied prediction and learning, yet their many-step sampling remains costly for interactive downstream use. Distribution Matching Distillation (DMD) enables few-step video generation, but can suppress robot--object motion while preserving visual quality. Examining DMD's teacher and fake-score signals, we find that weak re-noising keeps the teacher posterior concentrated near motion-deficient rollouts, limiting motion-restoring guidance. Meanwhile, stronger-motion rollouts tend to incur larger fake-score fitting errors, which can hinder the generator's learning of interaction dynamics. We propose DyMD, a DMD framework that adapts both teacher supervision and critic fitting to the evolving student. Temporal affinity--conditioned re-noise sampling adapts the timestep distribution to each rollout's current interaction fidelity by mixing the base schedule with a teacher prior motivated by local posterior variation, thereby balancing motion recovery and appearance refinement. To better track stronger-motion rollouts, dynamics-guided fake-score tracking uses a noise-conditioned predictor to estimate noise-relative fitting difficulty from latent temporal dynamics, then upweights predicted-hard rollouts in the critic loss. Using DyMD, we distill a 14B teacher into a four-step 1.3B student with no auxiliary modules at inference. On embodied-video benchmarks, the student improves R-Bench task adherence by $9.6$ percentage points and PAI-Bench-G Domain score by $5.1$ points over Base DMD while maintaining comparable visual quality. As a backbone for downstream action planning, our student achieves 34% mean success across two WorldArena tasks, compared with 16% for Base DMD.",
+      "published_date": "2026-09-25T14:47:17Z",
+      "url": "https://arxiv.org/abs/2609.31349v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.31349v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "DyMD: 通过分布匹配蒸馏保留交互动力学的少步视频世界模型",
+        "chinese_summary": "提出DyMD框架，通过适应学生和批评家的监督和评估，实现更好的交互动力学保留。",
+        "pain_point": "大型视频扩散模型在交互式下游应用中多步采样成本高。",
+        "core_value": "提出DyMD框架，改进了交互动力学的保留，同时保持视觉质量。",
+        "technical_architecture": "采用时间关联条件下的重新噪声采样和动力学引导的假分值跟踪。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多复杂场景。",
+        "key_contributions": [
+          "提出DyMD框架",
+          "改进交互动力学保留",
+          "适应学生和批评家的监督"
+        ],
+        "application_scenarios": [
+          "机器人交互",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "时间关联条件下的重新噪声采样",
+          "动力学引导的假分值跟踪"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

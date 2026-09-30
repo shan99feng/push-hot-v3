@@ -1,0 +1,568 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-30T01:52:41.271108+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.29233",
+      "source": "huggingface",
+      "title": "Post-Training Leaves Behavioral Shadows on Unrelated Decisions",
+      "authors": [
+        "Ziyang Zhang",
+        "Yubin Jing",
+        "Yuanhao Zeng",
+        "Yuyao Li",
+        "Haofan Wang",
+        "Yichen Gong"
+      ],
+      "abstract": "We find that language models can transfer capabilities through task-unrelated text. Post-training typically improves language models using task-specific data. Prior work on subliminal learning shows that information about these updates can pass through unrelated generations, but has largely focused on traits or preferences using extensive teacher outputs. We introduce Active Taskless Distillation (ATD), which achieves capability transfer using only a single word from the teacher per prompt. ATD probes the behavioral shadow of post-training by selecting prompts where the teacher and student's shared public ancestor is nearly indifferent between two ordinary words. A student initialized from this ancestor learns solely from the resulting prompt-word pairs, without target-task examples, teacher logits, or teacher parameters. In the primary coding experiment with Qwen2.5-1.5B, 5,664nses yield a 5.34 pp gain on HumanEval+ over an exact nuisance-matched control thadisrupts prompt-resperiments showtransfer in scientific knowledge, commonsense reasoning, and reading comprehensins across additional model generations, sizes, and families. Functional analyses show that the learned sid composable, andthat its strength tracks the teacher's update strength.",
+      "published_date": "2026-09-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.29233",
+      "pdf_url": "https://arxiv.org/pdf/2609.29233",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.29233",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 251,
+      "hot_score": 2510,
+      "structured_summary": {
+        "chinese_title": "训练后处理在无关决策中留下行为痕迹",
+        "chinese_summary": "通过单个单词实现能力转移，无需目标任务数据。",
+        "pain_point": "语言模型的能力转移依赖于相关任务数据，限制了灵活性。",
+        "core_value": "提出ATD方法，仅通过单个单词实现能力转移，显著提升模型性能。",
+        "technical_architecture": "利用共享祖先节点和单个单词进行能力转移。",
+        "quantitative_results": "在Qwen2.5-1.5B上，获得5.34 pp的人类评估增益。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定模型上进行了实验，未来需更广泛验证。",
+        "key_contributions": [
+          "提出ATD方法",
+          "仅通过单个单词实现能力转移"
+        ],
+        "application_scenarios": [
+          "模型能力转移",
+          "零样本学习"
+        ],
+        "technical_highlights": [
+          "共享祖先节点选择",
+          "单个单词驱动学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.33757",
+      "source": "huggingface",
+      "title": "YuE2: Unifying Symbolic and Audio Music Generation at Frontier Quality",
+      "authors": [
+        "Ruibin Yuan",
+        "Jiahao Pan",
+        "Junyan Jiang",
+        "Zhiyue Wu",
+        "Ziya Zhou",
+        "Jiankai Sun",
+        "Yizhi Li",
+        "Ge Zhang",
+        "Yicheng Gu",
+        "Zeyue Tian",
+        "Junyu Dai",
+        "Hanfeng Lin",
+        "Kai Li",
+        "Shangda Wu",
+        "Xuanjie Liu",
+        "Jiaming Wang",
+        "Zihan Liu",
+        "Yue Wang",
+        "Yinghao Ma",
+        "Hanzhi Yin",
+        "Kangrui Chen",
+        "Xinyue Zhang",
+        "Ziyang Ma",
+        "Mengqi Liao",
+        "Hejia Zhao",
+        "Guowei Huang",
+        "Chao Yan",
+        "Lei Ke",
+        "Jianwei Yu",
+        "Bei Liu",
+        "Joe Guo",
+        "Liumeng Xue",
+        "Gus Xia",
+        "Wei Xue",
+        "Yike Guo"
+      ],
+      "abstract": "Symbolic models make melody, harmony, rhythm, and form explicit but typically stop before a finished recording; audio models produce complete songs while leaving composition implicit. We introduce YuE2, which unifies symbolic and audio music generation at frontier quality through symbolic planning. A single AR-NAR Mixture-of-Transformers (MoT) first writes a readable score specifying melody and harmony, expands it into semantic music tokens, and realizes it as full-song audio. In comparisons using the same checkpoint, experts prefer symbolic planning for overall quality and musicality, with 49.3% of overall preferences versus 34.6% without planning. Experts also favor the unified model over a separate language model and diffusion Transformer. On WildSongBench, YuE2 scores 6.73 on SongBench Global Avg, exceeding all evaluated public baselines. Selecting from eight candidates (best-of-8), YuE2 reaches 6.96, the highest observed mean among all evaluated systems. Expert listening further establishes its competitiveness with proprietary song generators, favoring best-of-8 over Suno v4.5 and yielding nearly balanced preferences against Suno v5. To learn this generation process from recordings without aligned scores, we introduce MERT2 and SheetSage2 to supply semantic and symbolic supervision. MERT2 sets a new state of the art in music representation learning, surpassing previous best results on 14 of 15 MARBLE metrics; SheetSage2 leads 12 of 15 benchmark-metric pairs in our lead-sheet transcription comparison. The same checkpoint follows score edits while largely preserving unedited musical content and generates zero-shot covers without cover-specific training. Its readable score also enables agentic music editing, with external language models translating user feedback into revisions of the composition.",
+      "published_date": "2026-09-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.33757",
+      "pdf_url": "https://arxiv.org/pdf/2609.33757",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.33757",
+      "category": "llm",
+      "tags": [
+        "eess.AS",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "upvotes": 202,
+      "hot_score": 2020,
+      "structured_summary": {
+        "chinese_title": "YuE2：统一符号和音频音乐生成的前沿质量",
+        "chinese_summary": "YuE2通过符号规划统一了符号和音频音乐生成，达到前沿质量。",
+        "pain_point": "现有符号模型和音频模型分别处理音乐生成的不同方面，但缺乏统一的方法。",
+        "core_value": "YuE2通过符号规划实现了符号和音频音乐生成的统一，提高了音乐生成的整体质量和音乐性。",
+        "technical_architecture": "采用AR-NAR混合变换器（MoT）进行符号规划，生成可读谱面，扩展为语义音乐标记，最终实现为完整的音频歌曲。",
+        "quantitative_results": "在WildSongBench上，YuE2的SongBench Global Avg得分为6.73，超过所有评估的公共基线。选择最佳候选者后，得分为6.96。",
+        "competitors": "与Suno v4.5和Suno v5等专有歌曲生成器进行对比。",
+        "limitations": "未来需要探索更多应用场景以进一步验证其广泛适用性。",
+        "key_contributions": [
+          "实现了符号和音频音乐生成的统一",
+          "通过符号规划提高了音乐生成的整体质量和音乐性"
+        ],
+        "application_scenarios": [
+          "音乐创作",
+          "音乐生成"
+        ],
+        "technical_highlights": [
+          "AR-NAR混合变换器（MoT）",
+          "符号规划"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.35347",
+      "source": "huggingface",
+      "title": "Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation",
+      "authors": [
+        "Xin Li",
+        "Hao Jiang",
+        "Xin Gao",
+        "Annan Wang",
+        "Yuchen Xie",
+        "Jinghao Guo",
+        "Xingwei Qu",
+        "Yichi Zhang",
+        "Chau Yuen"
+      ],
+      "abstract": "Reinforcement learning can turn one language model into several specialists, each excellent at a single skill such as mathematics, coding or following instructions, but users need one model with all of these skills. Multi-teacher on-policy distillation (MOPD) merges them by letting the specialists teach one student: the student answers each prompt, and the specialist for that prompt's domain gives feedback on every token. This routing decides which specialist teaches, but not how strongly its feedback moves the shared student. In Qwen3.5 models at three sizes, we find that MOPD's student does not beat one taught by the best single specialist and gains little of the mathematics specialist's advantage. The feedback is unbalanced: instruction-following feedback is several times more spread out than mathematics feedback and dominates the student's updates. We propose Domain-Normalized MOPD (DN-MOPD), which keeps the routing and rescales each domain's feedback by its measured spread. On six public benchmarks, DN-MOPD improves the average score over MOPD at every size, across three random seeds and under two answer-length limits, and recovers most of the lost mathematics gain. Controls with fixed domain weights show that the gain comes mainly from turning down instruction-following feedback rather than turning up mathematics alone, and that fixed weights close to those DN-MOPD measures perform comparably. Combining specialists therefore requires deciding not only which one teaches, but also how strongly its feedback counts.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.35347",
+      "pdf_url": "https://arxiv.org/pdf/2609.35347",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.35347",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 139,
+      "hot_score": 1390,
+      "structured_summary": {
+        "chinese_title": "超越教师分配：领域归一化的多教师在线蒸馏",
+        "chinese_summary": "提出领域归一化的多教师在线蒸馏方法，提高学生模型在多个技能上的表现。",
+        "pain_point": "现有方法无法有效整合多个专长教师的反馈，导致学生模型在某些技能上表现不佳。",
+        "core_value": "通过归一化不同领域的反馈，提高学生模型的综合技能水平。",
+        "technical_architecture": "采用多教师在线蒸馏方法，并对不同领域的反馈进行归一化处理。",
+        "quantitative_results": "在六个公开基准测试中，领域归一化的多教师在线蒸馏方法在所有模型大小下均提高了平均得分。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究不同领域反馈的归一化方法。",
+        "key_contributions": [
+          "提出领域归一化的多教师在线蒸馏方法",
+          "提高了学生模型在多个技能上的综合表现",
+          "恢复了部分数学技能的优势"
+        ],
+        "application_scenarios": [
+          "多技能语言模型的训练",
+          "在线学习和技能整合"
+        ],
+        "technical_highlights": [
+          "采用领域归一化方法平衡不同领域的反馈",
+          "在多个公开基准测试中验证了方法的有效性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.32577",
+      "source": "huggingface",
+      "title": "Groupwise Agentic Grading and Advantage Redistribution for Code Agent RL",
+      "authors": [
+        "Jinhao Dong",
+        "Liang Zhao",
+        "Zihao Yue",
+        "Wenhan Ma",
+        "Linghao Zhang",
+        "Lei Li",
+        "Shicheng Li",
+        "Yifan Song",
+        "Bowen Ye",
+        "Fuli Luo"
+      ],
+      "abstract": "Reinforcement learning (RL) for code agents often uses executable tests to provide binary rewards. With these rewards, Group Relative Policy Optimization (GRPO) assigns identical advantages to test-passing trajectories within each rollout group, overlooking differences in implementation quality and adherence to task requirements. This leaves the policy without a learning signal that favors clean, targeted implementations over those containing unnecessary or out-of-scope changes. We introduce GAGAR, a framework for quality-aware credit redistribution in code agent RL. Built on dynamic sampling that retains groups containing both passing and failing trajectories, GAGAR places all trajectories from each group in a shared workspace, where an SFT-trained agentic grader jointly inspects them and ranks the test-passing candidates. Based on this ranking, we downweight lower-ranked trajectories and proportionally rescale the advantages of all test-passing trajectories to restore their original sum. This sum-preserving redistribution retains the relative weights established by quality-based downweighting while shifting credit toward higher-quality implementations. We evaluate GAGAR at industrial scale using pre-RL SFT checkpoints of MiMo-V2.6-Flash (310B total parameters) and MiMo-V2.6-Pro (1.02T total parameters). Controlled code-only Flash experiments show improved code agent performance, reduced trajectory-length growth, and more stable training. We further apply GAGAR in large-scale mixed-task RL with both Flash and Pro. Our results support combining test-based verification with groupwise agentic grading to improve the quality and stability of code agent RL.",
+      "published_date": "2026-09-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.32577",
+      "pdf_url": "https://arxiv.org/pdf/2609.32577",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.32577",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 108,
+      "hot_score": 1080,
+      "structured_summary": {
+        "chinese_title": "组间代理评分与优势重分配以促进代码代理强化学习",
+        "chinese_summary": "GAGAR框架通过重新分配优势，使强化学习中的代码代理更倾向于高质量的实现。",
+        "pain_point": "现有方法未能有效区分高质量和低质量的代码实现。",
+        "core_value": "通过代理评分和优势重分配，提高代码代理的实现质量。",
+        "technical_architecture": "基于动态采样的GAGAR框架，结合SFT训练的代理评分器。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定代码代理任务中进行了评估。",
+        "key_contributions": [
+          "提出了组间代理评分与优势重分配框架",
+          "通过代理评分器重新分配优势",
+          "提高了代码代理的实现质量"
+        ],
+        "application_scenarios": [
+          "代码生成",
+          "自动化测试"
+        ],
+        "technical_highlights": [
+          "动态采样策略",
+          "代理评分与优势重分配机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.35432",
+      "source": "huggingface",
+      "title": "Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence",
+      "authors": [
+        "Hongcheng Gao",
+        "Jingjing Zhou",
+        "Zelin Zheng",
+        "Shijia Ge",
+        "Jay Zhu",
+        "Yazhe Wang",
+        "Jianshu Zeng",
+        "Xuan Shangguan",
+        "Di Wu",
+        "Lingyu He",
+        "Zhiqi Jia",
+        "Sihang Wu",
+        "Xiao He"
+      ],
+      "abstract": "Vision-language-action (VLA) and world-action (WAM) models map observations and instructions directly to robot actions. This directness ties a policy to training: minor layout or viewpoint changes cause failure, and instructions generalize poorly. The root cause lies in representation: task requirements, conditions, progress, and failure recovery are implicitly encoded in action sequences, making them difficult to inspect or revise. Digital coding agents offer a precedent: LLMs call tools, verify results, and revise from feedback as executable code. The same working pattern of explicit state, manageable execution, and revisable procedures underlies generalization and long-horizon execution in the physical world, letting physical experience return as reusable programs, memory, or evidence. We propose Physical Coding, representing task state and execution as code. Code as World records objects, relations, constraints, and progress; Code as Policy organizes planning, verification, recovery, and execution. We build HexaAnything, which calls perception, planning, and control tools, including VLA/WAM policies, and makes in-the-loop decisions from external feedback. Verified traces become data and memory, enabling evolution from tools and Harness to model weights, architectures, and ultimately hardware and task design. On RoboCasa365, HexaAnything improves Composite-Unseen and overall success over XR-1 VLA, and its Harness-trained HexaModel beats the base on every split, indicating code traces internalize physical execution. On PhyBench and a dual-arm AgileX robot, the agent autonomously completes physics experiments and most tabletop tasks, often faster than published results. We observe data, model, and tool self-evolution; future work targets weight internalization, autonomous redesign of architectures, languages, representations, and tasks, and deployment in manufacturing and science.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.35432",
+      "pdf_url": "https://arxiv.org/pdf/2609.35432",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.35432",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 92,
+      "hot_score": 920,
+      "structured_summary": {
+        "chinese_title": "自我进化的编码代理：从数字程序到物理世界智能",
+        "chinese_summary": "提出物理编码，将任务状态和执行表示为代码，以实现更好的泛化和长期执行。",
+        "pain_point": "现有模型对环境变化敏感，指令泛化能力差。",
+        "core_value": "通过物理编码实现更稳定的执行和更好的泛化能力。",
+        "technical_architecture": "构建HexaAnything，集成感知、规划和控制工具，实现闭环决策。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证在更复杂环境中的表现。",
+        "key_contributions": [
+          "提出物理编码的概念",
+          "构建HexaAnything系统",
+          "实现闭环决策机制"
+        ],
+        "application_scenarios": [
+          "机器人执行任务",
+          "自动化物理世界操作"
+        ],
+        "technical_highlights": [
+          "将任务状态和执行表示为代码",
+          "实现闭环决策和验证"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.31948",
+      "source": "huggingface",
+      "title": "Duplex-MPE: Benchmarking Multi-Party Interaction in Full-Duplex Dialogue",
+      "authors": [
+        "Chengqian Ma",
+        "Wenhao Feng",
+        "Weixuan Jin",
+        "Gaole Dai",
+        "Tianyu Xie",
+        "Yuexiao Ma",
+        "Zhaolu Kang",
+        "Xiangyu Zhao",
+        "Xiawu Zheng",
+        "Fei Chao"
+      ],
+      "abstract": "Real-time full-duplex speech models can listen while speaking, enabling natural interaction without rigid turn boundaries. Existing benchmarks evaluate turn-taking, interruption handling and multi-round dialogue, but largely centre on a designated user rather than an assistant participating in a shared conversation among several people. We introduce Duplex-MPE to evaluate when such an assistant should answer, remain silent or stop speaking. The benchmark contains 2,000 scenarios with three or four human speakers and one assistant, each paired across explicit and implicit addressing of the same request. Models receive continuous conversation audio without transcripts or supplied turn boundaries. Four scores measure fresh response initiation, answer accuracy, silence preservation and stopping when a human resolves a request. We evaluate five open-weight speech systems: MiniCPM-o 4.5, Moshi, FLM-Audio, Voila and Freeze-Omni. MiniCPM-o 4.5 leads on three scored capabilities, while frequent speech from other systems can coexist with inaccurate answers or failures to remain silent. A transcript-based Gemini 3.1 Pro reference responds 64.3 percentage points more often to explicit than implicit requests; paired tests detect no significant response-rate difference for the speech systems.",
+      "published_date": "2026-09-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.31948",
+      "pdf_url": "https://arxiv.org/pdf/2609.31948",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.31948",
+      "category": "other",
+      "tags": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "upvotes": 81,
+      "hot_score": 810,
+      "structured_summary": {
+        "chinese_title": "Duplex-MPE：全双工对话中的多方交互基准测试",
+        "chinese_summary": "引入Duplex-MPE基准测试，评估助手何时应回答、保持沉默或停止说话。",
+        "pain_point": "现有基准主要关注单个用户的对话，未充分评估助手在多方交互中的表现。",
+        "core_value": "提供全面评估助手在全双工对话中交互能力的新基准。",
+        "technical_architecture": "基于连续对话音频，无需转录或提供回合边界。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了五种开放权重语音系统。",
+        "key_contributions": [
+          "引入新的多用户对话基准测试",
+          "评估助手在全双工对话中的交互能力"
+        ],
+        "application_scenarios": [
+          "智能客服",
+          "虚拟助手"
+        ],
+        "technical_highlights": [
+          "无需转录或提供回合边界",
+          "评估助手的响应发起、答案准确性、沉默保持和停止时机"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.32712",
+      "source": "huggingface",
+      "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+      "authors": [
+        "Jingze Shi",
+        "Zhangyang Peng",
+        "Xianduo Li",
+        "Yanlin Qi",
+        "Xiaotian Lin",
+        "Haoxian Chen",
+        "Liangdong Wang",
+        "Guang Liu",
+        "Yuyu Luo"
+      ],
+      "abstract": "FullAttn often assigns negligible normalized mass to much of the causal score space, yet dense kernels execute the complete post-score path after forming each QK tile. We introduce MALA, a fused attention primitive that preserves score access to every legal causal interaction and uses normalized contribution to allocate post-score computation. Forward uses its evolving online-softmax normalizer, while backward reuses the finalized normalizer to derive nested retained support using only standard attention state. A common tolerance governs training and inference, allowing for adaptive retention of the work. MALA reduces low-contribution post-score computation. A matched-work study at 8K isolates the benefit of distribution-adaptive allocation: under exactly matched total post-score work, MALA approaches a per-instance reference-mass oracle, with mean omitted mass of 0.0188% versus 0.0182%. Across context lengths from 1K to 32K tokens, the same tolerance maintains low output and gradient errors relative to the reference. Across a broader controlled associative-recall comparison, MALA closely tracks FullAttn as context grows, reaching 89.67% accuracy at 8K compared with 89.97% for FullAttn. In an attention-operator benchmark at 128K tokens with tensor parallelism, MALA reduces forward and backward latency during training by 2.2x and 3.0x and decoding latency during inference by 1.6x relative to FullAttn. Across scaling-law training from 0.6B to 14B parameters, MALA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results indicate that allocating post-score computation according to normalized attention contributions can retain the evaluated capabilities of FullAttn while reducing attention computation.",
+      "published_date": "2026-09-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.32712",
+      "pdf_url": "https://arxiv.org/pdf/2609.32712",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.32712",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 64,
+      "hot_score": 640,
+      "structured_summary": {
+        "chinese_title": "MassAlloc Attention: 让注意力自行分配其计算资源",
+        "chinese_summary": "MALA 通过分配注意力的计算资源，减少低贡献的后评分计算，提高效率。",
+        "pain_point": "全注意力机制在大量因果分数空间中分配很少的归一化质量，导致计算资源浪费。",
+        "core_value": "MALA 通过归一化贡献分配计算资源，减少低效计算，提高效率。",
+        "technical_architecture": "MALA 使用在线归一化器和反向传播中的最终归一化器来分配计算资源。",
+        "quantitative_results": "在 8K 上的匹配工作研究中，MALA 的平均遗漏质量为 0.0188%，接近参考质量。",
+        "competitors": "与全注意力机制 FullAttn 相比，MALA 在长上下文长度下表现接近。",
+        "limitations": "局限性在于当前的适应性工作保留机制。",
+        "key_contributions": [
+          "提出 MALA，一种融合注意力原语，通过归一化贡献分配计算资源。",
+          "在 8K 上的实验中，MALA 的输出和梯度误差与 FullAttn 相比保持较低水平。",
+          "证明了分布自适应分配机制的有效性"
+        ],
+        "application_scenarios": [
+          "适用于需要高效计算资源分配的注意力机制场景",
+          "适用于长上下文长度的自然语言处理任务"
+        ],
+        "technical_highlights": [
+          "在线归一化器和最终归一化器的复用",
+          "适应性工作保留机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.33295",
+      "source": "huggingface",
+      "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+      "authors": [
+        "Dehai Min",
+        "Daoan Zhang",
+        "Yiming Zeng",
+        "Huayi Zhang",
+        "Ziyi Chen",
+        "Yan Zhang",
+        "Qinbo Bai",
+        "Mengyuan Chao",
+        "Jing Ning",
+        "Qiyue Hua",
+        "Huiyi Chen",
+        "Hanrong Zhang",
+        "Henry Peng Zou",
+        "Jie Yang",
+        "Wei Xu",
+        "Philip S. Yu"
+      ],
+      "abstract": "An agent can complete a task while exhibiting undesirable behavior during execution. Developers need tests for the specific behaviors encountered in deployment, beyond fixed benchmark suites. We present TraceDance, an agent system that constructs targeted benchmarks from deployment traces for user-specified undesirable behaviors. For efficient construction, Anchor-and-Confirm combines programmable retrieval with candidate-level confirmation by a Flash large language model (LLM), while the Anchor Synthesis Loop generates and revises specifications for custom behaviors. The benchmarks use decision-point continuation to evaluate an LLM's next turn at a recorded decision point with a behavior-specific rubric, without a reference answer or environment replay. Experiments in coding and general tool use draw on 252,557 sessions and produce 107 benchmarks with 4,125 instances, fulfilling 95.3% of build-target requests. Both human annotators confirm the requested behavior in 84% of sampled instances, and the automated grader's agreement with human pass/fail judgments is comparable to that between the annotators. Nine frontier LLMs achieve a mean pass rate of only 26.7%, showing that they still struggle to respond appropriately at the evaluated decision points. Analysis across behavior-specific benchmarks further reveals weaknesses in how current LLMs behave as agents. By turning deployment problems into targeted benchmarks, TraceDance could serve as a key component of the recursive self-improvement (RSI) loop.",
+      "published_date": "2026-09-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.33295",
+      "pdf_url": "https://arxiv.org/pdf/2609.33295",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.33295",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 60,
+      "hot_score": 600,
+      "structured_summary": {
+        "chinese_title": "TraceDance: 一种从实际部署代理跟踪中自动构建代理行为基准的系统",
+        "chinese_summary": "TraceDance 从实际部署跟踪中构建针对特定不良行为的基准，提高测试效率。",
+        "pain_point": "开发人员需要针对实际部署中遇到的具体行为进行测试，而现有的固定基准套件无法满足这一需求。",
+        "core_value": "TraceDance 提供了一种自动化方法，从实际部署跟踪中构建定制的基准，解决了现有基准套件的局限性。",
+        "technical_architecture": "采用 Anchor-and-Confirm 和 Anchor Synthesis Loop 生成和修订行为规范。",
+        "quantitative_results": "实验涉及 252,557 个会话，生成 107 个基准，覆盖 95.3% 的构建目标请求。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对九种前沿 LLM 进行了测试。",
+        "key_contributions": [
+          "从实际部署跟踪中自动构建定制基准",
+          "采用 Anchor-and-Confirm 和 Anchor Synthesis Loop 生成规范",
+          "使用决策点继续评估 LLM 的行为"
+        ],
+        "application_scenarios": [
+          "代理行为测试",
+          "自动化基准生成"
+        ],
+        "technical_highlights": [
+          "结合编程检索和 Flash 大语言模型确认",
+          "使用行为特定的评估标准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.32704",
+      "source": "huggingface",
+      "title": "CoWindow Attention: Full Causal Coverage Is a Collective Property",
+      "authors": [
+        "Jingze Shi",
+        "Zhangyang Peng",
+        "Xianduo Li",
+        "Yanlin Qi",
+        "Xiaotian Lin",
+        "Haoxian Chen",
+        "Liangdong Wang",
+        "Guang Liu",
+        "Yuyu Luo"
+      ],
+      "abstract": "FullAttn repeatedly exposes the complete causal history to every attention head, creating substantial redundant computation and memory traffic even with IO-efficient dense kernels. We introduce CoWA, a structured attention architecture that distributes access to the causal history across KV heads. All heads share near-diagonal and prefix-sink windows, while complementary long-range windows partition the remaining history. Their union provides full causal coverage although each head attends sparsely to distant tokens. This position-defined attention pattern requires no learned router or indexer, is used consistently during training and inference, and aligns with KV-head tensor parallelism. A window-matched ablation at 8K isolates the effect of complementary long-range allocation: CoWA with 100% collective coverage reaches 89.73% accuracy, compared with 89.97% for FullAttn, while duplicated long-range windows perform substantially worse. Across a broader controlled associative-recall comparison with matched token budgets, CoWA closely tracks FullAttn as the context grows, whereas other sparse patterns lose a substantial fraction of the associations. In an attention-operator benchmark at 128K tokens with tensor parallelism, CoWA reduces forward and backward latency during training by 7.4x and 8.6x and decoding latency during inference by 3.0x over FullAttn. Its per-rank peak operator memory matches FullAttn during training and is 7.6x lower during decoding. Across scaling-law training from 0.6B to 14B parameters, CoWA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results show that full causal coverage can be a collective property of the head ensemble rather than a duplicated property of every head.",
+      "published_date": "2026-09-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.32704",
+      "pdf_url": "https://arxiv.org/pdf/2609.32704",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.32704",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 59,
+      "hot_score": 590,
+      "structured_summary": {
+        "chinese_title": "CoWindow Attention: 全因因果覆盖是一个集体属性",
+        "chinese_summary": "CoWA 通过分布访问因果历史，减少冗余计算和内存流量，保持与 KV 头张量并行性。",
+        "pain_point": "全因注意力机制导致大量冗余计算和内存流量。",
+        "core_value": "CoWA 通过分布访问机制，提供全因覆盖同时减少计算开销。",
+        "technical_architecture": "CoWA 通过共享近对角线和前缀窗口，分配长距离窗口来分布访问因果历史。",
+        "quantitative_results": "CoWA 在 8K 范围内达到 89.73% 准确率，接近 FullAttn 的 89.97%。",
+        "competitors": "对比 FullAttn，CoWA 在长距离窗口分配上表现更优。",
+        "limitations": "CoWA 在处理更长上下文时可能不如 FullAttn 有效。",
+        "key_contributions": [
+          "提出 CoWindow Attention 架构",
+          "减少冗余计算和内存流量",
+          "保持与 KV 头张量并行性"
+        ],
+        "application_scenarios": [
+          "自然语言处理",
+          "大规模语言模型"
+        ],
+        "technical_highlights": [
+          "无需学习路由器或索引器",
+          "适用于训练和推理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.35457",
+      "source": "huggingface",
+      "title": "How Far Are We from Removing the Visual Encoder? Scaling Laws for Encoder-Free Multimodal Pretraining",
+      "authors": [
+        "Lin Chen",
+        "Bolin Ni",
+        "Qi Yang",
+        "Lan Jiang",
+        "Kun Ding",
+        "Xiaoran Fan",
+        "Hower Yang",
+        "Ying Wang",
+        "Shiming Xiang"
+      ],
+      "abstract": "Most modern multimodal large language models (MLLMs) build on a pretrained visual encoder that provides a strong visual prior. Encoder-free MLLMs instead learn visual representations directly from raw pixels, offering a simple and unified architecture, but their scaling behavior has not been systematically characterized. To fill this gap, we compare scaling laws for encoder-free and encoder-based MLLMs and report three main findings: (1) Removing the visual encoder shifts the compute-optimal allocation for the multimodal objective toward larger models, while leaving that for text nearly unchanged. (2) The two architectures exhibit nearly overlapping loss--compute frontiers on the text objective, but diverge on the multimodal objective: encoder-free models underperform at small scales yet are predicted to catch up at around 10^{22} FLOPs, well within practical pretraining budgets. (3) Without a visual encoder, the language model learns to take over its role via vision-specific adaptation: bidirectional interactions among visual tokens become increasingly beneficial as training compute grows, visual processing shifts toward earlier layers, and expert routing for visual tokens becomes more concentrated. Overall, our results indicate that the advantage of the visual prior provided by a pretrained encoder diminishes with scale, positioning encoder-free architectures as a promising direction for multimodal pretraining.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.35457",
+      "pdf_url": "https://arxiv.org/pdf/2609.35457",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.35457",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 54,
+      "hot_score": 540,
+      "structured_summary": {
+        "chinese_title": "我们离移除视觉编码器还有多远？无编码器多模态预训练的扩展规律",
+        "chinese_summary": "无编码器多模态模型在小规模下表现较差，但预计在10^22 FLOPs时可赶上带编码器模型。",
+        "pain_point": "无编码器多模态模型在小规模下性能较差。",
+        "core_value": "揭示了无编码器模型与带编码器模型的性能差异及其随计算量变化的趋势。",
+        "technical_architecture": "对比了无编码器和带编码器的多模态模型架构。",
+        "quantitative_results": "无编码器模型在小规模下表现较差，但在大规模下有望赶上。",
+        "competitors": "暂无对比信息",
+        "limitations": "无编码器模型在小规模下性能不足。",
+        "key_contributions": [
+          "揭示了无编码器模型与带编码器模型的性能差异及其随计算量变化的趋势。",
+          "预测了无编码器模型在大规模下有望赶上带编码器模型。",
+          "展示了语言模型在无编码器情况下如何适应视觉任务"
+        ],
+        "application_scenarios": [
+          "大规模多模态预训练",
+          "视觉任务的无编码器模型"
+        ],
+        "technical_highlights": [
+          "无编码器模型在小规模下表现较差，但在大规模下有望赶上带编码器模型。",
+          "展示了语言模型在无编码器情况下如何适应视觉任务"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

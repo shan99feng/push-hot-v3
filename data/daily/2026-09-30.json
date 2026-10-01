@@ -1,0 +1,545 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-10-01T01:51:00.176774+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.33439",
+      "source": "huggingface",
+      "title": "Raven: The Harness of Harnesses for Composable Agentic Intelligence",
+      "authors": [
+        "EverMind AI"
+      ],
+      "abstract": "As large language models advance, AI agents are moving beyond isolated, domain-specific tasks toward long-horizon, cross-domain workflows. This transition exposes two challenges: increasing harness complexity makes manual design difficult to scale, while tighter coupling to specific domains limits the generality of a single harness. The central question thus shifts from how to engineer a stronger harness for one domain to how to autonomously construct specialized harnesses, improve them through experience, and orchestrate them across domains. We introduce Raven, The Harness of Harnesses, an open-source multi-agent ecosystem that automatically constructs and evolves modular harnesses for specific models and domains, treating each executable model--harness pair as a composable unit of intelligence. To support an All-Domain Collaboration Network, its Host Agent decomposes goals, matches subtasks to specialized agents, coordinates execution dependencies, and integrates results, while a host archive and EverOS preserve experience across tasks and Skill Forge makes that experience available as reusable procedures. Our theory establishes sufficient conditions for such composition to expand reliable task coverage beyond that of the available individual agents under a shared resource budget. On complex and long-horizon tasks, Raven significantly outperforms the state-of-the-art agent systems, pushing the frontier of composable agentic intelligence.",
+      "published_date": "2026-09-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.33439",
+      "pdf_url": "https://arxiv.org/pdf/2609.33439",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.33439",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.GT",
+        "cs.MA",
+        "cs.NE"
+      ],
+      "upvotes": 454,
+      "hot_score": 4540,
+      "structured_summary": {
+        "chinese_title": "Raven: 组合智能的缰绳之缰绳",
+        "chinese_summary": "Raven 自动构建和进化模块化缰绳，支持跨域协作。",
+        "pain_point": "手动设计缰绳难以扩展，且特定领域的耦合限制了通用性。",
+        "core_value": "通过自适应构建和进化模块化缰绳，提高跨域智能协作能力。",
+        "technical_architecture": "采用多代理生态系统，自动构建和进化模块化缰绳。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证在大规模任务中的适用性。",
+        "key_contributions": [
+          "自动构建和进化模块化缰绳",
+          "支持跨域协作",
+          "提供可复用的经验和技能"
+        ],
+        "application_scenarios": [
+          "跨领域任务执行",
+          "智能代理协作"
+        ],
+        "technical_highlights": [
+          "自适应构建模块化缰绳",
+          "支持跨域协作网络"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.36012",
+      "source": "huggingface",
+      "title": "In-Context Learning for Robots: Methods and Applications",
+      "authors": [
+        "Haojian Huang",
+        "Zexi Li",
+        "Junhao Guo",
+        "Yehang Zhang",
+        "Wenxuan Peng",
+        "Bohan Zhou",
+        "Weilin Ruan",
+        "Leyi Wu",
+        "Chenxu Wang",
+        "Jianchong Su",
+        "Binghui Xie",
+        "Wosong Chen",
+        "Yingjie Xu",
+        "Tianhao Zhou",
+        "Suzeyu Chen",
+        "Pukun Zhao",
+        "Jiaqi He",
+        "Xinyi Li",
+        "Runze Li",
+        "Peiran Dong",
+        "Shaoxiang Dang",
+        "Jing Huang",
+        "Yingbing Chen",
+        "Yifan Chang",
+        "Tianyi Zhang",
+        "Shiyuan Deng",
+        "Haozhi Wang",
+        "Yangkai Wei",
+        "Wenqian Li",
+        "Han Yang",
+        "Kaiwen Zhou",
+        "Huaping Liu",
+        "James Cheng",
+        "Rui Shao",
+        "Donglin Wang",
+        "Yaochu Jin",
+        "Jianye Hao",
+        "Ying-Cong Chen",
+        "Yinchuan Li"
+      ],
+      "abstract": "General-purpose robots must infer what a new task requires and translate that understanding into appropriate physical action. In-context learning (ICL) for robots supports this process by using demonstrations and interaction to direct existing competence with neural parameters held fixed during deployment. We organize this literature review around the interfaces connecting contextual evidence to execution, distinguishing four families: context-conditioned policies, geometric demonstration transfer, world-model-based control, and skill- and agent-based execution. Comparing these interfaces clarifies their transfer assumptions and the roles of training, correspondence, and memory in making context useful. Across manipulation and navigation, we examine how these mechanisms preserve taught requirements as objects, environments, and execution conditions change. This analysis links method design to evaluation practices that distinguish responsiveness to teaching, physical transfer, and benefits from retained experience. The resulting agenda connects compositional task acquisition and faithful transfer with physical recursive self-improvement, in which experience improves the ability to learn subsequent tasks.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.36012",
+      "pdf_url": "https://arxiv.org/pdf/2609.36012",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.36012",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "upvotes": 317,
+      "hot_score": 3170,
+      "structured_summary": {
+        "chinese_title": "机器人在上下文学习中的方法与应用",
+        "chinese_summary": "通过在上下文学习支持机器人从演示和交互中学习新任务并转化为适当的身体动作。",
+        "pain_point": "机器人如何从新任务中推断需求并将其转化为适当的物理动作。",
+        "core_value": "通过区分四种类型的方法，明确上下文学习的转移假设及其在使上下文有用中的作用。",
+        "technical_architecture": "通过四种类型的方法：条件策略、几何演示转移、世界模型控制和技能及代理执行，连接方法设计与评估实践。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何在不同任务和环境中保持已教要求。",
+        "key_contributions": [
+          "区分四种类型的方法及其在上下文学习中的作用",
+          "连接方法设计与评估实践"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "导航"
+        ],
+        "technical_highlights": [
+          "明确上下文学习的转移假设",
+          "区分四种类型的方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.34309",
+      "source": "huggingface",
+      "title": "MaLiang-Harness: A Programmable Path to Image and Video Generation",
+      "authors": [
+        "Haoyu Zhao",
+        "Zihao Zhang",
+        "Xudong Wang",
+        "Jiaxi Gu",
+        "Zuxuan Wu",
+        "Yu-Gang Jiang",
+        "Shuicheng Yan"
+      ],
+      "abstract": "Executable programs offer explicit control over how images and videos are constructed, but generating runnable code is only the beginning of visual creation. A program can execute correctly while violating the requested composition, appearance, or motion. We define this discrepancy as the Program-to-Visual (P2V) gap and introduce MaLiang-Harness, a unified framework for organizing MLLM-driven visual generation into a persistent process of construction, inspection, and revision. Its central design is to make the evolving visual program, its construction history, and its verification share a common revision reference. We define the Persistent Executable Generation (PEG) state as preserving programs and task context. Traceable Generation Process (TGP) connects edits to rendered evidence, and Revision-aware Editing and Verification (REV) supports restoration and checks the current revision before completion. Together, these mechanisms coordinate planning, execution, and visual feedback across rendering backends. We evaluate 11 powerful closed-source MLLMs on MaLiang-IBench and four on MaLiang-VBench, measuring generation success, visual quality, and computational cost. GPT-6-Astra achieves 100% generation success on both benchmarks, with 96.0% of image tasks and 76.9% of video tasks meeting all quality thresholds. The comparison also reveals a mismatch between general capability scores and visual generation performance, with similarly scored models differing substantially in their ability to satisfy visual requirements. MaLiang-Harness provides a systematic basis for studying how MLLMs translate executable code into visual outcomes, exposing both the potential of programmable generation and the limitations of general benchmarks as predictors of this ability. The project is available at https://github.com/gulucaptain/MaLiang-Harness.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.34309",
+      "pdf_url": "https://arxiv.org/pdf/2609.34309",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.34309",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 277,
+      "hot_score": 2770,
+      "structured_summary": {
+        "chinese_title": "MaLiang-Harness: 图像和视频生成的可编程路径",
+        "chinese_summary": "MaLiang-Harness 提供了一个统一框架，用于组织基于 MLLM 的视觉生成过程，包括构建、检查和修订。",
+        "pain_point": "现有方法在生成图像和视频时可能违反用户请求的组成、外观或运动。",
+        "core_value": "通过统一框架协调规划、执行和视觉反馈，提高生成质量和效率。",
+        "technical_architecture": "MaLiang-Harness 通过共享修订参考来协调构建历史、执行和验证。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了部分 MLLM，未来需扩展评估范围。",
+        "key_contributions": [
+          "定义了 Program-to-Visual (P2V) 缺口",
+          "提出了 Persistent Executable Generation (PEG) 状态",
+          "引入了 Traceable Generation Process (TGP) 和 Revision-aware Editing and Verification (REV)"
+        ],
+        "application_scenarios": [
+          "图像和视频生成",
+          "视觉创作"
+        ],
+        "technical_highlights": [
+          "统一框架协调生成过程",
+          "支持修订和验证"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.32722",
+      "source": "huggingface",
+      "title": "Scaling Properties of Same-Family On-Policy Distillation",
+      "authors": [
+        "Yuntai Bao",
+        "Qinfeng Li",
+        "Guoqing Jiang",
+        "Liwei Chen",
+        "Zhiheng Qin",
+        "Xuanping Li",
+        "Wenqi Zhang",
+        "Xuhong Zhang"
+      ],
+      "abstract": "*Reinforcement learning (RL)* can induce substantial reasoning capabilities in large language models (LLMs), but how much of this capability transfers across model scales, and how quickly, remains unclear. We study the scaling properties of *on-policy distillation (OPD)* across *weak-to-strong*, *same-base*, and *strong-to-weak* teacher--student setups. We find that early OPD training dynamics uniformly exhibit a regular *useful-transfer* regime, in which held-out accuracy (the *gold score*, G) rises approximately linearly in d=mathrm{KL(π_θVert π_{ref})}, the square root of token-level reverse KL divergence from the student initialization. In every observed weak-to-strong pair, the student's peak gold score exceeds its teacher's own, so a compact RL expert can transfer capability to a much larger student via OPD. To estimate OPD outcomes, we fit *power laws* for how G_{peak} and the slope of the useful-transfer regime scale with student and teacher parameter counts and with teacher gold score. These laws show that peak gold score improves with teacher scale only up to roughly the student's scale, and that at a matched gold score smaller teachers transfer better, so a teacher's score alone does not define its supervision value. We also study the scaling effects of two OPD variants, bootstrapping weak-to-strong OPD, and the degree of on-policy supervision.",
+      "published_date": "2026-09-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.32722",
+      "pdf_url": "https://arxiv.org/pdf/2609.32722",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.32722",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 212,
+      "hot_score": 2120,
+      "structured_summary": {
+        "chinese_title": "同家族在线策略蒸馏的扩展特性",
+        "chinese_summary": "通过在线策略蒸馏，小型RL专家可以高效地向大型模型转移能力。",
+        "pain_point": "大型语言模型与小型RL专家之间的能力转移效率和机制不明确。",
+        "core_value": "揭示了在线策略蒸馏在不同模型规模间的扩展特性，提供了能力转移的理论基础。",
+        "technical_architecture": "通过在线策略蒸馏方法研究不同模型规模间的策略转移。",
+        "quantitative_results": "发现小型模型在某些情况下能更有效地向大型模型转移能力。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定模型家族内进行了研究。",
+        "key_contributions": [
+          "揭示了在线策略蒸馏在不同模型规模间的扩展特性",
+          "提出了用于估计在线策略蒸馏结果的幂律模型"
+        ],
+        "application_scenarios": [
+          "大型语言模型的训练优化",
+          "小型RL专家向大型模型的知识转移"
+        ],
+        "technical_highlights": [
+          "发现了早期在线策略蒸馏训练动态中的有用转移阶段",
+          "提出了用于估计峰值黄金分数的幂律模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.31847",
+      "source": "huggingface",
+      "title": "Omni-IO Skills: Harnessing Your Agent Omni-Native",
+      "authors": [
+        "Yanlin Li",
+        "Mingyang Hao",
+        "Shengqiong Wu",
+        "Hao Fei",
+        "Mong-Li Lee",
+        "Wynne Hsu"
+      ],
+      "abstract": "General-purpose agents can plan, reason, and act over long horizons, yet their production capabilities remain fragmented across text, images, audio, video, documents, 3D assets, and code. Extending a foundation model to additional modalities ties capability growth to costly model updates, while assembling specialist models and tools leaves unresolved how procedures, dependencies, intermediate assets, and cross-turn revisions should be coordinated. We present Omni-IO Skills, a plug-and-play Agent Harness that makes existing agents omni-native through hierarchical Skills, a standardized multimodal execution interface, dependency-aware orchestration, and a persistent Asset Registry. Multi-asset workflows are represented as Declare Execution Graphs, which schedule independent operations concurrently and register successful outputs for downstream and cross-turn reuse across replaceable execution backends. Its 27 Skills cover 38 representative tasks spanning seven artifact modalities and four capability families: understanding, generation, reasoning, and retrieval. On UniM-90, the harness raises the input-support rates of GPT-5.6 Sol and Claude Sonnet 5 from 40.00% and 38.89% to 100%, while increasing relative Semantic--Quality Coupled Score from 26.99 to 74.94 and from 27.82 to 77.78, respectively; Strict Structure Score reaches 100.00 and 99.78. These results establish harness-level capability composition as a practical route to broad, evolvable Omni systems without changing the host agent's reasoning core.",
+      "published_date": "2026-09-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.31847",
+      "pdf_url": "https://arxiv.org/pdf/2609.31847",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.31847",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 159,
+      "hot_score": 1590,
+      "structured_summary": {
+        "chinese_title": "全方位输入输出技能：让代理具备全栈能力",
+        "chinese_summary": "通过标准化接口和技能模块，使通用代理能够处理多种输入输出任务。",
+        "pain_point": "现有代理在处理多模态任务时存在能力碎片化和协调困难的问题。",
+        "core_value": "提供了一种标准化的多模态执行接口和技能模块，提高了代理的通用性和灵活性。",
+        "technical_architecture": "采用层次化的技能模块和依赖感知的编排技术。",
+        "quantitative_results": "在UniM-90数据集上，提高了GPT-5.6 Sol和Claude Sonnet 5对多模态输入的支持率。",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于特定的执行后端，未来需要进一步优化。",
+        "key_contributions": [
+          "提出了一种标准化的多模态执行接口",
+          "实现了多模态技能模块的插件化",
+          "支持了多资产的工作流管理"
+        ],
+        "application_scenarios": [
+          "多模态内容生成",
+          "跨模态信息检索"
+        ],
+        "technical_highlights": [
+          "支持多模态数据处理",
+          "依赖感知的编排技术",
+          "持久化的资产注册"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.34759",
+      "source": "huggingface",
+      "title": "PanoVLN: Towards Effective Panoramic Vision-and-Language Navigation",
+      "authors": [
+        "Zhen Wang",
+        "Changpeng Wang",
+        "Zhe Liu",
+        "Zhangyang Qi",
+        "Yuxiang Lu",
+        "Zimo Zeng",
+        "Donglian Qi",
+        "Xi Chen"
+      ],
+      "abstract": "Recent vision-language models (VLMs) have advanced vision-and-language navigation (VLN), enabling models to predict navigation actions from visual observations and language instructions. In this work, we explore VLN with panoramic observations and introduce PanoVLN. The motivation is straightforward: more complete visual context should enable better-informed navigation decisions. For example, a panorama can reveal a passage outside a perspective camera's field of view, allowing the model to identify the intended route without additional exploration. However, we find that simply replacing perspective images with panoramas yields only limited gains. Our diagnosis suggests that fully exploiting wider visibility requires modifications to action prediction, training supervision, and visual representation. First, wider visibility supports longer-horizon action planning. We make the model predict longer action sequences, enabling larger turns and subsequent movement from a single panorama. Specifically, we introduce a confidence-guided execution (CGE) strategy that dynamically determines how many predicted actions to execute before replanning. Second, wider visibility also brings more complex route choices. We therefore construct training routes with frequent branching points and clear instructions to provide targeted supervision for route selection. Third, panoramic navigation requires understanding spatial relationships across viewing directions, beyond recognizing individual landmarks. We combine semantic and geometric features from RGB panoramas to capture both scene content and spatial layout without adding visual tokens. With a 4B backbone and RGB-only input, PanoVLN surpasses the previous SOTA by 11.9% and 8.7% in success rate on R2R-CE and RxR-CE Val-Unseen. Real-world experiments on a quadruped further demonstrate faster navigation with fewer pauses than prior VLN methods.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.34759",
+      "pdf_url": "https://arxiv.org/pdf/2609.34759",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.34759",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 133,
+      "hot_score": 1330,
+      "structured_summary": {
+        "chinese_title": "PanoVLN: 朝向有效的全景视觉-语言导航",
+        "chinese_summary": "提出PanoVLN，通过全景观察提高视觉-语言导航性能。",
+        "pain_point": "现有模型依赖有限视野，导致导航决策不够全面。",
+        "core_value": "通过全景观察支持更长视野的行动规划，改进导航决策。",
+        "technical_architecture": "引入信心引导执行策略，动态决定执行预测动作数量。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索视觉表示的优化。",
+        "key_contributions": [
+          "提出PanoVLN，利用全景观察改进视觉-语言导航",
+          "引入信心引导执行策略，支持更长行动序列预测"
+        ],
+        "application_scenarios": [
+          "室内导航",
+          "机器人自主导航"
+        ],
+        "technical_highlights": [
+          "动态决定执行预测动作数量",
+          "支持更长视野的行动规划"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.32607",
+      "source": "huggingface",
+      "title": "VoxMem: Benchmarking Multimodal Memory in Large Audio Language Models",
+      "authors": [
+        "Yang Xiao",
+        "Vidhyasaharan Sethu",
+        "Eun-Jung Holden",
+        "Ting Dang"
+      ],
+      "abstract": "Spoken conversational systems must recover information from prior interactions (i.e., memory), yet relevant information in speech extends beyond what was said to who said it, how it was spoken, and what was audible, information that exists only in the audio signal and cannot be recovered from a transcript. Beyond what to remember, memory also demands diverse operations: retrieving a single fact, integrating evidence across turns, tracking an evolving state. Real interactions further unfold across sessions, meaning information accumulates across distinct episodes rather than a single continuous recording. Existing benchmarks fall short on all three dimensions: they focus primarily on lexical content, adopt limited and ad hoc memory operations, and treat memory as a single-session problem. We argue that principled memory evaluation requires jointly characterizing the acoustic evidence to be retained and the operations applied to it, and introduce a taxonomy along these two axes. Building on this taxonomy, we present VoxMem: 3,196 evaluation instances over 34,743 spoken sessions (177 hours) crossing four acoustic evidence types (speech semantics, speaker identity, paralinguistic cues, environmental sound) with four memory operations (information extraction, multi-session reasoning, temporal tracking, and answer refusal), grounded in multi-session histories and stratified across context budgets from 8K to 64K tokens. Evaluating 15 LALMs, no model exceeds 40% at 32K. Models retain what was said far better than who said it, how, or what was audible, a gap that widens for complex operations, grows with history length, and manifests as qualitatively distinct failure modes across evidence types. VoxMem aims to provide a foundation to measure and drive progress on the full scope of spoken conversational memory.",
+      "published_date": "2026-09-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.32607",
+      "pdf_url": "https://arxiv.org/pdf/2609.32607",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.32607",
+      "category": "other",
+      "tags": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "upvotes": 125,
+      "hot_score": 1250,
+      "structured_summary": {
+        "chinese_title": "VoxMem: 大型音频语言模型多模态记忆基准测试",
+        "chinese_summary": "提出了VoxMem基准测试，涵盖多模态记忆的评估",
+        "pain_point": "现有基准测试无法全面评估音频语言模型的记忆能力",
+        "core_value": "VoxMem通过多维度评估，填补了现有基准测试的空白",
+        "technical_architecture": "基于语音证据和操作分类的多模态记忆评估框架",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅涵盖部分音频信号类型",
+        "key_contributions": [
+          "提出了多维度的多模态记忆评估框架",
+          "提供了大规模的音频会话数据集"
+        ],
+        "application_scenarios": [
+          "评估大型音频语言模型的记忆能力",
+          "促进多模态记忆研究的发展"
+        ],
+        "technical_highlights": [
+          "涵盖了四种类型的语音证据",
+          "包含34,743个会话实例"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.36380",
+      "source": "huggingface",
+      "title": "LEGO-Anything: Coding Agents for 3D Scene Reconstruction",
+      "authors": [
+        "Xirui Li",
+        "Peng Shi",
+        "Mingwen Dong",
+        "Sheng Zhang",
+        "Zhuoyan Xu",
+        "Dongkyu Lee",
+        "Shuaichen Chang",
+        "Yi Xiang",
+        "Lin Pan",
+        "Jiarong Jiang"
+      ],
+      "abstract": "A 3D scene reconstructed from a single image is most useful when represented not as a rendering or a fixed 3D output, but as an explicit scene program whose execution yields a scene that can be inspected, edited, and queried. We present LEGO-Anything, an Image-to-Code framework in which a coding agent iteratively writes and executes Blender code, inspects scenes and renderings, and revises the program. To evaluate end-to-end scene recovery, we introduce LEGO-Bench, a simulator-grounded benchmark with 208 images from 104 diverse indoor and outdoor scenes. LEGO-Bench separately scores artifact validity, visible-surface geometry, and rendered appearance. Its simulator-grounded design enables extensibility and precise automatic evaluation. Among evaluated agents, GPT-6-astra achieves the strongest overall results, with 53.4% indoor and 39.6% outdoor scores, yet substantial gaps remain between delivering valid scene artifacts and faithfully recovering scene geometry and appearance. Analysis of agent construction trajectories reveals three recurring issues: weak scene initialization, regressive edits during iteration, and unreliable self-evaluation. These findings motivate LEGO-Plugin, a training-free harness plugin for more controlled iterative scene construction, which improves all six evaluated models, with relative gains of up to 62.7% in overall score. Finally, we test whether reconstructed scenes can represent natural images and support vision tasks. In LEGO-World, we derive object detections, instance masks, and relative depth as deterministic queries on scenes reconstructed by GPT-6-astra. These readouts show non-trivial performance across all three tasks but fall well short of specialized vision models, suggesting that program-constructed scenes from current coding agents are a promising but not yet sufficiently precise representation of natural images.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.36380",
+      "pdf_url": "https://arxiv.org/pdf/2609.36380",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.36380",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 104,
+      "hot_score": 1040,
+      "structured_summary": {
+        "chinese_title": "LEGO-Anything: 用于3D场景重建的编码代理",
+        "chinese_summary": "LEGO-Anything 是一种图像到代码框架，通过迭代编写和执行Blender代码，实现3D场景的重建。",
+        "pain_point": "现有方法重建的3D场景难以编辑和查询，缺乏精确的自动评估。",
+        "core_value": "提供了一种新的图像到代码框架，能够生成可编辑和查询的3D场景，并具有精确的自动评估能力。",
+        "technical_architecture": "采用迭代编写和执行Blender代码的方法，结合场景重建和渲染。",
+        "quantitative_results": "GPT-6-astra在室内场景中得分为53.4%，室外场景中得分为39.6%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仍存在生成有效场景和忠实恢复场景几何和外观之间的差距。",
+        "key_contributions": [
+          "提出了一种新的图像到代码框架LEGO-Anything",
+          "设计了LEGO-Bench基准测试集",
+          "揭示了代理构建轨迹中的三个常见问题"
+        ],
+        "application_scenarios": [
+          "3D场景重建",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "引入了场景程序的概念",
+          "实现了自动化的精确评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.34981",
+      "source": "huggingface",
+      "title": "What Makes World Action Models Generalize? An Empirical Study of Test-Time Future Modeling",
+      "authors": [
+        "Renping Zhou",
+        "Zanlin Ni",
+        "Zihao Fan",
+        "Guohao Fu",
+        "Zeyu Liu",
+        "Hao Shi",
+        "Jie Zhang",
+        "Chi Bene Chen",
+        "Yang Yue",
+        "Xueyang Fu",
+        "Gao Huang"
+      ],
+      "abstract": "World action models (WAMs) predict the future alongside actions during training. Due to the heavy computation cost of video denoising, whether the future must still be generated during inference is disputed: Explicit WAMs denoise it into clean frames along with every action chunk, whereas Latent WAMs discard it entirely for acceleration. We find that latent WAMs, despite matching explicit ones on in-distribution tasks, fail to retain the generalization benefits that originally motivated WAMs. To demonstrate this, we evaluate generalization along three axes: environmental perturbation, data efficiency, and task generalization. Controlled comparisons with a matched backbone, training data, and budget reveal consistent degradation across all three axes when the action expert no longer conditions on future representations. Further analysis shows that the gap arises almost entirely from the first denoising step: the benefit comes from preparing the future, not generating it. We therefore propose Simple-WAM, which simplifies future modeling into a single forward pass of fully noised video tokens and adapts the training-time noise schedule to this inference behavior. Across simulation and real-world tasks, Simple-WAM achieves the best of both worlds, leading explicit WAMs in generalization performance with efficiency comparable to Latent WAMs. Project Page: https://zrporz.github.io/Simple-WAM-Web/",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.34981",
+      "pdf_url": "https://arxiv.org/pdf/2609.34981",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.34981",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 103,
+      "hot_score": 1030,
+      "structured_summary": {
+        "chinese_title": "什么让世界动作模型泛化？关于测试时未来建模的经验研究",
+        "chinese_summary": "研究发现隐式世界动作模型在泛化能力上不如显式模型，提出简化未来建模方法Simple-WAM。",
+        "pain_point": "隐式世界动作模型在泛化能力上不如显式模型。",
+        "core_value": "提出Simple-WAM简化未来建模，提升泛化能力。",
+        "technical_architecture": "简化未来建模为单次前向传播的完全噪声视频标记，并调整训练时的噪声计划。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可进一步探索更多应用场景。",
+        "key_contributions": [
+          "发现隐式世界动作模型在泛化能力上不如显式模型",
+          "提出Simple-WAM简化未来建模方法",
+          "通过实验证明简化未来建模的有效性"
+        ],
+        "application_scenarios": [
+          "视频预测",
+          "动作识别"
+        ],
+        "technical_highlights": [
+          "简化未来建模为单次前向传播的完全噪声视频标记",
+          "调整训练时的噪声计划以适应推理行为"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.36322",
+      "source": "huggingface",
+      "title": "Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression",
+      "authors": [
+        "Xingyu Zhu",
+        "Pu",
+        "Yi",
+        "Ziheng Cheng",
+        "Ang Lv",
+        "Jing Liu",
+        "Lexing Ying",
+        "Yiyuan Ma",
+        "Xin Dong"
+      ],
+      "abstract": "Chunked KV-cache compression reduces the memory and attention costs of long-context inference by compressing windows of consecutive tokens into fewer cache entries at a fixed stride. Such compression also introduces a new positional coordinate: a token's phase, or its position relative to compression-window boundaries. We uncover a systematic asymmetry in models using such compression: the same information can be easy to retrieve at one phase and difficult at another. We call this periodic variation in retrieval performance phase sensitivity. In large open-weight models with such compression, long-context retrieval accuracy can differ by up to 40 percentage points across phases, revealing periodic weak spots that average benchmark scores can conceal.\n  To investigate this behavior, we pretrain a family of transformers from scratch across multiple KV-compression designs, reproducing phase sensitivity across the variants. Mechanistic analysis using causal interventions in these models reveals phase specialization: different attention components contribute asymmetrically to retrieving information at different source phases. We further analyze idealized retrieval models, showing how gradient flow dynamics may favor sharp phase specialization. Evaluating models with chunked KV-cache compression thus requires measuring across compression phases: high average accuracy can coexist with systematic positional failures.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.36322",
+      "pdf_url": "https://arxiv.org/pdf/2609.36322",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.36322",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 86,
+      "hot_score": 860,
+      "structured_summary": {
+        "chinese_title": "周期性薄弱点：分块KV缓存压缩的相位敏感性",
+        "chinese_summary": "揭示了使用分块KV缓存压缩的模型在不同相位下检索性能的周期性差异。",
+        "pain_point": "长上下文检索在不同相位下性能差异显著。",
+        "core_value": "发现了相位敏感性现象，提升了对模型性能的理解。",
+        "technical_architecture": "通过分块KV缓存压缩和相位分析技术。",
+        "quantitative_results": "在大型模型中，检索准确率在不同相位间差异可达40个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "揭示了相位敏感性现象",
+          "提出了周期性薄弱点的概念"
+        ],
+        "application_scenarios": [
+          "长文本理解",
+          "大规模语言模型"
+        ],
+        "technical_highlights": [
+          "系统性地分析了相位敏感性",
+          "通过因果干预揭示了相位专业化现象"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

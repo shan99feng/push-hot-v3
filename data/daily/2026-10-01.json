@@ -1,0 +1,559 @@
+{
+  "date": "2026-10-01",
+  "generated_at": "2026-10-02T02:02:56.156972+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.36484",
+      "source": "huggingface",
+      "title": "The Teacher Is a Direction, Not a Destination: Extrapolating RL-Induced Representation Residuals in On-Policy Distillation",
+      "authors": [
+        "Hao Li",
+        "MeiJia Chen",
+        "Weijie Ren",
+        "Donghan Li",
+        "Zijun Tian",
+        "Jingchun Huang",
+        "Naibo Wang"
+      ],
+      "abstract": "On-policy distillation (OPD) trains a student to match the teacher's next-token distributions on the student's own trajectories and has yielded substantial empirical gains. Generalized variants allow the student to surpass the teacher by extrapolating an implicit reward in output space. The language-model head, however, attenuates this change anisotropically: much of the change encoded in the teacher's hidden states reaches the logits at a small fraction of its weight, and the sampled-token log-probability ratios on which output-space extrapolation relies inject noise that the extrapolation amplifies, making training unstable. We observe that reinforcement learning (RL) shifts a model's internal representations relative to its base checkpoint, and that the direction of this shift can be measured at every layer. Motivated by this observation, we propose RIDE (RL-Induced Direction Extrapolation), which extrapolates the RL-induced change directly in representation space: at every layer and token position, RIDE computes the residual between the teacher and its pre-RL checkpoint and regresses the student's hidden states toward targets displaced beyond the teacher along this residual. Conditioned on a sampled trajectory, this regression is equivalent to maximizing a linear directional reward defined by the residual under a quadratic penalty centered at the teacher, which makes explicit how the objective moves the student along the RL-induced direction while limiting its deviation from the teacher. Across four base/RL-teacher pairs spanning different scales, architectures, and pre-training lineages, RIDE approaches or exceeds the RL-trained teacher on every pair and is the only method whose mean does so, and it consistently outperforms output-space extrapolation, which degrades the student whenever the teacher is close to its base. Project page: https://github.com/xixixixixxxx/RIDE.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.36484",
+      "pdf_url": "https://arxiv.org/pdf/2609.36484",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.36484",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 231,
+      "hot_score": 2310,
+      "structured_summary": {
+        "chinese_title": "教师是一个方向，不是终点：基于强化学习诱导表示残差的在线策略蒸馏外推",
+        "chinese_summary": "提出RIDE方法，直接在外推表示空间中外推强化学习诱导的变化，以解决语言模型头部对变化的非均匀衰减问题。",
+        "pain_point": "语言模型头部对变化的非均匀衰减导致输出空间外推不稳定。",
+        "core_value": "通过直接在外推表示空间中进行外推，提高在线策略蒸馏的性能。",
+        "technical_architecture": "RIDE方法在外推表示空间中直接计算教师与预训练模型之间的残差。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更广泛的实验验证。",
+        "key_contributions": [
+          "提出RIDE方法在外推表示空间中直接外推强化学习诱导的变化",
+          "解决了语言模型头部对变化的非均匀衰减问题",
+          "提高了在线策略蒸馏的性能"
+        ],
+        "application_scenarios": [
+          "在线策略蒸馏",
+          "强化学习模型的改进"
+        ],
+        "technical_highlights": [
+          "在外推表示空间中直接计算残差",
+          "解决输出空间外推的噪声问题"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.38721",
+      "source": "huggingface",
+      "title": "UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement",
+      "authors": [
+        "Fang Wu",
+        "Da Xing",
+        "Yanjie Huang",
+        "Junxi Wang",
+        "Ji Wang",
+        "Hejia Geng",
+        "Guancheng Wan",
+        "Bowen Zuo",
+        "Xiaomin Li",
+        "Shixiang Tang",
+        "Xinyu Xiang",
+        "Zehong Wang",
+        "Shiyi Du",
+        "Peng Xia",
+        "Shuangjia Zheng",
+        "Yining Hong",
+        "Li Erran Li",
+        "Jure Leskovec",
+        "Yejin Choi"
+      ],
+      "abstract": "Modern multimodal models bring generation and understanding into a single unified system, which enables them to provide and learn from their own feedback. Motivated by this unified capacity, we introduce UniEvo-VL, a self-evolving framework for multimodal models to learn from this constructive self-correction feedback during test-time compute. Instead of relying on a separate, often larger, teacher, we leverage their self-critiques as privileged information and ask a single multimodal model to act as both teacher and student with different contexts. The student only sees the vanilla question, while the teacher conditions on the privileged critique. Then training minimizes the per-state divergence between their denoising diffusion distributions over the student's own sampling trajectories. Experiments demonstrate that UniEvo-VL improves the image generation capabilities of multimodal models, while maintaining their sensitivity to additional reflection information. Specifically, we build on top of the open-source Qwen-image-2512 and observe a significant performance gain from 0.747 to 0.808 on GenEval and from 32.97 to 35.53 on GenEval2 Soft-TIFA. Moreover, attempts with more powerful external critics (e.g., GPT5.6-Luna) show that multimodal models with strong judge capabilities can anticipate a higher self-evolving ceiling. Last but not least, mixed text-rendering outcomes show that our self-improvements may not be uniform across different tasks. Our study aims to shed light on the current hot recursive self-improvement research line to enhance the user experience when using multimodal models without external supervision or guidance.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.38721",
+      "pdf_url": "https://arxiv.org/pdf/2609.38721",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.38721",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 229,
+      "hot_score": 2290,
+      "structured_summary": {
+        "chinese_title": "UniEvo-VL: 多模态模型自我改进的在线自蒸馏训练方法",
+        "chinese_summary": "UniEvo-VL 通过利用模型的自我批评作为特权信息，使多模态模型在测试时能够从自我纠正的反馈中学习。",
+        "pain_point": "当前多模态模型缺乏有效的自我改进机制。",
+        "core_value": "UniEvo-VL 提高了多模态模型的图像生成能力，同时保持了对额外反思信息的敏感性。",
+        "technical_architecture": "UniEvo-VL 采用单个模型作为教师和学生，利用自批评作为特权信息进行训练。",
+        "quantitative_results": "在 GenEval 上从 0.747 提升到 0.808，GenEval2 Soft-TIFA 上从 32.97 提升到 35.53。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更广泛的场景下验证其有效性。",
+        "key_contributions": [
+          "引入了自批评作为特权信息",
+          "实现了单模型作为教师和学生"
+        ],
+        "application_scenarios": [
+          "多模态生成任务",
+          "自我反馈学习"
+        ],
+        "technical_highlights": [
+          "在线自蒸馏训练",
+          "利用自批评信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.34563",
+      "source": "huggingface",
+      "title": "Rethinking Latent Visual Reasoning: Grounding Latent Reasoning in Visual Evidence",
+      "authors": [
+        "Xi Xiao",
+        "Tianchen Zhao",
+        "Youngeun Kim",
+        "Zhuowei Li",
+        "Linghan Xu",
+        "Jiaye Wu",
+        "Zheng Zhang",
+        "Xiang Xu",
+        "Xuanbai Chen",
+        "Farhan Tejani",
+        "Jakub Zablocki",
+        "Julia Xu",
+        "Yifan Xing"
+      ],
+      "abstract": "Latent visual reasoning (LVR) enables multimodal large language models (MLLMs) to perform intermediate computation in continuous latent tokens rather than expressing every reasoning step in words. However, unlike textual CoT, latent reasoning is not directly observable, making it difficult to supervise what latent tokens learn. In this work, we first conduct a thorough analysis of latent-token behavior and identify a latent evidence-credit gap: latent tokens respond only weakly to image perturbations that alter the correct answer. We hypothesize that this issue stems from the lack of explicit supervision during GRPO training. These findings suggest that a final-answer reward provides too little guidance on what visual evidence to preserve or how credit should be assigned across latent tokens. To bridge this gap, we propose ReaLVR, which brings visual-evidence supervision to the model's own free-running latent trajectories. ReaLVR contrasts correct and model-generated wrong answers to determine where stronger supervision is needed, and relevant and mismatched visual evidence to specify what to preserve. Across three model families, ReaLVR consistently outperforms evaluated LVR baselines, achieving the highest five-task average of 63.7% on Qwen2.5-VL-7B. Crucially, we are the first to scale visual reasoning in latent space, showing that our framework continues to deliver robust improvements at frontier model scales up to 235B. Further analyses show more question-sensitive latent-token positions, stronger alignment with relevant visual regions, and greater fixed-context dependence on the most attended latent tokens.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.34563",
+      "pdf_url": "https://arxiv.org/pdf/2609.34563",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.34563",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 206,
+      "hot_score": 2060,
+      "structured_summary": {
+        "chinese_title": "重新思考潜在视觉推理：将潜在推理与视觉证据对接",
+        "chinese_summary": "提出ReaLVR，通过视觉证据监督改进潜在视觉推理，提升模型性能。",
+        "pain_point": "潜在视觉推理难以监督，导致潜在令牌对图像变化响应不足。",
+        "core_value": "通过引入视觉证据监督，ReaLVR显著提升潜在视觉推理的性能。",
+        "technical_architecture": "通过对比正确和错误答案，ReaLVR指定需要更强监督的地方。",
+        "quantitative_results": "ReaLVR在三个模型家族中均优于评估的潜在视觉推理基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多视觉证据监督的具体实现方式。",
+        "key_contributions": [
+          "提出视觉证据监督机制",
+          "显著提升潜在视觉推理性能"
+        ],
+        "application_scenarios": [
+          "多模态大语言模型推理",
+          "视觉推理任务"
+        ],
+        "technical_highlights": [
+          "引入视觉证据监督",
+          "对比正确和错误答案确定监督重点"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.39102",
+      "source": "huggingface",
+      "title": "False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents",
+      "authors": [
+        "Meijia Chen",
+        "Hao Li",
+        "Zheng Lu",
+        "Hongshan Lin",
+        "Junbai Tian",
+        "Yichen Liu",
+        "Zijun Tian",
+        "Yufan Zou",
+        "Shuhan Sun",
+        "Hanxin Chen",
+        "Zeyu Zhang",
+        "Weizhi Du",
+        "Yueting Li",
+        "Tianyu Shi",
+        "Alaa Khamis"
+      ],
+      "abstract": "Self-evolving search agents build their own training curricula by jointly optimizing a proposer that generates questions and a solver that answers them. This closed loop introduces a failure mode we call co-cheating: the proposer and solver increasingly agree on shared errors, so internal reward improves without a matching gain in external correctness. A post-hoc audit against source evidence shows co-cheating growing more severe over successive rounds of self-evolution, with pseudo-label correctness stagnating or declining even as the in-loop training signal improves. The most direct mitigation is to verify proposals before training: we introduce multi-sample verification (MSV), which queries the same model three times with the source and three times without it to decide task admission and replace unreliable pseudo-labels. MSV partially reduces false agreement but leaves substantial residual co-cheating and costs six extra labeler generations per candidate. These limitations motivate CrossFit, our main method: it partitions the proposer's source documents into groups A and B; questions generated from A are scored by an auxiliary solver trained only on B, and vice versa. The cross-fitted agreement determines proposer reward, so a same-source pseudo-label cannot be reproduced through the feedback solver, while the original solver's update rule is unchanged. Rerunning the loop with Qwen3.5-4B and Qwen3.5-9B, MSV reduces false-agreement mass from 6.1% to 5.7% and from 8.8% to 7.2%, whereas CrossFit reduces it to 3.0% and 3.7%. Replaying identical proposals with source-excluded feedback further reduces false agreement to 0.4% and 0.1%, isolating feedback ancestry from curriculum changes. Across seven downstream search benchmarks, CrossFit improves average performance over standard coupled self-evolution by 8.8 and 8.4 points and over Search-R1 by 8.7 and 7.8 points at 4B and 9B.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.39102",
+      "pdf_url": "https://arxiv.org/pdf/2609.39102",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.39102",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 190,
+      "hot_score": 1900,
+      "structured_summary": {
+        "chinese_title": "虚假边界：诊断和缓解自我进化的搜索代理中的共作弊现象",
+        "chinese_summary": "提出了一种新的方法CrossFit，通过交叉验证来缓解自我进化的搜索代理中的共作弊问题。",
+        "pain_point": "自我进化的搜索代理中，提案者和解答者逐渐达成共识错误，导致内部奖励提升但外部正确性未提升。",
+        "core_value": "提出了CrossFit方法，通过交叉验证解决共作弊问题，提高了代理的外部正确性。",
+        "technical_architecture": "引入了交叉验证架构，将提案者的来源文档分为两组，交叉评分。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "CrossFit方法增加了额外的标签生成成本。",
+        "key_contributions": [
+          "提出了共作弊现象及其诊断方法",
+          "提出了CrossFit方法缓解共作弊",
+          "验证了CrossFit方法的有效性"
+        ],
+        "application_scenarios": [
+          "自我进化的搜索代理系统",
+          "需要自我优化和适应的智能代理"
+        ],
+        "technical_highlights": [
+          "引入了交叉验证机制",
+          "提出了CrossFit方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.38288",
+      "source": "huggingface",
+      "title": "AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks",
+      "authors": [
+        "Hongjin Qian",
+        "Chaofan Li",
+        "Kun Luo",
+        "Wenqing Wei",
+        "Jianlyu Chen",
+        "Shuqi Lu",
+        "Yuyang Hu",
+        "Hongwang Xiao",
+        "Hui Wang",
+        "Chaozhuo Li",
+        "Qiwei Ye",
+        "Zhicheng Dou",
+        "Defu Lian",
+        "Zheng Liu"
+      ],
+      "abstract": "We present AREX-2, an effort to advance the self-improving capability of LLM agents, which we define as the ability to iteratively refine a solution at test time. This ability rests on two complementary capabilities: reflection, which produces a solution better than the current one, and long-horizon execution, which keeps the iteration effective over many rounds. We hypothesize that both capabilities are domain-agnostic, and can therefore be learned in scenarios that are well suited for supervision. Accordingly, we synthesize long-horizon improvement trajectories from machine learning and algorithmic programming tasks, two domains that offer verifiable feedback and reward sustained iteration. Trained on this data, our agent, built on Qwen3.8-27B, achieves strong results on MLE-bench Lite (81.8) and Frontier-CS (70.7), transfers to deep research with 84.0 on BrowseComp, 52.6 on HLE, 92.2 on GAIA, and 93.8 on DeepSearchQA, and keeps improving as its budget of rounds grows. These results show that long-horizon reflective data is an effective route toward self-improving agents.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.38288",
+      "pdf_url": "https://arxiv.org/pdf/2609.38288",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.38288",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 119,
+      "hot_score": 1190,
+      "structured_summary": {
+        "chinese_title": "AREX-2: 提升自改进能力的长期反思任务",
+        "chinese_summary": "AREX-2 通过长期反思任务提升了语言模型的自改进能力，实现了在多个任务上的优异表现。",
+        "pain_point": "现有语言模型在长期迭代中难以保持改进效果。",
+        "core_value": "通过合成长期改进轨迹，提升模型的自改进能力。",
+        "technical_architecture": "基于 Qwen3.8-27B，合成长期反思数据进行训练。",
+        "quantitative_results": "在 MLE-bench Lite、Frontier-CS 等任务上表现优异。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多应用场景。",
+        "key_contributions": [
+          "合成长期反思数据提升自改进能力",
+          "多任务迁移学习"
+        ],
+        "application_scenarios": [
+          "深度研究",
+          "算法编程"
+        ],
+        "technical_highlights": [
+          "长期反思任务设计",
+          "多任务迁移学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.39982",
+      "source": "huggingface",
+      "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents",
+      "authors": [
+        "Minki Kang",
+        "Ryo Hachiuma",
+        "Shaokun Zhang",
+        "Subhashree Radhakrishnan",
+        "Yonggan Fu",
+        "Jindong Jiang",
+        "Mingjie Liu",
+        "Ehsan Hosseini-Asl",
+        "Yi Dong",
+        "Yu-Chiang Frank Wang",
+        "Byung-Kwan Lee"
+      ],
+      "abstract": "Terminal agents act through stochastic model generations, yet the ability to generate a useful action does not ensure its reliable execution. A poor command (e.g., wrong package install) can change the environment in ways that hinder subsequent progress, even when the model could generate a better alternative. We investigate whether allocating test-time compute at the model-harness boundary can improve action reliability and trajectory success, and what makes this allocation effective. To study these questions, we introduce Mid-Harness, which samples and verifies candidate actions before forwarding one for execution, while keeping the generator and harness unchanged. With a TMAX-9B generator, more action sampling yields little benefit under weak verification, whereas a capable verifier can exploit useful alternatives from the same generator. On TerminalBench-Lite, a GPT-5.6 Sol verifier raises Pass@1 from 50.00% for the base agent to 68.03% with 8 sampled actions. When the same TMAX-9B model serves as the verifier, pairwise verification performs best among the evaluated verification mechanisms. Distilling responses from the stronger verifier into TMAX-9B further improves Pass@1, while leaving the action generator unchanged. With TMAX-9B on TerminalBench-Lite, combining action and trajectory scaling reaches higher success at lower estimated token cost than generating more trajectories alone. Mid-Harness also improves performance across additional models, benchmarks, and harnesses. These findings identify action scaling as a promising target for test-time compute scaling in terminal agents.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.39982",
+      "pdf_url": "https://arxiv.org/pdf/2609.39982",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.39982",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "upvotes": 102,
+      "hot_score": 1020,
+      "structured_summary": {
+        "chinese_title": "Mid-Harness: 在模型与框架之间扩展动作以提高终端代理的可靠性",
+        "chinese_summary": "通过在模型与框架之间分配测试计算资源，Mid-Harness 提高了动作的可靠性和轨迹的成功率。",
+        "pain_point": "模型生成的动作虽然有效，但在执行时可能因错误命令导致环境变化，影响后续进展。",
+        "core_value": "Mid-Harness 通过验证候选动作提高了动作的可靠性和轨迹的成功率。",
+        "technical_architecture": "Mid-Harness 在模型与框架之间引入验证机制，采样并验证候选动作。",
+        "quantitative_results": "GPT-5.6 Sol 验证器将 Pass@1 从 50.00% 提高到 68.03%，使用 TMAX-9B 模型作为验证器时，成对验证表现最佳。",
+        "competitors": "暂无对比信息",
+        "limitations": "Mid-Harness 的有效性依赖于验证器的能力。",
+        "key_contributions": [
+          "引入 Mid-Harness 在模型与框架之间分配测试计算资源",
+          "验证候选动作提高动作的可靠性和轨迹的成功率"
+        ],
+        "application_scenarios": [
+          "需要可靠执行动作的终端代理场景",
+          "涉及模型生成动作的自动化任务场景"
+        ],
+        "technical_highlights": [
+          "Mid-Harness 通过验证机制提高动作执行的可靠性",
+          "验证器能力对 Mid-Harness 的效果有显著影响"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.40340",
+      "source": "huggingface",
+      "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+      "authors": [
+        "Young-Jun Lee",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Minki Kang",
+        "Seungyeon Jwa",
+        "Jonghyun Choi",
+        "Seungho Han",
+        "Dongyeop Kang"
+      ],
+      "abstract": "Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can keep returning the same pages as solutions change. We introduce EvoDuet, a bi-level optimization method that co-evolves solutions and search queries with fixed model parameters. At each iteration, a retrieval gate lets the LLM assess its knowledge gap and choose to retrieve new documents, reuse stored ones, or proceed without them. An inner loop refines queries and ranks documents by the solution scores they are predicted to yield; an outer loop generates candidates in parallel from these documents and records the evaluated outcomes for later searches. Across 21 optimization tasks with one candidate per iteration, EvoDuet raises OpenEvolve's normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, whereas Qwen3.5-9B does not benefit. Our best runs surpass the previously reported best scores on eight tasks, including Swap Reduction on Q20 and Rosetta, and match them on three more. EvoDuet also improves with other scaffolds (e.g., Top-K, EvoX) on Sums/Diffs and Denoising, demonstrating its applicability across evolutionary search scaffolds.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.40340",
+      "pdf_url": "https://arxiv.org/pdf/2609.40340",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.40340",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 96,
+      "hot_score": 960,
+      "structured_summary": {
+        "chinese_title": "EvoDuet: 科学发现中的网页搜索与任务解决的双层协同进化",
+        "chinese_summary": "EvoDuet 提高了科学发现中的优化任务表现，特别是在使用不同大语言模型时。",
+        "pain_point": "大语言模型在进化搜索中遇到知识缺口时容易停滞。",
+        "core_value": "通过双层优化方法，EvoDuet 协同进化解决方案和搜索查询，提高了科学发现效率。",
+        "technical_architecture": "EvoDuet 使用内层循环优化查询并评估文档，外层循环并行生成候选解决方案。",
+        "quantitative_results": "EvoDuet 在 21 个优化任务中提高了 OpenEvolve 的发现收益。",
+        "competitors": "对比了 GPT-5.6-Luna、Gemini-3.8-Flash 和 Qwen3.5-9B 的表现。",
+        "limitations": "仅在特定大语言模型上进行了测试。",
+        "key_contributions": [
+          "提出了一种双层协同进化的优化方法。",
+          "显著提高了科学发现任务中的优化表现。",
+          "展示了在不同大语言模型上的广泛适用性"
+        ],
+        "application_scenarios": [
+          "科学发现中的优化任务",
+          "需要外部知识的复杂搜索任务"
+        ],
+        "technical_highlights": [
+          "内层循环优化查询并评估文档",
+          "外层循环并行生成候选解决方案"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.40325",
+      "source": "huggingface",
+      "title": "WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents",
+      "authors": [
+        "Ziyan Jiang",
+        "Jingbo Yang",
+        "Jiabao Ji",
+        "Yujian Liu",
+        "Qiucheng Wu",
+        "Tommi Jaakkola",
+        "Yang Zhang",
+        "Shiyu Chang"
+      ],
+      "abstract": "As interactive 3D worlds are increasingly used to study intelligent behavior, it becomes important to develop efficient pipelines for identifying anomalies in these simulated environments, such as floating objects, traversable walls, or objects inconsistent with the surrounding scene. Multimodal AI systems, including vision-language models (VLMs) and vision-language-action models (VLAs), have shown potential for automating this task. However, 3D world auditing is complex, requiring the close coupling of two distinct capabilities: action, to navigate the 3D world and search for anomalies systematically and efficiently; and visual reasoning, to understand the environment and identify anomalies from multimodal observations. It remains largely unexplored whether multimodal agents can effectively couple these two capabilities, using visual reasoning to identify potential anomalies while taking actions to validate them. In this paper, we introduce WorldAuditBench, a benchmark for 3D world auditing comprising 213 anomaly tasks across 13 environments built with Unreal Engine 5 and Three.js, spanning five anomaly families. We evaluate five frontier models under a fixed exploration budget using two auditing paradigms: VLA-based exploration followed by VLM-based anomaly identification, and an end-to-end VLM agent in which visual reasoning directly guides action selection. Across the evaluated models and two paradigms, success rates range from 6.6% to 42.3%, substantially below human performance (83.4%). Through the task of world auditing, WorldAuditBench provides a testbed for studying how multimodal agents couple action and visual reasoning in interactive 3D environments, while highlighting current limitations in their ability to gather and interpret evidence during exploration.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.40325",
+      "pdf_url": "https://arxiv.org/pdf/2609.40325",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.40325",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 93,
+      "hot_score": 930,
+      "structured_summary": {
+        "chinese_title": "WorldAuditBench: 与多模态代理互动的3D世界审计",
+        "chinese_summary": "提出了WorldAuditBench基准，用于评估多模态代理在3D世界审计中的性能。",
+        "pain_point": "现有3D世界审计缺乏有效的自动化工具，难以系统地检测和验证环境中的异常。",
+        "core_value": "提供了一个包含多种异常类型的基准，用于评估多模态代理在3D世界审计中的能力。",
+        "technical_architecture": "结合了视觉推理和动作执行，构建了一个多模态代理框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅涵盖有限的3D环境，未来需扩展更多场景。",
+        "key_contributions": [
+          "提出了一个3D世界审计基准",
+          "评估了多模态代理的性能",
+          "涵盖多种异常类型"
+        ],
+        "application_scenarios": [
+          "3D环境的自动化审计",
+          "虚拟现实中的异常检测"
+        ],
+        "technical_highlights": [
+          "结合视觉推理和动作执行",
+          "包含多种异常类型的基准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.38143",
+      "source": "huggingface",
+      "title": "Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI",
+      "authors": [
+        "Cheng Qian",
+        "Kunlun Zhu",
+        "Beibin Li",
+        "Zhenhailong Wang",
+        "Heng Ji"
+      ],
+      "abstract": "Agent performance depends on both reasoning ability and the environment in which it acts. We study test-time AI-for-AI, asking how a Builder can learn to construct better execution environments for a Target while both models' weights remain fixed. To make the Builder's experience reusable, we introduce Meta-Skill: principles specifying when support is needed and what resources to provide. The Builder learns these principles from Target's execution feedback on the development set, then uses the frozen skill bank to construct harnesses for unseen tasks. Across Harness-Bench and NewtonBench, full-bank meta-skills improve macro-average performance by 8.95 percentage points over no-skill construction, and 12.02 points over direct delivery of the same bank to the Target. These results highlight the value of translating experience into executable support. Gains when the same model serves both roles further suggest a path to system level self-improvement through learning to build better environments.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.38143",
+      "pdf_url": "https://arxiv.org/pdf/2609.38143",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.38143",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 76,
+      "hot_score": 760,
+      "structured_summary": {
+        "chinese_title": "学习元技能以构建更好的测试时AI4AI执行环境",
+        "chinese_summary": "通过学习元技能，Builder能够为Target构建更好的执行环境，提升整体性能。",
+        "pain_point": "现有方法无法在保持模型权重不变的情况下，有效提升Agent的执行环境。",
+        "core_value": "提出元技能概念，通过学习和应用这些原则，显著提升Agent的执行环境质量。",
+        "technical_architecture": "基于元技能的学习框架，Builder从Target的执行反馈中学习，构建适用于未知任务的执行环境。",
+        "quantitative_results": "全库元技能在宏平均性能上提高了8.95个百分点，比直接提供相同库给Target的效果好12.02个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "当前方法依赖于预训练的技能库，未来需探索更通用的学习机制。",
+        "key_contributions": [
+          "提出元技能概念",
+          "展示了通过学习元技能提升执行环境的有效性",
+          "验证了系统级自我改进的可能性"
+        ],
+        "application_scenarios": [
+          "自动构建测试环境",
+          "提升AI模型的执行效率"
+        ],
+        "technical_highlights": [
+          "利用执行反馈学习元技能",
+          "显著提升宏平均性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.39045",
+      "source": "huggingface",
+      "title": "RSIGame: Autonomous Agentic Game Development with Recursive Self-improvement",
+      "authors": [
+        "Wenyi Wu",
+        "Minghao Fu",
+        "Jieyu You",
+        "Kun Zhou",
+        "Siqi Liu",
+        "Aayush Salvi",
+        "Yiheng Lin",
+        "Ce Zhang",
+        "Xiaohan Lan",
+        "Jiahui Zhu",
+        "Yujie Zhong",
+        "Qi She",
+        "Biwei Huang"
+      ],
+      "abstract": "Recent advances in large language models have made automatic game generation increasingly feasible, yet reliably improving generated games beyond a playable version remains challenging. Naive iterative refinement can easily overfit a small set of test cases, producing fragile games with unresolved bugs, missing behaviors, and poor generalization to broader player interactions. We introduce RSIGame, an autonomous agentic game development framework with recursive self-improvement. RSIGame organizes development into complementary local and global loops. Concretely, a local explore-diagnose-improve loop broadly explores the executable game, diagnoses and prioritizes discovered issues, and performs evidence-grounded revision, where an evolving checklist continually accumulates new testing and improvement guidance. A global loop tracks overall quality, preserves the best checkpoint, and detects saturation or regression over long-horizon development. Beyond test-time improvement, RSIGame further internalizes successful development experience into the generator through training. Across 140 GameCraft-Bench tasks, two game engines, and five generators, RSIGame consistently improves game quality under matched development budgets. Notably, experience internalization enables Qwen3.8-27B to reach 61.38 on Godot and 58.53 on Phaser, exceeding GPT-5.5 one-shot scores while reducing Qwen's generation tokens by 11 times.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.39045",
+      "pdf_url": "https://arxiv.org/pdf/2609.39045",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.39045",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.GT",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "upvotes": 75,
+      "hot_score": 750,
+      "structured_summary": {
+        "chinese_title": "RSIGame：基于递归自我改进的自主游戏开发",
+        "chinese_summary": "RSIGame 通过递归自我改进提升游戏质量，实现从可玩版本到高质量游戏的持续优化。",
+        "pain_point": "自动游戏生成容易过拟合，导致游戏脆弱且缺乏泛化能力。",
+        "core_value": "通过递归自我改进和内部化开发经验，提升游戏质量和泛化能力。",
+        "technical_architecture": "采用局部和全局循环结合的方法，实现游戏的持续探索、诊断和改进。",
+        "quantitative_results": "在140个GameCraft-Bench任务上，RSIGame显著提升了游戏质量。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更复杂的游戏场景中验证其有效性。",
+        "key_contributions": [
+          "提出递归自我改进框架",
+          "实现游戏开发的自动化与自我优化",
+          "内部化开发经验以提升生成器性能"
+        ],
+        "application_scenarios": [
+          "游戏开发自动化",
+          "游戏质量持续优化"
+        ],
+        "technical_highlights": [
+          "结合局部和全局循环",
+          "持续积累测试和改进指导",
+          "内部化开发经验"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,526 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-03T01:46:34.002298+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.01762",
+      "source": "huggingface",
+      "title": "OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction",
+      "authors": [
+        "Xiangyu Zeng",
+        "Yuandong Yang",
+        "Zhiqiu Zhang",
+        "Yuhan Zhu",
+        "Xinhao Li",
+        "Qingyi Si",
+        "Dingyu Yao",
+        "Changlian Ma",
+        "Haoran Chen",
+        "Xinyu Chen",
+        "Yansong Shi",
+        "Junhao Zhou",
+        "Yifei Li",
+        "Jun Zhang",
+        "Chuanyu Qin",
+        "Chenxu Yang",
+        "Xinlei Yu",
+        "Kun Ouyang",
+        "Yuchen Shao",
+        "Qianshan Wei",
+        "Changhai Zhou",
+        "Jun Gao",
+        "Jiaqi Wang",
+        "Limin Wang"
+      ],
+      "abstract": "Streaming video LLMs must retain evidence before its relevance to future tasks is known and respond when sufficient evidence becomes available. The challenge is to form reusable factual memory without compromising real-time perception. We introduce OneStreamer, which jointly learns query-independent evidence recording and task response through a shared proactive generation process. Its Proactive Hierarchical Caption Memory (PHCM) produces time-grounded local-detail captions and summaries of completed events. Streaming caption targets supervise the interpretation of observed video prefixes during training. At inference, model-generated records complement a recent visual window, providing reusable factual context without revisiting historical visual features. Proactive State Transition Learning (PSTL) reduces the dominance of repeated waiting states by preserving supervision at all output anchors and selecting representative state-change and state-persistence tokens. We further develop a streaming data synthesis pipeline that aligns output content and timing with available evidence. Combining the resulting streaming captions and QA with cleaned open-source data yields OneStreamer-1M, a broad-coverage streaming video interaction dataset with over one million records spanning diverse tasks. Our 4B model achieves the best results among the compared methods across all eight evaluated streaming video understanding benchmarks. Ablations show that retaining generated captions improves historical QA without degrading real-time perception. PSTL also outperforms dense state supervision while supervising only 27.5% of annotated state tokens. Together, these results support proactive generation as a shared learning interface connecting perception, memory formation, and timely response in streaming video interaction.",
+      "published_date": "2026-10-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.01762",
+      "pdf_url": "https://arxiv.org/pdf/2610.01762",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.01762",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 146,
+      "hot_score": 1460,
+      "structured_summary": {
+        "chinese_title": "OneStreamer：统一流式视频交互中的感知、记忆和主动响应",
+        "chinese_summary": "OneStreamer 通过联合学习无查询依赖的证据记录和任务响应，提供实时感知和可重用的事实记忆。",
+        "pain_point": "流式视频 LLM 需要在未来任务相关性未知时保留证据，并在证据充分时做出响应，挑战在于形成可重用的事实记忆而不影响实时感知。",
+        "core_value": "通过 Proactive Hierarchical Caption Memory 和 Proactive State Transition Learning 实现实时感知和可重用记忆。",
+        "technical_architecture": "采用 Proactive Hierarchical Caption Memory 和 Proactive State Transition Learning 的架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步优化以适应更广泛的流式视频应用场景。",
+        "key_contributions": [
+          "提出了一种联合学习无查询依赖的证据记录和任务响应的方法",
+          "开发了一种主动状态转换学习机制",
+          "构建了一个流式数据合成管道"
+        ],
+        "application_scenarios": [
+          "流式视频交互",
+          "实时视频理解"
+        ],
+        "technical_highlights": [
+          "Proactive Hierarchical Caption Memory 生成时间定位的局部细节描述和事件总结",
+          "Proactive State Transition Learning 通过保留监督和选择代表性状态变化和状态保持令牌来减少等待状态的主导性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.35259",
+      "source": "huggingface",
+      "title": "On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics",
+      "authors": [
+        "Julianna Piskorz",
+        "Antonin Berthon",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "On-policy learning has been argued to reduce catastrophic forgetting, produce sparser parameter updates, and improve generalisation. However, existing comparisons between supervised fine-tuning and reinforcement learning vary many factors simultaneously, making the contribution of rollout policy difficult to isolate. We study the effect of rollout policy in a controlled strong-to-weak distillation setting, by independently varying rollout policy, token-level KL direction, and learning rate across the Llama3 and Qwen2.5 model families and reasoning tasks spanning scientific, medical, and arithmetic domains. Our analysis reveals a nuanced picture of distillation dynamics in which rollout policy does not necessarily play a central role. Instead, token-level KL direction more clearly shapes task performance and output coverage, while learning rate governs forgetting and update sparsity. Analysis of KL gradients and experiments along a continuous student-teacher rollout-policy spectrum explain this pattern: forward KL is remarkably robust to rollout policy, with its performance stable and strong despite changes to the rollout policy, whereas reverse KL is substantially more sensitive and favours student-generated rollouts. On-policy data nevertheless improves generalisation to harder variants of the Countdown arithmetic task under both KL directions, although this advantage does not reliably persist after subsequent RLVR. Our broader conclusions remain robust to removing gradient clipping, using sampled KL estimators, and training on tasks requiring longer reasoning chains. Overall, our results challenge the view that on-policy rollouts are inherently preferable and show that their value depends critically on the objective, evaluation setting, and optimisation hyperparameters.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.35259",
+      "pdf_url": "https://arxiv.org/pdf/2609.35259",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.35259",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 123,
+      "hot_score": 1230,
+      "structured_summary": {
+        "chinese_title": "在线学习或离线学习？一种系统研究蒸馏动态的方法",
+        "chinese_summary": "研究发现，蒸馏动态中，采样策略并非关键因素，而是标记级别KL方向和学习率更显著影响任务性能和输出覆盖。",
+        "pain_point": "现有研究同时改变多个因素，难以区分采样策略的贡献。",
+        "core_value": "通过强到弱的蒸馏设置独立改变采样策略、标记级别KL方向和学习率，揭示了蒸馏动态的复杂图景。",
+        "technical_architecture": "使用Llama3和Qwen2.5模型家族和跨科学、医学和算术领域的推理任务进行研究。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定模型家族和任务上进行研究。",
+        "key_contributions": [
+          "揭示了标记级别KL方向和学习率对任务性能和输出覆盖的影响。",
+          "展示了前向KL在采样策略变化时的鲁棒性。",
+          "解释了前向KL和反向KL在蒸馏动态中的不同表现"
+        ],
+        "application_scenarios": [
+          "在线学习和离线学习的比较研究",
+          "模型蒸馏和迁移学习"
+        ],
+        "technical_highlights": [
+          "通过强到弱的蒸馏设置进行研究",
+          "独立改变采样策略、标记级别KL方向和学习率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.37200",
+      "source": "huggingface",
+      "title": "Adaptive Reward Routing: Dynamic Multi-Reward Optimization for Joint Audio-Video Diffusion via Forward-Process RL",
+      "authors": [
+        "Songlin Yang",
+        "Xiaotong Zhao",
+        "Jiacheng Zhang",
+        "Zhe Wang",
+        "Toyota Li",
+        "Eric Liu",
+        "Alan Zhao",
+        "Anyi Rao"
+      ],
+      "abstract": "Multi-reward guided reinforcement learning (i.e., RL) offers a promising way to improve joint audio-video diffusion models along several complementary objectives, including modality-specific quality, cross-modal semantic alignment, and temporal synchronization. Its effectiveness, however, depends on two quantities that change during training: where reward-driven updates should act, and how competing rewards should be combined. Existing methods tend to rely on fixed routing and reward weights, failing to track evolving model functions. To address these limitations, we propose Adaptive Reward Routing to jointly adapt update locations and reward coordination during forward-process RL (i.e., DiffusionNFT) of joint audio-video diffusion models. Our method consists of two components. (i) Cross-Modal Influence-Guided Routing (Localizing Updates): We use bidirectional cross-attention responses as an efficient proxy for evolving cross-modal influence, dynamically reweighting token-aware losses and scaling gradients across cross-modal layers without additional model interventions. (ii) Preference-Preserving Modality-Aware Reweighting (Coordinating Rewards): We preserve predefined weights as preference priors and use branch-specific reward-gradient interactions as residual corrections after warm-up. This resolves evolving conflicts without letting dominant rewards suppress weak but essential objectives. Extensive experiments demonstrate consistent improvements in modality quality, semantic consistency, and audio-video synchronization over strong RL baselines. Ablations and mechanism analyses further validate the complementary benefits of adaptive update routing and reward coordination.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.37200",
+      "pdf_url": "https://arxiv.org/pdf/2609.37200",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.37200",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 117,
+      "hot_score": 1170,
+      "structured_summary": {
+        "chinese_title": "自适应奖励路由：联合音频-视频扩散模型的动态多奖励优化",
+        "chinese_summary": "提出自适应奖励路由以动态调整更新位置和奖励协调，提高多奖励引导的强化学习效果。",
+        "pain_point": "现有方法依赖固定路由和奖励权重，无法跟踪模型函数的变化。",
+        "core_value": "通过自适应调整更新位置和奖励协调，提高多奖励引导的强化学习效果。",
+        "technical_architecture": "使用双向跨注意力响应动态调整跨模态损失权重和梯度缩放。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证方法的有效性。",
+        "key_contributions": [
+          "提出自适应奖励路由方法",
+          "动态调整更新位置和奖励协调",
+          "应用于联合音频-视频扩散模型"
+        ],
+        "application_scenarios": [
+          "音频-视频同步",
+          "跨模态语义对齐"
+        ],
+        "technical_highlights": [
+          "使用双向跨注意力响应作为跨模态影响的代理",
+          "保留预定义的奖励权重以保持偏好"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.01415",
+      "source": "huggingface",
+      "title": "Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States",
+      "authors": [
+        "Yu Luo",
+        "Jiamin Jiang",
+        "Yimin Zuo",
+        "Xidao Wen",
+        "Rongchen Gao",
+        "Yongqian Sun",
+        "Shenglin Zhang",
+        "Guiyang Liu",
+        "Cheng Zhang",
+        "Fang Situ",
+        "Qi Zhou",
+        "Dan Pei"
+      ],
+      "abstract": "Large language model (LLM) agents can now undertake increasingly complex tasks, but the way they organize interaction history into memory does not ensure a coherent understanding of the current world. We introduce PoS, an inference-time framework that constructs and continually maintains explicit belief states as the agent's decision context. Each belief combines an estimate of the current world state with unresolved task requirements, making explicit what the agent still needs to learn and accomplish. To keep this belief reliable and actionable, PoS validates its consistency and monitors task progress to detect Belief Trapping, where the agent continues to act without making meaningful progress toward the goal. Recovery is then tailored to both the trapping pattern and the type of unresolved task requirement. Experiments on four benchmarks spanning execution and diagnosis show that PoS achieves the highest overall performance on every benchmark with all three LLM backbones. Ablations demonstrate the importance of consistency validation and recovery, while context-scaling experiments show resilience to context growth. Together, these results support belief construction and continual maintenance as a foundation for long-horizon context management beyond history retention and compression.",
+      "published_date": "2026-10-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.01415",
+      "pdf_url": "https://arxiv.org/pdf/2610.01415",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.01415",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 69,
+      "hot_score": 690,
+      "structured_summary": {
+        "chinese_title": "超越记忆：利用显式信念状态增强长期任务代理",
+        "chinese_summary": "PoS 框架通过构建和维护显式信念状态，提高长期任务代理的决策能力。",
+        "pain_point": "现有代理无法确保对当前世界状态的连贯理解。",
+        "core_value": "通过显式信念状态，提高代理的决策连贯性和任务完成率。",
+        "technical_architecture": "PoS 框架在推理时构建和维护显式信念状态。",
+        "quantitative_results": "在四个基准测试中，PoS 在所有 LLM 后端上均表现出最高性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更大规模的上下文。",
+        "key_contributions": [
+          "引入显式信念状态",
+          "提出 Belief Trapping 检测机制",
+          "提供定制化恢复策略"
+        ],
+        "application_scenarios": [
+          "复杂任务执行",
+          "诊断任务"
+        ],
+        "technical_highlights": [
+          "实时构建和维护信念状态",
+          "动态检测和恢复机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.02193",
+      "source": "huggingface",
+      "title": "Hierarchical Continuous Diffusion Language Models",
+      "authors": [
+        "Hui Ren",
+        "Zihan Li",
+        "Chang Liu",
+        "Huidong Liu",
+        "Alexander Schwing"
+      ],
+      "abstract": "Discrete diffusion language models offer a compelling alternative to autoregressive generation for tasks demanding bidirectional reasoning and global constraint satisfaction. Yet they share a structural bottleneck: when decoding in parallel, each token is sampled independently from its marginal, severing the statistical dependencies among the tokens decoded together. Continuous diffusion language models avoid this by denoising a shared continuous state, but their denoiser sees only that state, so nothing ties it to a valid token configuration until it is finally decoded. To address this, we propose Hierarchical Continuous Diffusion Language Models (HC-DLM), which couple discrete token generation with a continuous latent trajectory in a single, principled denoising process, whose training objective is derived from a variational bound on the token likelihood. In contrast to recent methods that attach continuous context to a self-contained discrete chain, HC-DLM makes the latent the only persistent generative state: tokens are read out from it at every step and feed back as a scaffold for the next latent update. On structured reasoning (Sudoku), mathematical planning (Countdown) and language modeling (LM1B), HC-DLM improves over discrete and continuous diffusion baselines at matched model size, in puzzle accuracy on Sudoku and Countdown and in generative perplexity on LM1B. Project page: https://hc-dlm.github.io/.",
+      "published_date": "2026-10-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.02193",
+      "pdf_url": "https://arxiv.org/pdf/2610.02193",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.02193",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 69,
+      "hot_score": 690,
+      "structured_summary": {
+        "chinese_title": "层次连续扩散语言模型",
+        "chinese_summary": "提出了一种新的层次连续扩散语言模型，结合了离散令牌生成与连续潜在轨迹，以解决统计依赖性问题。",
+        "pain_point": "现有离散扩散语言模型在并行解码时，各令牌独立采样，破坏了统计依赖性。",
+        "core_value": "通过结合离散令牌生成与连续潜在轨迹，解决了统计依赖性问题，提高了模型性能。",
+        "technical_architecture": "采用层次结构，将离散令牌生成与连续潜在轨迹结合在一个统一的去噪过程中。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多任务上验证模型的有效性。",
+        "key_contributions": [
+          "提出了一种新的层次连续扩散语言模型",
+          "结合了离散令牌生成与连续潜在轨迹",
+          "解决了统计依赖性问题"
+        ],
+        "application_scenarios": [
+          "结构化推理任务",
+          "数学规划任务"
+        ],
+        "technical_highlights": [
+          "统一的去噪过程",
+          "连续潜在轨迹作为生成状态"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.35690",
+      "source": "huggingface",
+      "title": "Agent Priors-guided Policy Learning",
+      "authors": [
+        "Puming Jiang",
+        "Tianrun Hu",
+        "Haozhe Du",
+        "Yibo Li",
+        "Zhiwei Xue",
+        "Xinhu Li",
+        "Harold Soh"
+      ],
+      "abstract": "Robots that learn from a few demonstrations often require two forms of generalization. Compositional generalization recombines skills to solve new tasks, and skill generalization lets the learned policy behind each skill work in new situations. The two depend on each other, yet information is lost between composition and the skills it calls. Where a skill works is determined by the structure its policy is trained with, while composition sees the skill only through a separate description, such as a name, an instruction, or a symbolic operator, that omits this structure. Our key idea is to use each policy's structural prior as part of the interface between composition and the skill. A structural prior states what a behavior depends on, for example that a grasp depends only on the gripper's pose relative to the object. Built into training, it shapes where the policy generalizes; stated in language, it tells composition where the policy applies. We instantiate this idea in Agent Priors-guided Policy Learning (APPL). A construction agent segments complete demonstrations into reusable skills, proposes several structural priors for each skill, and trains and verifies one policy per prior. A runtime agent then selects among these prior-specific policies and composes them toward new task goals using their interfaces. Across MetaWorld and long-horizon ManiSkill tasks, APPL improves out-of-distribution skill generalization and enables previously unseen skill compositions; ablating the interface information substantially reduces performance. These results support the use of training-time structural assumptions as a bridge between skill learning and skill composition.",
+      "published_date": "2026-09-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.35690",
+      "pdf_url": "https://arxiv.org/pdf/2609.35690",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.35690",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 68,
+      "hot_score": 680,
+      "structured_summary": {
+        "chinese_title": "基于代理先验的策略学习",
+        "chinese_summary": "通过使用每个策略的结构先验，APPL 实现了策略学习中的结构化接口。",
+        "pain_point": "现有方法在策略学习中存在信息丢失问题，导致技能和组合之间的不一致。",
+        "core_value": "通过结构先验，APPL 提高了策略学习中的技能和组合的一致性。",
+        "technical_architecture": "APPL 通过为每个技能提出多种结构先验并训练验证策略来实现。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定任务上进行了验证，未来需要在更广泛的任务中进行测试。",
+        "key_contributions": [
+          "提出了使用结构先验作为策略学习中技能和组合之间的接口",
+          "实现了从演示中学习策略的框架"
+        ],
+        "application_scenarios": [
+          "机器人学习",
+          "自动化任务执行"
+        ],
+        "technical_highlights": [
+          "结构先验的使用",
+          "策略学习框架的提出"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.39027",
+      "source": "huggingface",
+      "title": "A Missing Piece for Trustworthy AI Reviewers: From Benchmarking Rhetorical Robustness to SciCore Review",
+      "authors": [
+        "Chenguang Wang",
+        "Ming Li",
+        "Chengrui Fan",
+        "Jianpeng Chen",
+        "Han Chen",
+        "Tianyi Zhou",
+        "Dawei Zhou"
+      ],
+      "abstract": "AI reviewers can assign different judgments to manuscripts that report the same science in different wording, potentially rewarding rhetorical optimization over scientific improvement. We formulate Rhetorical Robustness as the joint requirement of stability across content-preserving rewrites and discrimination across papers. We introduce RobustReview, a controlled full-manuscript benchmark with 1,260 manuscript versions, and evaluate 30 reviewer configurations. The benchmark reveals false robustness, where low rewrite sensitivity coincides with score collapse across papers, and shows that human alignment and rhetorical robustness rank reviewers differently. Moreover, the evaluated content-focused prompting protocol does not consistently improve robustness across backbones. Motivated by these findings, we introduce SciCore, a dual-branch reviewer that averages a full-manuscript judgment with a judgment based on an extracted, structured science core. This design combines manuscript-level assessment with a content-normalized view intended to reduce rhetorical sensitivity. In our primary GPT-5.5 comparison, SciCore achieves a leading joint stability-discrimination profile among the benchmarked reviewers while maintaining competitive human alignment. These results identify rhetorical robustness as a distinct evaluation target and demonstrate the potential of science-core review to improve it.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.39027",
+      "pdf_url": "https://arxiv.org/pdf/2609.39027",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.39027",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 65,
+      "hot_score": 650,
+      "structured_summary": {
+        "chinese_title": "信任AI评审员缺失的一环：从论辩稳健性基准到SciCore评审",
+        "chinese_summary": "SciCore通过结合全文评估与内容标准化视图，提高了评审的稳健性和区分度。",
+        "pain_point": "AI评审员可能因文本表达不同而对相同科学内容给出不同判断，忽视科学改进。",
+        "core_value": "SciCore设计旨在减少论辩敏感性，提高评审稳健性和区分度。",
+        "technical_architecture": "引入RobustReview基准和SciCore双分支评审设计。",
+        "quantitative_results": "SciCore在GPT-5.5比较中表现出领先的稳健性和区分度。",
+        "competitors": "暂无对比信息",
+        "limitations": "需进一步验证SciCore在不同场景下的适用性。",
+        "key_contributions": [
+          "提出了论辩稳健性概念",
+          "构建了RobustReview基准",
+          "设计了SciCore双分支评审系统"
+        ],
+        "application_scenarios": [
+          "科学论文评审",
+          "科研项目评估"
+        ],
+        "technical_highlights": [
+          "结合全文评估与内容标准化视图",
+          "揭示了论辩稳健性中的假稳健性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.02162",
+      "source": "huggingface",
+      "title": "World Observer: Joint Actor-Observer Generation for Persistent World Modeling",
+      "authors": [
+        "Hyunwook Choi",
+        "Dahyun Chung",
+        "Hyunsung Kim",
+        "Siyoon Jin",
+        "Jinhyeok Choi",
+        "Junyoung Seo",
+        "Seungryong Kim"
+      ],
+      "abstract": "How can a world model continuously observe regions beyond the actor's current view? Video world models simulate how an environment evolves from an agent's actions, yet remain actor-centric. Once an object leaves the actor's view, they lose direct evidence of its evolution, often failing to preserve its state and dynamics upon re-entry. To address this, we introduce World Observer, which decouples observing from acting by jointly generating a perspective actor for the agent-centric view with one or more panoramic observers that watch selected world regions. This allows objects that leave the actor's view to remain visually evolving in an observer, so their updated states are reflected when they re-enter. We ground the actor and observers by warping from a shared panoramic source for explicit geometric correspondence, and introduce an Observer Sink of high-resolution perspective references to restore fine appearance upon re-entry. Since the observers are decoupled from the actor, they can be placed freely across the scene, extended to multiple locations for broader coverage, and driven by control signals to steer out-of-view evolution. To evaluate out-of-view evolution, we further introduce world-space metrics and a benchmark spanning real and synthetic scenes. World Observer substantially improves out-of-view dynamics while remaining competitive in visual fidelity, camera control, and 3D adherence.",
+      "published_date": "2026-10-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.02162",
+      "pdf_url": "https://arxiv.org/pdf/2610.02162",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.02162",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 63,
+      "hot_score": 630,
+      "structured_summary": {
+        "chinese_title": "世界观察者：联合生成持久世界模型中的演员与观察者",
+        "chinese_summary": "通过引入世界观察者，使物体即使离开演员视野也能持续视觉演化。",
+        "pain_point": "现有视频世界模型在物体离开演员视野后无法准确保留其状态和动态。",
+        "core_value": "通过分离观察与行动，实现物体在离开视野后仍能持续演化。",
+        "technical_architecture": "通过共享全景视角进行几何对应，并引入高分辨率视角参考以恢复细节。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步扩展观察者的覆盖范围。",
+        "key_contributions": [
+          "提出联合生成演员与观察者的框架",
+          "实现物体在离开视野后仍能持续演化",
+          "通过几何对应和高分辨率参考恢复细节"
+        ],
+        "application_scenarios": [
+          "虚拟现实中的持久世界建模",
+          "增强现实中的环境理解"
+        ],
+        "technical_highlights": [
+          "分离观察与行动",
+          "使用几何对应和高分辨率参考"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.01509",
+      "source": "huggingface",
+      "title": "Sharpening Tax in Post-Training",
+      "authors": [
+        "Changdae Oh",
+        "Qi Zeng",
+        "Qi Qi",
+        "Andrey Zhmoginov",
+        "Deren Lei",
+        "Yun He",
+        "Hoang Phan",
+        "Hangoo Kang",
+        "Azalia Mirhoseini",
+        "Sharon Li"
+      ],
+      "abstract": "An emerging hypothesis about reinforcement learning (RL) post-training of large language models (LLMs) is that it merely sharpens existing behaviors of a base model, improving single-shot accuracy at the cost of solution coverage. Although this trade-off has been observed in math and coding tasks, it need not extend to agentic tasks, where multi-turn tool use and interaction may require capabilities newly acquired during post-training. Our surprising finding is that pre-trained LLMs, equipped with a light inference harness, can serve as capable agents. Despite far lower accuracy (pass@1), they often surpass their post-trained counterparts in solution coverage (pass@K) given a sufficient test-time budget. We further analyze the underlying mechanism and show that post-training pushes tasks toward two extremes, always solved or never solved, and thereby improves sampling efficiency and consistency at the cost of solution coverage. To measure this cost, we propose Sharpening Tax, a diagnostic metric that quantifies the loss in test-time scalability after post-training. Across 14 base/post-trained model pairs from four families and three agentic benchmarks (42 cases in total), the tax is prevalent in most settings, can be estimated from a few rollouts, and correlates well with other metrics. Finally, we present posterior-tempered group sampling (PTGS), a simple plug-and-play Bayesian sampler that adapts the sampling temperature per prompt to its estimated difficulty. Applied during RL training in two agentic environments, PTGS pays a smaller tax than the fixed-temperature baseline, solving more tasks under repeated sampling while also improving single-shot accuracy.",
+      "published_date": "2026-10-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.01509",
+      "pdf_url": "https://arxiv.org/pdf/2610.01509",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.01509",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 63,
+      "hot_score": 630,
+      "structured_summary": {
+        "chinese_title": "后训练税：大型语言模型强化学习的权衡",
+        "chinese_summary": "预训练的大型语言模型在后训练中可以成为强大的代理，尽管准确率较低，但在测试时间预算充足的情况下，其解题覆盖面超过后训练模型。",
+        "pain_point": "后训练可能牺牲解题覆盖面以提高单次准确率。",
+        "core_value": "提出Sharpening Tax作为诊断后训练损失的度量标准。",
+        "technical_architecture": "使用轻量级推理框架增强预训练模型。",
+        "quantitative_results": "在14个基线/后训练模型对中，后训练模型在解题覆盖面方面表现较差。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多模型和任务来进一步验证。",
+        "key_contributions": [
+          "提出Sharpening Tax作为后训练损失的度量标准",
+          "揭示后训练对解题覆盖面的影响"
+        ],
+        "application_scenarios": [
+          "大型语言模型的后训练优化",
+          "代理任务的模型评估"
+        ],
+        "technical_highlights": [
+          "轻量级推理框架的使用",
+          "Sharpening Tax的提出"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.37533",
+      "source": "huggingface",
+      "title": "E-MoE: Enhanced Mixture-of-Experts for Non-Factorized Diffusion Language Models",
+      "authors": [
+        "Arseny Ivanov",
+        "Alexander Kolesov",
+        "Alexander Korotin",
+        "Ivan Oseledets",
+        "Mikhail Goncharov"
+      ],
+      "abstract": "Masked diffusion models (MDMs) generate sequences by progressively unmasking several tokens per denoising step, but their reverse process is typically factorized over positions, limiting sample quality in the few-step regime where diffusion's speed advantage over autoregressive decoding matters most. A recent line of work introduces a continuous Gaussian latent, trained as a variational autoencoder, to capture correlations across positions, but such approaches are prone to posterior collapse, where the latent is silently ignored. We propose Enhanced Mixture-of-Experts (E-MoE), which builds the reverse process as a mixture of factorized distributions over a discrete shared latent given by the expert-routing decisions of a Mixture-of-Experts (MoE) backbone, without increasing active parameters over the factorized baseline. Across synthetic multi-modal benchmarks, binarized MNIST, and LM1B, E-MoE improves few-step generation over factorized baselines.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.37533",
+      "pdf_url": "https://arxiv.org/pdf/2609.37533",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.37533",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 50,
+      "hot_score": 500,
+      "structured_summary": {
+        "chinese_title": "E-MoE: 提升的专家混合模型用于非因子化扩散语言模型",
+        "chinese_summary": "E-MoE 提高了在少量步骤生成中的样本质量。",
+        "pain_point": "masked diffusion models 在少量步骤生成中的样本质量较低。",
+        "core_value": "通过混合因子化的分布，E-MoE 提高了生成质量，同时未增加参数量。",
+        "technical_architecture": "E-MoE 使用混合专家模型构建非因子化的反向过程。",
+        "quantitative_results": "在多个基准测试中，E-MoE 显著提高了生成质量。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在大规模数据集上进一步验证。",
+        "key_contributions": [
+          "提出了一种新的混合专家模型 E-MoE",
+          "在少量步骤生成中提高了样本质量",
+          "未增加额外的参数量"
+        ],
+        "application_scenarios": [
+          "语言生成",
+          "文本生成"
+        ],
+        "technical_highlights": [
+          "混合因子化的分布提高了生成质量",
+          "保持了参数量不变"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

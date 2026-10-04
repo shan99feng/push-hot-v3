@@ -1,0 +1,509 @@
+{
+  "date": "2026-10-03",
+  "generated_at": "2026-10-04T02:27:22.305662+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2610.02210v1",
+      "source": "arxiv",
+      "title": "Moore, Escher, Penrose: A Conformal Golden Braid",
+      "authors": [
+        "Sophia Feldman",
+        "Assaf Shocher"
+      ],
+      "abstract": "I don't think I have ever done anything as peculiar in my life. Among other things, it shows a young man looking with interest at a print on the wall of an exhibition that features himself. How can this be? Perhaps I am not far removed from Einstein's curved universe.'' So wrote M.C. Escher about his 1956 lithograph Print Gallery. Nearly half a century later, a mathematical analysis related its geometry to an untwisted source image through a conformal power map $z \\mapsto z^α$, $α\\in \\mathbb{C}$. Building on this construction, we use a frozen text-to-image diffusion model to generate new self-referential scenes. Prompting alone does not enforce the recursion, while a post-hoc transformation can leave structures poorly connected. Applying the transformation during sampling is also insufficient: the denoiser may \"repair\" the intended distortion or drift out of the prescribed geometry. We construct a generalized inverse $T^\\dagger$ of the non-invertible image transformation $T$, adapted to its recursive constraint. In the idealized formulation, the Penrose identity $TT^\\dagger T = T$ makes $TT^\\dagger$ an idempotent projection onto geometrically admissible images. Yet denoising only the transformed image remains an out-of-distribution task, even with projection. We therefore braid denoising steps with $T$ and $T^\\dagger$: source-space steps develop the untwisted scene, while transformed-space steps refine its appearance and connections in the final geometry. We generate Print Gallery-like compositions and explore further transformations. Rather than distorting a finished image, we let the scene and its distortion develop together.",
+      "published_date": "2026-10-01T17:59:59Z",
+      "url": "https://arxiv.org/abs/2610.02210v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02210v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "莫尔斯、埃舍尔、彭罗斯：一种同构黄金辫",
+        "chinese_summary": "通过自参照场景生成，解决自参照图像生成中的递归问题。",
+        "pain_point": "自参照图像生成中的递归结构连接不良。",
+        "core_value": "提出了一种新的自参照场景生成方法，增强了递归结构的连贯性。",
+        "technical_architecture": "使用冻结的文本到图像扩散模型和自定义逆变换。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在理想化模型中验证，实际应用中的效果有待进一步验证。",
+        "key_contributions": [
+          "提出了一种新的自参照场景生成方法",
+          "设计了一种适应递归约束的逆变换",
+          "增强了递归结构的连贯性"
+        ],
+        "application_scenarios": [
+          "艺术创作",
+          "数字艺术"
+        ],
+        "technical_highlights": [
+          "结合了文本到图像生成和自参照几何",
+          "设计了适应递归约束的逆变换"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02208v1",
+      "source": "arxiv",
+      "title": "Sphere Encoder 2",
+      "authors": [
+        "Kaiyu Yue",
+        "Sean McLeish",
+        "Ruchit Rawal",
+        "Brian Bartoldson",
+        "Menglin Jia",
+        "Tom Goldstein"
+      ],
+      "abstract": "Sphere Encoder is an autoencoder that generates images by decoding random points from a high-dimensional latent sphere. We identify two limitations of the original formulation that reduce its generation quality. First, random points concentrate near the equator relative to the pole on an encoded latent, but the training rotation never reaches this region, leaving a gap that limits one-step generation. Second, training for generation with pixel-wise reconstruction loss encourages the decoder to average over plausible images, producing blurry images that lack high-frequency details. We present Sphere Encoder 2 to address both limitations, substantially improving image generation quality while maintaining the speed and simplicity of a autoencoder. Models are released at \\href{https://github.com/kaiyuyue/sphere2}{github.com/kaiyuyue/sphere2}.",
+      "published_date": "2026-10-01T17:59:58Z",
+      "url": "https://arxiv.org/abs/2610.02208v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02208v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Sphere Encoder 2",
+        "chinese_summary": "Sphere Encoder 2 提升了图像生成质量，解决了原版模型的两个核心问题。",
+        "pain_point": "原版模型生成质量受限于随机点分布不均和模糊图像。",
+        "core_value": "通过改进随机点分布和减少模糊，显著提升了生成图像的质量。",
+        "technical_architecture": "采用高维潜空间中的球面编码器架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能涉及更广泛的实验验证。",
+        "key_contributions": [
+          "解决了随机点分布不均的问题",
+          "改进了模糊图像的生成质量"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像增强"
+        ],
+        "technical_highlights": [
+          "保持了自编码器的速度和简洁性",
+          "通过改进训练方法提升了生成质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02207v1",
+      "source": "arxiv",
+      "title": "One Basis to Animate Them All: Gaussian Blendshape Distillation for Real-Time Avatars",
+      "authors": [
+        "Ramazan Fazylov",
+        "Stamatis Lefkimmiatis",
+        "Ivan Laptev"
+      ],
+      "abstract": "3D Gaussian avatars support fast rendering, however, their real-time animation is often challenged by the costly neural inference. We address this bottleneck and show that the animation of pretrained avatar models can be closely approximated by a linear combination of identity-independent blendshapes. Building on this finding, we introduce GALA (Gaussian Animation via Linear Approximation), a distillation method that replaces per-frame heavy neural decoding with a shallow coefficient predictor and a linear blend. To improve fidelity and reduce memory requirements, we propose to construct the basis using block-local PCA under a rendering-aware metric and a memory budget. Our method learns a shallow MLP network to predict blendshape coefficients and applies to various animation architectures without retraining original models. We validate GALA by accelerating the inference of three distinct avatar models for 3D animation of facial expressions and full-bodies with clothing dynamics. Across these models, our distillation generalizes to held-out identities and reduces CPU animation cost by up to three orders of magnitude while preserving most of the rendering quality. Excellent results of our method confirm the shared linear structure of learned avatar representations and enable highly efficient and accurate animation at frame rates reaching up to 60fps on mobile devices. Project page: https://ramazan793.github.io/gala/",
+      "published_date": "2026-10-01T17:59:58Z",
+      "url": "https://arxiv.org/abs/2610.02207v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02207v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "一切动画的基础：用于实时虚拟角色的高斯混合形变蒸馏",
+        "chinese_summary": "通过蒸馏方法，将复杂的神经网络解码替换为浅层系数预测和线性混合，实现快速实时动画。",
+        "pain_point": "实时动画中，基于神经网络的解码过程成本高昂。",
+        "core_value": "通过线性近似和蒸馏方法，大幅降低动画成本，同时保持高质量渲染。",
+        "technical_architecture": "基于高斯混合形变的浅层MLP预测和线性混合。",
+        "quantitative_results": "在不同模型上，CPU动画成本降低三个数量级。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于特定的动画架构。",
+        "key_contributions": [
+          "提出了一种基于高斯混合形变的动画蒸馏方法",
+          "通过浅层预测网络和线性混合实现快速动画"
+        ],
+        "application_scenarios": [
+          "面部表情动画",
+          "全身动画"
+        ],
+        "technical_highlights": [
+          "渲染感知的块局部PCA",
+          "内存预算下的基底构建"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02206v1",
+      "source": "arxiv",
+      "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
+      "authors": [
+        "Pengfei Li",
+        "Naufal Suryanto",
+        "Sicheng Zhang",
+        "Muzammal Naseer"
+      ],
+      "abstract": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable commands for real-world cybersecurity tools. This gap is critical because cybersecurity operations rely on strict command-line interfaces (CLIs), where minor syntax errors, incorrect flag--value bindings, or argument misordering can invalidate execution. We introduce KaliBench, a fine-grained benchmark and dataset for natural-language--to--CLI translation on Kali Linux, comprising 8,504 query--command pairs spanning 1,642 tools across 23 capability dimensions and 5 security phases. KaliBench is constructed via a manuscript-grounded pipeline with deterministic canonicalization and alias-aware evaluation, enabling precise and reproducible assessment of tool selection and argument construction. To ensure both semantic correctness and practical executability, we develop a multi-stage verification pipeline that combines LLM-based validation, sandboxed terminal execution, and human-in-the-loop refinement. Building on these fine-grained, deterministic signals, KaliBench further enables runtime-free verifiable rewards for training. Across three evaluation modes and 24 configurations of general-purpose and security-focused open-weight models, no open-weight model exceeds 42% exact-command accuracy in the unrestricted setting, highlighting the difficulty of accurate CLI-based cybersecurity tool use without explicit tool hints. We further show that supervised fine-tuning and reinforcement learning with verifiable rewards derived from KaliBench significantly improve an 8B model and achieve performance comparable to a 685B MoE model.",
+      "published_date": "2026-10-01T17:59:55Z",
+      "url": "https://arxiv.org/abs/2610.02206v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02206v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "KaliBench: Kali Linux 上细粒度的网络安全工具使用基准",
+        "chinese_summary": "引入 KaliBench，一种细粒度的 Kali Linux 命令行翻译基准，包含 8,504 个查询-命令对，涵盖 23 个能力维度和 5 个安全阶段。",
+        "pain_point": "现有评估方法无法直接衡量 LLM 生成可执行命令的能力。",
+        "core_value": "提供精确且可重复的评估工具选择和参数构建能力。",
+        "technical_architecture": "基于手稿的管道，结合 LLM 验证、沙盒终端执行和人工循环校验。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖人工循环校验，可能引入主观性。",
+        "key_contributions": [
+          "引入细粒度的命令行翻译基准",
+          "开发多阶段验证管道"
+        ],
+        "application_scenarios": [
+          "网络安全工具使用评估",
+          "自动化安全操作"
+        ],
+        "technical_highlights": [
+          "包含 8,504 个查询-命令对",
+          "覆盖 23 个能力维度和 5 个安全阶段"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02205v1",
+      "source": "arxiv",
+      "title": "ROWBench: Do Video Models Render What the Program Specifies?",
+      "authors": [
+        "Zheng-Hui Huang",
+        "Guixu Lin",
+        "Yu-Ju Tsai",
+        "Jian-Kai Zhu",
+        "Fengbo Lan",
+        "Yu-Lun Liu",
+        "Yung-Yu Chuang",
+        "Kaipeng Zhang",
+        "Zhixiang Wang"
+      ],
+      "abstract": "Programmable world models separate executable dynamics from visual generation, offering a promising foundation for next-generation game engines. However, their visual adherence to explicit rules and interactions remains insufficiently evaluated. Existing benchmarks assess visual quality, controllability, and instruction or physical adherence, but rarely test fidelity to fine-grained, program-specified world events. We introduce PROWBench, comprising 170 programmatically constructed episodes and 600 proxy videos covering diverse scenes and interactions. PROWBench logs entity states and timestamped events, including those outside the camera's field of view, as replayable world records, from which it renders synchronized views and proxy representations. This enables generated videos to be checked against the observable consequences of program execution. An extensible framework constructs scenes, controls behaviors, and can render each camera view in different representations, such as coarse 3D, and bounding boxes. The benchmark covers first- and third-person perspectives, with synchronized multi-view observations available for a subset of episodes. Grounded in these records, PROWBench evaluates entity control, long-horizon memory, and, with two VLM-based metrics, Logic-Render Alignment and Interaction Success Rate, adherence to the prescribed timeline and the visual realization of timestamped engine-recorded events.",
+      "published_date": "2026-10-01T17:59:53Z",
+      "url": "https://arxiv.org/abs/2610.02205v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02205v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "ROWBench: 视频模型是否渲染了程序指定的内容？",
+        "chinese_summary": "引入PROWBench基准测试，评估视频模型对程序指定世界的视觉一致性。",
+        "pain_point": "现有基准测试未能充分评估视频模型对细粒度程序指定事件的视觉一致性。",
+        "core_value": "提供了一个新的基准测试，用于评估视频模型对程序指定世界的视觉一致性。",
+        "technical_architecture": "构建了一个可扩展的框架，用于生成场景、控制行为和渲染不同视图。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅覆盖了部分视角，未来可扩展更多视角。",
+        "key_contributions": [
+          "引入了PROWBench基准测试",
+          "提供了细粒度的程序指定事件记录",
+          "支持不同视图的渲染"
+        ],
+        "application_scenarios": [
+          "游戏引擎",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "包含170个程序构造的场景和600个代理视频",
+          "支持不同视图的同步多观测"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02204v1",
+      "source": "arxiv",
+      "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
+      "authors": [
+        "Yen-Jen Wang",
+        "Haozhe Jiang",
+        "Shuying Deng",
+        "Haoru Xue",
+        "Weirui Ye",
+        "Rocky Duan",
+        "Nika Haghtalab",
+        "S. Shankar Sastry",
+        "Pieter Abbeel",
+        "Haozhi Qi"
+      ],
+      "abstract": "Building reliable robot capabilities across diverse tasks requires substantial human effort to develop and maintain skills, design rewards, and integrate perception with control. We present Reconstruct, Practice, Go Real (RPG), a framework for autonomous improvement of robot execution systems without updating model weights. RPG identifies manipulation capabilities in an offline dataset and constructs related practice tasks in simulation. During practice, RPG uses execution feedback, privileged simulator state, and available dataset videos to diagnose failures. It develops new reusable symbolic skills, refines existing skills, and revises the system prompt based on these diagnoses. Cross-task evaluation tests individual candidate changes and merged revisions before they are retained for reuse. At test time, a multimodal LLM uses the resulting system prompt and skill library to coordinate perception and robot control. On held-out initializations of 22 manipulation tasks, RPG improves task success from 28.6% after the first practice round to 95.0% after 15 rounds, outperforming all evaluated baselines, including ASPIRE (75.5%) and CaP-Agent0 powered by GPT-6 Astra Pro (60.0%). After a common calibration and hardware-adaptation procedure, the frozen system succeeds in all 30 physical trials, with ten trials on each of three tasks. Project Website: https://rpg-robot.github.io/",
+      "published_date": "2026-10-01T17:59:50Z",
+      "url": "https://arxiv.org/abs/2610.02204v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02204v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "重建、实践、变真实：引导式自我提升框架",
+        "chinese_summary": "RPG框架通过模拟实践和反馈诊断，显著提升机器人执行能力，超越所有基线方法。",
+        "pain_point": "机器人在多种任务中可靠执行需要大量人力开发和维护技能。",
+        "core_value": "无需更新模型权重即可自主提升机器人执行系统，显著提高任务成功率。",
+        "technical_architecture": "通过模拟实践和反馈诊断，开发和优化机器人技能。",
+        "quantitative_results": "在22个任务中，RPG从第一轮实践的28.6%提升到15轮后的95.0%，超越所有基线。",
+        "competitors": "对比了ASPIRE和CaP-Agent0等基线方法。",
+        "limitations": "仅在特定任务集上进行了测试。",
+        "key_contributions": [
+          "无需更新模型权重即可自主提升机器人执行系统",
+          "通过模拟实践和反馈诊断优化机器人技能",
+          "显著提高机器人在多种任务中的执行成功率"
+        ],
+        "application_scenarios": [
+          "机器人自动化执行任务",
+          "增强机器人在复杂环境中的适应性"
+        ],
+        "technical_highlights": [
+          "利用模拟器状态和视频反馈进行诊断",
+          "开发和优化可重用的符号技能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02203v1",
+      "source": "arxiv",
+      "title": "Embedding Prediction Helps Image Generation",
+      "authors": [
+        "Sihan Xu",
+        "Ji Xie",
+        "Zilin Wang",
+        "Hui Shen",
+        "Stella X. Yu"
+      ],
+      "abstract": "In diffusion transformers, a class label or a text prompt is embedded once, and the same condition is reused at every denoising step. We ask whether predicted embeddings can serve as this condition instead. Next-Embedding Predictive Autoregression (NEPA) trains a Transformer to predict the next continuous embedding in a sequence. In generation, the clean image follows the noisy image, so its embeddings are the next embeddings after the condition and the noisy image. We train a NEPA model to predict them all at once with Multi-Embedding Prediction, and in Embedding Conditioned Generation, a DiT generator is conditioned on these predictions, recomputed at every denoising step, so the conditioning signal adapts to the current noisy state. Experiments on class-conditional ImageNet $256\\times256$ study the condition of the generator, the design of Multi-Embedding Prediction, and the scaling of both models. The NEPA model adds a second network to every sampling step; with it, and combined with REPA, our final model, NEPA-DiT-XL, reaches an FID of 1.32 using about a third of the training compute of REPA.",
+      "published_date": "2026-10-01T17:59:49Z",
+      "url": "https://arxiv.org/abs/2610.02203v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02203v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "嵌入预测有助于图像生成",
+        "chinese_summary": "提出NEPA模型预测嵌入，结合DiT生成器实现自适应条件生成，显著提升生成质量。",
+        "pain_point": "传统扩散模型中条件信息固定，无法动态适应噪声状态。",
+        "core_value": "通过预测嵌入动态调整条件信号，提高生成图像的质量和多样性。",
+        "technical_architecture": "NEPA模型预测连续嵌入序列，DiT生成器在每个去噪步骤中重新计算条件。",
+        "quantitative_results": "NEPA-DiT-XL模型在ImageNet上的FID值为1.32。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要额外的网络计算步骤。",
+        "key_contributions": [
+          "提出NEPA模型预测嵌入",
+          "结合DiT生成器实现自适应条件生成"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像增强"
+        ],
+        "technical_highlights": [
+          "嵌入预测适应噪声状态",
+          "显著提升生成质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02202v1",
+      "source": "arxiv",
+      "title": "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research",
+      "authors": [
+        "Sohyeon Kim",
+        "Yoonho Lee",
+        "Bo Liu",
+        "Dayoon Ko",
+        "Rulin Shao",
+        "Seungone Kim",
+        "Graham Neubig",
+        "Pang Wei Koh",
+        "Aakanksha Chowdhery",
+        "Akari Asai",
+        "Omar Khattab",
+        "Yejin Choi",
+        "Gunhee Kim",
+        "Chelsea Finn"
+      ],
+      "abstract": "What makes great scientists great? Even as AI systems start to make progress on open problems, scientists remain far ahead of them at sensing which prior idea, buried in an ever-growing archive of research, a new problem needs. To study this skill, we draw on researchers who know firsthand which earlier work advanced their completed projects, with papers serving as pointers to the ideas within. Using our automated pipeline that makes author annotation scalable, we build ScholarCatalyst by having 184 lead authors of 207 recent computer science papers label which candidates did or could have advanced their project, each with a detailed rationale. We introduce a retrieval task with author-provided judgments: given an initial research question, retrieve these papers from only the literature available when the project began. Agentic search does no better than embedding retrieval (0.42 vs. 0.48 Recall@20) despite calling that same retriever as a tool. Even an agent built on Claude Fable 5.1, which may have seen the completed papers during training, reaches only 0.51 R@20. These results highlight the need for new training recipes that equip models with expert intuition for searching broad corpora. We envision ScholarCatalyst as a step toward scientific agents that can take a half-formed idea and point to the prior research it needs.",
+      "published_date": "2026-10-01T17:59:47Z",
+      "url": "https://arxiv.org/abs/2610.02202v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02202v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "ScholarCatalyst：检索启发新研究论文的基准",
+        "chinese_summary": "通过标注论文来构建基准，研究如何从早期文献中找到灵感",
+        "pain_point": "AI 系统难以识别对新研究有启发作用的早期文献",
+        "core_value": "提供了一个新的基准来评估模型在检索启发性文献方面的性能",
+        "technical_architecture": "使用自动化标注管道，由论文作者标注相关文献",
+        "quantitative_results": "AI 模型表现不如人工标注，召回率较低",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于人工标注，可能引入偏差",
+        "key_contributions": [
+          "构建了一个新的基准数据集",
+          "展示了当前模型在检索启发性文献方面的局限性"
+        ],
+        "application_scenarios": [
+          "评估和改进信息检索模型",
+          "促进科学研究中的知识发现"
+        ],
+        "technical_highlights": [
+          "使用了大规模的标注数据",
+          "展示了人类与AI在检索能力上的差距"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02201v1",
+      "source": "arxiv",
+      "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation",
+      "authors": [
+        "Tianjiao Yu",
+        "Xinzhuo Li",
+        "Yifan Shen",
+        "Ying Shen",
+        "Kiet A. Nguyen",
+        "Adheesh Sunil Juvekar",
+        "Ismini Lourentzou"
+      ],
+      "abstract": "High-resolution 3D generation increasingly relies on voxel latents and multi-stage pipelines that first predict active structure and then synthesize local geometry. While effective, this design fragments continuous surfaces into many local tokens, inflates generation cost, and often weakens topological consistency for thin or highly connected shapes. We introduce SILSA, a topology-aware 3D generation framework that represents shapes with compact sliding-window slice latents. Instead of generating expensive voxel tokens, SILSA uses a fixed set of overlapping slices along the three canonical axes, where each token summarizes a local depth window to preserve cross-sectional continuity and support single-stage rectified-flow generation. A Slice VAE encodes oriented surface samples into multi-axis slice latents and reconstructs them with a sparse volumetric decoder, while a Volumetric Anchor Lattice coordinates directional slice streams through a shared 3D workspace. To preserve structural correctness, we introduce slice-level topology supervision that matches persistence diagrams and aligns Betti transitions across neighboring slices. Experiments show that SILSA improves structural fidelity while substantially reducing generation cost. SILSA improves PSNR by $8.7\\%$, coverage by $5.96$ absolute points, and Betti error by $9.2\\%$ over the strongest baseline, while using $70.0\\%$ fewer tokens than the next-most compact baseline and over $98\\%$ fewer tokens than sparse or hierarchical tokenizers, effectively reducing training memory by $40.4\\%$ and inference time by $58.5\\%$. Qualitative results further show improved preservation of thin structures, repeated components, and long-range connectivity.",
+      "published_date": "2026-10-01T17:59:46Z",
+      "url": "https://arxiv.org/abs/2610.02201v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02201v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SILSA: 用于保持拓扑结构的高分辨率3D生成",
+        "chinese_summary": "SILSA通过滑动窗口切片潜变量实现单阶段生成，提高拓扑一致性和生成效率。",
+        "pain_point": "现有方法将连续表面分割成多个局部片段，导致生成成本增加和拓扑一致性减弱。",
+        "core_value": "通过滑动窗口切片潜变量，SILSA能够保持切片间的连续性并支持单阶段生成。",
+        "technical_architecture": "SILSA采用Slice VAE编码和Volumetric Anchor Lattice解码，实现定向切片流的协调。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多复杂形状。",
+        "key_contributions": [
+          "引入滑动窗口切片潜变量",
+          "提出切片级别拓扑监督",
+          "支持单阶段生成"
+        ],
+        "application_scenarios": [
+          "3D建模",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "保持切片间连续性",
+          "单阶段生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.02200v1",
+      "source": "arxiv",
+      "title": "VISTA: A Visual Harness for Reasoning in an Interactive World",
+      "authors": [
+        "Qiushi Han",
+        "Keya Hu",
+        "Linlu Qiu",
+        "Cathy Wu",
+        "Kaiming He"
+      ],
+      "abstract": "We show that multimodal models possess strong reasoning abilities and that an appropriate harness can unlock their potential to solve tasks across diverse interactive environments. We introduce VISTA, a visual harness that gives a general-purpose multimodal model long-horizon vision. VISTA allows the model to directly perceive the environment through visual observations and maintains a lossless visual memory that preserves past observations in their original form. The model can actively retrieve these observations and reorganize its visual input as it reasons. On ARC-AGI-3, VISTA improves Claude Opus 5.0's Relative Human Action Efficiency score from 40.68 to a perfect 100.00, with the model completing all 25 public games using 57.4% fewer actions than first-time human participants. VISTA's simple design also allows it to extend naturally to diverse visual environments with minimal adaptation. Across three additional benchmarks covering a diverse range of visual games and puzzles, it substantially outperforms baselines using the same underlying model with minimal harnesses. Our results highlight VISTA's potential as a general-purpose visual harness for advancing multimodal agents in complex visual environments.",
+      "published_date": "2026-10-01T17:59:45Z",
+      "url": "https://arxiv.org/abs/2610.02200v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02200v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "VISTA：交互世界中的视觉推理工具",
+        "chinese_summary": "VISTA 提升了多模态模型在多种视觉环境中的推理能力，使其在任务完成上超越了人类。",
+        "pain_point": "多模态模型在复杂交互环境中的长期视觉推理能力不足。",
+        "core_value": "VISTA 提供了一种通用的视觉框架，显著提升了模型在视觉任务中的表现。",
+        "technical_architecture": "VISTA 设计了一个简单的视觉框架，使模型能够主动检索和重组视觉输入。",
+        "quantitative_results": "在 ARC-AGI-3 上，VISTA 使 Claude Opus 5.0 的相对人类效率得分从 40.68 提高到 100.00。",
+        "competitors": "暂无对比信息",
+        "limitations": "VISTA 的设计主要针对视觉环境，未来可能需要扩展到其他类型的数据。",
+        "key_contributions": [
+          "提供了一种通用的视觉推理框架",
+          "显著提升了模型在视觉任务中的表现"
+        ],
+        "application_scenarios": [
+          "视觉游戏",
+          "视觉谜题"
+        ],
+        "technical_highlights": [
+          "简单的设计",
+          "强大的视觉记忆"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

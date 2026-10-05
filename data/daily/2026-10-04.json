@@ -1,0 +1,487 @@
+{
+  "date": "2026-10-04",
+  "generated_at": "2026-10-05T01:40:48.527598+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2610.03303v1",
+      "source": "arxiv",
+      "title": "S$^{2}$-PINN: Stochastic Separable Physics-Informed Neural Networks",
+      "authors": [
+        "Zhendong Li",
+        "Akwum Onwunta"
+      ],
+      "abstract": "Uncertainty quantification (UQ) for random partial differential equations (PDEs) is ubiquitous in computational science and engineering. However, classical spectral solvers for this class of problems face the curse of dimensionality, and existing neural solvers often ignore the stochastic structure that makes moments and calibration tractable. We introduce a stochastic separable physics-informed neural network, dubbed S$^{2}$-PINN, that represents the solution $u(t,\\mathbf{x},\\mathbf{Z})$ of a random PDE with a learnable Gaussian spatial dictionary, Fourier temporal features, and a generalized polynomial chaos (gPC) stochastic basis, coupled by a low-rank Canonical Polyadic (CP) tensor decomposition core. The method is trained with a hybrid strong-form and gPC-projected residual loss. Our theoretical analysis establishes that the separable class is dense in $L^2$ under mild conditions, and the projected residual corresponds exactly to a stochastic Galerkin constraint. Furthermore, we show that mini-batch projection coefficients are logarithmically dependent on the number of gPC modes, and that the orthogonality penalty controls the conditioning of the learned spatial dictionary. Using four manufactured random PDE benchmarks, we show that S$^{2}$-PINN outperforms nine baselines in terms of mean and variance accuracy, as well as calibration, while using significantly fewer parameters. Further evaluations on non-manufactured Poisson and Darcy problems, a stochastic Navier--Stokes problem, a diffusion scaling study of higher random dimensions, and two stochastic inverse problems reveal the generalization capabilities of the proposed structure. Together, these results support stochastic separability as an effective design principle for physics-informed neural UQ. The code for the experiments can be found in https://github.com/DMax1314/s2pinn",
+      "published_date": "2026-10-02T13:43:57Z",
+      "url": "https://arxiv.org/abs/2610.03303v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03303v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "math-ph"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "S$^{2}$-PINN: 随机偏微分方程的随机分离物理感知神经网络",
+        "chinese_summary": "提出了一种新的神经网络方法，用于解决随机偏微分方程的不确定性量化问题。",
+        "pain_point": "经典谱解法和现有神经网络方法在处理高维随机偏微分方程时存在维度诅咒问题。",
+        "core_value": "通过引入随机分离物理感知神经网络，解决了高维随机偏微分方程的计算难题。",
+        "technical_architecture": "采用可学习的高斯空间字典、傅里叶时间特征和广义多项式混沌（gPC）随机基，结合低秩CP张量分解核心。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "理论分析依赖于温和条件，实际应用中可能需要进一步验证。",
+        "key_contributions": [
+          "引入随机分离物理感知神经网络",
+          "提出低秩CP张量分解核心",
+          "理论分析证明方法的有效性"
+        ],
+        "application_scenarios": [
+          "随机偏微分方程的不确定性量化",
+          "工程和科学计算中的随机问题"
+        ],
+        "technical_highlights": [
+          "结合傅里叶时间特征和gPC随机基",
+          "低秩CP张量分解提高计算效率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03296v1",
+      "source": "arxiv",
+      "title": "JOVE: Joint Execution and Verification for Resource-Aware LLM Task Graphs",
+      "authors": [
+        "Haoran Zhang",
+        "Dongjun Kim",
+        "Seohyeon Cha",
+        "Kevin S Chan",
+        "Ananthram Swami",
+        "Gustavo De Veciana",
+        "Haris Vikalo"
+      ],
+      "abstract": "Complex reasoning queries can be decomposed into directed acyclic task graphs and distributed across heterogeneous LLMs, reducing latency through parallelism and enabling smaller models to solve complex tasks. In practice, however, the suitability of an LLM for a given subtask may be a priori unknown, and execution alone does not reveal output correctness. We propose JOVE, an online framework that jointly assigns executor LLMs and selects intermediate outputs for paid verification. Verification runs asynchronously and is used to improve future allocations, so the system must balance spending on execution now against learning for later. We study how to optimize this trade-off under a long-term budget and a per-query latency constraint, with stochastic, initially unknown LLM service quality, invocation costs, and execution times. JOVE makes execution and verification decisions by solving a sequence of per-query mixed-integer linear programs. Online learning updates task-dependent estimates of LLM quality based on verification feedback, while an information-gain bonus incorporates the value of learning into allocation decisions. Under a natural set of assumptions, we establish sublinear quality-learning regret for JOVE. Across four reasoning benchmarks, JOVE achieves competitive accuracy against standard inference baselines while reducing average cost and latency by at least 3.17 times.",
+      "published_date": "2026-10-02T13:37:59Z",
+      "url": "https://arxiv.org/abs/2610.03296v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03296v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "JOVE: 资源感知LLM任务图的联合执行与验证",
+        "chinese_summary": "提出JOVE框架，联合分配执行器LLM并选择中间输出进行验证，以优化长期预算和查询延迟约束下的执行与验证决策。",
+        "pain_point": "现有系统无法有效分配适合的LLM执行子任务，且执行结果的正确性无法通过执行本身得到验证。",
+        "core_value": "通过联合执行与验证，提高复杂任务的执行效率和结果准确性。",
+        "technical_architecture": "通过解决混合整数线性规划问题进行在线学习和分配决策。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于长期预算和查询延迟约束下的假设。",
+        "key_contributions": [
+          "提出JOVE框架进行联合执行与验证",
+          "通过在线学习更新LLM质量估计",
+          "引入信息增益奖励优化分配决策"
+        ],
+        "application_scenarios": [
+          "复杂推理查询的分布式执行",
+          "资源受限环境下的LLM任务分配"
+        ],
+        "technical_highlights": [
+          "解决未知LLM服务质量下的分配问题",
+          "结合执行与验证提高系统效率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03290v1",
+      "source": "arxiv",
+      "title": "Wrong Organ, Right Physics: Transferring Echocardiography Pretraining to Lung Ultrasound for Tuberculosis Screening",
+      "authors": [
+        "Christiaan M. Geldenhuys",
+        "Joshua M. Jansen van Vüren",
+        "Véronique Suttels",
+        "Trevor Brokowski",
+        "Ablo P. Wachinou",
+        "Mary-Anne Hartley",
+        "Rensu P. Theart",
+        "Grant Theron",
+        "Thomas R. Niesler"
+      ],
+      "abstract": "Lung ultrasound (LUS) is attractive for tuberculosis (TB) screening at primary-care level, but labelled cohorts are small. Echocardiography carries no such constraint, while sharing the same underlying ultrasound imaging physics, signal processing and B-mode appearance as LUS. We ask whether an encoder pretrained on that high-resource ultrasound domain carries representations that remain usable in the low-resource one. Only the encoder varies, across seventeen encoders spanning three architecture families. Among them, a latent-predictive video encoder pretrained on generic video (V-JEPA2-L) and its echocardiography counterpart (EchoJEPA-L) differ in pretraining corpus alone. The choice among these encoders does not resolve the classification, the whole family spanning 2.50 percentage points against a measurement resolution of 2.71. What moves the task instead is feature conditioning. Standardising the features between the encoder and the classifier improves all seventeen encoders by a mean of +1.23 percentage points at $p=1.5\\times10^{-5}$. On the held-out test set every encoder selected on the development folds stands above the baseline system by up to +2.57 percentage points of area under the receiver operating characteristic curve (AUROC), and specificity at 90% sensitivity reaches 79.3% against 60.3%. The contrast specified in advance, EchoJEPA-L against V-JEPA2-L, measures -0.16 percentage points at $p=0.926$. We therefore find no evidence that shared ultrasonic physics alone makes echocardiography a more productive pretraining corpus than generic video, and any advantage, if present, is smaller than this cohort can resolve. The video encoders receive replicated still images, however, so whether this absence of an effect reflects the pretraining domain or a video encoder applied to static frames cannot be separated. The limiting factor is the labelled cohort rather than the encoder.",
+      "published_date": "2026-10-02T13:33:18Z",
+      "url": "https://arxiv.org/abs/2610.03290v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03290v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "eess.IV",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "错误器官，正确物理：将心脏超声预训练应用于肺超声结核筛查",
+        "chinese_summary": "通过心脏超声预训练模型在肺超声结核筛查中的应用，提高分类准确率。",
+        "pain_point": "肺超声筛查结核病的数据标注量不足。",
+        "core_value": "利用心脏超声的预训练模型提升肺超声在结核筛查中的性能。",
+        "technical_architecture": "使用不同架构的心脏超声预训练模型进行特征提取和分类。",
+        "quantitative_results": "标准化特征后，所有模型的准确率平均提高1.23个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索不同特征条件对模型性能的影响。",
+        "key_contributions": [
+          "利用心脏超声预训练模型提升肺超声分类性能",
+          "标准化特征显著提高模型效果"
+        ],
+        "application_scenarios": [
+          "肺超声结核筛查",
+          "医学影像分类"
+        ],
+        "technical_highlights": [
+          "心脏超声与肺超声共享相同的物理原理",
+          "标准化特征显著提升模型性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03289v1",
+      "source": "arxiv",
+      "title": "Architecture-Dependent Fusion Pathways in MLLMs",
+      "authors": [
+        "Hebao Zhu",
+        "Dongxia Wu"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) achieve strong performance across vision-language tasks, yet the internal mechanisms by which visual and textual information are fused across layers remain insufficiently understood. We investigate representative MLLMs from two architectural paradigms: concatenation architectures and native multimodal architectures. We conduct three progressively connected analyses: alignment decoupling identifies which modality changes, attention routing and entropy characterize how cross-modal information is distributed, and intrinsic dimensionality examines how fusion reshapes feature spaces. Separately, we perform causal intervention experiments as a validation of the resulting interpretation. As a supplementary analysis, we use visual CKA to examine the Platonic Representation Hypothesis. Together, these analyses reveal two distinct fusion pathways: concatenation models follow a text-first, vision-later pathway, whereas native models exhibit earlier visual-textual co-adaptation and feature-space reorganization. This work provides a mechanistic perspective for understanding multimodal fusion and supports architecture-aware diagnostics of multimodal representations.",
+      "published_date": "2026-10-02T13:32:45Z",
+      "url": "https://arxiv.org/abs/2610.03289v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03289v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "MLLMs 中的架构依赖融合路径",
+        "chinese_summary": "揭示了两种不同的融合路径：连接模型遵循文本优先、视觉后继的路径，而原生模型则表现出早期视觉-文本共适应和特征空间重塑。",
+        "pain_point": "现有 MLLMs 在跨层视觉和文本信息融合机制上的理解不足。",
+        "core_value": "提供了对多模态融合机制的机械性视角，并支持基于架构的多模态诊断。",
+        "technical_architecture": "分析了两种架构范式：连接架构和原生多模态架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可进一步探索更多 MLLM 架构。",
+        "key_contributions": [
+          "揭示了两种不同的融合路径",
+          "提供了架构依赖的多模态融合机制理解",
+          "支持架构意识的多模态诊断"
+        ],
+        "application_scenarios": [
+          "多模态语言模型的研究",
+          "多模态任务的性能优化"
+        ],
+        "technical_highlights": [
+          "使用因果干预实验验证解释",
+          "采用视觉 CKA 检查柏拉图表征假设"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03283v1",
+      "source": "arxiv",
+      "title": "HexVIO: Towards All-Day Stereo-Inertial Tracking Through Commodity DSPs",
+      "authors": [
+        "Patrick Wolf",
+        "Mateo de Mayo",
+        "Daniel Cremers"
+      ],
+      "abstract": "The ability of a device to localize itself within its surroundings is a fundamental prerequisite for spatial computing. Visual-inertial odometry (VIO) has proven to be a cost-effective and accurate solution for this task. Robots, wearables, XR devices, and drones can benefit significantly from efficient implementations of VIO since they allow for cooler, lighter, and cheaper devices with longer battery life and a better user experience. In this work, we propose to enhance the efficiency of a VIO system by leveraging the Hexagon DSP, a commodity co-processor present in many modern smartphones and XR devices. Our approach offloads the visual frontend of a stereo-inertial odometry system to the DSP while keeping the backend on the main CPU. By optimizing the implementation for the DSP architecture, we achieve significant reductions in power consumption and latency compared to CPU-only execution. Our system, HexVIO, demonstrates a 67% reduction in power consumption or an 86% increase in throughput on a commodity smartphone, with the ability to sustain long-term real-time 30 fps tracking for 0.83 W, corresponding to ~18 hours of tracking on the testing device. These results highlight the potential of commodity DSPs for enabling all-day visual-inertial tracking in robotics and mobile devices.",
+      "published_date": "2026-10-02T13:26:38Z",
+      "url": "https://arxiv.org/abs/2610.03283v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03283v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "HexVIO: 通过商用DSP实现全天候立体惯性跟踪",
+        "chinese_summary": "HexVIO 通过将视觉前端卸载到 DSP 实现了显著的能效提升和性能增强。",
+        "pain_point": "现有 VIO 系统在能效和实时性方面存在不足，影响了设备的续航和用户体验。",
+        "core_value": "HexVIO 通过优化 DSP 实现了 67% 的能效提升或 86% 的性能提升，支持长时间实时跟踪。",
+        "technical_architecture": "将视觉前端卸载到 DSP，保持后端在主 CPU 上运行。",
+        "quantitative_results": "在商用智能手机上实现了 67% 的能效提升或 86% 的性能提升，支持 0.83 W 下的 30 fps 实时跟踪。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定设备上进行了测试。",
+        "key_contributions": [
+          "提出了将视觉前端卸载到 DSP 的方法",
+          "实现了显著的能效和性能提升",
+          "支持长时间实时跟踪"
+        ],
+        "application_scenarios": [
+          "机器人",
+          "可穿戴设备",
+          "XR 设备",
+          "无人机"
+        ],
+        "technical_highlights": [
+          "优化 DSP 实现高效能",
+          "支持长时间实时跟踪"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03276v1",
+      "source": "arxiv",
+      "title": "Moving Forward with Video Saliency: A New Dataset and Benchmark where Motion Matters",
+      "authors": [
+        "Susmit Agrawal",
+        "Rebecca Wanner",
+        "Juliane Verwiebe",
+        "Matthias Tangemann",
+        "Matthias Bethge",
+        "Matthias Kümmerer"
+      ],
+      "abstract": "Video saliency prediction is inherently harder to model than static image saliency due to the additional temporal dimension. Video saliency benchmarks rest on the premise that predicting gaze on video requires utilizing temporal activity distributed across frames. Prior work has challenged this, showing that static baselines recover a significant fraction of the explainable gaze information on LEDOV, a popular video saliency dataset, and that video saliency models fail in the same places as this static baseline. We verify that this diagnosis still stands: under a more capable gold standard than the original analysis, and an updated panel of recent architectures, the strongest temporal architecture in the panel still does not substantially improve over a fine-tuned static baseline. However, it remains unclear whether the marginal gain reflects limitations of current temporal architectures or a lack of temporal patterns in the benchmark itself. We introduce SalTempto, a video saliency benchmark with greater dynamism: 224 clips of highly dynamic content, sourced from the HACS-Segments dataset so that each clip contains an event together with its lead-up and aftermath, with gaze recordings from up to 16 subjects and a training split for adapting pretrained models. On SalTempto, the static baseline recovers only about 13\\% of the headroom above the centerbias, against more than half on LEDOV. A fine-tuned temporal architecture shows a substantial gain in performance over the static baseline, indicating that it does capture meaningfully more temporal information, which LEDOV fails to measure. Yet, even this SoTA model still leaves nearly half of SalTempto's headroom unexplained, indicating room for improvement in video saliency modelling. Examination of SalTempto also lets us describe human tendencies that models miss. SalTempto link: https://huggingface.co/datasets/bethgelab/video_saliency.",
+      "published_date": "2026-10-02T13:17:52Z",
+      "url": "https://arxiv.org/abs/2610.03276v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03276v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "视频显著性预测：一个新的数据集和基准，强调运动",
+        "chinese_summary": "提出SalTempto数据集，强调视频中运动对显著性预测的重要性",
+        "pain_point": "现有视频显著性模型未能充分利用视频中的运动信息",
+        "core_value": "通过引入动态更强的SalTempto数据集，推动视频显著性研究",
+        "technical_architecture": "使用HACS-Segments数据集构建动态更强的视频片段",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步探索视频中运动模式对显著性预测的影响",
+        "key_contributions": [
+          "提出新的视频显著性数据集SalTempto",
+          "验证当前时间模型的局限性",
+          "强调运动在视频显著性预测中的重要性"
+        ],
+        "application_scenarios": [
+          "视频内容理解",
+          "视频摘要生成"
+        ],
+        "technical_highlights": [
+          "使用动态更强的视频片段构建数据集",
+          "验证静态模型在视频显著性预测中的竞争力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03273v1",
+      "source": "arxiv",
+      "title": "EVOL: Simulator-Guided Evolutionary Expert Synthesis for Deployment-Free Learning Path Recommendation",
+      "authors": [
+        "Geonwoo Bang",
+        "Dongho Kim",
+        "Moohong Min"
+      ],
+      "abstract": "Reinforcement learning (RL) for learning path recommendation (LPR) faces two coupled obstacles. First, the policy must commit to a sequence of L concepts without intermediate feedback, producing a combinatorial search space that grows super-exponentially with L and provides reward only at the final step. Second, expert learning paths would be the natural cure for sparse-reward RL, but they do not exist in educational data, because student logs record what learners did, not what they should have done. We address both obstacles by importing a recipe from simulator-based demonstration learning in robotics: the knowledge tracing simulator is used both to synthesize per-learner expert demonstrations through evolutionary search and to train a deployment-free policy that distills these demonstrations into a feed-forward learner. Our framework, EVOL, instantiates this pipeline with an asymmetric actor-critic where the actor commits to deployment-realistic blind planning while the critic exploits the privileged simulator state during training. Across three datasets (ASSIST15, Junyi, and EdNet; 39-189 concepts) and path lengths L = 5, 10, and 20, EVOL surpasses 8 baselines spanning heuristic, sequential, RL, graph-enhanced RL, and LLM-enhanced methods. We further compare three imitation strategies (BC, AWR, and DAPG) and show that final performance is governed by the quality of evolutionary experts rather than by the particular imitation objective.",
+      "published_date": "2026-10-02T13:16:40Z",
+      "url": "https://arxiv.org/abs/2610.03273v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03273v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "EVOL：基于模拟器引导的进化专家合成部署无损学习路径推荐",
+        "chinese_summary": "EVOL框架通过进化搜索合成个性化专家演示，并利用模拟器训练无部署策略，显著提升学习路径推荐效果。",
+        "pain_point": "学习路径推荐中存在超指数增长的搜索空间和稀疏奖励问题。",
+        "core_value": "通过模拟器合成专家演示并训练无部署策略，解决学习路径推荐中的核心痛点。",
+        "technical_architecture": "采用非对称演员-评论家架构，演员进行盲规划，评论家利用模拟器状态进行训练。",
+        "quantitative_results": "在三个数据集上，EVOL超越了8种基线方法。",
+        "competitors": "对比了8种基线方法。",
+        "limitations": "未来需要在更大规模数据集上验证。",
+        "key_contributions": [
+          "引入模拟器合成专家演示",
+          "提出无部署策略训练框架"
+        ],
+        "application_scenarios": [
+          "在线教育平台个性化学习路径推荐",
+          "智能辅导系统"
+        ],
+        "technical_highlights": [
+          "非对称演员-评论家架构",
+          "模拟器引导的进化搜索"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03268v1",
+      "source": "arxiv",
+      "title": "Shrome at Touché: Soft-Vote Ensembling and Counter-Causal Augmentation for Causality Extraction",
+      "authors": [
+        "Roham Zendehdel Nobari",
+        "Shayan Sooratgar"
+      ],
+      "abstract": "Touché 2026 extends causality extraction to counter-causal claims: news sentences whose surface form appears causal but whose meaning denies the causation, as in \"It is falsely believed that X caused Y.\" A system that relies on surface cues such as \"caused\" or \"led to\" will accept such a sentence as causal and give it the wrong polarity. On the Countercausal News Corpus (CCNC), the task has three subtasks: deciding whether a sentence is causal (detection), locating its cause and effect spans (extraction), and labeling its polarity as procausal, counter-causal, or uncausal. We build one model per subtask. Detection is a fine-tuned classifier with a single cross-task rule that uses the extracted spans to remove false positives. For extraction, we ensemble three RoBERTa-large BILOU+CRF taggers by averaging their token-level scores before decoding, rather than voting on the spans each tagger produces. For polarity, where labeled counter-causal examples are scarcest, we add training sentences generated by a large language model prompted with nine patterns of counter-causal expression adapted from Hagen et al., keeping only those that pass automatic structural checks. On the held-out CCNC test set, the system reaches F1 0.869 on detection and macro-F1 0.817 on polarity, and in the organizers' final causal-only evaluation of extraction it scores granularity-adjusted F1 0.728, the highest extraction score among all submissions including the organizers' baseline. The development split is used only for component selection and the ablations reported in the paper.",
+      "published_date": "2026-10-02T13:11:27Z",
+      "url": "https://arxiv.org/abs/2610.03268v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03268v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "触碰因果：软投票集成与反因果增强的因果提取",
+        "chinese_summary": "提出反因果新闻语句的检测、提取和极性标注方法，提升因果关系识别的准确性。",
+        "pain_point": "现有系统依赖表面线索，易误判反因果语句为因果。",
+        "core_value": "通过反因果增强和软投票集成，提高反因果语句识别的准确性和鲁棒性。",
+        "technical_architecture": "构建三个模型分别负责检测、提取和极性标注，采用软投票集成和反因果增强。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖特定数据集，未来需探索更广泛的应用场景。",
+        "key_contributions": [
+          "提出反因果新闻语句的检测、提取和极性标注方法",
+          "采用软投票集成和反因果增强提升模型性能",
+          "构建一个针对反因果语句的专用数据集"
+        ],
+        "application_scenarios": [
+          "新闻文本分析",
+          "自动摘要生成"
+        ],
+        "technical_highlights": [
+          "使用软投票集成多个模型",
+          "通过反因果增强生成训练数据"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03265v1",
+      "source": "arxiv",
+      "title": "SPEAR: A Spectral-Disentangled MoE Neural Operator with Knowledge-Guided Expert Aggregation for Large-Scale PDE Pretraining",
+      "authors": [
+        "Dengdi Sun",
+        "Xiaoya Zhou",
+        "Xiao Wang",
+        "Wanli Lyu",
+        "Jin Tang",
+        "Bin Luo"
+      ],
+      "abstract": "Large-scale pre-training has improved the generalization of neural operators across diverse PDEs. However, existing PDE foundation models still struggle with heterogeneous dynamics, where shared representations may cause knowledge interference, while mixture-of-experts (MoE) architectures suffer from increasing expert redundancy. We propose SPEAR, a spectral-disentangled MoE neural operator with knowledge-guided expert aggregation for large-scale PDE pre-training. SPEAR decouples latent features into low- and high-frequency components, enabling shared modeling of transferable dynamics and specialized learning of PDE-specific patterns. To address expert redundancy, we design a knowledge-guided expert aggregation strategy that measures expert similarity from dataset-specific learned knowledge and routing preferences, enabling the identification and consolidation of similar experts. Experiments on twelve PDE datasets and multiple downstream benchmarks demonstrate superior performance in pre-training, fine-tuning, and transfer learning. Furthermore, our aggregation strategy reduces the number of experts by 50\\% while maintaining or improving prediction accuracy, achieving a balance between model efficiency and generalization for PDE foundation models.",
+      "published_date": "2026-10-02T13:10:09Z",
+      "url": "https://arxiv.org/abs/2610.03265v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03265v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SPEAR：一种用于大规模PDE预训练的光谱解耦MoE神经算子，带有知识引导的专家聚合",
+        "chinese_summary": "SPEAR通过光谱解耦和知识引导的专家聚合提高了PDE预训练性能。",
+        "pain_point": "现有模型难以处理异质动态，导致知识干扰，MoE架构则面临专家冗余问题。",
+        "core_value": "通过光谱解耦和知识引导的专家聚合，SPEAR提高了模型性能并减少了专家数量。",
+        "technical_architecture": "SPEAR通过解耦低频和高频特征，实现共享和专有学习，并设计了知识引导的专家聚合策略。",
+        "quantitative_results": "实验表明，SPEAR在预训练、微调和迁移学习中表现优越，且专家数量减少50%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多PDE数据集的应用。",
+        "key_contributions": [
+          "提出光谱解耦的MoE架构",
+          "设计知识引导的专家聚合策略",
+          "显著减少专家数量同时保持或提升预测准确性"
+        ],
+        "application_scenarios": [
+          "大规模PDE预训练",
+          "PDE特定模式学习"
+        ],
+        "technical_highlights": [
+          "光谱解耦提高模型泛化能力",
+          "知识引导的专家聚合策略有效减少冗余"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.03261v1",
+      "source": "arxiv",
+      "title": "Consecutive Posterior Fusion for Diffusive Recovery of Unobservable Image Structures",
+      "authors": [
+        "Elena Morotti",
+        "Davide Evangelista",
+        "Elena Loli Piccolomini"
+      ],
+      "abstract": "Solving severely ill-posed imaging inverse problems requires recovering image structures that are unobservable or weakly constrained by the measurements. Diffusion models provide expressive learned priors for inferring such missing information, while posterior sampling incorporates measurement consistency along the reverse process. Standard diffusion posterior samplers, however, rely on instantaneous measurement-aware estimates, without explicitly exploiting information carried by previous posterior corrections.   We introduce Consecutive Posterior Fusion Denoising Diffusion Null-Space Models (CPF-DDNM), an inference-time strategy that fuses consecutive measurement-aware estimates to improve the diffusive recovery of unobservable image structures, without requiring retraining or additional denoiser evaluations. We instantiate this principle within DDNM, whose range/null-space decomposition reveals that consecutive fusion preserves the measurement-determined component while acting exclusively on the prior-driven null-space estimate. We thus provide a geometric interpretation of CPF-DDNM and a local error analysis that characterizes the optimal time-dependent fusion coefficient, including the extrapolative regime.   Experiments on sparse-view and simulated low-dose computed tomography, as well as medical image super-resolution, show consistent improvements over DDNM and competitive performance against diffusion-based inverse solvers.",
+      "published_date": "2026-10-02T13:05:36Z",
+      "url": "https://arxiv.org/abs/2610.03261v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.03261v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "连续后验融合用于扩散恢复不可观测图像结构",
+        "chinese_summary": "提出CPF-DDNM，通过融合连续的测量感知估计提高不可观测图像结构的扩散恢复。",
+        "pain_point": "传统后验采样器依赖瞬时测量感知估计，未充分利用先前后验修正的信息。",
+        "core_value": "CPF-DDNM通过连续融合测量感知估计，无需重新训练或额外评估去噪器。",
+        "technical_architecture": "基于DDNM的范围/零空间分解，连续融合保留测量确定部分，仅作用于先验驱动的零空间估计。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更复杂的图像结构恢复。",
+        "key_contributions": [
+          "提出CPF-DDNM方法",
+          "提供几何解释和局部误差分析",
+          "无需重新训练或额外评估去噪器"
+        ],
+        "application_scenarios": [
+          "图像恢复",
+          "图像结构重建"
+        ],
+        "technical_highlights": [
+          "连续融合测量感知估计",
+          "基于DDNM的零空间分解"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

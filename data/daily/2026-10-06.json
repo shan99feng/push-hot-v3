@@ -1,0 +1,612 @@
+{
+  "date": "2026-10-06",
+  "generated_at": "2026-10-07T02:09:27.246855+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.05608",
+      "source": "huggingface",
+      "title": "Kandinsky 6.0 Video: Foundation Models for Synchronized Video and Audio Generation",
+      "authors": [
+        "Team Kandinsky",
+        "Julia Agafonova",
+        "Bulat Akhmatov",
+        "Mikhail Aksyutin",
+        "Grigorii Alekseenko",
+        "Anastasia Aliaskina",
+        "Olga Androsova",
+        "Vladimir Arkhipkin",
+        "Anna Averchenkova",
+        "Alexander Belykh",
+        "Serafima Bocharova",
+        "Sofiya Bogakovskaya",
+        "Anton Bukashkin",
+        "Mark Bulygin",
+        "Kirill Buzygin",
+        "Irina Cheremnykh",
+        "Kirill Chernyshev",
+        "Mikhail Chernyshov",
+        "Vladimir Chernyy",
+        "David Chikovani",
+        "Georgy Daniltsev",
+        "Denis Dimitrov",
+        "Anna Dmitrienko",
+        "Vladimir Dokholyan",
+        "Sergey Emelyanov",
+        "Dmitry Ermilov",
+        "Georgii Fedorov",
+        "Polina Gavrilova",
+        "Nikolai Gerasimenko",
+        "Aleksandr Gordeev",
+        "Andrey Inozemtsev",
+        "Andrei Ivaniuta",
+        "Alexander Ivanov",
+        "Mikhail Karaev",
+        "Anastasiia Kargapoltseva",
+        "Ivan Kirillov",
+        "Nikita Kiselev",
+        "Valeria Kobenko",
+        "Yury Kolabushin",
+        "Denis Koposov",
+        "Anatoly Korobov",
+        "Vladimir Korviakov",
+        "Kirill Kozlov",
+        "Denis Krzhivokolskiy",
+        "Konstantin Kuklev",
+        "Alexander Kunitsyn",
+        "Sergey Kuzin",
+        "Vladislav Lakhtionov",
+        "Alexey Letunovskiy",
+        "Maxim Litvinov",
+        "Alexander Lyulkov",
+        "Georgy Makarov",
+        "Kirill Malakhov",
+        "Egor Malykh",
+        "Mikhail Mamaev",
+        "Dmitrii Mikhailov",
+        "Polina Mikhailova",
+        "Ivan Mikheev",
+        "Elizaveta Muromtseva",
+        "Nikolai Nazarkin",
+        "Tatiana Nikulina",
+        "Lev Novitskiy",
+        "Stanislav Onuchin",
+        "Nikita Osterov",
+        "Denis Parkhomenko",
+        "Anatoliy Parpara",
+        "Vladimir Polovnikov",
+        "Konstantin Reznikov",
+        "Azat Saginbaev",
+        "Nikita Samsonov",
+        "Alexander Sentsov",
+        "Nikita Shaimov",
+        "Artem Sherstyuk",
+        "Andrey Shutkin",
+        "Egor Silvestrov",
+        "Bulat Suleimanov",
+        "Matvey Suprunov",
+        "Sergey Taranov",
+        "Irina Tolstykh",
+        "Tatiana Trofimuk",
+        "Ilya Trushkin",
+        "Aleksandra Tsybina",
+        "Olga Varlashina",
+        "Viacheslav Vasilev",
+        "Ilya Vasiliev",
+        "Eugeny Vilisov",
+        "Sergey Yakubson",
+        "Konstantin Zakharov"
+      ],
+      "abstract": "We present Kandinsky 6.0 Video, a family of foundation diffusion models for synchronized text-to-audio-video generation, comprising Kandinsky 6.0 Video Lite (3B parameters) and Kandinsky 6.0 Video Pro (29B parameters). Both models generate 5-second video clips with synchronized 44 kHz audio, including lip-sync, in text-to-audio-video (T2AV) and image-to-audio-video (I2AV) modes; a built-in super-resolution model raises the output resolution to Full-HD (1920times1080). Building on the video generation capabilities of Kandinsky 5.0, Kandinsky 6.0 Video employs a dual-stream CrossDiT architecture that connects a pretrained video stream and a newly trained audio stream through bidirectional cross-attention for temporal and semantic alignment. Our continuous pretraining strategy first trains the audio stream from scratch on large-scale audio corpora and then trains both streams jointly on paired audio-video data while preserving unimodal fidelity; pretraining is followed by supervised fine-tuning, reinforcement-learning-based post-training, and distillation. In side-by-side human evaluation, Kandinsky 6.0 Video Pro clearly outperforms its predecessor, Kandinsky 5.0 Video Pro, and remains competitive with leading audio-video generation models, particularly in speech quality. To accelerate open research and deployment in multimedia generation, we release the code, model checkpoints, and diffusers integration under the MIT license.",
+      "published_date": "2026-10-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.05608",
+      "pdf_url": "https://arxiv.org/pdf/2610.05608",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.05608",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "upvotes": 117,
+      "hot_score": 1170,
+      "structured_summary": {
+        "chinese_title": "Kandinsky 6.0 视频：同步视频和音频生成的基础模型",
+        "chinese_summary": "Kandinsky 6.0 视频通过双流 CrossDiT 架构实现了高质量的同步文本到音频视频生成。",
+        "pain_point": "现有模型在同步生成高质量音频视频方面存在不足。",
+        "core_value": "通过双流架构和连续预训练策略提升了音频视频生成的质量和同步性。",
+        "technical_architecture": "采用双流 CrossDiT 架构，结合预训练视频流和新训练的音频流。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步优化模型的生成效率。",
+        "key_contributions": [
+          "提出双流 CrossDiT 架构",
+          "采用连续预训练策略"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "虚拟主播"
+        ],
+        "technical_highlights": [
+          "双流 CrossDiT 架构",
+          "高质量同步生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.04198",
+      "source": "huggingface",
+      "title": "ALoDLM: Adaptively Looped Diffusion Language Models",
+      "authors": [
+        "Liancheng Fang",
+        "Zhuowei Li",
+        "Youngeun Kim",
+        "Tianchen Zhao",
+        "Rajat Koner",
+        "Jiaye Wu",
+        "Linghan Xu",
+        "Xuanbai Chen",
+        "Xiang Xu",
+        "Zheng Zhang",
+        "Jakub Zablocki",
+        "Nishant Sankaran",
+        "Yifan Xing"
+      ],
+      "abstract": "Diffusion language models (DLMs) enable fast generation by predicting multiple tokens in parallel, but their practical adoption remains limited by a persistent quality gap relative to comparably sized autoregressive (AR) models. We attribute this gap to a computation-difficulty mismatch: within a partially observed sequence, some unknown tokens are easy to predict, while others require substantially more computation. Existing DLMs nevertheless apply uniform computational depth to all unknown positions at each denoising step. We introduce ALoDLM, which replaces uniform computation with token-adaptive latent recurrence. At each denoising step, ALoDLM iteratively refines latent representations and allocates computation according to token difficulty. Tokens ready to commit are fed back as discrete context, while unresolved tokens retain and further refine their latent states through additional recurrent passes. To learn token prediction and computation allocation jointly, we formulate token-wise computation schedules as latent variables and derive a conditional negative evidence lower bound (NELBO). We train ALoDLM at 1.7B and 8B parameter scales. Across eleven benchmarks, ALoDLM outperforms all evaluated DLMs and the corresponding AR baselines in average benchmark score at both scales. ALoDLM also retains fast parallel decoding, yielding a strong quality-efficiency trade-off among evaluated autoregressive and diffusion models under optimized inference engines.",
+      "published_date": "2026-10-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.04198",
+      "pdf_url": "https://arxiv.org/pdf/2610.04198",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.04198",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 60,
+      "hot_score": 600,
+      "structured_summary": {
+        "chinese_title": "ALoDLM: 自适应循环扩散语言模型",
+        "chinese_summary": "ALoDLM 通过自适应计算分配提高了扩散语言模型的生成质量。",
+        "pain_point": "现有扩散语言模型在生成质量上与自回归模型存在差距。",
+        "core_value": "ALoDLM 通过自适应计算分配提高了生成质量，解决了计算难度不匹配的问题。",
+        "technical_architecture": "ALoDLM 采用自适应的潜在循环机制，根据 token 难度分配计算。",
+        "quantitative_results": "在多个基准测试中，ALoDLM 的表现优于现有模型。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在 1.7B 和 8B 参数规模下进行了训练。",
+        "key_contributions": [
+          "提出了自适应循环机制",
+          "设计了联合学习 token 预测和计算分配",
+          "在多个基准测试中表现出色"
+        ],
+        "application_scenarios": [
+          "自然语言生成",
+          "文本补全"
+        ],
+        "technical_highlights": [
+          "自适应计算分配",
+          "联合学习机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.03120",
+      "source": "huggingface",
+      "title": "In-Distribution Forcing for Long Video Generation at Test Time",
+      "authors": [
+        "Jeongwoo Shin",
+        "Youngyoon Choi",
+        "Sangwoo Jo",
+        "Hyunmog Kim",
+        "Sungjoon Choi",
+        "Joonseok Lee",
+        "Jaewoong Choi",
+        "Jaemoo Choi"
+      ],
+      "abstract": "Modern autoregressive (AR) video diffusion models excel at short-horizon video generation, yet generating long videos remains challenging due to drifting, where colors and textures shift, and motion dynamics decay. Existing works primarily rely on KV conditioning, which selects or modifies cached key-value (KV) entries to mitigate drifting. However, we observe that KV conditioning alone is insufficient as it assumes cached KV entries remain in-distribution. This assumption fails beyond the training horizon: nothing constrains the construction of KV entries during rollout, giving rise to the KV-provenance problem where cached entries themselves become out-of-distribution (OOD). To address this, we propose In-Distribution Forcing (ID-Forcing), a test-time framework that aligns both KV caching and KV conditioning with training configurations. Its key mechanism, self-caching, prevents OOD KV entries at their source. Each chunk is cached without attending to prior KV entry, keeping the rolling window exactly in-distribution. Consequently, ID-Forcing seamlessly extends short-horizon models to minute-scale video generation. Extensive evaluations show that our method remains competitive on standard video generation benchmark while substantially outperforming prior work in mitigating drifting, as validated by both our drift metrics and a user study.",
+      "published_date": "2026-10-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.03120",
+      "pdf_url": "https://arxiv.org/pdf/2610.03120",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.03120",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "测试时的同分布强制策略用于长视频生成",
+        "chinese_summary": "提出In-Distribution Forcing方法，解决长视频生成中的颜色和纹理漂移问题。",
+        "pain_point": "现有模型在长视频生成中面临颜色和纹理漂移问题。",
+        "core_value": "通过自缓存机制，确保缓存条目始终在分布内，提升长视频生成质量。",
+        "technical_architecture": "提出自缓存机制，保持滚动窗口始终在分布内。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在测试时有效，未来需探索训练时的应用。",
+        "key_contributions": [
+          "提出In-Distribution Forcing方法",
+          "解决KV-provenance问题",
+          "保持滚动窗口始终在分布内"
+        ],
+        "application_scenarios": [
+          "长视频生成",
+          "视频合成"
+        ],
+        "technical_highlights": [
+          "自缓存机制",
+          "保持在分布内"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.05162",
+      "source": "huggingface",
+      "title": "Memadapter: Counterfactual Adaptation Against Memory-induced Sycophancy",
+      "authors": [
+        "Ruqing Ning",
+        "Haibo Meng",
+        "Zhishang Xiang",
+        "Zerui Chen",
+        "Jinsong Su",
+        "Xin Wang",
+        "Qinggang Zhang"
+      ],
+      "abstract": "Long-term memory enables LLM-based agents to retain and reuse information across tasks and sessions, supporting personalization and long-horizon interactions. However, persistent memories can also induce sycophancy, causing agents to over-align with users' historical beliefs even when they are inaccurate, outdated, or inconsistent with objective evidence. Existing mitigation methods assume that memory-induced sycophancy originates from biased or incorrect memories and attempt to reduce this risk by filtering such memories at different stages of the memory pipeline. However, in the real world, objective and correct memories can still induce sycophancy, and the same memory can warrant different influence across different contexts. To this end, we propose MemAdapter, a novel framework that adaptively integrates retrieved memories to support objective and reliable reasoning. Specifically, MemAdapter consists of three components: (i) Counterfactual Induction, which leverages counterfactual reasoning to uncover the potential risk of retrieved memories; (ii) Context-Aware Reflection, which calibrates the inferential influence of each retrieved memory in light of the current task via self-reflection; and (iii) Evidence-Based Reasoning, which grounds the final response in appropriate evidence while preserving the legitimate influence of memory. Extensive experiments on three benchmarks demonstrate that MemAdapter consistently improves memory reliability across diverse scenarios. Our code is available at https://github.com/DEEP-JLU/MemAdapter.",
+      "published_date": "2026-10-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.05162",
+      "pdf_url": "https://arxiv.org/pdf/2610.05162",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.05162",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "Memadapter: 针对记忆诱导阿谀奉承的反事实适应",
+        "chinese_summary": "提出MemAdapter框架，通过反事实推理和上下文感知反思，支持客观可靠推理。",
+        "pain_point": "长期记忆可能导致阿谀奉承，即使记忆客观正确也会影响推理。",
+        "core_value": "通过自适应集成记忆，减少阿谀奉承风险，支持客观可靠推理。",
+        "technical_architecture": "采用反事实推理和上下文感知反思机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下验证，未来需进一步验证。",
+        "key_contributions": [
+          "提出MemAdapter框架",
+          "引入反事实推理机制",
+          "实现上下文感知反思"
+        ],
+        "application_scenarios": [
+          "多任务长期记忆管理",
+          "对话系统中的客观推理"
+        ],
+        "technical_highlights": [
+          "自适应记忆集成",
+          "反事实推理与上下文感知反思"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.04292",
+      "source": "huggingface",
+      "title": "LMBuild: Evaluating LLM Agents for Generating Buildable and Functional Structures",
+      "authors": [
+        "Jiateng Liu",
+        "Rushi Wang",
+        "Cheng Qian",
+        "Xuejun Zhang",
+        "Sun Li",
+        "Jiayu Liu",
+        "Yifan Shen",
+        "Xu Cao",
+        "Jiarui Yao",
+        "Bingxuan Li",
+        "Ruhi Sarikaya",
+        "Heng Ji"
+      ],
+      "abstract": "LLM-based agents are increasingly capable of generating complex 3D structures, with the potential to reshape how objects are designed and realized in the physical world. Yet, producing elegant geometry is fundamentally different from producing objects that can be built and perform their intended functions. Existing evaluations largely focus on geometric quality while overlooking physical realizability. We introduce LMBuild, a benchmark for evaluating LLM agents on generating buildable and functional structures. LMBuild represents generated objects as assembled structures comprising part decompositions, joints, materials, and sequences. To support reproducible evaluation, we provide a unified framework consisting of: (1) an interactive environment in which agents can use tools to retrieve, create, and place components to construct objects; (2) a curated benchmark that repurposes established CAD datasets and augments them with knowledge from Wikipedia; and (3) a evaluation framework covering structural soundness, functional affordance, design quality, and physical realization. Evaluations across 30 systems reveal several intriguing findings: (a) Soundness and alignment are no longer the primary bottlenecks for frontier closed-source models, while functional affordance and physical operability remain substantially more challenging; (b) stronger models more effectively create new components, whereas weaker models tend to rely on retrieval; and (c) providing functional specifications substantially improves part completeness, kinematics, and physical operability. These results show that generating real-world structures requires deeper reasoning about functional affordances, mechanics, and designing and creating novel components. We expect LMBuild to provide a foundation for measuring progress and incentivizing research toward agents that generate buildable and functional structures.",
+      "published_date": "2026-10-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.04292",
+      "pdf_url": "https://arxiv.org/pdf/2610.04292",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.04292",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "LMBuild：评估生成可构建和功能性的结构的LLM代理",
+        "chinese_summary": "LMBuild 是一个基准，用于评估 LLM 代理生成可构建和功能性结构的能力。",
+        "pain_point": "现有评估主要关注几何质量，忽视了物理可实现性。",
+        "core_value": "提供了一个综合框架，涵盖结构完整性、功能性和设计质量等多方面评估。",
+        "technical_architecture": "包含交互式环境、基准数据集和评估框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要扩展更多系统进行评估。",
+        "key_contributions": [
+          "引入了一个新的基准 LMBuild",
+          "提供了一个综合评估框架",
+          "涵盖了结构完整性、功能性、设计质量和物理实现"
+        ],
+        "application_scenarios": [
+          "建筑设计",
+          "产品设计"
+        ],
+        "technical_highlights": [
+          "使用交互式环境支持评估",
+          "基准数据集结合了 CAD 数据和维基百科知识"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.37267",
+      "source": "huggingface",
+      "title": "Foundations of Proactive Agents: Principles, Technical Layers, and Proactivity-Gym",
+      "authors": [
+        "Jio Oh",
+        "Seunghyun Do",
+        "Young-Jun Lee",
+        "Steven Euijong Whang",
+        "Dongyeop Kang"
+      ],
+      "abstract": "Proactive LLM agents can turn idle compute into useful support before users ask. Yet even correct work can misread user context, impose review costs, or undermine trust. This work proposes foundations for designing, realizing, and evaluating proactive LLM agents around three joint principles (3T): Task Capability, anticipating relevant needs and correctly performing useful work; Temporal Allocation, allocating compute according to resource availability and when results are needed; and Trust, sustaining users' confidence and appropriate reliance on the agent. We connect these objectives to a design space organized around five dimensions: task scope, anticipation horizon, activation trigger, processing timing, and intervention depth, and specify the situation and system modeling needed to support its choices, including user and environment representations, backbone LLMs, and agent harnesses. Lastly, we propose PROACTIVITY-GYM, a simulation-based evaluation testbed including multi-day scenarios, stateful environments, and persona-conditioned simulated users that can evaluate the consequences of proactive assistance across interactions. Evaluations across 23 model-harness configurations uncover substantial performance gaps across 3T and reveal that LLM judges often conflate task capability and trust. A human study with 30 participants demonstrates the importance of the joint 3T optimization: participants show sharp trust declines after intervention misalignment despite correct outcomes, and prefer sleep-time assistance, even when imperfect, to preserve ongoing focus. Together, these findings support designing and evaluating proactive agents through the joint consideration of useful work, compute allocation, and evolving user trust.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.37267",
+      "pdf_url": "https://arxiv.org/pdf/2609.37267",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.37267",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "主动型代理的基础：原则、技术层和主动性健身房",
+        "chinese_summary": "提出了一种基于3T原则设计、实现和评估主动型LLM代理的方法，并构建了PROACTIVITY-GYM评估平台。",
+        "pain_point": "主动型代理可能误解用户上下文、产生审查成本或损害信任。",
+        "core_value": "通过3T原则和PROACTIVITY-GYM平台，提升代理的主动性和可靠性。",
+        "technical_architecture": "基于五维设计空间和代理框架，实现代理的主动性。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于模拟用户，实际应用效果有待验证。",
+        "key_contributions": [
+          "提出了主动型代理的3T原则",
+          "设计了PROACTIVITY-GYM评估平台",
+          "构建了代理的五维设计空间"
+        ],
+        "application_scenarios": [
+          "智能助手",
+          "个性化推荐"
+        ],
+        "technical_highlights": [
+          "结合了任务能力和信任原则",
+          "支持多天场景和状态环境"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.05076",
+      "source": "huggingface",
+      "title": "Self-Generated Feedback Destabilizes Test-Time Training: A Causal Decomposition of Long-Horizon Adaptation",
+      "authors": [
+        "Cheng Luo",
+        "Bing Li",
+        "Bernard Ghanem"
+      ],
+      "abstract": "Test-time training (TTT) lets a model store information in its weights during inference. When the model learns from its own output, however, each update also changes the model that generates the next training example. Across 128K-token streams, retaining generated-text updates worsens prediction on independent human-written text with three TTT-E2E model configurations (labeled 125M, 760M, and 3B). The same failure occurs when Adam updates Qwen3-4B's existing weights. The same update mechanisms can improve on real text, so writing itself is not the failure. Three matched comparisons trace the causal pathway. Fixed Generation removes over 98% of the damage at 125M and 760M by using a frozen model to generate training chunks. Recorded Replay separates the loss caused by reading degraded text from the additional loss stored by updating on it. A paired one-update comparison then shows the local conflict: an update predicts its source better but new real text worse. This cost grows after Closed Loop adaptation, with a few trajectories accounting for most large failures. Finally, Settlement evaluates the candidate state on independent real text before commitment. It leaves mean endpoint gaps of 0.07 and -0.02 nats at 125M and 760M while retaining real-text adaptation. These results motivate checking prediction on independent evidence before retaining an update.",
+      "published_date": "2026-10-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.05076",
+      "pdf_url": "https://arxiv.org/pdf/2610.05076",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.05076",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 23,
+      "hot_score": 230,
+      "structured_summary": {
+        "chinese_title": "自我生成反馈导致测试时训练不稳定：长周期适应的因果分解",
+        "chinese_summary": "自我生成反馈在测试时训练中导致性能下降，固定生成和记录重放方法可以缓解这一问题。",
+        "pain_point": "模型在测试时训练时，自我生成的反馈导致预测性能下降。",
+        "core_value": "通过因果分析，提出了固定生成和记录重放方法来缓解自我生成反馈带来的负面影响。",
+        "technical_architecture": "使用固定生成和记录重放技术来控制模型生成的训练数据。",
+        "quantitative_results": "固定生成和记录重放方法在125M和760M模型中分别减少了超过98%的损害。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更复杂的长周期适应场景。",
+        "key_contributions": [
+          "提出了固定生成和记录重放方法来缓解自我生成反馈带来的负面影响",
+          "通过因果分析揭示了自我生成反馈导致性能下降的原因",
+          "展示了局部冲突导致性能下降的具体机制"
+        ],
+        "application_scenarios": [
+          "长周期适应场景下的模型训练",
+          "需要持续学习和适应的自然语言处理任务"
+        ],
+        "technical_highlights": [
+          "通过因果分析揭示了自我生成反馈的负面影响",
+          "提出了固定生成和记录重放方法来缓解问题"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.24890",
+      "source": "huggingface",
+      "title": "OSWorld-Pro: Process-based Evaluation for Computer Use Agents",
+      "authors": [
+        "Zhilin Wang",
+        "Shaokun Zhang",
+        "Yifan Zhang",
+        "Hao Zhang",
+        "Jin Xu",
+        "Binfeng Xu",
+        "Jian Hu",
+        "Yunheng Zou",
+        "Karan Sapra",
+        "Andrew Tao",
+        "Jan Kautz",
+        "Yi Dong"
+      ],
+      "abstract": "Evaluation of Computer-Use Agents (CUAs) is often limited to the final deliverables they create (at the end of hundreds of steps) and assessed with functional verifiers, as seen in OSWorld. However, such evaluation of end-state performance lacks transparency into how and why agents fail in various tasks, obfuscating critical insight for subsequent improvement. For instance, agents that err during keyboard inputs would require a different mitigation strategy from those that fail to precisely provide click-based inputs on the graphical UI. We introduce OSWorld-Pro: a set of over 300 tasks containing over 2800 subgoals to enable the procedural evaluation of CUAs grounded in over 67,000 human annotations. We use robust human-aligned LLM-Judges to evaluate the fulfillment of OSWorld-Pro subgoals and thereby reveal the progress that models make throughout a series of sequentially dependent subgoals. Our findings reveal that OSWorld-Pro is challenging even for state-of-the-art LLMs, with top performers like Claude Opus 5 achieving only 75.7% vs. 83.4% on OSWorld. Furthermore, we identify critical process-focused failure modes of various models (e.g. subgoal-irrelevant actions and click-based mistakes) to provide insights to improve performance and efficiency of CUAs.",
+      "published_date": "2026-09-21T16:55:24.000Z",
+      "url": "https://arxiv.org/abs/2609.24890",
+      "pdf_url": "https://arxiv.org/pdf/2609.24890",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.24890",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "OSWorld-Pro: 基于过程的计算机使用代理评估",
+        "chinese_summary": "提出OSWorld-Pro，通过300多项任务和2800多个子目标进行过程评估，揭示模型在一系列依赖子目标中的进展。",
+        "pain_point": "现有评估方法缺乏对代理在任务中失败原因的透明度。",
+        "core_value": "提供详细的子目标评估，帮助理解模型在复杂任务中的表现。",
+        "technical_architecture": "使用超过67,000个人类注释的300多项任务和2800多个子目标进行评估。",
+        "quantitative_results": "OSWorld-Pro对最先进的LLM构成挑战，Claude Opus 5仅达到75.7%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于人类注释，可能存在主观性。",
+        "key_contributions": [
+          "提出OSWorld-Pro进行过程评估",
+          "揭示模型在复杂任务中的表现",
+          "提供详细的子目标评估"
+        ],
+        "application_scenarios": [
+          "评估计算机使用代理",
+          "改进代理性能"
+        ],
+        "technical_highlights": [
+          "使用大量人类注释",
+          "详细的过程评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.39490",
+      "source": "huggingface",
+      "title": "OmniReasoning: Pushing the Limits of Audio-Visual Joint Reasoning",
+      "authors": [
+        "Junming Lin",
+        "Yuxuan Wang",
+        "Zhenxin Lei",
+        "Yuxin Liu",
+        "Ruixun Liu",
+        "Yinsong Yan",
+        "Ling Wang",
+        "Minghao Han",
+        "Yunfei Chu",
+        "Shun Lei",
+        "Xueyao Zhang",
+        "Qize Yang",
+        "Jin Xu",
+        "Yiwu Zhong"
+      ],
+      "abstract": "Recent advances have enabled unified omni-modal models in understanding audio, vision, and language. However, existing benchmarks, training data, and learning methods largely treat the modalities independently, leaving the capability of audio-visual joint reasoning poorly evaluated and insufficiently elicited. We address this gap with a benchmark, data engine, and learning method. First, we introduce OmniReasoningBench, a benchmark where both audio and visual evidence are indispensable. It comprises 1,150 multiple-choice and open-ended questions across two tasks, reasoning over video and reasoning beyond video. Second, we develop a data engine OmniQA. It automatically constructs evidence-grounded QA pairs that explicitly necessitate audio-visual joint reasoning, together with time-stamped clue chains that guide the annotation of thinking process. Besides our benchmark, this engine produces training data OmniReasoning-SFT-112K and OmniReasoning-RL-19K. Finally, we propose an on-policy self-distillation method Modality-Factored Self-Distillation (MFSD). It evaluates each sampled response under modality-specific clue contexts, disentangling the contributions of individual clues and their cross-modal interactions for token-level credit assignment. With our training data and learning method, our model OmniReasoning-30B-A3B achieves 50.0% on OmniVideoBench and 42.5% on OmniReasoningBench, improving the base model Qwen3-Omni-30B-A3B-Thinking by 12.8 and 9.3 percentage points, respectively. Moreover, it delivers substantial gains on general and long-video benchmarks, including Video-MME-v2. We hope our work offers a solid step for facilitating future research in omni-modal joint reasoning.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.39490",
+      "pdf_url": "https://arxiv.org/pdf/2609.39490",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.39490",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "OmniReasoning: 推动视听联合推理的极限",
+        "chinese_summary": "提出OmniReasoning基准、数据引擎和学习方法，显著提升视听联合推理能力。",
+        "pain_point": "现有视听联合推理能力不足，主要由于模态处理独立。",
+        "core_value": "通过新基准、数据引擎和学习方法，显著提升视听联合推理能力。",
+        "technical_architecture": "提出OmniReasoningBench和OmniQA数据引擎，以及Modality-Factored Self-Distillation方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步扩展数据集和应用场景。",
+        "key_contributions": [
+          "提出新的视听联合推理基准",
+          "开发数据引擎生成高质量训练数据",
+          "提出新型学习方法"
+        ],
+        "application_scenarios": [
+          "视频理解",
+          "跨视频推理"
+        ],
+        "technical_highlights": [
+          "自动构建视听证据支撑的问答对",
+          "明确要求视听联合推理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.06577",
+      "source": "huggingface",
+      "title": "Optimizing the Optimizer: Language Models Discover Faster Molecular Relaxation",
+      "authors": [
+        "Artem Tsypin",
+        "Vladimir Deshchenya",
+        "Kuzma Khrabrov",
+        "Denis Potapov",
+        "Maxim Radchenko",
+        "Artur Kadurin",
+        "Michael G. Medvedev"
+      ],
+      "abstract": "Geometry optimization is a major cost in many quantum-chemical workflows: each optimization step requires one force evaluation, and at the density-functional level that evaluation dominates the wall time. Research in this area has produced a broad range of optimization methods, and we ask whether a language model can improve on the best of them through autoresearch. An agent rewrites the optimizer itself to minimize force-call counts, restrained by two admission gates that reject premature stopping and improvements that do not generalize to unseen molecules. Starting from Sella, the fastest open-source optimizer available, the search produces AutoSella, a family of two optimizers. Both of them deliver consistent force-call reductions relative to Sella across held-out molecular benchmarks and potentials not used during the search. Most notably, at the r2SCAN-3c DFT level, the best variant requires only 40.2--77.2% of Sella's force calls while achieving the same energy reduction, even though agent used no DFT gradients.",
+      "published_date": "2026-10-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.06577",
+      "pdf_url": "https://arxiv.org/pdf/2610.06577",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.06577",
+      "category": "other",
+      "tags": [
+        "physics.chem-ph"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "优化优化器：语言模型发现更快的分子弛豫",
+        "chinese_summary": "通过语言模型自动生成的优化器减少了分子弛豫中的力计算次数。",
+        "pain_point": "分子弛豫过程中力评估的高成本。",
+        "core_value": "自动生成的优化器在保持性能的同时显著减少了力计算次数。",
+        "technical_architecture": "基于语言模型的自动生成优化器方法。",
+        "quantitative_results": "在r2SCAN-3c DFT水平上，最优变体仅需Sella的40.2%-77.2%的力计算次数。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定分子和潜在能上进行了测试。",
+        "key_contributions": [
+          "提出了一种使用语言模型自动生成优化器的方法",
+          "生成的优化器在多个分子基准测试中表现出显著的性能提升"
+        ],
+        "application_scenarios": [
+          "量子化学工作流程中的分子弛豫优化",
+          "加速分子动力学模拟"
+        ],
+        "technical_highlights": [
+          "无需使用DFT梯度即可生成优化器",
+          "生成的优化器在多个未使用过的分子上保持了良好的性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

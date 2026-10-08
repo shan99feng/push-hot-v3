@@ -1,0 +1,524 @@
+{
+  "date": "2026-10-07",
+  "generated_at": "2026-10-08T02:35:14.032367+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.08448",
+      "source": "huggingface",
+      "title": "Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability",
+      "authors": [
+        "Bingxi Hou",
+        "Guochao Jiang",
+        "Guofeng Quan",
+        "Weiqing Li",
+        "Wenfeng Feng",
+        "Guohua Liu",
+        "Yuewei Zhang"
+      ],
+      "abstract": "On-Policy Distillation (OPD) trains a student on its own generations using teacher feedback. With different tokenizers, comparing teacher and student predictions requires alignment at both sequence and vocabulary levels. In this paper, we examine whether expanding this alignment coverage improves learning. Across three heterogeneous teacher--student pairs on mathematical reasoning and code generation, strict 1:1 groups already cover most student-generated tokens despite substantial vocabulary mismatch. On responses sampled from the students before distillation, the shared vocabulary retains nearly all teacher and student probability mass at strictly aligned positions on average. Restricting reverse KL to a student-selected top-16 subset of the shared vocabulary at each strict position achieves accuracy comparable to full shared-vocabulary OPD, outperforming the evaluated cross-tokenizer baselines. Adding mean squared error supervision on span log-probabilities in mismatch groups gives complete supervision coverage, yet reduces accuracy. At checkpoints from training with only the strict loss, the span gradients show weak or negative directional agreement with the strict gradients and grow in magnitude relative to them. These diagnostics may help explain the accuracy drop from adding span supervision. Our findings motivate a shift from maximizing alignment coverage to prioritizing supervision reliability: compact supervision at strict positions can be more effective than broader coverage that introduces weakly aligned or conflicting training signals.",
+      "published_date": "2026-10-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.08448",
+      "pdf_url": "https://arxiv.org/pdf/2610.08448",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.08448",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 156,
+      "hot_score": 1560,
+      "structured_summary": {
+        "chinese_title": "重思跨分词器在线策略蒸馏：从对齐覆盖率到监督可靠性",
+        "chinese_summary": "通过限制逆KL散度到共享词汇的子集，提高了在线策略蒸馏的准确性。",
+        "pain_point": "不同分词器导致的教师和学生预测对齐问题。",
+        "core_value": "通过限制逆KL散度到共享词汇的子集，提高了在线策略蒸馏的准确性。",
+        "technical_architecture": "使用限制逆KL散度的共享词汇子集进行在线策略蒸馏。",
+        "quantitative_results": "在数学推理和代码生成任务上，限制逆KL散度的准确性与全共享词汇的在线策略蒸馏相当。",
+        "competitors": "暂无对比信息",
+        "limitations": "在只有严格损失的训练检查点中，跨度梯度与严格梯度的方向一致性较弱。",
+        "key_contributions": [
+          "提出通过限制逆KL散度到共享词汇的子集来提高在线策略蒸馏的准确性",
+          "展示了在数学推理和代码生成任务上的有效性"
+        ],
+        "application_scenarios": [
+          "数学推理任务",
+          "代码生成任务"
+        ],
+        "technical_highlights": [
+          "通过限制逆KL散度到共享词汇的子集提高了准确性",
+          "展示了在不同任务上的有效性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.07767",
+      "source": "huggingface",
+      "title": "TRACE: Rollout-Guided Quantization-Aware Training for FP4 Reinforcement Learning of MoE Language Models",
+      "authors": [
+        "Xin Wang",
+        "Hao Yu",
+        "Zhengyang Zhuge",
+        "Bochao Mao",
+        "Zheng Li",
+        "Junda Feng",
+        "Yuyan Luo",
+        "Yi Zhang",
+        "Yizhong Cao",
+        "Mi Zhang",
+        "Dayiheng Liu",
+        "Jianwei Zhang"
+      ],
+      "abstract": "Reinforcement learning (RL) for post-training large language models (LLMs) incurs substantial computation and memory overhead during rollout generation, which motivates low-precision rollout for efficient RL training. However, existing FP4 RL methods suffer from a key limitation: they primarily optimize quantization accuracy on the training and rollout paths independently rather than directly reducing the discrepancy between the two quantized execution paths. In this work, we propose TRACE (Train-Rollout Quantization Alignment via Compact GuidancE), an FP4 quantization framework for RL training of Mixture-of-Experts (MoE) language models that addresses the limitation of existing FP4 RL methods. TRACE incorporates rollout-guided quantization-aware training that uses rollout-side quantization outcomes to guide training-side FP4 rounding decisions, directly reducing train-rollout discrepancy. Moreover, TRACE adopts an efficient quantization-information caching scheme that selectively retains mantissa and scale information from deeper layers to reduce the storage and communication overhead introduced by rollout guidance. We evaluate TRACE on four large-scale MoE language models across reasoning, coding, and long-horizon RL tasks. Our results demonstrate that TRACE enables joint FP4 weight/activation and FP4 KV-cache rollout with RL performance comparable to BF16 rollout, while achieving up to 5.4xrollout speedup and strong final FP4 performance compared with post-hoc FP4 quantization of BF16-trained policies.",
+      "published_date": "2026-10-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.07767",
+      "pdf_url": "https://arxiv.org/pdf/2610.07767",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.07767",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 75,
+      "hot_score": 750,
+      "structured_summary": {
+        "chinese_title": "TRACE: 基于回放引导的FP4量化感知训练框架用于MoE语言模型的强化学习",
+        "chinese_summary": "TRACE通过回放引导的量化感知训练直接减少训练与回放路径之间的差异。",
+        "pain_point": "现有FP4 RL方法独立优化训练和回放路径的量化精度，导致两者之间存在较大差异。",
+        "core_value": "TRACE通过回放路径的量化结果指导训练路径的FP4舍入决策，直接减少训练与回放路径的差异。",
+        "technical_architecture": "采用高效的量化信息缓存方案，选择性保留深层层的尾数和比例信息。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更广泛的模型和任务。",
+        "key_contributions": [
+          "提出TRACE框架，解决FP4 RL方法中的训练与回放路径差异问题。",
+          "采用回放引导的量化感知训练方法，直接减少训练与回放路径的差异。",
+          "设计高效的量化信息缓存方案，减少存储和通信开销"
+        ],
+        "application_scenarios": [
+          "适用于大规模MoE语言模型的强化学习训练。",
+          "适用于需要高效计算和低内存消耗的场景"
+        ],
+        "technical_highlights": [
+          "回放引导的量化感知训练方法。",
+          "高效的量化信息缓存方案"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.03543",
+      "source": "huggingface",
+      "title": "DuoMatching: Joint-Marginal Distribution Matching for Few-Step Video Generation",
+      "authors": [
+        "Jiahao Zhan",
+        "Yan Wang",
+        "Yongrui Ma",
+        "Qunliang Xing",
+        "Ruchang Yao",
+        "Runtao Liu",
+        "Shijie Zhao",
+        "Tianfan Xue"
+      ],
+      "abstract": "Streaming video generation has benefited from distribution matching distillation (DMD), which matches the joint distribution of video frames to a video teacher's approximation of the real video distribution. Although this joint matching mitigates drift during autoregressive rollouts, limitations remain in visual quality and semantic alignment. To address these limitations, we propose DuoMatching, a distribution matching framework that approximates the real video distribution through a unified joint-marginal formulation. On top of existing joint matching formulations, the additional marginal matching objective provides dedicated frame-level supervision from an image generator, transferring complementary visual and semantic priors from it. To apply this frame-level supervision in video generation, we introduce LatentBridge to resolve the latent representation mismatch between the video student and the image teacher. Latent Variation Sampling further distributes such frame-level supervision across distinct temporal segments, reducing redundancy. Experiments demonstrate that DuoMatching improves visual quality, composition, and semantic alignment while largely preserving motion dynamics. Human evaluations show overall preference rates above 80% against all evaluated baselines. The project page is available at https://johnzhan2023.github.io/DuoMatching/.",
+      "published_date": "2026-10-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.03543",
+      "pdf_url": "https://arxiv.org/pdf/2610.03543",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.03543",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 71,
+      "hot_score": 710,
+      "structured_summary": {
+        "chinese_title": "DuoMatching: 联合边缘分布匹配的少步视频生成",
+        "chinese_summary": "DuoMatching 提供了帧级监督，提高了视觉质量、构图和语义对齐。",
+        "pain_point": "现有方法在视觉质量和语义对齐方面存在局限。",
+        "core_value": "通过联合边缘分布匹配，DuoMatching 提升了视频生成的质量。",
+        "technical_architecture": "引入了 LatentBridge 和 Latent Variation Sampling 来解决帧级监督问题。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更广泛的视频生成应用。",
+        "key_contributions": [
+          "提出了联合边缘分布匹配框架 DuoMatching",
+          "引入了 LatentBridge 和 Latent Variation Sampling",
+          "提升了视频生成的视觉质量、构图和语义对齐"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "视频编辑"
+        ],
+        "technical_highlights": [
+          "联合边缘分布匹配提高了帧级监督的有效性",
+          "LatentBridge 和 Latent Variation Sampling 解决了视频生成中的关键问题"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.05030",
+      "source": "huggingface",
+      "title": "EVISKILL: Grounding Skill Evolution in Replayable Evidence",
+      "authors": [
+        "Yan Zhou",
+        "Yili Wang",
+        "Yiwei Dai",
+        "Qinggang Zhang",
+        "Xin Wang"
+      ],
+      "abstract": "Continual skill evolution enables LLM agents to accumulate and refine reusable procedural knowledge from interaction experience without updating model parameters. Its effectiveness depends on determining not only what to change, but also why a change is justified and when it should become persistent guidance. However, existing experience-driven methods can lose the behavioral evidence and task contexts supporting edits. Moreover, a global validation outcome provides an incomplete judgment of its constituent changes: locally supported corrections may be discarded with a rejected revision, while evidence may require further experience to inform useful updates. To this end, we introduce EVISKILL, an evidence-driven framework that organizes execution observations into Replayable Evidence Cards and synthesizes edits with explicit links to their supporting contexts. Targeted replay verifies these edits through re-execution and provides feedback for correction. Across epochs, EVISKILL preserves evidence and provisionally retains supported edits for further refinement, while global validation governs their incorporation into the final skill. Experiments on three interactive benchmarks across six LLM backbones demonstrate the effectiveness of this approach.",
+      "published_date": "2026-10-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.05030",
+      "pdf_url": "https://arxiv.org/pdf/2610.05030",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.05030",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": {
+        "chinese_title": "EVISKILL: 回放证据中的技能演变接地",
+        "chinese_summary": "EVISKILL 提供了一种新的框架，通过回放证据卡片和明确链接的支持上下文来合成编辑，从而有效验证和保留技能演变。",
+        "pain_point": "现有方法会丢失行为证据和任务上下文，导致局部支持的修正可能被拒绝，证据可能需要更多经验来提供有用更新。",
+        "core_value": "通过回放证据卡片和明确链接的支持上下文，EVISKILL 能够有效验证和保留技能演变，提供更完整的判断。",
+        "technical_architecture": "EVISKILL 通过回放证据卡片和明确链接的支持上下文来组织执行观察，并通过目标回放验证编辑。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索如何更有效地整合保留的编辑。",
+        "key_contributions": [
+          "引入了回放证据卡片和明确链接的支持上下文来合成编辑",
+          "通过目标回放验证编辑并提供反馈",
+          "保留并进一步精炼支持的编辑"
+        ],
+        "application_scenarios": [
+          "交互式技能学习",
+          "持续技能进化"
+        ],
+        "technical_highlights": [
+          "提供了一种新的框架来组织执行观察",
+          "通过回放验证编辑并提供反馈"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.07753",
+      "source": "huggingface",
+      "title": "From Evidence to Action: How Tool-Using Agents Fail",
+      "authors": [
+        "Hongzhan Lin",
+        "Shidong Cao",
+        "Ziyang Luo",
+        "Wenhao Chai",
+        "Mong-Li Lee",
+        "Wynne Hsu"
+      ],
+      "abstract": "Tool-using agents make consequential changes to external state, yet correct outcomes do not guarantee that their actions were supported by evidence established beforehand. We study where this evidence-to-action chain breaks as agents move from deciding whether to act to executing single actions and dependent workflows. Across ten model-harness configurations, strong static action assessment can coexist with much weaker interactive execution. Failures often begin before execution: agents stop with incomplete investigation or act before required evidence is established. Once required evidence is obtained, single-action execution is usually reliable, while multi-action workflows additionally expose unresolved prerequisites and incomplete execution. For this analysis, we introduce SafeActBench, comprising 656 cases across six operational domains and five protocols that progress from static action judgment and investigated non-action to single- and multi-action workflows. A provenance-bound Evidence Ledger and deterministic trajectory evaluator track what information was established, when actions occurred, and whether downstream dependencies were satisfied. These results show that failures arise not only from missing information, but also from how agents use established evidence when deciding and executing actions.",
+      "published_date": "2026-10-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.07753",
+      "pdf_url": "https://arxiv.org/pdf/2610.07753",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.07753",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "从证据到行动：工具使用代理失败的原因",
+        "chinese_summary": "研究工具使用代理在从决策到执行过程中证据链断裂的原因。",
+        "pain_point": "代理在执行决策时缺乏充分的证据支持。",
+        "core_value": "提出SafeActBench，揭示单行动与多行动工作流中的证据不足问题。",
+        "technical_architecture": "引入证据日志和确定性轨迹评估器跟踪信息建立和执行情况。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定模型配置下进行研究。",
+        "key_contributions": [
+          "提出SafeActBench基准",
+          "揭示证据链断裂点",
+          "区分单行动与多行动工作流中的问题"
+        ],
+        "application_scenarios": [
+          "智能代理决策",
+          "自动化工作流管理"
+        ],
+        "technical_highlights": [
+          "证据日志与轨迹评估",
+          "多领域多协议覆盖"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.05140",
+      "source": "huggingface",
+      "title": "AutoSciBench: Autonomous Benchmark Generation for Evaluating Scientific Agents",
+      "authors": [
+        "Dongki Kim",
+        "Namkyeong Lee",
+        "Surag Nair",
+        "Carl Edwards",
+        "Xiner Li",
+        "Edward De Brouwer",
+        "Jenna Lynn Collier",
+        "Sung Ju Hwang",
+        "Gabriele Scalia",
+        "Ehsan Hajiramezanali"
+      ],
+      "abstract": "As agents rapidly evolve, existing benchmarks can become saturated, limiting their ability to distinguish capabilities and reveal remaining failure modes. Particularly in scientific domains, constructing and updating benchmarks requires substantial time, labor, and domain expertise, making it difficult to keep evaluation aligned with advances in agent capabilities. We address this challenge by investigating whether scientific-agent benchmarks can be automatically generated and iteratively adapted as agent capabilities evolve. We introduce AutoSciBench, a framework that represents each task as a high-level concept specifying the scientific domain, data modality, and required reasoning approach, together with a low-level recipe specifying how the question, environment, and ground-truth answer are constructed and verified. Agents attempt to solve each task, producing solver trajectories and corresponding judge feedback which AutoSciBench uses to revise the recipe or concept, closing observed shortcuts and shifting tasks toward raw-data re-examination, interpretation of intermediate results, and evidence integration. Experience distilled from completed refinement trajectories further guides new concept generation, allowing lessons from earlier task refinement to inform subsequent benchmark construction. Starting from existing benchmarks, we evaluate AutoSciBench across computational biology, materials science, and clinical imaging. Generated benchmarks reduce average solver accuracy by 22.4 and 25.5 percentage points relative to the human-curated benchmarks in computational biology and materials science, respectively, while generated tasks receive higher average quality ratings across all three domains, suggesting that scientific-agent evaluation can adapt as agent capabilities advance.",
+      "published_date": "2026-10-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.05140",
+      "pdf_url": "https://arxiv.org/pdf/2610.05140",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.05140",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "AutoSciBench：评估科学代理的自主基准生成",
+        "chinese_summary": "通过自动生成和迭代适应基准，提高科学代理评估的灵活性和准确性。",
+        "pain_point": "现有基准难以跟上代理能力的快速变化，特别是在科学领域。",
+        "core_value": "提供了一种自动生成和迭代适应科学代理基准的方法，提高评估效率。",
+        "technical_architecture": "提出了一种框架，将任务表示为高层概念和低层食谱。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证其在不同科学领域的广泛适用性。",
+        "key_contributions": [
+          "提出了自动生成和迭代适应科学代理基准的方法",
+          "通过闭环反馈机制优化基准",
+          "提高了科学代理评估的灵活性和准确性"
+        ],
+        "application_scenarios": [
+          "科学领域的代理评估",
+          "需要持续更新的代理基准生成"
+        ],
+        "technical_highlights": [
+          "使用高层概念和低层食谱表示任务",
+          "通过闭环反馈机制优化基准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.37334",
+      "source": "huggingface",
+      "title": "Taming VLAs under Robot Execution Errors: Self-Compensation and Stress Testing",
+      "authors": [
+        "Sohyun Lee",
+        "Yoonjae Baek",
+        "Jaesang Won",
+        "Jinnyeong Kim",
+        "Kang Hyunwoo",
+        "Seung-Hwan Baek",
+        "Ivan Laptev",
+        "Suha Kwak"
+      ],
+      "abstract": "Vision-language-action (VLA) policies often fail when a robot's executed motion deviates from their commanded action. Such execution errors arise from the robot's mechanics and operating conditions, such as wear and payload changes. We propose self-compensating VLA, a deployment-time adaptation method that enables a VLA policy to pre-compensate for the robot's execution errors when generating commands. Without task rewards or labels, it updates the policy online using the residual between the action commanded by a VLA and the motion executed by the robot. To stress-test VLA robustness across execution conditions that are impractical to cover with physical robots alone, we introduce RoboStress, a controlled simulation benchmark. It combines established joint-level models of friction, backlash, compliance, and gravity-compensation error into seven deployment scenarios whose execution errors depend on the robot's state and motion history. On RoboStress, self-compensating VLA achieves higher average task success than both the base policies and methods that build in robustness during training. On two physical robot arms with different usage histories, it raises the average task success rate by more than 30 percentage points on each arm, and the gains extend to objects not seen in the task demonstrations.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.37334",
+      "pdf_url": "https://arxiv.org/pdf/2609.37334",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.37334",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "在机器人执行错误下驯服VLAs：自我补偿与压力测试",
+        "chinese_summary": "提出了一种自我补偿的VLAs方法，使机器人在执行动作时能够预补偿执行错误，提高了任务成功率。",
+        "pain_point": "机器人执行动作与命令动作不一致导致的执行错误。",
+        "core_value": "无需任务奖励或标签，通过在线更新策略来补偿执行错误，提高任务成功率。",
+        "technical_architecture": "基于残差更新策略的自我补偿方法和RoboStress仿真基准。",
+        "quantitative_results": "在RoboStress上，自我补偿的VLAs比基线方法和训练中增强鲁棒性的方法成功率更高。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在仿真环境中测试，实际应用中可能面临更多挑战。",
+        "key_contributions": [
+          "提出了一种无需任务奖励或标签的自我补偿方法",
+          "开发了RoboStress仿真基准来测试VLAs的鲁棒性"
+        ],
+        "application_scenarios": [
+          "机器人执行任务",
+          "自动化生产线"
+        ],
+        "technical_highlights": [
+          "基于残差的在线更新策略",
+          "结合多种关节级模型的RoboStress仿真基准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.05966",
+      "source": "huggingface",
+      "title": "HuatuoGPT-3: RL-Only Domain Adaptation from Base Models",
+      "authors": [
+        "Junying Chen",
+        "Xinyuan Xie",
+        "Ziniu Li",
+        "Wenyuan Gu",
+        "Jianquan Li",
+        "Xiang Wan",
+        "Guangjun Yu",
+        "Ruoyu Sun",
+        "Haizhou Li",
+        "Benyou Wang"
+      ],
+      "abstract": "Domain adaptation aims to turn a general-purpose large language model (LLM) into an expert for a target domain. While the dominant SFT+RL pipeline offers a convenient cold start, it may reduce exploration diversity and introduces additional complexity through multi-stage optimization. These limitations motivate RL-only adaptation. However, pure on-policy RL suffers from a cold-start problem, while mixed-policy RL still falls short: informative tokens in teacher outputs are learned too slowly in early training, and stale teacher outputs can hinder later improvement. We identify these two failure modes as Gradient Starvation and Teacher-Distribution Anchoring. To address them, we propose One-stage Policy Optimization (OnePO), which treats teacher outputs as transient guidance for policy improvement. OnePO combines Adaptive Objective Evolution to strengthen learning on informative low-probability teacher tokens and Teacher Retirement to discard teacher outputs once the current policy can surpass them. On medical adaptation, OnePO achieves 67.2 on HealthBench (Total) with only 20K training samples, outperforming SFT+RL and pure RL by 2.7 and 7.4 points, respectively. We further scale OnePO to produce HuatuoGPT-3, an open-source medical LLM series whose 27B variant reaches 70.1 on HealthBench (Total) and 71.4 on HealthBench Professional, surpassing frontier models such as GPT-6 Astra. Models and code are available at https://github.com/FreedomIntelligence/HuatuoGPT-3.",
+      "published_date": "2026-10-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.05966",
+      "pdf_url": "https://arxiv.org/pdf/2610.05966",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.05966",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "HuatuoGPT-3: 仅基于RL的领域适应",
+        "chinese_summary": "提出OnePO方法，通过结合自适应目标进化和教师淘汰，实现高效的领域适应。",
+        "pain_point": "纯策略RL方法存在冷启动问题，混合策略RL方法早期训练中难以学习到有信息的token。",
+        "core_value": "提出OnePO方法，显著提升领域适应效果，优于SFT+RL和纯RL方法。",
+        "technical_architecture": "结合自适应目标进化和教师淘汰策略，实现高效的领域适应。",
+        "quantitative_results": "在医疗领域适应中，OnePO方法仅需20K训练样本，达到67.2的HealthBench（Total）分数。",
+        "competitors": "对比SFT+RL和纯RL方法。",
+        "limitations": "未来可以探索更多领域适应场景。",
+        "key_contributions": [
+          "提出OnePO方法",
+          "结合自适应目标进化和教师淘汰策略",
+          "显著提升领域适应效果"
+        ],
+        "application_scenarios": [
+          "医疗领域",
+          "其他专业领域"
+        ],
+        "technical_highlights": [
+          "自适应目标进化",
+          "教师淘汰策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.05912",
+      "source": "huggingface",
+      "title": "MiniCorp: The Last Mile of the AI Agent Firm",
+      "authors": [
+        "Jingying Zeng",
+        "Zhenwei Dai",
+        "Jinning Li",
+        "Changho Shin",
+        "Dylan Zhang",
+        "Yuxuan Lu",
+        "Qi He",
+        "Dakuo Wang",
+        "Kai-Wei Chang"
+      ],
+      "abstract": "The last mile toward enterprise AGI is a company that runs itself. Training and adapting such agents require longitudinal enterprise data, which remain scarce, costly to acquire, and often restricted by privacy constraints. Historical archives are also frequently incomplete and record only what actually happened. They cannot show the outcomes of alternative decisions. We introduce MiniCorp, an office simulator for studying how agents can collectively run a company while generating enterprise data at scale. Using an e-commerce company as a demonstration, MiniCorp connects two interacting worlds. The external world models customers, dynamic competitors, and market mechanisms. The internal world consists of agents that observe events, discuss their options, and make strategic decisions. These decisions have lasting effects on the market, and the resulting feedback informs the firm's later decisions. As the firm and market interact, MiniCorp continuously records the agents' communications and decisions. These records preserve the information available at the time and the business results that followed. Checkpointing allows the same situation to be replayed under different decisions, providing comparisons unavailable in static archives. We evaluate end-to-end fidelity against patterns reported in empirical studies of real markets. These evaluations provide agents with realistic market feedback and reduce the risk that they learn to exploit flaws in the simulator. Our experiments show agents coordinating across roles and adapting their decisions to market feedback. With explicit long-term strategic guidance, they also sustain advertising exploration despite weak early returns. MiniCorp thus provides an environment for studying AI-run companies and a scalable source of longitudinal and counterfactual enterprise data for agent training and evaluation.",
+      "published_date": "2026-10-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.05912",
+      "pdf_url": "https://arxiv.org/pdf/2610.05912",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.05912",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "MiniCorp：企业AGI的最后一公里",
+        "chinese_summary": "MiniCorp 是一个办公模拟器，用于研究如何让代理共同运行公司并生成大量企业数据。",
+        "pain_point": "缺乏纵向企业数据，导致难以训练和适应自主运行的AI代理。",
+        "core_value": "提供了一个生成大规模企业数据的平台，有助于研究自主运行公司的机制。",
+        "technical_architecture": "连接外部世界和内部世界，模拟市场机制和代理决策过程。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何处理隐私约束下的数据。",
+        "key_contributions": [
+          "提供了一个研究自主运行公司的平台",
+          "生成大规模企业数据以供研究",
+          "模拟市场机制和代理决策过程"
+        ],
+        "application_scenarios": [
+          "研究自主运行公司的机制",
+          "生成大规模企业数据以供研究"
+        ],
+        "technical_highlights": [
+          "连接外部和内部世界",
+          "模拟市场机制和代理决策"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.07043",
+      "source": "huggingface",
+      "title": "TRIAGE: Direction-Aware Mismatch Stabilization of Native NVFP4 Reinforcement Learning",
+      "authors": [
+        "Zhen Li",
+        "Shuai Zhang",
+        "Yanggan Gu",
+        "Yiming Zhang",
+        "Yang Yu",
+        "Mingfa Feng",
+        "Congkai Xie",
+        "Shuang Yu",
+        "Junjie Lai",
+        "Hongxia Yang"
+      ],
+      "abstract": "Low-precision execution can substantially accelerate reinforcement learning (RL) for large language models, but discrepancies between learner and sampler execution can destabilize policy optimization. In this paper, we characterize the interaction between mismatch and the policy-gradient direction, distinguishing locally amplifying from contracting update contributions that mismatch magnitude alone cannot identify. In native NVFP4 runs, we observe an early imbalance between the two amplifying regions, favoring negative-advantage, negative-gap updates. Their tail tokens become concentrated in a small fraction of response segments before mismatch spreads globally. Motivated by these findings, we introduce TRIAGE, a direction-aware stabilization method that uses segment-level diagnosis to selectively rebalance policy-gradient updates and applies bounded repair to residual severe mismatch. TRIAGE modifies the optimization objective while retaining native NVFP4 weight-and activation 4-bit (W4A4) forward execution on both the sampler and learner. Experiments on Qwen3-4B and Qwen3-30B-A3B show stable optimization throughout the evaluated training horizon and achieve full precision level performance across five mathematical reasoning benchmarks, while native NVFP4 with TRIAGE provides up to 2.3x higher rollout throughput than BF16.",
+      "published_date": "2026-10-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.07043",
+      "pdf_url": "https://arxiv.org/pdf/2610.07043",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.07043",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": {
+        "chinese_title": "TRIAGE: 考虑方向的原生NVFP4不匹配稳定化方法",
+        "chinese_summary": "TRIAGE通过方向感知的稳定化方法实现低精度执行下的RL优化。",
+        "pain_point": "低精度执行导致的不匹配问题影响了政策优化的稳定性。",
+        "core_value": "TRIAGE通过方向感知诊断和修正不匹配问题，实现了稳定优化。",
+        "technical_architecture": "TRIAGE使用段级诊断和有界修正来稳定政策梯度更新。",
+        "quantitative_results": "在Qwen3-4B和Qwen3-30B-A3B上实现了全程稳定的优化。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定模型上进行了验证。",
+        "key_contributions": [
+          "引入了方向感知的稳定化方法",
+          "提出了基于段级诊断的修正策略"
+        ],
+        "application_scenarios": [
+          "大规模语言模型的强化学习",
+          "低精度执行下的优化"
+        ],
+        "technical_highlights": [
+          "方向感知的诊断与修正",
+          "保留原生NVFP4的前向执行"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,666 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-10T02:10:33.171549+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.12374",
+      "source": "huggingface",
+      "title": "AgentGarten: Code Worlds for Evolving Agents",
+      "authors": [
+        "Jiawei Chi",
+        "Shangchen Miao",
+        "Zhiyuan Shi",
+        "Kailu Wu",
+        "Hanyang Wang",
+        "Weiliang Chen",
+        "Qiyu Dai",
+        "Jinshan Ren",
+        "Jun Gao",
+        "Mingsheng Long",
+        "Yueqi Duan",
+        "Jiangran Lyu",
+        "Jialong Wu",
+        "Fangfu Liu"
+      ],
+      "abstract": "Interactive virtual worlds allow agents to learn through exploration and interaction. What agents can learn is bounded by the environments they practice in, which must be faithful, with consistent state, rules, and dynamics, and realistic, with observations that follow the real-world visual distributions. Achieving both across diverse worlds remains a bottleneck. We introduce AgentGarten, a framework that couples simulators and game engines with a shared neural renderer to build real-time interactive environments. Its simulation backends maintain persistent world state and execute program-defined interaction rules, while the renderer generates visual observations from structured conditions exported through a common interface. To build the neural renderer, we adapt a pretrained video model to geometry conditions, distill it with our proposed Adversarial Forcing, and optimize inference for real-time interaction. Adversarial Forcing makes history prefilling differentiable through exact replay, so that losses on later predictions update how the renderer encodes prior observations, and adds real-data adversarial supervision to improve its visual quality. In AgentGarten, agents perceive the world through visual observations, interact with it in real time, and improve by distilling each round of experience into playbooks that subsequent agents inherit and refine. Our empirical study demonstrates a substantial gain in learning efficiency, with agents learning from just 4 rounds compared with millions for a conventional reinforcement learning counterpart. As new worlds can be written as code and rendered through the same interface, environments can scale in both number and difficulty alongside their agents, a step toward agents that keep evolving through interactive experience.",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.12374",
+      "pdf_url": "https://arxiv.org/pdf/2610.12374",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.12374",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 132,
+      "hot_score": 1320,
+      "structured_summary": {
+        "chinese_title": "AgentGarten: 代码世界中的进化代理",
+        "chinese_summary": "构建实时互动环境，使代理能够通过探索和交互学习。",
+        "pain_point": "在多种虚拟世界中实现一致且真实的环境仍存在挑战。",
+        "core_value": "通过结合模拟器、游戏引擎和共享神经渲染器，提供一致且真实的互动环境。",
+        "technical_architecture": "使用共享神经渲染器生成视觉观察，结合模拟器和游戏引擎。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多应用场景。",
+        "key_contributions": [
+          "提出Adversarial Forcing方法，使历史预填充可微。",
+          "优化神经渲染器以支持实时交互。",
+          "构建统一接口以导出结构化条件"
+        ],
+        "application_scenarios": [
+          "代理学习和进化",
+          "虚拟环境中的交互"
+        ],
+        "technical_highlights": [
+          "结合模拟器和游戏引擎",
+          "使用Adversarial Forcing优化神经渲染器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.12242",
+      "source": "huggingface",
+      "title": "TokenRouter: Efficient Serving System for Token-Level LLM Routing",
+      "authors": [
+        "Tianyu Fu",
+        "Tengxuan Liu",
+        "Ruoxi Wang",
+        "Yixin Dong",
+        "Yi Ge",
+        "Yichen You",
+        "Yu Wang"
+      ],
+      "abstract": "Large language model (LLM) routing distributes inference work across different models, advancing the cost-quality Pareto frontier of LLM serving. While coarse-grained routing at the session or query level has been widely adopted in production systems, recent algorithmic work shows that fine-grained token-level routing can yield substantial efficiency and quality gains. However, efficiently serving token-level routed inference poses significant challenges to existing systems. Built on single-LLM assumptions, current systems suffer from severe step desynchronization and frequent batch admission delays under token-level routing, and they also impose high implementation complexity on developers. To address these challenges, we design TokenRouter, an efficient and developer-friendly serving system for token-level routed LLM inference. TokenRouter follows the principle of request-centric programming, model-centric execution: developers describe routing logic from the perspective of a single request, while the runtime launches a subserver for each LLM and dispatches requests asynchronously. Each subserver employs a delayed-batching scheduler, whose optimal hyperparameters are derived from a mathematical throughput model of the system. Across diverse routing algorithms, workloads, and model pairs, TokenRouter achieves 2.01-64.15x higher decoding throughput than existing systems, substantially advancing the serving efficiency of token-level LLM routing. Our code is available at https://github.com/thu-nics/TokenRouter.",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.12242",
+      "pdf_url": "https://arxiv.org/pdf/2610.12242",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.12242",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 106,
+      "hot_score": 1060,
+      "structured_summary": {
+        "chinese_title": "TokenRouter: 用于标记级别大语言模型路由的高效服务系统",
+        "chinese_summary": "TokenRouter 是一种高效且开发者友好的服务系统，用于标记级别大语言模型推理。",
+        "pain_point": "现有系统在标记级别路由下存在严重的步骤脱同步和频繁的批次准入延迟问题。",
+        "core_value": "TokenRouter 通过延迟批处理调度器优化了标记级别路由的效率。",
+        "technical_architecture": "TokenRouter 采用请求为中心的编程和模型为中心的执行架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能包括扩展更多模型和优化调度策略。",
+        "key_contributions": [
+          "设计了延迟批处理调度器",
+          "提出了请求和模型为中心的执行架构"
+        ],
+        "application_scenarios": [
+          "大语言模型推理服务",
+          "成本质量优化"
+        ],
+        "technical_highlights": [
+          "优化了标记级别路由的效率",
+          "简化了开发者的实现复杂性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.08215",
+      "source": "huggingface",
+      "title": "Learn2Play Bench: How Well Do LLM Agents Learn from Experience in Unfamiliar Environments?",
+      "authors": [
+        "Yibo Li",
+        "Jinhang Qiu",
+        "Zhi Zheng",
+        "Qianyun Guo",
+        "Jiaying Wu",
+        "Shuo Ji",
+        "Bryan Hooi"
+      ],
+      "abstract": "Learning from experience is essential for LLM agents to adapt to unfamiliar and dynmaic environments. Evaluating this ability is therefore important for understanding how effectively agents acquire and use new knowledge. Existing benchmarks have sought to evaluate this ability, but they primarily evaluate tasks whose rules are provided in the instructions or already familiar to pretrained models, making it difficult to distinguish learning from interactions from reasoning with existing knowledge. To address this, we introduce Learn2Play Bench, a benchmark of newly designed text-based games, whose rules are novel or counterintuitive, requiring agents to acquire knowledge through interaction rather than rely solely on pretrained knowledge. These games provide reproducible feedback and automatic scoring, enabling controlled evaluation of learning across repeated attempts. We also vary game instances to test whether agents can apply what they have learned to new situations. Therefore, we evaluate how backbone models, self-evolving methods, and agent harnesses affect agents' learning ability, revealing three findings: (1) Experience retention: Retaining complete records of actions and feedback can support more effective learning than summarizing these experiences into rules or strategies. (2) Human agent gap: Top-performing human players achieve higher peak scores than the evaluated agents. Human explore more varied strategies, and repeat actions less. (3) Harness matters: With the backbone fixed, changing the harness can improve performance while reducing estimated inference cost. Together, these findings provide insights into how LLM agents learn from experience and suggest directions for future work to improve their learning ability. Project website: https://liushiliushi.github.io/learn2play-bench-website/",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.08215",
+      "pdf_url": "https://arxiv.org/pdf/2610.08215",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.08215",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 102,
+      "hot_score": 1020,
+      "structured_summary": {
+        "chinese_title": "Learn2Play Bench：LLM代理在陌生环境中从经验中学习的能力有多强？",
+        "chinese_summary": "提出了一种新的基准测试，评估LLM代理在陌生环境中的学习能力。",
+        "pain_point": "现有基准测试主要评估已知规则的任务，难以区分学习与推理能力。",
+        "core_value": "通过设计新颖或反直觉的游戏规则，评估代理通过互动学习的能力。",
+        "technical_architecture": "设计了基于文本的新游戏，提供可重复反馈和自动评分。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于文本游戏，未来可能扩展到其他类型的游戏。",
+        "key_contributions": [
+          "设计了新颖的游戏规则以评估学习能力",
+          "提供了可重复的反馈和自动评分",
+          "评估了不同模型和方法的学习能力"
+        ],
+        "application_scenarios": [
+          "评估和改进LLM代理在陌生环境中的学习能力",
+          "为研究提供新的基准测试"
+        ],
+        "technical_highlights": [
+          "游戏规则新颖或反直觉",
+          "提供自动评分和反馈"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.06100",
+      "source": "huggingface",
+      "title": "From Traces to Agentic Worlds: Agentic Language World Models for Interactive Environment Simulation",
+      "authors": [
+        "Quanyu Long",
+        "Xiao Chen",
+        "Jianda Chen",
+        "Haozhen Zhang",
+        "Qisheng Hu",
+        "Jianzhu Bao",
+        "Wenya Wang"
+      ],
+      "abstract": "Realistic environment replicas are increasingly valuable for training and evaluating LLM agents, yet the original systems may be inaccessible or impractical to reproduce. We explore agentic language world modeling: rather than rebuilding an executable environment, a world model agent serves as the environment for a task agent and supports faithful and stateful simulation. We instantiate this paradigm with Trace2Env, a learning-free framework for settings where the original system is unavailable but historical interaction traces remain accessible. Trace2Env reconstructs these traces into a reusable environment worldbook containing environment schemas, grounded evidence, and induced behavioral knowledge. At runtime, the world model agent actively consults the worldbook together with persistent episodic state to infer each action's observation and lasting state effects. Across nine environments, Trace2Env improves both next-observation fidelity and long-horizon interaction consistency over conventional prompt-based LWMs. In multi-turn interaction, task agent actions generated against Trace2Env remain valid more often when replayed in the real environment, indicating that its simulated dynamics better preserve the consequences of earlier actions across successive turns. These results establish agentic language world modeling as an alternative direction for building realistic environment replicas without reconstructing the original executable system.",
+      "published_date": "2026-10-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.06100",
+      "pdf_url": "https://arxiv.org/pdf/2610.06100",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.06100",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 98,
+      "hot_score": 980,
+      "structured_summary": {
+        "chinese_title": "从踪迹到自主世界：基于自主语言世界的交互环境模拟",
+        "chinese_summary": "Trace2Env 提高了环境仿真的一致性和交互性，特别是在多轮交互中。",
+        "pain_point": "现有系统可能不可用或难以复现，导致环境仿真训练和评估受限。",
+        "core_value": "通过历史交互踪迹重建环境，支持无学习框架的环境仿真。",
+        "technical_architecture": "Trace2Env 使用踪迹重建环境模型，结合环境书和持久性 episodic 状态。",
+        "quantitative_results": "在九个环境中，Trace2Env 在下一观察结果的准确性和长时交互一致性上优于传统提示基语言世界模型。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于历史交互踪迹可访问的场景。",
+        "key_contributions": [
+          "提出基于踪迹的自主语言世界模型",
+          "实现无学习框架的环境仿真"
+        ],
+        "application_scenarios": [
+          "不可复现系统的环境仿真",
+          "历史交互数据丰富的环境重建"
+        ],
+        "technical_highlights": [
+          "利用历史交互踪迹重建环境",
+          "支持多轮交互的有效性验证"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.12126",
+      "source": "huggingface",
+      "title": "SuperNav: An Agentic Navigation System for Any Task in Any Scene",
+      "authors": [
+        "Jinkai Zhang",
+        "Jingyi Xu",
+        "Yuanhong Yu",
+        "Jiarui Guo",
+        "Ruizhen Hu",
+        "Hujun Bao",
+        "Xiaowei Zhou",
+        "Sida Peng"
+      ],
+      "abstract": "General-purpose service robots need navigation systems that can handle diverse human requests in unfamiliar environments, combining task generality with scene generality. Some existing methods fine-tune multimodal large language models (MLLMs) to predict navigation actions, making their behavior dependent on the coverage of navigation training data and potentially limiting generalization to new requests and environments. Our key insight is to let the MLLM focus on interpreting requests, understanding scenes, and making decisions while preserving its general-purpose capabilities and delegating motion execution to navigation tools. To realize this idea, we introduce SuperNav, which equips a pretrained MLLM with a specialized agent harness without navigation-specific fine-tuning of the MLLM. Our harness supports these decisions with Navigation Skills, agent-oriented Tools for physical interaction, and task-progress and context management. A unified visual-point interface connects decision-making to motion by allowing the model to specify destinations directly in images and revise its decisions from execution feedback. Together, these components support sustained navigation across different task requirements and environments. SuperNav outperforms four evaluated baselines on instance-level, multi-object, and demand-driven tasks. Category-level evaluation on HM3D and deployment on a real quadruped robot further demonstrate its applicability across environments. Project Page: https://zju3dv.github.io/SuperNav/",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.12126",
+      "pdf_url": "https://arxiv.org/pdf/2610.12126",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.12126",
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 63,
+      "hot_score": 630,
+      "structured_summary": {
+        "chinese_title": "SuperNav：任意任务任意场景的自主导航系统",
+        "chinese_summary": "SuperNav 通过让预训练的 MLLM 专注于理解和决策，同时将运动执行交给导航工具，实现了通用服务机器人的导航功能。",
+        "pain_point": "现有方法依赖于特定导航数据的覆盖范围，限制了对新请求和环境的泛化。",
+        "core_value": "SuperNav 通过分工合作，提高了导航系统的通用性和灵活性。",
+        "technical_architecture": "引入了 SuperNav 框架，将预训练的 MLLM 与导航技能和工具结合。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证在更多任务和场景中的长期性能。",
+        "key_contributions": [
+          "提出了 SuperNav 框架，将 MLLM 的通用能力与导航工具结合。",
+          "设计了视觉点接口，使模型能够直接在图像中指定目的地并从执行反馈中调整决策。",
+          "实现了任务和上下文管理，支持持续导航"
+        ],
+        "application_scenarios": [
+          "通用服务机器人在未知环境中的导航",
+          "多任务环境下的自主导航"
+        ],
+        "technical_highlights": [
+          "无需对 MLLM 进行导航特定的微调",
+          "支持直接在图像中指定目的地",
+          "提供执行反馈以调整决策"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.11959",
+      "source": "huggingface",
+      "title": "MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement",
+      "authors": [
+        "Core Team",
+        "Zongming Qiao",
+        "Ziyue Hua",
+        "Zirui Ou",
+        "Zihao Yue",
+        "Zihan Jiang",
+        "Zhuo Huang",
+        "Zhiyang Chen",
+        "Zhixian Zheng",
+        "Zhipeng Xu",
+        "Zhengrui Ma",
+        "Yuyang Hu",
+        "Yuhang Dong",
+        "Yuechen Zhang",
+        "Yudong Wang",
+        "Yuanxin Liu",
+        "Yixin Yang",
+        "Yishuo Cai",
+        "Yikai Zhao",
+        "Yihan Yan",
+        "Yifan Zhang",
+        "Yifan Song",
+        "Xiyu Wei",
+        "Xing Zhang",
+        "Xin Zhang",
+        "Xiaoqian Liu",
+        "Xiaodong Ji",
+        "Xiangwei Deng",
+        "Xueyu Guo",
+        "Wenhan Ma",
+        "Weimin Xiong",
+        "Weikun Wang",
+        "Weiji Zhuang",
+        "Shuo Liu",
+        "Shuhuai Ren",
+        "Shuhao Gu",
+        "Shimao Chen",
+        "Shijie Cao",
+        "Shihua Yu",
+        "Shicheng Li",
+        "Shengjie Zhou",
+        "Shaolei Zhang",
+        "Rang Li",
+        "Qiying Wang",
+        "Qingkai Fang",
+        "Qianli Chen",
+        "Minzheng Wang",
+        "Liwen Wang",
+        "Linli Yao",
+        "Linghao Zhang",
+        "Liangyu Cheng",
+        "Liang Zhao",
+        "Lei Li",
+        "Jinhao Dong",
+        "Jinyu Xiang",
+        "Jianyu Wei",
+        "Jiangshan Duo",
+        "Huaqiu Liu",
+        "Huanjie Fan",
+        "Hongyi Guan",
+        "Hongshen Xu",
+        "Hao Tian",
+        "Hanyu Li",
+        "Hailin Zhang",
+        "Gang Wang",
+        "Fuli Luo",
+        "Feng Wei",
+        "Dong Zhang",
+        "Dawei Zhu",
+        "Chiheng Lou",
+        "Chenhong He",
+        "Chenhao He",
+        "Chenghua Liu",
+        "Bowen Ye",
+        "Bowen Shen",
+        "Boshen Xu",
+        "Bo Yang",
+        "Bingquan Xia",
+        "Bangjun Xiao",
+        "Baixuan Xu",
+        "Zhouxiang Mao",
+        "Zhiyang Zhang",
+        "Zhixiang Xu",
+        "Zhenru Lin",
+        "Zhengju Tang",
+        "Zhaojun Huang",
+        "Yuzhe Weng",
+        "Yuxing Xiang",
+        "Yuxiao Li",
+        "Yuheng Yang",
+        "Yuhang Wang",
+        "Yuchen Liu",
+        "Yuanyuan Tian",
+        "Yuanliang Dong",
+        "Yu Cheng",
+        "Yongzhe He",
+        "Yongshun Liang",
+        "Yong Wang",
+        "Yiyan Wang",
+        "Yitian Gong",
+        "Yijie Zhang",
+        "Yanshu Xin",
+        "Xun Zhang",
+        "Xingjian Zhao",
+        "Wenyu Yang",
+        "Wenshan Huang",
+        "Wenhao Li",
+        "Tingwei Huang",
+        "Tianyu Yu",
+        "Tianyang Lu",
+        "Taoyu Yang",
+        "Sinan Du",
+        "Shutong Tian",
+        "Shulin Du",
+        "Shengfan Wang",
+        "Shanchuan Fang",
+        "Qihao Zhang",
+        "Qibin Yang",
+        "Qian Yu",
+        "Qian Tu",
+        "Pengrong Xie",
+        "Peipei Wang",
+        "Peidian Li",
+        "Minkun Guo",
+        "Mingchen Shao",
+        "Luohan Gao",
+        "Lijie Wang",
+        "Liang Shi",
+        "Kaiqi Chen",
+        "Kaiming Liu",
+        "Kaifei Wang",
+        "Kai Yang",
+        "Jinlong Xue",
+        "Jiechen Zhang",
+        "Jiaxuan Liu",
+        "Hongxu An",
+        "Hao Peng",
+        "Hanglong Lü",
+        "Guonan Wang",
+        "Feiyu Yang",
+        "Fanyu Cao",
+        "Fangyue Liu",
+        "Fan Cui",
+        "Cong Wang",
+        "Chun Chen",
+        "Chenxu Bai",
+        "Chengxuan Zhu",
+        "Chenghua Wang",
+        "Boyi Zeng"
+      ],
+      "abstract": "Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of model intelligence by scaling RL compute. Prior to RL, we conduct mid-training on a broad multimodal corpus to provide ample exploration space, and build a solid infrastructure on the pretrained hybrid-SWA architecture to support subsequent scale-up. We scale RL compute along three dimensions: (1) larger batches and higher throughput, with an asynchronous training that consumes 1,568 samples and 2.7-3.7B tokens per step at context lengths of up to 1M; (2) more diverse and complex environments, spanning code, general, visual, and cyber domains under a mixture of agent harnesses; and (3) more grader compute, via groupwise agentic grading that yields more accurate reward signals for long-horizon tasks and steers the model towards shorter, more token-efficient solutions. To keep training stable at scale, we freeze the MoE router and establish a multi-layer defense against reward hacking. We further build infrastructure for mixed-task agentic RL, including a unified trajectory representation, high-concurrency multi-framework rollout, decoupled control and data planes, and training-inference consistency. We open-source the training dynamics, RL environments, and RL framework to facilitate reproduction and further research on scaled RL and model self-improvement.",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.11959",
+      "pdf_url": "https://arxiv.org/pdf/2610.11959",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.11959",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 58,
+      "hot_score": 580,
+      "structured_summary": {
+        "chinese_title": "MiMo-V2.6: 向自我改进扩展强化学习",
+        "chinese_summary": "通过扩展强化学习计算，MiMo-V2.6 系列推动了模型智能，使其能够自我改进。",
+        "pain_point": "现有模型难以自我改进，缺乏有效的强化学习训练方法。",
+        "core_value": "通过多模态训练和扩展计算，提高模型的探索空间和自我改进能力。",
+        "technical_architecture": "采用异步训练和混合-SWA 架构，扩展强化学习计算。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以保持大规模训练的稳定性。",
+        "key_contributions": [
+          "多模态训练提供丰富的探索空间",
+          "扩展计算维度包括批量大小、环境多样性和评估计算",
+          "建立多层次防御机制防止奖励作弊"
+        ],
+        "application_scenarios": [
+          "多模态模型训练",
+          "自我改进的强化学习应用"
+        ],
+        "technical_highlights": [
+          "异步训练支持大规模样本处理",
+          "混合-SWA 架构增强模型适应性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.12299",
+      "source": "huggingface",
+      "title": "Multi-Agent Egocentric World Model with Fine-Grained Embodied Interaction",
+      "authors": [
+        "Dahyun Chung",
+        "Siyoon Jin",
+        "Hyunwook Choi",
+        "Honggyu An",
+        "Junyoung Seo",
+        "Hyunsung Kim",
+        "Seung Wook Kim",
+        "Seungryong Kim"
+      ],
+      "abstract": "Egocentric world models predict first-person observations conditioned on an agent's actions, but most focus on a single agent. Real embodied settings often involve multiple agents that act and interact within a shared environment. Existing multi-agent world models rely on coarse actions like locomotion, camera control, or discrete commands, leaving fine-grained embodied interactions underexplored. We formulate multi-agent egocentric world modeling as synchronized ego-stream generation for multiple agents interacting through fine-grained actions in a shared world. This requires cross-view action consistency, shared-environment consistency, and consistent propagation of interaction-induced state updates. We propose Multi-agent Egocentric World Model (ME-World), which jointly denoises multiple ego streams in a shared token sequence, conditions each stream on all agents' target-view poses, and grounds generation with shared environment memory. We train and evaluate on real and synthetic multi-agent data and introduce shared-world consistency metrics for environment, update, and identity consistency. Experiments show ME-World improves shared-world consistency, action control, identity preservation, and video quality over existing methods.",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.12299",
+      "pdf_url": "https://arxiv.org/pdf/2610.12299",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.12299",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 44,
+      "hot_score": 440,
+      "structured_summary": {
+        "chinese_title": "基于细粒度体感交互的多智能体第一人称世界模型",
+        "chinese_summary": "提出了多智能体第一人称世界模型，通过细粒度体感交互生成同步的多视角动作流。",
+        "pain_point": "现有模型主要关注单智能体，忽视了多智能体间的细粒度体感交互。",
+        "core_value": "通过细粒度体感交互提升多智能体环境的一致性和交互控制。",
+        "technical_architecture": "提出ME-World模型，联合去噪多个视角动作流，基于共享环境记忆生成。",
+        "quantitative_results": "实验结果显示ME-World在环境一致性、动作控制和身份保持方面表现更好。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多复杂场景下的应用。",
+        "key_contributions": [
+          "提出了多智能体第一人称世界模型",
+          "引入细粒度体感交互",
+          "设计了共享环境记忆机制"
+        ],
+        "application_scenarios": [
+          "多人协作机器人",
+          "虚拟现实多人交互"
+        ],
+        "technical_highlights": [
+          "同步多视角动作流生成",
+          "共享环境记忆机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.38173",
+      "source": "huggingface",
+      "title": "In-context Robot Learning Made Simple: A Democratized Recipe for Manipulation Tasks",
+      "authors": [
+        "Minxing Li",
+        "Minghao Han",
+        "Weizhi Zhao",
+        "Hanwen Wang",
+        "Xiangshuo Liu",
+        "Shuyao Shang",
+        "Jingxiang Zhou",
+        "Mingchao Sun",
+        "Hongyu Pan",
+        "Mu Xu",
+        "Yu Liu",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "abstract": "We study robotic in-context learning (ICL), an emerging paradigm that enables robots to infer and execute tasks from visual demonstrations. Despite its growing promise, the problem itself remains under-defined: a visual demonstration simultaneously conveys action trajectories, object semantics, manipulation affordances, spatial relations, and task goals, making it unclear what information the robot is actually expected to follow. In this work, we first provide a clear problem definition of robot ICL that explicitly defines its learning target and resolves this fundamental prompt ambiguity. Building on this definition, we develop a minimalist and reproducible ICL framework (SimpleICL) with a visual prompt encoder and a low-cost data collection protocol. Without massive pre-training or specialized data infrastructure, our framework achieves strong performance in both simulation and real-world environments. Extensive experiments further reveal several key properties of robot ICL, including action, semantic, composition, and affordance discrimination. We will fully open-source our data and training pipeline to facilitate systematic and reproducible research on robot ICL. The project page can be found at https://simpleicl.github.io/simpleicl.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.38173",
+      "pdf_url": "https://arxiv.org/pdf/2609.38173",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.38173",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 41,
+      "hot_score": 410,
+      "structured_summary": {
+        "chinese_title": "简单实现的在上下文机器人学习：面向操作任务的民主化食谱",
+        "chinese_summary": "提出了一种简洁的机器人在上下文学习框架，解决了视觉示范中的信息解析问题。",
+        "pain_point": "机器人难以从视觉示范中解析出具体的学习目标。",
+        "core_value": "提供了一种无需大规模预训练和特殊数据基础设施的机器人在上下文学习框架。",
+        "technical_architecture": "开发了包含视觉提示编码器和低成本数据收集协议的简易在上下文学习框架。",
+        "quantitative_results": "在模拟和真实环境中均取得了良好的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更多应用场景。",
+        "key_contributions": [
+          "清晰定义了机器人在上下文学习的目标",
+          "开发了简易且可复现的在上下文学习框架",
+          "揭示了机器人在上下文学习的关键属性"
+        ],
+        "application_scenarios": [
+          "机器人操作任务学习",
+          "自动化生产线操作"
+        ],
+        "technical_highlights": [
+          "无需大规模预训练",
+          "低成本数据收集协议"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.12468",
+      "source": "huggingface",
+      "title": "DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training",
+      "authors": [
+        "Junyan Li",
+        "Ruizhi Li",
+        "Yu Liu",
+        "Xiangshuo Liu",
+        "Mingchao Sun",
+        "Hongyu Pan",
+        "Mu Xu",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "abstract": "We present DreamTrue, a multi-view, cross-embodiment robot world model for action-faithful and physically plausible video prediction. Training such a model on existing robot datasets faces two obstacles: imprecise calibration can impair action following, while limited coverage of unsuccessful interactions can bias predictions toward successful outcomes. To improve action following across embodiments, we render action trajectories into image-space conditions and introduce offline geometric calibration to align these conditions with the target videos. To broaden interaction coverage, we introduce counterfactual post-training, modifying recorded action trajectories and generating future videos under a wider range of actions and contact configurations. To provide feedback on these predictions without paired ground-truth futures, we construct a human-annotated video dataset covering robot, object, and interaction defects and use it to train an embodied video reward model. Its scores guide reinforcement-learning post-training toward more physically plausible interaction outcomes. On AgiBot, DreamTrue attains state-of-the-art action following, while reducing the human-assessed interaction defect rate from from 48.12% to 6.25%. Notably, our model ranks first in the world model track of the AgiBot World Challenge 2026. The project page can be found at https://brave-eai.github.io/DreamTrue.",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.12468",
+      "pdf_url": "https://arxiv.org/pdf/2610.12468",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.12468",
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": {
+        "chinese_title": "DreamTrue: 行动忠实的机器人世界模型与反事实后训练",
+        "chinese_summary": "DreamTrue 提供了多视角、跨体态的机器人世界模型，实现行动忠实和物理合理的视频预测。",
+        "pain_point": "现有数据集中的不精确校准和有限的失败交互覆盖导致行动不忠实。",
+        "core_value": "通过反事实后训练扩展交互覆盖，提高物理合理性。",
+        "technical_architecture": "引入离线几何校准和反事实后训练方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多实际应用场景验证。",
+        "key_contributions": [
+          "引入离线几何校准",
+          "提出反事实后训练方法",
+          "构建人类标注视频数据集"
+        ],
+        "application_scenarios": [
+          "机器人动作预测",
+          "机器人交互优化"
+        ],
+        "technical_highlights": [
+          "多视角跨体态模型",
+          "反事实后训练扩展交互覆盖"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.12421",
+      "source": "huggingface",
+      "title": "Beyond Spatio-Temporal Priors: A Generalizable Approach for Dense Correspondence Matching",
+      "authors": [
+        "Luping Liu",
+        "Bingyi Kang",
+        "Yifan Wang",
+        "Dong Xu"
+      ],
+      "abstract": "Dense correspondence matching has historically been bounded by simplifying spatio-temporal priors, such as smooth motion and rigid geometry. While effective for classical tasks, these assumptions break down in image editing and reference-guided generation (IEG), where transformations can preserve visual identity while breaking physical continuity. To establish identity-preserving correspondence across such transformations, we introduce FreeMatching, a generalizable framework combining generative and semantic foundation representations with heterogeneous supervision from classical datasets, tracked videos, and synthetic scenes. Teacher-guided iterative refinement further improves correspondence in IEG without dense correspondence annotations. Experimentally, a single FreeMatching model substantially improves correspondence quality on challenging IEG image pairs while retaining competitive performance on classical benchmarks. Furthermore, we demonstrate its utility as a quantitative metric for evaluating identity preservation, with scores that correlate with human judgment. The code is available at https://github.com/luping-liu/FreeMatching.",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.12421",
+      "pdf_url": "https://arxiv.org/pdf/2610.12421",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.12421",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 32,
+      "hot_score": 320,
+      "structured_summary": {
+        "chinese_title": "超越时空先验：一种通用的密集对应匹配方法",
+        "chinese_summary": "提出FreeMatching框架，通过结合生成和语义基础表示，解决图像编辑和参考引导生成中的身份保持对应问题。",
+        "pain_point": "现有方法依赖于平滑运动和刚性几何等简化假设，无法有效处理图像编辑和参考引导生成中的身份保持对应问题。",
+        "core_value": "通过引入FreeMatching框架，实现对复杂变换下的身份保持对应，提升对应质量并作为身份保持的量化评估指标。",
+        "technical_architecture": "结合生成和语义基础表示，采用教师引导的迭代细化方法。",
+        "quantitative_results": "在挑战性IEG图像对上显著提高对应质量，同时在经典基准上保持竞争力。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更多应用场景和技术改进。",
+        "key_contributions": [
+          "提出FreeMatching框架",
+          "解决复杂变换下的身份保持对应问题",
+          "作为身份保持的量化评估指标"
+        ],
+        "application_scenarios": [
+          "图像编辑",
+          "参考引导生成"
+        ],
+        "technical_highlights": [
+          "结合生成和语义基础表示",
+          "教师引导的迭代细化方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

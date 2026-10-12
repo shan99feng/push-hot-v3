@@ -1,0 +1,488 @@
+{
+  "date": "2026-10-11",
+  "generated_at": "2026-10-12T02:07:44.885513+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2610.13948v1",
+      "source": "arxiv",
+      "title": "Can Language Models Play the Wikipedia Game?",
+      "authors": [
+        "Alexander Hickey",
+        "Joanna Knight",
+        "James Bishop"
+      ],
+      "abstract": "Language models increasingly support or automate information retrieval from document collections too large to index. This task is difficult when it requires specialist linguistic or scientific knowledge. We used the Wikipedia Game to test language models on an analogous information retrieval task. In the game, players must reach a target article using only article links. We compared sentence embedding models and LLMs across five Wikipedia languages and five academic-literature datasets. We construct very large local graphs of Wikipedia pages and of paper citations using OpenAlex and provide code to build and navigate them. This allows the study of language models' navigation capabilities without relying on third-party APIs. We compared the models with human and TF-IDF benchmarks. The Wikipedia Game format enables robust comparisons across techniques, languages, and domains. No model significantly outperformed humans, although the best models (GPT-o3 mini, GPT-4o, QwQ:32B, and DeepSeek-R1:70B) achieved comparable success. Performance and rankings varied across languages and topics, with implications for practitioners utilising these techniques.",
+      "published_date": "2026-10-09T17:59:56Z",
+      "url": "https://arxiv.org/abs/2610.13948v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13948v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "语言模型能否玩维基百科游戏？",
+        "chinese_summary": "研究语言模型在信息检索任务中的表现，通过维基百科游戏进行跨语言和领域的比较。",
+        "pain_point": "语言模型在需要专业语言或科学知识的任务中表现不佳。",
+        "core_value": "提供了一种新的信息检索任务框架，用于评估语言模型的导航能力。",
+        "technical_architecture": "构建了大规模的本地维基百科页面图和论文引用图。",
+        "quantitative_results": "无显著模型超过人类，但部分模型表现接近。",
+        "competitors": "暂无对比信息",
+        "limitations": "模型表现因语言和主题不同而异。",
+        "key_contributions": [
+          "提出了维基百科游戏作为信息检索任务的新框架",
+          "展示了语言模型在不同语言和领域的表现差异"
+        ],
+        "application_scenarios": [
+          "评估语言模型的导航能力",
+          "跨语言和领域的信息检索"
+        ],
+        "technical_highlights": [
+          "使用OpenAlex构建大规模本地图",
+          "提供代码以构建和导航图"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13947v1",
+      "source": "arxiv",
+      "title": "Towards Physically Grounded Articulated 3D Assets: A Multi-Agent Pipeline and Benchmark",
+      "authors": [
+        "Xudong Cai",
+        "Ruijie Zhu",
+        "Haoliang Shang",
+        "Ruining Li",
+        "Marc Pollefeys",
+        "Shangzhe Wu",
+        "Andrea Vedaldi",
+        "Chuanxia Zheng"
+      ],
+      "abstract": "In this paper, we study physically grounded articulated 3D asset generation---moving the goal from reproducing how objects look to capturing how they move and function. Inspired by the literature on procedural and agentic generation, we present Artisan, a system that extends the latest method Articraft by introducing a multi-agent pipeline with physical simulation feedback, enabling comprehensive attributes beyond geometry, appearance, and physically plausible articulation, such as collision-free motion, stability under gravity, and accurate mass and material properties. Furthermore, we construct a unified benchmark spanning four key aspects: spatial fidelity, physical plausibility, downstream task performance, and overall quality. The benchmark encompasses 100 reference assets from ArtVIP and LightWheel, 50 stability prompts, and 50 ABO objects with reference masses, with protocols evaluating various metrics. Through extensive evaluation of more than 10 representative models, Artisan achieves competitive spatial fidelity while attaining the lowest collision rates and highest stability rates among the evaluated methods. Together, our system and benchmark establish insights for advancing 3D generation towards physically plausible, functionally usable assets.",
+      "published_date": "2026-10-09T17:59:41Z",
+      "url": "https://arxiv.org/abs/2610.13947v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13947v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于物理的动态3D资产生成：一个多代理流水线和基准",
+        "chinese_summary": "Artisan系统通过引入物理模拟反馈的多代理流水线，实现了高质量的动态3D资产生成。",
+        "pain_point": "现有3D资产生成方法主要关注外观，忽视了动态行为和物理属性。",
+        "core_value": "Artisan系统能够生成具有物理合理性的动态3D资产，涵盖碰撞自由运动、稳定性等属性。",
+        "technical_architecture": "Artisan系统采用多代理流水线和物理模拟反馈机制。",
+        "quantitative_results": "Artisan在碰撞率和稳定性方面表现最佳。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于现有数据集进行评估，未来需扩展数据集。",
+        "key_contributions": [
+          "引入物理模拟反馈的多代理流水线",
+          "构建涵盖多个维度的统一基准",
+          "实现高质量的动态3D资产生成"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "游戏开发"
+        ],
+        "technical_highlights": [
+          "多代理流水线",
+          "物理模拟反馈"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13945v1",
+      "source": "arxiv",
+      "title": "Splat2Act: From Captured Scenes to Personalized VLA Manipulation",
+      "authors": [
+        "Xiaomeng Ye",
+        "Krishna Jaganathan",
+        "Gyubeum Lim",
+        "Gunjan Chhablani",
+        "Muhammad Zubair Irshad",
+        "Zsolt Kira"
+      ],
+      "abstract": "A user who brings a generalist manipulation policy into their home or office wants it to pick up their objects from their shelves, counters, and tables. Yet even a strong generalist like $π_{0.5}$ achieves 0% pickup success in our captured deployment scenes without adaptation, and collecting real demonstrations in every user's environment is prohibitively expensive. We present Splat2Act, an automated real-to-sim-to-real pipeline that personalizes a pretrained vision-language-action (VLA) policy to a specific scene and object set using only a handheld phone scan and images of the user's objects. Unlike prior real-to-sim work that reconstructs individual tabletops, Splat2Act operates on building-scale indoor environments: it builds a photorealistic digital twin with 3D Gaussian Splatting and collision geometry, automatically discovers tabletop and non-tabletop receptacles, constructs feasible pickup tasks, and generates successful demonstrations with a privileged simulation oracle, with only scene and object capture required from a human. Applied to 101 scanned campus environments with a median navigable area of 104.87 m$^2$ and 7 receptacles, the pipeline yields 852 receptacles and over 68,000 pickup demonstrations. We fine-tune $π_{0.5}$ in two stages: Stage 1 adapts to hundreds of public object assets, drawn either from the deployment scene alone or from all 101 scenes; Stage 2 personalizes to the user's own objects on the deployment scene's receptacles. Our strongest personalized policy reaches 62.5% aggregate pickup success in the target scene. Deployed on a real Stretch 3, the same policy achieves 63.9% success on a 12-task subset, closely tracking its 66.7% simulated success on those tasks. These results suggest that automated real-to-sim-to-real training can personalize VLA manipulation policies using only simulation-oracle data.",
+      "published_date": "2026-10-09T17:59:06Z",
+      "url": "https://arxiv.org/abs/2610.13945v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13945v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Splat2Act: 从捕捉场景到个性化VLA操作",
+        "chinese_summary": "仅通过手持手机扫描和用户对象图像，Splat2Act即可自动化地将预训练的VLA策略个性化到特定场景和对象集中。",
+        "pain_point": "现有通用操作策略在未适应的情况下无法成功拾取物体，且收集每个用户的环境演示数据成本高昂。",
+        "core_value": "通过仅需场景和对象捕获，Splat2Act能够自动化地构建逼真的数字孪生并生成成功演示。",
+        "technical_architecture": "Splat2Act采用3D高斯点绘制和碰撞几何学构建逼真的数字孪生。",
+        "quantitative_results": "在101个扫描的校园环境中，该管道生成了852个接收器。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于室内环境，且未详细说明未来的工作方向。",
+        "key_contributions": [
+          "提出了一种自动化的真实到模拟再到现实的管道",
+          "仅需场景和对象捕获即可实现个性化"
+        ],
+        "application_scenarios": [
+          "家庭环境",
+          "办公室环境"
+        ],
+        "technical_highlights": [
+          "使用3D高斯点绘制构建逼真的数字孪生",
+          "自动发现桌面和非桌面接收器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13944v1",
+      "source": "arxiv",
+      "title": "InstantFusion: A Shared Latent Interface for Heterogeneous Image Generators",
+      "authors": [
+        "Xuanlang Dai",
+        "Jiazi Bu",
+        "Yujie Zhou",
+        "Yuhong Liu",
+        "Beichen Zhang",
+        "Penghui Yang",
+        "Ziyu Liu",
+        "Yuhang Zang"
+      ],
+      "abstract": "Diffusion/flow models have emerged as the de facto paradigms for image generation, giving rise to a diverse family of modern generators with increasingly heterogeneous architectures and representations. Despite their remarkable generation capabilities, the cross-model alignment of latent representations and the consistency of their underlying denoising dynamics remain underexplored. In this work, we uncover an intriguing cross-model compatibility: independently trained generators exhibit similar latent spatial organization, while directly handing off intermediate states between unaligned models can still preserve coarse visual content. Motivated by these observations, we propose InstantFusion, a lightweight shared latent interface that connects the denoising trajectories of heterogeneous image generators. Specifically, to enable flexible cross-model state translation, model-specific Latent AutoEncoders (LAEs) are introduced to project intermediate states from different generators into a shared latent space and decode them into the latent space of a target generator. This shared space is constrained by two complementary objectives: aligning intermediate states derived from the same image at matched noise levels and synchronizing their corresponding local denoising velocities. Once trained, InstantFusion allows denoising to seamlessly transition across frozen generators without requiring a dedicated mapping for every model pair. The versatility of InstantFusion is demonstrated across acceleration, multi-preference composition, cross-architecture on-policy distillation, and cross-model composition, achieving competitive performance across these diverse settings.",
+      "published_date": "2026-10-09T17:59:04Z",
+      "url": "https://arxiv.org/abs/2610.13944v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13944v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "InstantFusion: 不同图像生成器共享的潜在接口",
+        "chinese_summary": "提出了一种轻量级的共享潜在接口，使不同架构的图像生成器能够灵活地转换中间状态。",
+        "pain_point": "不同图像生成器之间潜在表示的对齐和去噪动态的一致性不足。",
+        "core_value": "通过引入特定于模型的潜在自动编码器，实现不同生成器之间的中间状态转换。",
+        "technical_architecture": "提出了一种轻量级的共享潜在空间，用于不同生成器的中间状态转换。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多应用场景。",
+        "key_contributions": [
+          "提出了一种轻量级的共享潜在接口",
+          "实现了不同生成器之间的中间状态转换",
+          "引入了特定于模型的潜在自动编码器"
+        ],
+        "application_scenarios": [
+          "跨模型生成任务",
+          "图像生成与编辑"
+        ],
+        "technical_highlights": [
+          "轻量级设计",
+          "灵活的中间状态转换"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13941v1",
+      "source": "arxiv",
+      "title": "Images Talk Back: Guiding MMDiTs by Suppressing Image-to-Text Feedback",
+      "authors": [
+        "Yucheng Yang",
+        "Xiaoxiao Sun",
+        "Shusheng Yang",
+        "Jiakang Chen",
+        "Serena Yeung-Levy"
+      ],
+      "abstract": "Multimodal diffusion transformers (MMDiTs) allow the evolving image to update internal text representations through joint attention. These representations then guide subsequent image updates, raising a question: does this feedback help correct deviations from the prompt, or preserve them? We find that image-to-text (I2T) feedback can preserve the objects and attributes already represented in the evolving image, including errors. Transplanting I2T messages can rescue failures or disrupt successes. At matched intervention strengths, suppressing the influence of I2T feedback improves generation, whereas opposite controls degrade it. These findings motivate Semantic Feedback Guidance (SFG), which suppresses the influence of I2T feedback by guiding away from an auxiliary branch that strengthens this feedback and weakens text-to-image conditioning. The in-place variant, iSFG, directly suppresses I2T feedback and strengthens text-to-image conditioning, requiring no extra model evaluations. Temporal interventions motivate running the SFG branch during the first 20% of image sampling steps, requiring about $1.2\\times$ the base NFE without classifier-free guidance (CFG). Experiments across three image-generation backbones show gains in alignment and preference-model scores. On FLUX, adding SFG to CFG raises GenEval from $0.6661$ to $0.7479$; on SD3.5M, iSFG adds $+1.33$ HPSv2.1 over CFG at zero extra NFE. The control also transfers to text-to-video and image-to-video generation, improving VBench scores. Code is available at https://github.com/yyc1215lll-creator/SFG.",
+      "published_date": "2026-10-09T17:58:15Z",
+      "url": "https://arxiv.org/abs/2610.13941v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13941v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "图像反哺：通过抑制图像到文本反馈引导MMDiTs",
+        "chinese_summary": "抑制图像到文本反馈可以改善生成质量，提出Semantic Feedback Guidance (SFG)和in-place SFG方法。",
+        "pain_point": "MMDiTs在生成过程中可能保留错误的图像和属性，导致偏离提示。",
+        "core_value": "通过抑制图像到文本反馈，提高生成质量，提出SFG和in-place SFG方法。",
+        "technical_architecture": "提出Semantic Feedback Guidance (SFG)和in-place SFG方法来抑制图像到文本反馈。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多应用场景。",
+        "key_contributions": [
+          "提出抑制图像到文本反馈的方法以改善生成质量",
+          "提出Semantic Feedback Guidance (SFG)和in-place SFG方法",
+          "实验验证抑制反馈的有效性"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像编辑"
+        ],
+        "technical_highlights": [
+          "抑制图像到文本反馈提高生成质量",
+          "提出两种抑制方法：SFG和in-place SFG"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13935v1",
+      "source": "arxiv",
+      "title": "Hide and Seek: HIDE Concepts to SEEK explanations for black box models",
+      "authors": [
+        "Bhanu Tokas",
+        "Rahul Nair",
+        "Rockwell Jackson",
+        "Hannah Kerner"
+      ],
+      "abstract": "Interpreting machine learning model predictions is a central challenge, particularly for black-box vision models. Concept-based attribution methods interpret models using human-understandable concepts. Existing concept-based methods can only interpret classification and regression models. They require access to model weights or large concept-annotated datasets, and most methods cannot provide image-level attribution. We propose Hide and Seek (HnS), a new method for concept-level attribution that does not require access to model weights or labeled concept datasets. HnS can interpret a wide range of vision models. Given a concept and image set, HnS retrieves concept-aligned images using a vision-language model, localizes the concept within each image, masks the localized region, and measures attribution from the change in the black-box model's output between the original and masked images. This enables faithful attribution by directly measuring the model's behavior and supporting local attributions. We validated HnS on CelebA and COCO-Stuff. Compared to existing methods, HnS showed better agreement with ground-truth attributions. We demonstrated the applicability of HnS on diverse tasks, including image captioning and satellite image segmentation, where no existing concept attribution method can be used. We provided our anonymous code in the supplementary material.",
+      "published_date": "2026-10-09T17:56:59Z",
+      "url": "https://arxiv.org/abs/2610.13935v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13935v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "隐藏与寻找：使用HIDE概念来寻找黑盒模型的解释",
+        "chinese_summary": "HnS方法可以在无需访问模型权重或标注概念数据集的情况下，为各种视觉模型提供概念级解释。",
+        "pain_point": "现有概念基解释方法需要访问模型权重或大量标注数据集，且大多数方法无法提供图像级解释。",
+        "core_value": "HnS方法通过使用视觉语言模型检索概念对齐的图像，局部化概念并测量模型输出的变化，直接测量模型行为，支持局部解释。",
+        "technical_architecture": "HnS方法利用视觉语言模型检索概念对齐的图像，局部化概念并测量模型输出的变化。",
+        "quantitative_results": "HnS方法在CelebA和COCO-Stuff上的实验结果表明，其解释结果与真实解释结果有更好的一致性。",
+        "competitors": "暂无对比信息",
+        "limitations": "HnS方法依赖于视觉语言模型的性能。",
+        "key_contributions": [
+          "无需访问模型权重或标注数据集即可解释黑盒模型",
+          "支持图像级概念解释"
+        ],
+        "application_scenarios": [
+          "黑盒模型解释",
+          "概念级解释"
+        ],
+        "technical_highlights": [
+          "利用视觉语言模型检索概念对齐的图像",
+          "直接测量模型行为以支持局部解释"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13931v1",
+      "source": "arxiv",
+      "title": "Constructive Bounds for the Topological Expressivity of Neural Networks",
+      "authors": [
+        "Kosio Beshkov"
+      ],
+      "abstract": "The expressivity of a neural network $Φ$ describes the class of functions that a network can express. The term topological expressivity refers to a family of measures particularly suited to understand binary classification and is often formulated in terms of the Betti numbers of a decision boundary $β(Φ^{-1}(0))$. Despite its popularity, this measure is not as useful for regression and other problems that do not involve a decision boundary. Instead, we propose to study topological expressivity in terms of the Betti numbers of the output of a neural network $β(Φ(X))$. We formally prove that a ReLU network with architecture $(d,\\sum\\limits_{k=1}^{d   } β_k(3k+2),\\sum\\limits_{k=1}^{d}β_k(k+1))$ can express spaces homotopy equivalent to wedge sums of spheres with arbitrary Betti numbers. This gives upper bounds for any arbitrary connected ($β_0=1$) sequence of Betti numbers, but by constructing spaces homotopy equivalent to products of $N$ spheres of dimension $d_1,...,d_N$ we achieve much better bounds $(\\sum\\limits_{n=1} d_n, 3\\sum\\limits_{n=1}\\limits^N d_n + 2N, \\sum\\limits_{n=1}\\limits^N d_n + N) $ for Betti numbers given by $\\prod_n (1+x^{d_n})$. Finally we conjecture a much stronger tight bound which gives the architectural bound $(d,d+1,d+1)$ for a space homeomorphic to the sphere.",
+      "published_date": "2026-10-09T17:55:33Z",
+      "url": "https://arxiv.org/abs/2610.13931v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13931v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "math.AT",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "神经网络拓扑表达性的构造性边界",
+        "chinese_summary": "提出了一种新的拓扑表达性度量，基于神经网络输出的贝蒂数。",
+        "pain_point": "现有拓扑表达性度量不适用于回归等无决策边界的任务。",
+        "core_value": "提供了一种新的度量方法，适用于更广泛的机器学习任务。",
+        "technical_architecture": "基于贝蒂数研究神经网络的拓扑表达性。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅对特定类型的Betti数进行了证明。",
+        "key_contributions": [
+          "提出了新的拓扑表达性度量",
+          "证明了ReLU网络的表达能力边界",
+          "提供了构造性边界证明"
+        ],
+        "application_scenarios": [
+          "神经网络设计",
+          "复杂函数表达"
+        ],
+        "technical_highlights": [
+          "基于输出的贝蒂数研究拓扑表达性",
+          "提出了新的网络架构证明"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13929v1",
+      "source": "arxiv",
+      "title": "Chronos Policy: Learning Robot Policies on Physical Time",
+      "authors": [
+        "Changhao Wang",
+        "Jaden Clark",
+        "Shuran Song"
+      ],
+      "abstract": "Robot policies often convert sensing and control into fixed-rate observation-action sequences, leaving physical time implicit in sequence position. This assumption breaks when observation rates or delays vary, or when inference latency changes. We introduce Chronos Policy, which makes physical time explicit by conditioning on observation capture times and desired action execution times. We study two ways to incorporate time into a diffusion transformer: adding timestamp embeddings to token features, or encoding physical time in positional encoding through time-aware rotary positional encodings (time-aware RoPE). We find that time-aware RoPE is more robust, allowing attention to depend directly on physical time while keeping token content unchanged. During training, we temporally randomize which observations are sampled and when the action chunk begins, exposing the policy to a wider range of sensing and execution schedules that may occur during deployments. This also enables learning from asynchronous, multi-rate data without forcing all measurements onto a fixed temporal grid. Across simulation and real-world experiments, Chronos Policy improves performance on dynamic tasks, where observation-to-action timing is critical, and on multisensory tasks, where the relative timing between observations matters. On standard quasi-static tasks, it preserves nominal performance while improving robustness to changes in sensing and inference timing.",
+      "published_date": "2026-10-09T17:55:20Z",
+      "url": "https://arxiv.org/abs/2610.13929v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13929v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Chronos Policy: 学习物理时间下的机器人策略",
+        "chinese_summary": "通过引入Chronos Policy，使物理时间显式化，从而提高动态任务的性能。",
+        "pain_point": "现有机器人策略假设固定的观测和控制速率，当观测速率或延迟变化时，该假设失效。",
+        "core_value": "通过显式化物理时间，提高机器人在动态任务中的性能。",
+        "technical_architecture": "使用时间感知的旋转位置编码（time-aware RoPE）将时间融入扩散变换器。",
+        "quantitative_results": "在模拟和真实世界实验中，Chronos Policy在动态任务中表现出更好的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何处理更复杂的动态环境。",
+        "key_contributions": [
+          "引入时间感知的旋转位置编码（time-aware RoPE）",
+          "通过时间随机化训练策略，使其适应不同观测和执行时间",
+          "无需将所有测量值强制到固定的时间网格上"
+        ],
+        "application_scenarios": [
+          "动态环境下的机器人操作",
+          "具有变化观测速率和延迟的机器人任务"
+        ],
+        "technical_highlights": [
+          "时间感知的旋转位置编码（time-aware RoPE）",
+          "时间随机化训练方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13928v1",
+      "source": "arxiv",
+      "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+      "authors": [
+        "Andis Draguns",
+        "Sumeet Ramesh Motwani",
+        "Raymond Douglas",
+        "Christian Schroeder de Witt"
+      ],
+      "abstract": "Capability evaluations aim to surface dangerous model behaviors before deployment, but their reliability depends on the assumption that hidden capabilities can be elicited. We show this assumption does not hold under adversarial conditions by constructing backdoor attacks that embed encrypted neural networks within host model weights, decrypting and executing them only upon receiving a secret trigger. Using digital lockers, these hidden circuits remain provably hard to elicit and interpret under cryptographic assumptions, even given full access to model weights, extending prior work from hiding fixed strings to arbitrary computations. We implement our proof of concept constructions in PyTorch and evaluate elicitation through fine-tuning, weight noising, gradient-based trigger search, and latent adversarial training on a small chemical reaction prediction task - a proxy for CBRN-relevant capabilities. Our results demonstrate resistance to these methods and, together with our cryptographic guarantees, reveal a limit of elicitation-based capability audits. We release our models to support the improvement of defenses.",
+      "published_date": "2026-10-09T17:55:06Z",
+      "url": "https://arxiv.org/abs/2610.13928v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13928v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "AI 模型可以隐藏任意能力",
+        "chinese_summary": "研究展示了在对抗条件下，隐藏能力难以被提取，揭示了基于提取的审计方法的局限性。",
+        "pain_point": "现有能力评估方法假设隐藏能力可以被提取，但在对抗条件下这一假设不成立。",
+        "core_value": "通过构建后门攻击，证明了隐藏任意计算的能力，扩展了隐藏机制的研究范围。",
+        "technical_architecture": "使用加密神经网络和秘密触发器实现隐藏计算，确保在加密假设下难以提取和解释。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在小型任务上进行了验证，未来需在更大规模任务上进行测试。",
+        "key_contributions": [
+          "提出了对抗条件下的隐藏计算方法",
+          "扩展了隐藏机制的研究范围",
+          "提供了加密假设下的隐藏计算实现"
+        ],
+        "application_scenarios": [
+          "对抗条件下的模型安全",
+          "隐藏敏感计算任务"
+        ],
+        "technical_highlights": [
+          "使用加密神经网络和秘密触发器",
+          "在对抗条件下保持隐藏计算的难以提取性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.13925v1",
+      "source": "arxiv",
+      "title": "Can machines reason non-verbally?",
+      "authors": [
+        "Shaheer U. Saeed",
+        "Zion Tse",
+        "Gregory Slabaugh",
+        "Daniel C. Alexander",
+        "Yipeng Hu"
+      ],
+      "abstract": "Modern machines can solve equations, follow logic and reason through language, yet they still struggle with problems that require visual non-verbal reasoning. This is evident even in advanced systems such as DeepSeek, ChatGPT and Gemini, which remain limited on visual tasks such as completing abstract patterns or delineating ambiguous regions-of-interest. Unlike explicit intermediate steps in verbal reasoning which can be verified through logic or automated tests, visual reasoning involves implicit intermediate steps with no clear methods for verification. Non-verbal reasoning is therefore challenging to model and, as a result, remains a fundamental limitation of current machine intelligence. Here we introduce GenVerOpt, a general framework that unifies generation, verification and optimisation into a reasoning pipeline for machines. By generating candidate solutions, verifying their correctness, and iteratively refining them, GenVerOpt enables per-sample optimisation rather than relying solely on dataset-level trends captured during model training. This process mirrors human problem-solving where multiple possibilities are imagined, evaluated, and refined until a correct solution emerges. Across diverse domains, GenVerOpt demonstrates capabilities beyond existing systems: it surpasses humans on abstract IQ puzzles, matches clinicians in prostate cancer segmentation, exceeds experts in liver vessel reconstruction and outperforms state-of-the-art approaches in tumour boundary alignment. These results show that machine reasoning can extend beyond language, establishing visual non-verbal reasoning as a foundation for more flexible and generalisable intelligence.",
+      "published_date": "2026-10-09T17:54:36Z",
+      "url": "https://arxiv.org/abs/2610.13925v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13925v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "机器能否进行非语言推理？",
+        "chinese_summary": "提出GenVerOpt框架，解决机器在视觉非语言推理上的局限。",
+        "pain_point": "现代机器在解决需要视觉非语言推理的问题时仍存在困难。",
+        "core_value": "通过生成、验证和优化，GenVerOpt框架提高了机器在非语言推理任务上的表现。",
+        "technical_architecture": "GenVerOpt框架将生成、验证和优化统一到一个推理管道中。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究非语言推理的验证方法。",
+        "key_contributions": [
+          "提出GenVerOpt框架",
+          "解决视觉非语言推理问题",
+          "实现样本级别的优化"
+        ],
+        "application_scenarios": [
+          "抽象模式完成",
+          "模糊区域界定"
+        ],
+        "technical_highlights": [
+          "生成候选解决方案",
+          "迭代优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

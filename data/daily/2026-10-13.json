@@ -1,0 +1,525 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-14T01:38:39.578740+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2609.39601",
+      "source": "huggingface",
+      "title": "GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives",
+      "authors": [
+        "Qize Yu",
+        "Lianrui Fan",
+        "Boyu Chen",
+        "Jiaqi Liang",
+        "Xini Ding",
+        "Yue Chen",
+        "Zetian Song",
+        "Yuran Wang",
+        "Yi Zou",
+        "Kaixuan Wang",
+        "Tianxing Chen",
+        "Wenxuan Song",
+        "Bohan Zhou",
+        "Mingleyang Li",
+        "Siqiao Huang",
+        "Yuqi Ye",
+        "Caigao Jiang",
+        "Wei Wei",
+        "Ruihai Wu",
+        "Hang Zhang",
+        "Yixiao Ge",
+        "Shuchang Zhou",
+        "Shilong Liu",
+        "Xianming Liu",
+        "Ping Luo",
+        "Shiyu Huang"
+      ],
+      "abstract": "Precise grounding matters. It specifies which object is the target and where that object is, even in clutter and for tiny objects, and it has to be fast enough for closed-loop control. Yet vision-language-action (VLA) and world-action models (WAMs) take perception from general-purpose vision-language and video-generation backbones, which still fail in these settings. We introduce GroundingPI, a 4B grounding foundation model that generates points and boxes as quantized coordinates in a shared vocabulary. Training combines multimodal and spatial pretraining, supervised fine-tuning, and reinforcement learning with GRPO, using supervision from public datasets and dedicated data engines. Against 44 baselines across 34 grounding benchmarks spanning 11 perceptual capabilities, GroundingPI establishes a new state of the art, averaging 73.68%, above the larger GPT-6 Astra (71.54%). As a downstream visual backbone, GroundingPI improves performance on robotic manipulation and autonomous driving. On RoboTwin 2.0, it outperforms every mainstream backbone we evaluate in all four out-of-distribution settings, by up to 24.8% relative to the strongest backbone. On RoboCasa-GR1, GroundingPI trained with 50% of the demonstrations outperforms those baselines trained with 75%. On nuScenes, used as the visual backbone, GroundingPI attains an average open-loop L2 error of 0.296 m. We systematically analyze GroundingPI's pretraining in scale and data composition. Downstream autonomous driving and robotic manipulation improve as the pretraining is scaled. Analyzing the data recipe across these 11 perceptual capabilities shows dense grounding's substantial benefits for both, and OCR's potential as a catalyst for perceptual learning. These results support grounding as a perceptual foundation, and dedicated perceptual pretraining as a promising direction for foundation models of physical intelligence.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.39601",
+      "pdf_url": "https://arxiv.org/pdf/2609.39601",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.39601",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 246,
+      "hot_score": 2460,
+      "structured_summary": {
+        "chinese_title": "GroundingPI：一种基于视觉原语的物理智能接地基础模型",
+        "chinese_summary": "GroundingPI 是一种生成量化坐标的基础模型，显著提升了多模态和空间预训练、监督微调及强化学习的性能。",
+        "pain_point": "现有模型在复杂环境和小目标识别中表现不佳，无法满足闭环控制的需求。",
+        "core_value": "通过生成点和框作为共享词汇，GroundingPI 在多个基准测试中取得了新的最佳性能。",
+        "technical_architecture": "采用多模态和空间预训练、监督微调及强化学习的方法。",
+        "quantitative_results": "在 34 个基准测试中，平均得分 73.68%，优于 GPT-6 Astra 的 71.54%。",
+        "competitors": "对比了 44 个基线模型。",
+        "limitations": "未来需要在更多实际场景中验证模型的鲁棒性。",
+        "key_contributions": [
+          "提出了基于视觉原语的接地基础模型",
+          "结合多模态和空间预训练、监督微调及强化学习",
+          "在多个基准测试中取得了新最佳性能"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "自动驾驶"
+        ],
+        "technical_highlights": [
+          "生成点和框作为量化坐标",
+          "显著提升多模态和空间预训练效果"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.11765",
+      "source": "huggingface",
+      "title": "Thinking Inertia: LLMs Keep Thinking When Told Not To",
+      "authors": [
+        "Dianqiao Lei",
+        "Kevin Qinghong Lin",
+        "Pan Lu",
+        "Philip Torr",
+        "James Zou"
+      ],
+      "abstract": "Large Language Models (LLMs) increasingly ship with explicit \"thinking modes\", yet their counterpart, \"no-thinking\", has received far less attention. We study LLMs' no-thinking behavior along two axes. a. How to measure no-thinking? Prior work typically defines no-thinking through proxies such as a disabled thinking mode or the absence of long traces. These proxies are unreliable: disabled thinking modes may still emit reasoning, while long traces may contain filler rather than genuine inference. We instead normalize each response into a pre-answer trace and final answer, and evaluate it at three levels: (i) Empty-Thinking Rate for strict answer-only compliance; (ii) instruction-aware Question-Pre-answer Relevance for similarity between the question and pre-answer trace; and (iii) LLM-as-judge Explicit Inference Rate for visible explicit inference. Together, these metrics distinguish answer-only output, relevant but non-inferential text, and explicit inference. b. How does no-thinking vary across tasks and models? We evaluate six prompting interventions on six LLMs across Boolean, multiple-choice, and open-ended questions. We find that explicit no-think controls cannot reliably eliminate visible inference. Models instead exhibit \"Thinking Inertia\": explicit inference persists even under strict controls and becomes more prevalent as the answer space opens. Accuracy remains stable on Boolean and multiple-choice tasks, whereas open-ended tasks reveal a trade-off between answer-only compliance and task accuracy. Rewriting the same questions across answer spaces shows that supplying candidate answers makes answer-only responses easier to produce. These findings establish no-thinking as a non-trivial capability: stopping explicit reasoning cannot be assumed from model settings or instructions alone and deserves systematic evaluation alongside reasoning ability.",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.11765",
+      "pdf_url": "https://arxiv.org/pdf/2610.11765",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.11765",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 215,
+      "hot_score": 2150,
+      "structured_summary": {
+        "chinese_title": "思考惯性：LLMs 在被告知停止思考时仍继续思考",
+        "chinese_summary": "研究了 LLMs 的“不思考”行为，并提出了新的评估方法。",
+        "pain_point": "现有 LLMs 在被告知停止思考时仍继续进行推理。",
+        "core_value": "提出了新的评估方法来衡量 LLMs 的“不思考”行为。",
+        "technical_architecture": "提出了三种评估指标：空思考率、指令感知问题-预回答相关性和 LLM 作为裁判的显式推理率。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在六种 LLM 上进行了实验。",
+        "key_contributions": [
+          "提出了新的评估 LLMs 不思考行为的方法",
+          "分析了不思考行为在不同任务和模型中的变化"
+        ],
+        "application_scenarios": [
+          "评估 LLMs 的推理控制能力",
+          "改进 LLMs 的推理控制机制"
+        ],
+        "technical_highlights": [
+          "提出了空思考率、指令感知问题-预回答相关性和 LLM 作为裁判的显式推理率三种评估指标",
+          "在六种 LLM 上进行了广泛的实验"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.13361",
+      "source": "huggingface",
+      "title": "AgentSWE: Can Coding Agents Build the Agent You Actually Want?",
+      "authors": [
+        "Jiahao Wang",
+        "Hongjin Qian",
+        "Yuyang Hu",
+        "Jiajun Zhang",
+        "Zheng Liu"
+      ],
+      "abstract": "As the production of software passes into the hands of software itself, coding agents are increasingly commissioned to build agents fitted to their users' own workflows. This delegation carries a quiet assumption, that the delivered agent will faithfully serve the requirement it was built for, rather than merely appear to. No existing benchmark tests that assumption. We introduce AgentSWE, a benchmark for agent software engineering spanning three stages of the agent development lifecycle: Creation of a complete agent from a natural-language requirement, Editing of production agent codebases, and Optimization toward a measurable target. Each of its 25 tasks is framed as a commission rather than an exam: the builder iterates against a handful of illustrative cases, while acceptance exercises the frozen submission on held-out cases designed to span the full requirement, grading behavior against requirement-derived rubrics under hard pass/fail gates or, for Optimization, against the source benchmark's own objective. Evaluating a range of coding agents across models and harnesses, we find that none comes close to delivering what a requirement asks for: the gap between what a builder demonstrates and what it delivers is the norm, not the corner case. An accompanying empirical analysis of the failure trajectories identifies recurring failure modes, among them overfitting to the visible cases, hollow runtimes behind code that looks complete, and unsupported claims of completion, each a signal by which coding agents can learn to build the agents they are asked for.",
+      "published_date": "2026-10-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.13361",
+      "pdf_url": "https://arxiv.org/pdf/2610.13361",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.13361",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 201,
+      "hot_score": 2010,
+      "structured_summary": {
+        "chinese_title": "AgentSWE：编码代理能否构建您真正想要的代理？",
+        "chinese_summary": "引入AgentSWE基准测试，评估编码代理在三个阶段的表现。",
+        "pain_point": "现有编码代理无法准确实现用户需求。",
+        "core_value": "提供全面的代理开发生命周期评估基准。",
+        "technical_architecture": "涵盖代理创建、编辑和优化三个阶段的任务。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估现有模型，未涵盖新模型。",
+        "key_contributions": [
+          "引入全面的代理开发生命周期评估基准",
+          "提供迭代和冻结提交的评估机制"
+        ],
+        "application_scenarios": [
+          "代理软件工程",
+          "代理开发与优化"
+        ],
+        "technical_highlights": [
+          "任务框架化为委托而非考试",
+          "严格的行为评估标准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.13166",
+      "source": "huggingface",
+      "title": "Scaling Agentic Data for Long-Horizon Terminal Intelligence",
+      "authors": [
+        "Shun Zou",
+        "Ziyu Ma",
+        "Yi Zou",
+        "Yong Wang",
+        "Lin Chen",
+        "Zehui Chen",
+        "Guanhua Chen",
+        "Xiangxiang Chu",
+        "Feng Zhao"
+      ],
+      "abstract": "Terminal agents are moving beyond local operations toward completing real-world professional tasks. Short trajectories can demonstrate commands and tool calls, but they do not fully show how agents accumulate evidence through exploration, use it to inform judgments, continually adjust strategies based on feedback, and turn intermediate results into final deliverables. High-quality long-horizon trajectories capture these agentic behavioral patterns and their connections within a single problem-solving process, providing richer experience for sustained autonomous work. However, environment synthesis may complete or simplify the key work underlying these patterns in advance and thus remove the need for exploration, implementation, and verification that the agent was meant to perform. To address this, we introduce TerminalHorizon, a fully automated data synthesis engine for long-horizon terminal agents. Starting from real-world professional work, it uses independent execution to identify key work omitted during construction and uses the resulting evidence to guide environment reconstruction. To extend these patterns across stages, it progressively expands tasks under the same goal, introducing new requirements that build on prior results and call for further exploration and improvement. Using this engine, we construct 1.5K task environments and perform supervised fine-tuning of Qwen3.5-27B on the resulting dataset to obtain TerminalHorizon-27B. We achieve substantial performance gains on all 12 benchmarks spanning coding-agent tasks, agentic tasks in real-world production settings, and general reasoning. Multiple RSI case studies, each with a 12-hour research budget, further demonstrate the model's ability to continue experimenting beyond an initial solution, improve its methods based on feedback, and retain effective improvements in its final deliverables.",
+      "published_date": "2026-10-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.13166",
+      "pdf_url": "https://arxiv.org/pdf/2610.13166",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.13166",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 134,
+      "hot_score": 1340,
+      "structured_summary": {
+        "chinese_title": "扩展终端智能的代理数据规模",
+        "chinese_summary": "引入TerminalHorizon，一种自动化数据合成引擎，用于生成高质量的长时序终端代理数据。",
+        "pain_point": "现有环境合成可能提前完成或简化关键工作，减少代理的探索、实施和验证。",
+        "core_value": "提供更丰富的代理行为模式和连接，支持持续自主工作。",
+        "technical_architecture": "基于独立执行识别关键工作并指导环境重建。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对特定应用场景，未来需扩展更多领域。",
+        "key_contributions": [
+          "提出TerminalHorizon数据合成引擎",
+          "支持长时序代理行为模式生成"
+        ],
+        "application_scenarios": [
+          "专业任务执行",
+          "自主工作流程"
+        ],
+        "technical_highlights": [
+          "独立执行识别关键工作",
+          "逐步扩展任务范围"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.09326",
+      "source": "huggingface",
+      "title": "VIS-Ground: Video Interactive Storytelling with Contextual Grounding",
+      "authors": [
+        "Bingxuan Li",
+        "Yiwen Song",
+        "Xueqing Wu",
+        "Yanzhou Pan",
+        "Yang Li",
+        "Kuang Su",
+        "Jingyun Liu",
+        "Sebastian Ko",
+        "Huan Zhang",
+        "Tong Zhang",
+        "Nanyun Peng",
+        "Tomas Pfister",
+        "Yale Song"
+      ],
+      "abstract": "Video interactive storytelling enables viewers to actively steer how a video unfolds. However, once we allow viewers to intervene during generation, a new challenge arises: The viewer's request can have latent dependencies on both the grounding source and the current rendered video state. These dependencies may not be explicitly stated in any individual input, but emerge only when the source, rendered history, and new viewer intent are considered jointly. Existing interactive video generation systems primarily emphasize following viewer instructions, while source-grounded video generation methods focus on aligning generated content with an external narrative or knowledge source. This leaves a fundamental question underexplored: What context should a generation model ground on during interactive continuation, and how can heterogeneous, unstructured inputs be transformed into such grounding context? In this work, we formulate contextual grounding as the process of transforming heterogeneous input context into an executable constraint model for video generation. To address this challenge, we introduce VIS-Ground, which performs Structured Context Abstraction to recover grounded states and cross-context dependencies, Generation Constraints Induction to project relevant dependencies into candidate-specific constraints, and Constrained Video Generation to enforce these constraints through planning, verification, revision, and rendering. Across three video generation backbones, VIS-Ground consistently achieves the highest overall composite score, reaching an average absolute improvement of 10.3 points over the strongest per-backbone baselines. Detailed analysis further shows gains across both narrative and knowledge grounding, and reveals remaining challenges in dependency extraction, and faithful realization during video rendering.",
+      "published_date": "2026-10-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.09326",
+      "pdf_url": "https://arxiv.org/pdf/2610.09326",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.09326",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 79,
+      "hot_score": 790,
+      "structured_summary": {
+        "chinese_title": "VIS-Ground: 视频互动叙事中的上下文关联",
+        "chinese_summary": "提出了VIS-Ground方法，将异构输入上下文转换为可执行的视频生成约束模型。",
+        "pain_point": "观众干预导致生成内容与上下文和当前视频状态存在隐含依赖。",
+        "core_value": "通过结构化上下文抽象，实现视频生成的上下文关联。",
+        "technical_architecture": "采用结构化上下文抽象方法，将异构输入转换为执行约束模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了实验验证。",
+        "key_contributions": [
+          "提出了上下文关联的概念",
+          "设计了结构化上下文抽象方法",
+          "实现了异构输入到执行约束模型的转换"
+        ],
+        "application_scenarios": [
+          "视频互动叙事",
+          "个性化视频生成"
+        ],
+        "technical_highlights": [
+          "异构输入上下文的高效转换",
+          "上下文关联的视频生成约束模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.39600",
+      "source": "huggingface",
+      "title": "GroundAnything: Reconciling Parallel Decoding with Precise Visual Grounding at Flash Speed",
+      "authors": [
+        "Qize Yu",
+        "Lianrui Fan",
+        "Bowen Ping",
+        "Xini Ding",
+        "Zetian Song",
+        "Junbo Niu",
+        "Kaixuan Wang",
+        "Tianxing Chen",
+        "Yue Chen",
+        "Minghua He",
+        "Yuran Wang",
+        "Jie Huang",
+        "Haojun Zhang",
+        "Min Chen",
+        "Hao Li",
+        "Wenxuan Song",
+        "Ruihai Wu",
+        "Xianming Liu",
+        "Shilong Liu",
+        "Shuchang Zhou",
+        "Ping Luo",
+        "Shiyu Huang"
+      ],
+      "abstract": "Autoregressive (AR) grounding models serialize spatial predictions, introducing sequential latency and imposing a causal order on output tokens. We view grounding as visual evidence extraction: objects, locations, and spatial relations are jointly constrained by the image and query, yet their dependencies do not imply an intrinsic left-to-right generation order. This distinction makes bidirectional diffusion a natural fit, allowing spatial hypotheses to emerge in parallel and be jointly refined through iterative denoising. We introduce GroundAnything, a 4B-parameter grounding foundation model that reconciles fast parallel decoding with precise localization through blockwise denoising. Training combines grounding pretraining from public datasets and dedicated data engines, direct AR-to-diffusion conversion with joint AR and diffusion objectives, supervised fine-tuning, and GRPO-based reinforcement post-training. Across 30 grounding benchmarks, our autoregressive variant, GroundAnything-VLM, establishes a new overall state of the art among similarly sized models at 72.42%, remaining competitive with GPT-6 Astra (71.35%). With entropy-guided decoding, GroundAnything also surpasses the prior state of the art at this scale, averaging 61.75% versus 53.32% for the fast MTP-based LocateAnything model. We further explore decoding strategies, showing that an optional self-speculative mode achieves a 4.51times speedup over the AR counterpart with a 0.74 percentage-point drop in COCO F1mIoU. Infrastructure experiments show that progressive inference optimizations translate parallel decoding into practical speedups. These support efficient visual grounding in latency-sensitive real-world systems.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.39600",
+      "pdf_url": "https://arxiv.org/pdf/2609.39600",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.39600",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 71,
+      "hot_score": 710,
+      "structured_summary": {
+        "chinese_title": "GroundAnything: 快速精确视觉定位的并行解码与精确视觉定位统一",
+        "chinese_summary": "GroundAnything 通过双向扩散模型实现快速并行解码与精确视觉定位",
+        "pain_point": "现有自回归模型引入序列延迟，限制了视觉定位的精确度",
+        "core_value": "通过双向扩散模型，实现并行解码与精确视觉定位的统一",
+        "technical_architecture": "采用块级去噪方法，结合预训练、直接自回归到扩散转换、监督微调和强化学习",
+        "quantitative_results": "在 30 个视觉定位基准上，GroundAnything-VLM 达到 72.42%，优于 GPT-6 Astra (71.35%)",
+        "competitors": "对比 GPT-6 Astra",
+        "limitations": "未来需要探索更多应用场景",
+        "key_contributions": [
+          "提出双向扩散模型实现并行解码",
+          "结合多种训练方法提高模型性能",
+          "在多个视觉定位基准上取得新最佳结果"
+        ],
+        "application_scenarios": [
+          "视觉定位",
+          "图像理解和生成"
+        ],
+        "technical_highlights": [
+          "块级去噪方法",
+          "多阶段训练策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.13630",
+      "source": "huggingface",
+      "title": "Multi-Stream Attention Residuals",
+      "authors": [
+        "Xiaohan Qin",
+        "Xiangdong Zhang",
+        "Tuo Dai",
+        "Sunan Zou",
+        "Huaijin Wu",
+        "Yebin Yang",
+        "Zhuo Xia",
+        "Lin Yao",
+        "Yuliang Liu",
+        "Junchi Yan"
+      ],
+      "abstract": "Attention Residuals (AttnRes) enables content-dependent retrieval over network depth, which can be viewed as single-stream softmax attention along the depth axis. Inspired by the success of multi-head attention along the sequence axis, we introduce Multi-Stream Attention Residuals (MSAR), an extension of AttnRes that generalizes this mechanism to multi-head depth attention, yielding substantial performance gains with minimal additional overhead. MSAR draws stream diversity from sequence context through multi-scale causal convolutions, allowing different heads to retrieve historical representations through distinct contextual views while preserving the integrity of the hidden representation. The retrieved streams are combined through lightweight adaptive mixing to generate the single-stream layer input. By retaining single-stream sources and expanding them on demand, MSAR supports multi-stream computation without requiring persistent multi-stream storage or communication. Across all 12 downstream benchmarks at the 18B and 28B MoE scales, MSAR consistently outperforms prior residual variants, including standard residual connections, manifold-constrained Hyper-Connections (mHC), and AttnRes. Scaling-law experiments yield an iso-loss compute speedup of 1.58times over the standard residual baseline, compared with 1.35times for AttnRes and 1.30times for mHC. These results make MSAR a promising residual architecture for large-scale pre-training.",
+      "published_date": "2026-10-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.13630",
+      "pdf_url": "https://arxiv.org/pdf/2610.13630",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.13630",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": {
+        "chinese_title": "多流注意力残差",
+        "chinese_summary": "MSAR 提供了显著的性能提升，同时保持了较低的额外开销。",
+        "pain_point": "现有残差机制在深度网络中无法有效利用多头注意力机制。",
+        "core_value": "通过多尺度因果卷积引入多流深度注意力，提高了模型性能。",
+        "technical_architecture": "利用多尺度因果卷积和轻量级自适应混合生成单流层输入。",
+        "quantitative_results": "在所有 12 个下游基准测试中，MSAR 始终优于先前的残差变体。",
+        "competitors": "标准残差连接、受限流超连接 (mHC) 和其他先前的残差变体。",
+        "limitations": "需要进一步研究以适应更广泛的模型架构。",
+        "key_contributions": [
+          "引入多流深度注意力机制",
+          "通过多尺度因果卷积实现流多样性",
+          "轻量级自适应混合生成单流层输入"
+        ],
+        "application_scenarios": [
+          "深度学习模型的优化",
+          "大规模模型的高效训练"
+        ],
+        "technical_highlights": [
+          "显著的性能提升",
+          "低额外开销",
+          "多流深度注意力机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.33304",
+      "source": "huggingface",
+      "title": "Relevance Does Not Imply Applicability: Experience Activation for Personal GUI Agents",
+      "authors": [
+        "Fuyao Zhang",
+        "Xuan Wang",
+        "Zherui Li",
+        "Jiaming Zhang",
+        "Longtao Huang",
+        "Wei Yang Bryan Lim"
+      ],
+      "abstract": "Personal Graphical User Interface (GUI) agents rely on interaction history to infer what a user wants from ambiguous instructions and to anticipate recurring routines. Existing approaches retrieve task-relevant history and append it to the policy's context, implicitly assuming that experience relevant to a task remains useful for each decision within it. We find that this help is largely spent at the first decision: retrieved history strongly improves the opening step of an episode, yet provides little sustained benefit over the remaining 90\\% of steps, and offers weak guidance on whether a proactive suggestion is warranted. A relevant record may tell the agent where to begin, but not which past action applies to the current screen or whether a routine is due now. The underlying issue is that relevance does not imply applicability}: relevance is determined at the task level, whereas applicability depends on the situation at decision time. We therefore recast personalization as experience activation and introduce ExpActivator, a training-free framework that activates only the experience applicable to the current situation. During execution, ExpActivator matches each new screen to historical states in the frozen GUI backbone's latent space and supplies the corresponding action as a reference. Before execution, it activates a recurring intent only when the current time and scenario provide sufficient support, and otherwise abstains. Across four GUI backbones, ExpActivator improves within-trajectory step success by 28\\% on average, achieves the best personalized execution on every backbone while using about one-fifth as many history tokens, and reaches approximately 2.3times the Matthews correlation coefficient of the strongest proactive baseline. Experience pays where it is activated, not where it is appended.",
+      "published_date": "2026-09-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.33304",
+      "pdf_url": "https://arxiv.org/pdf/2609.33304",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.33304",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "相关性并不意味着适用性：个人GUI代理的经验激活",
+        "chinese_summary": "提出ExpActivator框架，激活当前情境下适用的经验，而非仅依赖相关的历史记录。",
+        "pain_point": "现有方法假设相关经验在任务中的每个决策点都适用，但实际上只在初始决策时有效。",
+        "core_value": "通过经验激活而非简单的历史记录检索，提高个人GUI代理的决策效果。",
+        "technical_architecture": "引入ExpActivator框架，根据当前情境激活适用的经验。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定情境下进行了实验验证。",
+        "key_contributions": [
+          "提出了经验激活的概念，区分了相关性和适用性",
+          "设计了ExpActivator框架，无需训练即可激活适用经验"
+        ],
+        "application_scenarios": [
+          "个性化用户界面代理",
+          "智能助手"
+        ],
+        "technical_highlights": [
+          "无需训练的框架设计",
+          "情境感知的经验激活"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.36642",
+      "source": "huggingface",
+      "title": "PR-OPD: Privileged Representation On-policy Self-Distillation for Agentic Reinforcement Learning",
+      "authors": [
+        "Muyang Li",
+        "Jie Yang",
+        "Zhengyu Fang",
+        "Junchao Zhu",
+        "Zhengkun Xiao",
+        "Ruining Deng",
+        "Zhe Jiang",
+        "Shigang Chen"
+      ],
+      "abstract": "Language-model agents are usually trained by reinforcement learning from one reward per episode, and privileged self-distillation enriches it by letting the same policy, given a skill, teach its skill-free self through token probabilities. However, we identify two phenomena that question this channel. Invisible Advantage: a skill in context lifts WebShop success from 42.2% to 56.2%, yet changes the probabilities of fewer than a quarter of the sampled tokens. Much to Align: a skill changes the hidden states of over 80% of response tokens, in a way that linear probes can trace back to the specific skill. To exploit this, we propose Privileged Representation On-policy Self-Distillation (PR-OPD). After a GRPO warm start, the policy writes a hindsight skill for each trajectory, re-reads its own responses with that skill as a stop-gradient teacher, and aligns its projected hidden states to the teacher's at every layer alongside the reward objective, with no external skill library, separate teacher, or inference overhead. On ALFWorld and WebShop with two backbones, PR-OPD achieves the best overall results in every setting, improving over GRPO by up to 4.7 points in ALFWorld success and 14.0 points in WebShop accuracy. Code is available at https://github.com/balibata/PR-OPD.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.36642",
+      "pdf_url": "https://arxiv.org/pdf/2609.36642",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.36642",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "PR-OPD：基于特权表示的在策略自我蒸馏强化学习",
+        "chinese_summary": "PR-OPD 提出了一种新的方法，通过技能引导的自我蒸馏提高强化学习代理的表现。",
+        "pain_point": "现有方法通过少量改变概率来提升技能，但难以有效利用技能的潜在优势。",
+        "core_value": "PR-OPD 能够显著提升代理的表现，无需额外技能库或额外推理开销。",
+        "technical_architecture": "PR-OPD 在策略梯度优化后，利用技能作为教师信号进行自我蒸馏。",
+        "quantitative_results": "在 ALFWorld 和 WebShop 上，PR-OPD 达到了最佳结果，比 GRPO 提升了 4.7 点。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在两个特定场景下进行了验证。",
+        "key_contributions": [
+          "提出 PR-OPD 方法",
+          "无需额外技能库或教师",
+          "显著提升代理表现"
+        ],
+        "application_scenarios": [
+          "强化学习代理训练",
+          "自然语言处理任务"
+        ],
+        "technical_highlights": [
+          "利用技能作为教师信号",
+          "在策略优化后进行自我蒸馏"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2609.36616",
+      "source": "huggingface",
+      "title": "CrossTimeEdit: A Decade-Spanning Cross-View Dataset and Reward-Guided Editing for Historical Street-View Generation",
+      "authors": [
+        "Hanwen Lu",
+        "Jun He",
+        "Mingjia Yang",
+        "Hao Wei",
+        "Jinhao Huang",
+        "Yi Lin",
+        "Xiang Zhang"
+      ],
+      "abstract": "Historical street-view imagery records urban evolution, but uneven coverage leaves substantial gaps in historical records. Generating plausible past appearances requires restoring changed structures while preserving persistent scene content. We construct VIGOR-his, a decade-spanning cross-view dataset containing 43,653 location-level quadruplets across 11 cities on three continents. Its automated pipeline performs spatial pairing, consistency screening, change classification, and the generation and validation of satellite-based change descriptions and local editing instructions. Based on VIGOR-his, we propose CrossTimeEdit, a model that reformulates historical street-view generation as editing, using recent street views to constrain viewpoint and unchanged appearance and temporal satellite differences as change evidence. Starting from FLUX.2 [Klein] 4B, we train CrossTimeEdit through supervised fine-tuning (SFT) followed by online reinforcement learning (RL). We design three street-view editing criteria, namely Instruction Alignment (IA), Background Preservation (BP), and Quality and Physical Plausibility (QP), as both RL reward dimensions and evaluation metrics. We optimize this multi-reward objective using Within Group Relative Policy Optimization for flow-matching models (Flow-GRPO) with Group reward-Decoupled Normalization Policy Optimization (GDPO), which normalizes each reward dimension before aggregation. CrossTimeEdit improves overall performance across the three editing criteria by 17.12\\% over the pretrained baseline and outperforms cross-view generation models in scene consistency, visual realism, and perceptual quality. The implementation code, dataset, and model weights are available at https://luhanwen67.github.io/CrossTimeEdit-release/.",
+      "published_date": "2026-09-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2609.36616",
+      "pdf_url": "https://arxiv.org/pdf/2609.36616",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2609.36616",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "CrossTimeEdit：跨越十年的多视角数据集及基于奖励引导的街景历史生成",
+        "chinese_summary": "构建了一个包含43,653个跨视角四元组的跨越十年的数据集，用于街景历史生成。",
+        "pain_point": "历史街景记录不完整，导致城市演变记录存在空白。",
+        "core_value": "通过多视角数据集和奖励引导编辑方法，实现历史街景的合理生成。",
+        "technical_architecture": "基于自动化管道进行空间配对、一致性筛选等处理，提出CrossTimeEdit模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步扩展数据集覆盖范围。",
+        "key_contributions": [
+          "构建了跨越十年的多视角数据集",
+          "提出了基于奖励引导的编辑方法",
+          "设计了三种街景编辑标准"
+        ],
+        "application_scenarios": [
+          "城市历史记录",
+          "城市规划"
+        ],
+        "technical_highlights": [
+          "自动化数据处理管道",
+          "多视角数据集构建"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

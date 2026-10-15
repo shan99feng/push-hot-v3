@@ -1,0 +1,548 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-15T01:15:14.909589+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.18773",
+      "source": "huggingface",
+      "title": "Jeva: System One Models from First Principles",
+      "authors": [
+        "Qi Li",
+        "Xinchao Wang"
+      ],
+      "abstract": "System one models enable direct, low-latency decision-making. Yet recent practice of predicting an answer from serialized text does not, by itself, respect the structure of a decision problem. We argue that current designs underemphasize four important structural requirements. (i) null-aware: Models should distinguish answer absence from uncertainty among candidates; (ii) permutation-invariant: Reordering alternatives should not change the decision; (iii) option-scalable: Growing candidate sets should not require redefining the output space; (iv) cacheable: Request-independent computation over recurring alternatives should be reusable across requests. We introduce Jeva, a decision-native architecture that addresses these requirements jointly. A shared encoder independently represents the request and each option, while a compact decision stack refines only the request state against immutable option memory. Symmetric aggregation yields permutation-equivariant probabilities; shared scoring accommodates variable-size candidate sets. A separate coverage estimate distinguishes answer absence from candidate competition, enabling explicit null outcomes. Request-independent option representations and layer projections support reuse across newly assembled sets. These mechanisms unify Choice, Noul, and Score outputs. Across evaluations, Jeva combines strong typed-decision performance with near-perfect null detection and no decision flips under any tested permutations. It scales to thousands of candidates and substantially reduces latency through cross-request reuse without changing decisions.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.18773",
+      "pdf_url": "https://arxiv.org/pdf/2610.18773",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18773",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 267,
+      "hot_score": 2670,
+      "structured_summary": {
+        "chinese_title": "Jeva: 从基本原则出发的决策模型",
+        "chinese_summary": "Jeva 提供了一种新的决策模型架构，解决了现有模型的四个关键问题。",
+        "pain_point": "现有模型未能充分考虑决策问题的结构需求。",
+        "core_value": "Jeva 强调 null-aware、permutation-invariant、option-scalable 和 cacheable 四大特性。",
+        "technical_architecture": "Jeva 采用共享编码器和紧凑决策堆栈，实现请求独立的选项表示。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证模型在大规模数据集上的表现。",
+        "key_contributions": [
+          "提出了 null-aware 的模型设计",
+          "实现了 permutation-invariant 的决策机制",
+          "支持 option-scalable 的候选集扩展",
+          "引入了 cacheable 的请求独立计算"
+        ],
+        "application_scenarios": [
+          "自然语言处理中的直接决策",
+          "推荐系统中的多选项决策"
+        ],
+        "technical_highlights": [
+          "共享编码器独立表示请求和选项",
+          "紧凑决策堆栈优化请求状态"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.17953",
+      "source": "huggingface",
+      "title": "Agent-Reflex: Teaching Language Agents to Act Reflectively",
+      "authors": [
+        "Guanting Dong",
+        "Xinyu Yang",
+        "Jiajie Jin",
+        "Yuyang Hu",
+        "Xiaoshuai Song",
+        "Yifei Chen",
+        "Xiaoxi Li",
+        "Jiejun Tan",
+        "Yutao Zhu",
+        "Tat-Seng Chua",
+        "Ji-Rong Wen",
+        "Zhicheng Dou"
+      ],
+      "abstract": "Large language models have evolved from single-turn chatbots into interactive agents capable of long-horizon reasoning. In real deployments, MCP tool services can return noisy feedback and users may intervene to correct the agent, but existing methods provide limited supervision for reflection learning and failure recovery. To bridge this gap, we propose Agent-Reflex, a general training framework for incentivizing proactive reflection in agents. Specifically, Agent-Reflex comprises three stages. First, Environment Reflection Skill Discovery (RSD) injects grounded tool-feedback perturbations into environment scaling, samples a capability-diverse LLM pool, mines matched success-failure pairs, and summarizes reusable reflection meta-skills. Building on this skill library, we then apply Reflective Supervised Fine-Tuning (ReSFT) that converts each skill into supervision for self-reflection, skill recovery, and user-centric correction, strengthening complementary reflective behaviors. Finally, we propose On-Policy Reflective Policy Optimization (ORPO) to combine agentic reinforcement learning under noisy interactions with reflection-guided on-policy distillation to further elicit proactive reflection. Built on Qwen3-8B, Agent-Reflex reaches 58.6 overall on five long-horizon tool-use benchmarks and 29.1 on AgentNoiseBench, surpassing strong environment-scaling and reflection baselines. Experiments on six challenging agent benchmark suites demonstrate the effectiveness of Agent-Reflex. Further analyses show that Agent-Reflex improves agents' robustness to noise while maintaining stable training dynamics, supporting scalable agent training. Our code is available at https://github.com/RUC-NLPIR/Agent-Reflex.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.17953",
+      "pdf_url": "https://arxiv.org/pdf/2610.17953",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.17953",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 194,
+      "hot_score": 1940,
+      "structured_summary": {
+        "chinese_title": "Agent-Reflex: 教授语言代理进行反思性行为",
+        "chinese_summary": "提出了一种激励代理主动反思的通用训练框架。",
+        "pain_point": "现有方法对代理反思学习和失败恢复的监督有限。",
+        "core_value": "通过环境反思技能发现、反思监督微调和策略优化，增强代理的反思行为。",
+        "technical_architecture": "包含环境反思技能发现、反思监督微调和策略优化三个阶段。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证方法的有效性。",
+        "key_contributions": [
+          "提出了一种激励代理主动反思的通用训练框架。",
+          "通过环境反思技能发现、反思监督微调和策略优化，增强代理的反思行为。",
+          "适用于多种代理环境和任务"
+        ],
+        "application_scenarios": [
+          "多轮对话系统",
+          "智能助手"
+        ],
+        "technical_highlights": [
+          "环境反思技能发现阶段注入工具反馈扰动，增强代理的反思能力。",
+          "反思监督微调阶段将技能转化为自我反思、技能恢复和用户导向的纠正监督"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.18615",
+      "source": "huggingface",
+      "title": "VideoJev: System One Model for Video Understanding and Interaction",
+      "authors": [
+        "Yuhan Zhu",
+        "Xiangyu Zeng",
+        "Qingyi Si",
+        "Chenxu Yang",
+        "Yifei Li",
+        "Luozheng Qin",
+        "Junhao Zhou",
+        "Dingyu Yao",
+        "Jun Zhang",
+        "Chuanyu Qin",
+        "Zhiqiu Zhang",
+        "Yuandong Yang",
+        "Yuqi Xu",
+        "Tianyu Zhang",
+        "Hongcheng Guo",
+        "Jiaqi Wang",
+        "Nan Duan",
+        "Limin Wang"
+      ],
+      "abstract": "Visual agents must turn video observations into timely decisions to track progress and choose what to do next. Building on the emerging System One paradigm, we introduce VideoJev, a family of models that cast video understanding and interaction as structured decision tasks. We adapt pretrained multimodal large language models (MLLMs) by replacing autoregressive answer decoding with a shared head that scores temporal intervals and textual options against video evidence. These scores yield event spans or answer choices, unifying temporal grounding and multiple-choice video question answering. This combines the semantic flexibility of MLLMs with efficient decisions that agents can use directly. As an interaction unfolds, new goals and intermediate results prompt further queries about the same visual history. VideoJev therefore reuses visual computation through Cached inference for queries as they arrive and Joint inference for multiple queries in a single forward pass. Across three temporal grounding benchmarks, VideoJev-4B and VideoJev-35B-A3B improve mean mIoU over their backbones by 6.7 and 10.8 points, respectively, with measured inference speedups of 2.8-3.1times. On four video QA benchmarks, both achieve performance comparable to their backbones in Thinking mode, with measured inference speedups exceeding 100times. These results offer a unified, reusable decision interface for composing structured visual judgments into complex, open-ended workflows.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.18615",
+      "pdf_url": "https://arxiv.org/pdf/2610.18615",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18615",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 194,
+      "hot_score": 1940,
+      "structured_summary": {
+        "chinese_title": "VideoJev: 一种用于视频理解和交互的系统一模型",
+        "chinese_summary": "VideoJev 提高了视频理解与交互的效率，统一了时间定位和视频问答。",
+        "pain_point": "视觉代理需要将视频观察转化为及时决策，以跟踪进度和选择下一步行动。",
+        "core_value": "结合了 MLLMs 的语义灵活性和高效的决策能力，提高了视频理解与交互的性能。",
+        "technical_architecture": "通过共享头替换自回归答案解码，对预训练的多模态大语言模型进行适应。",
+        "quantitative_results": "在三个时间定位基准测试中，VideoJev-4B 和 VideoJev-35B-A3B 分别提高了 6.7 和 10.8 个百分点的 mean mIoU，速度提高了 2.8-3.1 倍。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证模型的泛化能力。",
+        "key_contributions": [
+          "引入了 System One 帕累托改进视频理解和交互",
+          "提出了一种新的多模态大语言模型适应方法"
+        ],
+        "application_scenarios": [
+          "视频监控",
+          "虚拟助手"
+        ],
+        "technical_highlights": [
+          "时间间隔和文本选项的联合评分",
+          "缓存推理和联合推理的结合"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.18356",
+      "source": "huggingface",
+      "title": "Urbex: Agentic Spatial Grounding for City-Scale 3D Scenes",
+      "authors": [
+        "Yu Wang",
+        "Rui Dai",
+        "Wei Chen",
+        "Yi Wang",
+        "Bo Dang",
+        "Kaikui Liu",
+        "Xiangxiang Chu",
+        "Yansheng Li"
+      ],
+      "abstract": "City-scale 3D grounding is commonly formulated as candidate ranking, which requires precomputed instance proposals and becomes inefficient in large outdoor scenes. We propose Urbex, an agentic vision-language framework that instead casts grounding as active spatial search. Urbex represents a city-scale 3D scene as an interactive multi-view environment, allowing a VLM agent to query landmarks, zoom into local regions, render oblique views, and commit a grounded bounding box. We optimize this tool-use policy with reinforcement learning on CityRefer, using smooth localization rewards and lightweight shaping rewards for efficient exploration. Experiments show that Urbex achieves the best Hit@1 and IoU on CityRefer, supports candidate-free grounding without ground-truth boxes, and is substantially faster than the strongest city-scale ranking baseline. Zero-shot results on STPLS3D-Refer further indicate improved cross-scene robustness.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.18356",
+      "pdf_url": "https://arxiv.org/pdf/2610.18356",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18356",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 110,
+      "hot_score": 1100,
+      "structured_summary": {
+        "chinese_title": "Urbex: 城市规模3D场景中的自主空间定位",
+        "chinese_summary": "Urbex 提出了一个基于主动空间搜索的视觉-语言框架，实现了城市规模3D场景中的无候选框定位。",
+        "pain_point": "现有方法依赖预计算的实例提案，在大规模户外场景中效率低下。",
+        "core_value": "通过主动空间搜索，Urbex 实现了高效的城市规模3D场景定位，无需候选框。",
+        "technical_architecture": "Urbex 使用强化学习优化工具使用策略，构建交互式多视图环境。",
+        "quantitative_results": "在 CityRefer 上实现了最佳的 Hit@1 和 IoU，比最强的排名基线快得多。",
+        "competitors": "最强的城市规模排名基线。",
+        "limitations": "零样本结果表明在跨场景鲁棒性方面仍有提升空间。",
+        "key_contributions": [
+          "提出了基于主动空间搜索的视觉-语言框架",
+          "使用强化学习优化工具使用策略",
+          "实现了候选框自由的城市规模3D场景定位"
+        ],
+        "application_scenarios": [
+          "城市规模3D场景中的物体定位",
+          "大规模户外场景中的视觉搜索"
+        ],
+        "technical_highlights": [
+          "交互式多视图环境",
+          "强化学习优化工具使用策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.18868",
+      "source": "huggingface",
+      "title": "Tev: Scaling Long-Horizon Agentic Environments with Dense Progress Rewards",
+      "authors": [
+        "Wenbo Hu",
+        "Shraman Pramanick",
+        "Krishna Kumar Singh",
+        "Nanyun Peng",
+        "Kai-Wei Chang",
+        "Yong Jae Lee"
+      ],
+      "abstract": "Long-horizon agents have drawn growing attention for their ability to work autonomously -- from hours to days -- on economically valuable tasks, a capability essential to automated discovery and recursive self-improvement (RSI). Yet open-source models still struggle on long-horizon tasks, largely for lack of both training data and a working recipe, and scaling both is hard: long, complex tasks are difficult to curate and verify, and their rewards are sparse. We address both. First, we introduce Tev-Gym, the first long-horizon agent training dataset with verifiable, dense, progressive rewards -- 1,170 verified task environments across 7 domains. It is built on a latent-world-first approach that first constructs a latent world: a complete and correct hidden specification of the task domain, workflow, and expected state after each step. Each task is then progressively rendered from this specification into an agent-facing environment, enabling controllable complexity and a natural progress metric. Second, we turn this metric into a training recipe: via progress-potential reward shaping (PPRS), we convert progress into a dense per-step reward that improves training efficiency and makes otherwise-intractable tasks trainable. Training with this recipe yields Tev-27B, which achieves substantial gains on the Agents' Last Exam computing and math sciences domains (ALE-CM), matching GPT-6 Astra and Claude Opus 5 at Pass@5. Despite training only on ALE-related data, it generalizes to the Terminal-Bench (TB) 3.0 and 4.0 subsets, surpassing GLM 5.2 and Gemini 3.7 Flash, and reaches Claude Opus 4.8-level performance on middle-horizon tasks such as TB 2.1.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.18868",
+      "pdf_url": "https://arxiv.org/pdf/2610.18868",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18868",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 95,
+      "hot_score": 950,
+      "structured_summary": {
+        "chinese_title": "Tev: 扩展长时程智能体环境的密集进度奖励",
+        "chinese_summary": "提出Tev-Gym，首个具有可验证、密集和渐进奖励的长时程智能体训练数据集。",
+        "pain_point": "缺乏长时程任务的训练数据和验证方法，导致奖励稀疏。",
+        "core_value": "提供了一种新的训练方法，通过进度潜力奖励塑造（PPRS）提高训练效率。",
+        "technical_architecture": "采用潜在世界优先的方法构建任务环境。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更复杂的任务环境。",
+        "key_contributions": [
+          "提出Tev-Gym数据集",
+          "引入进度潜力奖励塑造（PPRS）",
+          "提供验证、密集和渐进奖励的长时程智能体训练环境"
+        ],
+        "application_scenarios": [
+          "自动化发现",
+          "递归自我改进"
+        ],
+        "technical_highlights": [
+          "潜在世界优先构建方法",
+          "进度潜力奖励塑造（PPRS）"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.18774",
+      "source": "huggingface",
+      "title": "GreenWAM: A World Foundation Model for Robotics",
+      "authors": [
+        "Gennady Sidorov",
+        "Valerii Kornilov",
+        "Denis Grankin",
+        "Polina Fedotova",
+        "Aleksey Postnikov"
+      ],
+      "abstract": "A robot needs a world model that predicts how its actions will change the scene and a policy that chooses those actions. Models are usually built and evaluated for only one of these roles, and every robot records its actions in its own format. We ask whether one robot world model can serve both roles across different bodies, and what makes this work. We present GreenWAM, a world foundation model for robotics, together with the recipe that produces it: (1) a shared anatomical action space that describes 20 robot families, from bimanual arms to dexterous humanoids, in common joint coordinates; (2) joint training on these families in visual, action-conditioned and world-action modes; and (3) policies that split an action expert off the generator. As a world model, GreenWAM attains top-tier trajectory, depth and 3D accuracy on WorldArena 1.0, ahead of every world-action model and video generator in our comparison. As a policy, it scores among the top entries of the RoboTwin 2.0 leaderboard, reaches the highest zero-shot LIBERO-plus success among the compared methods and is competitive with dedicated vision-language-action and world-action policies on CALVIN and LIBERO. We further adapt GreenWAM to a real humanoid, where it succeeds more often than policies adapted from π_{0.5} and from Cosmos 3 Edge, and distill it into a single-step policy for real-time control. Controlled experiments yield three findings: robot specialization improves world prediction and control together; an action expert helps when split off at the start of adaptation; and keeping world-model modes during policy adaptation preserves robustness to scene changes.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.18774",
+      "pdf_url": "https://arxiv.org/pdf/2610.18774",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18774",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 82,
+      "hot_score": 820,
+      "structured_summary": {
+        "chinese_title": "GreenWAM：机器人领域的世界基础模型",
+        "chinese_summary": "GreenWAM 是一种适用于不同机器人身体的世界基础模型，能够同时作为世界模型和策略使用。",
+        "pain_point": "现有机器人模型通常只为单一角色设计，且每台机器人记录动作的方式不同。",
+        "core_value": "GreenWAM 能够在不同机器人身体上通用，提高了机器人模型的灵活性和效率。",
+        "technical_architecture": "GreenWAM 采用共享解剖动作空间和多模式联合训练方法。",
+        "quantitative_results": "在 WorldArena 1.0 上，GreenWAM 在轨迹、深度和 3D 准确度方面表现最佳。",
+        "competitors": "对比了其他世界动作模型和视频生成器，GreenWAM 表现最佳。",
+        "limitations": "未来需要进一步探索 GreenWAM 在更多复杂场景中的应用。",
+        "key_contributions": [
+          "提出了一种适用于不同机器人身体的世界基础模型",
+          "实现了世界模型和策略的通用性",
+          "通过共享解剖动作空间和多模式联合训练提高了模型性能"
+        ],
+        "application_scenarios": [
+          "通用机器人控制",
+          "多机器人协作"
+        ],
+        "technical_highlights": [
+          "共享解剖动作空间描述多种机器人类型",
+          "多模式联合训练提高模型泛化能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.18860",
+      "source": "huggingface",
+      "title": "AesCode: Aesthetic Code Generation with Decoupled Cross-Modal Rewards",
+      "authors": [
+        "Xin Gao",
+        "Yifan Yang",
+        "Xin Li",
+        "Pan Wang",
+        "Yan Li",
+        "Muzhao Tian",
+        "Mingxi Cheng",
+        "Bei Liu",
+        "Kai Qiu",
+        "Qi Dai",
+        "Dong Chen",
+        "Yue Dong",
+        "Leandros Tassiulas",
+        "Rex Ying",
+        "Ji Li",
+        "Chong Luo"
+      ],
+      "abstract": "Generating information-rich visual artifacts such as slides, posters, and dashboards as code is appealing because the outputs are structured, editable, and verifiable. Yet code models cannot see how their choices of layout and color come together on the canvas, often limiting spatial planning and aesthetic quality. Image generators excel at visual design but can misrender requested content, making their outputs unreliable targets for direct reproduction. We therefore introduce AesCode, which generates code grounded in the content prompt while using an image generated from the same prompt as an aesthetic guidance. To do so, AesCode represents the target as a design graph that describes the whole canvas and makes each property attributable. From this graph, we derive complementary cross-modal rewards: deterministic verifiers score properties parsable from code and rendering, while a VLM judge assesses the non-parsable ones with a sample-specific Visual Graph Rubric (VGR) tied to graph elements and relations. We optimize these decoupled rewards through reinforcement learning with per-channel normalization to jointly improve spatial planning, aesthetic quality, and verifiable correctness. To evaluate this setting, we build a benchmark that scores verifiable correctness and visual quality separately, with visual scores highly consistent with human judgments. We find that reference images substantially improve the visual quality of code generated by existing models, and ablations show that AesCode benefits from references both as model input and as a source of visual rewards. Relative to same-scale Qwen3-VL baselines given the same references, AesCode-8B and AesCode-32B improve visual quality by 31.1 and 22.4 percentage points, reaching scores comparable to those of closed-source frontier models such as GPT-5.5 and Claude Opus 4.8.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.18860",
+      "pdf_url": "https://arxiv.org/pdf/2610.18860",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18860",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 80,
+      "hot_score": 800,
+      "structured_summary": {
+        "chinese_title": "AesCode: 基于解耦跨模态奖励的美学代码生成",
+        "chinese_summary": "AesCode 通过解耦跨模态奖励生成美学代码，提升空间规划和美学质量。",
+        "pain_point": "现有代码模型难以实现高质量的视觉布局和美学效果。",
+        "core_value": "通过解耦跨模态奖励优化美学代码生成，提升生成质量。",
+        "technical_architecture": "使用设计图表示目标，并通过解耦奖励进行优化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证在大规模数据集上的表现。",
+        "key_contributions": [
+          "提出了解耦跨模态奖励机制",
+          "设计了基于设计图的美学代码生成方法"
+        ],
+        "application_scenarios": [
+          "代码生成",
+          "可视化设计"
+        ],
+        "technical_highlights": [
+          "使用设计图描述整个画布",
+          "引入了样本特定的视觉图谱评分标准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.14224",
+      "source": "huggingface",
+      "title": "Harness^2: Recursive Agent Harnessing for an Open World",
+      "authors": [
+        "Ruiyao Xu",
+        "Yanfei Chen",
+        "Zhongying CuiZhu",
+        "Bhavana Dalvi Mishra",
+        "Yifei Ming",
+        "Han Yu",
+        "Rujun Han",
+        "Chen-Yu Lee",
+        "Tomas Pfister"
+      ],
+      "abstract": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected levels of recursion. Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step that reliably guides edits without ground-truth verifiers, and can be scaled further via parallel or sequential recursion. Harnessing-level recursion then extracts experience from these edits to update a continual improvement harness, enabling the agent to better adapt to future tasks. Across three professional benchmarks and four model-harness configurations, a single step consistently improves GLM-5 and Gemini 3.5 Flash over their base harnesses, yielding gains of up to 11.5 points on WorkBuddy-Bench, 4.5 points on JobBench, and 11.8 percentage points on LAB, with further gains as the task-level recursion budget increases.",
+      "published_date": "2026-10-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.14224",
+      "pdf_url": "https://arxiv.org/pdf/2610.14224",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.14224",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 77,
+      "hot_score": 770,
+      "structured_summary": {
+        "chinese_title": "Harness^2: 开放世界中递归代理引导的框架",
+        "chinese_summary": "通过两层递归解决开放世界中代理引导的挑战，提高模型适应性。",
+        "pain_point": "开放世界任务在设计阶段未见过，且缺乏可靠的验证器；RSI 过程任务特定，难以泛化。",
+        "core_value": "提出 Harness^2 框架，通过任务级和代理级递归解决上述问题，提升模型适应未来任务。",
+        "technical_architecture": "采用任务级和代理级递归，通过 Propose-Probe-Compose 步骤自适应地改进代理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在三个专业基准和四种模型-引导配置上进行了实验。",
+        "key_contributions": [
+          "提出 Harness^2 框架",
+          "任务级和代理级递归机制",
+          "Propose-Probe-Compose 步骤"
+        ],
+        "application_scenarios": [
+          "专业任务适应",
+          "模型自适应"
+        ],
+        "technical_highlights": [
+          "递归自适应改进",
+          "无验证器的可靠编辑"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.16794",
+      "source": "huggingface",
+      "title": "TPPO: Tracking-Value PPO For Language Model Reasoning",
+      "authors": [
+        "Futing Wang",
+        "Chenxi Li",
+        "Jianhao Yan",
+        "Yun Luo",
+        "Zhi Wang",
+        "Yizhuo Li",
+        "Runzhe Zhan",
+        "Yu Cheng",
+        "Tao Lin"
+      ],
+      "abstract": "Proximal Policy Optimization (PPO) is widely used in reinforcement learning with verifiable rewards for language-model reasoning. While value evolution along trajectory characterizes relative token-level credit, yet standard critics often fail to track it under sparse terminal rewards. To model this evolution, we analyze the relation between successive prefix values and show that they admit a Bayesian decomposition with additive updates in log-odds space. We use this additive structure to construct Tracking-Value PPO (\\method), a cumulative value parameterization that sums position-wise scalar outputs into value logits. These outputs are learned through terminal-outcome supervision on the reconstructed values. \\method improves aggregate mathematical reasoning scores over PPO by 7.0 and 8.4 points on Qwen3-4B-Base and Qwen3-8B-Base, respectively, while improving out-of-distribution generalization. Gains extend to Qwen3-4B, Qwen2.5-Math-1.5B, Qwen3.5-9B and to countdown, and scientific coding tasks. Further analysis shows more accurate tracking of value evolution and more reliable advantage estimates. Our code is publicly available in https://github.com/LINs-lab/TPPO.",
+      "published_date": "2026-10-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.16794",
+      "pdf_url": "https://arxiv.org/pdf/2610.16794",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.16794",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 72,
+      "hot_score": 720,
+      "structured_summary": {
+        "chinese_title": "TPPO：用于语言模型推理的追踪值PPO",
+        "chinese_summary": "TPPO 提高了数学推理和泛化能力，特别是在 Qwen 模型上。",
+        "pain_point": "标准批评家在稀疏终端奖励下无法准确追踪值演化。",
+        "core_value": "通过追踪值演化改进了 PPO，增强了数学推理和泛化能力。",
+        "technical_architecture": "提出了基于贝叶斯分解的追踪值 PPO 方法。",
+        "quantitative_results": "TPPO 在 Qwen3-4B-Base 和 Qwen3-8B-Base 上分别提高了 7.0 和 8.4 分的数学推理分数。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多模型和任务上验证效果。",
+        "key_contributions": [
+          "提出了追踪值 PPO 方法",
+          "改进了 PPO 的数学推理和泛化能力"
+        ],
+        "application_scenarios": [
+          "数学推理任务",
+          "科学编程任务"
+        ],
+        "technical_highlights": [
+          "基于贝叶斯分解的追踪值演化",
+          "通过终端结果监督学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.14709",
+      "source": "huggingface",
+      "title": "Vela: User Behavior as Supervision Sparks LLM Intelligence",
+      "authors": [
+        "Yang Xiao",
+        "Yusong Sun",
+        "Haoyi Wu",
+        "Wenyang Hui",
+        "Weiqiang Hang",
+        "Luqing Wang",
+        "Zejian Wang",
+        "Zirui Tu",
+        "Jingsheng Mao",
+        "Shaobo Hu",
+        "Yang Luo",
+        "Jiale Guo",
+        "Jin Zhang",
+        "Yudan Liu",
+        "Zhaokai Luo",
+        "Ren Huan",
+        "Yao Hu",
+        "Chengyue Jiang",
+        "Wenjie Li",
+        "Chuan Mu"
+      ],
+      "abstract": "Large language models are increasingly deployed in applications that act on users' long-term behavior histories, from personal assistants to recommendation and advertising systems. These applications demand the user dimension of LLM intelligence: inferring a person's preferences, intent, and likely future actions from weeks to years of behavior data. Yet current models are trained on static text or synthetic data, neither of which captures how user behavior evolves over time. Real-world behavior records, already available at scale on content platforms and in personal-assistant agents, offer a natural supervisory signal. We propose user behavior as supervision and introduce Vela, a framework that converts real user behavior data into trainable tasks and trajectories. From the anonymized behavior records of 100,000 users, Vela generates 100,000 tasks across 91 real-world task templates; difficulty-based filtering and trajectory acceptance criteria retain approximately 75,000 tasks with selected training trajectories. Fine-tuning Qwen3.6-35B-A3B on these trajectories improves performance over the base model by up to 11.5 points on user-related tasks and by an average of 4 points on general benchmarks. Training on more user behavior data further improves user-related performance, and reinforcement learning after fine-tuning outperforms reinforcement learning from the base model by up to 7.7 points. These gains suggest that real-world user behavior is a scalable source of supervision for both user-centered capabilities and the broader intelligence of LLMs.",
+      "published_date": "2026-10-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.14709",
+      "pdf_url": "https://arxiv.org/pdf/2610.14709",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.14709",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 69,
+      "hot_score": 690,
+      "structured_summary": {
+        "chinese_title": "Vela：用户行为作为监督激发大语言模型智能",
+        "chinese_summary": "通过用户行为数据训练大语言模型，显著提升其在用户相关任务上的表现。",
+        "pain_point": "现有模型无法有效利用用户长期行为数据来推断用户偏好和未来行为。",
+        "core_value": "利用用户行为数据作为监督信号，提升大语言模型在用户相关任务上的性能。",
+        "technical_architecture": "提出Vela框架，将用户行为数据转化为可训练的任务和轨迹。",
+        "quantitative_results": "在用户相关任务上性能提升11.5分，平均提升4分。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于部分用户行为数据，未来需扩大数据规模。",
+        "key_contributions": [
+          "提出用户行为作为监督信号的方法",
+          "构建Vela框架将行为数据转化为训练任务"
+        ],
+        "application_scenarios": [
+          "个人助手",
+          "推荐系统",
+          "广告系统"
+        ],
+        "technical_highlights": [
+          "自动化任务和轨迹生成",
+          "难度过滤和轨迹接受准则"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

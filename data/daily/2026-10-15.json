@@ -1,0 +1,583 @@
+{
+  "date": "2026-10-15",
+  "generated_at": "2026-10-16T01:02:32.924489+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.20571",
+      "source": "huggingface",
+      "title": "Any Time, Any Space: A World-State-Centric Framework for Agentic Video Generation",
+      "authors": [
+        "Weijie Wang",
+        "Haomin Zhang",
+        "Ye Li",
+        "Akide Liu",
+        "Zeyu Zhang",
+        "Haoyu Zhao",
+        "Yefei He",
+        "Donny Y. Chen",
+        "Feng Chen",
+        "Bohan Zhuang"
+      ],
+      "abstract": "Long-form agentic video generation must turn a screenplay into shots that remain spatially and temporally consistent across nonconsecutive requests. Passing prompts or recent frames between shots does not provide a shared spatial frame for revisiting a scene or a time-indexed record for replaying an earlier event. We present Any Time, Any Space (ATAS), which compiles a screenplay into shot requests with explicit location, camera, and event-time references. Before generation, it retrieves relevant evidence from a scene memory of registered static geometry and an event memory of dynamic observations indexed by scene, event, and time. After generation, ATAS reconstructs and registers the clip. It updates memory only when review and state checks accept the observation, while film delivery remains independent of memory admission. Across four video generators, ATAS improves all reported cross-shot consistency measures and achieves the highest aggregate benchmark score for each backbone. It also outperforms the compared agents and 3D-guided methods on target-image spatial revisit, leads three event-recapture criteria, and receives the highest human ratings on all six criteria. The video results and code are available on our project page: https://lhmd.top/atas/.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20571",
+      "pdf_url": "https://arxiv.org/pdf/2610.20571",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20571",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 324,
+      "hot_score": 3240,
+      "structured_summary": {
+        "chinese_title": "任意时间，任意空间：基于世界状态的有机构建视频生成框架",
+        "chinese_summary": "ATAS 提高了跨镜头一致性并获得了最高的人类评分。",
+        "pain_point": "现有方法无法在不连续请求中保持场景和时间的一致性。",
+        "core_value": "通过引入明确的空间和时间参考，提高了视频生成的质量。",
+        "technical_architecture": "ATAS 通过场景记忆和事件记忆来检索相关证据。",
+        "quantitative_results": "在四个视频生成器上，ATAS 提高了所有跨镜头一致性指标。",
+        "competitors": "优于对比的代理和 3D 引导方法。",
+        "limitations": "未来可以探索更多应用场景。",
+        "key_contributions": [
+          "引入明确的空间和时间参考",
+          "提高跨镜头一致性",
+          "获得最高人类评分"
+        ],
+        "application_scenarios": [
+          "长视频生成",
+          "视频编辑"
+        ],
+        "technical_highlights": [
+          "检索相关证据",
+          "独立于记忆的影片交付"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20584",
+      "source": "huggingface",
+      "title": "Player-1: Learning to Play from Synthetic Experience",
+      "authors": [
+        "Mingyu Ouyang",
+        "Yiran Wang",
+        "Siyuan Hu",
+        "Xingyilang Yin",
+        "Huiqiang Sun",
+        "Guangzhi Wang",
+        "Junfu Pu",
+        "Cheng Cheng",
+        "Honghao Chen",
+        "Ying Shan",
+        "Mike Zheng Shou",
+        "Hwee Tou Ng"
+      ],
+      "abstract": "Computer-use agents have demonstrated strong capabilities in interpreting screens and executing keyboard and mouse actions. However, games, with their visually rich worlds and diverse mechanics, remain challenging and offer a demanding next step toward general digital control. Current game-agent learning pipelines often rely on large-scale demonstrations with limited coverage of dynamic game states, while scalable environments for interactive training remain difficult to obtain. We introduce Player-1, a post-training framework for learning game control beyond demonstrations through synthetic experience. We extend the computer-use action space with relative pointer motion, sustained inputs, and composite actions. For supervised initialization, we fine-tune computer-use models on 6,044 curated gameplay trajectories that pair recorded actions with task instructions and visual reasoning. We construct Player-1-Gym, sixteen synthetic 2D and 3D environments designed around control demands shared across games. Programmatically verifiable rewards and randomized observations and control dynamics support multi-environment reinforcement learning with PPO. The resulting Player-1-9B and Player-1-35B-A3B improve MineDojo-300 success over their SFT policies by 27.8 and 17.7 percentage points, respectively. Player-1-9B reaches 38.33% success compared with 12.63% for the strongest evaluated baseline, with further gains over SFT on ViZDoom-10 and GameWorld. Further analyses show that broader synthetic environment coverage improves transfer, while the use of composite actions that combine multiple keyboard and mouse inputs increases during RL. We demonstrate that learning from synthetic experience substantially improves game control beyond supervised initialization, with gains that generalize beyond the RL training suite.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20584",
+      "pdf_url": "https://arxiv.org/pdf/2610.20584",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20584",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 271,
+      "hot_score": 2710,
+      "structured_summary": {
+        "chinese_title": "Player-1: 学习从合成经验中玩游戏",
+        "chinese_summary": "通过合成经验学习游戏控制，提高游戏智能体在动态游戏状态下的表现。",
+        "pain_point": "现有游戏智能体学习框架依赖于有限的演示数据，难以应对多样化的游戏状态。",
+        "core_value": "通过合成经验扩展智能体的动作空间，支持多环境强化学习。",
+        "technical_architecture": "引入合成游戏环境和相对指针运动等技术扩展动作空间。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "合成环境可能与真实游戏环境存在差异。",
+        "key_contributions": [
+          "扩展智能体的动作空间",
+          "构建合成游戏环境",
+          "支持多环境强化学习"
+        ],
+        "application_scenarios": [
+          "游戏智能体训练",
+          "通用数字控制"
+        ],
+        "technical_highlights": [
+          "引入相对指针运动和复合动作",
+          "构建Player-1-Gym环境"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.13521",
+      "source": "huggingface",
+      "title": "Beyond Domain-Routed Supervision: Cross-Teacher Guarding for Multi-Teacher On-Policy Distillation",
+      "authors": [
+        "Shi-Yu Tian",
+        "Yong Liu",
+        "Ximan Liu",
+        "Tianrui Zhu",
+        "Sule Bai",
+        "Xinwei Yang",
+        "Ruiqi Liu",
+        "Kun-Yang Yu",
+        "Ming Yang",
+        "Zhi Zhou",
+        "Yu-Feng Li",
+        "Yipeng Sun",
+        "Gu Simiu"
+      ],
+      "abstract": "Multi-teacher on-policy distillation (MOPD) extends on-policy distillation (OPD) by routing domain-specific data to specialized teachers, integrating their capabilities through dense token-level supervision on student-generated trajectories. However, domain routing only distinguishes the supervision sources for different domains; updates from all domains still act on shared parameters. When teachers differ substantially in response style and domain expertise, supervision that is effective in isolation may still lead to persistent gradient conflicts and capability degradation during joint optimization. To address this challenge, we propose Cross-Teacher Guarding for MOPD (Road MOPD), which introduces non-routed teachers as auxiliary cross-domain critics on the same student trajectories and coordinates multi-teacher supervision through token-level credit assignment and gradient updates. Specifically, cross-teacher-guided credit assignment uses teacher agreement to strengthen token-level corrections jointly supported by the teachers and attenuate conflicting signals; preventive multi-teacher gradient projection uses auxiliary gradients from the same trajectories to constrain potentially conflicting updates and adaptively controls projection strength to retain target-domain learning signals. In experiments, Road MOPD mitigates degradation in the disadvantaged domain, gains over 5 percentage points under high conflict, and improves overall performance in low-conflict and three-domain settings.",
+      "published_date": "2026-10-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.13521",
+      "pdf_url": "https://arxiv.org/pdf/2610.13521",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.13521",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 233,
+      "hot_score": 2330,
+      "structured_summary": {
+        "chinese_title": "超越领域导向监督：多教师跨教师保护在多教师在线策略蒸馏中的应用",
+        "chinese_summary": "通过引入非导向教师作为辅助跨领域批评家，Road MOPD协调多教师监督，解决监督冲突问题。",
+        "pain_point": "当教师在响应风格和领域专长上存在显著差异时，独立有效的监督在联合优化中仍可能导致持续的梯度冲突和能力退化。",
+        "core_value": "Road MOPD通过引入非导向教师和协调多教师监督，有效解决了多教师在线策略蒸馏中的监督冲突问题。",
+        "technical_architecture": "Road MOPD通过教师一致性的跨教师指导信用分配和预防性多教师梯度投影，协调多教师监督。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更广泛的场景下验证Road MOPD的有效性。",
+        "key_contributions": [
+          "提出了一种新的多教师监督协调方法——跨教师保护",
+          "通过教师一致性增强了跨教师指导信用分配",
+          "使用辅助梯度约束潜在冲突"
+        ],
+        "application_scenarios": [
+          "强化学习中的策略蒸馏",
+          "多领域强化学习任务"
+        ],
+        "technical_highlights": [
+          "引入非导向教师作为辅助批评家",
+          "通过教师一致性增强监督协调"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20344",
+      "source": "huggingface",
+      "title": "Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents",
+      "authors": [
+        "Yuyao Ge",
+        "Shenghua Liu",
+        "Peizhong Gao",
+        "Chendi Ge",
+        "Chenxu Liu",
+        "Yiwei Wang",
+        "Lingrui Mei",
+        "Baolong Bi",
+        "Jiayu Yao",
+        "Jiafeng Guo",
+        "Xueqi Cheng"
+      ],
+      "abstract": "Agents driven by large language models are increasingly deployed on long-horizon tasks, where they use tools and modify real workspaces. How well they perform depends as much on the harness around the model as on the model itself. Existing benchmarks measure downstream task success under a fixed harness, leaving harness engineering itself unexplored. We propose Doc2Harness, a two-stage benchmark that evaluates long-horizon harness engineering directly. In Stage 1, a build model operating inside a fixed builder harness receives an interface-only contract skeleton and a development document that consolidates behavior across twelve frontier harnesses, and then constructs a complete candidate harness in an isolated container. In Stage 2, the frozen candidate harness runs in containers separate from the construction environment, one per test case, and is driven end to end by a scripted mock model. We score each test case using four observable channels, namely the requests sent to the model, the files on disk, the process exit code, and the command output; positive controls rule out vacuous passes. Across nineteen frontier models, each evaluated with three independent builds on 328 test cases, GPT-6 Astra achieves the highest pass rate at 53.05%, while the weakest model reaches 27.44%, a gap of roughly twenty-six percentage points. Even the strongest model fails nearly half of the test cases, and failures cluster around how cross-cutting functionality is split across modules. To our knowledge, Doc2Harness provides the first deterministic benchmark for measuring long-horizon harness engineering.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20344",
+      "pdf_url": "https://arxiv.org/pdf/2610.20344",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20344",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 93,
+      "hot_score": 930,
+      "structured_summary": {
+        "chinese_title": "Doc2Harness: 评估编码代理长期任务框架工程的基准",
+        "chinese_summary": "直接评估长期任务框架工程，填补现有基准的空白。",
+        "pain_point": "现有基准仅评估下游任务成功，忽视了框架工程的重要性。",
+        "core_value": "首次直接评估框架工程，提供全面的模型性能评估。",
+        "technical_architecture": "两阶段评估框架，包括构建模型和测试模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了部分模型，未来需扩展评估范围。",
+        "key_contributions": [
+          "提出Doc2Harness基准",
+          "直接评估长期任务框架工程",
+          "使用多阶段评估方法"
+        ],
+        "application_scenarios": [
+          "评估大型语言模型驱动的代理在长期任务中的性能",
+          "促进框架工程的最佳实践"
+        ],
+        "technical_highlights": [
+          "两阶段评估框架",
+          "使用隔离容器进行测试"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20572",
+      "source": "huggingface",
+      "title": "Recovering Reliable Supervision via Critique-Guided On-Policy Distillation",
+      "authors": [
+        "Kaixiang Zhao",
+        "Tianrun Yu",
+        "Shangzhe Li",
+        "Yuxiao Yang",
+        "Amanda Hughes",
+        "Weitong Zhang",
+        "Taylor W. Killian"
+      ],
+      "abstract": "On-policy distillation (OPD) trains a student model on its own rollouts with token-level supervision from a teacher, assuming that the teacher can reach a correct answer from any prefix the student writes. We call this property the recoverability of the teacher and show it fails on incorrect rollouts: the teacher follows student errors, although it recognizes them. We propose CriticOPD, using error recognition to restore recoverability. The teacher critiques an incorrect rollout, allowing the student to rewrite its solution following the error. The resulting output, including the critique as privileged information, is scored by the teacher while the student uses the revision without the critique for training. On two Qwen3 students and six mathematical reasoning benchmarks, CriticOPD improves OPD, with the largest gains on competition problems.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20572",
+      "pdf_url": "https://arxiv.org/pdf/2610.20572",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20572",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 73,
+      "hot_score": 730,
+      "structured_summary": {
+        "chinese_title": "通过批评导向的在线策略蒸馏恢复可靠的监督",
+        "chinese_summary": "通过引入错误识别，CriticOPD 改进 OPD，显著提升学生模型在数学推理任务上的表现。",
+        "pain_point": "现有在线策略蒸馏方法在错误样本上无法恢复教师的正确性。",
+        "core_value": "通过教师的错误识别，CriticOPD 恢复了教师的可靠性和学生模型的性能。",
+        "technical_architecture": "CriticOPD 通过教师对错误样本的批评，引导学生修正错误。",
+        "quantitative_results": "CriticOPD 在两个 Qwen3 学生和六个数学推理基准上优于 OPD，特别是在竞赛问题上。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在数学推理任务上进行了验证。",
+        "key_contributions": [
+          "提出 CriticOPD，通过错误识别恢复教师的可靠性和学生模型的性能",
+          "在数学推理任务上显著提升学生模型的表现"
+        ],
+        "application_scenarios": [
+          "在线策略蒸馏",
+          "数学推理任务"
+        ],
+        "technical_highlights": [
+          "引入教师错误识别机制",
+          "改进在线策略蒸馏方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.19789",
+      "source": "huggingface",
+      "title": "More Methods, Better Agents? A Reality Check on Self-Distillation in Agentic Reinforcement Learning",
+      "authors": [
+        "Linhao Zhong",
+        "Bozhen Fang",
+        "Xuehao Wang",
+        "Duochao Shi",
+        "Zekai Luo",
+        "Guangming Yao",
+        "Yi Yuan",
+        "Hao Chen",
+        "Jingdong Chen",
+        "Chunhua Shen"
+      ],
+      "abstract": "Self-distillation in agentic reinforcement learning has produced a growing number of methods. However, existing evaluations often reuse published baseline scores under differing experimental conditions, provide few direct comparisons among contemporaneous methods, and give limited attention to training stability and computational cost. These limitations obscure the source of reported gains and the practical strengths and weaknesses of competing methods. Costly agent training further motivates a common basis for comparison. To address these gaps, we compare ten representative methods against GRPO on ALFWorld, ScienceWorld, Search-QA, and WebShop across three model sizes. Our study comprises 132 training runs totaling 12,124.4 recorded H800 GPU-hours, with repeated evaluations over eight rollout seeds for the pretrained backbones and all eleven trained methods. Beyond final task performance, we examine training progress, stability, and measured computational cost. Our evaluation yields three key findings. First, gains over GRPO remain limited in scope, with no method consistently outperforming it across settings. Second, strong final performance can mask unstable training. Third, additional training cost does not consistently translate into better performance. We establish this benchmark to support fair, comprehensive comparison and guide future research toward reliable and cost-effective improvements in agent training. Project page: https://aim-uofa.github.io/Self-Distillation-AgentRL/",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.19789",
+      "pdf_url": "https://arxiv.org/pdf/2610.19789",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.19789",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 72,
+      "hot_score": 720,
+      "structured_summary": {
+        "chinese_title": "更多方法，更好的代理？关于代理强化学习中自我蒸馏的现实检查",
+        "chinese_summary": "自我蒸馏在代理强化学习中产生了大量方法，但现有评估存在局限性。",
+        "pain_point": "现有评估方法存在局限性，难以清晰展示各方法的实际优劣。",
+        "core_value": "通过全面对比，揭示各方法的实际性能和稳定性。",
+        "technical_architecture": "使用ALFWorld等环境进行多模型大小的对比实验。",
+        "quantitative_results": "132次训练运行，12,124.4 H800 GPU小时。",
+        "competitors": "对比GRPO等基线方法。",
+        "limitations": "实验成本高，未来需探索更经济的评估方法。",
+        "key_contributions": [
+          "揭示自我蒸馏方法的实际性能",
+          "强调最终性能与训练稳定性之间的关系",
+          "提供全面的对比分析"
+        ],
+        "application_scenarios": [
+          "代理强化学习",
+          "多模型大小的对比实验"
+        ],
+        "technical_highlights": [
+          "大规模实验验证",
+          "多环境对比"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.19975",
+      "source": "huggingface",
+      "title": "LatentLoop: Scaling Looped MoE Models with Asymmetric Compute Allocation",
+      "authors": [
+        "Zefeng He",
+        "Yunkai Chai",
+        "Xiaoyang Chen",
+        "Tong Zhu",
+        "Zongliang Wu",
+        "Yun Luo",
+        "Yafu Li",
+        "Yu Cheng"
+      ],
+      "abstract": "Looped Mixture-of-Experts (MoE) models combine parameter reuse with sparse computation to improve performance under matched budgets. Prior work demonstrates that different loop visits can play different roles even when they share parameters. To probe the contributions of different loop visits, we learn separate residual coefficients in a model that applies a shared block twice, observing a smaller scale in the first visit. Fixed coefficient experiments show that reducing the first visit's scale preserves or improves performance, whereas the same reductions to the second hurt it. This asymmetry motivates us to explore asymmetric compute allocation. We propose LatentLoop, which compresses the first visit's sequence, retains full resolution in the second, and reallocates saved computation to increase the hidden size. We further learn how strongly the first visit updates the full sequence, and share MoE weights across visits while using separate attention parameters to accommodate their different sequence resolutions. Across 15 configurations spanning 1.3B--7B parameters, with the largest budget exceeding 10^{21} FLOPs, LatentLoop consistently lowers validation NLL. At a fitted NLL of 1.988, predicted compute savings are 19.0\\% and 7.9\\% relative to vanilla MoE and the looped baseline. It also improves average scores on nine benchmarks at all sizes in 0-shot and 5-shot settings. These results suggest asymmetric compute allocation is a promising direction for looped MoE models.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.19975",
+      "pdf_url": "https://arxiv.org/pdf/2610.19975",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.19975",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 64,
+      "hot_score": 640,
+      "structured_summary": {
+        "chinese_title": "LatentLoop: 扩展循环MoE模型的非对称计算分配",
+        "chinese_summary": "通过非对称计算分配提高循环MoE模型性能",
+        "pain_point": "循环MoE模型中不同循环访问的角色不同，导致性能优化困难。",
+        "core_value": "提出LatentLoop，通过非对称计算分配提升模型性能。",
+        "technical_architecture": "压缩第一访问序列，保留第二访问全分辨率，并重新分配节省的计算量以增加隐藏层大小。",
+        "quantitative_results": "在1.3B至7B参数的15种配置中，LatentLoop始终降低验证NLL。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多应用场景。",
+        "key_contributions": [
+          "提出非对称计算分配方法",
+          "优化循环MoE模型性能"
+        ],
+        "application_scenarios": [
+          "大规模语言模型",
+          "推荐系统"
+        ],
+        "technical_highlights": [
+          "非对称计算分配",
+          "保留全分辨率的第二访问"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20399",
+      "source": "huggingface",
+      "title": "Cortex: Consolidating Context into Parametric Memory",
+      "authors": [
+        "Jintian Zhang",
+        "Feng He",
+        "Xinnian Liang",
+        "Ziwen Xu",
+        "Haoming Xu",
+        "Haojing Huang",
+        "Shuangzhi Wu",
+        "Ningyu Zhang"
+      ],
+      "abstract": "Context can improve large language model performance, but these gains may be lost after context removal. Inspired by biological systems consolidation, we formulate Memory Consolidation (MC) as internalizing these gains while preserving non-target capabilities, connecting context-specified editing, skill learning, and behavioral steering under a common objective. We introduce a five-task-family testbed measuring consolidation and retention under single, batch, and sequential updates. We propose Cortex, which generates prospective queries to anticipate uses of context and distills context-conditioned outputs into mergeable low-rank or structural feed-forward network updates. Across 4B--120B dense and mixture-of-experts backbones, including both text-only and multimodal models, Cortex lies on the empirical consolidation--retention Pareto frontier in most evaluated settings. After 50 sequential factual edits on a 14B model, Cortex-Structural recovers 88.9% of the context-induced gain while retaining 99.8% of original non-target performance.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20399",
+      "pdf_url": "https://arxiv.org/pdf/2610.20399",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20399",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 63,
+      "hot_score": 630,
+      "structured_summary": {
+        "chinese_title": "Cortex: 合并上下文至参数化记忆",
+        "chinese_summary": "Cortex 通过生成前瞻查询并提炼上下文条件输出，实现了上下文诱导性能的保留和非目标性能的保持。",
+        "pain_point": "上下文移除后，大型语言模型的性能提升会丢失。",
+        "core_value": "通过记忆巩固，Cortex 实现了上下文诱导性能的保留和非目标性能的保持。",
+        "technical_architecture": "Cortex 通过生成前瞻查询并提炼上下文条件输出，实现参数化记忆更新。",
+        "quantitative_results": "在 4B-120B 参数量的模型上，Cortex 在大多数评估设置中位于经验巩固-保留帕累托前沿。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多应用场景。",
+        "key_contributions": [
+          "提出了记忆巩固的概念",
+          "设计了前瞻查询生成机制",
+          "实现了上下文条件输出的提炼"
+        ],
+        "application_scenarios": [
+          "大型语言模型的上下文依赖任务",
+          "需要保留非目标性能的多模态模型"
+        ],
+        "technical_highlights": [
+          "提出了一种新的参数化记忆更新方法",
+          "展示了在多种模型上的广泛适用性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.19820",
+      "source": "huggingface",
+      "title": "ActionOPD: Distilling Decisions, Not Tokens",
+      "authors": [
+        "Huining Yuan",
+        "Xiangmin Yi",
+        "Zelai Xu",
+        "Zixu Wang",
+        "Xinlei Chen",
+        "Xiao-Ping Zhang",
+        "Yu Wang",
+        "Chao Yu"
+      ],
+      "abstract": "Distilling capable language-model agents into smaller models requires aligning the student's behavior with the teacher's. This raises a fundamental question: at which states and at what granularity should this alignment be performed? Offline imitation provides dense but token-specific supervision and can suffer from state-distribution mismatch. Token-level on-policy distillation (OPD) addresses this mismatch but typically requires teacher token probabilities and compatible tokenization. We argue that semantic actions provide a natural unit of supervision for agent distillation. We introduce ActionOPD, an action-level on-policy distillation method motivated by maximizing expected teacher-action likelihood at student-encountered states. At each such state, ActionOPD samples actions from both the student and a black-box teacher, rewarding student actions according to their semantic agreement with the sampled teacher actions. Through policy optimization, ActionOPD aligns the student's action-level behavior with the teacher's decisions without requiring reproduction of teacher-written reasoning or access to teacher token probabilities. Training Qwen3-4B and Qwen3-8B with two teachers on diverse, curated tool-use tasks yields average gains of 3.3-6.9 percentage points across four out-of-distribution benchmarks. ActionOPD scales favorably with student size and teacher capability, without requiring the teacher and student to share a model family or tokenizer. On τ^2-bench, ActionOPD achieves competitive performance against offline distillation and token-level OPD. We further explore Self-ActionOPD with a same-model teacher and privileged context. These results establish ActionOPD as a promising approach to agent distillation.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.19820",
+      "pdf_url": "https://arxiv.org/pdf/2610.19820",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.19820",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 53,
+      "hot_score": 530,
+      "structured_summary": {
+        "chinese_title": "ActionOPD: 提炼决策，而非标记",
+        "chinese_summary": "通过最大化学生遇到状态下教师决策的期望似然性，ActionOPD 提高了小模型与大模型行为的对齐。",
+        "pain_point": "现有方法在状态分布不匹配和需要教师标记概率方面存在局限。",
+        "core_value": "ActionOPD 通过使用语义动作作为监督单位，无需复制教师推理或访问标记概率，即可实现行为对齐。",
+        "technical_architecture": "ActionOPD 通过在学生遇到的状态上最大化教师决策的期望似然性，实现行为对齐。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了实验，未来需要更广泛的验证。",
+        "key_contributions": [
+          "提出了基于语义动作的决策级在线蒸馏方法",
+          "无需教师标记概率和兼容标记化",
+          "通过最大化期望教师决策似然性实现行为对齐"
+        ],
+        "application_scenarios": [
+          "语言模型代理的小型化",
+          "在线决策对齐"
+        ],
+        "technical_highlights": [
+          "使用语义动作作为监督单位",
+          "无需教师标记概率",
+          "通过最大化期望教师决策似然性实现对齐"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.19366",
+      "source": "huggingface",
+      "title": "Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory",
+      "authors": [
+        "Minghao Guo",
+        "Qingyue Jiao",
+        "Xiujin Liu",
+        "Jianhong Pang",
+        "Ruimeng Yang",
+        "Naihao Xu",
+        "Liwei Che",
+        "Haochen Xue",
+        "Ziqi Wang",
+        "Xinying Cai",
+        "Jiaxuan Luo",
+        "Jiaxin Deng",
+        "Xuesong Ye",
+        "Jintao Qu",
+        "Wenyao Gao",
+        "Jingwen Gu",
+        "Chenyang Zhao",
+        "Shichun Liu",
+        "Guibin Zhang",
+        "Zefang Liu",
+        "Siyin Wang",
+        "Wujiang Xu",
+        "Danrui Li",
+        "Zeru Shi",
+        "Woongyeong Yeo",
+        "Shuang Liu",
+        "Wei-Chieh Huang",
+        "Weizhi Zhang",
+        "Tianyu Yang",
+        "Kangsan Kim",
+        "Yebowen Hu",
+        "Bowen Wen",
+        "Bowen Jiang",
+        "Haohao Su",
+        "Ming Yin",
+        "Sheldon Yu",
+        "Mian Zhang",
+        "Yuyan Chen",
+        "Hanrong Zhang",
+        "Kai Mei",
+        "Zihao Zhang",
+        "Mingyu Jin",
+        "Xi Zhu",
+        "Hengyi Wang",
+        "Tianxin Wei",
+        "Linyong Nan",
+        "Zhenwen Liang",
+        "Zhendong Chu",
+        "Ziqi Huang",
+        "Yongye Su",
+        "Sixun Dong",
+        "Shujian Liu",
+        "Kaiqu Liang",
+        "Jiaojiao Han",
+        "Zhaoye Fei",
+        "Kun Wang",
+        "Shihan Dou",
+        "Zhichun Guo",
+        "Xingjian Diao",
+        "Zeqi Gu",
+        "Heng Wang",
+        "Tao Feng",
+        "Cheng Qian",
+        "Hamid Palangi",
+        "Silei Xu",
+        "Xi Yun",
+        "Yi Zhu",
+        "Shilong Liu",
+        "Qingsong Wen",
+        "Sung Ju Hwang",
+        "Zuxuan Wu",
+        "Yu-Gang Jiang",
+        "Yiyu Shi",
+        "Dimitris N. Metaxas",
+        "Jiaxuan You",
+        "Julian McAuley",
+        "Mengdi Wang",
+        "Jiawei Han",
+        "Philip S. Yu",
+        "Ziyi Ye"
+      ],
+      "abstract": "Multimodal models and agents have emerged to enable AI systems to learn from and interact with the real world more like humans by integrating information across multiple modalities. However, enabling multimodal agents to continually acquire useful information from complex, heterogeneous multimodal data remains a significant challenge as they move toward long-horizon tasks and lifelong settings. Addressing this challenge requires effective memory mechanisms that can maintain continuity across sessions, adapt to changing users and environments, and refine memory-management policies through accumulated experience. We introduce a two-axis analytical framework for multimodal agent memory structured around two key questions: how multimodal information is formed and represented (Axis I, Formation and Representation), and how its management adapts with accumulated experience (Axis II, Memory Management). Axis I, Formation and Representation, characterizes what information is retained and how it is encoded (e.g., modality-specific embeddings, textual and structured records, latent and parametric representations) to support subsequent reasoning and action. Axis II, Memory Management, distinguishes three tiers: T1 Static Memory reuses fixed memory; T2 Dynamic Memory updates memory through a stable policy; and T3 Self-Evolving Memory updates memory through an evolving policy. Based on this framework, we synthesize recurring design patterns and derive principles for balancing source fidelity with abstraction, maintaining temporal validity and provenance, grounding memory use in recoverable evidence, and evolving memory policies over time. Furthermore, we discuss the challenges and potential future directions for the memory mechanism of multimodal agents.",
+      "published_date": "2026-10-14T01:11:57.000Z",
+      "url": "https://arxiv.org/abs/2610.19366",
+      "pdf_url": "https://arxiv.org/pdf/2610.19366",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.19366",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 45,
+      "hot_score": 450,
+      "structured_summary": {
+        "chinese_title": "视觉、保持与学习：多模态智能体记忆的演变",
+        "chinese_summary": "提出了一种双轴分析框架，以解决多模态智能体在复杂异构数据中持续学习和适应的问题。",
+        "pain_point": "多模态智能体难以在长期任务和终身学习设置中有效保持和管理记忆。",
+        "core_value": "通过双轴分析框架，有效管理多模态信息的形成、表示及其随经验的管理。",
+        "technical_architecture": "提出了基于两个轴的分析框架，分别关注信息的形成与表示及记忆管理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证该框架在实际应用中的效果。",
+        "key_contributions": [
+          "提出了双轴分析框架",
+          "详细分析了多模态信息的形成与表示",
+          "探讨了记忆管理策略的适应性"
+        ],
+        "application_scenarios": [
+          "长期任务执行",
+          "终身学习环境"
+        ],
+        "technical_highlights": [
+          "双轴分析框架",
+          "多模态信息的表示与管理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

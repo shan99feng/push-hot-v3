@@ -1,0 +1,533 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-17T01:07:49.840955+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.18829",
+      "source": "huggingface",
+      "title": "OmniCompass: A Holistic Benchmark for Omni-Modal Video Grounding and Understanding",
+      "authors": [
+        "Xuyang Liu",
+        "Shihao Wang",
+        "Xinyu Wei",
+        "Minghan Li",
+        "Zeqing Wang",
+        "Zuhao Yang",
+        "Zichen Wen",
+        "Lei Zhang"
+      ],
+      "abstract": "With the rapid development of multimodal large language models (MLLMs), evaluating their video understanding capabilities has become increasingly important. Existing video understanding benchmarks cover only part of the evaluation dimensions, limiting systematic diagnosis of omni-modal video understanding. We introduce OmniCompass, a holistic benchmark for omni-modal video grounding and understanding. OmniCompass defines two evaluation tracks: OmniCompass-VL assesses vision-language models on tasks requiring visual evidence, while OmniCompass-AV assesses omni-modal models on tasks requiring joint audio-visual evidence. Each track includes three complementary tasks: temporal grounding (TG), spatial grounding (SG), and question answering (QA), assessing when a referenced target appears, where it is, and what happens. QA covers five perception and three reasoning categories in OmniCompass-VL, and three perception and two reasoning categories in OmniCompass-AV. OmniCompass-VL contains 820 videos and 2,460 instances across domains and three duration types: short, medium, and long. A narrative- and audio-rich subset forms OmniCompass-AV with 240 videos and 720 instances. Each instance is evaluated under two paired settings: text-only and text+image, specifying the same target through text and visual-language guidance. All instances are manually annotated with multi-round quality verification. Evaluations of 50 MLLMs show that open-source models still lag behind proprietary counterparts, particularly in audio-visual understanding. Precise temporal and spatial grounding remains challenging even for leading models, and their predictions still exhibit inconsistencies across the paired target specifications.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.18829",
+      "pdf_url": "https://arxiv.org/pdf/2610.18829",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18829",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 566,
+      "hot_score": 5660,
+      "structured_summary": {
+        "chinese_title": "OmniCompass: 全景多模态视频定位与理解综合基准",
+        "chinese_summary": "引入全景多模态视频定位与理解综合基准，评估多模态大语言模型的视频理解能力。",
+        "pain_point": "现有视频理解基准仅覆盖部分评估维度，无法系统诊断多模态视频理解能力。",
+        "core_value": "提供全面的多模态视频定位与理解评估，涵盖视觉、听觉证据任务。",
+        "technical_architecture": "定义两个评估轨道：视觉语言模型和联合视听模型，每个轨道包含三个任务。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅提供部分视频实例，未来可扩展更多数据。",
+        "key_contributions": [
+          "引入全景多模态视频综合基准",
+          "定义全面的评估轨道和任务"
+        ],
+        "application_scenarios": [
+          "多模态视频理解研究",
+          "多模态大语言模型评估"
+        ],
+        "technical_highlights": [
+          "定义视觉和视听证据任务",
+          "涵盖感知和推理类别"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.21601",
+      "source": "huggingface",
+      "title": "Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation",
+      "authors": [
+        "Bingxi Hou",
+        "Guochao Jiang",
+        "Guofeng Quan",
+        "Weiqing Li",
+        "Wenfeng Feng",
+        "Guohua Liu",
+        "Yuewei Zhang"
+      ],
+      "abstract": "Policy-shift distillation reuses the difference between a teacher's log probabilities before and after reinforcement learning (RL) as supervision on student-generated trajectories. However, this endpoint policy shift cannot reveal whether local action preferences evolved consistently during teacher training. The same endpoint shift can result from early and late shifts that reinforce or partially cancel each other. We investigate whether agreement between early and late teacher policy shifts can guide selective transfer. We introduce Waypoint-guided On-Policy Distillation (Waypoint-OPD), which uses an intermediate teacher checkpoint from the same RL run to compare early and late shifts in relative action preferences at student-visited prefixes. We gate the endpoint shift according to the directional agreement between the early and late shifts, suppressing it when they point in opposing directions. Compared with endpoint-only transfer, our method requires only one additional frozen-teacher scoring pass. Using RL-trained Qwen3-4B teachers, we evaluate our method with Qwen3-8B, Qwen3-14B, and Qwen3-30B-A3B as student models in mathematical and code reasoning. In all six domain--student settings, Waypoint-OPD achieves the highest domain-average score among the compared distillation methods. Ablations with the Qwen3-8B student show that removing or shuffling gates reduces mathematical reasoning performance. These results support the use of directional agreement between early and late teacher policy shifts to weight the endpoint shift during student training.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.21601",
+      "pdf_url": "https://arxiv.org/pdf/2610.21601",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.21601",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 456,
+      "hot_score": 4560,
+      "structured_summary": {
+        "chinese_title": "Waypoint-OPD: 通过门控在线策略蒸馏转移RL诱导的策略变化",
+        "chinese_summary": "通过比较早期和晚期策略变化的方向一致性，指导策略转移，提高策略转移的准确性。",
+        "pain_point": "现有策略蒸馏方法无法揭示教师训练过程中局部动作偏好是否一致演变。",
+        "core_value": "通过门控机制抑制方向相反的策略变化，提高策略转移的准确性。",
+        "technical_architecture": "引入中间教师检查点进行策略变化比较，使用门控机制调整策略转移。",
+        "quantitative_results": "在数学和代码推理任务中，与仅使用端点策略转移相比，该方法表现更好。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定领域和学生模型上进行了评估。",
+        "key_contributions": [
+          "提出Waypoint-OPD方法",
+          "引入门控机制抑制方向相反的策略变化",
+          "仅需额外一次冻结教师评分过程"
+        ],
+        "application_scenarios": [
+          "在线策略蒸馏",
+          "强化学习策略迁移"
+        ],
+        "technical_highlights": [
+          "使用中间教师检查点进行策略变化比较",
+          "通过门控机制调整策略转移"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22200",
+      "source": "huggingface",
+      "title": "OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use",
+      "authors": [
+        "Hanzhang Zhou",
+        "Long Li",
+        "Quyu Kong",
+        "Lei Wang",
+        "Panrong Tong",
+        "Long Chen",
+        "Tianyu Xia",
+        "Gongjie Zhang",
+        "Xu Zhang",
+        "Chen Liu",
+        "Jianan Zhang",
+        "Chenglin Cai",
+        "Zhengwen Zeng",
+        "Steven Hoi",
+        "Yue Wang"
+      ],
+      "abstract": "Computer use has reached a turning point: the focus is expanding from GUI-only interaction to systems that complete tasks on users' computers through visual and programmatic interfaces. We define a generalist computer-use agent (GCUA) as a system in which the model chooses how to observe, act, and organize its work across visual and programmatic interfaces. Yet frontier implementations, such as GPT-6 Astra's computer-use system, remain largely closed, limiting systematic study of their design. We introduce Open Generalist CUA (OpenGCUA), an ongoing project to develop and open the full stack for GCUAs with the community. This report presents the first release of OpenGCUA. Code execution is a key feature of our agent design: it lets intermediate results determine subsequent operations and enables models to apply their existing programming capabilities directly to computer interaction. We also propose harness-to-model decision transfer, moving selected observations and task-state decisions from fixed harness rules to the model. On OSWorld-v2, our full configuration improves task scores across all eight evaluated models, including GPT-6 Astra and Claude Opus 5, raising mean partial score by +19.6 points and reducing reported steps per task by an average of 53.0% relative to batched GUI-only execution. We release our implementation and prompts, evaluation trajectories from all eight models, and preliminary versions of a real-device harness and a cross-device SDK. The harness addresses real-device challenges not fully captured by benchmarks, while the SDK provides a common programming interface across computers, mobiles and browsers. Across four real macOS tasks under our real-device harness, selected Qwen3.8-Max runs use 19.4 times as many reported reasoning tokens as GPT-6 Astra, highlighting substantial differences between models in real-device execution efficiency.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22200",
+      "pdf_url": "https://arxiv.org/pdf/2610.22200",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22200",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 277,
+      "hot_score": 2770,
+      "structured_summary": {
+        "chinese_title": "OpenGCUA：迈向通用计算机使用全开放栈",
+        "chinese_summary": "提出OpenGCUA项目，旨在开发并开放通用计算机使用系统的全栈技术。",
+        "pain_point": "现有系统封闭，限制了对计算机使用系统设计的研究。",
+        "core_value": "开放全栈技术，促进通用计算机使用系统的研究与发展。",
+        "technical_architecture": "引入代码执行和决策转移机制，增强模型在计算机交互中的应用。",
+        "quantitative_results": "在OSWorld-v2上，改进后的配置提高了所有评估模型的任务得分。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步扩展应用场景和技术细节。",
+        "key_contributions": [
+          "提出OpenGCUA项目",
+          "引入代码执行和决策转移机制",
+          "提高评估模型的任务得分"
+        ],
+        "application_scenarios": [
+          "通用计算机使用系统的研究",
+          "增强模型在计算机交互中的应用"
+        ],
+        "technical_highlights": [
+          "开放全栈技术",
+          "引入决策转移机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22350",
+      "source": "huggingface",
+      "title": "FDE-Gym: The Last Mile of AI Delivery",
+      "authors": [
+        "Dongxu Yang",
+        "Hongda Yan",
+        "Renxin Wang",
+        "Baoli Zhang",
+        "Haojia Zuo",
+        "Ying Zhao",
+        "Youmin Chen",
+        "Xiaojian Liao",
+        "Congming Gao",
+        "Tianyang Jiang",
+        "Yixiao Chen",
+        "Qing Wang",
+        "Zhiguo Yu",
+        "Xiaqing Li",
+        "Yuhao Zhang",
+        "Jiawen Sun",
+        "Renzhe Xu",
+        "De Mi",
+        "Tiancheng Wu",
+        "Xianya Fu",
+        "Xuanlu Zhao",
+        "Bo Feng",
+        "Meixuan Ren",
+        "Guanming Lin",
+        "Ziheng Zhou",
+        "Xinhua Wang"
+      ],
+      "abstract": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncover unstated constraints. We introduce FDE-Gym, a benchmark of 95 end-to-end delivery tasks from 20 customer scenarios across 18 sectors, each adapted by industry experts from real-world delivery projects. In simulated customer environments with scripted stakeholders and modifiable customer systems, agents interact with stakeholders and operate on production-like systems to deliver working solutions. FDE-Gym scores a delivery by how much it improves the customer's own success metric, normalized between 0 (unchanged system) and 1 (reference solution), with penalties for stakeholder interactions (messages, trial runs, and waiting time). An online platform lets humans practice FDE skills under the same grading criteria. We evaluate 13 model configurations from seven providers. In the realistic setting, where unstated constraints must be discovered, the best configuration achieves a mean FDE-Gym score of 0.56 and resolves only 14 of the 95 tasks (a score of at least 0.8 with no incident). Discovering unstated constraints is the primary bottleneck: performance drops sharply when models must uncover them without explicit guidance. Yet information discovery alone does not account for the gap: even on the 23 tasks where the best configuration obtains every key fact from stakeholders, it reaches a normalized business uplift of 0.8 or above on only 10. These results reveal a substantial gap between solving well-specified tasks and delivering effective AI systems for real customers.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22350",
+      "pdf_url": "https://arxiv.org/pdf/2610.22350",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22350",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 229,
+      "hot_score": 2290,
+      "structured_summary": {
+        "chinese_title": "FDE-Gym: AI 交付的最后一公里",
+        "chinese_summary": "引入FDE-Gym基准，评估代理在真实世界客户交付中的表现。",
+        "pain_point": "现有代理基准无法全面评估代理在真实世界客户交付中的表现。",
+        "core_value": "提供了一个新的基准，能够评估代理在真实世界客户交付中的实际效果。",
+        "technical_architecture": "使用模拟客户环境和可修改的生产系统进行评估。",
+        "quantitative_results": "最佳配置在现实环境中实现了平均0.56的FDE-Gym得分。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多真实场景数据以进一步提高评估准确性。",
+        "key_contributions": [
+          "引入新的代理交付基准",
+          "评估真实世界客户交付中的表现"
+        ],
+        "application_scenarios": [
+          "客户交付场景",
+          "AI代理评估"
+        ],
+        "technical_highlights": [
+          "使用真实场景数据",
+          "模拟真实客户环境"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.17665",
+      "source": "huggingface",
+      "title": "RoTA-Bench: Evaluating 3D Spatial Reasoning through Interactive Projection Alignment",
+      "authors": [
+        "Qingchuan Ma",
+        "Yuexiao Ma",
+        "Xiang Meng",
+        "Yixuan Zou",
+        "Tianyu Xie",
+        "Wang Chen",
+        "Yuhui Zeng",
+        "Yuhang Wu",
+        "Xiawu Zheng",
+        "Rongrong Ji"
+      ],
+      "abstract": "Can vision-language models turn 2D observations into 3D understanding that supports precise action? This requires inferring object geometry, anticipating the effects of rotation, and refining actions through visual feedback. We introduce RoTA-Bench to evaluate these abilities through interactive 3D-to-2D projection alignment. Given a target silhouette, a model observes a rotated object and chooses successive rotations to recover the target projection within a limited action budget. Our automated pipeline constructs silhouette-preserving 3D objects from 2D icons and uses reversible initialization to guarantee solvability, yielding 674 tasks and a stratified 100-task test set. Empirically, we find that (i) a substantial human-model gap persists: GPT-5.6-Sol succeeds on only 17% of tasks, whereas 20 undergraduate participants collectively complete the test set four times with a 100% success rate; (ii) image-space and pose-space progress can diverge: at matched states, the model more often improves silhouette overlap while worsening pose alignment than humans (19.4% vs. 10.9%); and (iii) fine-grained control is sensitive to interaction history: removing it leaves 96.8% of the model's actions at a coarse 30-degree step size and sharply reduces observed task success. These findings highlight the challenge of converting visual evidence into precise 3D control, beyond recognizing or matching individual images.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.17665",
+      "pdf_url": "https://arxiv.org/pdf/2610.17665",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.17665",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 198,
+      "hot_score": 1980,
+      "structured_summary": {
+        "chinese_title": "RoTA-Bench: 通过交互式投影对齐评估三维空间推理",
+        "chinese_summary": "RoTA-Bench 通过交互式 3D 到 2D 投影对齐评估视觉语言模型的三维空间推理能力。",
+        "pain_point": "现有模型难以从 2D 观察中推断出精确的三维理解。",
+        "core_value": "提供了一个新的基准来评估模型的三维空间推理能力。",
+        "technical_architecture": "通过交互式 3D 到 2D 投影对齐评估模型。",
+        "quantitative_results": "模型在任务完成率上远低于人类。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步探索模型在更复杂场景下的表现。",
+        "key_contributions": [
+          "提出了一个新的评估基准 RoTA-Bench。",
+          "展示了模型与人类在三维空间推理上的差距。",
+          "揭示了模型在图像空间和姿态空间上的不同表现"
+        ],
+        "application_scenarios": [
+          "三维重建",
+          "机器人操作"
+        ],
+        "technical_highlights": [
+          "使用自动化的 3D 对象生成方法。",
+          "通过交互式任务评估模型能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.18813",
+      "source": "huggingface",
+      "title": "Self-Evolving Agent Harness",
+      "authors": [
+        "Chuyang Wei",
+        "Haoxiang Guan",
+        "Minghang Zhu",
+        "Kexin Zhou",
+        "Jiyan He",
+        "Xiren Zhou",
+        "Huanhuan Chen",
+        "Yifei Shen"
+      ],
+      "abstract": "Harness self-evolution revises an agent's software scaffolding, including prompts, memory, workflows, and executable components, while keeping model weights fixed. We formalize a feedback-driven process in which accepted revisions persist across runs. The framework separates update targets from proposal and admission mechanisms. It distinguishes changes to interpreted state from revisions to tools and code, repository-level control logic, and plugin composition. We characterize search through evolutionary optimization and examine its reliability through continual PAC-learning. Under explicit assumptions, the analysis yields an expected generalization bound, a retention bound conditional on historical regression budgets, and a high-probability admission rule using fresh, independent validation data. We examine how persistent harness revisions affect knowledge sharing and organizational workflows, with implications for scientific reliability, physical safety, and institutional accountability. Cases from prior work illustrate model--harness co-design, distributed execution, and plugin reuse. Reliable deployment requires continual validation as task distributions and evaluators change, with independent safeguards for learning, runtime privileges, and consequential actions. We provide a comprehensive 66-page discussion of related work, theory, algorithms, evaluation, applications, and the broader impact of Harness RSI, together with continuously updated code and supplementary materials, at https://github.com/zgcagi/Harness-RSI.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.18813",
+      "pdf_url": "https://arxiv.org/pdf/2610.18813",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18813",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 188,
+      "hot_score": 1880,
+      "structured_summary": {
+        "chinese_title": "自演化代理框架",
+        "chinese_summary": "该框架通过反馈驱动的进化优化过程，使代理软件架构自演化，同时保持模型权重不变。",
+        "pain_point": "现有代理系统难以适应不断变化的任务需求。",
+        "core_value": "通过自演化机制提高代理系统的灵活性和适应性。",
+        "technical_architecture": "采用反馈驱动的进化优化框架，分离更新目标与提案机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要持续验证以适应任务分布和评估者的变化。",
+        "key_contributions": [
+          "提出反馈驱动的自演化代理框架",
+          "区分对解释状态和工具代码的修改",
+          "通过PAC学习分析演化可靠性"
+        ],
+        "application_scenarios": [
+          "模型-框架协同设计",
+          "分布式执行",
+          "插件重用"
+        ],
+        "technical_highlights": [
+          "分离更新目标与提案机制",
+          "通过PAC学习分析演化可靠性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22276",
+      "source": "huggingface",
+      "title": "MJev-Spatial: System One Spatial Intelligence via Native Attention Matching",
+      "authors": [
+        "Luozheng Qin",
+        "Yuhan Zhu",
+        "Changhai Zhou",
+        "Qian Qiao",
+        "Jun Gao",
+        "Yuhua Zhou",
+        "Harry Zhang",
+        "Xiangyu Zeng",
+        "Yuxuan Liu",
+        "Kaijie Chen",
+        "Andrew Chen",
+        "Pony Ma"
+      ],
+      "abstract": "Spatial intelligence lets an agent perceive and act in the physical world, and many of its judgments must be made at interaction rates: which spatial relation holds, how far an object is, or where to place it. Vision-language models (VLMs) produce these answers by free-form text generation, paying for autoregressive decoding and answer parsing even though the output space is compact: one of a few options, a scalar, or a 2D point. In light of this, we introduce MJev-Spatial, a System 1 multimodal decision model that tackles all three types of spatial understanding tasks within a unified classification framework. Specifically, MJev-Spatial treats each candidate as a class and scores it using the backbone's pretrained query and key projections, without adding parameters. The candidates are the given options for choice tasks, or value bins and image regions refined through coarse-to-fine classification for numerical and point prediction, respectively. At inference, each classification decision takes a single forward pass and generates no answer tokens. To train on heterogeneous spatial data efficiently, we supervise all coarse-to-fine stages jointly with teacher forcing in one forward pass, and combine this with length-aware global batching and cross-GPU load balancing, raising training throughput by 30.8% over the original batching strategy. Built on Qwen3.5-4B and trained on 12.3M question-answer pairs converted from existing spatial datasets, MJev-Spatial achieves the highest overall score (65.64%) among eight tested models, ranks first on seven of twelve benchmarks, and outperforms its unmodified autoregressive base model on all twelve, while running 2.5 times faster than the fastest autoregressive baseline and 5.6 times faster than the base model.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22276",
+      "pdf_url": "https://arxiv.org/pdf/2610.22276",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22276",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 142,
+      "hot_score": 1420,
+      "structured_summary": {
+        "chinese_title": "MJev-Spatial: 通过原生注意力匹配实现系统一空间智能",
+        "chinese_summary": "MJev-Spatial 是一种系统一多模态决策模型，能够在统一分类框架下解决空间关系、距离和位置预测任务。",
+        "pain_point": "现有模型通过自由文本生成答案，导致解码和解析复杂，效率低下。",
+        "core_value": "MJev-Spatial 通过原生注意力匹配直接分类候选答案，无需额外参数，提高效率。",
+        "technical_architecture": "MJev-Spatial 使用预训练的查询和键投影对每个候选答案进行评分，无需增加参数。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定类型的空间理解任务上进行了验证。",
+        "key_contributions": [
+          "提出了一种无需额外参数的原生注意力匹配方法",
+          "在统一分类框架下解决多种空间理解任务"
+        ],
+        "application_scenarios": [
+          "机器人导航",
+          "虚拟现实中的物体交互"
+        ],
+        "technical_highlights": [
+          "无需额外参数的原生注意力匹配",
+          "统一分类框架下的多任务处理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.14993",
+      "source": "huggingface",
+      "title": "Learning Where to Split: Dynamic Band Splitting for Audio Source Separation",
+      "authors": [
+        "Bingzhe Zhang",
+        "Kai Li",
+        "Xiaolin Hu"
+      ],
+      "abstract": "Audio source separation models must preserve fine spectral structure while keeping the cost of the separator tractable. Band-split architectures reduce this cost by manually partitioning the spectrum into predefined frequency bands and encoding each band as a token, but the same boundaries are used for every mixture. Because informative spectral structure varies with source content, fixed boundaries can merge discriminative components or spend tokens where little resolution is needed. We introduce Dynamic Band Splitting (DBS), an end-to-end framework that adapts boundary locations and band widths to each mixture under a fixed band-token budget. DBS predicts content-conditioned boundary scores within frequency blocks, selects a prescribed number of boundaries using hard Top-K, and applies content-dependent pooling to obtain compact band tokens. After separation, it smooths and expands these tokens to the original STFT grid, refines them along frequency, and decodes complex masks with a frequency-shared head. DBS improved separation over the corresponding static models on DnR v2, MUSDB18-HQ, and EchoSet, with DBS-BSRNN achieving relative gain of 29.0% in average SI-SDR on DnR v2. These results and boundary analyses on DnR v2 show that content-adaptive frequency partitioning benefits multiple separator backbones under a fixed band-token budget. Code and audio demos are available at https://cslikai.cn/Dynamic-Band-Splitting",
+      "published_date": "2026-10-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.14993",
+      "pdf_url": "https://arxiv.org/pdf/2610.14993",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.14993",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 131,
+      "hot_score": 1310,
+      "structured_summary": {
+        "chinese_title": "学习如何分割：音频源分离中的动态带宽分割",
+        "chinese_summary": "动态带宽分割（DBS）通过自适应调整边界位置和带宽提高了音频源分离的性能。",
+        "pain_point": "固定带宽分割无法适应不同音频内容的频谱结构。",
+        "core_value": "DBS能够自适应调整带宽分割，提高分离质量。",
+        "technical_architecture": "DBS采用内容条件下的边界得分预测和硬Top-K选择方法。",
+        "quantitative_results": "DBS在DnR v2上的平均SI-SDR相对增益为29.0%。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多样化的音频内容。",
+        "key_contributions": [
+          "提出动态带宽分割（DBS）框架",
+          "自适应调整边界位置和带宽",
+          "改进音频源分离性能"
+        ],
+        "application_scenarios": [
+          "音乐混音分离",
+          "语音增强"
+        ],
+        "technical_highlights": [
+          "内容条件下的边界得分预测",
+          "硬Top-K选择和内容依赖池化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20341",
+      "source": "huggingface",
+      "title": "InfiniSplat v2: Analyzing and Improving Feed-Forward 3DGS from Any Views",
+      "authors": [
+        "Yongzhen Hu",
+        "Hao Yu",
+        "Jiawei Wang",
+        "Xianming Zeng",
+        "Jianyun Xu",
+        "Xingliang Liu",
+        "Ruizhen Hu",
+        "Xiaowei Zhou",
+        "Hujun Bao",
+        "Sida Peng"
+      ],
+      "abstract": "Feed-forward Gaussian reconstruction builds 3D scenes directly from input images for novel view rendering, but learning Gaussian attributes from predicted geometry for high-quality rendering under large viewpoint changes remains challenging. We analyze limitations in Gaussian attribute learning and introduce InfiniSplat v2, which improves rendering quality through architectural and training changes. Our method decouples geometry and attribute prediction with a frozen geometry branch, aligns predicted Gaussians using ground-truth camera poses during training, and adopts large-angle target view supervision. Across six datasets, the feed-forward outputs of the same trained model achieve state-of-the-art mean LPIPS and DISTS among the evaluated methods in both pose-conditioned and pose-free settings. In the pose-conditioned setting, mean LPIPS and DISTS decrease by 25.8% and 32.9%, respectively, compared with the strongest evaluated baselines. We further find that opacity learned with only image reconstruction supervision suppresses geometrically inconsistent points. Project page: https://zju3dv.github.io/InfiniSplat2/",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20341",
+      "pdf_url": "https://arxiv.org/pdf/2610.20341",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20341",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 114,
+      "hot_score": 1140,
+      "structured_summary": {
+        "chinese_title": "InfiniSplat v2: 分析并改进任意视角下的前馈3DGS渲染",
+        "chinese_summary": "通过改进架构和训练，InfiniSplat v2 在多种数据集上实现了最先进的渲染质量。",
+        "pain_point": "学习高视角变化下的高质量渲染的高斯属性仍然具有挑战性。",
+        "core_value": "通过解耦几何和属性预测，以及使用真实相机姿态进行训练，提高了渲染质量。",
+        "technical_architecture": "采用冻结几何分支和使用真实相机姿态进行训练。",
+        "quantitative_results": "在六个数据集上，与最强基线相比，平均LPIPS和DISTS分别降低了25.8%和32.9%。",
+        "competitors": "与最强基线相比，InfiniSplat v2 在多个数据集上表现更优。",
+        "limitations": "仅图像重建监督下学习的透明度可能会抑制几何不一致的点。",
+        "key_contributions": [
+          "解耦几何和属性预测",
+          "使用真实相机姿态进行训练",
+          "采用大角度目标视图监督"
+        ],
+        "application_scenarios": [
+          "新型视角渲染",
+          "3D 场景重建"
+        ],
+        "technical_highlights": [
+          "冻结几何分支",
+          "使用真实相机姿态进行训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22341",
+      "source": "huggingface",
+      "title": "3DCodeVerse: Exploring 3D Worlds as Code",
+      "authors": [
+        "Yipeng Gao",
+        "Ziyao Zeng",
+        "Jinfa Huang",
+        "Yijiang Li",
+        "Haolin Xiong",
+        "Wang Qin",
+        "Xinlei Yu",
+        "Youheng Yao",
+        "Jie Zhang",
+        "Kun-Yu Lin",
+        "Rong Liu",
+        "Yinyuan Zhao",
+        "Yajie Zhao",
+        "Meiqi Guo",
+        "Jiebo Luo",
+        "Lei Shu",
+        "Yunhao Ge",
+        "Xinyu Hu",
+        "Laurent Itti"
+      ],
+      "abstract": "We introduce 3DCodeVerse, a research ecosystem that enables coding agents to create editable and verifiable 3D content at scale. 3DCodeVerse comprises large-scale, high-quality datasets of executable 3D code, a coding harness for spatial reasoning and automated verification, and practical guidance for 3D coding. First, we construct 3DCodeVerse-2M, a large-scale curated dataset of standalone 3D executable code. We build this corpus by collecting open-source data, converting specialized representations, and generating new programs with coding agents. Each program is packaged with the source files and associated assets required for execution in its declared environment, along with available descriptions and verification records. Second, we develop the 3DCodeVerse Harness, a multi-agent directed acyclic graph framework for generating and refining 3D content. It uses execution checks, spatial measurements, and visual feedback to automatically evaluate and revise generated programs without human feedback during generation. Third, we conduct systematic empirical studies of 3D coding, establishing baselines with fine-tuned open models and deriving practical guidance through component-level analyses of our harness. Extensive experiments demonstrate that fine-tuning on our dataset significantly improves the 3D coding capabilities of open-source models. Notably, our 3DCodeVerse harness achieves a 90% win rate against Claude Design (3D Object) in pairwise human evaluations, when both are utilized by Claude Opus 5.5.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22341",
+      "pdf_url": "https://arxiv.org/pdf/2610.22341",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22341",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 99,
+      "hot_score": 990,
+      "structured_summary": {
+        "chinese_title": "3DCodeVerse：探索作为代码的3D世界",
+        "chinese_summary": "构建了一个大规模可编辑和可验证的3D内容生态系统，通过代码生成和验证3D内容。",
+        "pain_point": "缺乏大规模、高质量的可执行3D代码数据集和自动化验证机制。",
+        "core_value": "提供了一个用于3D编码的框架，支持自动化生成和验证，推动3D内容的创建。",
+        "technical_architecture": "构建了一个包含大规模3D代码数据集、编码框架和自动化验证机制的研究生态系统。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以扩展应用场景和提高生成质量。",
+        "key_contributions": [
+          "构建了大规模3D代码数据集3DCodeVerse-2M",
+          "开发了3DCodeVerse编码框架",
+          "提供了自动化验证机制"
+        ],
+        "application_scenarios": [
+          "3D内容创作",
+          "虚拟现实和增强现实应用"
+        ],
+        "technical_highlights": [
+          "使用多代理DAG框架生成和优化3D内容",
+          "自动执行检查、空间测量和视觉反馈进行评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,516 @@
+{
+  "date": "2026-10-18",
+  "generated_at": "2026-10-19T00:54:24.509640+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2610.22372v1",
+      "source": "arxiv",
+      "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
+      "authors": [
+        "Zhixu Li",
+        "Keqian Tang",
+        "Litian Gong",
+        "Jingyu Yao",
+        "Wenqian Zhang",
+        "Tianze Xu",
+        "Zehao Wang",
+        "Yuping Wang",
+        "Junge Zhang",
+        "Jiachen Li"
+      ],
+      "abstract": "Personalization is essential for general-purpose robots to transition into household environments and achieve true practicality. While general robotic manipulation has been extensively studied, personalized robotic manipulation (PeRM) lacks a controlled benchmark for separating task completion from preference satisfaction. We introduce LIBERO-PeRM, a benchmark for preference learning in embodied agents. LIBERO-PeRM studies five questions: 1) how policies follow preferences in zero-shot settings; 2) how they learn single preferences from demonstrations; 3) how efficiently they acquire preferences as demonstrations increase; 4) how learned preferences generalize across layouts and tasks; and 5) how policies compose preferences and behave under conflicts. We propose a controlled formulation and taxonomy of observable preferences in simulation, covering motion, skill, and user-profile choices. This formulation is restricted to language-expressible preferences that can be instantiated in LIBERO without changing the task goal, evaluated automatically, and reused across tasks. Building on LIBERO, our procedural pipeline generates paired demonstrations with and without preferences. We create five task suites (312 tasks) with high-quality demonstrations, rich metadata, and preference-satisfaction metrics. Experiments show that current VLA policies struggle with zero-shot personalization, while SFT makes preferences learnable. Mixed training achieves better no-preference retention than sequential adaptation and improves performance with contextual prompts compared with preference-only training, but can weaken motion-preference learning; preference generalization, decomposition, and conflict handling remain difficult. The code, datasets, and demos can be found on the project website: https://libero-perm.github.io/.",
+      "published_date": "2026-10-15T17:59:59Z",
+      "url": "https://arxiv.org/abs/2610.22372v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22372v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "LIBERO-PeRM: 评估个性化机器人操作的基准",
+        "chinese_summary": "提出LIBERO-PeRM，用于评估机器人在不同偏好下的操作能力。",
+        "pain_point": "缺乏针对个性化操作的基准测试，难以区分任务完成与偏好满足。",
+        "core_value": "提供了一个全面的基准测试，涵盖偏好学习、效率和泛化能力。",
+        "technical_architecture": "基于LIBERO的模拟环境，生成带有和不带偏好的示范。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于语言可表达的偏好。",
+        "key_contributions": [
+          "提出了一种新的个性化机器人操作基准",
+          "涵盖多种偏好学习和泛化能力的评估",
+          "提供了一种可重复使用的偏好表示方法"
+        ],
+        "application_scenarios": [
+          "家庭机器人操作",
+          "个性化服务机器人"
+        ],
+        "technical_highlights": [
+          "语言可表达的偏好",
+          "自动评估和重用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22371v1",
+      "source": "arxiv",
+      "title": "Gen4P: Video Generators are 4D Perceivers",
+      "authors": [
+        "Yitong Xia",
+        "Zeren Jiang",
+        "Chuanxia Zheng"
+      ],
+      "abstract": "We introduce Gen4P, a unified framework for recovering 4D geometry and motion from monocular video. We show that a pretrained video generator can be repurposed into a feed-forward 4D perceiver without iterative denoising. Building on on-demand querying, Gen4P processes clean video latents in a single encoder pass and predicts the requested 4D attributes through a lightweight cross-attention decoder. The on-demand query formulation enables flexible spatial sampling, and our proposed continuous-time queries further provide temporal flexibility. To strengthen geometric knowledge, we propose a straightforward plug-in solution by incorporating a pretrained video-depth LoRA as a frozen geometry prior, improving overall performance without adding extra trainable parameters. Gen4P achieves state-of-the-art or competitive performance on tasks of 3D point tracking, video depth and camera pose estimation. Qualitative results on in-the-wild videos illustrate its capability of tracking complex motion while maintaining the delicate structure. Together, these results demonstrate the potential of video generative pretraining for unified 4D perception. See https://gen4p.github.io for more visual results.",
+      "published_date": "2026-10-15T17:59:48Z",
+      "url": "https://arxiv.org/abs/2610.22371v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22371v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Gen4P: 视频生成器是四维感知器",
+        "chinese_summary": "Gen4P 是一种从单目视频恢复四维几何和运动的统一框架。",
+        "pain_point": "现有方法难以同时准确恢复四维几何和运动。",
+        "core_value": "通过视频生成器直接转换为四维感知器，无需迭代去噪。",
+        "technical_architecture": "基于按需查询，单次编码器处理干净的视频潜在特征。",
+        "quantitative_results": "在3D点跟踪、视频深度和相机姿态估计任务上达到SOTA或竞争力。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多复杂场景。",
+        "key_contributions": [
+          "提出了一种无需迭代去噪的四维感知方法",
+          "引入了按需查询和连续时间查询",
+          "提出了插件式的视频深度LoRA作为几何先验"
+        ],
+        "application_scenarios": [
+          "三维点跟踪",
+          "视频深度估计",
+          "相机姿态估计"
+        ],
+        "technical_highlights": [
+          "单次编码器处理干净的视频潜在特征",
+          "轻量级交叉注意力解码器预测4D属性",
+          "插件式的视频深度LoRA作为几何先验"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22370v1",
+      "source": "arxiv",
+      "title": "Which Tokens to Merge? Diffusion Dynamics for Efficient Image Generation",
+      "authors": [
+        "SeungJu Cha",
+        "Ye-Chan Kim",
+        "HyunGee Kim",
+        "Sungho Koh",
+        "Dong-Jin Kim"
+      ],
+      "abstract": "Token merging has emerged as an effective training-free strategy for accelerating diffusion models by reducing redundant token computation while minimizing generation degradation. A key challenge is determining which tokens can be safely merged and which should be preserved for subsequent computation. Existing method addresses this by preserving prompt-aligned foreground regions, thereby protecting semantically relevant structures. However, this text-relevance criterion overlooks background objects, local details that are not explicitly mentioned in the prompt, leading to degraded structural coherence. In this work, we propose Dynamics-aware Token Merging (DaTMe), a training-free framework that grounds token merging in the underlying diffusion dynamics. Our key insight is that token importance should reflect whether a token remains unresolved during denoising and whether it carries structural information. To this end, DaTMe constructs a dynamics- aware importance map from the Tweedie denoised estimate. The map combines a temporal signal, measuring inter-step changes in the predicted clean image, with a structural signal, capturing local high-frequency content such as boundaries and fine details. Using this map, DaTMe adaptively assigns tokens into merging roles under a given compression ratio: important tokens are preserved as anchors, while tokens that are both temporally stabilized and structurally homogeneous are selected as safe merge candidates. Experiments on PixArt-a and FLUX demonstrate that DaTMe maintains visual fidelity across the entire image, highlighting diffusion dynamics as an effective token-level merging decision in efficient generation. Our code is available at https://github.com/SeungJuCha/DaTMe.",
+      "published_date": "2026-10-15T17:59:35Z",
+      "url": "https://arxiv.org/abs/2610.22370v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22370v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "哪些令牌可以合并？基于扩散动态的高效图像生成",
+        "chinese_summary": "提出了一种基于扩散动态的无训练框架DaTMe，用于高效图像生成。",
+        "pain_point": "现有方法忽视了背景对象和未在提示中明确提及的局部细节，导致结构连贯性下降。",
+        "core_value": "通过结合时间信号和结构信号，DaTMe能够更准确地识别重要令牌，提高生成质量。",
+        "technical_architecture": "构建动态感知重要性图，结合时间信号和结构信号来确定令牌的重要性。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了实验验证。",
+        "key_contributions": [
+          "提出了基于扩散动态的无训练框架DaTMe",
+          "结合时间信号和结构信号识别令牌重要性"
+        ],
+        "application_scenarios": [
+          "图像生成加速",
+          "减少计算冗余"
+        ],
+        "technical_highlights": [
+          "动态感知重要性图",
+          "无训练框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22369v1",
+      "source": "arxiv",
+      "title": "SoftCache: Adaptive Step Size Caching for Diffusion Transformers",
+      "authors": [
+        "Shimon Malnick",
+        "Nadav Orenstein",
+        "Ohad Fried",
+        "Shai Avidan"
+      ],
+      "abstract": "Diffusion and flow models generate a sample over iterative steps, each a full pass through a large network, and that pass dominates generation cost. Training-free caching accelerates them by reusing activations from recent evaluations instead of recomputing them. Dynamic caching methods decide when to refresh by accumulating a cheap probe of the network input into a staleness signal and spending a fresh evaluation once it crosses a threshold. They perform hard caching: the signal is a binary switch between refresh and reuse, and every step, fresh or cached, advances by the prescribed step size. We observe that the signal carries much more than this switch. How far it sits below the threshold, its headroom, predicts the error induced by reuse. We propose SoftCache, which performs soft caching: instead of a binary switch, the headroom sets how far each cached step goes. Where the headroom is large, the sampler jumps past several scheduled nodes, and as a refresh nears, its steps shrink back toward the original step. These adaptive jumps may land between the scheduled nodes, taking the sampler off its fixed grid. SoftCache requires no training and adds no per-backbone settings: on FLUX for images and on HunyuanVideo and Wan2.1 for video, at speedups from $3.5\\times$ to $6.9\\times$, it is ahead of every baseline on all four fidelity metrics.",
+      "published_date": "2026-10-15T17:59:34Z",
+      "url": "https://arxiv.org/abs/2610.22369v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22369v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SoftCache: 自适应步长缓存机制优化扩散变换器",
+        "chinese_summary": "提出SoftCache，一种软缓存机制，通过步长大小调整缓存步数，提高扩散变换器的生成效率。",
+        "pain_point": "扩散变换器每次迭代都需要完整通过大型网络，导致生成成本高昂。",
+        "core_value": "通过软缓存机制，根据网络输入的头程空间动态调整缓存步数，提高生成效率。",
+        "technical_architecture": "动态累积网络输入的头程空间作为 staleness 信号，决定是否刷新缓存。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证其效果。",
+        "key_contributions": [
+          "提出SoftCache机制，通过步长大小调整缓存步数",
+          "无需训练且无额外设置"
+        ],
+        "application_scenarios": [
+          "扩散变换器加速",
+          "生成模型优化"
+        ],
+        "technical_highlights": [
+          "动态头程空间决定缓存刷新",
+          "自适应步长调整"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22367v1",
+      "source": "arxiv",
+      "title": "Discovering state-of-the-art quantum circuits with large language models",
+      "authors": [
+        "Andi Gu",
+        "Alek H. Kemeny",
+        "Susanne F. Yelin",
+        "Mikhail D. Lukin"
+      ],
+      "abstract": "Significant efforts are currently being directed toward the implementation of large-scale quantum information processors, but realizing useful quantum advantage also requires the development of efficient quantum algorithms. While for many practical problems the dominant resource costs are associated with a small set of computational primitives, optimizing them in the quantum setting presents unique challenges, including a reversibility constraint absent from ordinary classical computation. Here we introduce an evolutionary framework in which large language models (LLMs) propose circuit designs and an independent evaluator verifies and scores them. We apply this framework to tasks spanning numerical computation, chemistry, optimization, quantum simulation, and number theory. In seven of the eight tasks, the discovered circuits significantly reduce both Toffoli and qubit counts relative to the state of the art. In the eighth, the search discovers a new reversible architecture for prime-field modular inversion. By handling reversibility differently, the architecture makes divsteps -- a classical algorithm previously impractical for reversible integer arithmetic -- viable and substantially improves the Toffoli-qubit trade-off for modular inversion. These results open the door for evaluator-guided LLM co-design of new algorithmic structures for quantum computation.",
+      "published_date": "2026-10-15T17:59:20Z",
+      "url": "https://arxiv.org/abs/2610.22367v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22367v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "quant-ph",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "使用大型语言模型发现最先进的量子电路",
+        "chinese_summary": "该研究利用大型语言模型优化量子电路设计，显著降低了多项任务的Toffoli门和量子比特数量。",
+        "pain_point": "量子算法设计中的资源优化和可逆性约束挑战。",
+        "core_value": "提出了一种进化框架，结合大型语言模型和独立评估器，有效优化量子电路。",
+        "technical_architecture": "利用大型语言模型生成电路设计，独立评估器验证和评分。",
+        "quantitative_results": "在七个任务中，发现的电路显著减少了Toffoli门和量子比特数量。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在部分任务中展示了优势，未来需进一步验证。",
+        "key_contributions": [
+          "提出了一种新的进化框架",
+          "显著优化了量子电路设计"
+        ],
+        "application_scenarios": [
+          "数值计算",
+          "化学",
+          "优化",
+          "量子模拟",
+          "数论"
+        ],
+        "technical_highlights": [
+          "结合大型语言模型和独立评估器",
+          "发现新的可逆架构"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22364v1",
+      "source": "arxiv",
+      "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+      "authors": [
+        "Chenyuan Zhou",
+        "Yining Hong",
+        "Huang Huang",
+        "Yunfan Jiang",
+        "Wenlong Huang",
+        "David Held",
+        "Vitor Campagnolo Guizilini",
+        "Yue Wang",
+        "Li Fei-Fei",
+        "Jiajun Wu",
+        "Leonidas Guibas",
+        "Yejin Choi"
+      ],
+      "abstract": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules. We introduce T2-Z for test-time optimization of environment latents, which augments a robotic world model with a learnable environment latent to condition world predictions. This compact latent captures underlying environmental variation without supervision of what environmental factors exist or what values they take. During training, T2-Z alternates between two stages: a world-model optimization stage that fixes the latents and learns general action-conditioned dynamics across environments; and an environment-latent optimization stage that freezes the world model and optimizes the conditioning latents, allowing latent structure to emerge purely through world prediction. At test time, the world model remains frozen and a newly initialized environment latent is optimized from one or more test-time interactions, adapting the model to previously unseen environmental configurations. Across 7 simulated settings and 4 real-world robotic tasks, T2-Z reduces object prediction error metric from 15.20 to 7.00 and raises action success from 33.73% to 72.96%. Its emergent latents capture structured representations of individual and compounded factors across diverse visual scenes. Ablations further show that T2-Z can efficiently infer environment latents from as little as a single test-time interaction trajectory.",
+      "published_date": "2026-10-15T17:59:11Z",
+      "url": "https://arxiv.org/abs/2610.22364v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22364v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "T2-z: 机器人世界模型测试时环境潜在变量优化",
+        "chinese_summary": "通过优化环境潜在变量，提高机器人对未知环境的适应能力。",
+        "pain_point": "机器人在面对未见过的环境时，难以准确预测其反应。",
+        "core_value": "通过自适应优化环境潜在变量，提升机器人在未知环境中的预测准确性。",
+        "technical_architecture": "交替优化世界模型和环境潜在变量，使模型能够自适应未知环境。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在模拟环境中进行了实验，实际应用效果有待验证。",
+        "key_contributions": [
+          "提出了一种在测试时优化环境潜在变量的方法",
+          "通过自适应优化环境潜在变量，提高了模型的泛化能力"
+        ],
+        "application_scenarios": [
+          "机器人在未知环境中的任务执行",
+          "机器人在动态变化环境中的适应"
+        ],
+        "technical_highlights": [
+          "环境潜在变量的自适应优化",
+          "交替优化策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22363v1",
+      "source": "arxiv",
+      "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
+      "authors": [
+        "Zirui Wu",
+        "Chen Guo",
+        "Tianjian Jiang",
+        "Zeren Jiang",
+        "Zeming Li",
+        "Lingchen Yang",
+        "Longteng Duan",
+        "Ying Xue",
+        "Handi Yin",
+        "Shenyuan Gao",
+        "Martin R. Oswald",
+        "Jun Zhang",
+        "Ping Tan",
+        "Jie Song"
+      ],
+      "abstract": "We introduce P$^{3}$-WAM, a unified world action model for egocentric dexterous manipulation that learns 3D perception, action-conditioned prediction, and goal-directed planning through three complementary modes: Perceive, which reconstructs articulated hand motion and camera trajectories from video; Predict, which generates visual futures under prescribed actions; and Plan, which jointly generates action trajectories and their anticipated visual consequences conditioned on an initial image, a language instruction, and an optional visual goal. Our model integrates a compact, structured 3D action representation into a pretrained video diffusion transformer through a mixture-of-transformers architecture with shared base weights, modality-specific adaptation, and bidirectional visual-action attention. Randomized modality visibility lets video and 3D actions serve as either conditioning context or prediction targets across the three modes. Experiments show that unified training improves all three capabilities over single-mode training, including gains in planning quality under a vision-language model evaluation. Through unified training, our model outperforms specialized baselines on 3D hand reconstruction and action-conditioned video prediction across four datasets, while producing goal-directed manipulation videos with stronger instruction adherence and action progression than video-generation baselines. Project Page: https://p3-wam.pages.dev/",
+      "published_date": "2026-10-15T17:59:07Z",
+      "url": "https://arxiv.org/abs/2610.22363v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22363v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "感知、预测与规划：统一的自我中心灵巧操作世界动作模型",
+        "chinese_summary": "提出了一种统一的世界动作模型，通过感知、预测和规划三个互补模式实现3D感知、动作条件下的预测和目标导向规划。",
+        "pain_point": "现有模型在自我中心灵巧操作中的感知、预测和规划能力不足。",
+        "core_value": "通过统一训练提高感知、预测和规划能力，特别是在视觉语言模型评估中。",
+        "technical_architecture": "采用混合变换器架构，结合预训练视频扩散变换器和双向视觉-动作注意力机制。",
+        "quantitative_results": "实验表明，统一训练在规划质量上优于单模式训练。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多复杂场景下验证模型性能。",
+        "key_contributions": [
+          "提出了一种统一的世界动作模型",
+          "通过混合变换器架构实现3D感知和动作预测",
+          "在规划质量上优于单模式训练"
+        ],
+        "application_scenarios": [
+          "自我中心灵巧操作",
+          "机器人操作"
+        ],
+        "technical_highlights": [
+          "混合变换器架构",
+          "双向视觉-动作注意力机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22362v1",
+      "source": "arxiv",
+      "title": "CoDA: Co-Evolution of Data Engines and Action Policies",
+      "authors": [
+        "Tianjiao Yu",
+        "Zhilin Ou",
+        "Yifan Shen",
+        "Xinzhuo Li",
+        "Yuanzhe Liu",
+        "Onkar Kishor Susladkar",
+        "Fan Wang",
+        "Ismini Lourentzou"
+      ],
+      "abstract": "Generative simulation can automate robot environment construction, but physically valid environments are not necessarily useful for training. The challenge is to identify environments that address a policy's failures and supervision that helps it overcome them. We introduce CoDA, a framework in which a simulation data engine and an action policy co-evolve through a shared heterogeneous memory of environment construction, policy failures, and learning progress. The memory compiles validated diagnoses from a vision-language critic into generation programs that recreate difficulties and training programs that help the policy overcome them. We further propose Text2potential to convert these diagnoses into staged potentials for action-chunk value learning, providing dense supervision for policy updates while preserving the task's optimal policy under standard shaping assumptions. Measured learning progress guides further generation and program refinement. Across four manipulation task families, CoDA improves out-of-distribution success from 5.3% after supervised fine-tuning to 27.6%, exceeding the strongest closed-loop baseline by 9.5 percentage points with the same generation budget. On LIBERO-Pro, 15 rounds of generation and training raise success from 25% to 84% under position perturbations and from 1% to 76% under instruction perturbations.",
+      "published_date": "2026-10-15T17:59:02Z",
+      "url": "https://arxiv.org/abs/2610.22362v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22362v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "CoDA: 数据引擎与行动策略的协同进化",
+        "chinese_summary": "CoDA 提出了一种框架，通过共享记忆中的环境构建、策略失败和学习进展，使模拟数据引擎和行动策略协同进化，显著提高任务成功率。",
+        "pain_point": "现有生成模拟无法有效识别有助于训练的环境，导致策略学习效率低下。",
+        "core_value": "通过协同进化提高策略学习效率和成功率，特别是在复杂任务中。",
+        "technical_architecture": "利用共享记忆和生成程序，结合视觉-语言批评进行诊断和训练。",
+        "quantitative_results": "CoDA 在四个操作任务家族中将离分布成功从 5.3% 提高到 27.6%，超过最强闭环基线 9.5 个百分点。",
+        "competitors": "最强闭环基线",
+        "limitations": "需要进一步研究如何在更复杂和多样的任务中应用。",
+        "key_contributions": [
+          "提出 CoDA 框架实现数据引擎与策略的协同进化",
+          "引入 Text2potential 转换诊断为行动片段价值学习的阶段潜力",
+          "提供密集监督以优化策略更新"
+        ],
+        "application_scenarios": [
+          "机器人操作任务",
+          "自动化环境构建"
+        ],
+        "technical_highlights": [
+          "共享记忆整合诊断和训练程序",
+          "视觉-语言批评驱动的诊断生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22360v1",
+      "source": "arxiv",
+      "title": "Grounding Generative Verification in 3D Content",
+      "authors": [
+        "Shuanglin Li",
+        "Jiaying Lin",
+        "Shuquan Ye"
+      ],
+      "abstract": "Recent advances in multimodal large language models (MLLMs) and 3D generation have expanded 3D understanding and synthesis. However, beyond visual fidelity, task-specific correctness grounded in 3D evidence remains a major challenge. We argue that building reliable 3D systems requires not only stronger generation and reasoning, but also verification feedback that identifies unmet requirements and explains their violations, allowing systems to reflect on and refine their outputs. Such feedback must integrate multi-view observations and distinguish genuine inconsistencies from projection-dependent appearances. We make three contributions. First, we introduce 3DVerifierBench, a benchmark spanning 10 tasks that evaluates decisions, rejection explanations, and responses to controlled changes in specifications and candidates. A human study reveals a 21.6 percentage-point gap between humans and the strongest tested model, GPT-6 Astra, while explanation-aware analysis exposes weaknesses in rejection reliability. Second, we analyze verification across fine-grained factual categories, exposing errors in values and target binding. We develop a scalable pipeline combining multi-view fact extraction, controlled 3D editing, and native annotations to produce 14,126 training examples with contradiction explanations and linked counterfactuals. Third, we examine how verification could support 3D generation through candidate selection and recursive refinement. In human-labeled sixteen-candidate pools, oracle selection improves complete factual success from 26.7% to 90.0%. In a separate eight-input study, human-guided recursive refinement satisfies all seven requirements for every input, compared with three under parallel Oracle@8. Together, our benchmark, analysis, and data pipeline establish a foundation for models to reflect on 3D content through reliable verification feedback.",
+      "published_date": "2026-10-15T17:59:01Z",
+      "url": "https://arxiv.org/abs/2610.22360v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22360v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "在3D内容中扎根生成验证",
+        "chinese_summary": "提出3DVerifierBench基准，评估生成模型在3D内容中的决策、解释和响应能力。",
+        "pain_point": "现有模型在生成3D内容时缺乏可靠的验证反馈，无法准确识别和解释不一致。",
+        "core_value": "通过引入3DVerifierBench，提升生成模型在3D内容中的任务特定正确性和解释能力。",
+        "technical_architecture": "结合多视图事实提取和解释分析，构建可扩展的验证管道。",
+        "quantitative_results": "人类与最强模型GPT-6 Astra在解释可靠性上存在21.6个百分点的差距。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作将探索更多应用场景和技术扩展。",
+        "key_contributions": [
+          "提出3DVerifierBench基准",
+          "分析验证过程中的具体错误",
+          "开发可扩展的验证管道"
+        ],
+        "application_scenarios": [
+          "3D内容生成",
+          "虚拟现实与增强现实"
+        ],
+        "technical_highlights": [
+          "结合多视图观察进行验证",
+          "区分真实不一致与投影依赖现象"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.22358v1",
+      "source": "arxiv",
+      "title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories",
+      "authors": [
+        "Jiachen Yao",
+        "Xiyuan Zhang",
+        "Annan Yu",
+        "Boran Han",
+        "Abdul Fatir Ansari",
+        "Shuai Zhang",
+        "Michael Bohlke-Schneider",
+        "Bernie Wang"
+      ],
+      "abstract": "Time series foundation models are becoming increasingly popular for general-purpose forecasting. However, most leading models predict marginal quantiles, leaving the dependence structure of future trajectories unspecified. This distinction matters for trajectory-dependent quantities such as cumulative demand, peak load, and event timing, yet point and marginal scores do not reveal it. To model this dependence, we introduce PathFM, a trajectory-based forecasting model that uses flow matching to generate complete future paths. We further distill the model to one or two steps and share history attention cache across draws. Together, these enable PathFM to generate multiple paths for a single series in roughly the time needed for one query to a quantile model. The distilled sampler also makes it practical to optimize a calibration loss directly. PathFM achieves competitive marginal accuracy on the established forecasting benchmarks fev-bench and TIME. To complement these evaluations, we introduce Forecast Path Score Bench (fps-bench), which augments fev-bench tasks with energy and variogram scores and downstream metrics. PathFM achieves a higher aggregate path score on fps-bench than all evaluated external baselines. Experiments on chaotic systems further show that our flow model sustains long-run variability, while strong baselines rapidly collapse. PathFM makes generative time series forecasting both competitive and practical, enabling diverse downstream applications.",
+      "published_date": "2026-10-15T17:58:45Z",
+      "url": "https://arxiv.org/abs/2610.22358v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22358v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "PathFM: 快速生成多变量轨迹预测",
+        "chinese_summary": "PathFM 通过流匹配生成完整的未来路径，显著提高轨迹依赖量的预测能力。",
+        "pain_point": "现有模型预测边际分位数，未能明确未来轨迹的依赖结构。",
+        "core_value": "PathFM 能够生成完整的未来路径，适用于累积需求、峰值负载和事件时间等轨迹依赖量的预测。",
+        "technical_architecture": "PathFM 使用流匹配生成未来路径，并通过历史注意力缓存加速计算。",
+        "quantitative_results": "在标准预测基准上达到竞争性边际准确性。",
+        "competitors": "与分位数模型相比，PathFM 在路径评分上表现更优。",
+        "limitations": "未来工作可能需要进一步优化模型性能。",
+        "key_contributions": [
+          "引入流匹配生成完整未来路径",
+          "通过历史注意力缓存加速计算",
+          "提出 Forecast Path Score Bench 评估方法"
+        ],
+        "application_scenarios": [
+          "累积需求预测",
+          "峰值负载预测"
+        ],
+        "technical_highlights": [
+          "快速生成多路径",
+          "直接优化校准损失"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

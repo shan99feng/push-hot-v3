@@ -1,0 +1,595 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-20T01:37:20.634871+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.23479",
+      "source": "huggingface",
+      "title": "HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents",
+      "authors": [
+        "Hongcheng Gao",
+        "Alex Zhou",
+        "Jay Zhu",
+        "Zelin Zheng",
+        "Shijia Ge",
+        "Xiping Li",
+        "Di Wu",
+        "Yazhe Wang",
+        "Jianshu Zeng",
+        "Xuan Shangguan",
+        "Yongli Wang",
+        "Yexing Wan",
+        "Lingyu He",
+        "Zhiqi Jia",
+        "Sihang Wu",
+        "Xiao He"
+      ],
+      "abstract": "Agents built on vision language models (VLMs) now compete with learned policies on robot manipulation leaderboards. We ask how far a coding agent can go when it controls a robot instead of a computer, and where it stops. Our system, HexaShell, keeps the harness thin: it only turns the agent's commands into robot motion. The agent drives a robot with two arms through one command line. It sees three RGB cameras and knows their calibration. After each failed attempt, the agent reads the log, finds the cause, and writes or fixes small programs called tools. In this way it keeps what it learns as code, as a coding agent does when it fixes a failing test. The tools may use only what the robot observes. They use triangulation to find where objects are, relative to each other and to the gripper. If two cameras see the same point, the point lies where the two camera rays meet. If a point lies on a known plane, such as the table or the top of a block, it lies where its ray meets that plane. When the head camera is not enough, the robot moves a wrist camera to get a second view. We build the tools on only ten layouts of one seed per task, then freeze them and test them on ten new layouts of the same seed. We use Codex with GPT-6-Astra at medium reasoning effort. On all 42 RoboDojo tasks, HexaShell reaches a success rate of 39.7% and a progress score of 48.0, averaged in the same way as the leaderboard. This is a new state of the art on RoboDojo. The limit is contact, not reasoning: pushing reaches 92.5% and memory tasks 65.0%, but tight insertion only 8.3%. When the agent fails, it usually sees the failure but cannot make the motion work. We open source the tools evolved so far at https://github.com/HexaFuture/HexaShell.",
+      "published_date": "2026-10-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.23479",
+      "pdf_url": "https://arxiv.org/pdf/2610.23479",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.23479",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 285,
+      "hot_score": 2850,
+      "structured_summary": {
+        "chinese_title": "HexaShell：作为机器人编程代理探索VLM代理极限的轻量级框架",
+        "chinese_summary": "通过HexaShell系统，展示了VLM代理在控制机器人时的编程能力及其局限性。",
+        "pain_point": "现有VLM代理在机器人控制任务中的表现和局限性。",
+        "core_value": "展示了VLM代理在机器人任务中的编程能力，并通过工具开发和学习过程揭示其局限。",
+        "technical_architecture": "仅将代理命令转换为机器人运动，通过工具使用机器人观察进行物体定位。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于有限的布局和种子任务进行测试。",
+        "key_contributions": [
+          "展示了VLM代理在机器人任务中的编程能力",
+          "通过工具开发揭示了代理的学习过程",
+          "提出了轻量级的机器人编程框架HexaShell"
+        ],
+        "application_scenarios": [
+          "机器人编程和控制",
+          "物体识别和定位"
+        ],
+        "technical_highlights": [
+          "仅通过命令行控制双臂机器人",
+          "使用三角测量进行物体定位"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22471",
+      "source": "huggingface",
+      "title": "Has GPT-6-Astra Achieved Embodied Intelligence?",
+      "authors": [
+        "SenseNova",
+        "Joint Research Team",
+        "Zhongang Cai",
+        "Ziang Cao",
+        "Tailai Chen",
+        "Han Chong Chua",
+        "Linjun Dai",
+        "Hanming Deng",
+        "Hokin Deng",
+        "Haiwen Diao",
+        "Chenjing Ding",
+        "Weichen Fan",
+        "Xiao Fu",
+        "Zerui Gong",
+        "Chenyang Gu",
+        "Zexin He",
+        "Zhi Hou",
+        "Bo Li",
+        "Qinyue Li",
+        "Quanzhou Li",
+        "Xiaowan Li",
+        "Zhichao Liao",
+        "Dahua Lin",
+        "Zilong Lin",
+        "Bo Liu",
+        "Chunxiao Liu",
+        "Pengfei Liu",
+        "Tianqi Liu",
+        "Ziwei Liu",
+        "Chen Change Loy",
+        "Lewei Lu",
+        "Jiapeng Luo",
+        "Yuexiao Ma",
+        "Liang Pan",
+        "Xingang Pan",
+        "Oscar Qian",
+        "Ziyi Shang",
+        "Yuyao Shao",
+        "Dawei Su",
+        "Dacheng Tao",
+        "Qingyi Tao",
+        "Quan Wang",
+        "Ruisi Wang",
+        "Xiaogang Wang",
+        "Ziyi Wang",
+        "Beichen Wen",
+        "Donghao Wu",
+        "Jiaxu Wu",
+        "Silei Wu",
+        "Xiaoming Wu",
+        "Zhonghua Wu",
+        "Hongcan Xiao",
+        "Weiye Xu",
+        "Atsushi Yamashita",
+        "Lei Yang",
+        "Zhe Yang",
+        "Baiqiao Yin",
+        "Wanqi Yin",
+        "Hanfei Zhao",
+        "Tianbo Zhong",
+        "Long Zhuo",
+        "Jing Zuo"
+      ],
+      "abstract": "GPT-6-Astra demonstrates a level of competence in robotic manipulation and navigation that challenges the conventional paradigm of building specialized models for individual tasks and embodiments. In this report, we ask not only how capable GPT-6-Astra is, but what its capabilities imply for the field. First, we probe the limits of standalone GPT-6-Astra. We conduct a large-scale evaluation across 12 representative benchmarks spanning tabletop manipulation, humanoids, mobile platforms, and dexterous hands. Under a unified protocol that allows in-context learning (ICL) from training-set demonstrations and substantially increases the number of execution steps, GPT-6-Astra achieves unprecedented performance (Fig. 1). Future research may focus on improving 1) the generality of ICL 2) cost and execution time, 3) physical-state verification, 4) recovery from irreversible failures, and 5) long-horizon preservation of progress. Second, we study the agentic harness for embodied control. We identify that close-loop coordination between a high-level \"System 2\" reasoner (i.e., GPT-6-Astra) and a low-level \"System 1\" controller (e.g., π0.5) is costly but effective. Third, we examine GPT-6-Astra on real-world deployment. Our experiments on 8 robot configurations reveal substantial gaps: 1) robot demonstrations required for ICL are expensive to collect, and 2) it is implausible to trade longer execution for higher success rates with physical constraints. Fourth, we envision the next generation of embodied benchmarks. We develop a prototype that 1) derives tasks from real-world needs, 2) provides no in-domain demonstrations, and 3) judges agents on a world clock that keeps running while they deliberate. Taken together, our results suggest that GPT-6-Astra has largely crossed the threshold of embodied competence, but not yet that of practical embodied intelligence.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22471",
+      "pdf_url": "https://arxiv.org/pdf/2610.22471",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22471",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "upvotes": 237,
+      "hot_score": 2370,
+      "structured_summary": {
+        "chinese_title": "GPT-6-Astra 是否实现了具身智能？",
+        "chinese_summary": "GPT-6-Astra 在机器人操作和导航方面表现出色，挑战了为单一任务和具身模型专门构建模型的传统范式。",
+        "pain_point": "传统机器人模型为特定任务和具身模型专门设计，缺乏通用性。",
+        "core_value": "GPT-6-Astra 在多种机器人任务中表现出色，推动了具身智能领域的发展。",
+        "technical_architecture": "采用统一协议，支持上下文学习，提高执行步骤数。",
+        "quantitative_results": "在多个基准测试中，GPT-6-Astra 达到了前所未有的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步提高上下文学习的通用性、降低成本和执行时间。",
+        "key_contributions": [
+          "展示了在多种机器人任务中的卓越能力",
+          "提出了具身控制的闭环协调方法",
+          "探讨了具身智能的未来研究方向"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "导航"
+        ],
+        "technical_highlights": [
+          "统一协议支持上下文学习",
+          "显著增加执行步骤数"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20424",
+      "source": "huggingface",
+      "title": "BizBench: Unveiling Hidden Challenges in Deploying Long-Horizon Agents for Real-World Business",
+      "authors": [
+        "Enhan Zhao",
+        "Yongqi Tong",
+        "Xuejun Yu",
+        "Hang Wang",
+        "Pan Wang",
+        "Yichao Wang",
+        "Di He",
+        "Jianshe Li",
+        "Wei Wu"
+      ],
+      "abstract": "Existing long-horizon agent benchmarks often emphasize final task success while providing limited assessment of intermediate execution validity. Yet real-world business operations require agents to navigate extensive, potentially outdated or conflicting policies while satisfying critical constraints throughout execution. These requirements are particularly consequential in high-stakes domains such as payments, where intermediate violations can incur financial losses or regulatory consequences regardless of the final outcome. To bridge this evaluation gap, we introduce BizBench, a multi-turn benchmark grounded in real-world procedures from a leading payments company. Its executable environment integrates 789 knowledge documents and 601 discoverable business tools, with consistent policies, states, and tool behavior. The benchmark comprises 50 tasks involving resource constraints, temporal dependencies, prior commitments, and conflicting or outdated guidance. Each task is validated through reference execution, while deterministic checks assess both goal attainment and execution validity without prescribing a single solution path. Experiments reveal substantial limitations even among frontier models: Claude Opus 5 and GPT-6 Sol achieve strict success rates of only 64.0% and 61.3%, respectively. For Qwen3.8-27B, goal attainment reaches 42.0%, but strict success drops to 32.7%, demonstrating how outcome-based evaluation can mask invalid execution. Beyond success rates, DeepSeek-V4.1-Flash averages 191.3 tool calls per run, approximately 70% more than reference executions, revealing substantial execution overhead. Overall, BizBench establishes a testbed for evaluating and advancing long-horizon agents beyond task completion, toward reliable and constraint-compliant execution in complex business environments.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20424",
+      "pdf_url": "https://arxiv.org/pdf/2610.20424",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20424",
+      "category": "other",
+      "tags": [
+        "cs.CE"
+      ],
+      "upvotes": 169,
+      "hot_score": 1690,
+      "structured_summary": {
+        "chinese_title": "BizBench: 揭示部署长期目标智能体在真实世界商业中的隐藏挑战",
+        "chinese_summary": "BizBench 是一个基于真实支付公司流程的多轮次基准，评估智能体在执行过程中的有效性。",
+        "pain_point": "现有基准主要关注最终任务成功，忽视了执行过程中的有效性验证。",
+        "core_value": "BizBench 提供了一个全面的评估框架，确保智能体在高风险领域如支付中的合规性和有效性。",
+        "technical_architecture": "BizBench 通过集成知识文档和可发现的业务工具，构建了一个可执行的环境。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于一家支付公司的流程，可能缺乏广泛适用性。",
+        "key_contributions": [
+          "引入了一个新的多轮次基准 BizBench",
+          "评估智能体在执行过程中的有效性",
+          "涵盖资源约束、时间依赖性、先前承诺和冲突或过时的指导"
+        ],
+        "application_scenarios": [
+          "支付领域",
+          "其他高风险业务领域"
+        ],
+        "technical_highlights": [
+          "集成 789 份知识文档和 601 个可发现的业务工具",
+          "提供参考执行和确定性检查以验证执行有效性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.21783",
+      "source": "huggingface",
+      "title": "Learning to Think and Explore in 3D World",
+      "authors": [
+        "Yijiang Li",
+        "Bingyang Wang",
+        "Nuno Vasconcelos"
+      ],
+      "abstract": "We study how vision-language models (VLMs) can learn to think and actively explore in 3D space. Instead of providing multi-view images, videos, or 3D representations to the model, we preserve the native visual encoding of VLMs, i.e., a single image, one at a time, just like humans, and treat the 3D representation only as an environment with which the model can interact through actions (e.g., move left) and observations (rendered images). Each rollout begins from an initial first-person view and a visual question. The model can then iteratively reason, navigate, and reorient its viewpoint before committing to a final answer. Following an initial trajectory-supervised finetuning, we apply reinforcement learning (RL) with rewards driven primarily by final-answer correctness. Crucially, RL provides no direct supervision over which viewpoints the model should visit or which exploration actions it should take. Instead, the model must learn an effective exploration policy solely from the extent to which its interactions improve performance. Across six 3D benchmarks, our model ACT3D achieves an average accuracy of 53.2% that improves its base Qwen model by 22.0% and surpasses proprietary Gemini 3.6 Flash. ACT3D also outperforms existing open-source 3D methods while using 50-70% fewer input frames, and generalizes to unseen domains with an average improvement of 5.9% over its supervised initialization. Further analysis reveals adaptive, question-conditioned exploration. Performance gains over the base model increase from 0.6% on questions answerable from the initial view to 16.3% on those requiring extensive exploration. ACT3D searches for occluded targets, avoids unnecessary exploration, and acquires complementary viewpoints for spatial comparisons. These findings demonstrate that outcome-based RL enables VLMs not only to reason over visual evidence, but also to learn when and how to acquire it.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.21783",
+      "pdf_url": "https://arxiv.org/pdf/2610.21783",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.21783",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 145,
+      "hot_score": 1450,
+      "structured_summary": {
+        "chinese_title": "学习在3D世界中思考与探索",
+        "chinese_summary": "通过强化学习，模型在3D环境中实现自主探索和思考，显著提升答案准确性。",
+        "pain_point": "现有模型在3D环境中的自主探索和思考能力不足。",
+        "core_value": "通过强化学习，模型能够自主探索和思考，显著提升答案准确性。",
+        "technical_architecture": "采用强化学习，基于单张图像和环境交互进行探索。",
+        "quantitative_results": "ACT3D模型在六个3D基准测试中平均准确率达到53.2%，比基线模型提升22.0%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定3D环境中进行测试，未来需扩展适用范围。",
+        "key_contributions": [
+          "提出了一种基于强化学习的3D环境探索方法",
+          "显著提升了模型在3D环境中的答案准确性"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "单张图像输入",
+          "自主探索与思考"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.19159",
+      "source": "huggingface",
+      "title": "Into the Unknown: Benchmarking AI agents on open scientific research problems",
+      "authors": [
+        "Seungone Kim",
+        "Jiayi Geng",
+        "Young-Jun Lee",
+        "Bo Liu",
+        "Juyoung Suk",
+        "Nicholas Lubbers",
+        "Mitchell Wood",
+        "Marcus Noack",
+        "Yong-Xin Yao",
+        "Yuan Shi",
+        "Roxana Bujack",
+        "Cristina Garcia Cardona",
+        "Austin Rodriguez",
+        "Ilon Joseph",
+        "Woojin Cho",
+        "Zora Zhiruo Wang",
+        "Chuanyang Jin",
+        "Ian Wu",
+        "Apurva Gandhi",
+        "Tianjian Li",
+        "Weiwei Sun",
+        "Carolin Lawrence",
+        "Kiril Gashteovski",
+        "Dongyeop Kang",
+        "Jay Shin",
+        "Akari Asai",
+        "Graham Neubig",
+        "Sean Welleck"
+      ],
+      "abstract": "Can AI agents carry out research on open scientific problems? We introduce Into the Unknown, a benchmark that provides an agent with a science paper along with a research direction to pursue and tasks it to write a follow-up paper. We work with scientists at US Department of Energy (DOE) national laboratories, who each contribute an unpublished follow-up direction from their own work together with the necessary conditions a submission must meet. While assessing the quality of a follow-up paper is challenging in general, using these conditions to form a rubric makes evaluation more tractable for research problems that have no reference answer. We have nine frontier agents write 15 follow-ups each, spanning quantum computing, plasma physics, computational chemistry, materials science, and scientific machine learning domains. None of the 135 submissions satisfies all the conditions, and 114 fail our integrity check, most often because the paper claims work that was never done or reports numbers that contradict the recorded evidence. Overall, agents readily produce papers that look like follow-ups, but none meets the standard of the domain scientist, leaving substantial headroom. Our code and data are publicly available.",
+      "published_date": "2026-10-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.19159",
+      "pdf_url": "https://arxiv.org/pdf/2610.19159",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.19159",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 131,
+      "hot_score": 1310,
+      "structured_summary": {
+        "chinese_title": "未知领域的探索：AI代理在开放科学问题上的基准测试",
+        "chinese_summary": "AI代理能否解决开放的科学问题？该研究通过提供科学论文和研究方向，让代理撰写后续论文，评估其质量。",
+        "pain_point": "现有AI系统在处理开放科学问题时缺乏有效的评估标准。",
+        "core_value": "提出了一种新的基准测试方法，通过科学家设定的条件评估AI代理的后续论文质量。",
+        "technical_architecture": "基于科学家设定的条件构建评估框架，让AI代理撰写后续论文。",
+        "quantitative_results": "135份提交中，无一份完全满足科学家设定的条件，114份未通过诚信检查。",
+        "competitors": "暂无对比信息",
+        "limitations": "AI代理生成的论文虽看似符合要求，但缺乏实际科学价值。",
+        "key_contributions": [
+          "提出了一种新的基准测试方法",
+          "评估AI代理在开放科学问题上的能力",
+          "揭示了AI代理在科学准确性和诚信方面的问题"
+        ],
+        "application_scenarios": [
+          "科学领域的AI代理评估",
+          "开放科学问题的AI辅助研究"
+        ],
+        "technical_highlights": [
+          "使用科学家设定的条件作为评估标准",
+          "评估AI代理生成的后续论文质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.09872",
+      "source": "huggingface",
+      "title": "LiveMACE: Process-Aware Evaluation of LLM Agent Capabilities in Evolving Markets",
+      "authors": [
+        "Jun Zhao",
+        "Leiming Fu",
+        "Yanbo Wen",
+        "Yiding Wang",
+        "Xuantong Liu",
+        "Yang Shu",
+        "Yuyang Lu",
+        "Xuanran Xing",
+        "Jingqi Tong",
+        "Hao Xu",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ],
+      "abstract": "Evaluating agents by outcomes alone can obscure the capabilities that produce them. This problem is especially pronounced in evolving environments, where outcomes reflect a closed-loop interaction between agent behavior and changing external conditions. We introduce LiveMACEBench, a process-aware benchmark that uses live financial markets as a naturally evolving testbed for persistent LLM agents. Five frontier LLMs operate along continuous trajectories under matched Tool Use, Persistent Memory, Rule Following, and Multi-Agent Collaboration configurations. We evaluate them through both realized outcomes and mechanism-specific diagnostics derived from complete decision traces. Across 30 days of live evaluation, we find a pronounced outcome-capability gap: realized returns often diverge from capability-specific measurements, and similar outcomes can arise from markedly different patterns of mechanism use. Trace-level diagnostics further expose distinct bottlenecks across capabilities, demonstrating that mechanism access, effective mechanism use, and downstream performance are not interchangeable measures of agent capability. LiveMACEBench makes this distinction measurable, turning live markets from a performance leaderboard into a diagnostic environment for agent capability",
+      "published_date": "2026-10-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.09872",
+      "pdf_url": "https://arxiv.org/pdf/2610.09872",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.09872",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 112,
+      "hot_score": 1120,
+      "structured_summary": {
+        "chinese_title": "LiveMACE: 在演变市场中具备过程意识评估LLM代理能力的基准",
+        "chinese_summary": "通过实时金融市场评估LLM代理能力，揭示结果与机制使用之间的差距。",
+        "pain_point": "现有评估方法无法全面反映代理在演变环境中的真实能力。",
+        "core_value": "提供了一种新的评估基准，能够更准确地衡量代理的机制使用和下游性能。",
+        "technical_architecture": "使用实时金融市场作为动态测试床，评估五种前沿LLM在不同配置下的表现。",
+        "quantitative_results": "发现代理的实现回报与机制使用模式之间存在显著差异。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在30天内进行了评估，未来需要更长时间的数据验证。",
+        "key_contributions": [
+          "提出了LiveMACEBench基准",
+          "揭示了代理能力与结果之间的差距",
+          "展示了机制使用模式对代理性能的影响"
+        ],
+        "application_scenarios": [
+          "评估LLM在金融市场的应用",
+          "研究代理在动态环境中的行为"
+        ],
+        "technical_highlights": [
+          "使用实时金融市场作为测试床",
+          "通过决策轨迹进行机制特定诊断"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.18784",
+      "source": "huggingface",
+      "title": "Pack Light, CarryOn: Building Object-Oriented Context for Long-Horizon Agents",
+      "authors": [
+        "Yuchen Lu",
+        "Julian McAuley",
+        "Lei Zhang"
+      ],
+      "abstract": "Long-horizon agents accumulate progress in persistent task state, yet repeatedly process interaction histories describing how that progress was achieved. This raises a natural question: can long-horizon context instead be organized around reusable progress rather than the history that produced it? In this paper, we introduce CarryOn, an object-oriented context runtime that organizes continuation around reusable task objects. Rather than treating compressed histories or reconstructed accounts of progress as the primary basis for continuation, CarryOn builds a context view from continuation carriers, complementary execution context, and a live tail of recent interactions. A core challenge is keeping this reusable basis valid after its surrounding history is retired: how can CarryOn update the basis without reconstructing the full representation at every fold? CarryOn maintains carrier records across folds, revising affected records against bound evidence and applicable environment checks while carrying forward unaffected records and jointly updating execution context. Experiments on OSWorld 2.0 and BrowseComp-Plus show improved gains of 5.8% and 7.0% while reducing total token usage by 51.9% and 22.9%, respectively. Project page: https://ethannju.github.io/carryon",
+      "published_date": "2026-10-13T17:35:27.000Z",
+      "url": "https://arxiv.org/abs/2610.18784",
+      "pdf_url": "https://arxiv.org/pdf/2610.18784",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.18784",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 99,
+      "hot_score": 990,
+      "structured_summary": {
+        "chinese_title": "轻装上阵，持续前进：构建面向长期代理的对象化上下文",
+        "chinese_summary": "引入CarryOn，通过任务对象组织长期代理的上下文，提高效率并减少总token使用量。",
+        "pain_point": "长期代理需要不断处理交互历史，导致上下文管理复杂。",
+        "core_value": "通过对象化上下文，减少对历史的依赖，提高效率。",
+        "technical_architecture": "CarryOn通过持续记录和更新任务对象记录来管理上下文。",
+        "quantitative_results": "在OSWorld 2.0和BrowseComp-Plus实验中，分别提高了5.8%和7.0%的效率。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何在不同环境和任务中保持任务对象记录的有效性。",
+        "key_contributions": [
+          "提出CarryOn，一种基于任务对象的上下文管理方法",
+          "通过持续记录和更新任务对象记录来优化长期代理的上下文管理"
+        ],
+        "application_scenarios": [
+          "长期任务执行",
+          "复杂交互环境下的代理管理"
+        ],
+        "technical_highlights": [
+          "对象化上下文管理",
+          "持续记录和更新任务对象记录"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20951",
+      "source": "huggingface",
+      "title": "LEV: Thinking Fast and Deep with Looped Decision Models",
+      "authors": [
+        "Dingjie Song",
+        "Zhiling Yan",
+        "Yuxuan Zhang",
+        "Lichao Sun"
+      ],
+      "abstract": "Decision models answer typed questions about an input with one probability per option, computed in a single forward pass without generating text. Like the fast System 1 of dual-process theory, they answer at once, but their depth is fixed at training time, so they spend the same computation on easy and hard questions. Models that reason in generated text can think longer, but they pay for every extra step in decoded tokens. We present LEV, a decision model that thinks deeper by rerunning its layers in a loop instead of generating tokens. LEV builds on a language model pretrained as a loop, reads the options after every loop step and trains all steps jointly, so one checkpoint can answer at any depth. On three looped backbones, accuracy rises with depth on the same weights, mostly on hard questions, and a 2.6B LEV goes from 63.2% at depth one to 76.2% at depth four on JevBench. On-demand depth, set per question by a small stopper with a threshold fitted on unlabelled requests, saves 15% to 24% of the computation at a cost of under one accuracy point, level with or slightly above a fixed mix of depths. On a locked test set, the 1.4B and 3B models are 5.4 to 8.8 points more accurate than dense (non-looped) models and cascades of the same latency below 50 ms.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20951",
+      "pdf_url": "https://arxiv.org/pdf/2610.20951",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20951",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 87,
+      "hot_score": 870,
+      "structured_summary": {
+        "chinese_title": "LEV：通过循环决策模型思考快速且深入",
+        "chinese_summary": "LEV 提出了一种通过循环重新运行层来思考更深入的决策模型。",
+        "pain_point": "现有模型在处理复杂问题时计算资源浪费，简单问题与复杂问题计算资源分配不均。",
+        "core_value": "LEV 提供了按需深度，提高了复杂问题的准确性，同时节省了计算资源。",
+        "technical_architecture": "基于循环预训练语言模型，每轮读取选项并联合训练所有步骤。",
+        "quantitative_results": "在 JevBench 上，2.6B LEV 模型深度从 1 到 4 的准确率从 63.2% 提高到 76.2%。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多应用场景。",
+        "key_contributions": [
+          "提出了按需深度的决策模型",
+          "通过循环重新运行层提高复杂问题的准确性",
+          "节省了计算资源"
+        ],
+        "application_scenarios": [
+          "复杂问题的决策支持",
+          "需要高准确率的场景"
+        ],
+        "technical_highlights": [
+          "循环预训练语言模型",
+          "联合训练所有步骤"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20556",
+      "source": "huggingface",
+      "title": "Speculative Sampling in Interactive Video Generation",
+      "authors": [
+        "Yubo Huang",
+        "Yuxuan Zhang",
+        "Jiaming Liu",
+        "Sirui Zhao",
+        "Enhong Chen"
+      ],
+      "abstract": "Interactive video generation commonly relies on small bidirectional chunks to reduce response latency. Yet our preliminary experiments show that larger chunks improve video quality and better utilize GPU parallelism, allowing more latents to be sampled with only a modest increase in sampling time. Motivated by these observations, we propose Speculative Sampling, a strategy that combines the modeling power of large bidirectional windows with the low-latency interaction of small ones. It expands the modeling window by appending noise latents as padding and caches the resulting predictions for reuse when the condition remains unchanged. Predictions are delivered incrementally, while the uncommitted future remains replaceable. Our latency analysis shows that this removes the waiting-time lower bound imposed by chunk boundaries, shifting the optimization focus from reducing chunk size to accelerating per-chunk sampling. Bidirectional window size thus becomes a decision variable for jointly optimizing visual quality and sampling time, rather than a necessary constraint on low-latency interaction. This opens a path to serving large bidirectional models in interactive streaming systems without complex streaming post-training.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20556",
+      "pdf_url": "https://arxiv.org/pdf/2610.20556",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20556",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.HC"
+      ],
+      "upvotes": 70,
+      "hot_score": 700,
+      "structured_summary": {
+        "chinese_title": "交互式视频生成中的投机采样",
+        "chinese_summary": "提出了一种结合大双向窗口建模能力和小窗口低延迟交互的投机采样策略。",
+        "pain_point": "交互式视频生成中，小双向窗口虽能降低延迟，但影响视频质量和GPU并行性。",
+        "core_value": "通过投机采样策略，优化了视觉质量和采样时间之间的平衡。",
+        "technical_architecture": "采用大双向窗口和小窗口结合的方法，通过缓存预测结果实现低延迟。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步优化预测结果的缓存机制。",
+        "key_contributions": [
+          "提出投机采样策略",
+          "优化视觉质量和采样时间的平衡",
+          "扩展双向窗口大小的决策变量"
+        ],
+        "application_scenarios": [
+          "交互式视频生成系统",
+          "低延迟视频流媒体服务"
+        ],
+        "technical_highlights": [
+          "结合大双向窗口和小窗口的优势",
+          "通过缓存预测结果实现低延迟"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.23121",
+      "source": "huggingface",
+      "title": "Scene-Designer: Learning Design Intelligence for Agentic 3D Scene Generation",
+      "authors": [
+        "Xuanyu Liu",
+        "Hongyan Feng",
+        "Miao Pan",
+        "Sunlai Chen",
+        "Lizhou Liang",
+        "Bing Sun",
+        "Wenqi Zhang",
+        "Xuhong Zhang"
+      ],
+      "abstract": "Generating complete, coherent, and usable 3D indoor scenes from natural language requires strong design intelligence: the ability to design high-quality scenes and critique their quality. However, existing approaches either rely on general-purpose models lacking domain-specific design experience or learn from static scenes. In this work, we introduce Scene-Designer, an agentic framework that learns design intelligence through complementary design and critique experiences. We construct two datasets: Scene-OTA-35K, which provides Observation--Thought--Action supervision for learning scene design and efficient error correction, and Scene-OTC-15K, which provides Observation--Thought--Critic supervision for learning scene quality critique across physical validity, functional correctness, and layout coherence. Based on these experiences, we propose Scene-GRPO, a Critic-guided GRPO framework that improves design decisions and reduces unnecessary trial-and-error corrections. Extensive experiments demonstrate that Scene-Designer achieves superior performance in physical validity, functional correctness, and layout coherence, while the learned Scene-Critic significantly outperforms general-purpose models in scene critique. Moreover, test-time Critic guidance further improves scene generation, showing that the Critic can provide useful guidance beyond training. Additional analysis suggests a trend of mutual enhancement between scene design and critique abilities.",
+      "published_date": "2026-10-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.23121",
+      "pdf_url": "https://arxiv.org/pdf/2610.23121",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.23121",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 49,
+      "hot_score": 490,
+      "structured_summary": {
+        "chinese_title": "Scene-Designer: 学习设计智能以生成有影响力的3D场景",
+        "chinese_summary": "Scene-Designer 通过设计和批评经验学习设计智能，显著提高物理准确性、功能正确性和布局一致性。",
+        "pain_point": "现有方法依赖于缺乏领域特定设计经验的一般模型，或仅从静态场景中学习。",
+        "core_value": "通过设计和批评经验学习设计智能，显著提高生成3D场景的质量。",
+        "technical_architecture": "提出 Critic-guided GRPO 框架，结合设计和批评经验优化设计决策。",
+        "quantitative_results": "在物理准确性、功能正确性和布局一致性方面表现优异。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多复杂场景的应用。",
+        "key_contributions": [
+          "提出 Critic-guided GRPO 框架",
+          "构建 Scene-OTA-35K 和 Scene-OTC-15K 数据集",
+          "显著提高生成3D场景的质量"
+        ],
+        "application_scenarios": [
+          "室内设计",
+          "虚拟现实场景生成"
+        ],
+        "technical_highlights": [
+          "结合设计和批评经验优化生成过程",
+          "提出 Critic-guided GRPO 框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

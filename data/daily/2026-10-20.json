@@ -1,0 +1,619 @@
+{
+  "date": "2026-10-20",
+  "generated_at": "2026-10-21T01:21:40.441925+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.26802",
+      "source": "huggingface",
+      "title": "Scaling Parameter-Efficient Fine-Tuning for Brain Encoding",
+      "authors": [
+        "Zhuofan Josh Ying",
+        "Guanglong Sun",
+        "Nolan Ho",
+        "Kieran Liu",
+        "Rui Yang",
+        "Andrew Chen",
+        "Nikolaus Kriegeskorte",
+        "Pony Ma",
+        "Hossein Adeli"
+      ],
+      "abstract": "Brain encoding models aim to predict neural responses to stimuli. The most widely used approach fits readouts from frozen pretrained backbones. Using neural data to train large models from scratch or fully fine-tune them after task-pretraining has proven difficult because neural data is costly and limited. We show that parameter-efficient fine-tuning (PEFT) enables us to effectively adapt very large pretrained backbones for brain encoding with a small number of trainable parameters. To make it computationally practical, we exploit the backbone's causal structure to predict multiple timepoints in a single pass instead of using sliding windows, significantly reducing feature-extraction cost. This enables efficient fine-tuning of multimodal backbones with up to 104B parameters, the largest model adapted for brain encoding to our knowledge. Trained with a low-rank adapter (LoRA) and a lightweight readout, our approach consistently improves brain encoding performance across nine diverse multimodal backbones. On the same Qwen3-Omni backbone as the prior state-of-the-art (SoTA), our method BrainLoRA achieves the best published performance on the Algonauts 2025 Challenge. We also show the adapted multimodal backbones remain interpretable: modality attribution recovers the canonical sensory topography that prior work often obtains by construction from separate unimodal encoders, and neural adaptation increases the contribution of audio inputs and cross-modal mixing within the backbone. To scale out the number of adapted models, we develop a multi-LoRA kernel that accelerates joint training of multiple LoRAs on a shared backbone. This enables an ensemble of 200+ adapted models that ranks first on the public Algonauts post-challenge leaderboard at the time of writing. Together, our results highlight PEFT as an efficient and powerful paradigm for brain encoding.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26802",
+      "pdf_url": "https://arxiv.org/pdf/2610.26802",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26802",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 234,
+      "hot_score": 2340,
+      "structured_summary": {
+        "chinese_title": "脑编码模型参数高效微调的扩展",
+        "chinese_summary": "BrainLoRA 方法在多种大型多模态模型上提高了脑编码性能。",
+        "pain_point": "神经数据稀缺且有限，难以从零开始训练大规模模型或完全微调。",
+        "core_value": "通过参数高效微调，使用少量可训练参数有效适应大型预训练模型。",
+        "technical_architecture": "利用模型因果结构一次性预测多个时间点，减少特征提取成本。",
+        "quantitative_results": "在 Algonauts 2025 挑战中，BrainLoRA 达到最佳性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定任务上进行了验证。",
+        "key_contributions": [
+          "提出参数高效微调方法",
+          "利用模型因果结构减少计算成本"
+        ],
+        "application_scenarios": [
+          "脑科学",
+          "神经影像学"
+        ],
+        "technical_highlights": [
+          "大规模模型的高效微调",
+          "低秩适配器和轻量级读出"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.24087",
+      "source": "huggingface",
+      "title": "OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners",
+      "authors": [
+        "Peisong Wang",
+        "Feixue Liu",
+        "Yize Meng",
+        "Bowen Liu",
+        "Ruoyu Chen",
+        "Gaoyang Dai",
+        "Xing He",
+        "Aiqian Li",
+        "Fengchi Yuan",
+        "Aochuan Chen",
+        "Chenyi Zi",
+        "Yuhan Li",
+        "Hongchuan Zeng",
+        "Yimo Yan",
+        "Nuo Chen",
+        "Jie Fu",
+        "Zuo-Jun Max Shen",
+        "Yong-Hong KUO",
+        "Jia Li"
+      ],
+      "abstract": "Can large language model (LLM) agents deliver expert-level operations research (OR) solutions directly from original client materials, without prior expert reformulation? Existing OR benchmarks typically begin with self-contained descriptions or predefined optimization tasks, underrepresenting the translation of original business materials into professionally validated solutions. We introduce OR-License, an end-to-end benchmark of 31 instances across 10 industrial scenarios from paid OR engagements totaling USD 3.68 million. It preserves original requirements, input data, deliverable formats, and information boundaries after de-identification. To study information acquisition, we introduce ORSim, a controlled client simulator that discloses business facts without supplying OR expertise. Hidden evaluation checks feasibility and compares objective quality against original expert solutions accepted by clients before benchmark construction. Deployment-Adjusted Quality (DAQ) averages expert-relative quality across instances, assigning zero to infeasible deliveries. Across 11 frontier LLMs using coding-agent harnesses, several exceed the expert reference in conditional objective quality, but none matches its DAQ; the strongest primary Claude Code configuration achieves 88.39% strict feasibility and a DAQ of 0.87 against the expert reference of 1. Client information acquisition extends beyond clarification into solution development and validation, with some later stages showing higher confirmed issue-resolution proportions. Trajectory analysis identifies formulation and implementation failures, while task-equalized research-chain completion rates range from 24% to 45% across models on evaluable tasks. These findings motivate sustained information-gap resolution, faithful problem formulation, and evidence-linked self-improvement for reliable long-horizon agents.",
+      "published_date": "2026-10-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.24087",
+      "pdf_url": "https://arxiv.org/pdf/2610.24087",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.24087",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 179,
+      "hot_score": 1790,
+      "structured_summary": {
+        "chinese_title": "OR-License: 评估大语言模型代理作为实际运营研究从业者的能力",
+        "chinese_summary": "大语言模型代理能否直接从原始客户材料中提供专家级运营研究解决方案？",
+        "pain_point": "现有运营研究基准通常从自包含描述或预定义优化任务开始，未能充分代表原始业务材料到专业验证解决方案的转化。",
+        "core_value": "引入OR-License基准，涵盖10个工业场景的31个实例，评估大语言模型代理在实际业务中的表现。",
+        "technical_architecture": "使用ORSim控制客户端模拟器和隐藏评估方法来验证解决方案的可行性。",
+        "quantitative_results": "多个前沿大语言模型在条件目标质量上超过专家参考。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于已付费的运营研究项目，可能不完全代表所有业务场景。",
+        "key_contributions": [
+          "引入OR-License基准",
+          "开发ORSim控制客户端模拟器",
+          "评估大语言模型代理在实际业务中的表现"
+        ],
+        "application_scenarios": [
+          "运营研究",
+          "大语言模型代理评估"
+        ],
+        "technical_highlights": [
+          "端到端的基准测试",
+          "隐藏评估确保解决方案的可行性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.26625",
+      "source": "huggingface",
+      "title": "EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience",
+      "authors": [
+        "Xinhao Ji",
+        "Hui En Pang",
+        "Hao Li",
+        "Kairui Hu",
+        "Jiner Wang",
+        "Mingze Sun",
+        "Ziang Cao",
+        "Yalun Dai",
+        "Thang Luu",
+        "Qin Ma",
+        "Hongyi Chen",
+        "Yukang Cao",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Ziwei Liu"
+      ],
+      "abstract": "Reconstructing human activity from egocentric video requires more than recovering individual 3D components: the observer's motion, surrounding geometry, and hand-object interactions must fit together in a consistent world. Achieving this coherence requires both joint reconstruction and aligned supervision, yet existing methods and datasets offer limited support for either. We present EgoXperience, a full-stack paradigm that addresses these needs through data collection, automatic annotation, unified modeling, and benchmarking. Central to EgoXperience is an automatic annotation engine, EgoX-Engine, that couples geometrically verified object tracking with SLAM-based world alignment, yielding consistent supervision for the camera, scene, hands, and objects. This yields EgoX-Data-6M, a 50-hour dataset of task-driven manipulation and locomotion within and across indoor and outdoor environments, with second-level task captions. We carefully select one hour across these activity categories as EgoX-Bench to evaluate joint reconstruction. To translate this supervision into reconstruction, we introduce EgoX, trained with EgoX-Data-6M and complementary annotations from additional public datasets. Given monocular egocentric video and first-frame object masks, our model achieves joint metric reconstruction of the camera, scene, hands, and objects in a shared world coordinate frame with a single forward pass. Extensive experiments demonstrate state-of-the-art performance across scene estimation and world-space hand-object pose recovery. Against the strongest evaluated baselines, EgoX reduces camera, hand, and depth errors by 68.9%, 65.6%, and 42.9%, and improves object pose scores by 28.0%.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26625",
+      "pdf_url": "https://arxiv.org/pdf/2610.26625",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26625",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 124,
+      "hot_score": 1240,
+      "structured_summary": {
+        "chinese_title": "EgoXperience: 学习基于世界的真实视角表示",
+        "chinese_summary": "EgoX-Engine 自动标注引擎实现了一致的监督，支持联合重建。",
+        "pain_point": "现有方法和数据集在联合重建和对齐监督方面支持不足。",
+        "core_value": "提供了一个全面的框架，包括数据收集、自动标注、统一建模和基准测试。",
+        "technical_architecture": "结合几何验证对象跟踪与基于SLAM的世界对齐。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多应用场景验证。",
+        "key_contributions": [
+          "提出EgoX-Engine自动标注引擎",
+          "构建EgoX-Data-6M大规模数据集",
+          "提供联合重建的基准测试"
+        ],
+        "application_scenarios": [
+          "真实视角视频的人类活动重建",
+          "室内和室外环境下的任务驱动操作和移动"
+        ],
+        "technical_highlights": [
+          "结合几何验证对象跟踪与基于SLAM的世界对齐",
+          "大规模数据集支持联合重建"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.26549",
+      "source": "huggingface",
+      "title": "Holi-World: Building Holistic World Intelligence from Human-Ego Experience",
+      "authors": [
+        "Hao Li",
+        "Xiyuan Zheng",
+        "Yuanyuan Gao",
+        "Yalun Dai",
+        "Xinhao Ji",
+        "Xuan-Li Chen",
+        "Jing Zhao",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Ziwei Liu"
+      ],
+      "abstract": "Human egocentric experience offers a rich foundation for learning how the world is organized and how it changes through interaction. Realizing this potential at scale requires turning growing volumes of recordings into learning resources that connect scene structure, object semantics, and interaction histories across viewpoints and time, while reducing dependence on costly manual annotation. We introduce HOLI-WORLD, an integrated ecosystem connecting experience capture, world representation, automated data construction, model learning, and independent evaluation. To sup- port learning at scale, HOLIWORLD-Foundry combines complementary static and dynamic perception to automatically construct world records that connect persistent scene structure and evolving object states with interaction histories and supporting observations. HOLIWORLD-Data organizes these records from approximately 100 self-collected scenes into grounded learning resources, including approximately 80K QA pairs used to train HOLIWORLD-VL-4B. Independent human annotations of heldout recordings form HOLIWORLD-Bench, supporting evaluation of both annotation quality and learned spatial and temporal understanding. Experiments on ScanNet, ScanNet++, Aria Digital Twin, and HOLIWORLD-Bench demonstrate strong performance in static perception and dynamic tracking, while training on HOLIWORLD-Data substantially improves HOLIWORLD-VL-4B's spatial and temporal reasoning on HOLI- WORLD-Bench and EgoDynamic4D. HOLIWORLD provides a practical foundation for expanding learning resources from the continuous flow of human experience and advancing machine understanding of the dynamic world.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26549",
+      "pdf_url": "https://arxiv.org/pdf/2610.26549",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26549",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 112,
+      "hot_score": 1120,
+      "structured_summary": {
+        "chinese_title": "Holi-World: 构建源自人类主观体验的全面世界智能",
+        "chinese_summary": "HOLI-WORLD 构建了一个生态系统，通过自动构建连接场景结构、对象语义和交互历史的数据记录，实现大规模学习。",
+        "pain_point": "依赖昂贵的手动标注，难以大规模利用人类主观体验数据。",
+        "core_value": "通过自动构建数据记录，减少对手动标注的依赖，实现大规模学习。",
+        "technical_architecture": "结合静态和动态感知，自动构建连接持久场景结构和演变对象状态的数据记录。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在约100个自收集场景中进行实验。",
+        "key_contributions": [
+          "构建了一个集成生态系统，涵盖体验捕获、世界表示、数据构建、模型学习和独立评估。",
+          "通过自动构建数据记录，减少对手动标注的依赖。",
+          "提供了约80K QA对用于训练HOLIWORLD-VL-4B模型"
+        ],
+        "application_scenarios": [
+          "智能家居",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "结合静态和动态感知技术",
+          "自动构建连接持久场景结构和演变对象状态的数据记录"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.26825",
+      "source": "huggingface",
+      "title": "MemT-1.0: Towards Memory-Native Evolution",
+      "authors": [
+        "Zhiyu Li",
+        "Zeyu Zhang",
+        "Linyun Liu",
+        "Yiwei Bu",
+        "Chenyang Xi",
+        "Xichong Zhang",
+        "Yi Yu",
+        "Yu Yu",
+        "Zhichen Liu",
+        "Yuxiao Yi",
+        "Chunyu Li",
+        "Haoran Liu",
+        "Zhenkai Ding",
+        "Le Zhou",
+        "Juncheng Zhang",
+        "Boyu Chen",
+        "Zehao Lin",
+        "Guorui Li",
+        "Renyu Fu",
+        "Ji Li",
+        "Youyang Xia",
+        "Jiajun Shen",
+        "Harvey Li",
+        "Jingsong Zhou",
+        "Helan Hu",
+        "Tong Shen",
+        "Tianxiao Xu",
+        "Chenye Han",
+        "Weijie Li",
+        "Zhongquan Zhou",
+        "Hongming Xu",
+        "Yuekeng Li",
+        "Erenkai Zhu",
+        "Peng Yu",
+        "Wenhao Li",
+        "Jingyi Kang",
+        "Xixuan Hao",
+        "Xuzhou Zhu",
+        "Can Chen",
+        "Jiawei Liu",
+        "Chen Jiang",
+        "Tao Jiang",
+        "Fangwei Xiang",
+        "Zepeng Yao",
+        "Kai Chen",
+        "Guang Yang",
+        "Mingfei Lu",
+        "Chunhui Li",
+        "Zhengxuan Jiang",
+        "Bo Tang",
+        "Shiyu Zhan",
+        "Yihang Sun",
+        "Jie Chu",
+        "Wenjun Xiong",
+        "Zhenxiang Hua",
+        "Chen Lin",
+        "Detong Su",
+        "Dongyu Deng",
+        "Qiuping Ding",
+        "Guofeng Ding",
+        "Si Chen",
+        "Guohua Wen",
+        "Xu Chen",
+        "Zhi-Qin John Xu",
+        "Ying-Cong Chen",
+        "Ningyu Zhang",
+        "Haofen Wang",
+        "Muning Wen",
+        "Haotian Chen",
+        "Wentao Zhang",
+        "Xuanhe Zhou",
+        "Rita Zhang",
+        "Junchi Yan",
+        "Feiyu Xiong"
+      ],
+      "abstract": "Memory-native evolution requires making memory an intrinsic capability of foundation models, enabling them to continuously accumulate and utilize information. To this end, we introduce MemT-1.0, a new architecture of memory foundation models that internalize memory as part of model computation. Building on Metis, MemT-1.0 employs Gated DeltaNet-2 with a stable token-level memory update mechanism within each turn. We further introduce Mixture-of-Storage to scale native memory capacity. Following a deliberate backbone preparation, we develop a two-stage training pipeline consisting of continued pre-training and post-training, supported by 34B tokens of training data and efficient training and inference infrastructure. We release a model family comprising MemT-1.0-Nano and MemT-1.0-Flash, and conduct a comprehensive evaluation of memory and general capabilities. The results show that they outperform the parametric memory baselines on average and remain competitive with retrieval-augmented methods, while largely preserving general capabilities. At a history length of 128K tokens, MemT-1.0-Nano achieves approximately 1.86times end-to-end inference speedup and a 66times reduction in persistent storage relative to full context KV cache. By internalizing retrieved procedural experience, MemT-1.0 improves task success on agentic tasks, providing a practical step toward memory-native evolution.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26825",
+      "pdf_url": "https://arxiv.org/pdf/2610.26825",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26825",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 109,
+      "hot_score": 1090,
+      "structured_summary": {
+        "chinese_title": "MemT-1.0: 向内存本征进化",
+        "chinese_summary": "MemT-1.0 通过将内存内置于模型计算中，实现持续积累和利用信息。",
+        "pain_point": "现有基础模型缺乏持续积累和利用信息的能力。",
+        "core_value": "通过内存本征进化，提升模型的记忆能力和泛化能力。",
+        "technical_architecture": "采用 Gated DeltaNet-2 和 Mixture-of-Storage，实现稳定的记忆更新机制。",
+        "quantitative_results": "MemT-1.0-Nano 在历史长度为 128K 时，实现约 1.86 倍的端到端推理加速。",
+        "competitors": "对比了参数化内存基线和检索增强方法。",
+        "limitations": "未来需要进一步扩展模型规模和数据集。",
+        "key_contributions": [
+          "引入内存本征进化架构",
+          "开发稳定的记忆更新机制",
+          "提出混合存储扩展内存容量"
+        ],
+        "application_scenarios": [
+          "长文本理解和生成",
+          "对话系统"
+        ],
+        "technical_highlights": [
+          "Gated DeltaNet-2 稳定记忆更新",
+          "Mixture-of-Storage 扩展内存容量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.25736",
+      "source": "huggingface",
+      "title": "Learning from Fleet Experience: A Collective Learning Paradigm for Robots",
+      "authors": [
+        "Chao Yu",
+        "Shu&#39;ang Yu",
+        "Hao Lin",
+        "Hongzhi Zang",
+        "Yuxiang Yan",
+        "Chenxi Jiang",
+        "Zhen Guo",
+        "Chuankang Li",
+        "Yihao Chen",
+        "Xin Xu",
+        "Xu Fu",
+        "Jiakai Zhou",
+        "Liangzhi Shi",
+        "Hongyi Ren",
+        "Yiwei Liu",
+        "Jing Wu",
+        "Yuanqing Wang",
+        "Chen Wu",
+        "Bo Dai",
+        "Chunyu Yang",
+        "Hongliang Huang",
+        "Shuoyu Yue",
+        "Weiqi Yin",
+        "Yinuo Chen",
+        "Ruihua Chen",
+        "Chunyang Zhu",
+        "Han Xiao",
+        "Yanghao Li",
+        "Ruipu Wu",
+        "Zhikai Cai",
+        "Xiu Chen",
+        "Xu Tan",
+        "Yuchen Yan",
+        "Jialin Zhang",
+        "Wen Zeng",
+        "Yiming Zhou",
+        "Zixiao Huang",
+        "Guanghui Ren",
+        "Quanlu Zhang",
+        "Boxun Li",
+        "Maoqing Yao",
+        "Yu Wang"
+      ],
+      "abstract": "Experience generated during deployment offers an opportunity for robots to improve policy reliability through learning from their own executions. However, learning through human corrections requires teleoperators to monitor execution and intervene when policies fail, a demand that is difficult to meet as robot fleets grow. We introduce collective experience learning (CEL), a learning paradigm in which deployed robots share their execution experience to improve a common policy. We realize CEL through failure-guided experience retrieval fine-tuning (FERT), which uses failure contexts from robot executions to retrieve relevant trajectory segments from the fleet's shared successful experience and uses their actions as supervision for policy updates, without collecting additional expert demonstrations or corrective actions. A fault-tolerant asynchronous training system (FATS) coordinates experience collection, policy optimization and policy distribution despite local interruptions within the robot fleet. Across five real-world manipulation tasks, the resulting policies achieve success rates of 93.3-99.2%, evaluated over 120 trials per task on robots excluded from training data collection. With collection time per robot held fixed, larger fleets provide more experience and FERT generally achieves higher success rates across the evaluated sizes. On multi-stage phone packaging, learning with 96 robots increases success from 79.2% to 98.3%. These results support collective experience as a practical basis for scalable robot learning and a path towards improving policy reliability during deployment without collecting additional expert corrective actions.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.25736",
+      "pdf_url": "https://arxiv.org/pdf/2610.25736",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.25736",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 107,
+      "hot_score": 1070,
+      "structured_summary": {
+        "chinese_title": "从车队经验学习：一种用于机器人的集体学习范式",
+        "chinese_summary": "通过使用失败上下文从机器人执行中检索相关轨迹段并用其行为作为监督来更新策略，实现集体经验学习。",
+        "pain_point": "随着机器人车队规模的扩大，通过人类纠正进行学习的需求难以满足。",
+        "core_value": "无需收集额外的专家演示或纠正动作，通过集体经验学习提高策略可靠性。",
+        "technical_architecture": "通过故障引导的经验检索微调（FERT）和容错异步训练系统（FATS）实现。",
+        "quantitative_results": "在五个实际操作任务中，策略的成功率为93.3%-99.2%，在120次试验中评估。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多复杂场景。",
+        "key_contributions": [
+          "提出了一种新的集体经验学习范式",
+          "无需额外专家演示，通过失败上下文进行策略更新",
+          "设计了容错异步训练系统"
+        ],
+        "application_scenarios": [
+          "机器人操作任务",
+          "自动化生产线"
+        ],
+        "technical_highlights": [
+          "故障引导的经验检索微调",
+          "容错异步训练系统"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.26860",
+      "source": "huggingface",
+      "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
+      "authors": [
+        "Yu Zhou",
+        "Cheng-Fu Yang",
+        "Rui Sun",
+        "Di Wu",
+        "Sibo Peng",
+        "Mingyang Zhang",
+        "Zhen Yang",
+        "Ruiyi Zhang",
+        "Nanyun Peng",
+        "Zhe Gan",
+        "Kai-Wei Chang"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only modest gains. Such tasks demand grounded perception, external knowledge, and numerical measurements obtained through heterogeneous tools, whose outputs must be made interpretable to the model and retained across reasoning steps. We introduce OpenVLHarness, a multimodal reasoning harness organized around a capability layer and persistent multimodal memory. The capability layer combines task-level tool interfaces with evidence rendering, providing consistent access to heterogeneous backends and converting their outputs into model-readable observations. Persistent multimodal memory retains the corresponding images, structured data, and web references as addressable artifacts throughout each query. A coding interface executes generated programs over stored data, enabling computations that combine results from multiple tools. Together, these mechanisms support an iterative process of acquiring, inspecting, and composing multimodal evidence. Evaluated on 22 benchmarks with eight open and proprietary backbones, OpenVLHarness improves average scores by 9.7-12.6 points over matched no-tool baselines, including +11.2 with Qwen3-VL-8B, +9.7 with Kimi K3, and +9.9 with GPT-6 Astra. With GPT-6 Luna at medium reasoning effort, OpenVLHarness outperforms the base model, Codex, and Visual Sketchpad at maximum effort by 7.7-8.5 points while incurring at most 37% of their model-token cost.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26860",
+      "pdf_url": "https://arxiv.org/pdf/2610.26860",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26860",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 97,
+      "hot_score": 970,
+      "structured_summary": {
+        "chinese_title": "OpenVLHarness: 实用的多模态视觉代理工具使用工具",
+        "chinese_summary": "引入OpenVLHarness，一种基于能力层和持久多模态记忆的多模态推理框架，支持迭代获取和处理工具输出。",
+        "pain_point": "现有模型难以处理需要外部知识和工具输出的任务。",
+        "core_value": "提供了一种新的框架，能够整合工具输出并使其对模型可读。",
+        "technical_architecture": "采用能力层和持久多模态记忆架构，支持多模态推理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于当前实验，未来需要更多应用场景验证。",
+        "key_contributions": [
+          "引入持久多模态记忆",
+          "提供工具接口和证据渲染",
+          "支持跨步骤的工具输出整合"
+        ],
+        "application_scenarios": [
+          "视觉代理任务",
+          "需要外部工具支持的复杂推理任务"
+        ],
+        "technical_highlights": [
+          "多模态推理框架",
+          "工具输出的可读性转换"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.25690",
+      "source": "huggingface",
+      "title": "ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation",
+      "authors": [
+        "Yihui Yang",
+        "Yuanhong Yu",
+        "Jiawei Wang",
+        "Zhongrui Yu",
+        "Jia Shi",
+        "Kun Zhan",
+        "Ruizhen Hu",
+        "Xiaowei Zhou",
+        "Yu Liu",
+        "Sida Peng"
+      ],
+      "abstract": "We study language-conditioned local navigation, where a robot must navigate to a text-specified target visible in its initial observation and stop at the described location. End-to-end navigation policies require diverse training data to generalize across scenes, yet real-robot data is costly to collect and simulated data leaves a sim-to-real gap. Internet egocentric videos offer a scalable source of real-world navigation experience. Our key insight is to learn goal-directed visual dynamics from Internet egocentric videos, and use these dynamics to support robot action generation. To this end, we propose ScaleNav, a unified world-action framework with three-stage training. We first perform instruction-conditioned video pretraining on these videos to learn how observations evolve as the camera approaches instructed targets across diverse real-world scenes. Action alignment then uses action-labeled simulated data to train the model to predict executable action chunks. Joint fine-tuning subsequently optimizes all trainable components together for navigation. ScaleNav achieves success rates of 86.5% on a single-view adaptation of Short-Horizon OVON and 94.9% on our HabitatGS-LN benchmark, outperforming the evaluated baselines on both benchmarks. We further deploy and evaluate ScaleNav on a real quadruped robot, with results supporting the model's ability to generalize to real-world navigation. Code and videos are available at https://zju3dv.github.io/ScaleNav/",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.25690",
+      "pdf_url": "https://arxiv.org/pdf/2610.25690",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.25690",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 84,
+      "hot_score": 840,
+      "structured_summary": {
+        "chinese_title": "ScaleNav: 支持语言条件局部导航的大规模互联网视频预训练",
+        "chinese_summary": "ScaleNav 通过互联网第一人称视频预训练实现语言条件下的机器人局部导航。",
+        "pain_point": "现有方法在模拟数据与真实场景之间存在差距，且真实机器人数据收集成本高。",
+        "core_value": "利用互联网视频实现大规模、低成本的导航数据预训练，提高机器人导航能力。",
+        "technical_architecture": "提出三阶段训练框架，包括指令条件下的视频预训练、动作对齐训练和联合微调。",
+        "quantitative_results": "在单视角短时OVON和HabitatGS-LN基准上分别取得86.5%和94.9%的成功率。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更复杂场景下的导航性能。",
+        "key_contributions": [
+          "提出大规模互联网视频预训练框架",
+          "三阶段训练方法",
+          "实现语言条件下的机器人导航"
+        ],
+        "application_scenarios": [
+          "家庭服务机器人",
+          "物流机器人"
+        ],
+        "technical_highlights": [
+          "利用互联网视频资源",
+          "三阶段训练策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.26824",
+      "source": "huggingface",
+      "title": "SpecMRL: Redesign Matryoshka Representation Learning within Parametric Spectrum",
+      "authors": [
+        "Zhongxin Chen",
+        "Songhao Wu",
+        "Heng Cui",
+        "Cong Li",
+        "Xiao Zhou",
+        "Rui Yan"
+      ],
+      "abstract": "Matryoshka Representation Learning (MRL) is designed to support flexible representation sizes by jointly optimizing nested prefixes. While effective, this design lacks an explicit constraint to ensure that the leading portion provides a suitable compact encoding. To address this, we propose SpecMRL, which reorganizes the feature space to enable more effective prefix readout. Specifically, we extend MRL with a parameter-derived spectral basis organized with feature importance. SpecMRL otherwise follows standard MRL, with prefix readout performed in the learned spectral space. Experiments on MTEB show that SpecMRL outperforms MRL at all evaluated reduced dimensions, with larger gains under more aggressive compression. These results suggest that the learned spectral basis better prioritizes informative directions, enabling more effective representation compression. Notably, SpecMRL extends the performance frontier of MRL, surpassing full-dimensional MRL with only half the embedding dimensions.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26824",
+      "pdf_url": "https://arxiv.org/pdf/2610.26824",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26824",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 80,
+      "hot_score": 800,
+      "structured_summary": {
+        "chinese_title": "SpecMRL：参数频谱内的马特罗什卡表示学习再设计",
+        "chinese_summary": "SpecMRL 通过引入参数导出的谱基，提高了表示学习的压缩效率。",
+        "pain_point": "现有 MRL 设计缺乏对紧凑编码的显式约束。",
+        "core_value": "SpecMRL 通过优化谱基，提高了表示学习的压缩效率。",
+        "technical_architecture": "SpecMRL 通过参数导出的谱基重新组织特征空间。",
+        "quantitative_results": "SpecMRL 在所有压缩维度上均优于 MRL，特别是在高压缩率下。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在 MTEB 数据集上进行了实验。",
+        "key_contributions": [
+          "引入参数导出的谱基",
+          "提高了表示学习的压缩效率"
+        ],
+        "application_scenarios": [
+          "需要高效表示学习的场景",
+          "资源受限的环境"
+        ],
+        "technical_highlights": [
+          "优化的谱基提高了信息方向的优先级",
+          "仅使用一半嵌入维度即超过全维度 MRL"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22791",
+      "source": "huggingface",
+      "title": "Self-Evolving Coding Agents via Harness-Policy Optimization",
+      "authors": [
+        "Zhepei Wei",
+        "Wenlin Yao",
+        "Baolin Peng",
+        "Danqing Wang",
+        "Qianhui Wu",
+        "Hao Cheng",
+        "Yu Meng",
+        "Jianfeng Gao"
+      ],
+      "abstract": "Large language model (LLM) agents have shown promising potential in coding tasks, and their performance is jointly determined by the policy model and the harness that mediates their interaction with the environment. Indeed, harness and policy are mutually reinforcing and evolving only one component is suboptimal---a harness tuned for one checkpoint may not target the failure modes of an updated policy, while policy learning remains limited to the trajectories elicited by a fixed harness. In light of this, we propose Self-HPO, a recursive self-improving framework for coding agents that alternates harness and policy optimization, using the evolving policy as its own harness proposer. Specifically, in each round, the current policy first analyzes its own failures and proposes new harness candidates (H-step). The policy is then updated through reinforcement learning (RL) under the selected harness (P-step), and hard tasks identified during training form the next harness search set, keeping harness optimization targeted to the policy's evolving failure modes. Across three coding benchmarks, Self-HPO consistently outperforms harness-only and policy-only baselines, improving Qwen3.5-35B-A3B's average resolve rate from 57.8% to 64.8%, with gains generalizing to out-of-distribution settings. Further analysis shows that both optimized components retain gains even when paired with their base counterparts, while their joint gain exceeds the sum of their individual gains. Self-HPO also improves reliability (Pass@1) and expands the capability frontier (Pass@k) over the base agent. Additionally, we show that with a stronger external model (e.g., Opus 4.8) as the harness proposer, the same framework yields a further performance boost.",
+      "published_date": "2026-10-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22791",
+      "pdf_url": "https://arxiv.org/pdf/2610.22791",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22791",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": {
+        "chinese_title": "通过自适应策略优化实现自我进化的编码代理",
+        "chinese_summary": "Self-HPO 框架通过交替优化策略和环境适配器，提高编码任务性能。",
+        "pain_point": "现有方法中，环境适配器和策略优化相互独立，导致性能受限。",
+        "core_value": "Self-HPO 通过自我优化策略和环境适配器，提升编码任务的性能。",
+        "technical_architecture": "交替优化策略和环境适配器，策略作为环境适配器的提议者。",
+        "quantitative_results": "在三个编码基准测试中，Self-HPO 优于仅环境适配器和仅策略优化的基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多复杂场景的应用。",
+        "key_contributions": [
+          "提出 Self-HPO 自我优化框架",
+          "策略和环境适配器交替优化",
+          "策略作为环境适配器的提议者"
+        ],
+        "application_scenarios": [
+          "编码任务自动化",
+          "代码生成与优化"
+        ],
+        "technical_highlights": [
+          "递归自我改进机制",
+          "策略驱动的环境适配器优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

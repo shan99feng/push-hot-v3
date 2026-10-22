@@ -1,0 +1,648 @@
+{
+  "date": "2026-10-21",
+  "generated_at": "2026-10-22T01:17:10.555994+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.26203",
+      "source": "huggingface",
+      "title": "Focused Omni-Modal GUI Agents",
+      "authors": [
+        "Fuyao Zhang",
+        "Wenwen He",
+        "Jiaming Zhang",
+        "Yurong Hao",
+        "Xuan Wang",
+        "Guowei Guan",
+        "Che Wang",
+        "Longtao Huang",
+        "Wei Yang Bryan Lim"
+      ],
+      "abstract": "Graphical User Interface (GUI) agents increasingly act over streaming omni-modal observations spanning screenshots, audio, video, interaction history, and device states. However, exposing this complete context uniformly at every step ignores that relevance is transient and sparse: the signal determining one action can become clutter at the next. Because executed actions feed back into the context, these errors compound into Sequential Distraction, driving the agent into irreversible trajectory drift. We formulate the underlying requirement as Focused Perception: a representation that is step-adaptive, action-sufficient, and non-intrusive. We realize this in FocusGUI, a lightweight adapter that dynamically prioritizes multimodal channels against a step-specific decision reference. Instead of uniformly processing all inputs, it compresses the most relevant evidence into a compact latent and subtly injects it into the frozen decoder's embeddings, guiding the model's attention without altering its native parameter space. FocusGUI trains from action supervision alone, requiring neither modality-relevance labels nor backbone fine-tuning. Across four omni-modal backbones, it raises overall Type Match by +33.2 and Exact Match by 3.0 times over the frozen backbone on average, and Type Match by +30.1 over the strongest existing enhancement method.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26203",
+      "pdf_url": "https://arxiv.org/pdf/2610.26203",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26203",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 224,
+      "hot_score": 2240,
+      "structured_summary": {
+        "chinese_title": "聚焦全模态GUI代理",
+        "chinese_summary": "提出了一种轻量级的FocusGUI，通过动态优先处理多模态通道，提高代理的决策效率。",
+        "pain_point": "现有GUI代理忽视了上下文的相关性和稀疏性，导致决策错误累积。",
+        "core_value": "通过聚焦感知，减少不必要的上下文信息，提高代理的决策准确性。",
+        "technical_architecture": "设计了FocusGUI，动态压缩并注入最相关的证据，指导模型关注。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在四个全模态模型上进行了测试。",
+        "key_contributions": [
+          "提出聚焦感知的概念",
+          "设计了FocusGUI架构"
+        ],
+        "application_scenarios": [
+          "多模态用户界面代理",
+          "智能助手"
+        ],
+        "technical_highlights": [
+          "无需模态相关性标签",
+          "不需微调骨干网络"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.27999",
+      "source": "huggingface",
+      "title": "Matrix-Game 4.0: Harnessing Video Models for Real-Time Playable Game Worlds",
+      "authors": [
+        "Jihai Zhang",
+        "Runjia Qian",
+        "Kaiqin Kong",
+        "Biao Jiang",
+        "Puyi Wang",
+        "Siru Chen",
+        "Tianle Li",
+        "Guanjie Chen",
+        "Junyi Wu",
+        "Chubin Chen",
+        "Yuanhang Li",
+        "Kaichen Huang",
+        "Haobo Zhang",
+        "Yangguang Li",
+        "Wei Yu",
+        "Guibin Chen",
+        "Yu Cheng",
+        "Yahui Zhou"
+      ],
+      "abstract": "Moving from controllable videos to genuinely playable worlds requires persistent world state, executable game rules, and low-latency interaction. We outline a roadmap for the next generation of Matrix-Game that separates game execution from visual generation through an executable game harness, and introduce Matrix-Game 4.0 as the first system built on this design. A lightweight game engine maintains world state and executes interaction rules, a multimodal coding agent translates player ideas into game code and dynamic scene captions, and a renderer based on autoregressive video model transforms engine-rendered low-poly proxies into detailed visuals, conditioned on dynamic captions and memory references. This framework provides continuous guidance for visual generation and enables natural-language creation and modification of scenes and gameplay. Our renderer is trained on aligned low-poly and high-fidelity video pairs and distilled into a causal generator that generates in four-frame chunks with one or two denoising steps. Together with targeted inference optimizations, Matrix-Game 4.0 enables 480p, 60 FPS gameplay on a single NVIDIA RTX5090 with a key-press-to-display latency of 112ms. Single-step generation achieves 83FPS steady-state throughput with 18.2GiB of peak GPU memory usage. With fixed prompts, steady-state throughput also reaches 67FPS on an RTX5080 and 58FPS on an RTX5070Ti. We demonstrate customizable shooter and driving games with engine-enforced mechanics, and release code, model weights, and low-poly game assets to support research and creation of playable game worlds.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.27999",
+      "pdf_url": "https://arxiv.org/pdf/2610.27999",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.27999",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "upvotes": 181,
+      "hot_score": 1810,
+      "structured_summary": {
+        "chinese_title": "Matrix-Game 4.0: 利用视频模型构建实时可玩游戏世界",
+        "chinese_summary": "Matrix-Game 4.0 通过分离游戏执行与视觉生成，实现低延迟互动和自然语言场景创建。",
+        "pain_point": "现有系统无法提供实时、可玩且具有持续世界状态的游戏体验。",
+        "core_value": "提供实时、低延迟的游戏体验，并支持自然语言创建和修改游戏场景。",
+        "technical_architecture": "采用轻量级游戏引擎和自回归视频模型实现持续视觉生成。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定硬件上实现，未来需扩展兼容性。",
+        "key_contributions": [
+          "分离游戏执行与视觉生成",
+          "实现低延迟互动",
+          "支持自然语言创建和修改游戏场景"
+        ],
+        "application_scenarios": [
+          "实时多人在线游戏",
+          "虚拟现实互动体验"
+        ],
+        "technical_highlights": [
+          "轻量级游戏引擎维护世界状态",
+          "自回归视频模型生成详细视觉"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.26855",
+      "source": "huggingface",
+      "title": "Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience",
+      "authors": [
+        "Tianqi Liu",
+        "Hanfei Zhao",
+        "Qifeng Liang",
+        "Hui En Pang",
+        "Jiarui Xu",
+        "Sayang Mu",
+        "Penghao Qiu",
+        "YingSheng Zhang",
+        "Jun Wang",
+        "Ziang Cao",
+        "Mingze Sun",
+        "Yukang Cao",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Ziwei Liu"
+      ],
+      "abstract": "World models enable embodied agents to anticipate action consequences, yet jointly modeling locomotion and manipulation across diverse embodiments remains challenging due to heterogeneous action spaces and limited multimodal supervision. We present Ropedia W0, the first egocentric loco-manipulation world foundation model spanning humans and robots with diverse embodiments. We curate Xp-Data, comprising 10k hours of egocentric human data and 3k hours of robot data with unified multimodal annotations and systematic quality control. A unified kinematic representation encodes locomotion through camera poses and manipulation through projected skeletons, with robot skeletons combining embodiment-specific forward kinematics with extensive manual keypoint annotation and correction. We also introduce Xp-Teleop, a long-horizon loco-manipulation benchmark based on high-quality dexterous humanoid teleoperation data. Evaluations demonstrate state-of-the-art performance across five cross-embodiment benchmarks (DreamDojo, Ψ_0, ω-HOME, Xp-Teleop, and AgiBot) and on held-out human egocentric video, from zero-shot inference to few-shot and full-data post-training. Scaling human pre-training data improves performance on both human and robot evaluations. After distillation, our model supports real-time, minute-long rollouts, enabling live VR interaction. Applications in policy evaluation, model-based planning, and world-action modeling further demonstrate the model's utility for embodied decision-making.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26855",
+      "pdf_url": "https://arxiv.org/pdf/2610.26855",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26855",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 178,
+      "hot_score": 1780,
+      "structured_summary": {
+        "chinese_title": "Ropedia W0：跨体态扩展的自视角移动与操作世界模型",
+        "chinese_summary": "提出了首个跨越人类和机器人多样体态的自视角移动与操作世界基础模型。",
+        "pain_point": "跨体态移动与操作的联合建模因动作空间异构和多模态监督有限而具有挑战性。",
+        "core_value": "通过统一的运动学表示和大规模数据集，实现了跨体态的高性能。",
+        "technical_architecture": "统一的运动学表示，结合摄像机姿态和投影骨架编码移动与操作。",
+        "quantitative_results": "在五个跨体态基准上表现出最先进的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要更多样化的数据集以进一步提升模型性能。",
+        "key_contributions": [
+          "提出了首个跨越人类和机器人多样体态的自视角移动与操作世界基础模型",
+          "构建了大规模统一标注的数据集",
+          "展示了在多个跨体态基准上的优越性能"
+        ],
+        "application_scenarios": [
+          "机器人操作与导航",
+          "增强现实与虚拟现实中的交互"
+        ],
+        "technical_highlights": [
+          "统一的运动学表示",
+          "大规模高质量数据集",
+          "跨体态的高性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.27628",
+      "source": "huggingface",
+      "title": "PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking",
+      "authors": [
+        "Pan Wang",
+        "Yihao Hu",
+        "Guangyuan Dong",
+        "Yitong Lin",
+        "Hang Wang",
+        "Zimi Liu",
+        "Zhihao Wen",
+        "Jianshe Li",
+        "Jiang-Ming Yang",
+        "Wei Wu",
+        "Yongqi Tong"
+      ],
+      "abstract": "Looped language models can run more iterations at test time, but additional iterations need not help them solve longer problems. For sequential state tracking, final-answer supervision does not specify how far each iteration should advance, and repeated updates can change the scale of the recurrent state. We introduce Progress-Aligned Recurrence (PAR), which trains the prediction at iteration k to match the state after the first k operations and rescales recurrent states to their first-iteration norms. On swap-S_5, a Qwen2.5-0.5B model trained on at most 32 moves achieves 95.5\\% mean full-state accuracy at 512 moves, or 16times the training length, compared with 55.7\\% reported for RLT and 0.8\\% for explicit chain of thought on the same backbone. Controlled S_5 ablations show that removing norm anchoring reduces the extrapolation factor from 16times to below 2.2times, and replacing progress-aligned targets with final-answer supervision reduces it to at most 8times. A learned completion readout selects when to answer without a supplied stopping depth. When intermediate labels are unavailable, prefix self-distillation induces the correspondence from shorter problem prefixes using only final answers. The gains apply across sequential state-tracking tasks, establishing the task structure required for depth extrapolation. These findings support training intermediate predictions and state scale together to make additional recurrent depth useful for longer problems.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.27628",
+      "pdf_url": "https://arxiv.org/pdf/2610.27628",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.27628",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 147,
+      "hot_score": 1470,
+      "structured_summary": {
+        "chinese_title": "PAR：长度泛化的进展对齐循环在状态跟踪中的应用",
+        "chinese_summary": "PAR 训练模型在迭代 k 时匹配前 k 次操作后的状态，实现对更长问题的泛化。",
+        "pain_point": "循环语言模型在处理更长问题时，额外迭代不一定有效。",
+        "core_value": "通过进展对齐循环，显著提高模型对更长问题的处理能力。",
+        "technical_architecture": "进展对齐循环通过调整循环状态的规范，匹配初始状态。",
+        "quantitative_results": "Qwen2.5-0.5B 模型在 512 步时达到 95.5% 的全状态准确率。",
+        "competitors": "对比了 RL-T 和显式链式思维。",
+        "limitations": "未来需要探索在无中间标签情况下的泛化能力。",
+        "key_contributions": [
+          "引入进展对齐循环",
+          "提高模型对更长问题的处理能力",
+          "自学习完成读出"
+        ],
+        "application_scenarios": [
+          "状态跟踪",
+          "序列预测"
+        ],
+        "technical_highlights": [
+          "进展对齐的目标",
+          "自学习完成读出"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.28354",
+      "source": "huggingface",
+      "title": "S-Agent 2.0: Spatial Reasoning with a General Coding Agent",
+      "authors": [
+        "Rui Gong",
+        "Ruoyu Wang",
+        "Yalun Dai",
+        "Hao Li",
+        "Sidi Yang",
+        "Qihao Zhao",
+        "Hongyu Li",
+        "Zeyang Guan",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Kim-Hui Yap",
+        "Ziwei Liu"
+      ],
+      "abstract": "Spatial reasoning asks a model to work out where objects are in 3D space, how they relate to one another, and how they move. Agentic VLMs have recently brought large improvements on such tasks by letting the model actively gather evidence with 3D perception tools instead of answering in a single pass. Even so, on many questions the tools return the right evidence and the model still does not arrive at the correct answer: the gap between model and tools, where raw readings become usable conclusions, is left unfilled. We present S-Agent 2.0, a spatial reasoning agent that equips an off-the-shelf general coding agent with a command-line perception toolkit, and we design the interface around one principle: help the VLM close the evidence loop: acquire scene evidence, remember it in a persistent scene memory, and interpret each reading in plain spatial language. This design keeps the full flexibility of a coding agent, and every reading it acts on stays grounded in the tools' geometry. On MMSI-Bench and ReVSI, the toolkit improves a strong open-source model, Qwen3.8-27B, by +13.9 and +20.5 points over the same agent without tools, and a strong closed-source model, Gemini-3.8-Flash, by +11.2 and +9.6 points. With the open backbone S-Agent 2.0 reaches 66.5 on MMSI-Bench and 82.3 on ReVSI, ahead of the specialized system SpatialClaw on the same backbone (62.6 and 74.5), and with Gemini-3.8-Flash it reaches 74.1 and 90.5 against its 67.0 and 79.7. Both tool gains shrink as the backbone grows more capable, but SpatialClaw's shrinks far more on ReVSI, from +13.2 to +2.7, while ours stays at +9.6. S-Agent 2.0 also works across different general coding agent harnesses, such as Codex and Claude Code.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.28354",
+      "pdf_url": "https://arxiv.org/pdf/2610.28354",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.28354",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 93,
+      "hot_score": 930,
+      "structured_summary": {
+        "chinese_title": "S-Agent 2.0: 空间推理的通用编码代理",
+        "chinese_summary": "通过结合通用编码代理和命令行感知工具，显著提升空间推理能力。",
+        "pain_point": "现有模型在利用感知工具获取的证据进行推理时存在差距。",
+        "core_value": "通过设计帮助模型更好地利用感知工具的接口，提升空间推理准确性。",
+        "technical_architecture": "将通用编码代理与命令行感知工具结合，保持模型的灵活性。",
+        "quantitative_results": "在MMSI-Bench和ReVSI上，工具分别提升了Qwen3.8-27B和Gemini-3.8-Flash的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更多复杂场景的应用。",
+        "key_contributions": [
+          "结合通用编码代理与感知工具",
+          "设计帮助模型更好地利用感知工具的接口"
+        ],
+        "application_scenarios": [
+          "三维空间推理",
+          "物体位置与关系推理"
+        ],
+        "technical_highlights": [
+          "保持模型灵活性",
+          "每项读数都基于工具的几何学"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.28578",
+      "source": "huggingface",
+      "title": "Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition",
+      "authors": [
+        "Wenjie Lou",
+        "Tianshuo Peng",
+        "Shiyang Feng",
+        "Shengji Tang",
+        "Runmin Ma",
+        "Ruizhe Chen",
+        "Jinxin Shi",
+        "Haoyang Peng",
+        "Fangchen Yu",
+        "Zhijie Zhong",
+        "Yuhao Zhou",
+        "Yue Fan",
+        "Yixin Chen",
+        "Yiming Wu",
+        "Yiheng Wang",
+        "Yigeng Jiang",
+        "Yichen Jiang",
+        "Yi Xie",
+        "Xu Guo",
+        "Xiaohan He",
+        "Tao Hu",
+        "Songtao Huang",
+        "Siyu Zhou",
+        "Shuaiyu Zhang",
+        "Shangheng Du",
+        "Qinglong Cao",
+        "Kun Li",
+        "Jingqi Ye",
+        "Hongbin Zhou",
+        "Guohang Yan",
+        "Zongsheng Cao",
+        "Ziyi Wang",
+        "Zhuo Liu",
+        "Zhiyin Yu",
+        "Zhiwang Zhou",
+        "Zelin Tan",
+        "Yuqing Zhu",
+        "Yaoze Zhang",
+        "Yang Chen",
+        "Xuming He",
+        "Xiuliang Liang",
+        "Xingjian Guo",
+        "Xiang Zhuang",
+        "Weiping Shen",
+        "Weida Wang",
+        "Tianyuan Zhou",
+        "Tianlin Ye",
+        "Tengyuan Fan",
+        "Siyu Yan",
+        "Shuo Li",
+        "Shuchen Pu",
+        "Shengyuan Xu",
+        "Shao Zhang",
+        "Ran Wei",
+        "Qinyuan Qin",
+        "Qingyu Yang",
+        "Nianchen Deng",
+        "Meng Dai",
+        "Kuikun Liu",
+        "Kaitao Chen",
+        "Juncheng Xiao",
+        "Jiangning Liu",
+        "Jianbiao Mei",
+        "Jia Yu",
+        "Haonan He",
+        "Hangfan Zhang",
+        "Cheng Yang",
+        "Chen Zhang",
+        "Bihao Zhan",
+        "Benteng Cheng",
+        "Yuqiang Li",
+        "Yihao Liu",
+        "Yang Yang",
+        "Xujun Fu",
+        "Xiaosong Wang",
+        "Xiangyu Yue",
+        "Wenwei Zhang",
+        "Shuyue Hu",
+        "Pinlong Cai",
+        "Mianxin Liu",
+        "Lei Bai",
+        "Jie Zhou",
+        "Jie Hou",
+        "Jiamin Wu",
+        "Hui Wang",
+        "Haijun Li",
+        "Guangyu Wang",
+        "Dongzhan Zhou",
+        "Chunfeng Song",
+        "Chao Yang",
+        "Biqing Qi",
+        "Xing Xie",
+        "Dahua Lin",
+        "Bowen Zhou",
+        "Xiangchao Yan",
+        "Wenlong Zhang",
+        "Shufei Zhang",
+        "Peng Ye",
+        "Bo Zhang"
+      ],
+      "abstract": "In this report, we introduce Sage-A1.5, a 35B Mixture-of-Experts agentic model that builds on A1 to advance long-horizon problem solving through adaptive capability composition. Compared with A1, Sage-A1.5 learns not only to solve individual tasks, but also to organize work and revise its approach during execution. Sage-A1.5 highlights three improvements: agentic orchestration, verification, and open scientific discovery. First, agentic orchestration extends single-agent execution through task delegation and parallel collaboration among subagents with isolated contexts, enabling complex tasks to be decomposed and addressed concurrently and supporting efficient execution while reducing interference across concurrent subagents. Second, agentic verification strengthens long-horizon reliability through progress checking, evidence validation, and reflective strategy revision, allowing the agent to recognize unproductive search paths and pursue alternative approaches. Third, open scientific discovery extends agentic capabilities beyond answering predefined questions to conducting exploratory research, connecting scientific inquiry with interactive analysis and inspectable research artifacts. We showcase these capabilities through complicated agentic tasks and multidisciplinary scientific applications. Besides, we hope Sage-A1.5 provides the community with an accessible foundation for open scientific discovery, offering a practical path from long-horizon task execution to collaborative, verifiable, and inspectable scientific exploration.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.28578",
+      "pdf_url": "https://arxiv.org/pdf/2610.28578",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.28578",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 63,
+      "hot_score": 630,
+      "structured_summary": {
+        "chinese_title": "Sage-A1.5: 从长期执行到科学探索的能力组合",
+        "chinese_summary": "Sage-A1.5 通过自适应能力组合，实现复杂任务的并行协作和长期可靠性的验证，支持开放的科学发现。",
+        "pain_point": "现有模型在处理长期复杂任务时，难以有效组织工作和调整策略。",
+        "core_value": "增强长期任务解决能力，支持科学探索和验证。",
+        "technical_architecture": "混合专家体系结构，支持任务委托和子代理并行协作。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "尚需进一步验证其在更广泛任务集上的表现。",
+        "key_contributions": [
+          "自适应能力组合",
+          "任务委托与并行协作",
+          "开放科学发现"
+        ],
+        "application_scenarios": [
+          "复杂任务执行",
+          "科学探索与研究"
+        ],
+        "technical_highlights": [
+          "支持子代理间的隔离上下文",
+          "强化长期可靠性验证"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.25078",
+      "source": "huggingface",
+      "title": "CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?",
+      "authors": [
+        "Jiaqi Su",
+        "Guibin Zhang",
+        "Jie-Jing Shao",
+        "Cong Pang",
+        "Tiankuo Yao",
+        "Ivor Tsang",
+        "Haiyan Yin",
+        "Shuicheng Yan"
+      ],
+      "abstract": "Model--harness co-evolution has emerged as a prominent paradigm for recursive self-improving (RSI) agents, jointly evolving their execution scaffolds and intrinsic capabilities. We study the persistent yet often overlooked brain--body mismatch problem in this paradigm, where an evolving harness (body) demands behaviors its model (brain) has not learned or restricts capabilities it already possesses. We introduce CoEvo-RSI, a RSI framework that advances model--harness co-evolution through agent-driven, bidirectional historical inheritance. Drawing on a shared evolutionary archive and execution feedback, a meta-agent coordinates harness development from historical designs with model checkpoint selection or merging and subsequent adaptation under the selected harness, aligning inherited capabilities with evolving execution requirements to reduce brain--body mismatch. Using only supervised fine-tuning (SFT) on its own rejection-sampled trajectories, CoEvo-RSI makes Qwen3.5-9B competitive with larger models across diverse vertical applications, including multi-agent failure attribution, role-aware text-to-SQL, and smart-home instruction following. It surpasses DeepSeek-V4-Pro on TraceElephant (+14.16 agent accuracy) and GLM-5.3 on HomeBench VM (+4.90 success rate), underscoring the need for brain--body alignment and the potential of bidirectional historical inheritance to advance agent co-evolution.",
+      "published_date": "2026-10-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.25078",
+      "pdf_url": "https://arxiv.org/pdf/2610.25078",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.25078",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 59,
+      "hot_score": 590,
+      "structured_summary": {
+        "chinese_title": "CoEvo-RSI: 当支架进化时，哪些模型应该跟随？",
+        "chinese_summary": "通过代理驱动的双向历史继承，CoEvo-RSI 使 Qwen3.5-9B 在多种垂直应用中与更大模型竞争。",
+        "pain_point": "模型与支架之间的不匹配问题，导致模型无法适应支架的需求或限制了其已有能力。",
+        "core_value": "通过历史设计的代理驱动继承和适应，减少模型与支架之间的不匹配。",
+        "technical_architecture": "基于共享进化档案和执行反馈的双向历史继承框架。",
+        "quantitative_results": "CoEvo-RSI 使 Qwen3.5-9B 在多种垂直应用中与更大模型竞争。",
+        "competitors": "与 DeepSeek-V4-Pro 竞争，特别是在 TraceEl 数据集上。",
+        "limitations": "未来需要在更广泛的场景下验证其有效性。",
+        "key_contributions": [
+          "引入代理驱动的双向历史继承框架",
+          "通过监督微调实现模型与支架的更好匹配"
+        ],
+        "application_scenarios": [
+          "多代理失败归因",
+          "角色感知的文本到SQL",
+          "智能家居指令跟随"
+        ],
+        "technical_highlights": [
+          "仅通过监督微调实现与更大模型的竞争",
+          "使用拒绝采样的轨迹进行训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.25043",
+      "source": "huggingface",
+      "title": "VLA-Rolling: Fewer Denoising Steps, Better Control via Adaptive Action Reuse",
+      "authors": [
+        "Sicheng He",
+        "Yi Pan",
+        "Qiuting Yu",
+        "Jiaming Huang",
+        "Qi Lu",
+        "Shuyan Wu",
+        "Hongyan Feng",
+        "Xuanyu Liu",
+        "Jun Zhang",
+        "Jie Zhang",
+        "Wenqi Zhang",
+        "Xuhong Zhang",
+        "Jianwei Yin"
+      ],
+      "abstract": "Flow-matching vision-language-action (VLA) models generate an action chunk by iteratively denoising Gaussian noise, but typically execute only a short prefix before replanning with updated observations. Under this receding-horizon paradigm, the unexecuted remainder---the action tail---is discarded, and the next chunk is regenerated from fresh noise. We show that this discarded tail retains transferable denoising progress: action-tail initialization can match or outperform a native 10-step Gaussian baseline using fewer denoising steps. However, the optimal denoising budget varies substantially across samples, indicating that tail reuse should be adapted to the updated environment. Based on this observation, we introduce VLA-Rolling, a lightweight inference framework that reuses action tails through three stages: action-tail inheritance, per-action confidence estimation, and confidence-guided refinement through renoising and denoising budget allocation, while the underlying VLA remains frozen. Across π_{0.5}, SmolVLA, X-VLA, and MolmoAct2 on LIBERO, MetaWorld, LIBERO-Plus, and RoboTwin 2.0, VLA-Rolling reduces action-chunk inference cost in all 16 model--benchmark pairs, achieving up to a 1.48times speedup, while improving success rate in 14 pairs by up to 15.08 percentage points. These results show that action tails are not merely discarded predictions, but reusable intermediate states that enable more efficient and accurate VLA inference. These results demonstrate that the action tail can support the generation of better actions with fewer denoising steps. Our project is available at https://chenbao123ww.github.io/VLA-Rolling/.",
+      "published_date": "2026-10-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.25043",
+      "pdf_url": "https://arxiv.org/pdf/2610.25043",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.25043",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "upvotes": 59,
+      "hot_score": 590,
+      "structured_summary": {
+        "chinese_title": "VLA-Rolling: 更少去噪步骤，通过自适应动作重用获得更好控制",
+        "chinese_summary": "VLA-Rolling 通过重用动作尾部减少去噪步骤，提高控制效果。",
+        "pain_point": "现有模型在执行动作时，未执行的部分被丢弃，导致资源浪费。",
+        "core_value": "通过重用动作尾部，减少去噪步骤，提高控制效果和效率。",
+        "technical_architecture": "引入 VLA-Rolling 框架，通过继承、置信度估计和重新去噪优化动作执行。",
+        "quantitative_results": "在多个基准上，VLA-Rolling 减少了动作片段推理成本。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多样化的环境。",
+        "key_contributions": [
+          "提出 VLA-Rolling 框架",
+          "通过自适应动作重用减少去噪步骤",
+          "提高控制效果和效率"
+        ],
+        "application_scenarios": [
+          "机器人任务执行",
+          "多模态交互"
+        ],
+        "technical_highlights": [
+          "轻量级推理框架",
+          "自适应去噪预算分配"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.28630",
+      "source": "huggingface",
+      "title": "SolarRenderer: Few-Step Generative Reference Rendering",
+      "authors": [
+        "Guian Fang",
+        "Shengju Qian",
+        "Dongyue Lu",
+        "Junchao Huang",
+        "Lutao Jiang",
+        "Xin Wang",
+        "Yiren Song",
+        "Li Jiang",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Game engines and coding agents can specify the layout, motion, and camera of a scene, yet turning such coarse structure into realistic video requires a renderer that follows the structure and completes the appearance it leaves open. Existing renderers are tied to the representation of one engine, need tens of denoising steps or a costly distillation of their own, and learn from conditions that are not aligned with their target videos. We present SolarRenderer, a structure-conditioned video renderer that adapts a frozen MiniMax-H3 33B backbone with two lightweight LoRAs. Structural videos enter the native reference pathway of the backbone at the positions of the frames they describe, without a type identifier and described only in plain text, so that a single control LoRA follows arbitrary structural representations. Starting from a pretrained four-step LoRA, structure-guided distribution matching renders in four steps, 12.3 times faster than 50-step sampling, while preserving the learned control. A block-causal variant extends the same design to streaming and renders 768p video in real time. To train the model, we build a frame-aligned corpus of 136K clips from game engines, simulators, and YouTube videos. Experiments on an in-distribution test set and a generalization benchmark of 16 structural representations show that SolarRenderer achieves state-of-the-art results across both, and generalizes to 11 unseen representations, including pose skeletons, drawings, and point clouds.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.28630",
+      "pdf_url": "https://arxiv.org/pdf/2610.28630",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.28630",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 46,
+      "hot_score": 460,
+      "structured_summary": {
+        "chinese_title": "SolarRenderer: 少步生成参考渲染",
+        "chinese_summary": "SolarRenderer 是一种结构条件化的视频渲染器，能够快速生成与结构描述一致的视频。",
+        "pain_point": "现有渲染器依赖特定的游戏引擎，需要大量去噪步骤或昂贵的自蒸馏过程，且学习条件与目标视频不一致。",
+        "core_value": "SolarRenderer 通过结构条件化和轻量级 LoRA 设计，实现了快速且可控的视频渲染。",
+        "technical_architecture": "采用冻结的 MiniMax-H3 33B 骨干网络，并结合两个轻量级 LoRA，结构视频直接进入骨干网络的参考路径。",
+        "quantitative_results": "四步结构引导分布匹配渲染比 50 步采样快 12.3 倍，同时保持学习控制。",
+        "competitors": "暂无对比信息",
+        "limitations": "当前模型依赖大量预训练数据。",
+        "key_contributions": [
+          "采用结构条件化和轻量级 LoRA 设计",
+          "实现四步快速渲染",
+          "支持实时流式渲染"
+        ],
+        "application_scenarios": [
+          "游戏引擎视频生成",
+          "虚拟现实内容生成"
+        ],
+        "technical_highlights": [
+          "轻量级 LoRA 设计",
+          "结构条件化渲染"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.28594",
+      "source": "huggingface",
+      "title": "Learning the 4D World through Point Trajectory Forecasting",
+      "authors": [
+        "Byungwoo Jeon",
+        "Sunghwan Hong",
+        "Dohyeon Kim",
+        "Jonghoon Lee",
+        "Jungwoo Park",
+        "Inhee Lee",
+        "Doosan Baek",
+        "Jinil Kim",
+        "Taehyun Lim",
+        "Hanbyul Joo",
+        "Marc Pollefeys",
+        "Saining Xie",
+        "Jinwoo Shin"
+      ],
+      "abstract": "Reliable multi-view forecasting requires videos from different cameras to describe the same evolving 3D scene. To this end, we introduce Video-Point Model (VPM), a world model that conditions on multi-view video histories and a language instruction to jointly forecast future videos from arbitrary viewpoints and the 3D trajectories of persistent scene points. We extend a pretrained world model with camera-conditioned multi-view processing that integrates complementary observations across cameras, and add a trajectory head that predicts how physical points move through time. Each trajectory tracks a single point across all views, and supervising these trajectories alongside video generation therefore anchors appearance changes in every camera to a shared description of 3D motion. To support training and evaluation, we build VPM-Data, a simulation corpus pairing synchronized multi-view videos with persistent point trajectories, and VP-WorldBench, a forecasting benchmark spanning simulated and real environments. We further extend VPM to robot control by adding robot actions as a token modality in the generator. Action tokens share the point-supervised backbone and are denoised jointly with future videos, thereby grounding the policy in the same 3D-aware representation. On VP-WorldBench and existing 4D generation benchmarks, point supervision improves both video fidelity and 3D motion accuracy over a video-only counterpart, and in simulated and real-robot experiments, it also raises the manipulation success of the action-enabled model.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.28594",
+      "pdf_url": "https://arxiv.org/pdf/2610.28594",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.28594",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 41,
+      "hot_score": 410,
+      "structured_summary": {
+        "chinese_title": "通过点轨迹预测学习4D世界",
+        "chinese_summary": "通过多视角视频预测和点轨迹预测，构建了一个世界模型，以描述和预测3D场景的动态。",
+        "pain_point": "多视角视频同步预测3D场景动态的挑战。",
+        "core_value": "结合多视角视频和点轨迹预测，提供了一种新颖的3D场景动态预测方法。",
+        "technical_architecture": "基于预训练模型，结合多视角处理和点轨迹预测。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于模拟和部分真实环境的数据集。",
+        "key_contributions": [
+          "提出了Video-Point Model (VPM) 世界模型",
+          "结合多视角视频和点轨迹预测",
+          "构建了VPM-Data 数据集和VP-WorldBench 预测基准"
+        ],
+        "application_scenarios": [
+          "机器人控制",
+          "多视角视频同步预测"
+        ],
+        "technical_highlights": [
+          "多视角视频和点轨迹的联合预测",
+          "点监督的3D运动描述"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,501 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-23T01:17:31.116830+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.28402",
+      "source": "huggingface",
+      "title": "StreamEval: Evaluating Interactive Streaming Video Generation Models",
+      "authors": [
+        "StreamEval Team"
+      ],
+      "abstract": "As streaming video generation advances, enabling real-time interaction with generated video is becoming increasingly important. We introduce StreamEval, a unified benchmark for interactive streaming video generation spanning five tasks: avatar dialogue, avatar performance, world generation, instruction editing, and reference editing. StreamEval comprises 300 scripted test cases lasting 15-300s, each specifying initial assets, incrementally arriving multimodal requests, and explicit requirements for state changes and content preservation. Performance is assessed along four evaluation dimensions: task execution, state consistency, visual fidelity, and audiovisual coordination, instantiated through ten task-specific metrics on a 0-100 scale. Evaluating 37 distinct models across 300 test cases, we find that high visual quality and identity retention do not necessarily coincide with reliable request execution or sustained state consistency. In particular, request execution remains challenging: the highest task-specific scores are 36.90 for Following among seven avatar-performance models, 25.93 for Following in text-conditioned world generation, and 15.00 for Edit Success among three reported reference-editing models. These findings identify reliable request execution under timing and preservation constraints as a central challenge for advancing omni-modal real-time interactive systems. The leaderboard is available at https://streameval.ai",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.28402",
+      "pdf_url": "https://arxiv.org/pdf/2610.28402",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.28402",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 354,
+      "hot_score": 3540,
+      "structured_summary": {
+        "chinese_title": "StreamEval: 评估交互式流式视频生成模型",
+        "chinese_summary": "引入StreamEval，一个涵盖五项任务的统一基准，评估交互式流式视频生成模型。",
+        "pain_point": "交互式流式视频生成模型在执行请求和保持状态一致性方面存在挑战。",
+        "core_value": "提供了一个全面的评估框架，涵盖多种任务和评估维度，揭示了现有模型的不足。",
+        "technical_architecture": "设计了包含300个测试案例的基准，每个案例包含初始资产、多模态请求和状态变更要求。",
+        "quantitative_results": "发现高视觉质量和身份保留并不一定意味着可靠的请求执行或持续的状态一致性。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了37个模型，未来需要扩展评估范围。",
+        "key_contributions": [
+          "引入了一个统一的交互式流式视频生成模型评估基准",
+          "定义了十个任务特定的评估指标",
+          "揭示了现有模型在执行请求和保持状态一致性方面的不足"
+        ],
+        "application_scenarios": [
+          "交互式视频生成",
+          "实时视频生成"
+        ],
+        "technical_highlights": [
+          "涵盖多种任务和评估维度",
+          "提供详细的测试案例和评估指标"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.26659",
+      "source": "huggingface",
+      "title": "SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?",
+      "authors": [
+        "Zhaoxi Zhang",
+        "Hao Liang",
+        "Linxuan Wu",
+        "Yiming Wu",
+        "Yifu Yuan",
+        "Kun Liang",
+        "Chenming Tang",
+        "Meiyi Qiang",
+        "Wentao Zhang",
+        "Weikang Li"
+      ],
+      "abstract": "Spatial intelligence requires agents to actively acquire visual evidence and integrate observations into a coherent representation of the three-dimensional world. Yet spatial question answering offers limited evidence of whether models can construct accurate metric maps through autonomous exploration. We introduce SpatialScout, a benchmark for evaluating vision-language model (VLM) agents on active object-level 3D mapping. SpatialScout comprises 80 diverse indoor scenes containing 3,140 target objects. Given an object inventory, RGB observations, camera calibration, and camera poses, agents control a camera to explore each scene and estimate object centers in a shared coordinate frame. The task requires coordinating viewpoint selection, cross-view association, geometric estimation, and map revision under bounded interaction budgets. Evaluation jointly measures localization accuracy and target coverage through object-scale overlap scores that penalize missing predictions. Experiments with frontier VLMs reveal substantial limitations: the strongest evaluated model, Claude Opus 5.5, achieves a mean overlap score of 41.71%, with 47.23% of targets exceeding an intersection-over-union (IoU) threshold of 0.5 and only 3.25% exceeding 0.9. These results reveal a substantial gap between recovering coarse object layouts and constructing complete, precise metric maps. SpatialScout provides a quantitative testbed for developing agents that build reliable 3D spatial representations through active perception. Code is available at https://github.com/JesseZZZZZ/SpatialScout.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26659",
+      "pdf_url": "https://arxiv.org/pdf/2610.26659",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26659",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 129,
+      "hot_score": 1290,
+      "structured_summary": {
+        "chinese_title": "SpatialScout：VLM 代理能否主动探索和绘制 3D 场景？",
+        "chinese_summary": "SpatialScout 是一个评估 VLM 代理在自主探索和构建 3D 场景地图方面的基准。",
+        "pain_point": "现有模型在构建准确的 3D 场景地图方面存在局限。",
+        "core_value": "提供了一个新的基准来评估 VLM 代理的 3D 场景探索和建图能力。",
+        "technical_architecture": "通过控制相机探索场景并估计物体中心来构建共享坐标系下的地图。",
+        "quantitative_results": "最强模型 Claude Opus 5.5 的平均重叠分数为 41.71%，覆盖率为 47.23%。",
+        "competitors": "暂无对比信息",
+        "limitations": "实验数据有限，仅基于当前最强模型。",
+        "key_contributions": [
+          "提出了一个新的 3D 场景探索和建图基准",
+          "评估了 VLM 代理在自主探索和建图方面的表现"
+        ],
+        "application_scenarios": [
+          "机器人导航",
+          "虚拟现实和增强现实"
+        ],
+        "technical_highlights": [
+          "多视图关联",
+          "几何估计"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.29997",
+      "source": "huggingface",
+      "title": "DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations",
+      "authors": [
+        "Mingze Sun",
+        "Ziang Cao",
+        "Yuan Fei",
+        "Qiankuan Tao",
+        "Zihan Wang",
+        "Tianqi Liu",
+        "Junhao Chen",
+        "Haiwen Diao",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Ziwei Liu"
+      ],
+      "abstract": "Despite recent progress in dexterous reference tracking, existing models focus primarily on single-hand manipulation and a limited range of interactions, leaving the bimanual dexterous behaviors common in real life unaddressed. The scarcity of contact-rich bimanual manipulation data and the increased complexity of coordinating contacts make developing a generalist bimanual tracker particularly challenging. Therefore, we present 1) DONIC, the first generalist bimanual tracker jointly trained across operation categories and human-motion sources, together with 2) BiHOI, a multi-view dataset of 1,575 sequences spanning 229 objects and emphasizing sustained bimanual interaction, where reconstructed interactions are retargeted into robot references. DONIC combines proximal policy optimization with behavioral cloning in a feedback loop that recycles verified successful executions into training demonstrations. An object-centered per-hand reward maintains object-motion feedback while supervising each hand according to its reference contact role. Clip-Centered Advantages remove reference-dependent advantage offsets while preserving within-trajectory differences. Together, these designs enable one single policy to learn coordinated manipulation across heterogeneous references. Without finetuning, a single checkpoint achieves 86.79% success on unseen trajectories of training objects and 57.32% on held-out objects, surpassing the state-of-the-art bimanual tracking baselines by 77.36 and 45.73 percentage points.",
+      "published_date": "2026-10-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.29997",
+      "pdf_url": "https://arxiv.org/pdf/2610.29997",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.29997",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 124,
+      "hot_score": 1240,
+      "structured_summary": {
+        "chinese_title": "DONIC: 通用双臂灵巧操作跟踪控制",
+        "chinese_summary": "提出DONIC，首个跨操作类别和人类动作源联合训练的通用双臂跟踪控制器。",
+        "pain_point": "现有模型主要关注单手操作和有限的交互范围，忽视了现实生活中的双臂灵巧行为。",
+        "core_value": "通过多视角数据集和反馈循环训练，实现双臂灵巧操作的通用跟踪控制。",
+        "technical_architecture": "结合近端策略优化和行为克隆，构建反馈循环训练机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步扩展数据集和操作类别。",
+        "key_contributions": [
+          "提出首个通用双臂跟踪控制器",
+          "联合训练跨操作类别和人类动作源",
+          "构建多视角数据集"
+        ],
+        "application_scenarios": [
+          "工业自动化",
+          "机器人辅助手术"
+        ],
+        "technical_highlights": [
+          "多视角数据集",
+          "反馈循环训练机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.29989",
+      "source": "huggingface",
+      "title": "Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation",
+      "authors": [
+        "Ruopeng Gao",
+        "Yukun Huang",
+        "Jiarui Hu",
+        "Shuai Wang",
+        "Wenbo Hu",
+        "Ying Shan",
+        "Limin Wang"
+      ],
+      "abstract": "Autoregressive video diffusion models generate videos chunk by chunk, yet producing plausible continuations does not guarantee that they capture how scenes evolve. Under teacher forcing, strong temporal redundancy may allow local visual continuity to serve as a shortcut for current-chunk denoising, reducing the pressure to model visual evolution. We introduce Future Chunk Prediction (FCP), an auxiliary objective jointly optimized with teacher-forced denoising that predicts temporally separated chunks without access to the intervening visual context. Drawing supervision directly from training videos, FCP requires no additional pretrained visual encoder and leaves autoregressive inference unchanged. Our method achieves superior physical plausibility over standard teacher-forced autoregressive training with a lower overall training compute budget, highlighting the effectiveness and efficiency of future-chunk supervision for modeling visual evolution. Intriguingly, our visualizations suggest that FCP fosters a more structured representation space, which may be valuable for building autoregressive world models.",
+      "published_date": "2026-10-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.29989",
+      "pdf_url": "https://arxiv.org/pdf/2610.29989",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.29989",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 116,
+      "hot_score": 1160,
+      "structured_summary": {
+        "chinese_title": "前瞻未来：自回归视频生成中的未来演变建模",
+        "chinese_summary": "通过引入未来片段预测（FCP）辅助目标，提高视频生成的物理合理性。",
+        "pain_point": "现有自回归视频生成模型可能无法准确捕捉场景的演变。",
+        "core_value": "FCP方法在较低计算预算下实现更好的物理合理性，有效利用未来片段监督。",
+        "technical_architecture": "通过引入FCP辅助目标，优化自回归视频生成模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能包括探索更多应用场景。",
+        "key_contributions": [
+          "引入未来片段预测（FCP）辅助目标",
+          "在较低计算预算下实现更好的物理合理性"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "自回归世界模型"
+        ],
+        "technical_highlights": [
+          "无需额外预训练视觉编码器",
+          "直接从训练视频中获取监督"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.28577",
+      "source": "huggingface",
+      "title": "Cache Engineering for Agents",
+      "authors": [
+        "Tianyu Fu",
+        "Ruoxi Wang",
+        "Zihan Min",
+        "Zhongqi Ren",
+        "Zhihao Li",
+        "Tengxuan Liu",
+        "Shengxu Mu",
+        "Hanling Zhang",
+        "Yu Wang"
+      ],
+      "abstract": "Large Language Model (LLM) agents can handle increasingly complex tasks, navigating long trajectories of observations and actions. As these trajectories grow, key-value (KV) cache I/O and storage become the dominant cost. Trajectories can also exceed the LLM's maximum context length, requiring control over active cache growth. Prior work uses context engineering to reduce cache size by trimming or summarizing history. However, modifying the trajectory prefix invalidates subsequent cached states and triggers costly re-prefilling of retained context. Task accuracy can also suffer when too little context is retained to limit re-prefill costs. We propose cache engineering as a new scheme. It allows agents to directly control their active KV cache without modifying the trajectory or re-prefilling retained context. Specifically, agents can proactively use drop to exclude selected cache from future attention and repos to adjust retained keys' position encodings. We formalize these cache operations and identify history dependence as a serving challenge: identical token sequences can yield different cache states under different cache operation sequences, making prefix matching insufficient for correct cache reuse. Thus, we co-design the AKV serving engine. It provides a stateless interface compatible with existing serving APIs, while internally managing stateful cache reuse, eviction, and restoration. Experiments show that a tool-response rolling-drop cache policy improves average benchmark scores by 1.7 points and reduces average cost by 27.7%, compared with conventional threshold-triggered summarization. With AKV, it achieves up to 1.2x the output throughput and a 1.5x speedup in P95 request latency. Recursive self-improvement of cache policies further reduces cost by 7.1% over expert design. Our code is at https://github.com/thu-nics/AKV.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.28577",
+      "pdf_url": "https://arxiv.org/pdf/2610.28577",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.28577",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 113,
+      "hot_score": 1130,
+      "structured_summary": {
+        "chinese_title": "代理的缓存工程",
+        "chinese_summary": "提出了一种新的缓存工程方案，允许代理直接控制其活跃的键值缓存。",
+        "pain_point": "现有方法修改轨迹前缀会触发昂贵的重新填充成本，影响任务准确性。",
+        "core_value": "无需修改轨迹或重新填充保留上下文即可直接控制活跃缓存。",
+        "technical_architecture": "通过drop和repos操作调整缓存状态。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "历史依赖性挑战使得前缀匹配不足。",
+        "key_contributions": [
+          "提出新的缓存工程方案",
+          "无需修改轨迹或重新填充即可控制缓存"
+        ],
+        "application_scenarios": [
+          "大型语言模型代理的任务处理"
+        ],
+        "technical_highlights": [
+          "直接控制活跃缓存",
+          "调整保留键的位置编码"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.11942",
+      "source": "huggingface",
+      "title": "Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents",
+      "authors": [
+        "Jiaming Zhang",
+        "Xuan Wang",
+        "Fuyao Zhang",
+        "Yang Cao",
+        "Lingjuan Lyu",
+        "Wei Yang Bryan Lim"
+      ],
+      "abstract": "A login screen that appears after a tap on Sign in is expected; the same screen after a tap on View order is an attack. For GUI agents, safety is therefore a property of the transition rather than of the screen, and a monitor that inspects only screens can be defeated by reusing a legitimate one. Judging a transition requires an expectation of what should have followed the action. Existing GUI world models provide one, but they output it as text, code, or images, so checking it against the observed screen requires a second model to judge the two. We argue that a world model meant for verification should instead predict in the space in which observations are encoded, and present LGWM, a decoder-free, action-conditioned world model that predicts the representation of the next screen directly, trained without semantic annotation on 1.85M real GUI transitions. Verification reduces to a vector comparison, and the same signal reveals whether a mismatch is harmful. We evaluate on RSWT-BENCH, a diagnostic where each credential screen appears under both a legitimate and a hijacked transition, so detectors that see only the screen are at chance by construction. The training-free score reaches 0.987 AUC at 17 ms per decision, on par with the strongest closed-source VLMs and about ten AUC points above generative GUI world models at over three orders of magnitude lower latency. The residual direction reaches 0.953 AUC at separating harmful from benign violations, where prompted VLMs are near chance. Further analyses show that the prediction is a usable future state rather than an anomaly score. World models have mostly served as simulators or planners; our results point to a third role, verification, for which predicting in representation space is the natural design.",
+      "published_date": "2026-10-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.11942",
+      "pdf_url": "https://arxiv.org/pdf/2610.11942",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.11942",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 89,
+      "hot_score": 890,
+      "structured_summary": {
+        "chinese_title": "正确屏幕，错误过渡：GUI代理的验证型世界模型",
+        "chinese_summary": "提出LGWM模型，直接预测下一个屏幕的表示，无需解码器，通过向量比较验证过渡安全性。",
+        "pain_point": "现有屏幕监控模型易被合法屏幕欺骗，无法有效检测GUI代理的过渡安全性。",
+        "core_value": "通过预测编码空间中的表示，简化验证过程，提高检测准确性。",
+        "technical_architecture": "提出无解码器、基于动作条件的世界模型LGWM，直接预测下一个屏幕表示。",
+        "quantitative_results": "在无训练数据的情况下，验证得分显著高于仅观察屏幕的检测器。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定诊断场景下验证，未来需扩展应用场景。",
+        "key_contributions": [
+          "提出直接预测屏幕表示的无解码器世界模型",
+          "通过向量比较简化过渡验证过程",
+          "在无训练数据情况下实现有效验证"
+        ],
+        "application_scenarios": [
+          "GUI代理安全验证",
+          "用户界面自动化测试"
+        ],
+        "technical_highlights": [
+          "动作条件下的直接预测",
+          "无解码器设计",
+          "向量比较验证"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.21114",
+      "source": "huggingface",
+      "title": "Spectral-Spatial Interpretation",
+      "authors": [
+        "Haotian Ma",
+        "Ruqi Yang",
+        "Philip Townsend"
+      ],
+      "abstract": "Post-hoc image explanations usually show where a model looks using spatial heatmaps or indicate which channels matter using global channel scores. These separate views are limiting for multispectral data because channel relevance is often spatially localized and physically meaningful. We introduce Spectral-Spatial Interpretation (SSI), a full-grid attribution method over position-channel players (g,c). For each spatial position, SSI fixes the observed surrounding context, defines a conditional game over the channels at that position, and applies the Shapley value to this local game. The result is a full spectral-spatial attribution matrix rather than a single heatmap or a global channel ranking. SSI has a clear local interpretation. It satisfies Shapley fairness within each position, and aggregating its channel attributions exactly recovers the position-level contextual contrast obtained by replacing that position with the baseline. SSI also differs from context-averaged Owen-style hierarchical accounting, which uses the same position-channel grouping but averages over external spatial coalitions. On HLS Burn Scar, SSI outperforms an MC-Owen estimator across retained attribution metrics while using only about 6% of its evaluation budget. Across CUB-200, EuroSAT, and HLS Burn Scar under both per-channel mean and zero baselines, SSI achieves the best joint deletion and insertion AUC over dense, flat, and rank-1 baselines, yields the strongest spectral hit rates and channel deletion, and leads spatial localization on both annotated datasets. Code is available at https://github.com/AtheavenMa/Spectral-Spatial-Interpretation.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.21114",
+      "pdf_url": "https://arxiv.org/pdf/2610.21114",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.21114",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 70,
+      "hot_score": 700,
+      "structured_summary": {
+        "chinese_title": "光谱-空间解释",
+        "chinese_summary": "提出了一种新的光谱-空间解释方法，能够更准确地解释多光谱数据的模型关注点。",
+        "pain_point": "现有方法无法有效解释多光谱数据中通道的相关性。",
+        "core_value": "提供了一种新的光谱-空间解释方法，能够更准确地解释模型关注点。",
+        "technical_architecture": "通过局部游戏和Shapley值计算光谱-空间归因矩阵。",
+        "quantitative_results": "在HLS Burn Scar数据集上，新方法优于MC-Owen估计器。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多应用场景。",
+        "key_contributions": [
+          "提出了光谱-空间解释方法",
+          "通过局部Shapley值计算光谱-空间归因矩阵",
+          "满足局部公平性"
+        ],
+        "application_scenarios": [
+          "多光谱图像解释",
+          "遥感图像分析"
+        ],
+        "technical_highlights": [
+          "局部Shapley值计算",
+          "满足局部公平性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.26828",
+      "source": "huggingface",
+      "title": "Agent World Model in the Wild: Computer-Use Agent Environment Synthesis",
+      "authors": [
+        "Zhaoyang Wang",
+        "Qianhui Wu",
+        "Haorui Wang",
+        "Simon Yu",
+        "Baolin Peng",
+        "Canwen Xu",
+        "Hao Cheng",
+        "Wenlin Yao",
+        "Boyi Liu",
+        "Yite Wang",
+        "Jianfeng Gao",
+        "Huaxiu Yao"
+      ],
+      "abstract": "Agent learning is shifting from learning from human data toward learning through interaction with the world. However, scaling such learning directly in real-world computer systems is challenging and can introduce substantial security risks. We therefore propose Agent World Model in the Wild (WildAWM), a scalable pipeline for synthesizing controllable environments and tasks for training general computer-use agents (CUAs). Whereas existing approaches typically specialize in a single agent interaction interface, we construct executable environments that jointly support graphical user interfaces, model context protocol services, and command-line interfaces, allowing agents to flexibly combine visual interaction, tool use, and code execution. WildAWM is entirely powered by open-source models, demonstrating that high-quality computer-use environments can be generated without proprietary frontier models. Beyond environments, we address three recurring challenges in task synthesis: ensuring solvability, maintaining sufficient difficulty, and producing reliable verifiers, by introducing execution-based quality gates that combine heterogeneous agent rollouts, cross-judge consistency checks, and counterfactual probes of judgment robustness. The resulting pipeline synthesizes 341 long-horizon environment-task pairs that can require over 100 agent steps to solve and remain challenging even for frontier models, with GPT-6-Astra solving only 60% of them. We train two Qwen models of different sizes exclusively in these synthetic worlds. Both models achieve substantial gains across 8 out-of-distribution benchmarks spanning web, claw, and computer-use agents, demonstrating that learning in WildAWM's synthesized worlds generalizes broadly to unseen computer-use tasks. The code is publicly available at https://github.com/MSR-Orchard/WildAWM.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.26828",
+      "pdf_url": "https://arxiv.org/pdf/2610.26828",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.26828",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 64,
+      "hot_score": 640,
+      "structured_summary": {
+        "chinese_title": "野生智能体世界模型：面向计算机使用智能体环境合成",
+        "chinese_summary": "提出了一种生成可控制环境和任务的框架，用于训练通用计算机使用智能体。",
+        "pain_point": "直接在真实世界计算机系统中扩展智能体学习面临挑战和安全风险。",
+        "core_value": "展示了高质量计算机使用环境可以使用开源模型生成，无需依赖前沿专有模型。",
+        "technical_architecture": "构建了支持图形用户界面、模型上下文协议服务和命令行接口的可执行环境。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以确保生成环境的通用性和鲁棒性。",
+        "key_contributions": [
+          "提出了WildAWM框架",
+          "支持多种交互接口",
+          "使用开源模型生成高质量环境"
+        ],
+        "application_scenarios": [
+          "智能体训练",
+          "自动化任务执行"
+        ],
+        "technical_highlights": [
+          "支持多种交互方式",
+          "使用开源模型生成环境"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20538",
+      "source": "huggingface",
+      "title": "PrismaCoder: Pushing the Boundaries of Open Multimodal Code Intelligence through Decomposed Rubric Synthesis",
+      "authors": [
+        "Qiushi Sun",
+        "Jingyang Gong",
+        "Yang Liu",
+        "Qiaosheng Chen",
+        "Zhangyue Yin",
+        "Zixian Huang",
+        "Hanxu Hu",
+        "Jing Xiong",
+        "Fangzhi Xu",
+        "Haochen Tan",
+        "Haoli Bai",
+        "Lifeng Shang",
+        "Xiaoguang Li",
+        "Ben Kao",
+        "Qipeng Guo",
+        "Lingpeng Kong",
+        "Jiahui Gao"
+      ],
+      "abstract": "Multimodal code intelligence connects the symbolic world of programs with the visual world their execution creates. Interest in this capability is burgeoning, as models are increasingly asked to produce charts, webpages, animations, and semi-structured documents. Recently, proprietary models have pushed far ahead, producing interactive artifacts even from a text description or a screenshot alone. Yet their data and training remain closed, and open progress is held back by the quantity and quality of available data and by the pipelines and methods for producing it. Quality is the harder of the two, since a sample must be correct as a program, well built, and above all visually right once rendered. No existing signal covers all three. Execution often returns just a pass or fail, code similarity does not map to the visual output, and task-specific verifiers do not generalize. To push open progress further, we start from the data side with PrismaForge, a hierarchical data pipeline centered on a synthesized rubric that decomposes these factors into checkable criteria. The same rubric serves as both filter and reward: it curates the supervised corpus, then drives reinforcement learning on visual-coding tasks. Leveraging PrismaForge for data synthesis and filtering, we build PrismaCoder-2M, the most diverse open dataset for multimodal code intelligence and the largest to date. On the model side, we train PrismaCoder-9B and PrismaCoder-35B on this data and release both. They lead the open state of the art by a wide margin and rival leading proprietary systems. Our analyses further show that the proposed rubric-based pipeline improves multimodal coding performance across model backbones. We release our code and data at https://qiushisun.github.io/PrismaCoder-Home/.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20538",
+      "pdf_url": "https://arxiv.org/pdf/2610.20538",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20538",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 49,
+      "hot_score": 490,
+      "structured_summary": {
+        "chinese_title": "PrismaCoder: 通过分解评分标准合成推动开放多模态代码智能边界",
+        "chinese_summary": "提出了PrismaForge，一种基于分解评分标准的层次数据管道，用于筛选和强化学习，推动开放多模态代码智能的发展。",
+        "pain_point": "现有模型依赖封闭数据，缺乏高质量数据和生产数据的通用方法。",
+        "core_value": "通过分解评分标准，PrismaForge能够筛选高质量数据并驱动强化学习，促进开放多模态代码智能的进步。",
+        "technical_architecture": "PrismaForge采用基于分解评分标准的层次数据管道。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在概念验证阶段，未来需要进一步验证其在实际应用中的效果。",
+        "key_contributions": [
+          "提出了基于分解评分标准的层次数据管道PrismaForge",
+          "能够筛选高质量数据并驱动强化学习",
+          "推动了开放多模态代码智能的发展"
+        ],
+        "application_scenarios": [
+          "代码生成与可视化",
+          "自动化测试与验证"
+        ],
+        "technical_highlights": [
+          "分解评分标准以提高数据质量",
+          "结合监督学习和强化学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.28698",
+      "source": "huggingface",
+      "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
+      "authors": [
+        "Kuan Zhang",
+        "Yukun Chen",
+        "Zhihao Yang",
+        "Yue Su",
+        "Xiangnan Wu",
+        "Zirong Chen",
+        "Run Luo",
+        "Jinkun Hou",
+        "Tao Tan",
+        "Yinhe Zheng",
+        "Yiming Li"
+      ],
+      "abstract": "Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours, and five mixtures ranging from Minecraft-only data to diverse multi-world corpora. We assess performance and generalization using three-level validation losses and gameplay benchmarks from in-corpus worlds to unseen worlds. Our results show: (1) more data improves in-corpus performance, diversity improves transfer to related worlds with limited gains in distant worlds, and model size improves data efficiency but generalizes worse to distant worlds under single-world training; (2) we observe an early interface phase with broad cross-world benefits and a later world phase with gains narrowed to in-corpus and related worlds, and fit an empirical scaling law relating validation loss to data volume, diversity and model size; and (3) our models are competitive with Minecraft specialists and frontier models in 3D worlds, and perform best in real-time settings. However, the limits of imitation and persistent gaps in distant worlds suggest that building generalist embodied agents requires richer training stages beyond continued pre-training.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.28698",
+      "pdf_url": "https://arxiv.org/pdf/2610.28698",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.28698",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 49,
+      "hot_score": 490,
+      "structured_summary": {
+        "chinese_title": "在游戏中的扩展：继续预训练以在多样化虚拟世界中训练体态代理",
+        "chinese_summary": "通过控制实验研究数据量、多样性和模型规模对虚拟世界中体态学习的影响。",
+        "pain_point": "虚拟世界与物理环境存在差异，预训练效果是否能迁移尚不清楚。",
+        "core_value": "揭示了数据量、多样性和模型规模对虚拟世界中体态学习的具体影响。",
+        "technical_architecture": "通过控制实验研究不同维度的预训练策略。",
+        "quantitative_results": "更多数据提高内部性能，多样性有助于相关世界迁移，但对遥远世界效果有限。",
+        "competitors": "暂无对比信息",
+        "limitations": "单世界训练下模型在遥远世界表现较差。",
+        "key_contributions": [
+          "揭示了数据量、多样性和模型规模对虚拟世界中体态学习的具体影响。",
+          "观察到早期接口阶段和后期世界阶段的不同迁移效果。",
+          "提供了虚拟世界中体态学习的深入理解"
+        ],
+        "application_scenarios": [
+          "虚拟游戏环境中的智能体训练",
+          "多样化虚拟世界中的体态学习"
+        ],
+        "technical_highlights": [
+          "多维度控制实验设计",
+          "评估方法包括多级验证损失和游戏基准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,718 @@
+{
+  "date": "2026-10-23",
+  "generated_at": "2026-10-24T01:24:34.690960+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.31329",
+      "source": "huggingface",
+      "title": "WeVisOne-VL: Unified Visual Perception from Objects to Pixels",
+      "authors": [
+        "Tianming Liang",
+        "Junyi Pan",
+        "Yuxi Li",
+        "Canmiao Fu",
+        "Zhipeng Huang",
+        "Chong Sun",
+        "Chen Li",
+        "Jing Lyu"
+      ],
+      "abstract": "Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special <OBJ> token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT followed by mixed-task RL. Across over 30 benchmarks, WeVisOne-VL demonstrates leading performance on both object-level and pixel-level tasks, while maintaining robust rejection for object-absent queries. By releasing WeVisOne-VL to the open-source community, we hope to advance VLMs from broad visual understanding toward truly reliable perception systems for real-world deployment.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.31329",
+      "pdf_url": "https://arxiv.org/pdf/2610.31329",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.31329",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 222,
+      "hot_score": 2220,
+      "structured_summary": {
+        "chinese_title": "WeVisOne-VL: 统一从对象到像素的视觉感知",
+        "chinese_summary": "WeVisOne-VL 通过结构化的下一个标记预测统一了对象级和像素级感知，支持多种视觉任务。",
+        "pain_point": "现有视觉语言模型在细粒度视觉感知方面可靠性不足。",
+        "core_value": "支持从点到掩码的任意粒度定位，提升视觉任务性能。",
+        "technical_architecture": "通过特殊 <OBJ> 标记集成轻量级像素解码器生成实例级像素输出。",
+        "quantitative_results": "在超过 30 个基准测试中表现出色，特别是在对象级和像素级任务上。",
+        "competitors": "暂无对比信息",
+        "limitations": "未提及局限性或未来工作。",
+        "key_contributions": [
+          "统一对象级和像素级感知",
+          "支持多种视觉任务"
+        ],
+        "application_scenarios": [
+          "物体检测",
+          "引用定位"
+        ],
+        "technical_highlights": [
+          "结构化下一个标记预测",
+          "轻量级像素解码器集成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.30926",
+      "source": "huggingface",
+      "title": "Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation",
+      "authors": [
+        "Songlin Yang",
+        "Zhe Wang",
+        "Xiaotong Zhao",
+        "Xi Wang",
+        "Ran Zhang",
+        "Shuai Li",
+        "Taiyi Wu",
+        "Songlian Li",
+        "Eric Liu",
+        "Alan Zhao",
+        "Anyi Rao"
+      ],
+      "abstract": "Cinematic video generation requires both temporal inference from limited inputs (i.e., sparse rather than frame-by-frame guidance) and factor-aware control of character, scene, action, and camera. Multimodal large language models (MLLMs) offer useful priors for both capabilities, but their representations are not automatically actionable for video generation: a Video Diffusion Transformer (DiT) may bypass them through native conditioning pathways, and using them does not ensure either factor-aware control or generation-compatible temporal prediction. We propose Factor-Aware Predictive Learning (FAPL), which establishes effective MLLM latent use as a shared prerequisite and then targets the two capabilities with complementary learning signals. First, latent-only generator grounding trains the DiT with a frozen MLLM and connector, strengthening the DiT's use of MLLM latents for generation. Second, for factor-aware control, paired videos specify a target-factor change and non-target preservation, and factor-span replacement trains the DiT to realize this relationship in its output. Third, for temporal inference, text-only and text-plus-complete-video observations share a video target, and the trained DiT is then frozen while the MLLM and connector are optimized through it. This final stage trains limited-input representations for generation while retaining complete-observation reconstruction as a complementary training mode. Extensive experiments demonstrate our consistently better performance on three cinematic video generation tasks (i.e., sparse-to-video, factor-aware editing, and multi-shot generation) over baselines and validate FAPL's contributions to MLLM feature use, temporal control, and factor coordination.",
+      "published_date": "2026-10-22T08:43:48.000Z",
+      "url": "https://arxiv.org/abs/2610.30926",
+      "pdf_url": "https://arxiv.org/pdf/2610.30926",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.30926",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 164,
+      "hot_score": 1640,
+      "structured_summary": {
+        "chinese_title": "让MLLM潜在变量发挥作用：面向电影视频生成的因子感知预测学习",
+        "chinese_summary": "提出因子感知预测学习（FAPL），增强DiT使用MLLM潜在变量进行生成，并实现因子感知控制和时间推理。",
+        "pain_point": "现有方法未能有效利用MLLM潜在变量进行因子感知的电影视频生成。",
+        "core_value": "通过FAPL增强MLLM潜在变量的利用，实现因子感知的电影视频生成。",
+        "technical_architecture": "采用Video Diffusion Transformer（DiT）结合因子感知预测学习（FAPL）。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索更多应用场景。",
+        "key_contributions": [
+          "提出因子感知预测学习（FAPL）",
+          "增强DiT使用MLLM潜在变量进行生成",
+          "实现因子感知控制和时间推理"
+        ],
+        "application_scenarios": [
+          "电影视频生成",
+          "动画视频生成"
+        ],
+        "technical_highlights": [
+          "因子感知预测学习（FAPL）",
+          "Video Diffusion Transformer（DiT）"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.30181",
+      "source": "huggingface",
+      "title": "Deep Search in Real-World Web Environments",
+      "authors": [
+        "Xiaomin Yu",
+        "Hongliang Chen",
+        "Zhe Huang",
+        "Shilin Yan",
+        "Shao-Rong Su",
+        "Xuqiao Ma",
+        "Feiyang Wang",
+        "Jiayu Chen",
+        "Jiwei Fang",
+        "Yu Yan",
+        "Yini Huang",
+        "Chen Chen",
+        "Ruoxi Cheng",
+        "Yuzhi He",
+        "Yuhui Zhang",
+        "Xiaoxing Hu",
+        "Chen Liu",
+        "Jianbo Lin",
+        "Yijiang Li",
+        "Xiaobin Hu",
+        "Menglong Li",
+        "Zhuoran Lu",
+        "Weishi Wang",
+        "Zhongqi Yue",
+        "Chengwei Qin"
+      ],
+      "abstract": "Despite substantial progress in Deep Search agents, their ability to conduct end-to-end research in real-world open Web environments remains insufficiently evaluated. Unlike static retrieval settings, information on the real-world Web is distributed across diverse sources, modalities, and heterogeneous formats, often involving complex interaction mechanisms that require agents to autonomously search for, access, and integrate relevant evidence during execution. To address this gap, we introduce the OpenDS task, designed to evaluate agents' ability to perform multi-step deep search in the live, open Web. This task requires agents to autonomously explore the real Web, discover and connect relevant evidence from multiple independent sources through Web search, browser interaction, and evidence processing, and ultimately determine a unique factual answer. Building on this task formulation, we construct OpenDS-World, a benchmark comprising 200 challenging tasks spanning diverse information modalities, heterogeneous file formats, and interactive access requirements, with independent human verification to ensure evidence validity and answer uniqueness. We evaluate 12 frontier models under a unified tool environment and execution protocol. The best-performing model achieves 39.0% accuracy, while human evaluation across 1,000 independent attempts yields 21.1% accuracy. Further analyses of tool usage, search cost, termination behavior, and failure recovery reveal substantial differences in research strategies across models, as well as persistent challenges in tool coordination and long-horizon search management. OpenDS-World provides a unified evaluation platform for systematically assessing and advancing agents' autonomous deep search capabilities in real-world open Web environments.",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.30181",
+      "pdf_url": "https://arxiv.org/pdf/2610.30181",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.30181",
+      "category": "recsys",
+      "tags": [
+        "cs.IR",
+        "cs.MM",
+        "cs.SE"
+      ],
+      "upvotes": 152,
+      "hot_score": 1520,
+      "structured_summary": {
+        "chinese_title": "真实世界网络环境中的深度搜索",
+        "chinese_summary": "提出OpenDS任务，评估深度搜索代理在真实世界Web环境中的多步搜索能力。",
+        "pain_point": "现有深度搜索代理在复杂交互机制下的搜索能力不足。",
+        "core_value": "通过OpenDS任务和OpenDS-World基准，评估和提升代理在真实Web环境中的搜索能力。",
+        "technical_architecture": "设计了OpenDS任务和OpenDS-World基准，包含200个挑战性任务。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了12种前沿模型。",
+        "key_contributions": [
+          "提出了OpenDS任务",
+          "构建了OpenDS-World基准",
+          "评估了深度搜索代理在真实Web环境中的能力"
+        ],
+        "application_scenarios": [
+          "真实Web环境下的信息检索",
+          "复杂交互机制下的证据整合"
+        ],
+        "technical_highlights": [
+          "多步深度搜索",
+          "真实Web环境评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.24738",
+      "source": "huggingface",
+      "title": "Editing Images into Reusable Layers via Compositional Edit-Prior Distillation",
+      "authors": [
+        "Wen Xue",
+        "Yong Liu",
+        "Xueheng Li",
+        "Si Wu",
+        "Yong Xu",
+        "Yipeng Sun",
+        "Yan Li",
+        "Simiu Gu"
+      ],
+      "abstract": "High-quality image editing requires precise modification of target regions while preserving the content of unrelated regions. Existing editing models produce flattened outputs that limit precise local manipulation and layer reuse, while decomposition methods typically optimize layer recovery separately from instruction-driven editing. To this end, we introduce LayerEditor, a unified framework that couples instruction-guided image editing with controllable generation of reusable RGBA layers. At its core, In-Context RGB-Alpha Token Modeling jointly represents the edited canvas and an ordered sequence of RGB-Alpha layers within a single token sequence, enabling semantic edits and explicit control over individual layer content. To retain the pretrained model's editing capability during adaptation to layered outputs, we propose Compositional Edit-Prior Distillation, which transfers its editing prior to both the edited canvas and the image composed from the predicted layers. To support training and evaluation, we construct LayerEditor-100K, a large-scale paired image-editing dataset with ordered RGBA layer annotations, and introduce dedicated benchmarks for layered editing. Extensive experiments demonstrate that LayerEditor maintains strong editing fidelity while generating accurate RGBA layers, supporting both flexible layer-level manipulation and multi-layer decomposition.",
+      "published_date": "2026-10-17T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.24738",
+      "pdf_url": "https://arxiv.org/pdf/2610.24738",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.24738",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 74,
+      "hot_score": 740,
+      "structured_summary": {
+        "chinese_title": "通过组成编辑先验蒸馏实现可重用图层的图像编辑",
+        "chinese_summary": "提出LayerEditor框架，实现精准图像编辑并生成可重用图层。",
+        "pain_point": "现有模型生成扁平化输出，限制了局部精确编辑和图层重用。",
+        "core_value": "通过联合表示和编辑先验蒸馏，实现精准编辑和图层控制。",
+        "technical_architecture": "In-Context RGB-Alpha Token Modeling和Compositional Edit-Prior Distillation。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需进一步优化模型适应多场景。",
+        "key_contributions": [
+          "提出In-Context RGB-Alpha Token Modeling",
+          "提出Compositional Edit-Prior Distillation",
+          "构建LayerEditor-100K数据集"
+        ],
+        "application_scenarios": [
+          "图像编辑",
+          "内容生成"
+        ],
+        "technical_highlights": [
+          "联合表示编辑画布和图层",
+          "编辑先验蒸馏"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.30949",
+      "source": "huggingface",
+      "title": "IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems",
+      "authors": [
+        "A. Jian Yang",
+        "An Huang",
+        "Bo Dan",
+        "Chen Mu",
+        "Chengran Yang",
+        "Chuan Shi",
+        "Feng Chang",
+        "Hongxin Li",
+        "Hongyuan Tao",
+        "Jinxing Zhang",
+        "Jujie He",
+        "Kun Wang",
+        "Lin Jing",
+        "Ming Yang",
+        "Qicheng Hu",
+        "Renyuan Li",
+        "Shark Liu",
+        "Shawn Guo",
+        "Shi Qing",
+        "Shi Zhong",
+        "Tianyu Zheng",
+        "Wei Liu",
+        "Wei Zhang",
+        "Wenrui Cai",
+        "Wenxiao Chen",
+        "Xuxing Chen",
+        "Yan Xing",
+        "Yi Xing",
+        "Yifan Luo",
+        "Yiran Xing",
+        "Yizhi Li",
+        "Yongsheng Kang",
+        "Yucheng Ding",
+        "Yue Song",
+        "Yun Qing",
+        "Yunqi Liu",
+        "Zelong Huang",
+        "Zhengmao Ye",
+        "Zhentao Fan",
+        "Zhiteng Li",
+        "Ziling Huang",
+        "Bihong Tang",
+        "Bingli Wang",
+        "Ce Jun",
+        "Changhao Chen",
+        "Chen Hu",
+        "Chen Xiao",
+        "Chi Liu",
+        "Chunjiang Ge",
+        "Danyang Li",
+        "Deyang Kong",
+        "Dian Qi",
+        "Ding Tan",
+        "Evan Yang",
+        "Fanglin Xu",
+        "Fei Bai",
+        "Gang Liu",
+        "Guochang Li",
+        "Hao Tang",
+        "Haoran Feng",
+        "Haowen Wang",
+        "Huahao Hu",
+        "Huanjin Yao",
+        "Huatong Song",
+        "Jia Deng",
+        "Jiajun Wu",
+        "Jialiang Cheng",
+        "Jiayi Liang",
+        "Jiayi Wu",
+        "Jie Deng",
+        "Jiejun Tan",
+        "Jing Yang",
+        "Jingda Xu",
+        "Junhang Cheng",
+        "Junxiao Liu",
+        "Kai Lv",
+        "Kaixiang Pan",
+        "Kecheng Lu",
+        "Kun Zeng",
+        "Kun Zheng",
+        "Kunbo Ding",
+        "Liang Qiu",
+        "Lingyi Sun",
+        "Luan Zhang",
+        "Mengxiao Lv",
+        "Ning Dong",
+        "Pei Wang",
+        "Peng Zhang",
+        "Qingsong Cai",
+        "Qixiang Yin",
+        "Qiyao Wang",
+        "Renbiao Liu",
+        "Renfei Dang",
+        "Ruihang Li",
+        "Ruirui Huang",
+        "Shanhui Yin",
+        "Shen Jian",
+        "Shengjie Fang",
+        "Shikai Li",
+        "Shinan Zhang",
+        "Shiqi Chen",
+        "Shuai Liu",
+        "Shuangqi Li",
+        "Shuo Tang",
+        "Shuqing Deng",
+        "Sijin Hao",
+        "Siwei Wu",
+        "Siyue Wang",
+        "Tao Hai",
+        "Tao Ren",
+        "TingYang Chen",
+        "Wei Shao",
+        "Weicheng Gu",
+        "Weihan Peng",
+        "Wenlong Miao",
+        "Xavier Yu",
+        "Xiangyuan Ji",
+        "Xiaocheng Li",
+        "Xiaodong Huang",
+        "Xiaohan Ge",
+        "Xiaoxiang Shi",
+        "Xiaoyang Zhang",
+        "Xiaoyu Yang",
+        "Xidong Wang",
+        "Xin Li",
+        "Xinyu Tang",
+        "Xiyuan Yang",
+        "Xudong Ma",
+        "Ya Tong",
+        "Yachao Wang",
+        "Yang Tian",
+        "Yaxin Du",
+        "Yeli Ruan",
+        "Yi Wang",
+        "Yi Yu",
+        "Yibin Feng",
+        "Yibo Tan",
+        "Yihang Wang",
+        "Yiming Ju",
+        "Yinda Chen",
+        "Yinda Chen",
+        "Yingjie Du",
+        "Yiwei Liu",
+        "Yizhi Zhou",
+        "Yuan Wei",
+        "Yuli Chen",
+        "Yuqi Zhu",
+        "Yuwen Li",
+        "Yuxi Dong",
+        "Yuxuan Zhang",
+        "Yuyang Song",
+        "Zhange Zhang",
+        "Zhaohan Zhang",
+        "Zhaoyi Li",
+        "Zhen Zhang",
+        "Zhengbo Zhang",
+        "Zhihang Hu",
+        "Zhiwei Yu",
+        "Zhixin Xie",
+        "Zhiyu Chen",
+        "Zhizhao Luo",
+        "Zhongyuan Wu",
+        "Zhou Fang",
+        "Zhu Lin",
+        "Zhuocheng Gong",
+        "Zixi Zhao",
+        "Ziyang Zeng",
+        "Ziyi Wang",
+        "Ziyu Zhao",
+        "Ran Tao",
+        "Mingjie Tang",
+        "Chuan Hao",
+        "Peihao Wu",
+        "Jianzhou Wang",
+        "Nan Jiang",
+        "Yuan Zhi",
+        "Bryan Dai"
+      ],
+      "abstract": "We present IQuest-Q1, a sparse Mixture-of-Experts (MoE) agentic foundation model with 320B total parameters (15B activated). IQuest-Q1 is developed through a three-stage process: (1) stable and efficient pre-training, combining Stable SplitNorm, Muon, and muP with a two-stage curriculum whose second stage increases the coding-data mixture, preserving a wide stability margin between safe and optimal learning rates; (2) fine-grained mid-training, expanding the data mixture across domains and formats and progressively extending the context; and (3) multi-scaffold with multi-version post-training, combining SFT, domain-specialized RL, and MOPD across various scaffolds to integrate complementary training signals and strengthen agentic coding capabilities. Furthermore, model merging combines different experts and checkpoints from different stages while mitigating conflicts among their parameter updates. The resulting IQuest-Q1 demonstrates capabilities in both coding and general tasks. We release IQuest-Q1 as an open-source model to support community research and development.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.30949",
+      "pdf_url": "https://arxiv.org/pdf/2610.30949",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.30949",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 54,
+      "hot_score": 540,
+      "structured_summary": {
+        "chinese_title": "IQuest-Q1: 提升自主CLI系统基础能力",
+        "chinese_summary": "IQuest-Q1 是一个稀疏 MoE 自主基础模型，展示了编码和通用任务能力。",
+        "pain_point": "现有基础模型在自主CLI系统中的编码能力不足。",
+        "core_value": "通过多阶段训练和模型合并，提升模型的稳定性和自主编码能力。",
+        "technical_architecture": "采用稀疏 MoE 架构，结合多阶段训练和模型合并技术。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "模型的多领域扩展和优化仍有提升空间。",
+        "key_contributions": [
+          "多阶段训练方法",
+          "模型合并技术",
+          "自主编码能力提升"
+        ],
+        "application_scenarios": [
+          "自主CLI系统",
+          "通用任务处理"
+        ],
+        "technical_highlights": [
+          "稀疏 MoE 架构",
+          "多阶段训练与模型合并"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.29677",
+      "source": "huggingface",
+      "title": "Toward Recursive Self-Improvement in Physical AI",
+      "authors": [
+        "Meng Luo",
+        "Zechen Bai",
+        "Shanqing Xu",
+        "Yanlin Li",
+        "Kaixin Li",
+        "Mengchen Qian",
+        "Weifeng Lu",
+        "Ran Zhang",
+        "Yingtian Zou",
+        "Ziyang Luo",
+        "Wei Chen",
+        "Hongzhan Lin"
+      ],
+      "abstract": "Recursive self-improvement (RSI) describes a system that improves not only its behavior but also the process by which it improves. Recent digital agents test this idea by rewriting their own code and checking each version with executable tests. Bringing these mechanisms into the physical world requires learning from partial observations through costly trials, while accounting for changing operating conditions and potentially irreversible consequences. We position RSI within robot learning and trace pathways from improving robot capabilities to improving the processes that generate them. We examine how physical experience can strengthen these improvement mechanisms and when the resulting gains can support further self-improvement of the mechanisms themselves. Gains carry forward only when feedback addresses remaining learning needs, the receiving component can use the change, its value survives changes in tasks or hardware, and continued practice remains safe and affordable. Existing studies, concentrated in manipulation, support behavioral improvement, benefits to later learning, and procedure improvement. Some systems also change the improver's knowledge or tools, but the physical studies reviewed here have yet to isolate gains attributable to recursion. We synthesize these findings into evaluation principles and research directions for machines that, trial by trial, safely improve the way they improve.",
+      "published_date": "2026-10-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.29677",
+      "pdf_url": "https://arxiv.org/pdf/2610.29677",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.29677",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "upvotes": 46,
+      "hot_score": 460,
+      "structured_summary": {
+        "chinese_title": "物理AI的递归自我改进",
+        "chinese_summary": "探讨了递归自我改进在物理AI中的应用，通过物理经验增强改进机制。",
+        "pain_point": "物理AI在自我改进过程中面临从部分观察中学习、适应变化条件和避免不可逆后果的挑战。",
+        "core_value": "提出了递归自我改进的概念，强调了物理经验在增强改进机制中的作用。",
+        "technical_architecture": "通过物理经验学习和适应变化条件来增强改进机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何在确保安全和成本效益的前提下，使改进机制本身得到进一步改进。",
+        "key_contributions": [
+          "提出了递归自我改进的概念",
+          "探讨了物理经验在增强改进机制中的作用",
+          "分析了递归自我改进在机器人学习中的应用路径"
+        ],
+        "application_scenarios": [
+          "机器人学习",
+          "物理AI自我改进"
+        ],
+        "technical_highlights": [
+          "通过物理经验学习和适应变化条件",
+          "强调了递归自我改进在机器人学习中的应用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.25100",
+      "source": "huggingface",
+      "title": "Deep Fusion Memory: A Chunk-Level Parametric Memory for Large Language Models",
+      "authors": [
+        "Rubin Wei",
+        "Siyuan Sun",
+        "Hao Sun",
+        "Yuliang Liu",
+        "Xiang Shi",
+        "Jiarui Wang",
+        "Junming Zhang",
+        "Zhouhan Lin"
+      ],
+      "abstract": "Large language models need effective ways to acquire and use external knowledge beyond what they retain from pretraining. Continued pretraining risks catastrophic forgetting, while retrieval at inference time can add substantial overhead. External parametric memory avoids online retrieval, but constructing its training data requires extensive offline search, and output-level interpolation provides only shallow fusion. We introduce Deep Fusion Memory (DFM), a parametric memory architecture that reduces this construction workload and incorporates learned memory into intermediate hidden states. A causal memory predictor learns to generate memory from the preceding context, using retrieved chunk embeddings from the corpus as supervision. The predicted memory is shared across tokens within each chunk and fused into their hidden states through gated cross-attention. Memory prediction and fusion are trained end to end with the backbone frozen, and inference requires no explicit retrieval. Compared with existing parametric memory approaches, which often construct token-level memory targets, DFM requires 32times fewer retrieval queries and 2048times fewer retrieved items to construct its training data. Across six QA tasks, DFM performs better over the strongest baseline by 12.71% on Mistral-7B-v0.3 and 11.19% on Qwen3-8B-Base. Beyond QA, domain adaptation yields average gains of 6.51 and 4.38 points over Qwen3-4B-Base and Qwen3-8B-Base, respectively.",
+      "published_date": "2026-10-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.25100",
+      "pdf_url": "https://arxiv.org/pdf/2610.25100",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.25100",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 39,
+      "hot_score": 390,
+      "structured_summary": {
+        "chinese_title": "深度融合记忆：一种用于大型语言模型的块级参数化记忆",
+        "chinese_summary": "DFM通过预测和融合上下文记忆，减少检索查询次数和检索项数量，提高大型语言模型的外部知识利用效率。",
+        "pain_point": "大型语言模型在利用外部知识时面临灾难性遗忘和检索开销大的问题。",
+        "core_value": "DFM通过减少检索查询次数和检索项数量，提高了模型的外部知识利用效率。",
+        "technical_architecture": "DFM通过因果记忆预测器生成记忆，并通过门控交叉注意力将预测的记忆融合到隐藏状态中。",
+        "quantitative_results": "DFM相比现有方法，减少了32倍的检索查询次数和2048倍的检索项数量。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更复杂的上下文记忆生成方法。",
+        "key_contributions": [
+          "减少检索查询次数和检索项数量",
+          "通过门控交叉注意力融合预测的记忆"
+        ],
+        "application_scenarios": [
+          "大型语言模型的知识增强",
+          "对话系统中的知识融合"
+        ],
+        "technical_highlights": [
+          "因果记忆预测器",
+          "门控交叉注意力机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.23987",
+      "source": "huggingface",
+      "title": "What Generation Knows: Unlocking Fine-Grained Understanding in Unified Multimodal Models",
+      "authors": [
+        "Tengju Ru",
+        "Weitong Lian",
+        "Zecong Tang",
+        "Zhiheng Liu",
+        "Lingyi Meng",
+        "Haoran Li",
+        "Kaixuan Wang",
+        "Bohao Li",
+        "Xihui Liu"
+      ],
+      "abstract": "Fine-grained visual understanding requires distinguishing subtle differences in local attributes and spatial relations, yet remains challenging for existing vision-language models. Unified multimodal models (UMMs) offer a new opportunity through generation pathways that preserve rich visual information complementary to understanding. However, existing generation-assisted understanding methods mainly rely on generative supervision or explicit generation and have not systematically explored direct use of native generation-side representations. To address this gap, we systematically analyze what generation-side representations offer for fine-grained understanding, finding that they are more sensitive to fine-grained semantic changes, capture task-relevant changes missed by understanding-side representations, and depend on correct spatial organization for this advantage. Guided by these findings, we design GAFU, a post-training framework that unlocks native generation-side information for fine-grained understanding. It compresses generation-side visual representations into compact \\(G\\) tokens that preserve fine-grained visual details, enabling task-conditioned retrieval by the understanding pathway. Experiments show that GAFU consistently outperforms SFT baselines trained on the same data across diverse visual understanding tasks and UMM architectures, with maximum relative improvements of 20.00\\%, 17.94\\%, and 8.62\\% on VStar-Bench, OmniSpatial, and VSR-Bench, respectively. Overall, GAFU converts complementary information from the generation pathway into gains in fine-grained visual understanding, providing an effective path toward synergy between generation and understanding in UMMs.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.23987",
+      "pdf_url": "https://arxiv.org/pdf/2610.23987",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.23987",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 31,
+      "hot_score": 310,
+      "structured_summary": {
+        "chinese_title": "何以生成：解锁统一多模态模型中的细粒度理解",
+        "chinese_summary": "设计GAFU框架，利用生成侧表示进行细粒度理解",
+        "pain_point": "现有视觉-语言模型难以区分局部属性和空间关系的细微差异。",
+        "core_value": "提出GAFU框架，直接利用生成侧表示进行细粒度理解，提升模型性能。",
+        "technical_architecture": "设计GAFU框架，压缩生成侧视觉表示为紧凑的G令牌。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多生成侧表示的应用。",
+        "key_contributions": [
+          "系统分析生成侧表示对细粒度理解的作用",
+          "设计GAFU框架，解锁生成侧信息",
+          "提升细粒度视觉理解能力"
+        ],
+        "application_scenarios": [
+          "多模态细粒度理解",
+          "视觉-语言生成任务"
+        ],
+        "technical_highlights": [
+          "直接利用生成侧表示进行细粒度理解",
+          "设计任务条件下的检索机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.27851",
+      "source": "huggingface",
+      "title": "LaLa-World: Scaling Latent World Models with Natural Language Actions",
+      "authors": [
+        "Junha Song",
+        "Geonmo Gu",
+        "Jeongeun Park",
+        "Heejeong Nam",
+        "Lucas Maes",
+        "Byeongho Heo",
+        "Dongyoon Han",
+        "Sangdoo Yun"
+      ],
+      "abstract": "This paper shows that JEPA-style latent world models (LWMs) can learn across diverse domains and data sources by adopting the language-conditioned interface of video generation models. We establish this approach as an effective and efficient basis for planning with imagination and downstream policy fine-tuning. To this end, we introduce LaLa-World, a Language-conditioned Latent World model that learns from simulation and robot trajectories together with broader image and video data. Two designs make this work. First, we describe both numerical actions and visual changes in language, enabling joint training of a single future predictor across heterogeneous datasets. Second, we build the predictor on a language model, allowing it to interpret language conditions while predicting future latent states. The resulting predictor achieves higher average MPC planning performance than existing LWMs trained separately for each domain or task. Adding image and video data further improves average planning performance and robustness to action phrasing. In a matched comparison with an RAEv2-based video generation model baseline, LaLa-World reaches comparable planning performance with 6times less training cost and 13.9times faster planning. Beyond planning, the pretrained LaLa-World serves as an initialization for LaLa-Policy, which jointly predicts actions and future visual representations. LaLa-Policy performs competitively with Cosmos Policy on LIBERO and RoboCasa, with up to 5.5times faster inference.",
+      "published_date": "2026-10-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.27851",
+      "pdf_url": "https://arxiv.org/pdf/2610.27851",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.27851",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": {
+        "chinese_title": "LaLa-World: 扩展语言条件化潜在世界模型",
+        "chinese_summary": "LaLa-World通过语言条件化接口学习跨领域数据，提高规划性能。",
+        "pain_point": "现有潜在世界模型难以处理多样化的数据源和领域。",
+        "core_value": "通过语言条件化接口，LaLa-World提高了跨领域数据的学习效率。",
+        "technical_architecture": "LaLa-World结合了语言模型和未来预测器，支持跨异构数据集训练。",
+        "quantitative_results": "LaLa-World在MPC规划性能上优于现有模型，且使用更少数据。",
+        "competitors": "对比了基于RAEv2的视频生成模型基线。",
+        "limitations": "未来工作可探索更多数据源和更复杂的任务。",
+        "key_contributions": [
+          "提出LaLa-World模型，结合语言和视觉数据进行训练。",
+          "设计语言条件化未来预测器，提高跨领域规划性能。",
+          "通过较少数据达到与基线相当的规划性能"
+        ],
+        "application_scenarios": [
+          "机器人任务规划",
+          "虚拟环境中的智能体行为预测"
+        ],
+        "technical_highlights": [
+          "支持异构数据集的联合训练",
+          "语言条件化未来预测器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.27598",
+      "source": "huggingface",
+      "title": "Meta Expert: Cross-Layer Expert Sharing for Storage- and Retrieval-Efficient MoE",
+      "authors": [
+        "Ermo Hua",
+        "Xiangyu Hong",
+        "Baiting Wu",
+        "Che Jiang",
+        "Haozheng Hou",
+        "Yicheng Gu",
+        "Hanjing Wang",
+        "Qirui Zeng",
+        "Ming Zhang",
+        "Ning Ding",
+        "Qipeng Guo",
+        "Youbang Sun",
+        "Biqing Qi",
+        "Bowen Zhou"
+      ],
+      "abstract": "As model parameters scale up, sparsely activated Mixture-of-Experts (MoE) approaches have become essential for model scaling. However, mainstream models currently adopt hierarchical architectures, where experts in different layers, although topologically independent, exhibit substantial similarity and redundancy in their stored content. Compared to the hierarchically arranged Local Expert in existing mainstream models, we hypothesize that inter-layer shared Meta Expert hold greater potential. To this end, we conduct a multi-dimensional empirical comparison between Local and Meta Experts, and find that models incorporating Meta Experts exhibit lower parameter redundancy, together with lower cross-entropy loss and higher downstream task accuracy. With the activated quantity and the expert granularity held fixed, our model matches the performance of Vanilla MoE using only 70--80\\% of the experts, substantially improving the model's scaling potential. Beyond removing inter-layer redundancy among experts and improving information storage efficiency, our theoretical analysis further shows that, compared with Local Experts, Meta Experts provide hidden states with more flexible residual pathways, thereby improving information retrieval efficiency.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.27598",
+      "pdf_url": "https://arxiv.org/pdf/2610.27598",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.27598",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "Meta Expert: 存储和检索高效的跨层专家共享MoE",
+        "chinese_summary": "通过引入Meta Expert，模型在保持性能的同时减少了专家数量，提高了模型的扩展潜力。",
+        "pain_point": "现有MoE模型中不同层的专家存在大量冗余和相似性。",
+        "core_value": "Meta Expert通过跨层共享减少了冗余，提高了信息存储效率。",
+        "technical_architecture": "采用跨层专家共享架构，减少冗余并提高存储效率。",
+        "quantitative_results": "使用70-80%的专家匹配Vanilla MoE的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "理论分析表明Meta Expert提供更灵活的残差状态。",
+        "key_contributions": [
+          "跨层专家共享减少冗余",
+          "提高信息存储效率"
+        ],
+        "application_scenarios": [
+          "大规模模型训练",
+          "高效推理"
+        ],
+        "technical_highlights": [
+          "固定激活数量和专家粒度",
+          "降低参数冗余"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

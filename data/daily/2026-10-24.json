@@ -1,0 +1,501 @@
+{
+  "date": "2026-10-24",
+  "generated_at": "2026-10-25T00:54:38.072864+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2610.31671v1",
+      "source": "arxiv",
+      "title": "A Unified Framework for Image-to-3D Part Generation via Variable Granularity",
+      "authors": [
+        "Qiwen Gu",
+        "Xin Zhou",
+        "Xiwu Chen",
+        "Zhongyang Zhu",
+        "Zhuo Zhang",
+        "Junqiao Zhao"
+      ],
+      "abstract": "Controllable 3D part generation is pivotal for digital asset creation, yet existing methods lack the flexibility to accommodate diverse user workflows requiring varying levels of control. In this paper, we introduce FlexPart, a unified image-to-3D part generation framework that supports variable-granularity geometric conditions within a single model. By seamlessly integrating heterogeneous inputs, ranging from sparse points to dense bounding boxes and masks, via gated adaptive modulation, FlexPart unlocks a powerful cross-modal synergy. We also propose an asymmetric geometric guidance mechanism that leverages strong spatial priors to align representations across granularities, improving geometric consistency and facilitating inter-task synergy. Under mask conditioning on PartVerseXL, FlexPart reduces Part CD by 16.6% relative to TripoSG + SAM3D and by 10.5% relative to OmniPart, while maintaining competitive whole-mesh quality. The code can be found at https://github.com/Gucci233/FlexPart",
+      "published_date": "2026-10-22T17:59:53Z",
+      "url": "https://arxiv.org/abs/2610.31671v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31671v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于可变粒度的统一图像到3D部件生成框架",
+        "chinese_summary": "FlexPart框架通过单一模型支持不同粒度的几何条件，提升3D部件生成的灵活性和一致性。",
+        "pain_point": "现有方法缺乏适应不同用户工作流的灵活性。",
+        "core_value": "通过跨模态协同和几何引导机制，提升3D部件生成的质量和一致性。",
+        "technical_architecture": "通过门控自适应调制整合异构输入，支持不同粒度的几何条件。",
+        "quantitative_results": "在PartVerseXL下，FlexPart相比TripoSG + SAM3D和OmniPart分别减少16.6%和10.5%的Part CD。",
+        "competitors": "对比了TripoSG + SAM3D和OmniPart。",
+        "limitations": "未来可探索更多类型的输入和更复杂的场景。",
+        "key_contributions": [
+          "支持不同粒度的几何条件",
+          "跨模态协同机制",
+          "几何引导机制"
+        ],
+        "application_scenarios": [
+          "数字资产创建",
+          "3D建模"
+        ],
+        "technical_highlights": [
+          "单一模型支持多种输入类型",
+          "提升几何一致性和跨任务协同"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31670v1",
+      "source": "arxiv",
+      "title": "Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success",
+      "authors": [
+        "Yunfei Xie",
+        "Howard H. Qian",
+        "Shiyi Lan",
+        "Kaiyu Hang",
+        "Chen Wei"
+      ],
+      "abstract": "Robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, different modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To examine this, we propose Sensorimotor Alignment ($S^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that $S^2$ correlates positively with downstream robot task success across embodied model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. $S^2$ can also identify promising vision-language model (VLM) backbones even before costly fine-tuning into vision-language-action models (VLAs). Beyond this correlation, $S^2$ offers representation-level explanations for phenomena observed in VLAs and world action models (WAMs). With $S^2$, we extend PRH to embodied models and make sensorimotor alignment empirically measurable, offering insight into why an embodied model succeeds beyond its closed-loop success rate.",
+      "published_date": "2026-10-22T17:59:51Z",
+      "url": "https://arxiv.org/abs/2610.31670v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31670v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "传感器运动对齐：本体化政策成功的柏拉图代理",
+        "chinese_summary": "提出Sensorimotor Alignment ($S^2$) 作为低成本的离线代理，用于评估机器人模型的能力。",
+        "pain_point": "机器人模型通常通过昂贵的闭环回放进行评估，需要寻找低成本的离线代理。",
+        "core_value": "提供了一种低成本的离线评估方法，用于优先选择模型进行闭环评估。",
+        "technical_architecture": "提出Sensorimotor Alignment ($S^2$) 作为无训练的离线度量。",
+        "quantitative_results": "发现 $S^2$ 与下游机器人任务成功率正相关。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定的机器人模型家族中进行了验证。",
+        "key_contributions": [
+          "提出Sensorimotor Alignment ($S^2$) 作为评估机器人模型能力的低成本离线代理。",
+          "能够识别出在昂贵微调之前有潜力的视觉-语言模型（VLM）骨干。",
+          "为视觉-语言-动作模型（VLA）和世界动作模型（WAM）中的现象提供代表级解释"
+        ],
+        "application_scenarios": [
+          "机器人任务评估",
+          "视觉-语言模型的优先选择"
+        ],
+        "technical_highlights": [
+          "无训练的离线度量",
+          "与下游任务成功率正相关"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31668v1",
+      "source": "arxiv",
+      "title": "Reading, Writing, Sharing, and Interacting with the World through Video",
+      "authors": [
+        "Shengqiong Wu",
+        "Meng Luo",
+        "Bobo Li",
+        "Ziwei Liu",
+        "Shuicheng Yan",
+        "Ming-Hsuan Yang",
+        "Philip Torr",
+        "Hao Fei"
+      ],
+      "abstract": "Video foundation models have advanced rapidly in understanding and generating visual sequences, while video world models seek to capture the underlying dynamics of the world they depict. Despite their different objectives, both concern the relationship between video observations and an evolving world. This survey adopts world modeling as a unifying lens for examining these developments. Viewing an observed video as a partial, lossy, and temporally ordered projection of a latent temporal world, we organize the literature around four complementary operations: reading infers world properties from observed video; writing synthesizes video from specified or learned world conditions; sharing integrates understanding and generation through common modeling mechanisms; and interacting predicts and updates world states under actions and evolving observations. This perspective distinguishes temporal coherence in observed or generated sequences from consistency in the underlying world state. Across tasks, representations, models, datasets, and benchmarks, we trace a shift in emphasis from clip-level recognition and perceptual fidelity toward persistent state, controllable evolution, physical and causal validity, and evaluation grounded in interaction and downstream decisions, and we distill the open challenges that follow.",
+      "published_date": "2026-10-22T17:59:50Z",
+      "url": "https://arxiv.org/abs/2610.31668v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31668v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "通过视频阅读、写作、分享和互动世界",
+        "chinese_summary": "本文通过世界建模视角审视视频理解与生成的发展，区分了观测或生成序列的时间连贯性和底层世界状态的一致性。",
+        "pain_point": "现有视频模型在理解与生成视频时，缺乏对世界状态的连贯性和一致性建模。",
+        "core_value": "提出世界建模视角，区分时间连贯性和世界状态一致性，促进视频理解与生成的发展。",
+        "technical_architecture": "采用世界建模视角，组织视频理解与生成的四种操作：读取、写作、分享和互动。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证世界建模在实际应用中的效果。",
+        "key_contributions": [
+          "提出世界建模视角",
+          "区分时间连贯性和世界状态一致性",
+          "组织视频理解与生成的四种操作"
+        ],
+        "application_scenarios": [
+          "视频理解",
+          "视频生成"
+        ],
+        "technical_highlights": [
+          "世界建模视角",
+          "时间连贯性和世界状态一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31667v1",
+      "source": "arxiv",
+      "title": "Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning",
+      "authors": [
+        "Mahdi Salmani",
+        "Adel Javanmard",
+        "Devansh Gupta",
+        "Meisam Razaviyayn"
+      ],
+      "abstract": "Test-time scaling has emerged as a key inference strategy for reasoning models, where a model generates a large number of candidate solutions in the hope of finding at least one correct solution. Running all candidate solutions to completion can be computationally demanding, so recent work prunes the candidate pool after generating only a short prefix, committing further computation only to the surviving candidates. Existing pruning strategies divide broadly into two categories: Quality-based methods assign a score to each partial solution and discard those predicted to ultimately lead to an incorrect final solution, while diversity-based methods select partial solutions that follow different reasoning trajectories and are therefore likely to cover different final solutions. The tension between these two objectives is an instance of exploration versus exploitation, yet little to no prior work on pruning exposes this trade-off directly, let alone optimizes it. In this paper, we introduce a pruning procedure that addresses this trade-off directly by optimizing pass@$k$ over the selected solution pool. In particular, it chooses the pool to maximize the probability that at least one of its partial solutions, when continued to completion, yields a correct answer. Because this objective simultaneously rewards high-quality partial solutions and penalizes redundancy among them, quality and diversity are naturally balanced by the criterion itself rather than through separate ad-hoc design choices. On eight open-weight reasoning models, our method outperforms existing quality-based and diversity-based pruning strategies. The gains are particularly pronounced when the pruning procedure keeps a moderate number of partial solutions for continued generation, highlighting the value of directly balancing quality and diversity during pruning.",
+      "published_date": "2026-10-22T17:59:48Z",
+      "url": "https://arxiv.org/abs/2610.31667v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31667v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "直接优化Pass@$k$：推理模型测试时平衡质量和多样性",
+        "chinese_summary": "提出了一种直接优化Pass@$k$的方法，以平衡推理模型测试时的质量和多样性。",
+        "pain_point": "现有方法在生成候选解决方案后仅基于短前缀进行剪枝，难以平衡质量和多样性。",
+        "core_value": "通过优化Pass@$k$直接解决探索与利用之间的权衡问题，提高模型性能。",
+        "technical_architecture": "引入了一种新的剪枝策略，优化候选池以最大化至少一个正确解的概率。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定推理模型上进行了实验验证。",
+        "key_contributions": [
+          "直接优化Pass@$k$以平衡质量和多样性",
+          "提出了一种新的剪枝策略",
+          "解决了探索与利用之间的权衡问题"
+        ],
+        "application_scenarios": [
+          "大规模推理模型的测试时剪枝",
+          "需要高准确性和多样性的推理任务"
+        ],
+        "technical_highlights": [
+          "直接优化Pass@$k$",
+          "平衡质量和多样性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31663v1",
+      "source": "arxiv",
+      "title": "Phase Transition from Random Features to Fully Trainable Networks",
+      "authors": [
+        "Xin He",
+        "Huan Lao",
+        "Xiliang Lu",
+        "Shijun Zhang"
+      ],
+      "abstract": "Constructing accurate and computationally tractable approximation spaces is a fundamental task in scientific computing. Partially trainable neural networks bridge fixed random features and fully adaptive representations. This paper quantifies a phase transition pattern in approximation bounds and observes analogous behavior in training errors: a rapid but smooth initial improvement followed by diminishing returns, with a sharper transition under greater initialization mismatch. Under polynomial spectral decay with exponent $α>1$ and leverage compatibility, we establish a squared $L_2$ approximation rate $\\mathcal{O}((κ_P\\log(m/δ)/m)^α)$ for two-layer networks of width $m$ and trainable proportion $P$, where $κ_P=(P/κ_1^*+(1-P)/κ_0^*)^{-1}$. The bound holds uniformly over the unit ball of a reproducing kernel Hilbert space (RKHS) with probability at least $1-δ$. The constants $κ_0^*$ and $κ_1^*$ quantify the fixed and trainable groups' sampling mismatches relative to the target RKHS. For spherical biased-ReLU features in dimension $d$, we verify these assumptions with $α=(d+2)/(d-1)$ and $κ_0^*=4\\sqrt{2}τ(d+1)/d$ for initialization scale $τ\\ge1$, and $κ_1^*=1$ under ridge leverage sampling. For $d=5$ and $τ=10$, a trainable proportion of approximately $4.1\\%$ captures $90\\%$ of the reduction in the approximation bound from $P=0$ to $P=1$. A structured three-layer example illustrates how a few trainable first-layer neurons exploit fixed downstream blocks through nonlinear composition. Numerical experiments across diverse settings, including networks with up to 15 layers, exhibit similar phase transitions in training errors.",
+      "published_date": "2026-10-22T17:59:29Z",
+      "url": "https://arxiv.org/abs/2610.31663v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31663v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "math.NA",
+        "cs.LG",
+        "math.ST",
+        "stat.ML"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "从随机特征到完全可训练网络的相变现象",
+        "chinese_summary": "量化了从部分可训练到完全可训练网络的相变模式。",
+        "pain_point": "在科学计算中，构建准确且计算上可处理的近似空间是一个基本任务。",
+        "core_value": "提出了从部分可训练到完全可训练网络的相变理论，提供了理论上的误差边界。",
+        "technical_architecture": "基于多项式谱衰减和杠杆兼容性假设，建立了误差边界。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定假设条件下成立，未来需扩展适用范围。",
+        "key_contributions": [
+          "提出了从部分可训练到完全可训练网络的相变理论",
+          "建立了误差边界",
+          "验证了特定特征假设下的适用性"
+        ],
+        "application_scenarios": [
+          "科学计算中的近似空间构建",
+          "神经网络的理论分析"
+        ],
+        "technical_highlights": [
+          "相变模式的量化",
+          "误差边界的理论建立"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31662v1",
+      "source": "arxiv",
+      "title": "Reliable AI-Assisted Decisions via Selective Auditing",
+      "authors": [
+        "Isaac Gibbs",
+        "Elise L. Han",
+        "Ryan J. Tibshirani",
+        "Tijana Zrnic"
+      ],
+      "abstract": "We consider online monitoring of an AI system that produces a sequence of decisions. At each round, the system outputs a proposed decision together with a confidence score estimating the trustworthiness of the decision. The decision and confidence score need not be produced by the same model: for example, one agent may propose a decision, while a separate verifier agent evaluates it and outputs a correctness or safety score. Based on this information, we must decide whether to accept the AI decision automatically or consult an expert, such as a human auditor, who reviews the proposal and either accepts or corrects it. We formulate this task as an online constrained optimization problem in which the goal is to minimize the frequency of expert auditing while guaranteeing that the fraction of AI errors that go unaudited stays below a user-defined threshold. We derive a family of algorithms with provable error-control guarantees with no assumptions, including a method that is optimally efficient: it asymptotically attains the best achievable auditing rate for both adversarial and i.i.d. data streams. Experiments on screening harmful requests to large language models, qualitative text annotation, and data labeling show that our methods achieve valid error control in practice while substantially reducing the need for human auditing compared to baselines.",
+      "published_date": "2026-10-22T17:59:22Z",
+      "url": "https://arxiv.org/abs/2610.31662v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31662v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "通过选择性审计实现可靠的AI辅助决策",
+        "chinese_summary": "提出了一种在线监控AI系统决策的方法，通过选择性审计减少专家审计频率，同时保证未审计错误的比例低于用户定义的阈值。",
+        "pain_point": "AI系统决策可能存在错误，需要人工审计以确保决策的准确性，但人工审计成本高且效率低。",
+        "core_value": "通过选择性审计减少专家审计频率，同时保证未审计错误的比例低于用户定义的阈值，提高决策系统的可靠性和效率。",
+        "technical_architecture": "将任务建模为在线约束优化问题，设计了一组具有证明错误控制保证的算法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于提出决策和评估决策的模型分离的情况。",
+        "key_contributions": [
+          "提出了一种在线约束优化问题模型",
+          "设计了一组具有证明错误控制保证的算法",
+          "提出的方法在理论上是优化高效的"
+        ],
+        "application_scenarios": [
+          "大型语言模型有害请求筛选",
+          "文本质量评估"
+        ],
+        "technical_highlights": [
+          "适用于 adversarial 和 i.i.d. 数据流",
+          "方法具有最优效率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31659v1",
+      "source": "arxiv",
+      "title": "SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing",
+      "authors": [
+        "Sy-Tuyen Ho",
+        "Anirudh Satheesh",
+        "Soham Chawathe",
+        "Huy Nghiem",
+        "Yongkyun Lee",
+        "Andrew Adams Schoen",
+        "Furong Huang"
+      ],
+      "abstract": "Auditing whether a text-to-image (T2I) model was fine-tuned on a particular image collection is difficult: a model can absorb collection-level visual characteristics without reproducing training images. Proactive dataset-use auditing plants a shared signal in a dataset before release, then later checks whether that signal appears in a suspect model's generated outputs. Existing approaches often trade off verifiability, fidelity, robustness, and deployability. We introduce $\\textbf{SpectralCanary}$, which uses a smooth low-pass mask to blend a fixed canary image into every collection image while leaving captions unchanged and requiring neither auxiliary generation nor per-image optimization. A lightweight verifier detects the transferred signal in suspect-model outputs. Across eight tests on the Pokemon dataset and three realistic data transformations, spanning two architectures families, SpectralCanary achieves the highest average per-generation TPR@$1\\%$ FPR ($91.1\\%$) and fixed threshold model-level accuracy using 30 generations ($94.8\\%$) among the evaluated methods. Across five datasets spanning artistic, medical, satellite, and fashion domains with SD3.5, SpectralCanary averages $92.4\\%$ per-generation TPR@$1\\%$ FPR while preserving the released images (SSIM $0.989$, LPIPS $0.022$) with a near-zero mean change FID (mean $Δ$FID $0.05$) across datasets. Matched-energy ablations on Pokemon and ROCOv2 support our design choice, low-frequency placement transfers more reliably compared to mid/high-frequency placement. Under the evaluated adaptive attacks, the most effective removal requires aggressive modification and incurs more than $25$ $Δ$FID points. These results identify low-frequency visual signals as effective carriers for collection-level T2I audit traces.",
+      "published_date": "2026-10-22T17:59:03Z",
+      "url": "https://arxiv.org/abs/2610.31659v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31659v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SpectralCanary: 用于T2I数据集使用审计的简单低频痕迹",
+        "chinese_summary": "SpectralCanary通过在数据集中嵌入低频信号，实现高效的数据集使用审计。",
+        "pain_point": "现有方法在可验证性、保真度、鲁棒性和部署性之间难以平衡。",
+        "core_value": "SpectralCanary通过简单低频掩码融合固定水印，无需额外生成或优化。",
+        "technical_architecture": "使用低通滤波掩码将固定水印图像融合到每张集合图像中。",
+        "quantitative_results": "在多项测试中，SpectralCanary在TPR@1% FPR和模型级准确性方面表现最佳。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集和模型架构上进行了测试。",
+        "key_contributions": [
+          "简单低频掩码融合固定水印",
+          "无需额外生成或优化"
+        ],
+        "application_scenarios": [
+          "T2I模型审计",
+          "数据集使用审计"
+        ],
+        "technical_highlights": [
+          "无需辅助生成",
+          "轻量级验证器检测信号"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31657v1",
+      "source": "arxiv",
+      "title": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
+      "authors": [
+        "Sachin Gupta"
+      ],
+      "abstract": "Wrong automatic routing of an IT support ticket can cost more than human triage. We evaluate cost-aware abstention as an offline, cost-conditional readiness assessment: select a routing policy on calibration data under explicit costs, then evaluate that frozen policy once on held-out test data. On a public 47,837-ticket, eight-class corpus, we compare four trained non-LLM classifiers with four large language models under zero- and few-shot prompting. Under the illustrative cost model (c_ok, c_triage, c_wrong) = (0, 1, 5), TF-IDF with logistic regression and a threshold of 0.60 selected on calibration reduces test cost from 0.763 to 0.472, a 38.1% relative reduction (paired ratio-bootstrap 95% CI [35.7%, 40.4%]), while lowering wrong routes from 15.3% to 3.5%. Frozen calibration-selected policies also beat both always-route and always-defer on held-out test data in 14 of 16 settings in a post-hoc cost-parameter analysis. The strongest prompted configuration reaches 0.477 accuracy on a stratified 1,000-ticket test subset, versus 0.879 for fine-tuned DistilBERT on the same tickets. Isotonic lowers expected calibration error without reliably improving discrimination: GPT-4o-mini few-shot has one confidence value before and after recalibration and correctness AUROC 0.500. We therefore report correctness AUROC and tie-aware risk-coverage area alongside ECE. At the analytically derived break-even probability 0.80, seven prompted configurations defer all tickets; Haiku few-shot routes only 19/1,000. An LLM-only agreement control and margin/entropy rejection baselines further separate calibration from discrimination. The findings are scoped to this dataset, prompt design, model endpoints, and illustrative costs; the work is an evaluation framework, not a new abstention algorithm or universal deployment certification.",
+      "published_date": "2026-10-22T17:58:52Z",
+      "url": "https://arxiv.org/abs/2610.31657v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31657v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于LLM的IT票分类中的成本感知弃权",
+        "chinese_summary": "通过成本感知弃权减少IT支持票错误路由的成本。",
+        "pain_point": "IT支持票错误路由可能导致成本增加。",
+        "core_value": "提出了一种成本感知的弃权方法，显著降低了错误路由成本。",
+        "technical_architecture": "使用非LLM分类器和大型语言模型进行成本感知的弃权评估。",
+        "quantitative_results": "TF-IDF与逻辑回归在测试数据上的成本从0.763降低到0.472。",
+        "competitors": "对比了非LLM分类器和大型语言模型。",
+        "limitations": "仅在特定成本模型下进行了评估。",
+        "key_contributions": [
+          "提出了一种成本感知的弃权方法",
+          "显著降低了错误路由成本"
+        ],
+        "application_scenarios": [
+          "IT支持票分类",
+          "成本敏感的自动路由"
+        ],
+        "technical_highlights": [
+          "成本模型的引入",
+          "弃权策略的校准与应用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31656v1",
+      "source": "arxiv",
+      "title": "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning",
+      "authors": [
+        "Ali Najar",
+        "Hosein Hasani",
+        "Amir Kooshan Fattah",
+        "Yasamin Rajabi",
+        "Mahdieh Soleymani Baghshah"
+      ],
+      "abstract": "Meta-reinforcement learning aims to train agents that adapt quickly to unseen tasks from limited interaction, but this requires representing task evidence over long interaction histories. Classical recurrent agents compress experience into hidden states, while transformer-based agents retrieve from past trajectories at quadratic memory and computation cost. In this work, we propose Memory-Enhanced Test-Time Adaptation (METTA) for meta-reinforcement learning. It decomposes the fast adaptation phase into two temporal scales: a causal neural memory performs fine-grained within-episode adaptation with linear sequence complexity, while compact episode-level summaries support long-range cross-episode task inference without attending over the full interaction history. Moreover, equipping agents with neural memory provides sufficient expressive capacity and test-time training capability, enabling effective adaptation to unseen held-out tasks and task families at meta-test time. On unseen held-out Meta-World ML10/45 test environments, METTA achieves a success rate over $50\\%$ while maintaining a low training budget and short wall-clock time. On long-context sparse-reward PointMaze tasks, it outperforms transformer-based baselines by exhibiting more structured exploration behavior. These results show that METTA provides an efficient path toward more adaptive and scalable long-context meta-RL.",
+      "published_date": "2026-10-22T17:58:27Z",
+      "url": "https://arxiv.org/abs/2610.31656v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31656v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "METTA：元强化学习中的记忆增强测试时自适应",
+        "chinese_summary": "METTA 提出了一种新的方法，通过分解快速自适应阶段为两个时间尺度，实现高效的元强化学习任务自适应。",
+        "pain_point": "现有方法在处理长期交互历史时存在压缩经验或检索历史轨迹的局限性。",
+        "core_value": "通过引入神经记忆，METTA 提高了任务自适应能力，同时保持了低训练预算和短时间。",
+        "technical_architecture": "METTA 将快速自适应阶段分解为因果神经记忆和紧凑的摘要，分别处理细粒度的单集内自适应和跨集任务推理。",
+        "quantitative_results": "在未见过的 Meta-World ML10/45 测试环境中，METTA 的成功率超过 50%，且保持了低训练预算和短时间。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究如何在更复杂任务中扩展和优化神经记忆。",
+        "key_contributions": [
+          "提出了一种新的元强化学习测试时自适应方法",
+          "通过引入神经记忆提高了任务自适应能力",
+          "保持了低训练预算和短时间"
+        ],
+        "application_scenarios": [
+          "元强化学习任务自适应",
+          "复杂交互环境下的智能体自适应"
+        ],
+        "technical_highlights": [
+          "分解快速自适应阶段为两个时间尺度",
+          "引入神经记忆支持细粒度自适应和长程推理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.31651v1",
+      "source": "arxiv",
+      "title": "BrickWright: Agentic Creation of Physically Feasible Brick Builds",
+      "authors": [
+        "Ava Pun",
+        "Kevin Dai",
+        "Sally Chen",
+        "Maxwell Jones",
+        "Ruixuan Liu",
+        "Kangle Deng",
+        "Changliu Liu",
+        "Maneesh Agrawala",
+        "Deva Ramanan",
+        "Jun-Yan Zhu"
+      ],
+      "abstract": "Frontier coding agents are becoming increasingly adept at 3D modeling. Yet, they still face challenges when building objects meant to be assembled in the physical world, often creating invalid assemblies with floating, colliding, or disconnected parts. We argue that providing agents with tools for assembling builds and verifying their physical feasibility is sufficient for them to produce physically valid assemblies that still adhere to input prompts. Focusing on the domain of LEGO brick builds, we present BrickWright, a framework for generating physically feasible brick builds from text or image prompts using pre-trained agents, where a build is physically feasible if it uses only real parts, has no colliding or floating parts, and forms a connected structure if possible. BrickWright guides agents to create builds by writing code with BrickLayer, a Python toolkit with two main components: an ergonomic brick assembly API that halves inference cost compared to working in raw LDraw, and a validator that provides feedback on physical feasibility. Whereas baseline agents achieve physical validity rates ranging from only 9% (GPT-6 Luna) to 69% (GPT-6 Astra), BrickWright-guided agents achieve 100% validity on a sample of 512 prompts, while improving prompt adherence for lightweight agents and maintaining it for stronger agents. Additionally, they outperform specialized models on the text-to-brick task. Code is available on our project page: https://avalovelace1.github.io/brickwright/",
+      "published_date": "2026-10-22T17:57:20Z",
+      "url": "https://arxiv.org/abs/2610.31651v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31651v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "BrickWright: 物理可行的砖块构建自主创造",
+        "chinese_summary": "通过提供组装工具和物理可行性验证，BrickWright 指导生成符合物理要求的 LEGO 构建。",
+        "pain_point": "现有 AI 在构建物理可装配物体时遇到挑战，常产生无效组装。",
+        "core_value": "通过物理验证和组装工具，确保生成的构建符合物理要求。",
+        "technical_architecture": "使用预训练代理和 BrickLayer 工具包生成物理可行的构建。",
+        "quantitative_results": "BrickWright 指导的代理在物理可行性方面显著优于基线模型。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于 LEGO 砖块构建领域。",
+        "key_contributions": [
+          "提供物理验证和组装工具",
+          "显著提高物理可行性",
+          "使用预训练代理生成构建"
+        ],
+        "application_scenarios": [
+          "LEGO 构建设计",
+          "物理模型生成"
+        ],
+        "technical_highlights": [
+          "BrickLayer 工具包降低推理成本",
+          "验证物理可行性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

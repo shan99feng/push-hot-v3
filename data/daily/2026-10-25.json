@@ -1,0 +1,479 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-26T01:01:53.224132+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2610.32629v1",
+      "source": "arxiv",
+      "title": "Interpretable Singing Emotion Recognition Using Acoustic and Vocal Technique Features",
+      "authors": [
+        "Fotini Kiriakopoulou",
+        "Vassilis Lyberatos",
+        "Spyridon Kantarelis",
+        "Athanasios Voulodimos",
+        "Giorgos Stamou"
+      ],
+      "abstract": "Singing emotion recognition relies predominantly on deep learning models that achieve strong performance but offer limited insight into the vocal characteristics driving emotion, of- ten overlooking the singing voice as a distinct signal. We propose an interpretable singing emotion recognition framework using a compact set of singing-specific descriptors across prosody, spec- tral features, phonetics, and vocal technique. To decode model decisions and link predictions to measurable acoustic phenomena, we employ SHAP and apply GRAD-CAM to qualitatively assess the learned representations of vocal techniques. Evaluations show that singing-specific features reduce cross-singer variability, while vocal technique descriptors provide interpretable insights into singing expression. Furthermore, out-of-domain evaluation on VocalSet reveals interesting associations between emotional expression and ground-truth technical execution. The analysis highlights vibrato and pharyngeal techniques as salient cues of emotional delivery, with SHAP indicating that vibrato is context-dependent on articulation rate. These findings emphasize the value of domain-specific features for interpretable singing emotion analysis.",
+      "published_date": "2026-10-23T13:42:34Z",
+      "url": "https://arxiv.org/abs/2610.32629v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32629v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于声乐特征的可解释歌唱情绪识别",
+        "chinese_summary": "提出一种基于声乐特征的可解释歌唱情绪识别框架，通过声乐技术描述符揭示歌唱表达的可解释性。",
+        "pain_point": "现有深度学习模型在歌唱情绪识别上虽表现优异但缺乏可解释性。",
+        "core_value": "通过声乐特征减少跨歌手变异性，提供歌唱技术的可解释洞察。",
+        "technical_architecture": "采用声乐特定描述符结合SHAP和GRAD-CAM技术。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在VocalSet数据集上进行了评估。",
+        "key_contributions": [
+          "提出一种基于声乐特征的可解释歌唱情绪识别框架",
+          "通过声乐技术描述符揭示歌唱表达的可解释性",
+          "减少跨歌手变异性"
+        ],
+        "application_scenarios": [
+          "歌唱情绪分析",
+          "声乐教育"
+        ],
+        "technical_highlights": [
+          "结合SHAP和GRAD-CAM技术",
+          "揭示歌唱技术的可解释性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32628v1",
+      "source": "arxiv",
+      "title": "Acquisition for Spherical-Linear Bayesian Optimization on the Cube",
+      "authors": [
+        "Nathan Wycoff"
+      ],
+      "abstract": "Recent work demonstrated that executing Bayesian Optimization (BO) using simply a linear surrogate with a clever transformation is enough to approximate the performance of the standard Gaussian-Process (GP) based version on high-dimensional test functions. When the decision region is a sphere, this strategy admits rapid exact acquisition. However, it is the unit cube we encounter most often in the BO literature, and in this setting a standard approach, namely a multi-start quasi-Newton method, is employed for solving the acquisition subproblem. In this article, we will discuss a series of results, both positive and negative, regarding the complexity of global resolution of various acquisition subproblems over the unit cube. On the basis of this discussion, we will propose a new acquisition function which is globally optimizable using significantly less execution time than the incumbent approach while maintaining or improving performance. The resulting method is competitive with GP-based BO in terms of accuracy per evaluation, and is superior in terms of accuracy per walltime on black-boxes of low to moderate computational intensity.",
+      "published_date": "2026-10-23T13:42:23Z",
+      "url": "https://arxiv.org/abs/2610.32628v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32628v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "stat.ML",
+        "cs.LG",
+        "stat.CO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "球面线性贝叶斯优化在立方体上的获取",
+        "chinese_summary": "提出了一种新的获取函数，能够在保持或提高性能的同时，显著减少执行时间。",
+        "pain_point": "在立方体上解决获取子问题时，标准方法耗时较长。",
+        "core_value": "提出的新获取函数在执行时间和准确性方面优于现有方法。",
+        "technical_architecture": "基于球面线性贝叶斯优化策略。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于低到中等计算强度的黑盒函数。",
+        "key_contributions": [
+          "提出了一种新的获取函数",
+          "显著减少执行时间",
+          "保持或提高性能"
+        ],
+        "application_scenarios": [
+          "高维函数优化",
+          "贝叶斯优化"
+        ],
+        "technical_highlights": [
+          "适用于立方体决策区域",
+          "全球可优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32627v1",
+      "source": "arxiv",
+      "title": "LGMT: A Tool for Testing the Logical Reasoning Reliability of LLMs",
+      "authors": [
+        "Zenghui Zhou",
+        "Xiaoke Fang",
+        "Zheng Zheng"
+      ],
+      "abstract": "Large Language Models (LLMs) increasingly serve as reasoning components in modern software systems, yet a model that answers a logical query correctly can contradict itself when the same problem is restated in an equivalent form. Static benchmarks evaluate queries in isolation and therefore fail to expose such inconsistencies. To address this limitation, we present LGMT, an open-source tool that detects reasoning inconsistencies through metamorphic relations grounded in first-order logic. Given a source test case in premise-conclusion form, LGMT generates logically equivalent follow-up cases and checks whether the model's entailment predictions agree across the pair, without ground-truth labels. The tool provides 20 built-in metamorphic relations, supports custom ones verified by the Z3 theorem prover, and runs from a CLI or a web studio, including an offline mock mode requiring no API key. Across six widely used LLMs on a bundled benchmark of 3,091 metamorphic groups, LGMT reveals inconsistency rates ranging from 20.84% to 29.44%. LGMT is publicly available on GitHub at https://github.com/MaxwelsDonc/lgmt-tool, with a demonstration video at https://youtu.be/gou4opptu1U.",
+      "published_date": "2026-10-23T13:41:43Z",
+      "url": "https://arxiv.org/abs/2610.32627v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32627v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "LGMT：一种用于测试大语言模型逻辑推理可靠性的工具",
+        "chinese_summary": "LGMT工具通过基于一阶逻辑的元变换关系检测大语言模型的推理不一致性。",
+        "pain_point": "现有静态基准无法检测大语言模型在不同表述形式下的逻辑不一致性。",
+        "core_value": "LGMT工具通过生成逻辑等价的后续测试案例，揭示大语言模型的推理不一致性。",
+        "technical_architecture": "LGMT工具基于元变换关系和一阶逻辑，支持内置和自定义的变换规则。",
+        "quantitative_results": "在六种广泛使用的LLM上，LGMT揭示了20.84%到29.44%的不一致性率。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步扩展和验证更多的元变换关系。",
+        "key_contributions": [
+          "提出了一种基于元变换关系检测大语言模型逻辑不一致性的方法",
+          "提供了20种内置元变换关系和Z3定理证明器验证的自定义规则"
+        ],
+        "application_scenarios": [
+          "大语言模型的开发和测试",
+          "软件系统中逻辑推理组件的可靠性评估"
+        ],
+        "technical_highlights": [
+          "支持离线模拟模式，无需API密钥",
+          "通过CLI或Web工作室运行"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32620v1",
+      "source": "arxiv",
+      "title": "What Transfers Across Protein Pockets? Experience Reuse in Molecular Optimization for Agentic Structure-Based Drug Design",
+      "authors": [
+        "Zaifei Yang",
+        "Weiyu Chen",
+        "Yaqing Wang",
+        "James Kwok"
+      ],
+      "abstract": "LLM agents optimize a ligand in a protein pocket by editing it step by step and docking each edit. Recent agents first spend extra dockings probing the complex with controlled edits; guidance induced from these probes is reported to help more than the chemical knowledge the model already carries. The probes are then discarded with the instance that produced them, so the obvious next step is to keep them in an experience base, letting a new pocket inherit what earlier ones already paid for. Such a base is read through a \\emph{key}: the record properties under which past edits are pooled and a new one is looked up. Using the full log of one such run over the CrossDocked2020 test-set pockets, we ask whether its keys recur on a pocket the base has never seen and still separate improving from worsening edits. \\crchange{Using} the contacts at the site being edited, the action, and the round as \\crchange{a} key, the base separates them sharply. Within our analysis, this separation is largely explained by how much the edit changed the molecule's size, the action, and the round, none of which describes the target. That is not because the target is irrelevant: naming it outright separates them several times more sharply. For a pocket absent from the base, transfer must rely on a description rather than its identity. Among the exact-match descriptions we evaluate, the more specific ones rarely recur, whereas the coarser ones provide little separation; the signals that do transfer primarily describe the edit and the molecule it produced rather than the target. Under the representations and lookup scheme studied here, an experience base may be more useful for prioritizing an agent's own proposals for docking than for directly prescribing what to build.",
+      "published_date": "2026-10-23T13:38:42Z",
+      "url": "https://arxiv.org/abs/2610.32620v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32620v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "q-bio.BM"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "蛋白质口袋中转移的是什么？基于智能体的结构导向药物设计中的经验重用",
+        "chinese_summary": "通过编辑和重新对接逐步优化配体，利用探针引导的反馈优化配体。",
+        "pain_point": "现有方法依赖于模型内置的化学知识，效果有限。",
+        "core_value": "通过经验重用提升优化效果，减少重复计算。",
+        "technical_architecture": "利用探针引导的反馈机制优化配体。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步探索如何有效利用探针信息。",
+        "key_contributions": [
+          "提出利用经验重用来优化配体",
+          "通过探针引导的反馈机制提升优化效果"
+        ],
+        "application_scenarios": [
+          "结构导向的药物设计",
+          "蛋白质-配体相互作用优化"
+        ],
+        "technical_highlights": [
+          "利用探针信息进行经验重用",
+          "通过编辑、对接和探针反馈逐步优化配体"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32617v1",
+      "source": "arxiv",
+      "title": "Earth embeddings are decomposable records of the land surface",
+      "authors": [
+        "Robin Young",
+        "Srinivasan Keshav"
+      ],
+      "abstract": "Ecological monitoring, carbon accounting and biodiversity assessment increasingly rely on annual Earth embeddings--learned vectors that compress a year of satellite observation for every ten-meter pixel on Earth, consumed in place of the imagery itself. What these vectors mean has not been established. Here we decompose two widely used embedding products and show that they contain individual ecological features, including fire, forest clearing and crop type, validated against independent reference data on events across six continents. The recovered concepts date abrupt canopy loss to the first post-disturbance growing season and resolve severity well enough to separate prescribed fire from wildfire. Small fires that recover quickly are detectable in one product but not the other, which instead separates crops more strongly.",
+      "published_date": "2026-10-23T13:37:35Z",
+      "url": "https://arxiv.org/abs/2610.32617v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32617v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CV",
+        "q-bio.PE"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "地球嵌入是陆地表面的可分解记录",
+        "chinese_summary": "研究分解了两种广泛使用的地球嵌入产品，揭示了其中包含的生态特征，如火灾、森林砍伐和作物类型。",
+        "pain_point": "现有地球嵌入产品的含义尚未明确。",
+        "core_value": "通过分解嵌入产品，揭示了其中包含的具体生态信息，提高了生态监测和碳核算的准确性。",
+        "technical_architecture": "采用分解方法分析嵌入产品，验证生态特征。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对两种特定的嵌入产品进行了研究。",
+        "key_contributions": [
+          "揭示了地球嵌入产品中的具体生态特征",
+          "验证了嵌入产品的生态信息准确性"
+        ],
+        "application_scenarios": [
+          "生态监测",
+          "碳核算"
+        ],
+        "technical_highlights": [
+          "成功分解了广泛使用的地球嵌入产品",
+          "验证了嵌入产品中的生态信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32616v1",
+      "source": "arxiv",
+      "title": "From archive to resource: bringing legacy data back to life at scale with large language models",
+      "authors": [
+        "C. H. Vieira-Vieira",
+        "I. Schneider Chernov",
+        "A. Serra",
+        "M. Correa Marrero",
+        "P. L. Bhavani Mohan",
+        "G. Duchateau-Nguyen",
+        "T. Y. Doktorova",
+        "A. Kreuchwig"
+      ],
+      "abstract": "Pharmaceutical companies maintain vast archives of legacy preclinical study reports that contain study-context details, such as fasting, anesthesia, and laboratory instrumentation, that are rarely captured in structured data formats, yet they can correlate with clinical pathology parameters values and limit the reuse of historical data. This work demonstrates practical, scalable solutions to recover such descriptors from heterogeneous report texts using large language model (LLM)-based extraction pipelines developed independently by two industry teams. The pipelines identify and normalize metadata fields and return verbatim evidence with page and section reference, hasting human verification and iterative refinement. Evaluation of over 400 documents against expert-curated reference values showed high agreement across a broad set of metadata fields. Performance was strongest for consistently reported items and lower for descriptors subject to linguistic or report structure variability. Extraction time has shrunk from 25 minutes in the manual benchmark to 1.6 minutes. As a concrete biological demonstration, we show that fasting status extracted from report text was associated with species- and analyte-specific shifts in clinical chemistry parameters, illustrating how recovered metadata can improve selection of historical controls. Key strengths of the approach are scalability, traceability, and the ability to recover information missing from current industry standards. Main limitations are dependence on source-report quality and initial expert effort to define and refine schemas. These results establish how LLMs can convert heterogeneous, unstructured legacy reports into evidence-grounded, reusable and structured metadata, leading to better experimental comparability, and thus enabling reliable data pooling or informed virtual control selection.",
+      "published_date": "2026-10-23T13:34:54Z",
+      "url": "https://arxiv.org/abs/2610.32616v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32616v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "recsys",
+      "tags": [
+        "cs.IR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "从档案到资源：利用大规模语言模型使遗留数据焕发新生",
+        "chinese_summary": "通过大规模语言模型提取预临床研究报告中的元数据，提高历史数据的再利用。",
+        "pain_point": "制药公司保留的大量遗留预临床研究报告难以结构化，限制了历史数据的再利用。",
+        "core_value": "利用大规模语言模型高效提取报告中的元数据，提高数据再利用效率。",
+        "technical_architecture": "开发基于大规模语言模型的提取管道，自动识别和规范化元数据。",
+        "quantitative_results": "提取时间从25分钟缩短至1.6分钟。",
+        "competitors": "暂无对比信息",
+        "limitations": "对于语言或报告结构变化较大的描述提取效果较差。",
+        "key_contributions": [
+          "开发了高效的元数据提取管道",
+          "实现了大规模语言模型在预临床报告中的应用",
+          "提高了历史数据的再利用效率"
+        ],
+        "application_scenarios": [
+          "预临床研究数据管理",
+          "药物开发历史数据再利用"
+        ],
+        "technical_highlights": [
+          "使用大规模语言模型进行元数据提取",
+          "提取结果包含页和节引用，便于人工验证"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32612v1",
+      "source": "arxiv",
+      "title": "DriveOSS: Dataset and Benchmark for 3D Anomaly Segmentation and Open-set Semantic Segmentation in Autonomous Driving",
+      "authors": [
+        "Zhiran Yan",
+        "Savankumar Bhanderi",
+        "Sourabh Lolge",
+        "Rui Song",
+        "Girdharbhai Paneliya",
+        "Shiva Agrawal",
+        "Gordon Elger"
+      ],
+      "abstract": "Recent advances in 3D semantic segmentation have significantly improved scene understanding in autonomous driving. However, existing methods are typically developed under a closed-set assumption and evaluated under standard driving conditions, where all categories are known in advance. In real-world driving, autonomous vehicles inevitably encounter previously unseen objects, making closed-set perception insufficient for safe deployment. To address this challenge, we introduce DriveOSS, which, to the best of our knowledge, is the first real-world multimodal dataset and benchmark specifically designed for 3D anomaly segmentation and open-set semantic segmentation. It contains 12,661 synchronized and annotated frames captured using six surround-view RGB cameras, a 128-beam LiDAR, and a GPS/IMU unit. The dataset comprises 52 real-world driving scenes collected under clear, nighttime, cloudy, rainy, and snowy conditions and is organized into ID (in-distribution) and OOD (out-of-distribution) subsets. The ID scenes contain only known classes and are used for training, whereas the OOD scenes additionally contain unknown objects annotated as the outlier class and are used for validation and testing. Extensive experiments show that unseen objects remain a major challenge for current 3D perception systems. The dataset, benchmark protocols, and code are available at https://github.com/chrisyan/DriveOSS.",
+      "published_date": "2026-10-23T13:33:39Z",
+      "url": "https://arxiv.org/abs/2610.32612v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32612v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "DriveOSS: 用于自主驾驶的3D异常分割和开放集语义分割的数据集和基准",
+        "chinese_summary": "DriveOSS 是首个专门针对3D异常分割和开放集语义分割的多模态数据集和基准。",
+        "pain_point": "现有方法在遇到未见过的对象时表现不足，无法确保自主驾驶的安全部署。",
+        "core_value": "提供真实世界场景下的数据，支持开放集语义分割的研究。",
+        "technical_architecture": "包含多传感器数据的同步标注，涵盖多种天气条件。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅包含有限的未知对象类别。",
+        "key_contributions": [
+          "首个针对3D异常分割和开放集语义分割的真实世界数据集",
+          "涵盖多种天气条件的多模态数据",
+          "ID和OOD场景的区分"
+        ],
+        "application_scenarios": [
+          "自主驾驶中的场景理解",
+          "开放集语义分割的研究"
+        ],
+        "technical_highlights": [
+          "多传感器数据同步标注",
+          "真实世界多场景数据"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32611v1",
+      "source": "arxiv",
+      "title": "Interpreting Supervised Pairwise Graph Representations: Local Evidence, Confounding, and Provable Post-hoc Correction",
+      "authors": [
+        "Ilya Brekin",
+        "Ariela Moldavskaya",
+        "Elina Sidorova",
+        "Ural Valeev"
+      ],
+      "abstract": "Supervised pairwise graph representations convert pairwise predictive relations into sample-specific graphs, but graph-level accuracy does not by itself show that higher-order topology carries the signal. In a controlled Transformer error-detection task, supervised pairwise graphs outperform attention-as-adjacency (ROC-AUC $0.839$ versus $0.559$; the comparable no-confidence pair is $0.687$ versus $0.559$), but their apparent advantage over model confidence disappears after controlling for sequence length, which is almost perfectly recoverable from the pooled hidden state ($R^2=0.9995$). On published HCP Emotion ensemble graphs, signed node aggregation already acts as an ensemble of supervised pairwise predictions. Edge magnitude alone is near chance; topology-aware augmentations change ROC-AUC by at most $0.004$, with only sign-separated degree showing small positive changes across all tested graph sizes, while a validation-tuned three-layer GCN provides no measurable improvement over the signed node-summary baseline. A Fisher post-hoc corrector satisfies its distribution-agnostic guarantees across the evaluated feature representations and remains stable under reduced labelled budgets; in a near-error-free fMRI calibration regime the bound correctly becomes statistically uninformative. A separate cross-attention analysis identifies a redundant reversal circuit and downstream EOS-timing and copy failures. Higher-order topology should therefore be credited only after local supervised evidence and recoverable nuisance variables have been excluded.",
+      "published_date": "2026-10-23T13:32:46Z",
+      "url": "https://arxiv.org/abs/2610.32611v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32611v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "解释监督对称图表示：局部证据、混淆因素及可证明的后验修正",
+        "chinese_summary": "监督对称图表示在控制序列长度后，其优势消失，仅签节点聚合能显著提升性能。",
+        "pain_point": "监督对称图表示的高阶拓扑结构是否真正携带信号不明确。",
+        "core_value": "提出后验修正方法，证明监督对称图表示中的信号主要由序列长度决定。",
+        "technical_architecture": "使用Fisher后验修正器进行信号修正。",
+        "quantitative_results": "控制序列长度后，监督对称图表示与无信心对的性能差异消失。",
+        "competitors": "无信心对和注意力作为邻接矩阵。",
+        "limitations": "仅在特定数据集上验证，未来需扩展验证。",
+        "key_contributions": [
+          "提出后验修正方法",
+          "证明监督对称图表示中的信号主要由序列长度决定",
+          "发现签节点聚合能显著提升性能"
+        ],
+        "application_scenarios": [
+          "情感识别",
+          "错误检测"
+        ],
+        "technical_highlights": [
+          "Fisher后验修正器的稳定性",
+          "发现签节点聚合的重要性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32609v1",
+      "source": "arxiv",
+      "title": "Hair Segmentation and Skin Characterization on Macroscopic Dermatological Images for Laser Treatment Parameterization",
+      "authors": [
+        "Alex Navarro Navarro",
+        "Marc Arriaga Hidalgo",
+        "Carlos Moreno Rubio",
+        "Maxime Talarmain",
+        "Noelia Vaquero Gallardo"
+      ],
+      "abstract": "Current light-based devices, such as laser hair removal, intense pulsed light (IPL), vascular laser therapy, and dermatologic phototherapy, are widely used in clinical dermatology but rely heavily on subjective manual parameterization or uncalibrated point-based colorimeters. To overcome these limitations, this work presents a unified system for hair segmentation and skin characterization in macroscopic dermatological images. Unlike most existing literature that relies on dermoscopic datasets captured under highly controlled conditions, our approach is specifically designed for macroscopic images that replicate real clinical laser treatments. The proposed pipeline integrates a custom-trained variant of the YOLOv9 deep learning architecture for instance segmentation and classical image processing within a single workflow to extract objective skin and hair parameters such as phototype, hair density, color, and thickness. A color calibration stage using spectrophotometric measurements ensures accurate feature estimation regardless of illumination conditions. Experimental results show competitive segmentation metrics (mAP@50 $\\approx$ 0.80) on a custom dataset featuring short, shaved hairs, typical of pre-treatment scenarios. These findings demonstrate the feasibility of the proposed pipeline in providing the objective, foundational skin and hair features required for future automated laser parameterization, paving the way for its extension to broader light-based medical therapies.",
+      "published_date": "2026-10-23T13:31:59Z",
+      "url": "https://arxiv.org/abs/2610.32609v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32609v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "用于激光治疗参数化的宏观皮肤图像毛发分割和皮肤表征",
+        "chinese_summary": "提出了一种统一系统，用于在宏观皮肤图像中进行毛发分割和皮肤表征，以客观提取皮肤和毛发参数。",
+        "pain_point": "现有基于光的设备依赖于主观的手动参数化或未校准的颜色计测量。",
+        "core_value": "通过集成自定义训练的YOLOv9实例分割和经典图像处理，实现客观的皮肤和毛发参数提取。",
+        "technical_architecture": "采用YOLOv9深度学习架构和经典图像处理方法集成的统一工作流。",
+        "quantitative_results": "在自定义数据集上，分割指标mAP@50约为0.80。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上进行了实验。",
+        "key_contributions": [
+          "提出了一种适用于宏观皮肤图像的毛发分割和皮肤表征方法",
+          "集成YOLOv9和经典图像处理技术",
+          "确保在不同照明条件下准确估计特征"
+        ],
+        "application_scenarios": [
+          "激光脱毛",
+          "血管激光治疗"
+        ],
+        "technical_highlights": [
+          "自定义训练的YOLOv9实例分割",
+          "颜色校准阶段确保准确估计"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.32608v1",
+      "source": "arxiv",
+      "title": "UAE GovTrust Scope Filtering Gains and Routing Failures in Bilingual Public Service Retrieval",
+      "authors": [
+        "Aleksandar Mihajlovic"
+      ],
+      "abstract": "Public-service queries can mention several locations while only one controls the requested service. We study this distinction in UAE GovTrust, a controlled English-Arabic retrieval diagnostic comprising 22 authored service summaries and 50 scenarios with 110 query variants. Twelve methods separate lexical and dense ranking, rank fusion, scope filtering, a multilingual cross-encoder, and direct service lookup. On 72 matched answerable queries with bilingual evidence, role-filtered reciprocal rank fusion retrieves a relevant first result for 69 queries (95.8%), versus 47 (65.3%) for unfiltered fusion; filtered dense retrieval and direct lookup each achieve 68 (94.4%). With English-only evidence, excluding zero-score lexical candidates raises filtered fusion from 52 to 64 correct first hits. However, the unchanged router selects the correct action and scope for only 2 of 168 post-audit perturbations covering paraphrases, irrelevant facts, negation, and corrections. These perturbations are deliberately authored diagnostics, not held-out evaluation. Fresh-environment execution reproduces all 1,320 original ranking orders and actions. The results show that correct scope metadata can improve ranking while brittle scope inference can remove the evidence needed to answer. The study evaluates retrieval and routing, not generated answers or legal correctness; independent Arabic and domain validation remains necessary.",
+      "published_date": "2026-10-23T13:30:58Z",
+      "url": "https://arxiv.org/abs/2610.32608v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32608v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "recsys",
+      "tags": [
+        "cs.IR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "UAE GovTrust 范围过滤在双语公共服务检索中的收益与路由失败",
+        "chinese_summary": "范围过滤提高了双语公共服务检索的准确性，但路由选择仍存在问题。",
+        "pain_point": "公共服务查询中，用户可能提及多个地点，但仅一个地点控制所需服务。",
+        "core_value": "范围过滤显著提高了检索结果的相关性。",
+        "technical_architecture": "使用了多种方法进行排名融合和范围过滤。",
+        "quantitative_results": "范围过滤后的融合检索正确率从65.3%提高到95.8%。",
+        "competitors": "暂无对比信息",
+        "limitations": "路由选择在面对复杂场景时表现不佳。",
+        "key_contributions": [
+          "提出范围过滤在双语公共服务检索中的应用",
+          "展示了范围过滤对检索结果的显著提升"
+        ],
+        "application_scenarios": [
+          "公共服务查询",
+          "多语言信息检索"
+        ],
+        "technical_highlights": [
+          "融合多种排名方法",
+          "范围过滤技术的应用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

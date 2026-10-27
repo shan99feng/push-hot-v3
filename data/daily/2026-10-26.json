@@ -1,0 +1,607 @@
+{
+  "date": "2026-10-26",
+  "generated_at": "2026-10-27T01:51:34.692107+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.31668",
+      "source": "huggingface",
+      "title": "Reading, Writing, Sharing, and Interacting with the World through Video",
+      "authors": [
+        "Shengqiong Wu",
+        "Meng Luo",
+        "Bobo Li",
+        "Ziwei Liu",
+        "Shuicheng Yan",
+        "Ming-Hsuan Yang",
+        "Philip Torr",
+        "Hao Fei"
+      ],
+      "abstract": "Video foundation models have advanced rapidly in understanding and generating visual sequences, while video world models seek to capture the underlying dynamics of the world they depict. Despite their different objectives, both concern the relationship between video observations and an evolving world. This survey adopts world modeling as a unifying lens for examining these developments. Viewing an observed video as a partial, lossy, and temporally ordered projection of a latent temporal world, we organize the literature around four complementary operations: reading infers world properties from observed video; writing synthesizes video from specified or learned world conditions; sharing integrates understanding and generation through common modeling mechanisms; and interacting predicts and updates world states under actions and evolving observations. This perspective distinguishes temporal coherence in observed or generated sequences from consistency in the underlying world state. Across tasks, representations, models, datasets, and benchmarks, we trace a shift in emphasis from clip-level recognition and perceptual fidelity toward persistent state, controllable evolution, physical and causal validity, and evaluation grounded in interaction and downstream decisions, and we distill the open challenges that follow.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.31668",
+      "pdf_url": "https://arxiv.org/pdf/2610.31668",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.31668",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 216,
+      "hot_score": 2160,
+      "structured_summary": {
+        "chinese_title": "通过视频阅读、写作、分享和互动世界",
+        "chinese_summary": "本文通过世界建模视角审视视频理解与生成的发展，强调时间连贯性和世界状态一致性。",
+        "pain_point": "现有视频模型在时间连贯性和世界状态一致性方面存在不足。",
+        "core_value": "提出世界建模视角，区分时间连贯性和世界状态一致性，推动视频理解与生成的发展。",
+        "technical_architecture": "基于世界建模视角，组织阅读、写作、分享和互动四大操作。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索时间连贯性和世界状态一致性之间的关系。",
+        "key_contributions": [
+          "提出世界建模视角",
+          "区分时间连贯性和世界状态一致性",
+          "组织阅读、写作、分享和互动四大操作"
+        ],
+        "application_scenarios": [
+          "视频理解",
+          "视频生成"
+        ],
+        "technical_highlights": [
+          "世界建模视角",
+          "时间连贯性和世界状态一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.30932",
+      "source": "huggingface",
+      "title": "UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents",
+      "authors": [
+        "Jujia Zhao",
+        "Jiakai Tang",
+        "Jing Yu",
+        "Wen Chen",
+        "Jian Wu",
+        "Han Zhu",
+        "Fei Sun",
+        "Suzan Verberne",
+        "Zhaochun Ren"
+      ],
+      "abstract": "Agentic recommendation pursues shopper goals through sequences of context-dependent decisions. Developing and evaluating such policies requires faithful recommendation world models that capture both the interactive shopping environment and users' behavioral responses over long interactions. Existing resources rarely provide long-horizon, fine-grained real-user trajectories or support trajectory-level evaluation and offline validation against production A/B results. We introduce UserArena, a real-world e-commerce interactive benchmark containing 64,729 session trajectories from 11,010 users, spanning 566,102 items and 13 action types. UserArena pairs these trajectories with an interactive environment and supports offline validation against outcomes from a controlled production A/B test, enabling five-level evaluation from output validity and local decisions to sequential behavior, personalization, and outcomes. To improve simulator fidelity over these long-horizon interactions, we further propose On-Policy Trajectory Distillation (OPTD), which uses trajectory-level intent to provide dense teacher targets on student-generated rollouts. Experiments show that OPTD achieves the strongest overall fidelity among the evaluated simulators under UserArena's evaluation protocol and most closely reproduces the production policy effect in offline simulation.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.30932",
+      "pdf_url": "https://arxiv.org/pdf/2610.30932",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.30932",
+      "category": "recsys",
+      "tags": [
+        "cs.IR"
+      ],
+      "upvotes": 47,
+      "hot_score": 470,
+      "structured_summary": {
+        "chinese_title": "UserArena：评估长时购物代理互动用户模拟基准",
+        "chinese_summary": "UserArena 提供了一个包含 64,729 个会话轨迹的真实电商互动基准，支持多层级评估。",
+        "pain_point": "缺乏长时、细粒度的真实用户轨迹和评价方法。",
+        "core_value": "提供大规模真实用户轨迹，支持多层级评估和离线验证。",
+        "technical_architecture": "包含互动环境和轨迹级意图驱动的模拟方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅限于电商领域。",
+        "key_contributions": [
+          "构建大规模真实用户轨迹基准",
+          "提出 On-Policy Trajectory Distillation 方法",
+          "支持多层级评估"
+        ],
+        "application_scenarios": [
+          "购物代理评估",
+          "个性化推荐系统评估"
+        ],
+        "technical_highlights": [
+          "大规模真实用户轨迹",
+          "多层级评估框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.31162",
+      "source": "huggingface",
+      "title": "HiSTEVE 1.0: Harnessing Human-Interface VLA Agents for Open-World Games",
+      "authors": [
+        "Zecong Tang",
+        "Zian Guan",
+        "Yuncheng Guo",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Bo Dai"
+      ],
+      "abstract": "Building virtual embodied agents that operate in open-ended games like human players is a long-standing goal requiring both long-horizon autonomy and reliable native-interface control. As a procedurally generated open world, Minecraft provides a natural testbed for studying the integration of these capabilities. Existing agents typically provide either native visuomotor control without long-horizon autonomy or high-level planning executed through environment APIs or predefined skills. To bridge this gap, we propose HiSTEVE, a hierarchical VLA agent with a capability-aware agent harness. At the orchestration level, we equip the harness with structured memory for tracking progress and a VLM planner for selecting subtasks within the VLA's capabilities. To reliably determine subtask completion, we further introduce a policy-coupled task completion state detector that conditions on VLA policy context to signal candidate completion. At the control level, a single VLA executes all subtasks with vision-only perception and native keyboard-and-mouse actions. To mitigate interference between heterogeneous GUI and non-GUI interactions, we introduce regime-specific RMSNorm branches and separate mouse-movement token embeddings. We also train the VLA through world knowledge injection, imitation learning, and reinforcement learning with environment feedback to improve reliability and recovery. HiSTEVE achieves state-of-the-art atomic-task performance, scoring 85.0% on MineStudio Bench and a 37.4% average success rate on OpenHA, while also completing long-horizon tasks such as crafting an iron pickaxe from scratch like human players.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.31162",
+      "pdf_url": "https://arxiv.org/pdf/2610.31162",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.31162",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 38,
+      "hot_score": 380,
+      "structured_summary": {
+        "chinese_title": "HiSTEVE 1.0：利用人机接口VLA代理在开放世界游戏中实现自主操作",
+        "chinese_summary": "提出HiSTEVE，一种具备能力感知的层次化VLA代理，结合结构化记忆和VLM规划器，实现开放世界游戏中的长期自主操作和可靠的人机接口控制。",
+        "pain_point": "现有代理要么缺乏长期自主操作，要么依赖环境API或预定义技能进行高阶规划。",
+        "core_value": "通过结合结构化记忆和VLM规划器，实现开放世界游戏中的长期自主操作和可靠的人机接口控制。",
+        "technical_architecture": "采用层次化架构，结合结构化记忆和VLM规划器，以及政策耦合的任务完成状态检测器。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能涉及更复杂的游戏环境和更广泛的代理能力。",
+        "key_contributions": [
+          "提出HiSTEVE架构，结合结构化记忆和VLM规划器",
+          "引入政策耦合的任务完成状态检测器",
+          "实现开放世界游戏中的长期自主操作和可靠的人机接口控制"
+        ],
+        "application_scenarios": [
+          "开放世界游戏中的自主操作",
+          "复杂环境下的长期任务执行"
+        ],
+        "technical_highlights": [
+          "结合结构化记忆和VLM规划器",
+          "政策耦合的任务完成状态检测器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.32253",
+      "source": "huggingface",
+      "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
+      "authors": [
+        "Zimu Wang",
+        "Xiaobo Wang",
+        "Siyu Ye",
+        "Jiaqi Li",
+        "Silin Chen",
+        "Yuling Shi",
+        "Ruobing Wang",
+        "Jingjing Zhang",
+        "Chaofan Wang",
+        "Kai Wu",
+        "Mengnan Qi",
+        "Kai Cai",
+        "Xiaodong Gu",
+        "Zilong Zheng"
+      ],
+      "abstract": "Agent-evolution methods use execution feedback to improve prompts, skills, tools, and orchestration, but their implementations often rebuild the same experimental machinery. We present RSIHub, an open-source framework for building, comparing, and extending these methods on shared infrastructure. Recipes compose reusable operators and declare mutable resources; RSIHub supplies execution, evaluation, recovery, and lineage. Researchers can focus on evolution policy while evaluation stays outside the mutable surface and results remain tied to candidates and evaluation conditions. We instantiate AHE, Hyperagents, A-Evolve, and GEPA without modifying the framework core, keeping method-specific logic in recipes and operators. We evaluate them with MiniSWE and Codex on Terminal Bench 2 and τ^3 Banking under fixed model and evaluator configurations. The largest observed overall pass@1 gain is 13.5 percentage points, while method rankings vary across settings and optimization gains do not always transfer to held-out tasks. RSIHub provides a common protocol for comparing evolution policies, inspectable candidate histories, and reusable components for developing new methods.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.32253",
+      "pdf_url": "https://arxiv.org/pdf/2610.32253",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.32253",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": {
+        "chinese_title": "RSIHub：一种可组合的代理进化方法框架",
+        "chinese_summary": "提供了一个可组合的框架，用于构建、比较和扩展代理进化方法。",
+        "pain_point": "代理进化方法的实现往往需要重新构建相同的实验工具。",
+        "core_value": "提供了一个通用协议，用于比较进化策略，并具有可重用组件。",
+        "technical_architecture": "使用可组合的框架和可重用的操作符来构建代理进化方法。",
+        "quantitative_results": "在不同任务上观察到的最大整体通过率提升为13.5个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "优化增益不一定转移到新的任务上。",
+        "key_contributions": [
+          "提供了一个通用框架",
+          "支持多种代理进化方法",
+          "具有可重用的组件"
+        ],
+        "application_scenarios": [
+          "代理进化方法的研究",
+          "自动化技能和工具的改进"
+        ],
+        "technical_highlights": [
+          "可组合的操作符",
+          "可重用的组件"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.32965",
+      "source": "huggingface",
+      "title": "RynnUnify: Towards Unified Embodied Brain",
+      "authors": [
+        "Minghao Zhu",
+        "Bohan Hou",
+        "Kun Xiang",
+        "Zixuan Wang",
+        "Yinzhou Tang",
+        "Yifei Yang",
+        "Zhikai Wang",
+        "Tianyi Zhang",
+        "Kehan Li",
+        "Haoyu Zhao",
+        "Siteng Huang",
+        "Leigang Qu",
+        "Sicong Leng",
+        "Dongchi Huang",
+        "Mingxiu Chen",
+        "Shijian Lu",
+        "Yue Wang",
+        "Xiaodan Liang",
+        "Zhenyu Zeng",
+        "Deli Zhao",
+        "Chengju Liu",
+        "Jianfei Yang",
+        "Xin Li"
+      ],
+      "abstract": "We introduce RynnUnify, a 16B unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. With capabilities spanning spatial reasoning, physical prediction, and grounding, RynnUnify connects an understanding of the physical world with visual anticipation of how it evolves across successive subtasks. Building on these capabilities, we further develop an agentic extension through reinforcement learning to selectively use video predictions for reasoning about unobserved states and interaction outcomes. We also develop a world-action extension of the full RynnUnify model, translating its understanding and prediction capabilities into robot control. To evaluate these capabilities, we introduce Rynn-VP and Rynn-GEU for long-horizon visual planning and anticipatory reasoning. Experiments show that RynnUnify achieves the highest average embodied understanding score among the evaluated unified multimodal models and improves the Rynn-VP overall score by 9.75 points over Cosmos 3 Nano. Its agentic extension improves the Rynn-GEU average by 6.0 points over direct reasoning, while the world-action extension achieves 51.5\\% success on 20 selected composite RoboCasa365 tasks and 46.7\\% average success across three real-robot tasks. Together, these results establish RynnUnify as a shared foundation for embodied understanding, visual planning, and robot control, taking a step toward a unified embodied brain.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.32965",
+      "pdf_url": "https://arxiv.org/pdf/2610.32965",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.32965",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "RynnUnify：迈向统一的具身大脑",
+        "chinese_summary": "RynnUnify 是一个 16B 统一具身模型，结合了强大的具身理解和长时视觉规划。",
+        "pain_point": "现有模型在具身理解和长时视觉规划方面存在局限。",
+        "core_value": "通过视频-语言推理实现具身理解与视觉预见，提升机器人控制能力。",
+        "technical_architecture": "采用视频-语言推理架构，结合空间推理、物理预测和语义接地。",
+        "quantitative_results": "在评估的统一多模态模型中，RynnUnify 的平均具身理解得分最高。",
+        "competitors": "与 Cosmos 3 Nano 对比，RynnUnify 在 Rynn-VP 中提高了 9.75 分。",
+        "limitations": "未来需要进一步研究如何更好地处理未观察状态。",
+        "key_contributions": [
+          "结合视频-语言推理实现具身理解与视觉预见",
+          "通过强化学习开发了代理扩展",
+          "将理解与预测能力转化为机器人控制"
+        ],
+        "application_scenarios": [
+          "机器人控制",
+          "长时视觉规划"
+        ],
+        "technical_highlights": [
+          "采用视频-语言推理架构",
+          "开发了代理扩展和世界-行动扩展"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.27103",
+      "source": "huggingface",
+      "title": "Omni-Woodpecker: Hallucination Correction via Evidence-Prior Rebalancing for Omni LLMs",
+      "authors": [
+        "Zijian Liu",
+        "Chaoyou Fu",
+        "Yan Yang",
+        "Caifeng Shan",
+        "Ran He"
+      ],
+      "abstract": "Recent Omni LLMs (OLLMs) have demonstrated remarkable capabilities in joint audio-visual reasoning, yet cross-modal hallucinations remain a major challenge. Existing mitigation methods mainly operate at the output level, overlooking the entanglement of grounding evidence and learned priors within fused representations. To address this issue, we propose Omni-Woodpecker (OWP), a training-free framework that shifts hallucination mitigation from output-level manipulation to conflict-conditioned representation rebalancing. Specifically, OWP first identifies cross-modal conflicts from complementary modality-specific views. It then employs orthogonal decomposition to separate grounding evidence from competing priors within the hidden states. Finally, OWP adaptively rebalances fused representations by suppressing misleading priors and restoring ignored evidence before decoding. Extensive experiments demonstrate the effectiveness and strong cross-architecture generalization of OWP. Using Qwen2.5-Omni-7B as the backbone, OWP improves performance by 12.9 and 8.6 points on CMM and AVHBench, respectively, while consistently achieving gains of 0.67-2.25 points across four general OLLM reasoning benchmarks. Furthermore, OWP generalizes effectively to VideoLLaMA2-AV, improving performance by 4.6 and 3.9 points on the same benchmarks. Code is publicly available at https://github.com/ZiiJianLiu/Omni-Woodpecker",
+      "published_date": "2026-10-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.27103",
+      "pdf_url": "https://arxiv.org/pdf/2610.27103",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.27103",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "Omni-Woodpecker: 通过证据先验再平衡纠正幻觉的全领域LLM",
+        "chinese_summary": "通过证据先验再平衡纠正全领域LLM的跨模态幻觉",
+        "pain_point": "全领域LLM在跨模态推理中存在幻觉问题，现有方法主要在输出层面处理，忽视了融合表示中的证据和先验关系。",
+        "core_value": "提出Omni-Woodpecker框架，通过冲突条件下的表示再平衡来纠正幻觉，提升全领域LLM的性能。",
+        "technical_architecture": "采用互补模态特定视图识别冲突，正交分解分离证据和先验，适应性再平衡融合表示。",
+        "quantitative_results": "在Qwen2.5-Omni-7B上，Omni-Woodpecker分别提高CMM和AVHBench性能12.9和8.6点，且在四种通用OLLM推理中持续提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定模型上验证，未来需在更多模型上进行测试。",
+        "key_contributions": [
+          "提出冲突条件下的表示再平衡方法",
+          "提升全领域LLM的跨模态推理性能",
+          "无需训练的框架设计"
+        ],
+        "application_scenarios": [
+          "跨模态推理",
+          "全领域语言模型"
+        ],
+        "technical_highlights": [
+          "无需训练的框架",
+          "冲突条件下的表示再平衡"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.31931",
+      "source": "huggingface",
+      "title": "Every Weight Is a Path of Shared Discrete Decisions",
+      "authors": [
+        "Ammar Ali",
+        "Stamatis Lefkimmiatis"
+      ],
+      "abstract": "We introduce TWIG (Tree-structured Weights with Inherited Gates), a representation in which every weight of a neural network is the end of a path of small discrete decisions: a sign, a shift by a power of two, a zero gate, an index into a shared table. Weights that belong together share the upper part of their paths, and each decision is inherited by every weight below it, so it is stored once and applied once. This simple change has three consequences. Any trained network can be written as a TWIG, and when the decisions are powers of two its weight layers become circuits made almost entirely of wires and adders, suited to chips whose weights are fixed at fabrication. Pruning, quantization, low-rank factorization, codebooks and weight sharing become edits of one object, so a single optimizer can choose among all of them for a whole network. And choosing the decisions is the ground-state problem of a higher-order Boltzmann machine whose interactions follow the paths of the tree, the problem class that annealers and quantum optimizers are built to solve. Today these questions are handled apart: each compression method brings its own format and solver, a circuit with fixed weights needs a dedicated constant multiplier for every weight, and discrete solvers reach only narrow subproblems such as rounding. Weight formats have long been moving toward shared decisions, through group scales, shared exponents, microexponents and sparse weights; TWIG takes this trend to its end, and every common format is a shallow TWIG at no extra cost. On five weight matrices of a large language model, a flat tree whose signed power-of-two terms are chosen per weight for circuit cost, with no group scales, needs 9--15\\% fewer additions than GPTQ at equal layer error at 3- and 4-bit accuracy on typical matrices, and 20--55\\% fewer on matrices with strong outliers.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.31931",
+      "pdf_url": "https://arxiv.org/pdf/2610.31931",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.31931",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": {
+        "chinese_title": "每权重皆为共享离散决策路径",
+        "chinese_summary": "提出TWIG表示法，使神经网络权重成为共享离散决策路径的终点。",
+        "pain_point": "现有压缩和量化方法独立处理，缺乏统一框架。",
+        "core_value": "提供统一框架，简化权重压缩、量化等操作。",
+        "technical_architecture": "基于树结构的权重表示法，共享路径上的决策。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于特定类型的权重。",
+        "key_contributions": [
+          "提出TWIG表示法",
+          "统一权重压缩、量化等操作",
+          "与优化器结合解决复杂问题"
+        ],
+        "application_scenarios": [
+          "神经网络压缩",
+          "硬件适配"
+        ],
+        "technical_highlights": [
+          "路径共享的权重表示",
+          "与优化器兼容"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.31066",
+      "source": "huggingface",
+      "title": "Dual Exam: Controlled Evaluation of Multimodal Agents and World Models",
+      "authors": [
+        "Zhefan Rao",
+        "Meng Chu",
+        "Xuan Zhang",
+        "Jingfan Chen",
+        "Guohao Cai",
+        "Runyi Li",
+        "Shiyi Du",
+        "Ning Lu",
+        "Xu Huang",
+        "Zhixuan Chen",
+        "Feng Nie",
+        "Harold Haodong Chen",
+        "Hanwen Wang",
+        "Wen-Jie Shu",
+        "Yajing Bai",
+        "Xianfeng Wu",
+        "Xuanhua He",
+        "Shuhan Guo",
+        "Ziyue Ma",
+        "Ruichuan An",
+        "Long Bai",
+        "Miaosen Chai",
+        "Wenhao Chai",
+        "Jingye Chen",
+        "Qi Chen",
+        "Xuhang Chen",
+        "Wei Chow",
+        "Minghao Fu",
+        "Yunhao Gou",
+        "Haokun Gui",
+        "Dong Huang",
+        "Wei Huang",
+        "Zi Cheng Huang",
+        "Haibo Jin",
+        "Lingdong Kong",
+        "Leung Chun Ho",
+        "Tianqin Li",
+        "Yanheng Li",
+        "Jiayuan Liu",
+        "Jiyang Liu",
+        "Mingyu Liu",
+        "Shaoteng Liu",
+        "Xiaocheng Lu",
+        "Yawen Luo",
+        "Zeyu Qin",
+        "Tiancheng Shen",
+        "Yueqi Song",
+        "Zhaolong Su",
+        "Hengkai Tan",
+        "Tianhao Tang",
+        "Yiran Tao",
+        "Juncheng Wang",
+        "Qinghe Wang",
+        "Shangshang Wang",
+        "Yingying Wang",
+        "Fang Wu",
+        "Tiange Xiang",
+        "Qiushi Yang",
+        "Weicai Ye",
+        "Weichen Yu",
+        "Jiarui Zhang",
+        "Jize Zhang",
+        "Liuzhou Zhang",
+        "Renrui Zhang",
+        "Sheng Zhang",
+        "Wenhu Zhang",
+        "Junru Zhao",
+        "Lingting Zhu",
+        "Yuxin Zuo",
+        "Yutong Bai",
+        "Long Chen",
+        "Yang Deng",
+        "Ziqi Huang",
+        "Yeying Jin",
+        "Weijia Li",
+        "Kevin Qinghong Lin",
+        "Quande Liu",
+        "See-Kiong Ng",
+        "Hongliang Ren",
+        "Hongru Wang",
+        "Shujun Wang",
+        "Qifeng Chen",
+        "Haoxuan Che"
+      ],
+      "abstract": "World Models (WMs) can support Multimodal Agents (MAs) through simulated experience, while Agent trajectories can inform World Model refinement. Evaluating this interaction requires separate evidence about action selection and state evolution. We introduce Dual Exam, which tests Agents under fixed environment response mechanisms and World Models under fixed action interventions across physical, digital, social, and scientific domains. The Agent track compares 10 configurations on 1,088 items in 15 reporting categories. The World Model track contains 400 cases across eight scenarios; 15 configurations have full coverage and one covers six scenarios. GPT 6 Astra leads the case-weighted Agent Index at 31.3, and GPT-Image-2 leads the full-coverage WM Overall at 21.7. These scores use different tasks and metrics and are not directly comparable. A 150-case pilot of one coupled pairing records zero task successes and motivates component-level diagnosis. Results reveal uneven task performance and failures to preserve task-relevant state. Their value for predicting coupled success or sustained reciprocal learning remains to be established.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.31066",
+      "pdf_url": "https://arxiv.org/pdf/2610.31066",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.31066",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "Dual Exam：控制评估多模态代理和世界模型",
+        "chinese_summary": "Dual Exam 通过固定环境响应机制和行动干预测试多模态代理和世界模型。",
+        "pain_point": "缺乏评估多模态代理和世界模型交互的有效方法。",
+        "core_value": "提供了一种新的评估方法，能够全面测试代理和世界模型。",
+        "technical_architecture": "采用固定环境响应机制和行动干预进行评估。",
+        "quantitative_results": "GPT 6 Astra 在代理指数中领先，GPT-Image-2 在世界模型中领先。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究其预测耦合成功或持续互惠学习的价值。",
+        "key_contributions": [
+          "引入了 Dual Exam 评估方法",
+          "全面测试了代理和世界模型",
+          "揭示了任务性能的不均衡"
+        ],
+        "application_scenarios": [
+          "物理领域",
+          "数字领域",
+          "社会领域",
+          "科学领域"
+        ],
+        "technical_highlights": [
+          "固定环境响应机制",
+          "行动干预测试"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.31734",
+      "source": "huggingface",
+      "title": "DirCast: Live Esports Directing and Commentary with a Single Streaming Video-Language Model",
+      "authors": [
+        "Zixian Gao",
+        "Lixin Xiu",
+        "Penghao Luo",
+        "Xiangcheng Cao",
+        "Ziqi Cai",
+        "Zhen Li",
+        "Erwin Wu",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "A live esports broadcast needs a director who chooses which camera goes on air and a caster who talks over that choice, every second and without knowing what comes next. Streaming video language models have learned to commentate, but only over a broadcast that a human director has already produced. We study live broadcast production, in which a model receives the raw camera of every player and must both direct and commentate from the past alone. We present DirCast, a single streaming video language model that does both. Every second it scans all cameras at low resolution, decides with a hold-or-switch director whether and where to cut, and reads the chosen camera at high resolution before it speaks. Its context keeps what went on air and what was said and lets the other views expire, which bounds the cost of a stream of any length. We build a dataset of 27 professional Dota 2 matches with a camera for every hero, the human director's choices and the casters' commentary. DirCast directs better than rule-based and zero-shot directors including GPT-5, and its commentary wins 29.2 percent of comparisons against GPT-4o under the Proact-VL protocol, against 19.4 percent for the strongest of eleven streaming commentators that watch the human broadcast.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.31734",
+      "pdf_url": "https://arxiv.org/pdf/2610.31734",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.31734",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 16,
+      "hot_score": 160,
+      "structured_summary": {
+        "chinese_title": "DirCast：基于单个流媒体视频语言模型的实时电竞直播指导与解说",
+        "chinese_summary": "DirCast 是一个能够同时进行实时直播指导和解说的单一流媒体视频语言模型。",
+        "pain_point": "实时电竞直播需要实时指导和解说，但现有模型只能基于人类导演的预处理内容进行解说。",
+        "core_value": "DirCast 能够自主选择摄像头并实时解说，解决了现有模型无法实时处理的问题。",
+        "technical_architecture": "采用单一流媒体视频语言模型，结合低分辨率扫描和高分辨率读取技术。",
+        "quantitative_results": "DirCast 的指导效果优于规则基础和零样本导演，解说效果在 Proact-VL 协议下优于 GPT-4o。",
+        "competitors": "对比了 GPT-5、GPT-4o 等模型。",
+        "limitations": "数据集仅包含 Dota 2 游戏，未来需要扩展到其他游戏。",
+        "key_contributions": [
+          "提出了能够同时进行实时直播指导和解说的单一流媒体视频语言模型",
+          "展示了模型在指导和解说上的优越性能"
+        ],
+        "application_scenarios": [
+          "电竞赛事直播",
+          "游戏直播"
+        ],
+        "technical_highlights": [
+          "结合低分辨率扫描和高分辨率读取技术",
+          "能够自主选择摄像头并实时解说"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.32770",
+      "source": "huggingface",
+      "title": "On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models",
+      "authors": [
+        "Leon Sick",
+        "Lukas Hoyer",
+        "Yannick Strümpler",
+        "Christian Reisswig",
+        "Timo Ropinski",
+        "Federico Tombari"
+      ],
+      "abstract": "On-policy self-distillation enables post-training foundation models without relying on stronger external teachers. However, existing approaches rely on ground-truth question-answer pairs, human-curated problem sets, or other supervised signals. In this work, we reformulate on-policy self-distillation as a self-training framework, driven by self-generated question-answer pairs and privileged reasoning demonstrations. We push supervision to the limit: guided solely by coarse, high-level topic descriptions, the model synthesizes its own curriculum of queries and privileged reasoning traces without access to any human-curated prompts or answers. We find that self-distillation on fully synthetic privileged information enables a model to improve across multiple domains while retaining its capabilities on domains it is not self-trained on. We demonstrate the generality of this framework across text and multimodal domains, achieving consistent self-improvement on standard language benchmarks and Visual Question Answering. Our findings demonstrate that foundation models possess rich latent capabilities that can be amplified without external task supervision or curated problem distributions.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.32770",
+      "pdf_url": "https://arxiv.org/pdf/2610.32770",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.32770",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "基于策略的自我训练：大型语言模型的数据无关自我改进",
+        "chinese_summary": "通过自我生成的问题-答案对和优先级推理演示，模型在无监督情况下自我提升。",
+        "pain_point": "现有方法依赖于人工标注的数据，限制了模型的自我改进能力。",
+        "core_value": "无需任何人工标注数据，模型能够自我生成数据进行自我提升。",
+        "technical_architecture": "通过自我生成的问答对和优先级推理演示，构建自我训练框架。",
+        "quantitative_results": "在标准语言和视觉问答基准上实现一致的自我改进。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在部分领域展示了自我改进效果。",
+        "key_contributions": [
+          "提出了基于策略的自我训练框架",
+          "无需人工标注数据即可实现自我提升",
+          "展示了模型的丰富潜在能力"
+        ],
+        "application_scenarios": [
+          "自然语言处理",
+          "多模态领域"
+        ],
+        "technical_highlights": [
+          "完全基于合成优先级信息进行自我提升",
+          "无需任何人工提示或答案"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

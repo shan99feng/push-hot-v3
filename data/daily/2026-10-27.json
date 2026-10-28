@@ -1,0 +1,540 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-28T02:04:29.415654+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.33568",
+      "source": "huggingface",
+      "title": "Trajectory2Gym: Decision-Grounded Compositional Interaction Synthesis for Tool-Use Agents",
+      "authors": [
+        "Yihao Hu",
+        "Zhihao Wen",
+        "Yitong Lin",
+        "Siyuan Lu",
+        "Pan Wang",
+        "Wei Wu",
+        "Jiang-Ming Yang",
+        "Tao Lin"
+      ],
+      "abstract": "Successful tool-use trajectories are not necessarily useful supervision. Even successful interactions may underrepresent multi-step dependencies or contain actions that are unjustified by the information visible to the agent at decision time. We identify two coupled requirements for effective trajectory supervision: compositional coverage, so that important observation-action dependencies are represented, and decision grounding, so that each supervised action is supported by the learner-visible interaction history. We introduce Trajectory2Gym, which constructs executable interactions around under-supported compositional structures and derives supervision only from grounded decisions in their realized executions. Structural-support selection allocates the resulting experience, while parent-normalized supervised fine-tuning preserves the semantic interaction as the unit of training weight. This reframes trajectory generation as the deliberate construction of learnable interaction experience, rather than the collection of successful trajectories. Across five Qwen3 scales, Trajectory2Gym improves Tau1, Tau2, and BFCL at every tested scale, increasing the equal-weight three-benchmark mean by 16.9-29.8 percentage points. The gains are strongest in stateful and multi-turn interaction, where later decisions depend on earlier observations and feedback. Our results suggest that scaling tool-use agents depends not only on collecting more successful trajectories, but on constructing interactions whose dependencies are represented and whose decisions are learnable from the agent's visible history.",
+      "published_date": "2026-10-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.33568",
+      "pdf_url": "https://arxiv.org/pdf/2610.33568",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.33568",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 337,
+      "hot_score": 3370,
+      "structured_summary": {
+        "chinese_title": "Trajectory2Gym: 基于决策的工具使用代理组成交互合成",
+        "chinese_summary": "通过决策支持和决策接地生成可执行交互，提高多步依赖覆盖和监督有效性。",
+        "pain_point": "现有轨迹监督可能忽略重要观察-动作依赖，或包含不合理的动作。",
+        "core_value": "通过决策支持和决策接地，有效覆盖多步依赖并提供合理的监督。",
+        "technical_architecture": "采用Trajectory2Gym框架，基于决策支持和决策接地生成可执行交互。",
+        "quantitative_results": "在五个Qwen3规模上，Trajectory2Gym在Tau1、Tau2和BFCL上均优于基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多复杂场景的应用。",
+        "key_contributions": [
+          "提出决策支持和决策接地的概念",
+          "设计Trajectory2Gym框架",
+          "提高多步依赖覆盖和监督有效性"
+        ],
+        "application_scenarios": [
+          "工具使用代理训练",
+          "交互合成"
+        ],
+        "technical_highlights": [
+          "基于决策支持和决策接地生成可执行交互",
+          "结构支持选择和父规范化监督微调"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.32285",
+      "source": "huggingface",
+      "title": "Trial by Trace: Benchmarking AI Agent Harnesses for Reliability and Failure Attribution",
+      "authors": [
+        "Zhiyong Cao",
+        "Hengjie Zhu",
+        "Yongxin Wang",
+        "Xuchen Li",
+        "Jintao Li",
+        "Shuxia Liu",
+        "Dunqiang Liu",
+        "Bo Wang",
+        "Kairan Zhang",
+        "Cong Lin",
+        "JiangDi Yu",
+        "Siyuan Liu",
+        "Sijia Yao",
+        "Yi-Liang Wei",
+        "Lingxu Ma",
+        "Aijia Wang",
+        "Anxin Chen",
+        "Zixian Wei",
+        "Xiang Ruan",
+        "Ruizhi Xu",
+        "Ruqian Shi",
+        "Baihua Xiao",
+        "Sicheng Zhou"
+      ],
+      "abstract": "LLM agents are increasingly used to solve real-world problems, and their effectiveness depends on both the underlying models and the harnesses that support their operation. However, most existing benchmarks focus on model capabilities and overall agent performance, with limited attention to the evaluation of agent harnesses. To address this gap, we introduce TraceTrial-Bench, which organizes harness reliability into seven components covering context, execution, governance, lifecycle, observability, tools, and verification. We construct 95 expert-level, mechanism-oriented tasks with executable or state-based ground truth to support semantically equivalent comparisons while preserving the native behavior of each harness. We design a Trajectory Tracing (TT) module to capture agent execution traces and introduce a two-layer evaluation framework that separately assesses agent performance and harness reliability. In addition, we design a Multi-source Evidence Acquisition (MEA) module to provide evidence from the agent context, harness, and execution environment for LLM-based evaluation, and develop a Failure Attribution (FA) module that uses explicit mechanism chains to support attribution at the run level. Across 4 harnesses, 9 models, and 95 tasks, our evaluation of 3,420 runs yields macro-averaged harness scores ranging from 59.8% to 72.0%, while 31.1% of runs achieve task success despite failing at least one harness criterion. TraceTrial-Bench provides an auditable and reproducible foundation for comparing agent harnesses, diagnosing their failures, and studying how harness design interacts with model behavior.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.32285",
+      "pdf_url": "https://arxiv.org/pdf/2610.32285",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.32285",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 267,
+      "hot_score": 2670,
+      "structured_summary": {
+        "chinese_title": "试炼之迹：评估AI代理框架的可靠性和故障归因基准",
+        "chinese_summary": "引入TraceTrial-Bench，评估代理框架的七个方面，提供专家级任务和多源证据收集模块。",
+        "pain_point": "现有基准主要关注模型能力和整体代理性能，忽视了代理框架的可靠性评估。",
+        "core_value": "提供全面的代理框架评估框架，涵盖执行、治理、生命周期等七个方面。",
+        "technical_architecture": "设计轨迹追踪模块和多源证据收集模块，构建专家级任务。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来可能需要扩展更多应用场景和任务类型。",
+        "key_contributions": [
+          "引入TraceTrial-Bench评估框架",
+          "涵盖代理框架的七个关键方面",
+          "设计多源证据收集模块"
+        ],
+        "application_scenarios": [
+          "评估和优化AI代理框架",
+          "提高代理系统的可靠性和故障归因能力"
+        ],
+        "technical_highlights": [
+          "专家级机制导向任务设计",
+          "多源证据收集支持LLM评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.34662",
+      "source": "huggingface",
+      "title": "StreamVibe: Proactive Video Agents for Evolving User Intent",
+      "authors": [
+        "Chengzhi Liu",
+        "Yuxiang Lai",
+        "Yuzhe Yang",
+        "Yanqing Liu",
+        "Jiheng Hou",
+        "Yue Cao",
+        "Haonan Wang",
+        "Ruixi Fan",
+        "Lan Wang",
+        "Sheng Liu",
+        "Songyou Peng",
+        "Yale Song",
+        "Kevin Qinghong Lin",
+        "Xin Eric Wang",
+        "Jui-Hsin Lai",
+        "Youbao Tang"
+      ],
+      "abstract": "Vision-language models are shifting from offline passive understanding toward online proactive interaction. However, prevailing methods largely rely on explicit requests while miss the implicit user intent (e.g., \"where should I click next?\" while a user navigate a website), meanwhile fail to update the state simultaneously as user requests might update continuously. These limitations make them less suited to intent-aware interaction in practical. To address these challenges, we introduce StreamVibe-Bench, a new benchmark serving as testbed for user intent interaction, with 4.1K evaluation samples and 85K training samples spanning explicit, implicit, and dynamic intents. Building on this benchmark, we develop StreamVibe-VL, a streaming proactive model that infers implicit user intents from continuous observations and dynamically tailors its interactions as these intents evolve. We further introduce StreamVibe-Harness, which maintains user intents as persistent states with a fleixble lifecycles via a hierarchical memory to track the latest user intent and environmental state. Our experiments reveal three key findings: (i) StreamVibe-VL preserves strong general video understanding while improving response timing and answer quality by 10.7% over other baselines; (ii) existing proactive models remain limited in understanding user intent and deciding when to respond, especially under implicit and dynamic intents; and (iii) StreamVibe-Harness further improves response consistency and adaptation over sustained interaction, resulting in a 12.3% gain in proactive interaction.",
+      "published_date": "2026-10-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.34662",
+      "pdf_url": "https://arxiv.org/pdf/2610.34662",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.34662",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 246,
+      "hot_score": 2460,
+      "structured_summary": {
+        "chinese_title": "StreamVibe: 适应用户不断变化意图的主动视频代理",
+        "chinese_summary": "StreamVibe-VL 通过持续观察推断隐式用户意图并动态调整交互。",
+        "pain_point": "现有方法依赖显式请求，忽略隐式意图，无法实时更新用户状态。",
+        "core_value": "StreamVibe 提供了新的基准和模型，支持实时更新的用户意图交互。",
+        "technical_architecture": "StreamVibe-VL 通过持续观察推断隐式意图并动态调整。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需进一步研究以适应更复杂的用户环境。",
+        "key_contributions": [
+          "提出了新的基准 StreamVibe-Bench",
+          "开发了 StreamVibe-VL 模型",
+          "引入了 StreamVibe-Harness 维护用户意图"
+        ],
+        "application_scenarios": [
+          "网站导航",
+          "视频推荐"
+        ],
+        "technical_highlights": [
+          "支持隐式意图推断",
+          "动态调整交互"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.34467",
+      "source": "huggingface",
+      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
+      "authors": [
+        "Ruhao Liu",
+        "Qi Li",
+        "Shizun Wang",
+        "Xinchao Wang"
+      ],
+      "abstract": "Multi-agent systems often rely on predefined collaboration structures, limiting their ability to adapt to diverse task requirements. We introduce DynaFlow, a framework that integrates free-form executable workflow synthesis into the action space of the main agent. The agent decides when collaboration is needed and generates task-specific programs that coordinate sub-agents through sequential or parallel execution, structured information exchange, and verification. Execution results and traces inform subsequent actions, enabling the agent to adapt collaboration as reasoning progresses. We train only the main agent through supervised fine-tuning on distilled trajectories, followed by refinement on examples filtered for unsupported premises, biased verification, and information-flow defects. All sub-agents remain fixed, separating orchestration learning from executor capability improvement. Across six benchmarks spanning mathematical reasoning, scientific question answering, and multi-hop retrieval, DynaFlow achieves 88.08% overall accuracy in Forced mode, outperforming the strongest evaluated baseline by 10.90 percentage points with the same Qwen3.5-27B backbone. Workflow analysis finds more explicit use, verification, and refinement of upstream outputs after training, highlighting cross-stage information flow as a key dimension of multi-agent orchestration.",
+      "published_date": "2026-10-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.34467",
+      "pdf_url": "https://arxiv.org/pdf/2610.34467",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.34467",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 189,
+      "hot_score": 1890,
+      "structured_summary": {
+        "chinese_title": "DynaFlow: 学习自由形式多智能体编排",
+        "chinese_summary": "DynaFlow 提高了多智能体系统的适应性，通过生成任务特定的程序实现智能体间的协调。",
+        "pain_point": "多智能体系统依赖预定义的协作结构，限制了其适应多样任务需求的能力。",
+        "core_value": "DynaFlow 通过学习自由形式的工作流合成，增强了智能体的协作灵活性。",
+        "technical_architecture": "DynaFlow 通过将自由形式的工作流合成纳入主要智能体的动作空间实现。",
+        "quantitative_results": "DynaFlow 在六个基准测试中达到 88.08% 的总体准确率，优于最强基线 10.90 个百分点。",
+        "competitors": "最强基线",
+        "limitations": "仅训练主要智能体，未涉及执行者能力的提升。",
+        "key_contributions": [
+          "引入自由形式的工作流合成",
+          "通过监督微调学习协作策略",
+          "分离编排学习与执行者能力提升"
+        ],
+        "application_scenarios": [
+          "数学推理",
+          "科学问题回答",
+          "多跳检索"
+        ],
+        "technical_highlights": [
+          "无需训练所有智能体",
+          "支持顺序或并行执行"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.33966",
+      "source": "huggingface",
+      "title": "InteractiveWorld: A Verifiable Human-Centric Environment for Building Better Interactive MLLM Assistants",
+      "authors": [
+        "Qinsi Wang",
+        "Wei Wen",
+        "Chong Zhou",
+        "Saksham Suri",
+        "Zechun Liu",
+        "Lemeng Wu",
+        "Hai Helen Li",
+        "Yiran Chen",
+        "Raghuraman Krishnamoorthi",
+        "Qi Qian"
+      ],
+      "abstract": "People have long dreamed of an assistant that is always there to guide them and remind what they forget, from new dishes to lost keys. Powered by multimodal large language models (MLLMs), egocentric AI assistants on wearable devices are bringing this dream within reach: they see what the user sees and give instructions for user's physical work when necessary. However, testing such assistance is challenging and usually requires real people. The expensive and rare real interaction data leaves a key question unanswered: Can today's MLLMs truly help people in physical world? To answer this question, we propose InteractiveWorld, the first verifiable environment for closed-loop interaction between human and AI assistant. Unlike existing robot-centric simulators, InteractiveWorld lets the assistant guide a human agent who observes the scene, understands instructions, and acts independently. It thus realistically simulates how AI assistant collaborates with human: the assistant instructs, the human acts, and the environment executes actions and updates what they see next. Building on it, we introduce InteractiveBench, the first dynamic benchmark for egocentric AI assistants, with 120 multi-turn tasks across six categories. In each task, the assistant guides the human in real time, and every instruction shapes the outcome, which is scored by verifiable, state-based rewards. Experiments with 12 frontier MLLMs show they are still far from reliable assistants. Even the strongest model, Claude Fable 5.1, achieves at most 20% and 25% on long-horizon Guidance and Planning tasks, respectively. Overall, our work offers a verifiable platform and a rigorous evaluation set, laying a solid foundation for research on interactive MLLM assistants that truly help people in the physical world.",
+      "published_date": "2026-10-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.33966",
+      "pdf_url": "https://arxiv.org/pdf/2610.33966",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.33966",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 114,
+      "hot_score": 1140,
+      "structured_summary": {
+        "chinese_title": "InteractiveWorld: 一种构建更好交互式MLLM助手的人本中心环境",
+        "chinese_summary": "InteractiveWorld 是首个验证人类与AI助手闭环交互的环境，通过动态基准测试评估了当前MLLMs在物理世界中的帮助能力。",
+        "pain_point": "现有机器人中心模拟器无法真实模拟人类与AI助手的协作，缺乏有效的验证手段。",
+        "core_value": "InteractiveWorld 提供了一个新的验证环境，能够更真实地模拟人类与AI助手的交互过程。",
+        "technical_architecture": "采用人类代理观察场景、理解指令并独立行动的方式，模拟真实交互。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于特定类型的egocentric AI助手，未来需扩展应用范围。",
+        "key_contributions": [
+          "提出了首个验证人类与AI助手交互的环境InteractiveWorld",
+          "引入了首个动态基准测试InteractiveBench"
+        ],
+        "application_scenarios": [
+          "评估MLLMs在物理世界中的帮助能力",
+          "测试和改进egocentric AI助手"
+        ],
+        "technical_highlights": [
+          "真实模拟人类与AI助手的交互过程",
+          "动态基准测试评估MLLMs性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.35845",
+      "source": "huggingface",
+      "title": "Work Agents: Systems, Capabilities, and Optimization",
+      "authors": [
+        "Zishan Xu",
+        "Enjun Du",
+        "Mingqi Gao",
+        "Cheng Yang",
+        "Junhao Shen",
+        "Zirong Chen",
+        "Zhiyuan Yao",
+        "Yifu Guo",
+        "Yuquan Lu",
+        "Jinyang Huang",
+        "Zhengxi Lu",
+        "Siyi Liu",
+        "Ziyu Zheng",
+        "Yongqi Zhang",
+        "Difan Zou",
+        "Weiwen Liu"
+      ],
+      "abstract": "As foundation models evolve from information generation to digital work execution, agents are increasingly capable of completing complex tasks across tools, applications, and workflows. However, existing research lacks a unified perspective on how agents reliably accomplish delegated work. To address this gap, we present a work-centric, system-level perspective that views work agents as systems combining foundation models and runtime harnesses to execute tasks in stateful workspaces and deliver verifiable outcomes. We introduce two complementary dimensions, work persistence and work openness, to characterize working conditions, and classify digital work into five forms according to task scope and organization. Building on this framework, we identify five core capability families required for reliable work execution and examine approaches to model optimization, harness optimization, and their joint optimization. We further analyze existing evaluation methods and metrics from the perspective of work outcomes. Finally, we discuss future research directions, including sustained work delegation, adaptation to open environments, and the interaction between work execution and capability improvement. This paper provides a unified framework for understanding, optimizing, and evaluating work agents, supporting the development of systems capable of delivering reliable, verifiable, and practically valuable work outcomes.",
+      "published_date": "2026-10-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.35845",
+      "pdf_url": "https://arxiv.org/pdf/2610.35845",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.35845",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 104,
+      "hot_score": 1040,
+      "structured_summary": {
+        "chinese_title": "工作代理：系统、能力和优化",
+        "chinese_summary": "提出了一种工作为中心的系统视角，将工作代理视为结合基础模型和运行时框架的系统，以执行任务并交付可验证结果。",
+        "pain_point": "现有研究缺乏统一视角来确保代理可靠地完成分配的工作。",
+        "core_value": "通过引入工作持久性和工作开放性两个维度，以及识别五种核心能力家族，为工作执行提供了新的框架。",
+        "technical_architecture": "提出了一种结合基础模型和运行时框架的工作代理系统。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需研究持续工作委托、开放环境适应性及执行与能力之间的交互。",
+        "key_contributions": [
+          "提出工作为中心的系统视角",
+          "引入工作持久性和开放性维度",
+          "识别五种核心能力家族"
+        ],
+        "application_scenarios": [
+          "跨工具、应用和工作流的复杂任务执行",
+          "数字工作自动化"
+        ],
+        "technical_highlights": [
+          "结合基础模型和运行时框架",
+          "分类数字工作形式"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.33956",
+      "source": "huggingface",
+      "title": "Continual Learning Exam: Benchmarking Long-Horizon RSI and Experiential Learning in LLM Agents",
+      "authors": [
+        "Haoyu Zhao",
+        "Sitian Tu",
+        "Yuxuan Huang",
+        "Huichi Zhou",
+        "Zhangyue Yin",
+        "Jiahao Huang",
+        "Jingyuan Xu",
+        "Tianmiao Shi",
+        "Jin Shi",
+        "Nianxi Zhang",
+        "Yangmiao Zhang",
+        "Zhuolang Chan",
+        "Huiyan Hu",
+        "Chenchao Sheng",
+        "Yaqing Luo",
+        "Yue Chen",
+        "Huaxiu Yao",
+        "Meng Fang",
+        "Jun Wang"
+      ],
+      "abstract": "Continual learning is the ability of LLM agents to improve over time by acquiring, refining, and applying knowledge from experience while retaining useful prior knowledge. It is essential for agents learning over long time horizons, yet current evaluations largely assess individual task performance rather than improvement through accumulated experience. We introduce Continual Learning Exam (CLE), a large-scale benchmark developed by 50+ domain experts to measure experience-driven improvement in realistic professional workflows. CLE comprises 120 human-authored tasks, each organised as a five-level ladder, yielding 600 levels spanning 89 professional roles across 12 occupational domains. Agents must pass each level to unlock the next, with later levels building on experience accumulated during earlier assignments. An evaluation agent assesses each submission against human-authored rubrics. We compare a single-submission setting with one that provides diagnostic feedback after failure and allows one revision. Across 17 harness-model configurations using frontier LLMs, feedback and revision yield a median completion gain of 5.3 percentage points. Yet the best-performing system clears only 47.7% of levels and completes all five levels in just 23.3% of tasks, highlighting the difficulty of sustained learning from experience for existing frontier LLMs. As such, the dataset can also be used to post-train LLMs to strengthen their continual learning capabilities.",
+      "published_date": "2026-10-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.33956",
+      "pdf_url": "https://arxiv.org/pdf/2610.33956",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.33956",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 49,
+      "hot_score": 490,
+      "structured_summary": {
+        "chinese_title": "持续学习考试：评估长期视角下的经验学习与知识保留",
+        "chinese_summary": "提出了一种新的基准测试CLE，用于评估语言模型在专业工作流程中的经验驱动改进。",
+        "pain_point": "当前评估主要关注单个任务表现，忽视了通过经验积累的进步。",
+        "core_value": "提供了一个大规模基准测试，评估长期学习中的经验驱动改进。",
+        "technical_architecture": "设计了一个包含120个人工编写任务的多层次评估体系。",
+        "quantitative_results": "反馈和修订提高了完成率5.3个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅使用了前沿的大规模语言模型。",
+        "key_contributions": [
+          "提出了新的基准测试CLE",
+          "评估了长期学习中的经验驱动改进",
+          "设计了多层次的任务评估体系"
+        ],
+        "application_scenarios": [
+          "专业工作流程中的持续学习评估",
+          "大规模语言模型的长期学习能力评估"
+        ],
+        "technical_highlights": [
+          "包含120个人工编写任务",
+          "多层次任务评估体系"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.33135",
+      "source": "huggingface",
+      "title": "WorldCast: World-Consistent Character Video Generation with Large-Angle Camera Control",
+      "authors": [
+        "Lei Cao",
+        "Yu Liu",
+        "Wenhua Liao",
+        "Peng Zhang",
+        "Fei Wang",
+        "Hao Zhang",
+        "Jiajun Le",
+        "Daiguo Zhou",
+        "Jian Luan",
+        "Jiayi Ma"
+      ],
+      "abstract": "Precise camera control is essential for cinematic character video generation, yet existing methods struggle to follow large-angle trajectories with combined rotation, translation, and radius variation from arbitrary initial azimuths. Such viewpoint changes also reveal character regions unseen in the initial frame, causing geometric distortions, appearance degradation, and identity drift. To systematically study these coupled challenges, we introduce CLACT, a large-scale Character-centric dataset and benchmark covering diverse Large-Angle Camera Trajectories, with accurate camera geometry and multi-view character observations for training and evaluation. We further propose WorldCast, a framework for world-consistent character video generation under diverse large-angle camera motions. Specifically, we back-project the initial frame into a 3D point cloud using estimated depth, align the point-cloud scale with the target camera trajectory, and render it along the trajectory to obtain explicit geometric guidance and coverage masks. To complement the incomplete character information, we introduce Geometry-Aligned Memory Attention (GAMA). Using relative camera poses estimated jointly from the initial frame and multi-view character anchors, we express anchor and target-view geometry in a common coordinate frame. GAMA uses this geometric alignment to guide the retrieval and injection of view-relevant character features during generation. Evaluations across diverse large-angle camera trajectories demonstrate accurate trajectory following while preserving character geometry, appearance, and identity.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.33135",
+      "pdf_url": "https://arxiv.org/pdf/2610.33135",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.33135",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 46,
+      "hot_score": 460,
+      "structured_summary": {
+        "chinese_title": "WorldCast：基于大角度相机控制的一致性角色视频生成",
+        "chinese_summary": "提出WorldCast框架，实现角色视频在复杂大角度相机运动下的几何一致生成。",
+        "pain_point": "现有方法难以处理结合旋转、平移和半径变化的复杂大角度相机轨迹。",
+        "core_value": "提供准确的3D点云重建和几何对齐机制，确保角色视频的一致性。",
+        "technical_architecture": "通过深度估计进行初始帧的反投影，调整点云尺度并沿轨迹渲染。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上进行了验证。",
+        "key_contributions": [
+          "提出CLACT数据集和基准",
+          "提出WorldCast框架"
+        ],
+        "application_scenarios": [
+          "电影制作",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "几何对齐记忆注意机制",
+          "3D点云重建"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.34415",
+      "source": "huggingface",
+      "title": "Spatial Audio Generation and Editing with Executable Plans and Self-Distilling Transfusion",
+      "authors": [
+        "Kam Man Wu",
+        "Yu Zhang",
+        "Pengjun Fang",
+        "Mingfei Chen",
+        "Weijia Chen",
+        "Zeyue Tian",
+        "Qifeng Chen"
+      ],
+      "abstract": "Spatial audio authoring coordinates source decisions with soundfield synthesis. For editing, plans specify what to change and retain, while reference audio supplies further acoustic detail. We present AMBIT, a unified framework for native First-Order Ambisonics (FOA) generation and editing with three connected contributions. First, a shared Transfusion backbone couples autoregressive planning with rectified-flow rendering through executable ScenePlans that specify source content, activity, and 3D trajectories. For editing, the plan describes the full target scene, including retained sources; contrastive features ground the requested change, while full reference latents supply residual acoustic detail for preservation. Second, an FOA-aware continuous VAE combines shared-decoder omnidirectional recovery, asymmetric grouped KL, and spatial covariance matching to preserve content and inter-channel structure. Third, joint Transfusion on-policy self-distillation (OPSD) refines planning on student-generated prefixes and rendering at sampling states reached under student plans, with target-conditioned teachers supervising both modes of the shared student. Evaluations across speech, music, and sound show improved generation content and spatial quality, acoustic fidelity during instruction-guided editing, and unedited-source preservation over the compared baselines. Project page: https://wjm-george.github.io/AMBIT/",
+      "published_date": "2026-10-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.34415",
+      "pdf_url": "https://arxiv.org/pdf/2610.34415",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.34415",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": {
+        "chinese_title": "基于可执行计划和自我蒸馏传输的三维音频生成与编辑",
+        "chinese_summary": "提出了一种统一框架，实现原生一阶球谐表示（FOA）生成与编辑。",
+        "pain_point": "现有方法在音频生成与编辑中难以同时保证内容和结构的保真度。",
+        "core_value": "通过可执行计划和自我蒸馏传输，实现音频内容和结构的精确控制。",
+        "technical_architecture": "采用共享传输骨干网络和FOA感知连续VAE，结合自监督学习方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索更复杂的场景应用。",
+        "key_contributions": [
+          "提出了一种基于可执行计划的音频生成与编辑框架",
+          "引入了FOA感知的连续VAE模型",
+          "实现了自监督学习下的传输模型优化"
+        ],
+        "application_scenarios": [
+          "三维音频内容创作",
+          "音频编辑与修改"
+        ],
+        "technical_highlights": [
+          "结合了计划与渲染的执行性",
+          "使用自监督学习进行模型优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.33413",
+      "source": "huggingface",
+      "title": "AV-FABLE: Audio-Visual Manipulation Forensics in Long-Form Videos",
+      "authors": [
+        "Yuesheng Huang",
+        "Hoi Fan Au",
+        "Jiaqi Hou",
+        "Ruicheng Zhang",
+        "Jiarui He",
+        "Haocheng Yang",
+        "Bin Hu",
+        "Kewei Zhang",
+        "Weijian Deng",
+        "Jun Zhou",
+        "Xiu Li"
+      ],
+      "abstract": "Localized AI manipulations in long-form videos often affect brief events within otherwise authentic content, making video-level classification insufficient for forensic analysis. Existing audio-visual deepfake benchmarks largely focus on short talking-head clips, while long-form temporal forensics remains predominantly visual. We introduce AV-FABLE, a dual-timeline benchmark for sparse manipulations in open-scene long-form audio-visual videos. AV-FABLE contains 16,650 pristine--manipulated twin pairs (998 hours) created with 27 editing configurations, with separate audio and visual timelines that enable modality-specific temporal localization and expose errors hidden by joint-timeline evaluation. On AV-FABLE, zero-shot prompting of audio-visual large language models (AV-LLMs) yields near-chance detection and poor temporal localization. In contrast, supervised readouts of their frozen perception features recover strong forensic signals, suggesting manipulation evidence is encoded in these representations but not effectively exposed through language outputs. Motivated by this observation, we propose NFSR(Native Forensics via Separated Readouts), which reads frozen AV-LLM features with separate audio and visual temporal decoders. NFSR achieves the best audio-visual localization performance in-domain and across all three out-of-distribution settings, including transfer to held-out videos from an external long-video forensic benchmark. AV-FABLE, code, and model weights will be publicly released.",
+      "published_date": "2026-10-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.33413",
+      "pdf_url": "https://arxiv.org/pdf/2610.33413",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.33413",
+      "category": "llm",
+      "tags": [],
+      "upvotes": 38,
+      "hot_score": 380,
+      "structured_summary": {
+        "chinese_title": "AV-FABLE: 长视频中的音频-视觉篡改取证",
+        "chinese_summary": "提出了AV-FABLE基准，用于开放场景长视频中的稀疏篡改，通过分离的音频和视觉时间线揭示错误。",
+        "pain_point": "现有基准主要关注短片段，长视频中的音频-视觉篡改取证仍以视觉为主，缺乏有效的取证方法。",
+        "core_value": "通过分离的音频和视觉时间线，揭示了现有方法未能捕捉到的篡改证据。",
+        "technical_architecture": "提出了NFSR方法，通过分离的感知特征读取揭示篡改证据。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于现有模型的感知特征，未来需探索更直接的篡改检测方法。",
+        "key_contributions": [
+          "提出了AV-FABLE基准",
+          "揭示了现有方法未能捕捉到的篡改证据",
+          "提出了NFSR方法"
+        ],
+        "application_scenarios": [
+          "长视频中的音频-视觉篡改取证",
+          "开放场景下的视频取证"
+        ],
+        "technical_highlights": [
+          "分离的音频和视觉时间线",
+          "通过感知特征读取揭示篡改证据"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

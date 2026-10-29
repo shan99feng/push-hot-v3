@@ -1,0 +1,601 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-29T02:09:47.914517+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.36077",
+      "source": "huggingface",
+      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "authors": [
+        "Weidong Tang",
+        "Ruiheng Wang",
+        "Jingxuan Zhang",
+        "Hexin Wang",
+        "Haoyuan Chen",
+        "Zhengfeiyang Zhang",
+        "Yixing Ma",
+        "Zichen Jiang",
+        "Ziyu Guo",
+        "Haodong Li",
+        "Zhengbo Jiao",
+        "Zhiqing Cui",
+        "Xinxiang Yin",
+        "Shuo Liang",
+        "Zhenglin Wan",
+        "Hongzhan Lin",
+        "Wangbo Zhao Kaipeng Zhang",
+        "Pengfei Zhou",
+        "Odin Zhang",
+        "Yang You"
+      ],
+      "abstract": "Multimodal intelligence can be viewed as human-guided co-evolution between worlds and agents through interaction. However, scaling this process faces two bottlenecks: constructing heterogeneous, verifiable environments is costly, and manual Harness iteration cannot keep pace with growing task diversity and complexity. A key insight is that tasks with different modalities and surface forms can share the same underlying capability requirements. We therefore introduce The Trinity, a recursive self-improvement framework coupling world generation with Harness evolution through three roles: Creator, Explorer, and Evolver. Drawing on verified execution trajectories, Evolver shifts the basis of task organization from surface categories to shared requirements, reorganizing the original task tree into a hierarchical capability tree. We introduce Capability-Driven Real2Sim2Real: for heterogeneous tasks at the same node, Creator abstracts their common requirements into simplified, verifiable simulated worlds for capability learning, while evaluation on original tasks measures transfer. Along this capability tree, Explorer progressively evolves reusable capability modules through selective inheritance, forming a Harness tree whose validated updates accumulate across iterations within a fixed topology. The resulting Harnesses specialize in different capabilities, motivating a Capability-Aware Harness Router that uses public task information to select compatible module configurations from the tree. Our evolved Harnesses improve mean performance by 34 points across 28 training benchmarks and 26 points across 18 unseen benchmarks, including two real-world embodied tasks.",
+      "published_date": "2026-10-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.36077",
+      "pdf_url": "https://arxiv.org/pdf/2610.36077",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.36077",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 531,
+      "hot_score": 5310,
+      "structured_summary": {
+        "chinese_title": "三位一体：驱动型递归自我改进框架",
+        "chinese_summary": "通过生成世界和Harness进化，实现多模态代理的递归自我改进。",
+        "pain_point": "构建异构且可验证的环境成本高，手动迭代难以跟上任务多样性和复杂性。",
+        "core_value": "通过共享能力要求，实现任务组织的重新构建，促进多模态代理的自我改进。",
+        "technical_architecture": "引入Creator、Explorer和Evolver三个角色，结合世界生成和Harness进化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证在更复杂任务中的有效性。",
+        "key_contributions": [
+          "提出三位一体框架",
+          "实现任务组织从表面分类到共享要求的转变",
+          "引入Capability-Driven Real2Sim2Real方法"
+        ],
+        "application_scenarios": [
+          "多模态代理训练",
+          "复杂任务环境生成"
+        ],
+        "technical_highlights": [
+          "通过模拟环境学习能力",
+          "逐步进化可复用能力模块"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.35013",
+      "source": "huggingface",
+      "title": "Multiscale Policy Optimization for Long-Horizon LLM Agents",
+      "authors": [
+        "Tao Ren",
+        "Hui Yang",
+        "Jia Deng",
+        "Tingyang Chen",
+        "Qiyao Wang",
+        "Shuo Tang",
+        "Ziyang Zeng",
+        "Yuhua Jiang",
+        "Guanghao Li",
+        "Huatong Song",
+        "Yining Li",
+        "Yifan Luo",
+        "Kunbao Ding",
+        "Feng Chang",
+        "Chuan Hao",
+        "Ran Tao",
+        "Bryan Dai",
+        "Jiafeng Liang",
+        "Jinyang Jiang"
+      ],
+      "abstract": "Long-horizon LLM agents interact with their environments through complete assistant turns while generating each action token by token. We observe that critic values vary primarily across turns, motivating optimization anchored at turns with finer credit allocation among tokens. We propose Multiscale Policy Optimization (MPO), combining Multiscale Advantage Estimation (MAE) and turn-level importance sampling to align credit assignment and policy updates at the turn scale. Extensive experiments across search, tool-use, and automation tasks with 4B and 30B-A3B models demonstrate consistent gains over strong RL baselines.",
+      "published_date": "2026-10-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.35013",
+      "pdf_url": "https://arxiv.org/pdf/2610.35013",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.35013",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 373,
+      "hot_score": 3730,
+      "structured_summary": {
+        "chinese_title": "多尺度策略优化在长时程LLM代理中的应用",
+        "chinese_summary": "提出Multiscale Policy Optimization (MPO)，结合多尺度优势估计和回合级重要性采样，提高策略更新与信用分配的一致性。",
+        "pain_point": "现有方法在长时程交互中，信用分配不精确，影响策略优化效果。",
+        "core_value": "通过多尺度优化策略，提高信用分配精度，提升长期任务表现。",
+        "technical_architecture": "结合多尺度优势估计和回合级重要性采样，优化策略更新。",
+        "quantitative_results": "在搜索、工具使用和自动化任务中，MPO 模型表现优于强 RL 基线。",
+        "competitors": "强 RL 基线",
+        "limitations": "仅在特定模型上进行了实验，未来需在更多模型上验证。",
+        "key_contributions": [
+          "提出多尺度策略优化方法",
+          "结合多尺度优势估计和回合级重要性采样",
+          "提高长期任务中的策略优化效果"
+        ],
+        "application_scenarios": [
+          "搜索任务",
+          "工具使用",
+          "自动化任务"
+        ],
+        "technical_highlights": [
+          "多尺度优化策略",
+          "提高信用分配精度"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.34283",
+      "source": "huggingface",
+      "title": "ChronoReplay: One Answer Interface Is Not Enough for Streaming Spatial Intelligence",
+      "authors": [
+        "Yihao Hu",
+        "Yitong Lin",
+        "Pan Wang",
+        "Zhihao Wen",
+        "Hang Wang",
+        "Yiwen Zhao",
+        "Deyuan Liu",
+        "Yutong Li",
+        "Mingda Wan",
+        "Yuchen Mao",
+        "Tao Lin"
+      ],
+      "abstract": "Training a spatial VLM to answer which side an object lies on does not require it to preserve the metric displacement that determines that answer, while supervision for a distance estimate may leave categorical relations largely unconstrained. When post-training emphasizes one readout, improvements can therefore concentrate on that interface while transfer to others remains weak or even degrades; we call this observed specialization interface lock-in. ChronoReplay addresses it by replaying heterogeneous spatial supervision as chronologically ordered episodes, retaining source-native targets, and balancing supervision across families. Under the same observation access, a single ChronoReplay checkpoint improves OVO-S-Bench, OST-Bench, and UCS-Bench together, including a 13.41-point gain on OST-Bench, and achieves the highest three-benchmark mean among the supervision settings compared here. Same-data controls further separate the ingredients of this transfer: answer serialization redistributes gains across OST and UCS, family-balanced learning improves over ordinary joint SFT and natural turn weighting, and chronological replay exceeds a shifted-order control by about 2.41 OST points across two paired seeds. Adaptive frame selection then changes evidence access while keeping the trained model fixed, providing an additional inference-time gain at lower visual cost. Streaming spatial performance depends on what distinctions supervision preserves, how heterogeneous histories are organized during learning, and what causal evidence inference makes available at test time.",
+      "published_date": "2026-10-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.34283",
+      "pdf_url": "https://arxiv.org/pdf/2610.34283",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.34283",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 346,
+      "hot_score": 3460,
+      "structured_summary": {
+        "chinese_title": "ChronoReplay: 一个回答接口不足以满足流式空间智能",
+        "chinese_summary": "ChronoReplay 通过按时间顺序回放多样的空间监督，提高了多种基准测试的表现。",
+        "pain_point": "现有方法在强调一个读出接口后，其他接口的表现会变弱甚至下降。",
+        "core_value": "ChronoReplay 通过时间顺序回放监督，实现了多接口的综合提升。",
+        "technical_architecture": "ChronoReplay 通过时间顺序回放监督，平衡不同类别监督。",
+        "quantitative_results": "ChronoReplay 在 OVO-S-Bench, OST-Bench 和 UCS-Bench 上均有所提升，特别是在 OST-Bench 上提升了 13.41 分。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多数据验证其在其他场景下的适用性。",
+        "key_contributions": [
+          "提出了接口锁死问题",
+          "设计了 ChronoReplay 方法",
+          "实现了多接口综合提升"
+        ],
+        "application_scenarios": [
+          "流式空间智能",
+          "多接口监督学习"
+        ],
+        "technical_highlights": [
+          "时间顺序回放监督",
+          "平衡不同类别监督"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.35864",
+      "source": "huggingface",
+      "title": "VibeVideoBench: Evaluating Multimodal Agents on Code-Driven Video Generation",
+      "authors": [
+        "Muxi Diao",
+        "Wenbin Xu",
+        "Lele Yang",
+        "Xuyang Ma",
+        "Yuzhe Chen",
+        "Jiankang Chen",
+        "Kaiyu Jiang",
+        "Changyi Liu",
+        "Haoyu Zhang",
+        "Hongyi Fu",
+        "Jianxiong Wang",
+        "Tianke Zhang",
+        "Haonan Fan",
+        "Yingxin Li",
+        "Bingyi Li",
+        "Xu Wang",
+        "Xuanyu Zheng",
+        "Bin Wen",
+        "Tingting Gao",
+        "Han Li",
+        "Wentao Zhang",
+        "Weiran Xu",
+        "Kongming Liang",
+        "Zhanyu Ma"
+      ],
+      "abstract": "Diffusion video models produce striking clips, but they cannot reliably render an exact formula, a correct chart, a rule-consistent game or narration synchronized to on-screen events. A different route is emerging: multimodal agents that write code to render every frame and synthesize every sound. We introduce VibeVideoBench, a benchmark for evaluating agents on code-driven video generation. Its 239 self-contained tasks in English and Chinese span 12 categories, from data stories and music-driven pieces to classroom lessons and paper explainers; each asks an agent, running in its native harness inside a sandbox with no image or video generation model, to deliver a finished MP4 with sound within one hour. Evaluation is hierarchical and evidence-based: program checks of the delivery spec, about 13k task-specific rubric checks traced to the requirements they enforce, and five quality dimensions anchored per task, scored by three VLM judge panels. Across nine frontier agent systems and 2,151 scored rollouts, GPT-6 Astra and Claude Opus 5.5 rank first and second with both the judges and human annotators, and the strongest system satisfies every core requirement on 76.3% of tasks. Delivery is a second axis: counting missing videos as zero changes the ranking, and three quarters of the lost videos are final renders that started too late, ran too slowly or never started, a failure of how agents plan their hour. Agents build their own rendering pipelines and inspect their own frames, yet how much they look does not predict quality. The judges' ranking of the systems closely matches blind human preferences.",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.35864",
+      "pdf_url": "https://arxiv.org/pdf/2610.35864",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.35864",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 172,
+      "hot_score": 1720,
+      "structured_summary": {
+        "chinese_title": "VibeVideoBench: 评估代码驱动视频生成的多模态代理",
+        "chinese_summary": "VibeVideoBench 是一个基准测试，用于评估多模态代理在代码驱动视频生成中的表现。",
+        "pain_point": "现有的扩散视频模型无法可靠地生成精确公式、正确图表、规则一致的游戏或与屏幕事件同步的叙述。",
+        "core_value": "提供了一个全面的基准测试，评估多模态代理在代码驱动视频生成中的能力。",
+        "technical_architecture": "代理在沙盒中运行，不使用图像或视频生成模型，生成一个包含声音的MP4。",
+        "quantitative_results": "GPT-6 Astra 和 Claude Opus 5.5 在评分中排名第一和第二。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多的任务和更广泛的代理系统进行评估。",
+        "key_contributions": [
+          "引入了一个全面的基准测试",
+          "评估多模态代理在代码驱动视频生成中的表现"
+        ],
+        "application_scenarios": [
+          "数据故事",
+          "音乐驱动的片段"
+        ],
+        "technical_highlights": [
+          "包含239个自包含任务",
+          "评分基于证据和层次结构"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.34073",
+      "source": "huggingface",
+      "title": "Memory Tax: Dissecting the Net Value of Agent Memory",
+      "authors": [
+        "Xuan He",
+        "Sining Zhoubian",
+        "Ruozhen Yang",
+        "Yuhao Wen",
+        "Zhineng Wang",
+        "Yuyang Hu",
+        "Ke Yang",
+        "Yuyu Zhang",
+        "Ping Nie",
+        "Jiawei Han",
+        "ChengXiang Zhai"
+      ],
+      "abstract": "Memory is increasingly used in long-horizon agents, yet the net value of building memory over direct retrieval from raw history remains largely unclear. Through a large-scale evaluation across multiple benchmarks and model backbones, we find many dedicated memory systems underperform naive RAG in many cases, indicating a negative net value. Taking RAG as a reference, we dissect the net value of memory into the gains and losses over direct retrieval, termed memory benefit and memory tax. These gains and losses arise because memory process changes how the raw information is organized and accessed. We view such changes as the double-edged deviations from the raw history. They are originally designed and introduced to benefit the task, for example by reorganizing facts or distilling preferences, but some may also remove or obscure evidence, giving rise to memory tax. Since memory benefit reflects the expected gains of its design, we then focus more on the overlooked memory tax, study how it arises from the system and evaluation side, and generalize the concept to more application scenarios of memory. We hope the notion of memory tax can provide a new lens and shift more attention from standalone performance to the net value of memory, informing more reliable memory designs and evaluations. We will open-source the code and results to the community. Project Page: https://hexuan21.github.io/MemoryTax/",
+      "published_date": "2026-10-25T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.34073",
+      "pdf_url": "https://arxiv.org/pdf/2610.34073",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.34073",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 139,
+      "hot_score": 1390,
+      "structured_summary": {
+        "chinese_title": "记忆税：剖析智能体记忆的净价值",
+        "chinese_summary": "提出记忆税的概念，重新审视智能体记忆的利弊。",
+        "pain_point": "智能体记忆的净价值不明确，难以评估其实际收益。",
+        "core_value": "通过量化分析，揭示记忆过程中的正负效应，提供新的视角。",
+        "technical_architecture": "将记忆过程分为记忆收益和记忆税，重新评估其价值。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于RAG模型进行分析，未来需扩展到更多模型。",
+        "key_contributions": [
+          "提出记忆税的概念",
+          "量化分析记忆过程中的正负效应",
+          "提供新的视角重新审视智能体记忆"
+        ],
+        "application_scenarios": [
+          "智能体记忆评估",
+          "记忆系统设计与优化"
+        ],
+        "technical_highlights": [
+          "将记忆过程分为记忆收益和记忆税",
+          "提供新的视角重新审视智能体记忆"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.37381",
+      "source": "huggingface",
+      "title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+      "authors": [
+        "Hanqing Wang",
+        "Zhaotian Cai",
+        "Ruichuan An",
+        "Bohan Zeng",
+        "Tao Zhang",
+        "Yilin Chen",
+        "Xu Jiang",
+        "Kaiquan Chen",
+        "Chongyang Wu",
+        "Haoran Li",
+        "Fan Yang",
+        "Mingan Lin",
+        "Wentao Zhang",
+        "Zenan Zhou",
+        "Youzheng Wu"
+      ],
+      "abstract": "Vision--Language--Action (VLA) models generate robot actions from visual observations and language instructions, but their understanding of physical dynamics remains limited. Video world models can capture scene dynamics, yet generating future videos introduces high latency into the control loop. We introduce PDRVLA, whose lightweight Physical Dynamics Module extracts physical tokens from vision--language features to condition action generation without online video generation. The module learns through direct prediction of future RGB, depth, and optical-flow features, with auxiliary supervision through a frozen pretrained video world model. Training relies entirely on publicly available data, expanded through human-to-robot synthesis, subtask annotation, and embodied chain-of-thought (ECoT) annotation. Across four simulation benchmarks, PDRVLA achieves success rates of 99.3% on LIBERO, 89.9% on LIBERO-Plus, 93.6% on RoboTwin~2.0, and 81.5% on SimplerEnv. Ablations show improved future prediction with world-model supervision and evaluate how subtask conditioning, future object-pose supervision, and ECoT training affect action success.",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.37381",
+      "pdf_url": "https://arxiv.org/pdf/2610.37381",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.37381",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 137,
+      "hot_score": 1370,
+      "structured_summary": {
+        "chinese_title": "PDRVLA：一种具有物理动力学表示的视觉-语言-动作模型",
+        "chinese_summary": "PDRVLA 提出了一种轻量级的物理动力学模块，通过直接预测未来 RGB、深度和光流特征来条件动作生成，无需在线视频生成。",
+        "pain_point": "现有 VLA 模型对物理动力学的理解有限，视频世界模型虽然能捕捉场景动态，但生成未来视频会引入高延迟。",
+        "core_value": "PDRVLA 提高了对物理动态的理解，减少了生成未来视频的延迟，提升了动作生成的成功率。",
+        "technical_architecture": "PDRVLA 通过直接预测未来 RGB、深度和光流特征来提取物理信息，无需在线视频生成。",
+        "quantitative_results": "在四个模拟基准上，PDRVLA 达到了 99.3% 的 LIBERO 成功率，89.9% 的 LIBERO-Plus 成功率，93.6% 的 RoboTwin~2.0 成功率，81.5% 的 SimplerEnv 成功率。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能需要进一步验证在真实环境中的表现。",
+        "key_contributions": [
+          "提出了轻量级的物理动力学模块",
+          "通过直接预测未来特征来条件动作生成",
+          "利用辅助监督提高未来预测准确性"
+        ],
+        "application_scenarios": [
+          "机器人动作生成",
+          "智能交互系统"
+        ],
+        "technical_highlights": [
+          "无需在线视频生成，减少延迟",
+          "通过直接预测未来特征提高预测准确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.36729",
+      "source": "huggingface",
+      "title": "Hy-Nomas: Towards Free-form Interactive World Generation",
+      "authors": [
+        "Qiaoling Chen",
+        "Jiaxiang Cheng",
+        "Xueqing Deng",
+        "Tiankai Hang",
+        "Ji Hou",
+        "Jiaqi Li",
+        "Yifan Liu",
+        "Tao Lu",
+        "Junshu Tang",
+        "Yu Tang",
+        "Yao Teng",
+        "Yu Tian",
+        "Heng Wang",
+        "Weizhi Wang",
+        "Xiyao Wang",
+        "Xilun Wu",
+        "Mingyu Yang",
+        "Yangbin Yu",
+        "Rui Zhao",
+        "Longjun Cao",
+        "Linghao Chen",
+        "Haoyi Duan",
+        "Jiaming Han",
+        "Mingji Han",
+        "Enhua Jiang",
+        "Shunkai Li",
+        "Yanzhe Liang",
+        "Qinwei Ma",
+        "Cong Wang",
+        "Lei Wang",
+        "Bing Wu",
+        "Ke Xing",
+        "Ray Ying",
+        "Zhentao Yu",
+        "Key Zhang",
+        "Yuan Zhou",
+        "Zhengguang Zhou",
+        "Kai Zou"
+      ],
+      "abstract": "Interactive world generation requires models to follow successive commands while preserving relevant history and action consequences. We present Hy-Nomas, a video world model with an 8B diffusion backbone that supports free-form text instructions and continuous camera control across multiple interaction turns. It generates variable-length segments conditioned on current inputs and cached history. Our central design aligns structured video captions with action-aware causal attention: descriptive context remains accessible across segments, while action instructions are restricted to their intended temporal windows. A vision-language Prompt Enhancer (PE) translates user requests and multimodal interaction histories into structured conditions for the next segment. A multi-stage curriculum progressively introduces causal generation, text interaction, camera control, and training on model-generated histories, followed by diffusion distillation. In human evaluation, Hy-Nomas shows superior performance over existing world models. We release model weights, code and benchmarks, together with a lightweight adaptation workflow, to support reproducible research on interactive world generation.",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.36729",
+      "pdf_url": "https://arxiv.org/pdf/2610.36729",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.36729",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 107,
+      "hot_score": 1070,
+      "structured_summary": {
+        "chinese_title": "Hy-Nomas: 向自由形式交互世界生成迈进",
+        "chinese_summary": "Hy-Nomas 支持自由文本指令和连续相机控制，生成可变长度的视频片段。",
+        "pain_point": "现有模型难以同时处理连续指令和保持历史信息一致性。",
+        "core_value": "通过结构化视频描述和动作感知因果注意力，实现交互式世界生成。",
+        "technical_architecture": "基于 8B 扩散模型，结合视觉-语言提示增强器和多阶段课程学习。",
+        "quantitative_results": "在人类评估中，Hy-Nomas 表现优于现有世界模型。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更复杂多变的交互场景。",
+        "key_contributions": [
+          "引入结构化视频描述和动作感知因果注意力机制",
+          "提出多阶段课程学习和扩散蒸馏方法"
+        ],
+        "application_scenarios": [
+          "虚拟现实和增强现实应用",
+          "游戏开发和模拟"
+        ],
+        "technical_highlights": [
+          "支持自由文本指令和连续相机控制",
+          "结合视觉-语言提示增强器进行多模态交互"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.32046",
+      "source": "huggingface",
+      "title": "Can Test-Time Memory Evolution Outperform Test-Time Training for Scientific Discovery?",
+      "authors": [
+        "Yepeng Liu",
+        "Shengmai Chen",
+        "Xuandong Zhao",
+        "Chengzhi Liu",
+        "Dawn Song",
+        "Xin Eric Wang",
+        "Yuheng Bu"
+      ],
+      "abstract": "Recent test-time training (TTT) frameworks have enabled open-weight large language models (LLMs) to outperform inference-only frameworks powered by frontier models on scientific discovery tasks. However, TTT introduces additional computational cost for online weight updates during the discovery process, making computational efficiency an important consideration when scaling to larger models. This motivates us to explore an efficient test-time adaptation method for scientific discovery. We introduce Test-Time Memory Evolution (TTME), a plug-and-play test-time adaptation method, as an alternative to TTT. TTME continually updates the external memory by distilling the experience to guide subsequent discovery without updating model weights. To have a clean comparison, we evaluate TTME and TTT under the same discovery framework, replacing only the test-time adaptation method. Our evaluation shows that TTME outperforms TTT on all five mathematical tasks, while reducing computational cost by 82.8-84.6% in FLOPs and 47.7-58.4% in runtime. These results establish TTME as an effective and computationally efficient alternative to TTT in the evaluated discovery settings.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.32046",
+      "pdf_url": "https://arxiv.org/pdf/2610.32046",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.32046",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 101,
+      "hot_score": 1010,
+      "structured_summary": {
+        "chinese_title": "测试时记忆进化能否在科学发现任务中超越测试时训练？",
+        "chinese_summary": "TTME在所有五个数学任务上优于TTT，同时降低82.8-84.6%的FLOPs和47.7-58.4%的运行时间。",
+        "pain_point": "测试时训练引入额外计算成本，影响大模型的计算效率。",
+        "core_value": "TTME提供了一种高效的记忆更新方法，无需更新模型权重即可进行测试时适应。",
+        "technical_architecture": "TTME通过不断更新外部记忆来指导后续发现，而无需更新模型权重。",
+        "quantitative_results": "TTME在所有五个数学任务上优于TTT，同时降低82.8-84.6%的FLOPs和47.7-58.4%的运行时间。",
+        "competitors": "TTT作为主要基线进行对比。",
+        "limitations": "未来需要在更多任务上验证TTME的有效性。",
+        "key_contributions": [
+          "提出了一种无需更新模型权重的测试时记忆进化方法",
+          "显著降低了计算成本并保持了良好的性能"
+        ],
+        "application_scenarios": [
+          "科学发现任务",
+          "需要高效计算资源的场景"
+        ],
+        "technical_highlights": [
+          "插件式设计，易于集成",
+          "通过经验蒸馏实现高效测试时适应"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.37662",
+      "source": "huggingface",
+      "title": "Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?",
+      "authors": [
+        "Jialv Zou",
+        "Xiaotong Li",
+        "Zhengrong Yue",
+        "Xu Huang",
+        "Yaxin Luo",
+        "Wenhao Yan",
+        "Haodong Li",
+        "Wenyu Liu",
+        "Xinggang Wang"
+      ],
+      "abstract": "Discrete visual tokens represent vision in a discrete form analogous to language, offering a native interface for multimodal modeling under a shared next-token prediction objective. However, quantization error is widely assumed to cause unavoidable semantic loss, fundamentally limiting the semantic fidelity of discrete visual tokens and positioning continuous visual representations as an intrinsic upper bound. Using multimodal understanding as a proxy for semantic fidelity, we revisit this assumption and find quantization error unreliable, as discrete representations with substantially larger errors can achieve better understanding. Instead, the effective bit budget of discrete indices emerges as a key determinant of downstream performance. However, existing quantizers eventually saturate as additional codebooks contribute progressively less semantic information. As one approach to alleviating this saturation, we introduce Factorized Vector Quantization, which quantizes complementary, fixed-dimensional views of the visual feature with symmetric parallel codebooks. It continues to improve at larger bit budgets, ultimately matching continuous visual representations in multimodal understanding. Trained on industrial-scale multimodal data, our model achieves state-of-the-art performance among discrete-representation models, outperforming UniAR and Emu3-Chat by 22.8% and 59.2%, respectively, on a nine-metric average. To our knowledge, it is also the first discrete-representation model competitive with strong continuous-representation models such as Qwen3-VL, including on fine-grained OCR tasks. We further identify the key principles and a practical recipe enabling this competitiveness. These results and insights support the potential of discrete visual representations to underpin large-scale native multimodal foundation models. Code and models are available at https://github.com/hustvl/FVQ",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.37662",
+      "pdf_url": "https://arxiv.org/pdf/2610.37662",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.37662",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 82,
+      "hot_score": 820,
+      "structured_summary": {
+        "chinese_title": "离散视觉标记能否作为视觉信号的语义无损表示？",
+        "chinese_summary": "离散视觉标记在语义理解上优于连续视觉表示。",
+        "pain_point": "离散视觉标记被认为存在不可避免的语义损失。",
+        "core_value": "量化误差不可靠，有效比特预算成为关键。",
+        "technical_architecture": "引入因子向量量化方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "现有量化器最终会饱和。",
+        "key_contributions": [
+          "重新评估了量化误差的可靠性",
+          "提出了因子向量量化方法"
+        ],
+        "application_scenarios": [
+          "多模态理解",
+          "视觉信号处理"
+        ],
+        "technical_highlights": [
+          "有效比特预算成为关键",
+          "因子向量量化持续改进"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.24520",
+      "source": "huggingface",
+      "title": "HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory",
+      "authors": [
+        "Junming Zhang",
+        "Rubin Wei",
+        "Xu Cheng",
+        "Hao Sun",
+        "Jiarui Wang",
+        "Ruoxi Cheng",
+        "Xiquan Wang",
+        "Peisong Wu",
+        "Mingsong Chen",
+        "Zhouhan Lin"
+      ],
+      "abstract": "In long-term interactions with large language model (LLM) agents, users reveal habits through their choices and actions. These habits capture implicit user information that agents must infer across conversations. However, individual observations may provide only partial evidence about a habit or when it applies. Retaining past interactions alone does not ensure that agents can infer habits and apply them appropriately. We introduce HABIT-Bench to evaluate how well agent memory systems infer habits from weak evidence and apply them to later requests. We construct synthetic user histories from task-oriented dialogue data and controlled habit graphs. The histories span hundreds of sessions across food, finance, software, and travel. Four-choice tasks assess agents' ability to infer user habits and apply them appropriately. They include temporary exceptions, changes in habits, and suggestions that users have not accepted. Sampled tasks undergo independent human review. We evaluate eight memory methods with Qwen3-235B-A22B and GLM-5.3-Flash. The best-performing memory method achieves 33.61\\% macro accuracy across the four domains. Performance remains limited even when annotated evidence is supplied directly. These results expose a persistent gap between access to past interactions and the ability to infer and appropriately use user habits.",
+      "published_date": "2026-10-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.24520",
+      "pdf_url": "https://arxiv.org/pdf/2610.24520",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.24520",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 79,
+      "hot_score": 790,
+      "structured_summary": {
+        "chinese_title": "HABIT-Bench: 评估长期弱证据下代理记忆中的习惯诱导",
+        "chinese_summary": "评估代理记忆系统从弱证据中推断习惯并应用于后续请求的能力。",
+        "pain_point": "代理仅保留过往交互无法准确推断和应用用户习惯。",
+        "core_value": "提供了一个新的基准来评估代理记忆系统在推断习惯方面的表现。",
+        "technical_architecture": "基于合成用户历史和控制习惯图构建基准。",
+        "quantitative_results": "最佳记忆方法在四个领域中实现了33.61%的宏准确率。",
+        "competitors": "暂无对比信息",
+        "limitations": "性能受限于标注证据的不足。",
+        "key_contributions": [
+          "提出了一个新的基准来评估习惯推断能力",
+          "使用合成数据和控制习惯图"
+        ],
+        "application_scenarios": [
+          "长期交互中的习惯推断",
+          "多领域对话系统"
+        ],
+        "technical_highlights": [
+          "多领域覆盖",
+          "包含临时例外和习惯变化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

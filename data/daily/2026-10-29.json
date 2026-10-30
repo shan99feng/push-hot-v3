@@ -1,0 +1,537 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-30T02:27:53.956390+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.32749",
+      "source": "huggingface",
+      "title": "Efficient Streaming Audio-Visual Target Speaker Extraction for Real-World Acoustic Scenes",
+      "authors": [
+        "Wendi Sang",
+        "Kai Li",
+        "Yifan Li",
+        "Jianqiang Huang",
+        "Xiaolin Hu"
+      ],
+      "abstract": "Streaming audio-visual target speaker extraction (AVTSE) is essential for latency-sensitive applications. However, current causal systems face two coupled gaps. First, standard benchmarks fix the number of speakers at two and ignore the near-/far-field interference, reverberation, and sudden noise of real scenes. Second, high-performance causal architectures are too heavy for edge deployment. Lightweight alternatives try to reclaim capacity by repeatedly invoking a small separator, which offsets the savings. To address the first gap, we release RealSSA, a realistic AVTSE benchmark consisting of RealSSA-Sim and RealSSA-Real. RealSSA-Sim provides controllable simulated scenes with 1--5 dynamic near-field interfering speakers; scenes with far-field interference additionally include 10--15 far-field interfering speakers. RealSSA-Real provides a held-out real-recorded evaluation set. To address the second gap, we propose Falcon, a causal AVTSE method. Its Separator performs multi-scale time-frequency separation in a single encoder--decoder pass. We train Falcon with an encoder-space speaker contrastive loss. This loss suppresses near-field leakage at zero inference cost and transfers across backbones. Falcon achieves state-of-the-art extraction quality on RealSSA-Sim, LRS2-2Mix, LRS3-2Mix, and VoxCeleb2-2Mix. Compared with the causal AV-TFGridNet baseline, it cuts parameters by 91.9%, computation by 20.2 times, and GPU inference latency by 11.1 times. Code and demo are available at https://cslikai.cn/Falcon/.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.32749",
+      "pdf_url": "https://arxiv.org/pdf/2610.32749",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.32749",
+      "category": "other",
+      "tags": [
+        "cs.SD"
+      ],
+      "upvotes": 150,
+      "hot_score": 1500,
+      "structured_summary": {
+        "chinese_title": "面向真实场景的高效流式音频-视觉目标说话人提取",
+        "chinese_summary": "提出RealSSA基准和Falcon方法，解决标准基准和轻量级模型的痛点。",
+        "pain_point": "现有基准忽略真实场景中的近场干扰、远场干扰和突发噪声，且轻量级模型难以满足边缘部署需求。",
+        "core_value": "提供RealSSA基准和Falcon方法，提升音频-视觉目标说话人提取的性能和适用性。",
+        "technical_architecture": "Falcon方法采用单编码器-解码器多尺度时频分离架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅提供部分真实场景数据，未来需进一步扩展。",
+        "key_contributions": [
+          "提出RealSSA基准，包含模拟和真实场景数据",
+          "提出Falcon方法，采用单编码器-解码器多尺度时频分离架构",
+          "通过编码器空间说话人对比损失抑制近场泄漏"
+        ],
+        "application_scenarios": [
+          "实时音频-视觉会议",
+          "智能语音助手"
+        ],
+        "technical_highlights": [
+          "单编码器-解码器多尺度时频分离",
+          "编码器空间说话人对比损失"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.35684",
+      "source": "huggingface",
+      "title": "OmniShowcase: Omnidirectional Subject-Consistent Video Generation from Multi-View Images",
+      "authors": [
+        "Junyeong Ahn",
+        "Geonwoo Kim",
+        "Kinam Kim",
+        "Gihwi Kim",
+        "Hoonjin Jung",
+        "Hyojin Jang",
+        "Jaegul Choo"
+      ],
+      "abstract": "Generating videos of a specific subject from a few reference images remains challenging when the camera reveals surfaces that are not visible in the input. Early subject-to-video (S2V) methods condition on a single reference image and must therefore infer the subject's unseen appearance and geometry as the viewpoint changes. To address this limitation, recent methods extend S2V to multiple reference views, providing more information about the subject from different viewpoints. However, they do not explicitly specify the 3D structure that connects these observations. In addition, existing training data do not guarantee that viewpoint changes preserve the same underlying 3D subject. We present OmniShowcase, built on two components: (i) a fully automated data synthesis pipeline that produces training videos along diverse camera trajectories, with viewpoint variation driven by underlying subject geometry, even spanning full 360-degree orbits; and (ii) a geometry-conditioning method that provides the video model with a turntable of surface-normal maps reconstructed from the reference views without requiring temporal alignment with the generated frames. We construct Showcase-4K, a corpus of 3D-asset-based videos covering twelve camera motions across 88 trajectory configurations with reconstruction-derived surface-normal conditioning, and ShowcaseBench, a held-out evaluation set with the source meshes and camera parameters used to render each video. Experiments show state-of-the-art subject identity and 3D consistency while maintaining competitive video quality and motion. Project page: justin4ai.github.io/OmniShowcase",
+      "published_date": "2026-10-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.35684",
+      "pdf_url": "https://arxiv.org/pdf/2610.35684",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.35684",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 47,
+      "hot_score": 470,
+      "structured_summary": {
+        "chinese_title": "全方位展示：基于多视角图像的全向主体一致视频生成",
+        "chinese_summary": "提出了一种新的数据合成和几何条件方法，用于从多视角图像生成特定主体的全向视频。",
+        "pain_point": "现有方法难以处理视角变化导致的未见表面，且缺乏明确的3D结构连接。",
+        "core_value": "通过自动生成多样视角的训练视频和几何条件方法，显著提升了视频生成的质量和一致性。",
+        "technical_architecture": "采用自动化数据合成和几何条件方法，提供多视角的表面法线图。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据合成依赖于初始图像的3D结构，未来需进一步提高生成的自然度。",
+        "key_contributions": [
+          "提出了一种新的数据合成方法，生成多样视角的训练视频",
+          "引入了几何条件方法，无需时间对齐即可提供表面法线图"
+        ],
+        "application_scenarios": [
+          "虚拟现实和增强现实中的主体展示",
+          "在线购物中的商品展示"
+        ],
+        "technical_highlights": [
+          "自动生成多样视角的训练视频",
+          "无需时间对齐的表面法线图提供方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.31670",
+      "source": "huggingface",
+      "title": "Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success",
+      "authors": [
+        "Yunfei Xie",
+        "Howard H. Qian",
+        "Shiyi Lan",
+        "Kaiyu Hang",
+        "Chen Wei"
+      ],
+      "abstract": "Robot foundation models are typically evaluated through costly closed-loop rollouts, motivating low-cost offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To test this, we propose Sensorimotor Alignment (S^2), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that S^2 correlates positively with downstream robot task success across model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. S^2 can also identify promising vision-language model (VLM) backbones before costly fine-tuning into vision-language-action models (VLAs). Beyond this correlation, S^2 offers representation-level explanations for phenomena observed in VLAs and world action models (WAMs). With S^2, we extend PRH to robotics and make sensorimotor alignment measurable, offering a low-cost, representation-level view of robot foundation models that closed-loop success rates alone cannot reveal.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.31670",
+      "pdf_url": "https://arxiv.org/pdf/2610.31670",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.31670",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "知觉与运动对齐：机器人政策成功的柏拉图代理",
+        "chinese_summary": "提出Sensorimotor Alignment (S^2)作为低开销的离线指标，用于评估模型能力，优先选择模型进行闭环评估。",
+        "pain_point": "现有机器人模型评估依赖于昂贵的闭环回放，需要低成本的离线代理指标。",
+        "core_value": "提供了一种低成本的离线指标S^2，用于评估模型能力，指导模型优先级排序。",
+        "technical_architecture": "基于柏拉图代表假设，提出Sensorimotor Alignment (S^2)作为离线评估指标。",
+        "quantitative_results": "S^2与下游机器人任务成功率正相关，可作为优先选择模型的指标。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在模型家族中进行了验证，未来需要在更多模型中测试。",
+        "key_contributions": [
+          "提出Sensorimotor Alignment (S^2)作为离线评估指标",
+          "验证了S^2与机器人任务成功率的正相关性",
+          "为模型优先级排序提供了新的方法"
+        ],
+        "application_scenarios": [
+          "机器人模型评估与优先级排序",
+          "视觉-语言模型的筛选"
+        ],
+        "technical_highlights": [
+          "低成本离线评估指标",
+          "与机器人任务成功率的正相关性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.37230",
+      "source": "huggingface",
+      "title": "TAO: Tool-Aware Joint Scheduling for LLM-Based Agentic Serving",
+      "authors": [
+        "Shuhuai Li",
+        "Shengdong Ye",
+        "Dongdong Ge",
+        "Yinyu Ye",
+        "Jianghao Lin"
+      ],
+      "abstract": "Agentic services alternate between model inference on clustered GPUs and external tools on distributed CPUs. In this scenario, existing systems (1) overlook tool-return readiness in service evaluation, wasting limited resources, and (2) use heuristic strategies to decide admission and placement on GPUs, resulting in suboptimal scheduling decisions. To bridge this gap, we present TAO, a tool-aware joint scheduling framework for LLM-based agentic serving. Its value interface combines near-term tool readiness, node-specific cache credit with time-aware decay, and token footprint; a dynamic program jointly selects and places waiting sessions under capacity constraints. Across the 12 reported model-workload-concurrency settings, TAO reduces latency by up to 26.8%, reduces mean time to first token (TTFT) by up to 36.3%, and increases decode throughput by up to 29.5% relative to the best evaluated state-of-the-art baseline for each metric.",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.37230",
+      "pdf_url": "https://arxiv.org/pdf/2610.37230",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.37230",
+      "category": "other",
+      "tags": [
+        "cs.DC"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": {
+        "chinese_title": "TAO: LLM 基础代理服务的工具感知联合调度",
+        "chinese_summary": "TAO 提高了 LLM 基础代理服务的调度效率，显著降低了延迟和 TTFT，提升了解码吞吐量。",
+        "pain_point": "现有系统忽视工具返回就绪性，导致资源浪费和次优调度。",
+        "core_value": "TAO 通过工具感知联合调度优化了 LLM 基础代理服务。",
+        "technical_architecture": "TAO 使用动态规划选择和放置等待会话。",
+        "quantitative_results": "TAO 将延迟降低 26.8%，TTFT 减少 36.3%，解码吞吐量提升 29.5%。",
+        "competitors": "对比了最佳基线。",
+        "limitations": "未来需探索更多模型-工作负载-并发设置。",
+        "key_contributions": [
+          "引入工具感知调度",
+          "提出动态规划选择方法",
+          "优化资源利用和调度决策"
+        ],
+        "application_scenarios": [
+          "LLM 基础代理服务",
+          "集群 GPU 和分布式 CPU 调度"
+        ],
+        "technical_highlights": [
+          "结合工具就绪性、节点缓存信用和时间衰减",
+          "容量约束下的动态规划"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22507",
+      "source": "huggingface",
+      "title": "RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents",
+      "authors": [
+        "Yunqi Liu",
+        "Peiyu Wang",
+        "Bingli Wang",
+        "Leo Luo",
+        "Xuanwu Song",
+        "Xudong Ma",
+        "Hongxin Li",
+        "Yaxin Du",
+        "Weicheng Gu",
+        "Fanglin Xu",
+        "Yi Xing",
+        "XiangLong Liu",
+        "Jujie He",
+        "Zhange Zhang",
+        "Huatong Song",
+        "Zhaoyi Li",
+        "Deyang Kong",
+        "Chuan Hao",
+        "Peihao Wu",
+        "Mingjie Tang",
+        "Ran Tao",
+        "Jian Yang",
+        "Wayne Xin Zhao",
+        "Bryan Dai"
+      ],
+      "abstract": "Command-line interface (CLI) agents increasingly execute longer-horizon tasks, yet existing benchmarks either assume that user instructions remain fixed throughout execution or evaluate task outcomes without capturing runtime collaboration quality. In this paper, we present REALCLI, a paired benchmark that unifies the evaluation of task execution and human-agent collaboration quality on realistic CLI tasks. To comprehensively measure collaboration, REALCLI builds a five-dimensional framework, operationalized into 22 sub-dimensions and 51 interaction scenario templates. REALCLI provides two modes for paired comparison: REALCLI-EXEC supplies complete specifications upfront, whereas REALCLI-COLLAB introduces a scripted user that delivers progressive information, corrections, constraint revisions, and authorization decisions. Evaluations reveal profound capability gaps in frontier agents: the best configuration attains an average score of only 49.2%, and when evaluated by the joint collaboration score (J_{collab}), the peak performance reaches merely 37.6%. These results show that task effectiveness diverges sharply from collaboration quality, with models consistently struggling in steerability, trust calibration, and safety boundary management. REALCLI provides a rigorous, reproducible foundation for measuring and advancing collaborative CLI agents.",
+      "published_date": "2026-10-15T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22507",
+      "pdf_url": "https://arxiv.org/pdf/2610.22507",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22507",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": {
+        "chinese_title": "RealCLI: 面向CLI代理统一评估的人机协作基准",
+        "chinese_summary": "提出了REALCLI，一种评估CLI代理执行任务和人机协作质量的基准。",
+        "pain_point": "现有基准无法全面评估CLI代理在执行任务和人机协作中的表现。",
+        "core_value": "通过五维框架和22个子维度全面评估CLI代理的人机协作质量。",
+        "technical_architecture": "构建了五维框架，包括22个子维度和51个交互场景模板。",
+        "quantitative_results": "最佳配置平均得分为49.2%，联合协作得分峰值为37.6%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于当前数据集，未来需扩展更多样化的任务。",
+        "key_contributions": [
+          "提出了REALCLI基准",
+          "构建了五维评估框架",
+          "提供了两种评估模式"
+        ],
+        "application_scenarios": [
+          "CLI代理任务执行",
+          "人机协作质量评估"
+        ],
+        "technical_highlights": [
+          "五维评估框架",
+          "22个子维度",
+          "51个交互场景模板"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22990",
+      "source": "huggingface",
+      "title": "PersonaCUABench: Benchmarking Computer-Use Agents Serving Diverse Personas",
+      "authors": [
+        "Haoming Li",
+        "Defu Cao",
+        "Xu Hu",
+        "Yingtao Luo",
+        "Yiyang Wang",
+        "Xianghe Xu",
+        "Jiashu He",
+        "Wanting Jiang",
+        "Yifan Zhang",
+        "Yunhan Zhao",
+        "Siyang Wu",
+        "Chen Yang",
+        "Haixin Wang",
+        "Zheyuan Deng",
+        "Taoran Li",
+        "Jingwen Zhang",
+        "Zhejian Peng",
+        "Shushu Liang",
+        "Yue Zhao",
+        "Bingzhe Li",
+        "Feng Chen",
+        "Yifan Wang",
+        "Jintao Huang",
+        "Yijun Wang",
+        "Yuexing Hao",
+        "Xiaomin Li"
+      ],
+      "abstract": "Computer-use agents (CUAs) are commonly evaluated against fixed task specifications, but users may omit requirements, add constraints, or require approval before consequential actions. Completing the benchmark instruction does not guarantee serving the person who asked. We introduce PersonaCUABench, which holds 74 tasks across 11 domains fixed and varies only who asks. A persona agent, playing one of 44 personas in four groups, rewrites each instruction in that user's own words and answers the CUA's questions, while the CUA sees only the dialogue, never the profile or the original instruction. Across nine backbones (3,330 runs), mean task completion falls by 36% relative to the original requests. The losses have two sources: in 59.9% of cells that lose points, the agent engages with what the user asked for and still gets it wrong, and 11.2% are stops the user requested that the checker scores as failures. Even when a persona request is fully completed, the user gives the top satisfaction rating in only 62.7% of cells, against 84.1% for the original requests. CUAs should therefore be evaluated not only on task completion but also on whether they meet the requirements and constraints users express. Code: https://github.com/MatrAIx-ai/PersonaCUABench. Project page: https://matraix.ai/research/persona-cua.html",
+      "published_date": "2026-10-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22990",
+      "pdf_url": "https://arxiv.org/pdf/2610.22990",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22990",
+      "category": "llm",
+      "tags": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CY",
+        "cs.LG"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "PersonaCUABench：评估服务于多样化人格的计算机使用代理的基准",
+        "chinese_summary": "PersonaCUABench 通过改变请求者来评估计算机使用代理，发现任务完成率下降 36%，强调不仅要评估任务完成度，还要评估是否满足要求和约束。",
+        "pain_point": "现有评估方法仅基于固定任务规范，未能充分考虑用户需求和约束。",
+        "core_value": "提供了一个新的基准，评估计算机使用代理在不同用户需求下的表现。",
+        "technical_architecture": "通过改变请求者和使用对话交互，不显示用户资料或原始指令。",
+        "quantitative_results": "任务完成率下降 36%，用户满意度下降。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于九个模型进行评估。",
+        "key_contributions": [
+          "引入 PersonaCUABench 基准",
+          "评估计算机使用代理在不同用户需求下的表现"
+        ],
+        "application_scenarios": [
+          "个性化服务评估",
+          "用户需求理解"
+        ],
+        "technical_highlights": [
+          "使用多样化人格进行评估",
+          "对话交互方式"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.30161",
+      "source": "huggingface",
+      "title": "TauIndianBankBench: Procedure-Aware, Action-Oriented Evaluation of Tool-Using Conversational Agents",
+      "authors": [
+        "Krishanu Adhikary",
+        "Prashant Devadiga"
+      ],
+      "abstract": "Many Indian banks serve customers through FAQ pages and scripted chatbots. Assistants based on language models could respond faster and carry out requests such as blocking a card, but only if they give correct information and follow the bank's rules. These rules prescribe a procedure, a set of required steps, such as obtaining a closure quote before closing a deposit. Adapting models to this domain requires measuring how well they follow the procedure, before and after training. Benchmarks usually judge only the records left at the end of a conversation. Many required steps, however, leave the records unchanged, so an assistant that skips them can still be judged successful. We present TauIndianBankBench, an action-oriented benchmark of 1,000 Indian retail-banking tasks where an assistant helps a simulated customer. Besides the final records, it checks that the assistant took every required step and made no unrequested change. For every model, 6.5-12.0% of sessions are judged successful when only the final records are checked, although the assistant skipped a required step or made an unrequested change. Scoring both procedure and outcome shows more accurately how well language models perform in Indian retail banking.",
+      "published_date": "2026-09-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.30161",
+      "pdf_url": "https://arxiv.org/pdf/2610.30161",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.30161",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 9,
+      "hot_score": 90,
+      "structured_summary": {
+        "chinese_title": "TauIndianBankBench: 基于流程的、行动导向的工具使用对话代理评估",
+        "chinese_summary": "提出了一种新的基准测试TauIndianBankBench，用于评估对话代理在印度零售银行业务中的表现。",
+        "pain_point": "现有基准测试无法准确评估对话代理是否遵循银行规则和流程。",
+        "core_value": "通过检查每个步骤和结果，更准确地评估语言模型在银行对话中的表现。",
+        "technical_architecture": "设计了一个包含1000个印度零售银行业务任务的基准测试。",
+        "quantitative_results": "仅检查最终记录时，6.5-12.0%的会话被错误地判定为成功。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对印度零售银行业务，未来可能需要扩展到其他领域。",
+        "key_contributions": [
+          "提出了一个新的基准测试TauIndianBankBench",
+          "强调了检查流程和结果的重要性"
+        ],
+        "application_scenarios": [
+          "评估对话代理在银行客户服务中的表现",
+          "改进对话代理以更好地遵循银行规则和流程"
+        ],
+        "technical_highlights": [
+          "包含1000个印度零售银行业务任务",
+          "检查每个步骤和结果以提高评估准确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.20832",
+      "source": "huggingface",
+      "title": "Amortizing Sequential Experimental Design in Reasoning LLMs",
+      "authors": [
+        "Anita Kriz",
+        "Antonin Berthon",
+        "Nicolás Astorga",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "Despite their extensive pretraining knowledge and strong reasoning capabilities, large language models (LLMs) struggle to adaptively gather information in experimental design tasks. We study how to amortize sequential Bayesian experimental design (BED) into an LLM by explicitly training the reasoning that guides action selection using information-gain rewards. Our approach specifies the experimental generative model independently of the LLM's own beliefs, allowing us to optimize expected information gain under a model of our choosing. We investigate the design choices for amortization, including alternative generative-model constructions, reward estimation, hypothesis-space specification, multi-step objectives, and computational costs relative to training- and inference-time BED baselines. On Twenty Questions, the resulting policies improve information acquisition and task performance, outperform inference- and training-time BED baselines at substantially lower computational cost, and generalize to unseen categories. We further demonstrate positive transfer from Twenty Questions training to Medi-Q, a real-world clinical dialogue benchmark. These results suggest that information gathering can be learned as a generalizable reasoning skill in LLMs.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.20832",
+      "pdf_url": "https://arxiv.org/pdf/2610.20832",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.20832",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 6,
+      "hot_score": 60,
+      "structured_summary": {
+        "chinese_title": "在推理大语言模型中 amortizing 顺序实验设计",
+        "chinese_summary": "通过训练信息增益奖励指导动作选择，改进大语言模型在实验设计任务中的信息收集和任务性能。",
+        "pain_point": "大语言模型在实验设计任务中难以适应性地收集信息。",
+        "core_value": "通过 amortizing 顺序贝叶斯实验设计，提高信息收集效率和任务性能。",
+        "technical_architecture": "独立于大语言模型信念的实验生成模型，优化预期信息增益。",
+        "quantitative_results": "在 Twenty Questions 上，策略改进了信息收集和任务性能，成本更低。",
+        "competitors": "与训练时间和推理时间的贝叶斯实验设计基线相比。",
+        "limitations": "仅在特定任务上进行了验证。",
+        "key_contributions": [
+          "提出了独立于大语言模型信念的实验生成模型。",
+          "通过信息增益奖励优化动作选择。",
+          "展示了在未见过的类别上的泛化能力。",
+          "证明了从 Twenty Questions 转移到临床对话基准的积极迁移"
+        ],
+        "application_scenarios": [
+          "实验设计任务",
+          "临床对话"
+        ],
+        "technical_highlights": [
+          "独立于大语言模型信念的实验生成模型",
+          "信息增益奖励指导动作选择",
+          "低成本的策略改进"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.30132",
+      "source": "huggingface",
+      "title": "LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data",
+      "authors": [
+        "Zhennan Wan",
+        "Jianfei Chen"
+      ],
+      "abstract": "Reinforcement learning (RL) is an effective way to strengthen the long-context reasoning of large language models (LLMs), but it needs training data that are long, diverse, challenging, and verifiable. Human annotation of such data is expensive, naturally occurring data are too scarce to sustain RL, and existing synthesis methods depend on external corpora or stronger teacher models, which become harder to obtain as the trained models get stronger. Recently, RL from zero data, in which a model learns from tasks it proposes itself, has achieved excellent performance, but existing methods target short-context tasks. Therefore, we propose LongZero, a method that lets an LLM improve its own long-context reasoning without any external data. Instead of writing questions and answers over existing documents, LongZero first has the model synthesize the question and answer with its supporting evidence in a compact structured form, and only then separately expands the evidence into a long multi-document context. LongZero combines these self-written multi-hop reasoning tasks with self-written multi-round retrieval tasks and trains the model with GRPO. We evaluate LongZero on two LLMs across five long-context reasoning benchmarks and compare it with RL on data synthesized from external corpora. Experimental results show that LongZero can generalize to real tasks, and outperforms both baselines, suggesting a viable and promising path to improving long-context reasoning of LLMs.",
+      "published_date": "2026-10-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.30132",
+      "pdf_url": "https://arxiv.org/pdf/2610.30132",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.30132",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 5,
+      "hot_score": 50,
+      "structured_summary": {
+        "chinese_title": "LongZero: 提升大语言模型长上下文推理能力的方法",
+        "chinese_summary": "LongZero 方法让大语言模型在无需外部数据的情况下提高自身的长上下文推理能力。",
+        "pain_point": "缺乏足够的长、多样、挑战性和可验证的训练数据。",
+        "core_value": "通过自我生成的多跳推理任务和多轮检索任务，提升大语言模型的长上下文推理能力。",
+        "technical_architecture": "结合自我生成的多跳推理任务和多轮检索任务，使用 GRPO 进行训练。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于现有的两个大语言模型。",
+        "key_contributions": [
+          "提出了一种无需外部数据的方法来提升大语言模型的长上下文推理能力。",
+          "通过自我生成的多跳推理任务和多轮检索任务，增强了模型的长上下文推理能力。",
+          "使用 GRPO 进行训练，提高了模型的性能"
+        ],
+        "application_scenarios": [
+          "自然语言理解",
+          "知识图谱构建"
+        ],
+        "technical_highlights": [
+          "自我生成的多跳推理任务",
+          "多轮检索任务",
+          "GRPO 训练方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.29702",
+      "source": "huggingface",
+      "title": "CausGround: Causal Interaction Grounding for Adaptive Embodied Planning",
+      "authors": [
+        "Yijun Shen",
+        "Diqi He",
+        "Jinbang Guo",
+        "Wanyue Zhang",
+        "Jiaming Mi",
+        "Huan Yang",
+        "Zhongyuan Wang",
+        "Zhiwei Yu",
+        "Kai Zhang"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) show promising reasoning capabilities, but reliable physical interaction requires planning that accounts for when actions are executable and how they change the world. These preconditions and effects are environment-dependent and often not captured by MLLMs, making adaptation challenging. Yet existing approaches either require costly environment-specific training or rely on unstructured interaction experience that is difficult to reuse. Therefore, we introduce CausGround, a non-parametric causal interaction grounding framework that distills interaction experience into reusable action-centered causal knowledge. CausGround identifies action preconditions and effects and organizes them in a factorized world-state representation capturing object attributes and inter-object relations. At planning time, task-relevant causal dependencies are grounded in current observations to support backward reasoning over preconditions and forward reasoning over effects for action selection and multi-step planning. We evaluate CausGround on simulated high-level planning, interaction reasoning, and real-world robot manipulation. On adapted VirtualHome and RoboCasa benchmarks, CausGround improves vision-based high-level planning across MLLM backbones, increasing average task success from 24.9% to 53.3% on VirtualHome and closed-loop planning success from 43.0% to 57.0% on RoboCasa. On SWITCH, average interaction reasoning accuracy increases from 25.8% to 31.9%, indicating improved action selection, recovery, and verification. Moreover, real-world experiments show that CausGround reasons backward from MLLM-interpreted goals to derive executable high-level action sequences for sequential manipulation. These results demonstrate that reusable action preconditions and effects support long-horizon embodied planning across diverse environments without parameter updates.",
+      "published_date": "2026-10-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.29702",
+      "pdf_url": "https://arxiv.org/pdf/2610.29702",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.29702",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 4,
+      "hot_score": 40,
+      "structured_summary": {
+        "chinese_title": "CausGround: 基于因果交互接地的自适应体态规划",
+        "chinese_summary": "CausGround 提炼交互经验为可重用的动作中心因果知识，支持多步规划。",
+        "pain_point": "现有方法要么需要昂贵的环境特定训练，要么依赖难以重用的无结构交互经验。",
+        "core_value": "通过非参数因果交互接地框架，实现可重用的因果知识，支持自适应体态规划。",
+        "technical_architecture": "基于因子化的世界状态表示，提炼动作先决条件和效果。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在模拟环境和部分真实世界任务中进行了评估。",
+        "key_contributions": [
+          "提出非参数因果交互接地框架",
+          "提炼动作先决条件和效果为可重用知识",
+          "支持多步规划的因果推理"
+        ],
+        "application_scenarios": [
+          "高阶规划",
+          "交互推理",
+          "机器人操作"
+        ],
+        "technical_highlights": [
+          "因子化的世界状态表示",
+          "动作中心的因果知识提炼"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

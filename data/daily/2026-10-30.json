@@ -1,0 +1,544 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-31T02:03:23.192029+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.39633",
+      "source": "huggingface",
+      "title": "Intrinsic Distribution Matching",
+      "authors": [
+        "Deyuan Liu",
+        "Yansen Han",
+        "Kaiwen Zheng",
+        "Jun Xie",
+        "Jiacheng Liu",
+        "Zhenglin Cheng",
+        "Peng Sun",
+        "Jintao Zhang",
+        "Jianguo Li",
+        "Tao Lin"
+      ],
+      "abstract": "One-step and few-step text-to-image generation must accurately render the details specified in the prompt despite limited opportunities for refinement. Distribution matching distillation (DMD) uses score differences to bring the generated distribution closer to a reference distribution. Following prior work, we estimate this difference with internal velocity branches, avoiding a separate fake-score network. We ask whether an explicit moment constraint improves this learned score supervision. A decomposition of the reverse-KL field into a Gaussian moment component and a non-Gaussian residual identifies statistics that can be constrained explicitly. We introduce Intrinsic Distribution Matching (IDM), which retains the full DMD correction and matches feature means and per-coordinate standard deviations using the generator's exponential-moving-average (EMA) copy, requiring no external feature encoder. Experiments use full-parameter and low-rank adaptation (LoRA) tuning on Z-Image-Turbo 6B and Qwen-Image 20B. At two network evaluations, IDM reaches 94.25% and 90.20% on Chinese and English LongText-Bench, the highest scores among the compared methods at this budget. Controlled ablations show gains from the added moment loss, while generator EMA features perform competitively with an external DINOv2 encoder across the five reported metrics. Code is available at https://github.com/inclusionAI/IDM.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.39633",
+      "pdf_url": "https://arxiv.org/pdf/2610.39633",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.39633",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 238,
+      "hot_score": 2380,
+      "structured_summary": {
+        "chinese_title": "内在分布匹配",
+        "chinese_summary": "IDM 提高了文本到图像生成的准确性，特别是在细节渲染方面。",
+        "pain_point": "文本到图像生成中，细节准确渲染受限于有限的细化机会。",
+        "core_value": "通过内在分布匹配，提高了生成图像与参考图像的一致性。",
+        "technical_architecture": "使用内部速度分支进行分布匹配蒸馏，无需额外的假分数网络。",
+        "quantitative_results": "在 Chinese 和 English LongText-Bench 上，IDM 达到 94.25% 和 90.20% 的最高得分。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多场景。",
+        "key_contributions": [
+          "引入了内在分布匹配 IDM",
+          "使用生成器的指数移动平均（EMA）副本匹配特征均值和坐标标准差"
+        ],
+        "application_scenarios": [
+          "文本到图像生成",
+          "图像合成与编辑"
+        ],
+        "technical_highlights": [
+          "无需外部特征编码器",
+          "结合了高斯矩分量和非高斯残差"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.38568",
+      "source": "huggingface",
+      "title": "A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-Improvement",
+      "authors": [
+        "Yu Liu",
+        "Youxing Li",
+        "Yuedong Tan",
+        "Zhiwei Yang",
+        "Zihan Su",
+        "Hanqi Feng",
+        "Shaojie Zhang",
+        "Libin Liao",
+        "Zihao Wan",
+        "Chenxu Wu",
+        "Cong Cao",
+        "Fangfang Yuan",
+        "Yanbing Liu",
+        "Ziheng Chen",
+        "Pei Fu",
+        "Radu Timofte",
+        "Zongwei Wu",
+        "Nicu Sebe",
+        "Barnabas Poczos",
+        "Jian Luan"
+      ],
+      "abstract": "Recursive self-improvement requires models not only to acquire useful training experience, but also to decide when their current experience has ceased to be useful. Existing methods often focus on what experience to generate next, while paying less attention to when fresh experience should be introduced. Many also construct training targets through self-consistency or majority voting, making supervision depend on the model's own uncertain predictions. We address these two questions separately: training dynamics determine when to acquire new experience, while the answers to new tasks remain independently checkable. A-RSI monitors reward variation and accuracy in training logs to refresh a task pool when its learning signal declines, without consulting validation or test scores. A static library of model-authored programs produces multimodal questions and derives their reference answers; we specify the task-generation contract, automatically verify chosen properties of the reward and refresh rules, and separately audit the generated answers. The training loop uses no external training examples or human-written answer labels. On the primary eleven-benchmark suite, A-RSI raises the performance average from 57.77 to 61.05 with 800 fresh tasks.",
+      "published_date": "2026-10-28T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.38568",
+      "pdf_url": "https://arxiv.org/pdf/2610.38568",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.38568",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 150,
+      "hot_score": 1500,
+      "structured_summary": {
+        "chinese_title": "A-RSI: 自适应任务刷新以实现零数据多模态自我提升",
+        "chinese_summary": "A-RSI 通过监测训练日志中的奖励变化和准确性来刷新任务池，无需依赖验证或测试分数。",
+        "pain_point": "现有方法较少关注何时引入新鲜经验，且监督依赖模型自身不确定的预测。",
+        "core_value": "A-RSI 提供了一种新的自我提升机制，通过自适应任务刷新提高模型性能。",
+        "technical_architecture": "A-RSI 采用静态模型生成的程序库来生成多模态问题及其参考答案。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证生成答案的正确性。",
+        "key_contributions": [
+          "提出了自适应任务刷新机制",
+          "无需外部训练样本或人工标签"
+        ],
+        "application_scenarios": [
+          "多模态自我提升",
+          "零数据学习"
+        ],
+        "technical_highlights": [
+          "基于奖励变化和准确性的任务刷新",
+          "自动验证任务生成规则"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.29927",
+      "source": "huggingface",
+      "title": "Your Benchmark Is an Empirical Measure Over Difficulty",
+      "authors": [
+        "Yifan Sun",
+        "Naicheng Yu",
+        "Jiawen Gong",
+        "Jingyan Shen",
+        "Huan Zhang"
+      ],
+      "abstract": "A benchmark is not merely a collection of test questions; it naturally induces an empirical measure over difficulty. In this work, we develop this measure-based view of benchmark evaluation. This perspective allows us to identify and formalize two central failure modes: measure mismatch, where the benchmark difficulty distribution differs from the intended difficulty distribution, and coverage gaps, where uncovered regions along the difficulty axis prevent benchmarks from detecting meaningful localized training progress. We propose two diagnostic metrics that capture these two failure modes and provide rigorous theoretical guarantees. Empirically, we analyze 25 popular benchmarks spanning 7 domains using carefully estimated item difficulties. Our results show that many benchmarks implicitly overweight certain difficulty regions, so their leaderboard conclusions should be interpreted with caution; others leave substantial portions of the difficulty axis uncovered, limiting their ability to monitor the model improvement process. Finally, we turn diagnosis into action by introducing BenchFill, a simple difficulty-targeted item rewriting algorithm that effectively reduces local coverage gaps.",
+      "published_date": "2026-10-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.29927",
+      "pdf_url": "https://arxiv.org/pdf/2610.29927",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.29927",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 140,
+      "hot_score": 1400,
+      "structured_summary": {
+        "chinese_title": "你的基准测试是难度的经验度量",
+        "chinese_summary": "论文提出了一种基于难度的基准评估方法，揭示了基准测试中的两个主要失败模式。",
+        "pain_point": "基准测试的难度分布与预期不符，导致难以准确评估模型训练进展。",
+        "core_value": "提出了衡量基准测试难度分布的两个诊断指标，提高了模型训练过程的透明度。",
+        "technical_architecture": "通过重新编写难度目标项，改进了基准测试的覆盖范围。",
+        "quantitative_results": "分析了25个流行基准，发现许多基准在某些难度区域权重过高。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何自动生成难度目标项。",
+        "key_contributions": [
+          "提出了基于难度的基准评估方法",
+          "识别并量化了基准测试中的两个主要失败模式",
+          "提出了两个诊断指标"
+        ],
+        "application_scenarios": [
+          "模型训练过程中的评估",
+          "基准测试的设计与改进"
+        ],
+        "technical_highlights": [
+          "提出了衡量难度分布的诊断指标",
+          "引入了BenchFill算法以改进覆盖范围"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.36671",
+      "source": "huggingface",
+      "title": "Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs",
+      "authors": [
+        "Donghyeon Cho",
+        "Joowon Kim",
+        "Seungho Shin",
+        "Eunho Yang"
+      ],
+      "abstract": "Diffusion vision-language models (DVLMs) process their entire input at every denoising step. Since visual tokens make up 89-97% of this input on the benchmarks we study, most of the decoding computation is spent repeatedly processing the same image. Visual token pruning methods partially relieve this burden by removing part of the visual tokens, but they lose the removed information and still process the remaining image at every step. To measure how often the image is actually needed, we compare LLaDA-V's predictions with and without the image at every decoding step and find that removing the image changes a token being unmasked at only 22.8% of steps on average and at as few as 7.9%. We therefore propose LOWN, a decoding method that decides at every step whether to process the image and how many tokens to unmask. LOWN predicts the masked tokens without the image and processes the image only when this prediction disagrees with the last image-conditioned prediction. Agreement certifies the earlier prediction for reuse, and the number of certified tokens sets how many are unmasked in that step. We further observe that the need for the image differs across benchmarks, so LOWN's adaptive decision is needed rather than a fixed schedule. Without training or a tuned threshold, LOWN retains 99.6% of LLaDA-V's score on ten benchmarks at 35.3% of the decoding FLOPs on average. LOWN also generalizes across LLaDA-based DVLMs, composes orthogonally with visual token pruning, and runs under key-value caching for further efficiency gains. Code and project page are available at https://hyeon9698.github.io/LOWN/",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.36671",
+      "pdf_url": "https://arxiv.org/pdf/2610.36671",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.36671",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 91,
+      "hot_score": 910,
+      "structured_summary": {
+        "chinese_title": "仅在需要时观看：证书引导的视觉路由方法以提高高效扩散VLMs",
+        "chinese_summary": "提出了一种新的解码方法LOWN，通过仅在预测与图像条件预测不一致时处理图像，以减少计算量。",
+        "pain_point": "现有DVLMs在每个去噪步骤中处理整个输入，导致大量重复处理图像。",
+        "core_value": "通过减少不必要的图像处理，显著降低了计算成本。",
+        "technical_architecture": "LOWN根据预测结果决定是否处理图像和解码多少token。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "不同基准上对图像的需求不同，需要进一步优化。",
+        "key_contributions": [
+          "提出LOWN方法以减少图像处理次数",
+          "通过证书机制减少计算量"
+        ],
+        "application_scenarios": [
+          "视觉语言模型的高效推理",
+          "大规模视觉数据处理"
+        ],
+        "technical_highlights": [
+          "证书机制用于验证预测结果",
+          "动态调整解码token数量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.39301",
+      "source": "huggingface",
+      "title": "Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities",
+      "authors": [
+        "Yunhang Shen",
+        "Zhangquan Chen",
+        "Xiaotian Li",
+        "Zhongpeng Cai",
+        "Qing Zhou",
+        "Zekai Zhang",
+        "Kun Zhang",
+        "Zezhong Wu",
+        "Jian Hu",
+        "Haihan Gao",
+        "Heting Gao",
+        "Xin Li",
+        "Yinsong Liu",
+        "Deqian Jiang",
+        "Di Yin",
+        "Haoyu Cao",
+        "Xing Sun",
+        "Bing Liu",
+        "Yanqiu Qu",
+        "Yunfei Wu",
+        "Kun Yin",
+        "Zhixiang Wei",
+        "Yongxiang Hua",
+        "Qianyu Li",
+        "Xiaoxing Hu",
+        "Peiyuan Zhang",
+        "Lijiang Li",
+        "Dong Xu",
+        "Zhenchuan Yang",
+        "Yiliang Jiang"
+      ],
+      "abstract": "We present Youtu-Parsing-Omni, an omni-modal parser that converts documents, images, audio, and video into structured records grounded in space and time, providing a perception layer for agents that read, locate, and cite evidence across modalities. Its design rests on one encoder for every modality and one schema for every task. Youtu-Omni-Encoder, initialized from a pre-trained language model to strengthen text reading, encodes all modalities with shared weights in a unified space-time coordinate system, and a few fusion layers let video frames attend to concurrent audio, bringing cross-modal fusion and temporal alignment into perception itself. OmniSchema unifies the outputs of all ten parsing tasks, allowing a single self-evolving post-training procedure, OmniSchema-Aware On-Policy Distillation (OSAD), to provide a shared token-role-based objective across tasks. In each round, the model is trained on its own rollouts against token-level targets from a reference-conditioned copy of itself, which is then refreshed with the trained weights, so that the parser and its supervision co-evolve. With a single 5 B-parameter checkpoint, Youtu-Parsing-Omni achieves state-of-the-art performance on OmniDocBench v1.6 (96.96 Overall) and leads all open-weight models on OmniParsingBench (75.08 Avg.), with its advantage concentrated on audio and video. It also achieves the best overall chart-parsing score (95.02) and the highest exact chemical-fingerprint agreement among compared systems, and matches a dedicated optical-music model in character-level transcription of typeset sheet music while staying far ahead of general-purpose systems. Code and model weights are publicly available.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.39301",
+      "pdf_url": "https://arxiv.org/pdf/2610.39301",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.39301",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "Youtu-Parsing-Omni：一种统一编码器和模式的全模态解析器",
+        "chinese_summary": "实现跨模态感知，提供结构化记录，支持多模态证据读取、定位和引用。",
+        "pain_point": "现有系统难以统一处理文本、图像、音频和视频等多模态数据。",
+        "core_value": "通过统一编码器和模式，提升多模态数据的感知和解析能力。",
+        "technical_architecture": "采用统一编码器和模式，实现跨模态融合和时间对齐。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅使用一个5B参数检查点，未来需进一步优化。",
+        "key_contributions": [
+          "提出了一种统一编码器和模式的全模态解析器",
+          "实现了跨模态融合和时间对齐",
+          "提出了一种自适应后训练方法"
+        ],
+        "application_scenarios": [
+          "多模态文档解析",
+          "跨模态证据引用"
+        ],
+        "technical_highlights": [
+          "统一编码器和模式",
+          "自适应后训练方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.39302",
+      "source": "huggingface",
+      "title": "Proving and Improving the Platonic Representation Hypothesis with JEPAs",
+      "authors": [
+        "Randall Balestriero",
+        "Yann LeCun"
+      ],
+      "abstract": "Whether models trained on different modalities converge to the same representation of the world is central to AI. The Platonic Representation Hypothesis (PRH) conjectures that they do as they scale, but without a proof it offers neither a guarantee nor a recipe. We turn the hypothesis into a theorem. First, we prove a Platonic Representation Theorem: Joint-Embedding Predictive Architectures (JEPAs) trained separately on any number of modalities learn the same representation up to one rotation whenever their positive pairs are two observations of one scene--good views--and their misalignment is bounded otherwise. Second, we show that next-token prediction is a JEPA with bad views, parts of a single document, which explains why language models align with vision only through scale. Third, we validate the theory from 145k captions to the texts of 940M web images, and uncover a scaling law of alignment that predicts unseen runs within seed noise. Good views need 42 times fewer training samples than next-token prediction on the same corpus to reach the same alignment, and a 109M-parameter text JEPA aligns with DINOv2 and CLIP's image encoders better than every language model we evaluated, up to 72B parameters, and than CLIP's text encoder: next-token prediction is a remarkably inefficient route to platonic representations. As a showcase, one rotation turns separately trained encoders into an image captioner (CIDEr .838 on COCO). Even that rotation needs no pair: on the latest pair-free benchmark, our text JEPA beats every zero-shot accuracy reported with language models up to 8B parameters, e.g., 64\\% against at most 56\\% top-5 on ImageNet-100. Positive views, and not scale alone, are thus the lever to build platonic representations.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.39302",
+      "pdf_url": "https://arxiv.org/pdf/2610.39302",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.39302",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV",
+        "stat.ML"
+      ],
+      "upvotes": 54,
+      "hot_score": 540,
+      "structured_summary": {
+        "chinese_title": "使用JEPAs证明并改进柏拉图表示假设",
+        "chinese_summary": "证明了JEPAs在不同模态下学习到相同表示的定理，并揭示了语言模型与视觉模型对齐的规模规律。",
+        "pain_point": "不同模态训练的模型是否能收敛到相同的表示，缺乏理论证明。",
+        "core_value": "提出了柏拉图表示定理，解释了语言模型与视觉模型对齐的机制，并验证了理论。",
+        "technical_architecture": "使用了Joint-Embedding Predictive Architectures (JEPAs)进行模型训练。",
+        "quantitative_results": "展示了不同训练样本数量下，JEPAs与视觉模型对齐效果的差异。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上验证了理论，未来需在更多场景下验证。",
+        "key_contributions": [
+          "证明了JEPAs在特定条件下的表示一致性",
+          "揭示了语言模型与视觉模型对齐的规模规律",
+          "验证了理论假设的有效性"
+        ],
+        "application_scenarios": [
+          "跨模态信息检索",
+          "多模态预训练模型"
+        ],
+        "technical_highlights": [
+          "提出了柏拉图表示定理",
+          "使用大规模数据集验证理论"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.40614",
+      "source": "huggingface",
+      "title": "L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory",
+      "authors": [
+        "Jinhyeok Choi",
+        "JoungBin Lee",
+        "Jongmin Lee",
+        "Minkyeong Jeon",
+        "Jiyoung Kim",
+        "Kaeun Han",
+        "Yoonjin Yoon",
+        "Seungryong Kim"
+      ],
+      "abstract": "Interactive world models generate visual content conditioned on user actions, yet maintaining spatial consistency over long-horizon exploration in real time remains challenging. Existing approaches rely on either temporal context or explicit 3D memory, both of which scale poorly because memory grows with the length of the generated stream. Moreover, explicit 3D memories condition latent video generators by re-encoding RGB renderings, which precludes real-time generation. In this paper, we introduce a Latent 3D Gaussian Memory (L3G) that combines the efficiency of feed-forward reconstruction with a compact, rapidly renderable scene representation. Building on this memory, we propose L3G-World, in which a memory updater and a video diffusion transformer (DiT) alternate autoregressively to generate spatially consistent worlds. The memory updater spawns Gaussians in newly observed regions and refines existing ones, so that the memory grows with scene extent rather than stream length. Each Gaussian further stores a VAE latent feature, allowing the memory to be rendered directly into the DiT's latent space without VAE re-encoding. Experiments show that L3G-World achieves state-of-the-art generation quality and long-horizon spatial consistency, with up to 38.6times fewer 3D primitives, 3.2times faster memory updates, and 359times faster memory rendering relative to the most efficient prior 3D-memory baseline for each metric, enabling real-time world generation at 9 FPS.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.40614",
+      "pdf_url": "https://arxiv.org/pdf/2610.40614",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.40614",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "L3G-World: 实时无限世界生成的潜在3D高斯记忆",
+        "chinese_summary": "提出了一种潜在3D高斯记忆，结合了前向重建的效率和快速渲染的场景表示，实现了实时一致的世界生成。",
+        "pain_point": "现有方法难以在长时间探索中保持空间一致性，且效率低下。",
+        "core_value": "通过潜在3D高斯记忆和视频扩散变换器交替自回归生成空间一致的世界，解决了实时生成的效率问题。",
+        "technical_architecture": "结合前向重建和快速渲染的潜在3D高斯记忆架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提出潜在3D高斯记忆",
+          "结合前向重建和快速渲染",
+          "实现实时一致的世界生成"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "高效前向重建",
+          "快速渲染的场景表示"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.40647",
+      "source": "huggingface",
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "authors": [
+        "Jiongfan Yang",
+        "Weichen Fan",
+        "Haiwen Diao",
+        "Zhongang Cai",
+        "Ziwei Liu"
+      ],
+      "abstract": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from global exchange, while high-frequency detail can be modeled locally. Based on this insight, we introduce SpecSlot, a pixel-space rectified-flow Transformer that decouples output detail from the length of the global attention sequence. SpecSlot expands each spatial anchor into multiple slots, each assigned a disjoint band of DCT coefficients; this separates anchor density from spectral subdivision. Only the lowest-frequency slot from each anchor participates in global attention, while all slots interact locally. This allows the model to increase spectral detail without enlarging the global sequence. A spatial head further adds a local correction to the spectral prediction, while the generative state, target, and loss remain in pixel space. On ImageNet-256, SpecSlot achieves a comparable final FID to a FLOPs-matched JiT control while converging faster. On ImageNet-512, it improves FID by 2.84 over the control with 3.9% fewer FLOPs, and comes within only 0.69 FID of JiT-B/16 at 38.2% lower cost. On text-to-image generation, SpecSlot surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.40647",
+      "pdf_url": "https://arxiv.org/pdf/2610.40647",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.40647",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.NE"
+      ],
+      "upvotes": 31,
+      "hot_score": 310,
+      "structured_summary": {
+        "chinese_title": "读取、分配、路由：像素空间生成Transformer的角色耦合分词",
+        "chinese_summary": "SpecSlot通过分离锚点密度和频谱细分，提高了生成Transformer的效率。",
+        "pain_point": "现有像素空间生成Transformer需要更多token来捕捉细节，导致全局注意力越来越昂贵。",
+        "core_value": "SpecSlot通过角色耦合分词，减少了全局通信，提高了模型效率。",
+        "technical_architecture": "SpecSlot扩展每个空间锚点为多个槽，分离锚点密度和频谱细分。",
+        "quantitative_results": "在ImageNet-256上，SpecSlot的最终FID与FLOPs匹配的JiT控制相当，但收敛更快。",
+        "competitors": "与FLOPs匹配的JiT控制基线进行对比。",
+        "limitations": "未来可以探索更多应用场景。",
+        "key_contributions": [
+          "分离锚点密度和频谱细分",
+          "减少全局通信以提高效率"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像增强"
+        ],
+        "technical_highlights": [
+          "角色耦合分词",
+          "局部与全局通信分离"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.37161",
+      "source": "huggingface",
+      "title": "WorkFactory: Turning Professional Intents into Executable Work for Scalable Agent Training",
+      "authors": [
+        "Ziyang Zeng",
+        "Tingyang Chen",
+        "Jia Deng",
+        "Qiyao Wang",
+        "Shuo Tang",
+        "Yike Yang",
+        "Tao Ren",
+        "Wayne Xin Zhao",
+        "Feng Chang",
+        "Jujie He",
+        "Chuan Hao",
+        "Ran Tao",
+        "Bryan Dai"
+      ],
+      "abstract": "Scaling supervised training for working agents requires diverse professional tasks that yield reliable expert demonstrations. However, missing or inconsistent task information can obstruct teacher execution and weaken the resulting supervision. We propose WorkFactory, a scalable framework for constructing coherent and executable professional tasks. Starting from professional intents, information-level planning builds an information support graph to guide task instantiation, explicitly representing the dependencies and locations of information required for the intended outputs. Probe executions then identify support failures and guide repairs while preserving the intended work. We construct 112,686 tasks spanning 612 occupations and use the collected teacher trajectories to fine-tune Qwen models at 4B, 27B, and 35B-A3B scales, yielding the WorkPilot family. All three models improve over their respective base models across four professional-work benchmarks, with WorkPilot-35B-A3B improving from 879 to 1565 Elo on GDPval-AA v2.1. Scaling analyses reveal model-dependent diminishing returns, with execution length first increasing and then decreasing. Controlled component analyses show that planning and repair reduce probe-diagnosed task environment defects and improve downstream performance. The data and models are available at https://github.com/IQuestLab/WorkFactory.",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.37161",
+      "pdf_url": "https://arxiv.org/pdf/2610.37161",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.37161",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "WorkFactory: 将专业意图转化为可执行的工作以实现可扩展的智能体训练",
+        "chinese_summary": "构建了WorkFactory框架，通过专业意图生成可执行任务，提升智能体训练效果。",
+        "pain_point": "缺乏或不一致的任务信息阻碍了教师执行，削弱了监督效果。",
+        "core_value": "通过信息级规划和探针执行，确保任务的可执行性和一致性。",
+        "technical_architecture": "基于专业意图的信息级规划和探针执行机制。",
+        "quantitative_results": "WorkPilot-35B-A3B模型在GDPval-AA v2.1上提升了Elo分数。",
+        "competitors": "暂无对比信息",
+        "limitations": "模型规模增加后，执行长度存在先增后减的现象。",
+        "key_contributions": [
+          "提出了WorkFactory框架",
+          "实现了从专业意图到可执行任务的转化",
+          "提升了智能体训练效果"
+        ],
+        "application_scenarios": [
+          "智能体训练",
+          "职业任务自动化"
+        ],
+        "technical_highlights": [
+          "信息级规划确保任务依赖和位置的明确",
+          "探针执行识别并修复支持失败"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.32411",
+      "source": "huggingface",
+      "title": "A Broader Look into MLLM's Retrieval Heads",
+      "authors": [
+        "Jia Wang",
+        "Yuqing Li",
+        "Jiangnan Li",
+        "Zheng Lin",
+        "Mo Yu"
+      ],
+      "abstract": "Locating relevant evidence in long inputs is a core capability of Multimodal Large Language Models. Prior studies attribute this capability to retrieval heads, a sparse set of attention heads that transfer information from the context to the output. However, these analyses are confined to a limited set of modalities and the corresponding models. Moreover, how retrieval heads can be leveraged to enhance the model calls for further exploration. In this paper, we ask whether this mechanism expands together with the input modalities of the model. Taking audio-visual input as a newly added modality, we construct paired inputs in which the same answer is either spoken or shown on screen. With the evidence content fixed, retrieval heads remain sparse in the new modality and are shared to a large extent across modalities. Across 18 language, vision-language, and omni-modal checkpoints, omni-modal models largely preserve the retrieval heads of their backbones. Ablating these heads eliminates nearly all audio-visual retrieval. The heads shared across modalities make up fewer than 2\\% of all heads, yet ablating them also degrades document understanding, spatial perception, and visual mathematics. Building on these findings, we turn retrieval heads into a target of optimization by training their attention with a ranking objective. This raises the page Recall@1 of Qwen3-VL-8B on MMDocIR by 6.03 points and improves document retrieval across three model families. Functional attention heads can thus serve both as a lens on multimodal models and as a target for improving them.",
+      "published_date": "2026-10-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.32411",
+      "pdf_url": "https://arxiv.org/pdf/2610.32411",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.32411",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": {
+        "chinese_title": "对MLLM检索头部的更广泛研究",
+        "chinese_summary": "研究发现，多模态大语言模型的检索头部在不同输入模态下保持稀疏且共享。",
+        "pain_point": "现有研究局限于有限的模态和模型，对检索头部在新模态下的应用探索不足。",
+        "core_value": "揭示了检索头部在多模态模型中的通用性和重要性。",
+        "technical_architecture": "通过构建音频-视觉配对输入，研究了检索头部在不同模态间的共享。",
+        "quantitative_results": "在18个检查点中，多模态模型保留了其基础模型的检索头部。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索检索头部在更多模态下的应用。",
+        "key_contributions": [
+          "揭示了检索头部在多模态模型中的通用性",
+          "证明了检索头部对模型性能的重要性"
+        ],
+        "application_scenarios": [
+          "多模态理解",
+          "跨模态检索"
+        ],
+        "technical_highlights": [
+          "构建音频-视觉配对输入",
+          "发现检索头部在不同模态间的共享"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

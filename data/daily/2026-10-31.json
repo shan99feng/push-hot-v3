@@ -1,0 +1,482 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-11-01T01:55:49.887877+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2610.40655v1",
+      "source": "arxiv",
+      "title": "Elucidating the Design Space of LM Data Attribution",
+      "authors": [
+        "Steven Yu",
+        "Sheng-Yu Wang",
+        "Kimia Hamidieh",
+        "Antonio Torralba",
+        "David Bau"
+      ],
+      "abstract": "Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To diagnose these failures, we explore the design space of LLM data attribution, with a primary focus on evaluation. We introduce the Controlled Attribution Benchmark (CATT) for fact tracing, in which we fine-tune LLMs on entirely fictitious knowledge, providing unambiguous ground truth for attribution. This synthetic setup allows us to systematically alter one dataset configuration at a time, such as document redundancy and lexical distractors. With this configurable evaluation, we demonstrate that redundancy and distractors consistently degrade attribution performance. Rather than proposing a new estimator, we examine two design choices that are underexplored: the loss used to compute gradients and how per-token attribution scores are aggregated into a document score. We find that the true causal evidence within a training document is highly localized, but standard methods dilute this evidence into noise by averaging attribution scores across the entire document. We find that replacing standard cross-entropy loss gradients with the negative log-odds gradients surfaces the critical tokens from other uninformative ones. We can then aggregate only the top token scores to improve ground truth recall by 35 to 72 percentage points across multiple baselines on our diagnostic benchmark. The negative log-odds correction also generalizes to FTRACE-TREX, improving counterfactual retraining performance for every method we test, by up to 4.9x.",
+      "published_date": "2026-10-29T17:59:53Z",
+      "url": "https://arxiv.org/abs/2610.40655v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40655v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "阐明语言模型数据归属的设计空间",
+        "chinese_summary": "通过引入CATT基准，系统地评估数据冗余和词汇干扰对语言模型数据归属性能的影响。",
+        "pain_point": "现有评估方法同时改变多个数据集属性，难以明确诊断数据归属算法的失败原因。",
+        "core_value": "提出CATT基准，系统性地改变单一数据集配置，揭示冗余和干扰对数据归属性能的负面影响。",
+        "technical_architecture": "引入CATT基准，通过细调LLM在完全虚构的知识上，提供明确的归属基准。",
+        "quantitative_results": "发现冗余和干扰会持续降低数据归属性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在虚构知识上进行评估，实际应用中的表现有待验证。",
+        "key_contributions": [
+          "提出CATT基准",
+          "揭示冗余和干扰对数据归属性能的影响",
+          "探讨未充分探索的设计选择"
+        ],
+        "application_scenarios": [
+          "语言模型数据归属评估",
+          "提高数据归属算法的准确性"
+        ],
+        "technical_highlights": [
+          "系统性地改变单一数据集配置",
+          "提供明确的归属基准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40654v1",
+      "source": "arxiv",
+      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
+      "authors": [
+        "Moshe Shenfeld",
+        "Eliad Tsfadia",
+        "Katrina Ligett"
+      ],
+      "abstract": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data would allow far less. Removing them first would restore the smaller scale, but the removal must itself be private.   We introduce \\emph{propose-filter-release} (PFR), which, by privately filtering its input, turns a mechanism that protects the addition or removal of a typical record, one that fits the remaining data, into one that is differentially private in the standard sense, on every input. Using our novel filtering step, PFR requires only a concave friendliness score, which measures how well a record fits a dataset, and a release mechanism that is friendly-DP, that is, private when the changed record fits the remaining data. For every such score and release mechanism, it guarantees differential privacy under public conditions on the number of records, so it is a general privacy primitive, comparable to propose-test-release, and FriendlyCore can be viewed as one of its implementations.   We illustrate the generality of PFR by instantiating it for scalar statistics, principal subspace estimation, the KL divergence of user histograms, the effective resistances of a graph, and treatment-rule selection.",
+      "published_date": "2026-10-29T17:59:49Z",
+      "url": "https://arxiv.org/abs/2610.40654v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40654v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Propose-Filter-Release: 通过私人过滤扩展噪声的典型敏感性",
+        "chinese_summary": "提出了一种新的私人过滤方法，使得差分隐私机制在所有输入上都能实现标准意义上的差分隐私。",
+        "pain_point": "现有差分隐私机制因少数敏感记录导致噪声过大。",
+        "core_value": "通过私人过滤，恢复了对典型记录的保护，同时保持差分隐私。",
+        "technical_architecture": "提出了一种新的过滤步骤和友好数学机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于特定的分数和发布机制。",
+        "key_contributions": [
+          "提出了一种新的私人过滤方法PFR",
+          "保证了在所有输入上的差分隐私"
+        ],
+        "application_scenarios": [
+          "差分隐私保护",
+          "数据发布"
+        ],
+        "technical_highlights": [
+          "使用友好数学分数",
+          "结合友好数学发布机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40653v1",
+      "source": "arxiv",
+      "title": "Micro-Edits: Computational Support for Fine-Scale Edits in Film",
+      "authors": [
+        "Nhan Tran",
+        "Hijung Valentina Shin",
+        "Abe Davis",
+        "Mackenzie Leake"
+      ],
+      "abstract": "In film editing, every frame matters. While macro, content-level edits shape the high-level narrative of a film, small local edits often control timing and direct visual attention. For example, editors can adjust the precise timing of clips to control the length of a meaningful silence, or cut to shots that highlight a specific character's reactions to important moments. These small, detailed edits are slow and tedious to make in standard editing tools because users have to map high-level narrative goals to low-level frame-by-frame adjustments. At the same time, these fine-scale adjustments, which we call micro-edits, can be nuanced and expressive, with different choices serving different creative goals. In this work, we start by conducting a formative study with professional editors to understand the structure of micro-edits and how they are used. We then derive a mathematical formalization for this structure to develop tools that leverage AI and optimization to make exploring micro-edits simpler and more efficient for users. Finally, we validate our tools in multiple user studies and a wide range of video examples.",
+      "published_date": "2026-10-29T17:59:49Z",
+      "url": "https://arxiv.org/abs/2610.40653v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40653v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.HC",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "微编辑：电影细粒度编辑的计算支持",
+        "chinese_summary": "通过AI和优化技术简化和加速微编辑过程。",
+        "pain_point": "标准编辑工具下，细粒度调整耗时且繁琐。",
+        "core_value": "提供工具使细粒度调整更简单高效，支持创意表达。",
+        "technical_architecture": "基于数学建模和AI优化的编辑工具。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在专业编辑中验证。",
+        "key_contributions": [
+          "理解微编辑结构",
+          "开发AI辅助编辑工具",
+          "提高微编辑效率"
+        ],
+        "application_scenarios": [
+          "电影剪辑",
+          "视频编辑"
+        ],
+        "technical_highlights": [
+          "数学建模",
+          "AI优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40649v1",
+      "source": "arxiv",
+      "title": "Rethinking Neural Thickets Without Weight Perturbations",
+      "authors": [
+        "Nicolas Dufour",
+        "Elouan Gardès",
+        "Amil Dravid",
+        "Patrick Pérez",
+        "Loic Landrieu"
+      ],
+      "abstract": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a single decoder block already recovers much of the improvement, while keeping the model entirely frozen and adding a random bias to its output logits matches or exceeds full-weight perturbations on most reasoning tasks. This suggests an alternative explanation based on output diversity, validation-based selection, and voting. We formalize this view as Perturb-Select-Vote (PSV), a general procedure that generates perturbed predictors, selects high-performing members on a small validation set, and aggregates their predictions.   This interpretation connects Neural Thickets to established inference-time methods, including sampling, self-consistency, and verifier-guided selection. A first-order analysis further shows that small weight perturbations act primarily through their induced logit shifts. We extend this analysis to vision, where logit PSV substantially improves performance under domain shift, including on Earth observation, while full-weight perturbations provide little additional benefit. Together, these results suggest that the gains attributed to nearby weight-space experts can instead be obtained through output diversity, selection, and voting. Logit PSV realizes these benefits with a fully frozen model, providing a simple, training-free alternative to full-weight perturbation ensembles across language and vision.",
+      "published_date": "2026-10-29T17:59:29Z",
+      "url": "https://arxiv.org/abs/2610.40649v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40649v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "重新思考无需权重扰动的神经密林",
+        "chinese_summary": "研究发现，权重扰动并非必要，输出多样性、验证选择和投票机制可解释神经密林现象。",
+        "pain_point": "现有方法依赖于权重扰动来解释预训练语言模型的表现。",
+        "core_value": "提出了一种新的解释框架PSV，无需权重扰动即可实现类似效果。",
+        "technical_architecture": "基于输出多样性、验证选择和投票机制的PSV框架。",
+        "quantitative_results": "在多数推理任务上，输出偏置与全权重扰动效果相当或更好。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步研究PSV在其他任务上的适用性。",
+        "key_contributions": [
+          "提出了无需权重扰动的解释框架PSV",
+          "验证了输出偏置的有效性",
+          "连接了神经密林与现有推理方法"
+        ],
+        "application_scenarios": [
+          "预训练语言模型推理优化",
+          "多模型集成预测"
+        ],
+        "technical_highlights": [
+          "输出偏置与全权重扰动效果相当",
+          "提出了PSV框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40647v1",
+      "source": "arxiv",
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "authors": [
+        "Jiongfan Yang",
+        "Weichen Fan",
+        "Haiwen Diao",
+        "Zhongang Cai",
+        "Ziwei Liu"
+      ],
+      "abstract": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from global exchange, while high-frequency detail can be modeled locally. Based on this insight, we introduce SpecSlot, a pixel-space rectified-flow Transformer that decouples output detail from the length of the global attention sequence. SpecSlot expands each spatial anchor into multiple slots, each assigned a disjoint band of DCT coefficients; this separates anchor density from spectral subdivision. Only the lowest-frequency slot from each anchor participates in global attention, while all slots interact locally. This allows the model to increase spectral detail without enlarging the global sequence. A spatial head further adds a local correction to the spectral prediction, while the generative state, target, and loss remain in pixel space. On ImageNet-256, SpecSlot achieves a comparable final FID to a FLOPs-matched JiT control while converging faster. On ImageNet-512, it improves FID by 2.84 over the control with 3.9% fewer FLOPs, and comes within only 0.69 FID of JiT-B/16 at 38.2% lower cost. On text-to-image generation, SpecSlot surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
+      "published_date": "2026-10-29T17:59:21Z",
+      "url": "https://arxiv.org/abs/2610.40647v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40647v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.NE"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "读取、分配、路由：像素空间生成Transformer的角色耦合分词",
+        "chinese_summary": "SpecSlot通过分离锚点密度和频谱细分，提高频谱细节而不扩大全局序列。",
+        "pain_point": "像素空间生成Transformer捕捉细节数量增加导致全局注意力成本上升。",
+        "core_value": "SpecSlot通过角色耦合分词，减少全局通信成本，提高生成图像质量。",
+        "technical_architecture": "SpecSlot扩展每个空间锚点为多个槽，分离锚点密度和频谱细分。",
+        "quantitative_results": "在ImageNet-256上，SpecSlot与FLOPs匹配的JiT控制相比，收敛更快且FID相当；在ImageNet-512上，FID改善2.8。",
+        "competitors": "与FLOPs匹配的JiT控制基线对比。",
+        "limitations": "未来可探索更多应用场景。",
+        "key_contributions": [
+          "角色耦合分词方法",
+          "分离锚点密度和频谱细分"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "视觉内容生成"
+        ],
+        "technical_highlights": [
+          "减少全局通信成本",
+          "提高生成图像质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40644v1",
+      "source": "arxiv",
+      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
+      "authors": [
+        "Aron Brenner",
+        "Saurabh Amin"
+      ],
+      "abstract": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the empirical distribution contains only reweightings of the record, whereas a transport ball also contains distributions supported off the record, including on realizations the data-generating process cannot produce, against which the decision is then hedged as well. We instead propose a Kullback-Leibler (KL) ball centered at a density model fitted to the record, the learned nominal, which lets the adversary up-weight costly unobserved realizations in proportion to the probability the model assigns them. Solving the resulting problem poses a second difficulty, because it can accommodate only a few scenarios, and an independent sample of that size is likely to omit the rare realizations on which the worst case concentrates. We therefore build the scenario set adaptively, alternating between solving the finite problem and drawing new realizations from the learned nominal, steered toward the worst case at the current decision, with importance weights that correct the draws back to the model. On a multi-item newsvendor problem and a capacity expansion problem on realistic grid data, centering the ball at the learned nominal rather than at the record lowers cost under distribution shift, at comparable in-distribution cost, when the record is scarce and the model class captures structure that lets it extrapolate beyond the record. The advantage fades as the record grows or as the shift departs from the structure the model has learned.",
+      "published_date": "2026-10-29T17:59:01Z",
+      "url": "https://arxiv.org/abs/2610.40644v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40644v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "eess.SY",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于学习密度模型的KL-DRO自适应场景生成",
+        "chinese_summary": "提出了一种基于学习密度模型的KL-DRO方法，以自适应生成场景，解决数据驱动的两阶段随机规划中的分布鲁棒优化问题。",
+        "pain_point": "现有方法难以处理罕见但重要的未观察到的实现实例。",
+        "core_value": "通过自适应场景生成，提高了模型对罕见事件的鲁棒性。",
+        "technical_architecture": "利用Kullback-Leibler球体中心于学习到的密度模型，自适应生成场景。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "方法依赖于学习到的密度模型的准确性。",
+        "key_contributions": [
+          "提出了一种新的KL-DRO方法",
+          "自适应生成场景以处理罕见事件",
+          "结合了学习密度模型和分布鲁棒优化"
+        ],
+        "application_scenarios": [
+          "金融风险管理",
+          "供应链管理"
+        ],
+        "technical_highlights": [
+          "自适应场景生成机制",
+          "KL-DRO方法的应用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40643v1",
+      "source": "arxiv",
+      "title": "Luggage re-identification: A study of strategies towards a real-world application",
+      "authors": [
+        "Quentin Dhôte",
+        "Romaric Audigier"
+      ],
+      "abstract": "Luggage re-identification (ReID) is a critical task in video surveillance for forensics, security or border management (suspicious or abandoned luggage recognition), as well as luggage management (lost luggage recovery). It enables the association of observations of the same luggage across disjoint camera views in complex environments such as airports, train stations and border crossing. While existing approaches primarily focus on appearance-based cropped image matching under relatively clean conditions, real-world scenarios are characterized by frequent occlusions, cluttered background and crowded scenes which significantly degrade performance. Yet, strategies leveraging the complementarity of multiple shots and views from different video streams is overlooked. In this paper, we study strategies for an end-to-end pipeline that operates from multiple video streams to detect and re-identify luggage. We evaluate different variants on a benchmark dataset acquired in real-world environments to address the questions of selecting and merging different views and shots of the same luggage as well as training on different environment datasets for an overall ReID performance improvement in practical applications.",
+      "published_date": "2026-10-29T17:58:59Z",
+      "url": "https://arxiv.org/abs/2610.40643v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40643v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "行李再识别：面向实际应用的研究策略",
+        "chinese_summary": "研究多视频流中行李检测与再识别策略，提升复杂环境下的识别性能。",
+        "pain_point": "现有方法在复杂环境下的识别性能受限于频繁遮挡、杂乱背景和拥挤场景。",
+        "core_value": "提出利用多视角信息的策略，提高实际应用中的行李再识别效果。",
+        "technical_architecture": "基于多视频流的端到端检测与再识别架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定环境数据集上进行了评估。",
+        "key_contributions": [
+          "提出利用多视角信息的策略",
+          "在复杂环境下提升行李再识别性能"
+        ],
+        "application_scenarios": [
+          "机场",
+          "火车站"
+        ],
+        "technical_highlights": [
+          "多视频流融合技术",
+          "复杂环境适应性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40641v1",
+      "source": "arxiv",
+      "title": "From extreme weather to agricultural consequences with agentic AI",
+      "authors": [
+        "Minghan Yu",
+        "Mengyu Dai",
+        "Yixin Wen",
+        "Haizhao Yang"
+      ],
+      "abstract": "Extreme weather is forecast days ahead, yet its consequences for agriculture remain hard to predict: a forecast says where a storm will strike, not which crops will suffer or how much is at risk, and the records that could tell span many sources. We present WxCrop, the first agent that judges agricultural hazards from physically interpretable weather indices examined by causal analysis, and the first that combines weather and agricultural information to predict crop loss reliably for past and forecast dates. We demonstrate it in Florida on hurricanes, freezes and dry heat, with a loss model calibrated on insurance records for each, and the same procedure extends to other hazards and areas. Three checks show reliability: the hurricane index detects recorded cyclone days with an AUC of 0.98, recorded losses in held-out years are reproduced to within 2%, and independent production records confirm the county rankings (rank correlation 0.63). Users ask the agent for each crop group's loss as a fraction of expected season value, every number sourced, so that governments, growers and scientists respond to agricultural disasters quickly.",
+      "published_date": "2026-10-29T17:58:53Z",
+      "url": "https://arxiv.org/abs/2610.40641v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40641v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "physics.ao-ph",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "从极端天气到农业后果的智能预测",
+        "chinese_summary": "WxCrop能够可靠地预测农作物损失，结合天气和农业信息，通过因果分析判断农业灾害。",
+        "pain_point": "现有预测方法难以准确预测极端天气对农业的具体影响。",
+        "core_value": "通过物理可解释的天气指数和因果分析，WxCrop能够可靠预测农作物损失。",
+        "technical_architecture": "结合天气和农业数据，使用因果分析方法进行预测。",
+        "quantitative_results": "飓风指数检测记录的旋风日AUC为0.98，预测损失与实际损失吻合度高。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在佛罗里达州进行了验证，未来需要在更多地区进行测试。",
+        "key_contributions": [
+          "首次使用物理可解释的天气指数和因果分析预测农业灾害",
+          "能够可靠预测农作物损失，适用于过去和未来日期"
+        ],
+        "application_scenarios": [
+          "飓风灾害预测",
+          "冻害和干旱预测"
+        ],
+        "technical_highlights": [
+          "结合天气和农业数据进行预测",
+          "使用因果分析方法提高预测准确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40640v1",
+      "source": "arxiv",
+      "title": "SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization",
+      "authors": [
+        "Derong Jin",
+        "Xiyi Chen",
+        "Ming C. Lin",
+        "Ruohan Gao"
+      ],
+      "abstract": "Recent progress in visual scene generation has extended beyond static 3D scenes toward the more challenging problem of generating dynamic 4D scenes from minimal input. However, sound, despite being intrinsically coupled with dynamic objects and events, remains largely unmodeled in prior work. We introduce Video-to-4DAVScene, a new task that turns a video into an explorable, time-varying 4D audio-visual scene, and present the SonoWorld4D framework for this task. Given a monocular video, our method generates a 360 static background, reconstructs explicit motion trajectories of dynamic, sound-emitting foreground objects, and synthesizes a physically-grounded sound field consistent across multiple sources through dual-space audio diffusion synchronization. The resulting 4D scene supports real-time novel-view visual and spatial audio rendering. Evaluation on real-world dynamic scenes and a user study demonstrates SonoWorld4D generates 4D audio-visual scenes with perceptually realistic, physically grounded spatial audio consistent with scene geometry and visual content.",
+      "published_date": "2026-10-29T17:58:45Z",
+      "url": "https://arxiv.org/abs/2610.40640v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40640v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SonoWorld4D：从一个视频生成一个可探索的4D音视频场景",
+        "chinese_summary": "生成可探索的4D音视频场景，实现动态音视频同步。",
+        "pain_point": "现有工作忽视了动态场景中的声音建模。",
+        "core_value": "首次实现从视频生成可探索的4D音视频场景，支持实时渲染。",
+        "technical_architecture": "采用双空间音频扩散同步方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在真实动态场景上进行了评估。",
+        "key_contributions": [
+          "提出Video-to-4DAVScene任务",
+          "实现360度静态背景生成",
+          "动态声音发射前景对象的运动轨迹重建",
+          "多源物理一致的声场合成"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "双空间音频扩散同步",
+          "实时渲染支持"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.40637v1",
+      "source": "arxiv",
+      "title": "world2vec: Mechanistic world models through latent dynamics learning",
+      "authors": [
+        "Tobias Schmidt",
+        "Rodrigo Gonzalez Laiz",
+        "Krisztián Szuppinger",
+        "Steffen Schneider"
+      ],
+      "abstract": "World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. Here, we introduce world2vec to learn mechanistic world models without reward information directly from observations and actions. World2vec learns latent dynamics that faithfully reproduce the true system over long prediction horizons, with at least one order of magnitude fewer parameters than DreamerV3, TD-MPC2 and LeWM. This enables state of the art performance in controlling continuous environments from pixels and accurate system identification across a benchmark of 71 attractors, demonstrating how world models are amenable to scientific discovery.",
+      "published_date": "2026-10-29T17:58:23Z",
+      "url": "https://arxiv.org/abs/2610.40637v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40637v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "world2vec: 通过潜在动力学习实现机制性世界模型",
+        "chinese_summary": "world2vec 通过直接从观察和动作学习，无需奖励信息，实现机制性世界模型。",
+        "pain_point": "现有世界模型难以实现机制性解释和科学发现。",
+        "core_value": "world2vec 以更少参数学习长期动力学，实现顶级性能和系统识别。",
+        "technical_architecture": "学习潜在动力学以准确再现真实系统。",
+        "quantitative_results": "在 71 个吸引子基准测试中实现顶级性能。",
+        "competitors": "DreamerV3, TD-MPC2 和 LeWM",
+        "limitations": "未来需要探索更广泛的环境和任务。",
+        "key_contributions": [
+          "无需奖励信息直接从观察和动作学习机制性世界模型",
+          "以至少一个数量级更少的参数学习长期动力学",
+          "在控制连续环境和系统识别方面实现顶级性能"
+        ],
+        "application_scenarios": [
+          "控制连续环境",
+          "系统识别"
+        ],
+        "technical_highlights": [
+          "学习潜在动力学以准确再现真实系统",
+          "实现顶级性能和系统识别"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

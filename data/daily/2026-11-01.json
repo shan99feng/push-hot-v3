@@ -1,0 +1,481 @@
+{
+  "date": "2026-11-01",
+  "generated_at": "2026-11-02T02:11:14.049491+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2610.41267v1",
+      "source": "arxiv",
+      "title": "From 1D Benchmarks to Complex 3D Geometries: Can Agents Reliably Specify Problems for Automated PDE Simulation?",
+      "authors": [
+        "Akshat Jani",
+        "Sakhinana Sagar Srinivas",
+        "Venkataramana Runkana"
+      ],
+      "abstract": "Turning an engineering request into a simulation requires consistent geometry, physics, boundary conditions, and numerical settings. Recent agent-assisted systems automate simulation setup, but successful execution alone does not establish whether the specification preserves the intended problem or correctly handles missing information. We study whether agents can reliably construct complete executable JSON specifications for automated geometry creation, meshing, PDE solving, and result export. Our workflow combines model extraction with deterministic scientific and capability checks, explicit clarification, and validated local patches that preserve unrelated accepted fields. We evaluate specification correctness, execution completion, and numerical verification separately. On 120 template-related requests, the full workflow achieves 98.3% correct first-turn specification and decision outcomes, compared with 92.5% for schema-assisted single shot and 82.5% for model-only: gains of 5.8 and 15.8 percentage points, respectively. It makes no false-ready decisions among the 42 requests requiring clarification or rejection. Component ablations identify contributions from scientific checks and conditional repair. Separate downstream studies cover 1D, 2D, and 3D steady and unsteady, linear and nonlinear problems, including flow and elasticity with complex three-dimensional wing geometries. A 30-case gallery demonstrates automated execution from retained JSON specifications, while 9 of 12 selected live user-to-results tests achieve joint specification, execution, export, and numerical-reference success (75.0%). These results support traceable, engineer-reviewed simulation assistance within the tested scope, while fresh-response regressions identify consistency as a priority for further improvement.",
+      "published_date": "2026-10-30T05:20:28Z",
+      "url": "https://arxiv.org/abs/2610.41267v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41267v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CE"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "从1D基准到复杂3D几何：代理能否可靠地为自动化PDE仿真指定问题？",
+        "chinese_summary": "该研究评估了代理能否可靠地构建完整的可执行JSON规范，以实现自动化几何创建、网格划分、PDE求解和结果导出。",
+        "pain_point": "现有系统在自动化仿真设置中存在准确性和完整性问题。",
+        "core_value": "通过结合模型提取和科学检查，提高了规范正确性和执行完成率。",
+        "technical_architecture": "结合模型提取和科学检查，确保规范的完整性和准确性。",
+        "quantitative_results": "完整工作流在120个请求中实现了98.3%的规范正确性和决策结果，比单次尝试和模型仅使用分别提高了5.8和15.8个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "未详细说明未来的工作方向。",
+        "key_contributions": [
+          "提出了完整的自动化仿真设置工作流",
+          "结合模型提取和科学检查提高了规范的准确性和完整性"
+        ],
+        "application_scenarios": [
+          "工程仿真",
+          "科学计算"
+        ],
+        "technical_highlights": [
+          "实现了高准确性和完整性",
+          "通过科学检查确保规范正确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41264v1",
+      "source": "arxiv",
+      "title": "Rome Wasn't Built in One Turn: Replay-Grounded Reward Signals for Long-Horizon Freeciv Agents",
+      "authors": [
+        "Yanchen Liu",
+        "Xinyu Che",
+        "Brihi Joshi",
+        "Renzo Fukuda",
+        "Junhua Liu",
+        "Ruifeng Li",
+        "Yunfei Ge",
+        "Hang Yan",
+        "Xiang Ren"
+      ],
+      "abstract": "Training language-model agents to play long-horizon strategy games is hard because deterministic feedback is sparse and often arrives only at the end of a game. In-game scores can offer dense signals, but they do not reliably predict future outcomes: in 8-68% of position pairs across eight strategy games, the higher-scoring position leads to the worse outcome. We term this phenomenon scoreboard traps. In Freeciv, an open-source turn-based empire-building game where several players manage units, cities, and diplomacy over hundreds of turns, we look into better reward signals for gameplay agents. To facilitate this, we build CivHarness, an open system that saves current game states, branches on different decisions, and replays the game to future turns to provide measurable long-horizon feedback from saved positions. We use CivHarness to train CivTelescope, an LLM Judge that predicts which one of two game positions will yield the better outcome. On scoreboard-trap pairs, CivTelescope is 1.3-2.0 times more accurate than off-the-shelf language models, and it generalizes to new game starts, later turns, and unseen rules. We then train a Freeciv gameplay agent with CivTelescope as a dense reward, and call this recipe CivMarshmallow. When used in the middle stage of the game where scoreboard traps are common, CivMarshmallow reaches an average training phase gain of 8.94 points, 77% more than the best baseline, the end-of-game reward. Over the full 120-turn game, CivMarshmallow uses a hybrid reward that starts from the scoreboard or the end-of-game reward and shifts to CivTelescope as the game advances; this hybrid reward scores highest among the rewards we compare.",
+      "published_date": "2026-10-30T05:13:31Z",
+      "url": "https://arxiv.org/abs/2610.41264v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41264v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "罗马并非一日建成：Freeciv 游戏长时策略代理的回放导向奖励信号",
+        "chinese_summary": "通过构建CivHarness系统，使用语言模型预测游戏位置的未来表现，显著提高了长时策略游戏代理的性能。",
+        "pain_point": "长时策略游戏中，即时反馈稀疏且不可靠，导致训练代理困难。",
+        "core_value": "提出了回放导向的奖励信号方法，有效解决了长时策略游戏中的反馈稀疏问题。",
+        "technical_architecture": "开发了CivHarness系统，通过回放机制提供长期反馈。",
+        "quantitative_results": "在回放陷阱对上，CivTelescope比现成语言模型更准确1.3-2.0倍。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在Freeciv游戏中进行了实验，未来需在其他游戏中验证。",
+        "key_contributions": [
+          "提出了回放导向的奖励信号方法",
+          "开发了CivHarness系统",
+          "显著提高了代理的性能"
+        ],
+        "application_scenarios": [
+          "长时策略游戏代理训练",
+          "游戏AI研究"
+        ],
+        "technical_highlights": [
+          "利用语言模型预测游戏位置未来表现",
+          "提供长期反馈以改善代理性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41260v1",
+      "source": "arxiv",
+      "title": "SketchDirector: Complex Scene Sketching via Agentic Layout Reasoning and Detail Refinement",
+      "authors": [
+        "Yiqi Liang",
+        "Xiaodong Cun"
+      ],
+      "abstract": "Existing sketch generation methods often rely on image guidance and are largely limited to individual objects or simplified scenes, leaving text-guided complex scene sketching underexplored. We present SketchDirector, an agentic framework that mimics the human sketching workflow for automatic multi-concept scene sketching. Given a scene-level text prompt, SketchDirector first employs a large language model~(LLM) to decompose the scene into multiple draft assets, where each is represented by a set of Bézier curves. Then, an agentic reasoning loop iteratively plans and executes their spatial arrangement, guided by self-evolving memory. Finally, a detail refinement module leverages diffusion priors to enhance sketch quality while preserving geometric structure. To support future research and applications in multi-concept scene sketch generation, we further introduce the \\textit{MCSketch8K} dataset, comprising editable vector assets, compositional layouts, and object-level manipulation annotations. Extensive experiments show that SketchDirector outperforms state-of-the-art baselines in semantic and compositional quality while effectively preserving overall contour organization during refinement. The project page is: \\href{https://yiki77.github.io/SketchDirector/}{https://yiki77.github.io/SketchDirector/}.",
+      "published_date": "2026-10-30T05:05:12Z",
+      "url": "https://arxiv.org/abs/2610.41260v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41260v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "SketchDirector：通过代理布局推理和细节细化生成复杂场景草图",
+        "chinese_summary": "SketchDirector通过代理推理循环和自进化记忆实现多概念场景草图生成。",
+        "pain_point": "现有方法主要依赖图像指导，难以生成复杂的多概念场景草图。",
+        "core_value": "通过代理推理和细节增强，提高生成场景草图的质量和多样性。",
+        "technical_architecture": "采用代理推理循环和自进化记忆机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步优化生成效率。",
+        "key_contributions": [
+          "提出代理推理循环机制",
+          "引入MCSketch8K数据集",
+          "实现高质量多概念场景草图生成"
+        ],
+        "application_scenarios": [
+          "虚拟现实场景设计",
+          "交互式草图生成"
+        ],
+        "technical_highlights": [
+          "自进化记忆机制",
+          "细节增强模块"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41258v1",
+      "source": "arxiv",
+      "title": "PBSR: Pseudo-Burst Super-Resolution via Zero-Shot Novel View Synthesis",
+      "authors": [
+        "Yuki Kondo",
+        "Norimichi Ukita"
+      ],
+      "abstract": "Burst super-resolution (BSR) achieves higher reconstruction fidelity than single-image super-resolution (SISR) by aggregating sub-pixel information from multiple frames. However, it requires a burst of frames captured under near-static conditions, and such frames are unavailable for single photographs or archival images. We propose Pseudo-Burst Super-Resolution (PBSR), which brings BSR-style reconstruction to the single-image input setting by synthesizing pseudo-burst frames via zero-shot novel view synthesis (NVS). PBSR first generates pseudo-burst frames with realistic parallax using a viewpoint sampling strategy calibrated to the pixel-shift distribution of real burst datasets. The frames are then processed by a BSR backbone equipped with a geometry-aware alignment module that reuses the NVS camera parameters and estimated depth. While the NVS stage is zero-shot, the backbone is fine-tuned with an artifact-aware adaptation so that it can exploit the synthesized frames despite their generative artifacts. Experiments on the BurstSR dataset show that PBSR consistently improves in PSNR, SSIM, and LPIPS over the single-frame baseline with the same reconstruction backbone.",
+      "published_date": "2026-10-30T05:04:43Z",
+      "url": "https://arxiv.org/abs/2610.41258v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41258v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "PBSR：基于零样本新颖视图合成的伪突发超分辨率",
+        "chinese_summary": "通过零样本新颖视图合成生成伪突发帧，将突发超分辨率技术应用于单帧输入。",
+        "pain_point": "突发超分辨率需要多帧图像，但单帧或多张历史照片无法提供此类数据。",
+        "core_value": "通过新颖视图合成生成伪突发帧，实现单帧输入的超分辨率重建。",
+        "technical_architecture": "采用新颖视图合成生成伪突发帧，并结合几何感知对齐模块进行超分辨率重建。",
+        "quantitative_results": "在BurstSR数据集上，PBSR在PSNR、SSIM和LPIPS指标上均优于单帧基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "生成的伪突发帧存在生成性伪影，需进一步优化。",
+        "key_contributions": [
+          "提出了一种基于零样本新颖视图合成的伪突发超分辨率方法",
+          "结合几何感知对齐模块，利用生成的伪突发帧进行超分辨率重建"
+        ],
+        "application_scenarios": [
+          "单帧图像的超分辨率重建",
+          "历史照片的超分辨率重建"
+        ],
+        "technical_highlights": [
+          "采用新颖视图合成生成伪突发帧",
+          "结合几何感知对齐模块进行超分辨率重建"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41257v1",
+      "source": "arxiv",
+      "title": "ReVEAL: Eliciting Role-Aware Latent Visual Evidence from MLLMs for Reasoning Video Object Segmentation",
+      "authors": [
+        "Zhongyuan Bao",
+        "Cunjie He",
+        "Lejun Zhang",
+        "Zenglin Xu",
+        "Yanwei Fu"
+      ],
+      "abstract": "Reasoning video object segmentation (ReVOS) requires segmenting the target specified by an implicit query throughout a video. Existing MLLM-based methods typically require costly cross-model alignment, tying MLLM training to a downstream segmentation model. We present ReVEAL, a decoupled thinking-with-video framework for ReVOS that elicits role-aware latent visual evidence from MLLM reasoning to directly guide segmentation. ReVEAL introduces Visual Evidence Tokens (VETs) into video reasoning to associate necessary visual regions or entities with target, background, or distractor roles, while a Dynamic Attention Layer Router adaptively aggregates VET-to-video attention across layers into role-specific grounding evidence. We train the MLLM to perform VET-augmented reasoning on our constructed ReVEAL-47K dataset, with a Contrastive Attention Grounding Loss as auxiliary supervision to apply role-specific constraints to VET attention and optimize layer routing for reliable latent grounding. At inference, ReVEAL identifies the target through this thinking-with-video process and fuses the resulting role-specific evidence to guide a frozen SAM2 in predicting target masks. Experiments on five benchmarks show that ReVEAL outperforms alignment-free baselines and remains competitive with alignment-based methods.",
+      "published_date": "2026-10-30T05:00:03Z",
+      "url": "https://arxiv.org/abs/2610.41257v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41257v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "ReVEAL：从MLLM中提取角色感知的潜在视觉证据进行推理视频对象分割",
+        "chinese_summary": "通过引入视觉证据标记和动态注意力层路由，直接引导分割，提高视频对象分割的效率。",
+        "pain_point": "现有方法需要昂贵的跨模型对齐，将MLLM训练与下游分割模型绑定。",
+        "core_value": "提出了一种解耦的视频推理框架，通过角色感知的潜在视觉证据直接引导分割，无需跨模型对齐。",
+        "technical_architecture": "引入视觉证据标记（VETs）和动态注意力层路由，实现角色特定的视觉证据引导。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要大量标注数据进行训练。",
+        "key_contributions": [
+          "引入视觉证据标记（VETs）",
+          "提出动态注意力层路由",
+          "无需跨模型对齐"
+        ],
+        "application_scenarios": [
+          "视频对象分割",
+          "视频理解"
+        ],
+        "technical_highlights": [
+          "角色感知的潜在视觉证据",
+          "动态注意力层路由"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41254v1",
+      "source": "arxiv",
+      "title": "Hawkeye: Reading Illegible Text with Vision Language Models",
+      "authors": [
+        "Brian Tang",
+        "Kang G. Shin"
+      ],
+      "abstract": "While modern Vision-Language Models (VLMs) have been remarkably successful in general scene text recognition, they consistently struggle with the long-tail distribution of text that is degraded by motion blur or low resolution. These limitations are particularly apparent in egocentric applications like smart glasses, where text is often captured in noisy environments. In this paper, we introduce the \\textbf{BSTRB} (Blurry Scene Text Recognition Benchmark), a novel benchmark of 8,398 noisy image samples with high-fidelity annotations derived from 1,699 real-world video sequences. To support this, we present \\textbf{Hawkeye}, a VLM fine-tuned on BSTRB to read and reason about illegible text by leveraging contextual priors and pixel-level alignment. Our results show that \\name matches much larger VLMs on BSTRB overall and exceeds them on text at or below 20 pixels, in a single pass suited to real-time deployment. We characterize the resolution at which current VLMs begin to fail.",
+      "published_date": "2026-10-30T04:55:58Z",
+      "url": "https://arxiv.org/abs/2610.41254v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41254v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Hawkeye：使用视觉语言模型阅读模糊文本",
+        "chinese_summary": "Hawkeye 在模糊文本识别基准上超越了大型视觉语言模型。",
+        "pain_point": "视觉语言模型在处理模糊和低分辨率文本时表现不佳。",
+        "core_value": "Hawkeye 能够在单次通过中识别低分辨率文本，适用于实时部署。",
+        "technical_architecture": "Hawkeye 通过上下文先验和像素级对齐来识别模糊文本。",
+        "quantitative_results": "Hawkeye 在模糊文本识别基准上超过大型视觉语言模型。",
+        "competitors": "大型视觉语言模型",
+        "limitations": "当前视觉语言模型在高分辨率文本识别上仍存在局限。",
+        "key_contributions": [
+          "提出了 BSTRB 基准",
+          "开发了 Hawkeye 模型",
+          "展示了单次通过识别低分辨率文本的能力"
+        ],
+        "application_scenarios": [
+          "智能眼镜",
+          "实时文本识别"
+        ],
+        "technical_highlights": [
+          "利用上下文先验",
+          "像素级对齐"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41245v1",
+      "source": "arxiv",
+      "title": "MEMIG: Self-evolving Memory Construction for Antibody Optimization",
+      "authors": [
+        "Yunhui Jang",
+        "Zach Wang",
+        "Jai Doshi",
+        "Kangway Chuang",
+        "Sidney Lisanza",
+        "Taylor Joren"
+      ],
+      "abstract": "Memory has become central to self-evolving LLM agents, which store and retrieve experience from past rollouts to guide future decisions. Existing systems represent this experience as free-form natural language and maintain it by rewriting, which fits tasks whose experience is narratable. However, in scientific discovery and optimization, experience is often a quantity measured by an oracle under a specific context. Rewriting it as text leaves no index for where a record should be, replaces a measurement with a description, and cannot express how interventions interact. To address this, we argue that agent memory for biomolecule optimization should instead be indexable, quantitative, and structured, and we introduce MEMIG. This memory construction framework realizes these three properties. In detail, MEMIG addresses each insight with a domain-grounded identifier and accumulates the quantitative effect measured by a property oracle, so that updates remain local and retrieval becomes an exact lookup. Next, MEMIG connects insights whose interventions are applied together and measures their epistasis by decomposing each evaluated set. Our results show that MEMIG improves performance in most settings across in silico antibody optimization tasks.",
+      "published_date": "2026-10-30T04:39:18Z",
+      "url": "https://arxiv.org/abs/2610.41245v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41245v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "MEMIG: 自适应记忆构建用于抗体优化",
+        "chinese_summary": "MEMIG 提出了一种新的记忆构建框架，用于提高生物分子优化性能。",
+        "pain_point": "现有系统将经验表示为自由形式的自然语言，无法有效支持科学发现和优化任务。",
+        "core_value": "MEMIG 提供了一种可索引、定量和结构化的记忆构建方法，提高了决策的精确性。",
+        "technical_architecture": "MEMIG 通过领域特定标识符和量化效果积累，实现了记忆的索引化和结构化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多应用场景下验证其有效性。",
+        "key_contributions": [
+          "提出了可索引、定量和结构化的记忆构建方法",
+          "通过领域特定标识符和量化效果积累实现精确检索",
+          "能够测量和表达干预措施的交互作用"
+        ],
+        "application_scenarios": [
+          "抗体优化",
+          "科学发现"
+        ],
+        "technical_highlights": [
+          "领域特定标识符",
+          "量化效果积累",
+          "精确检索"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41244v1",
+      "source": "arxiv",
+      "title": "A Unified Framework for Probability Estimation of Data-Dependent Events",
+      "authors": [
+        "Vitaly Feldman",
+        "Satyen Kale",
+        "Vinod Raman",
+        "Kunal Talwar",
+        "Ambuj Tewari"
+      ],
+      "abstract": "We study the general problem of estimating $D(\\dde(S))$, the probability that an unknown distribution $D$ assigns to an event determined by a sample $S$ of $n$ i.i.d.\\ draws from $D$ through a known mapping $\\dde$. The estimation algorithm knows $\\dde$ and $S$ but does not have access to any additional samples from $D$. This formulation captures classical missing mass, the data-dependent targets of adaptive data analysis and post-selection inference, and the test error of a data-trained predictor, whose estimation was recently studied by \\new{Gastpar et al.\\ (2024a,b)}. Within this framework we examine the two classical approaches to estimation. The error of the empirical plug-in estimator is exactly a generalization gap, so generalization bounds transfer to it directly. The leave-one-out estimator, which recovers the Good--Turing estimator, is accurate for every mapping that is stable under the deletion of one sample point, including new structured examples such as neighborhoods of the sample and pierced sets.   The main application of our framework is to error estimation for a predictor that combines a base classifier with memorized exceptions, a structure common in theory and in practice. For it, the test error is exactly the missing mass restricted to the error region of the base classifier, a region selected by the same sample. We formulate the general problem of \\emph{adaptive missing mass estimation} to address such dependence and propose a natural hybrid estimator, the Good--Turing estimator restricted to the selected region. We show that the generalization of the base classifier alone does not guarantee the accuracy of this estimator, and derive two bounds on its error: the first one based on the VC dimension of possible error regions and another based on the mutual information of the selected region with the sample.",
+      "published_date": "2026-10-30T04:37:40Z",
+      "url": "https://arxiv.org/abs/2610.41244v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41244v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "数据依赖事件的概率统一框架",
+        "chinese_summary": "提出了一种统一框架来估计由样本确定的数据依赖事件的概率。",
+        "pain_point": "现有方法难以处理数据依赖事件的概率估计问题。",
+        "core_value": "提供了一种通用方法，适用于多种数据依赖事件的概率估计。",
+        "technical_architecture": "基于插值和删除一个样本点的稳定性进行估计。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于特定类型的映射。",
+        "key_contributions": [
+          "提出了统一框架来估计数据依赖事件的概率",
+          "分析了两种经典估计方法的误差",
+          "扩展了Good--Turing估计的应用范围"
+        ],
+        "application_scenarios": [
+          "预测器的错误估计",
+          "自适应数据分析的目标估计"
+        ],
+        "technical_highlights": [
+          "框架适用于多种数据依赖事件",
+          "准确估计删除一个样本点后的情况"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41243v1",
+      "source": "arxiv",
+      "title": "Generative SDEs with Trainable Diffusion and Density-Based Losses",
+      "authors": [
+        "Angxiu Ni"
+      ],
+      "abstract": "We develop a divergence-kernel method for jointly optimizing neural SDE drift and diffusion fields and the initial Gaussian distribution, using losses that depend directly on the terminal density. In two- and eight-dimensional Gaussian-mixture experiments, we learn time-independent fields and obtain far fewer off-mode samples than score-based generators with similar parameter counts. The drift attracts samples toward the modes, while the diffusion helps disperse excess probability between them.",
+      "published_date": "2026-10-30T04:35:59Z",
+      "url": "https://arxiv.org/abs/2610.41243v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41243v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "math.DS"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "生成SDEs的可训练扩散和基于密度的损失方法",
+        "chinese_summary": "提出了一种联合优化神经SDE漂移和扩散场及初始高斯分布的方法，使用直接依赖于终端密度的损失函数。",
+        "pain_point": "现有生成模型在高维数据上生成模式外样本较多。",
+        "core_value": "通过直接依赖于终端密度的损失函数，减少模式外样本，提高生成质量。",
+        "technical_architecture": "使用发散核方法优化神经SDE的漂移和扩散场及初始高斯分布。",
+        "quantitative_results": "在二维和八维高斯混合实验中，获得更少的模式外样本。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在高维数据上进行了实验验证。",
+        "key_contributions": [
+          "提出了一种新的损失函数，直接依赖于终端密度。",
+          "在高维数据生成任务中表现出色，生成的样本更集中在模式上。",
+          "联合优化神经SDE的漂移和扩散场及初始分布"
+        ],
+        "application_scenarios": [
+          "高维数据生成",
+          "模式识别"
+        ],
+        "technical_highlights": [
+          "直接依赖于终端密度的损失函数",
+          "联合优化神经SDE的漂移和扩散场及初始分布"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2610.41236v1",
+      "source": "arxiv",
+      "title": "Experts Exhibit Structured Redundancy: Structure-Preserving Expert Pruning for Mixture-of-Experts Large Language Models",
+      "authors": [
+        "Tian Wang",
+        "Yongding Tao",
+        "Yihong Dong",
+        "Xiaoming Wu",
+        "Ying Guo",
+        "Ge Li"
+      ],
+      "abstract": "Sparse MoE mechanism significantly improves the trade-off between model capacity and inference efficiency. However, practical deployment still requires storing all experts, resulting in substantial memory overhead. We show that expert outputs in MoE layers exhibit structured redundancy. Across different models and task categories, the stable rank and entropy effective rank of expert outputs are consistently far below the nominal number of experts, while expert output distributions also exhibit fewer effective modes. Motivated by these observations, we reformulate expert pruning as a structure-preserving expert subset selection problem and efficiently optimize it via a greedy strategy, rather than only independently scoring and ranking individual experts or exhaustively searching over expert combinations. We propose two expert pruning methods under the unified structure-preserving framework: Projection Energy Expert Pruning (PEEP), which preserves the functional subspace by maximizing weighted projection energy, and Distributional Coverage Expert Pruning (DCEP), which preserves the distributional geometry by minimizing weighted coverage error. Both methods incorporate router-derived weights as priors, enabling them to jointly preserve the global structural relationships among experts while accounting for the local importance of individual experts. Experiments on DeepSeek-V2-Lite and Qwen3-30B-A3B demonstrate that, at the expert retention ratios of 75% and 50%, our methods outperform the state-of-the-art baselines on the majority of benchmarks and consistently achieve the best average performance across both general tasks and mathematical reasoning tasks.",
+      "published_date": "2026-10-30T04:21:25Z",
+      "url": "https://arxiv.org/abs/2610.41236v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41236v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "专家表现出结构冗余：MoE 大语言模型中结构保留专家剪枝",
+        "chinese_summary": "提出结构保留专家剪枝方法，通过最大化投影能量和最小化覆盖误差实现专家子集选择。",
+        "pain_point": "MoE 模型在实际部署中需要存储所有专家，导致内存开销大。",
+        "core_value": "通过结构保留方法有效减少专家数量，提高模型效率。",
+        "technical_architecture": "提出 Projection Energy Expert Pruning (PEEP) 和 Distributional Coverage Expert Pruning (DCEP) 方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在 MoE 大语言模型中验证。",
+        "key_contributions": [
+          "提出结构保留专家剪枝方法",
+          "提出 Projection Energy Expert Pruning (PEEP) 方法",
+          "提出 Distributional Coverage Expert Pruning (DCEP) 方法"
+        ],
+        "application_scenarios": [
+          "大语言模型剪枝",
+          "提高模型效率"
+        ],
+        "technical_highlights": [
+          "最大化投影能量",
+          "最小化覆盖误差"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

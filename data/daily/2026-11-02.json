@@ -1,0 +1,542 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-03T03:52:35.036193+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.36545",
+      "source": "huggingface",
+      "title": "FrameForge: Harnessing Priors of Video Foundation Models for Unified Image Generation",
+      "authors": [
+        "Yijing Lin",
+        "Zhendong Mao",
+        "Mengqi Huang",
+        "Yuxin Wang",
+        "Yongdong Zhang"
+      ],
+      "abstract": "Unified conditional image generation requires a single model to preserve different aspects of a visual input while producing a target image that follows textual guidance. Pretrained video models provide a promising foundation by encoding visual transformations across time, yet existing approaches typically assign the condition and target to fixed temporal positions. We observe that condition-target relationships vary substantially across generation tasks, while video models naturally encode visual transformations at different temporal scales. This motivates us to model conditional generation through input-adaptive virtual temporal relations. We propose FrameForge, which captures two complementary aspects of such relations. Mixture of Temporal Experts (MoTE) models how far the target lies from the condition by dynamically selecting temporal RoPE experts with different virtual intervals. Chain of Temporal Reasoning (CoTR) models how the condition is transformed into the target through a latent intermediate state, with a reasoning-bottleneck attention mask encouraging information propagation through this pathway. Experiments on DreamBench, COCO2017, and GEdit-Bench show that FrameForge achieves superior performance in subject-driven generation, canny-to-image generation, and image editing among the compared methods.",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.36545",
+      "pdf_url": "https://arxiv.org/pdf/2610.36545",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.36545",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 112,
+      "hot_score": 1120,
+      "structured_summary": {
+        "chinese_title": "FrameForge：利用视频基础模型先验统一图像生成",
+        "chinese_summary": "通过输入自适应虚拟时间关系，FrameForge 提高了图像生成的灵活性和准确性。",
+        "pain_point": "现有方法通常将条件和目标固定在时间轴上的特定位置，无法适应不同生成任务的需求。",
+        "core_value": "通过 MoTE 和 CoTR 模型，FrameForge 能够灵活地处理条件和目标之间的关系，提高生成质量。",
+        "technical_architecture": "采用 Mixture of Temporal Experts (MoTE) 和 Chain of Temporal Reasoning (CoTR) 模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前仅在特定数据集上进行了实验，未来需要在更多场景下验证。",
+        "key_contributions": [
+          "提出输入自适应虚拟时间关系模型",
+          "引入 MoTE 和 CoTR 模型"
+        ],
+        "application_scenarios": [
+          "视频到图像生成",
+          "图像编辑"
+        ],
+        "technical_highlights": [
+          "灵活处理条件和目标之间的关系",
+          "提高生成图像的质量和多样性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.42053",
+      "source": "huggingface",
+      "title": "REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control",
+      "authors": [
+        "Pengfei Zhou",
+        "Yixing Ma",
+        "Zhengfeiyang Zhang",
+        "Haoyuan Chen",
+        "Zhenglin Wan",
+        "Hexin Wang",
+        "Wangbo Zhao",
+        "Yang You"
+      ],
+      "abstract": "Foundation models are becoming remarkably reliable at high-level reasoning, yet they remain too slow and costly to serve as fine-grained controllers. Conversely, fast policies like VLAs and whole-body controllers offer more efficient reflexes, but struggle to generalize. While pairing a deliberative brain (foundation models) with a reactive cerebellum (fast policies) seems natural for embodied systems, two obstacles remain: methods are built and scored on incompatible stacks, and their asynchronous coordination is difficult. For example, an agent that calls the VLA in the agentic loop can stall the fast execution, while a VLA that calls the agent on errors tends to re-trigger fallbacks repeatedly or completely miss silent failures. To address this, we propose REA (Routed Embodied Agent), a unified runtime where a deliberative System 2, an embodied router System 1 and reactive System 0 policies cooperate under a single golden rule - no running policy waits on the brain. Instead of querying the brain at each failure, REA employs a route memory that stores each policy's measured success ahead of time, a boundary-triggered judge gate that consults the brain on policy execution, and a shared-budget escalation ladder for bounded recovery. Evaluated on 3,000 test episodes across 60 LIBERO-Pro tasks, REA reaches 95.9% success and beats the best single-agent baseline in its own policy pool (94.7%) while reducing control steps by 25% and control time by 17%. In a separate 100-episode RoboTwin 2.0 study, REA achieves 84% success with VLA policies and 86% with VLA+code, compared with 80% for the strongest single VLA baseline MEDex. These results demonstrate learned and programmatic policies operating within the same runtime. REA also transfers to BEHAVIOR-1K and a real Unitree G1 humanoid, achieving the highest observed success among the compared methods.",
+      "published_date": "2026-10-30T17:18:13.000Z",
+      "url": "https://arxiv.org/abs/2610.42053",
+      "pdf_url": "https://arxiv.org/pdf/2610.42053",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.42053",
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 100,
+      "hot_score": 1000,
+      "structured_summary": {
+        "chinese_title": "REA：一种异步大脑-小脑控制的路由体态代理运行时",
+        "chinese_summary": "REA 提出了一种新的运行时架构，使体态代理能够高效地结合深思熟虑的大脑和反应式的小脑。",
+        "pain_point": "现有方法在协调异步大脑和小脑时存在障碍，导致执行效率低下和错误处理困难。",
+        "core_value": "REA 提供了一种统一的运行时架构，确保没有运行中的策略等待大脑响应，提高了执行效率。",
+        "technical_architecture": "REA 使用路由记忆、边界触发的法官门和策略执行机制来实现异步协调。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "REA 的有效性仍需在更多实际场景中验证。",
+        "key_contributions": [
+          "提出了 REA 运行时架构",
+          "解决了异步协调问题"
+        ],
+        "application_scenarios": [
+          "体态代理控制",
+          "复杂环境下的智能交互"
+        ],
+        "technical_highlights": [
+          "路由记忆机制",
+          "边界触发的法官门"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.22740",
+      "source": "huggingface",
+      "title": "R^2Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
+      "authors": [
+        "Mingda Zhang",
+        "Yun Huang",
+        "Qiang Huang",
+        "Yanjin Li",
+        "Rui Qian",
+        "Qichao Zhao",
+        "Tiesunlong Shen",
+        "Na Zhao",
+        "Jian Wang",
+        "Xiaoying Tang"
+      ],
+      "abstract": "In recent years, agentic orchestration has been widely applied to solve complex human tasks. However, existing orchestration learning still faces key challenges, including hand-designed curricula, advantage collapse when a task's rollouts all reach the same outcome, and unreliable evaluation signals that judge each skill by one noisy score. To address these challenges, we propose R^2Orch, a new paradigm of Recursive Self-Play Orchestration: an inner loop of self-play that improves the orchestrator on self-chosen tasks, and an outer loop that improves how the inner loop improves. To support this paradigm, we introduce Recursive Learnability, a training objective that rewards a Proposer for choosing tasks whose rollouts keep reaching different outcomes as skills are withdrawn. Built on this objective, we further propose Skill Withdrawal, in which the outer loop withdraws each skill once a controlled evaluation within self-play shows that the orchestrator performs as well without it. Moreover, the two loops form one cycle: failures are distilled into skills, skills into parameters, and withdrawals lead the Proposer to new failures, so the orchestrator moves toward zero-skill deployment. Experimental results on twelve datasets show that R^2Orch consistently outperforms baselines across question answering, math, code, and interactive tasks. Our code is available at https://github.com/beita6969/R2Orch.",
+      "published_date": "2026-10-22T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.22740",
+      "pdf_url": "https://arxiv.org/pdf/2610.22740",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.22740",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 90,
+      "hot_score": 900,
+      "structured_summary": {
+        "chinese_title": "R^2Orch: 递归自我改进的代理编排方法",
+        "chinese_summary": "提出了一种新的递归自我博弈编排方法，通过自我选择任务的内循环和改进内循环的外循环来解决现有编排学习的关键挑战。",
+        "pain_point": "现有编排学习面临手设计的课程、优势崩溃和不可靠的评估信号等问题。",
+        "core_value": "通过递归自我改进和技能撤销，提高了编排学习的效率和可靠性。",
+        "technical_architecture": "内循环通过自我选择任务进行自我改进，外循环改进内循环的改进方式。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证在更复杂任务上的适用性。",
+        "key_contributions": [
+          "提出递归自我改进的编排学习方法",
+          "引入递归可学习性作为训练目标",
+          "提出技能撤销机制"
+        ],
+        "application_scenarios": [
+          "复杂任务的代理编排",
+          "多代理协同工作"
+        ],
+        "technical_highlights": [
+          "通过自我选择任务的内循环和改进内循环的外循环实现递归自我改进",
+          "技能撤销机制使得编排学习更加高效和可靠"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.39497",
+      "source": "huggingface",
+      "title": "Does Scaling Toward AGI Depend on What System-1 Lets System-2 Execute?",
+      "authors": [
+        "Qi Wang",
+        "Yun Qu",
+        "Lizhou Cai",
+        "Heming Zou",
+        "Haoang Chi",
+        "Yiqin Lv",
+        "Xiang Li",
+        "Haiyan Feng",
+        "Mengyu Ge",
+        "Yize Geng",
+        "Yuhang Jiang",
+        "Yixiu Mao",
+        "Xiangyang Ji"
+      ],
+      "abstract": "Progress toward artificial general intelligence (AGI) has largely relied on scaling a resource-intensive executive, System-2, through larger models, more data and compute, longer reasoning, and more agents. We ask whether the next stage may come instead from co-designing it with System-1, a lightweight, semantically aware predictor that evaluates candidate interactions before execution, so that System-2 acts only on those worth their cost. Our answer is a qualified yes. We study conditional interaction, a predict--gate--execute--update loop: System-1 estimates each candidate's utility, System-2 executes those admitted by an adaptive threshold, and the outcomes update System-1. The loop spans training, test-time reasoning, adaptive decision-making, and agentic tool use, with utility and cost defined by the application. Under ideal screening and equal execution costs, execution compute falls by a factor approaching 1/ρ_u, where ρ_u is the density of utility-relevant interactions (cost-weighted when costs differ); prediction errors, exploration, and distribution shift reduce the saving. We bound selection regret by predictor error and the utility margin. These results motivate our central hypothesis: ρ_u is a measurable coordinate of scaling efficiency and makes informative compute a better description of scaling than total compute.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.39497",
+      "pdf_url": "https://arxiv.org/pdf/2610.39497",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.39497",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "通向AGI的扩展是否依赖于System-1与System-2的协同设计？",
+        "chinese_summary": "提出通过协同设计System-1与System-2来降低执行成本，提升AGI效率。",
+        "pain_point": "当前AGI研究主要依赖于扩展资源密集型System-2，但可能忽视了轻量级的System-1的作用。",
+        "core_value": "通过预测-筛选-执行-更新循环，降低执行成本，提高AGI系统的效率。",
+        "technical_architecture": "提出了一种预测-筛选-执行-更新的循环机制。",
+        "quantitative_results": "在理想情况下，执行计算量可减少至约1/ρ_u，其中ρ_u是具有实用性的交互密度。",
+        "competitors": "暂无对比信息",
+        "limitations": "预测误差、探索和分布偏移会减少节省效果。",
+        "key_contributions": [
+          "提出了一种新的预测-筛选-执行-更新循环机制",
+          "量化了执行成本的潜在节省"
+        ],
+        "application_scenarios": [
+          "AGI系统设计",
+          "智能决策系统"
+        ],
+        "technical_highlights": [
+          "轻量级预测器System-1与资源密集型执行器System-2的协同设计",
+          "通过预测筛选降低执行成本"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.40738",
+      "source": "huggingface",
+      "title": "Apriel Voice 27B Preview: An Open Model for Speech, Reasoning, and Tool Use",
+      "authors": [
+        "Aman Tiwari",
+        "Akshay Kalkunte",
+        "Akintunde Oladipo",
+        "Jash Shah",
+        "Tara Bogavelli",
+        "Hoang Nguyen",
+        "Nishanth Madhusudhan",
+        "Vishal Juneja",
+        "Sridhar Nemala",
+        "Srinivas Sunkara",
+        "Sathwik Tejaswi Madhusudhan",
+        "Shruthan Radhakrishna",
+        "Masoud Hashemi",
+        "Kelechi Ogueji",
+        "Khalil Slimi",
+        "Saloni Mittal",
+        "Pulkit Pattnaik",
+        "Shashank Maiya",
+        "Dhruv Jhamb",
+        "Esakkivel Esakkiraja",
+        "Katrina Stankiewicz",
+        "Gabrielle Gauthier Melançon",
+        "Fanny Riols",
+        "Amit Saha",
+        "Lakshmi Sirisha Chodisetty",
+        "Nitin Aggarwal",
+        "Anil Madamala",
+        "Sagar Davasam",
+        "Segan Subramanian",
+        "Vikas Yadav",
+        "Sai Rajeswar Mudumba"
+      ],
+      "abstract": "A capable voice assistant must do more than recognize words; it must understand requests, reason over context, sustain conversations, and act through tools. We present Apriel Voice 27B Preview, an open speech-language model that unifies these capabilities within a shared reasoning backbone while retaining text and image input modalities. Built on the post-trained Gemma 4 26B-A4B checkpoint, Apriel Voice directly processes speech and generates both responses and tool calls without requiring a separate dialogue model. We introduce a two-stage training procedure to adapt the model to speech. The first stage establishes the speech interface, while the second jointly adapts the projector and backbone through supervised fine-tuning, text replay, and source-dependent cross-entropy and forward Kullback--Leibler divergence supervision. Automatically constructed speech-conditioned dialogues provide conversational training data, while local teacher serving, overlapping teacher and student computation, and fused full-vocabulary losses enable efficient online distillation. In thinking mode, Apriel Voice achieves a score of 98.90 on Big Bench Audio, 81.13 on Speech-BFCL, and a task success rate of 65.51% on τ-Voice, with a mean latency of 1.91 seconds. It also achieves 51.27% English EVA accuracy and 74.13% experience pass@1. Finally, we deploy Apriel Voice 27B Preview on a custom serving platform to support interactive voice interactions.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.40738",
+      "pdf_url": "https://arxiv.org/pdf/2610.40738",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.40738",
+      "category": "llm",
+      "tags": [
+        "cs.SD",
+        "cs.CL",
+        "cs.LG",
+        "eess.AS"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "Apriel Voice 27B 预览：一种统一语音、推理和工具使用的开放模型",
+        "chinese_summary": "Apriel Voice 27B 预览通过共享推理骨干和两阶段训练方法，实现了语音理解和生成。",
+        "pain_point": "现有语音助手无法有效理解请求、维持对话并执行工具操作。",
+        "core_value": "统一语音、推理和工具使用能力，提升语音助手的综合性能。",
+        "technical_architecture": "基于 Gemma 4 26B-A4B 检查点，采用两阶段训练方法。",
+        "quantitative_results": "在 Big Bench Audio 和 Speech-BFCL 上取得优异成绩。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步优化模型性能。",
+        "key_contributions": [
+          "提出两阶段训练方法",
+          "实现直接处理语音和生成响应",
+          "引入自动构建的对话数据"
+        ],
+        "application_scenarios": [
+          "智能助手",
+          "语音交互系统"
+        ],
+        "technical_highlights": [
+          "共享推理骨干",
+          "两阶段训练方法",
+          "自动构建对话数据"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.37481",
+      "source": "huggingface",
+      "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
+      "authors": [
+        "Saket Reddy",
+        "Amro Abbas",
+        "Anshuman Suri",
+        "Ari Morcos",
+        "David Schwab",
+        "Pratyush Maini"
+      ],
+      "abstract": "Fine-tuning Large Language Models (LLMs) on instruction data can quietly erode their safety, even when no training example looks harmful. Because this safety-degrading data looks benign, standard content filters struggle to catch it. We tackle this problem by developing SimpleLoRIF, a scalable gradient embedding method that identifies fine-tuning examples whose gradients align with unsafe behavior. By simplifying a low-rank attribution method and restricting backpropagation to the final four transformer blocks, SimpleLoRIF can embed datasets on the order of a million examples, boosting gradient attribution from a small-scale analysis tool into a practical filter for full post-training datasets. We first validate it on emergent misalignment, where we find that gradients can connect insecure-code training data to the broadly harmful behaviors that appear after fine-tuning, with AUC as high as 0.865 in the gradient space of misaligned models. We then use SimpleLoRIF to build SafeTulu, a version of Tulu 3 with the 20% of examples most gradient-aligned with unsafe responses removed. Training on SafeTulu reduces GCG attack success rate by up to 22% across Qwen, Llama, and Olmo, outperforming both LLM-as-a-judge and prior gradient-based filtering, while largely preserving or even improving capability. Finally, we analyzed the removed data and identify possibly under-studied sources of safety degradation, such as tool-execution failures and narrative arithmetic. We release SafeTulu along with a Hugging Face Space that lets researchers build their own customized versions of SafeTulu to fine-tune on, such as by changing the removal fraction or filtering only certain subsets.",
+      "published_date": "2026-10-27T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.37481",
+      "pdf_url": "https://arxiv.org/pdf/2610.37481",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.37481",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "跟随梯度：追踪训练数据中的安全性退化",
+        "chinese_summary": "通过SimpleLoRIF方法识别与不良行为梯度对齐的微调示例，构建SafeTulu以提高模型安全性。",
+        "pain_point": "大型语言模型微调时，看似无害的数据会悄悄侵蚀模型的安全性。",
+        "core_value": "提出SimpleLoRIF方法，有效识别和过滤微调数据中的不良行为，提升模型安全性。",
+        "technical_architecture": "开发了SimpleLoRIF，一种可扩展的梯度嵌入方法，简化低秩归因并限制反向传播。",
+        "quantitative_results": "SafeTulu训练后，GCG攻击成功率降低最多22%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定模型和攻击场景下进行了验证。",
+        "key_contributions": [
+          "提出SimpleLoRIF方法",
+          "有效过滤微调数据中的不良行为",
+          "提升模型安全性"
+        ],
+        "application_scenarios": [
+          "大型语言模型的安全性提升",
+          "微调数据的安全性筛选"
+        ],
+        "technical_highlights": [
+          "简化低秩归因方法",
+          "限制反向传播范围"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.42149",
+      "source": "huggingface",
+      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+      "authors": [
+        "Byungwoo Jeon",
+        "Yoonwoo Jeong",
+        "Hyunseok Lee",
+        "Minsu Cho",
+        "Jinwoo Shin"
+      ],
+      "abstract": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
+      "published_date": "2026-10-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.42149",
+      "pdf_url": "https://arxiv.org/pdf/2610.42149",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.42149",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "连续空间中的潜在推理统一多模态模型",
+        "chinese_summary": "LARC 框架通过在连续空间中进行潜在推理，显著提升了多模态模型在图像生成任务中的表现。",
+        "pain_point": "现有模型在利用语言链式推理进行图像生成时表现不佳。",
+        "core_value": "通过在连续空间中进行潜在推理，解决了模态不匹配的问题，提升了模型的细粒度可控性和测试时的扩展性。",
+        "technical_architecture": "LARC 框架包括两个阶段：课程监督微调和信息增益强化学习。",
+        "quantitative_results": "在多种文本到图像生成基准测试中，LARC 保持了一致的性能提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能需要探索更多应用场景。",
+        "key_contributions": [
+          "提出了在连续空间中进行潜在推理的新框架",
+          "通过两个训练阶段逐步实现潜在推理"
+        ],
+        "application_scenarios": [
+          "多模态理解",
+          "图像生成"
+        ],
+        "technical_highlights": [
+          "解决了模态不匹配问题",
+          "引入了课程监督微调和信息增益强化学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.16927",
+      "source": "huggingface",
+      "title": "WeFair: Fidelity-Aware Alignment from Human Feedback for Personalized Query Rewriting in Short-Video Search",
+      "authors": [
+        "Yingtao Ren",
+        "Aolin Li",
+        "Cheng Cheng",
+        "Huiyun Hu",
+        "Huasheng Liang",
+        "Baoxing Xie",
+        "Jun Yuan",
+        "Haijun Wu",
+        "Yiwei Fu",
+        "Chenxing Wang"
+      ],
+      "abstract": "Short-video search needs compact query rewriters that recover users' personalized intent from ambiguous queries under strict latency constraints. Existing LLM-based methods have improved rewriting by using synthetic reasoning and subsequent consumption-behavioral feedback. However, overemphasizing subsequent consumption can favor engaging content over the user's immediate need, causing intent drift even when rewritten queries are grounded in behavioral history. We propose WeFair, Fidelity-Aware Alignment from Human Feedback for Personalized Query Rewriting in WeChat short-video search. WeFair uses human feedback according to how directly it reflects personalized intent, assigning feedback fidelity to a progression from demonstration to preference to verification. We first mine actual queries and user reformulations from search sessions, and then screen them for contextual support. In the demonstration stage, a supervised fine-tuning curriculum progresses from large-scale context-to-query learning to reasoning and direct prediction on human reformulation and preservation. In the preference stage, direct preference optimization learns relative preferences from subsequent consumption feedback. In the verification stage, group relative policy optimization rewards exact agreement with reformulation or preservation targets to constrain intent drift. Further analysis shows that broad supervision benefits the full curriculum supervised training, while strict verification achieves better performance than auxiliary rewards. In offline experiments, WeFair-2B outperforms strong rewriting baselines in overall accuracy and intent preservation. An online A/B test shows relative increases of 2.593% in effective video-view rate and a 2.350% relative reduction in query reformulation rate. WeFair-2B has been deployed in the WeChat short-video search system, which serves over 100 million queries per day.",
+      "published_date": "2026-10-30T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.16927",
+      "pdf_url": "https://arxiv.org/pdf/2610.16927",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.16927",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "WeFair：面向微信短视频搜索的基于人类反馈的忠实度感知个性化查询重写",
+        "chinese_summary": "WeFair 使用忠实度感知的人类反馈进行个性化查询重写，解决意图漂移问题。",
+        "pain_point": "现有方法过度强调后续消费行为，导致意图漂移。",
+        "core_value": "通过忠实度感知的人类反馈，提高查询重写的忠实度。",
+        "technical_architecture": "采用监督微调课程，从大规模上下文到查询学习到直接预测。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在大规模数据集上进一步验证。",
+        "key_contributions": [
+          "提出忠实度感知的人类反馈机制",
+          "采用监督微调课程进行查询重写",
+          "解决意图漂移问题"
+        ],
+        "application_scenarios": [
+          "短视频搜索",
+          "个性化推荐"
+        ],
+        "technical_highlights": [
+          "忠实度感知的人类反馈",
+          "监督微调课程"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.35850",
+      "source": "huggingface",
+      "title": "OSWAM: An Effective World Action Model with One-Step Action Generation",
+      "authors": [
+        "Guowen Zhang",
+        "Liyi Chen",
+        "Xu Hu",
+        "Pengfei Wang",
+        "Jingfan Chen",
+        "Chenhang He",
+        "Lei Zhang"
+      ],
+      "abstract": "Direct-policy World Action Models (WAM) have demonstrated the benefits of decoupling action generation from explicit future visual prediction for efficient inference in autonomous driving and embodied control. However, they still require tens of denoising steps to achieve competitive action quality, incurring substantial latency and hindering real-time deployment. Simply reducing the number of denoising steps will collapse the nonlinear multi-step denoising trajectory into coarse updates, substantially degrading action quality. To reduce the denoising steps while enabling real-time action generation, we present an effective world action model with one-step action generation, namely OSWAM, for autonomous driving and embodied control. We argue that it is the absence of structured action priors in random noise initialization that forces direct-policy WAMs to recover coherent action sequences through iterative denoising. Hence, we construct imagination tokens to initialize the diffusion process, providing physical priors and action-conditioned representations. We further introduce privileged information distillation with future conditioning to enhance future-aware action generation. As a result, OSWAM can efficiently and effectively generate high quality actions in just one diffusion step. Our experiments demonstrate that OSWAM achieves comparable or even better results in both autonomous driving and embodied control than direct-policy WAM and Joint-WAM that require tens of steps. It obtains approximately 3times speedup over direct-policy WAM baselines and supports real-time compiled inference with latency as low as 40ms on an NVIDIA RTX 5090 GPU. The project page is available at https://gwenzhang.github.io/OSWAM/",
+      "published_date": "2026-10-26T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.35850",
+      "pdf_url": "https://arxiv.org/pdf/2610.35850",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.35850",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "OSWAM：一种有效的一步动作生成世界动作模型",
+        "chinese_summary": "提出了一种一步生成动作的世界动作模型OSWAM，以减少延迟并实现实时动作生成。",
+        "pain_point": "现有直接策略世界动作模型需要大量去噪步骤，导致延迟高，难以实时部署。",
+        "core_value": "通过一步生成动作减少延迟，提高实时性，同时保持动作质量。",
+        "technical_architecture": "利用想象令牌初始化扩散过程，提供物理先验和动作条件表示。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证模型在更复杂场景下的表现。",
+        "key_contributions": [
+          "提出了一种一步生成动作的世界动作模型OSWAM",
+          "引入了想象令牌和未来条件下的特权信息蒸馏",
+          "显著减少了去噪步骤，提高了实时性"
+        ],
+        "application_scenarios": [
+          "自主驾驶",
+          "具身控制"
+        ],
+        "technical_highlights": [
+          "一步生成动作减少延迟",
+          "提供物理先验和动作条件表示"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.40339",
+      "source": "huggingface",
+      "title": "Wizard: Manipulate Any World in Real Time via Agentic Control",
+      "authors": [
+        "Yuzhe Wu",
+        "Zijun Lin",
+        "Yeying Jin"
+      ],
+      "abstract": "Recent advances in video world models have enabled the generation of increasingly realistic and interactive virtual environments, opening new possibilities for player-customizable gameplay. Agentic frameworks further advance this direction by decoupling explicit game logic and controllable world representations from visual generation. However, existing approaches support only simple game settings and predefined motion patterns, generalize poorly to unseen environments and characters, and offer limited real-time interactivity. In this paper, we introduce Wizard, an agentic game world model that enables real-time, precise control over character motions while generalizing zero-shot across novel scenes, characters, and actions. To achieve this, we construct a diverse dataset spanning 750 scenes and 178 characters, incorporating skeleton and geometry information as structured representations. We leverage these representations as intermediate proxies to condition a video generation model, together with an adaptive masking mechanism that improves alignment between the conditioning signals and generated video rollouts. Furthermore, we introduce an agentic framework that explicitly maintains and updates game states, allowing players to freely configure their virtual worlds and exercise fine-grained control over character motions while preserving visual quality and gameplay consistency. By combining agentic control with structured proxy-based generation, our framework unlocks new possibilities for player-driven game creation with real-time, generalizable, and mechanically consistent world simulation.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.40339",
+      "pdf_url": "https://arxiv.org/pdf/2610.40339",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.40339",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "Wizard: 实时操控任意世界的智能框架",
+        "chinese_summary": "实现对虚拟角色动作的实时精确控制，支持新场景、角色和动作的零样本泛化。",
+        "pain_point": "现有方法支持简单游戏设置，难以实现实时交互和新环境、角色的泛化。",
+        "core_value": "提供实时、精确的虚拟角色控制，支持零样本泛化。",
+        "technical_architecture": "构建包含骨架和几何信息的多样化数据集，结合自适应掩码机制优化生成模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集和模型适应性有待进一步提升。",
+        "key_contributions": [
+          "构建包含骨架和几何信息的多样化数据集",
+          "引入自适应掩码机制优化生成模型",
+          "实现对虚拟角色动作的实时精确控制"
+        ],
+        "application_scenarios": [
+          "游戏开发",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "支持新场景、角色和动作的零样本泛化",
+          "结合自适应掩码机制优化生成模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

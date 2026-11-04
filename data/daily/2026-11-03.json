@@ -1,0 +1,615 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-04T02:56:20.142474+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.01860",
+      "source": "huggingface",
+      "title": "Advances in Agentic Computer Graphics",
+      "authors": [
+        "Hengyu Liu",
+        "Jihyeon Je",
+        "Ruiqi Wang",
+        "Mingxuan Wu",
+        "Haven Feng",
+        "Qixing Huang",
+        "Georgios Pavlakos",
+        "Hao Zhang",
+        "Jiajun Wu",
+        "Maneesh Agrawala",
+        "Leonidas Guibas",
+        "R. Kenny Jones",
+        "Shangzhe Wu",
+        "Guandao Yang"
+      ],
+      "abstract": "Computer graphics is built on code. Large language model (LLM) agents can now generate graphics code and iteratively refine it through various feedback. This capability opens the door to a potentially new paradigm of computer graphics, with graphics algorithms increasingly built around agentic systems to automate progressively complex tasks. Over the past years, research on agentic graphics has expanded rapidly across a diverse range of tasks. This rapid growth makes it increasingly difficult for manual literature reviews to keep pace with new developments. At the same time, similar ideas are often described using different terminology across these tasks, further complicating efforts to develop a systematic understanding of the field. In this report, we address these challenges through two contributions. First, we introduce a unified taxonomy for characterizing agentic systems across diverse computer graphics tasks. Second, we develop an agentic literature system that can assist human researchers in analyzing existing and newly published papers at scale. Building on these contributions, we analyze emerging research trends and discuss open challenges in coordinating agents and tools across graphics tasks, designing interfaces and representations for human-agent collaboration, sustaining long-horizon planning and refinement, and reliably evaluating interactive graphics systems.",
+      "published_date": "2026-11-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.01860",
+      "pdf_url": "https://arxiv.org/pdf/2611.01860",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.01860",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 112,
+      "hot_score": 1120,
+      "structured_summary": {
+        "chinese_title": "代理计算机图形学进展",
+        "chinese_summary": "提出了一种统一的代理系统分类法，并开发了一个代理文献系统来辅助研究人员分析现有和新发表的论文。",
+        "pain_point": "代理图形学领域快速发展，难以跟上新发展，且不同任务中使用不同的术语描述相似的想法。",
+        "core_value": "提供了一种统一的分类法和文献系统，有助于系统地理解代理图形学领域。",
+        "technical_architecture": "开发了一个代理文献系统来辅助研究人员。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究如何协调代理和工具。",
+        "key_contributions": [
+          "提出了一种统一的代理系统分类法",
+          "开发了一个代理文献系统"
+        ],
+        "application_scenarios": [
+          "计算机图形学研究",
+          "代理系统开发"
+        ],
+        "technical_highlights": [
+          "统一分类法",
+          "代理文献系统"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.00859",
+      "source": "huggingface",
+      "title": "Wave Forcing: Towards Speed-of-Light Streaming Video Generation",
+      "authors": [
+        "Yijie Jin",
+        "Yuxuan Liu",
+        "Jiajun Xu",
+        "Ye Huang",
+        "Chuzhi Wang",
+        "Jiayang Li",
+        "Ruiyang Chen",
+        "Chenling Hong",
+        "Xu Wang",
+        "Zhijie Deng"
+      ],
+      "abstract": "Real-time long-video generation requires continuous output with consistent appearance and natural motion. Existing chunk-wise autoregressive methods face challenges in both generation efficiency and long-video quality: serialized denoising and history-cache refresh require two forward passes even with one-step denoising, and longer rollouts can degrade quality and cause camera drift. We propose Wave Forcing (WF), which co-designs generation, training, and execution for continuous video output with multi-step denoising. WF uses chunk-wise causal attention to access earlier, cleaner chunks before their denoising is complete, and distributes staggered denoising and cache-refresh stages across full-model replicas to achieve 1F1C: one output chunk per concurrent forward round after pipeline fill. To adapt the model to this continuous generation process, we develop a three-stage training procedure that successively introduces mixed-noise denoising, motion supervision, and causal adaptation using self-generated history. To execute this process efficiently, Wave Runtime (WaveRT) uses Wave Parallelism (WP) for early K/V delivery and communication-computation overlap, together with optimized kernels and pipelined VAE decoding. Experiments on Wan2.1-T2V-1.3B show that 5-step WF maintains overall quality comparable to Rolling Forcing while achieving higher Dynamic Degree on both short and long videos. Our system efficiency experiments show that 4-step WF achieves 147.6 DiT FPS and 134.8 end-to-end FPS on eight H200 GPUs, yielding 7.07x the single-GPU end-to-end throughput. In DiT-only tests with matched SageAttention+W8A8 backends, denoising steps, and GPU counts, WP delivers up to 2.53x the throughput of the faster of the Ulysses and Ring context-parallel baselines across six model scales (1.3B-14B).",
+      "published_date": "2026-10-31T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.00859",
+      "pdf_url": "https://arxiv.org/pdf/2611.00859",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.00859",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.DC"
+      ],
+      "upvotes": 110,
+      "hot_score": 1100,
+      "structured_summary": {
+        "chinese_title": "波驱动：迈向光速流式视频生成",
+        "chinese_summary": "Wave Forcing 提出了多步去噪和分布式去噪刷新，实现连续视频输出。",
+        "pain_point": "现有方法在生成效率和视频质量上存在挑战。",
+        "core_value": "通过多步去噪和分布式刷新，提高生成效率和视频质量。",
+        "technical_architecture": "使用分块因果注意力访问未完全去噪的早期块，实现1F1C。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步优化模型适应连续生成过程。",
+        "key_contributions": [
+          "提出波驱动方法实现连续视频生成",
+          "开发三阶段训练程序",
+          "设计波并行实现高效执行"
+        ],
+        "application_scenarios": [
+          "流式视频生成",
+          "实时视频处理"
+        ],
+        "technical_highlights": [
+          "分块因果注意力机制",
+          "波并行实现早期K/V交付"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.03126",
+      "source": "huggingface",
+      "title": "CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements",
+      "authors": [
+        "Xinlei Yu",
+        "Gen Li",
+        "Ji Zhao",
+        "Zhangquan Chen",
+        "Congcong Wang",
+        "Shuai Dong",
+        "Zelin Peng",
+        "Yuqi Xu",
+        "Hongrui Wu",
+        "Kaiwen Tuo",
+        "Cheng Yang",
+        "Kaituo Feng",
+        "Yifan Wu",
+        "Jiayi Zhang",
+        "Dongming Wu",
+        "Wenqi Shao",
+        "Jiaqi Wang",
+        "Xiangyu Yue"
+      ],
+      "abstract": "Despite recent advances in CUAs, their development remains constrained by the limited diversity, controllability, and reliability of interaction data. Moreover, conventional optimization pipelines lack iterative feedback, while existing recursive improvement approaches often rely on self-generated experiences, limiting ability expansion and yielding diminishing returns. To address these challenges, we introduce CUA-Master, a nested double-loop recursive improvement framework. At the system level, an outer world-data-model flywheel continuously incorporates open-world corpus and leverages evolving model weaknesses to guide subsequent data construction and optimization iterations. At the data level, an inner flywheel couples open-world seeding and autocatalytic propagation. The former mines authentic workflows as seed tasks from instructional videos, and employs visual-semantic dual-path trajectory reconstruction; The latter transforms these seeds into reusable primitives for controllable synthesis of diverse, complex, and verifiable tasks. To enable efficient and reliable trajectory collection, we further introduce a feedback-guided snapshot-rollback retry mechanism in various real environments. Extensive experiments demonstrate that CUA-Master-27B achieves competitive performance across GUI-only and GUI-CLI hybrid benchmarks, scoring 80.2 on OSWorld Verified, 36.9 on OSWorld 2.0, 43.9 on WeaveBench, and 25.0 on Agents' Last Exam. Our framework also substantially improves the quality and efficiency of data synthesis, and exhibits continuous gains across recursive iterations.",
+      "published_date": "2026-11-02T13:41:14.000Z",
+      "url": "https://arxiv.org/abs/2611.03126",
+      "pdf_url": "https://arxiv.org/pdf/2611.03126",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.03126",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 94,
+      "hot_score": 940,
+      "structured_summary": {
+        "chinese_title": "CUA-Master: 通过开放世界递归改进扩展计算机使用代理",
+        "chinese_summary": "CUA-Master 提供了一种新的递归改进框架，通过开放世界数据和模型的不断迭代优化，增强计算机使用代理的能力。",
+        "pain_point": "现有 CUA 的发展受限于数据多样性、可控性和可靠性不足，以及缺乏迭代反馈。",
+        "core_value": "通过开放世界递归改进框架，CUA-Master 提高了 CUA 的能力扩展和任务多样性。",
+        "technical_architecture": "采用嵌套双环递归改进框架，结合开放世界数据和模型的持续迭代优化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证其在大规模实际场景中的应用效果。",
+        "key_contributions": [
+          "提出了一种新的递归改进框架",
+          "增强了 CUA 的开放世界能力",
+          "引入了反馈引导的快照回滚重试机制"
+        ],
+        "application_scenarios": [
+          "自动化办公任务",
+          "虚拟助手"
+        ],
+        "technical_highlights": [
+          "开放世界数据和模型的持续迭代优化",
+          "视觉语义双路径轨迹重建"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.03178",
+      "source": "huggingface",
+      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+      "authors": [
+        "Jiajie Jin",
+        "Guanting Dong",
+        "Chengjun Pan",
+        "Xin Deng",
+        "Zhuohui Sheng",
+        "Guoqiang Wang",
+        "Tao Gui",
+        "Yutao Zhu",
+        "Yujia Chen",
+        "Shihong Yi",
+        "Binze Hu",
+        "Zhixiong Yang",
+        "Zhichao Sun",
+        "Rui Wang",
+        "Han Han",
+        "Mingyu Ma",
+        "Junhao Huang",
+        "Xiaotao Wang",
+        "Huicheng Jiang",
+        "Yuyang Hu",
+        "Xinyu Yang",
+        "Wanghan Xu",
+        "Yajie Yang",
+        "Zhecan Wang",
+        "Honglin Guo",
+        "Xiaoyu Xing",
+        "Xiaoqian Zhang",
+        "Yulun Zhu",
+        "Xiaoxi Li",
+        "Jiahang Lin",
+        "Shaofan Liu",
+        "Shihan Dou",
+        "Zhiheng Xi",
+        "Qi Zhang",
+        "Yu-Gang Jiang",
+        "See-Kiong Ng",
+        "Yang Zhang",
+        "Tat-Seng Chua",
+        "Ji-Rong Wen",
+        "Zhicheng Dou"
+      ],
+      "abstract": "Rapid advances in cowork agents are shifting human-AI collaboration toward real-world automation, delivering software, designs, and other artifacts. However, such productivity work demands both high-quality delivery on complex productivity tasks and continued monitoring and decision-making over long horizons, a combination that remains an open challenge. We introduce CoworkOS, a general-purpose harness for long-horizon work that separates task strategy from execution management: the model decides actions, delegation, and acceptance, while the runtime maintains state and feedback. Its three-layer architecture enables direct execution or delegation to Subagents, synchronously or asynchronously, under stable responsibilities. Through a shared application layer, humans and agents inspect and revise the same evolving documents, presentations, CAD models, and Blender scenes, so human-in-the-loop participation can enter both through conversation and through direct modification of the work itself. To sustain continuity across agents and sessions, CoworkOS further introduces hierarchical workspaces and persistent semantic memory, so working files, key decisions, and long-running Job logs remain shareable, reusable, and resumable after interruption. Across 12 benchmarks and 6 categories of real-world applications, CoworkOS proves highly competitive with frontier agent applications such as Codex and DeepSeek Harness. As a sustained-work case study, CoworkOS uses GLM-5.3 as its backbone to conduct RSI-driven automated post-training on Qwen3.6-35B-A3B. Over five rounds, the model's average score across eight benchmarks rose from 33.19 to 42.95 (+9.76). Looking ahead, we believe CoworkOS opens a meaningful path toward general cowork-agent intelligence.",
+      "published_date": "2026-11-02T14:15:11.000Z",
+      "url": "https://arxiv.org/abs/2611.03178",
+      "pdf_url": "https://arxiv.org/pdf/2611.03178",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.03178",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 89,
+      "hot_score": 890,
+      "structured_summary": {
+        "chinese_title": "CoworkOS:为实际自动化协作扩展同事代理",
+        "chinese_summary": "CoworkOS 提供了一个通用框架，使人类与 AI 的协作能够进行长期复杂任务的自动化。",
+        "pain_point": "现有系统难以同时实现高质量的复杂任务执行和长时间的持续监控与决策。",
+        "core_value": "CoworkOS 通过分离任务策略与执行管理，提高了长期协作的效率和灵活性。",
+        "technical_architecture": "CoworkOS 采用三层架构，支持直接执行或委托给子代理，并保持稳定的责任分配。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多复杂的工作场景。",
+        "key_contributions": [
+          "分离任务策略与执行管理",
+          "引入层次化工作空间和持久语义记忆"
+        ],
+        "application_scenarios": [
+          "软件开发",
+          "设计创作"
+        ],
+        "technical_highlights": [
+          "支持人类与代理直接修改工作内容",
+          "实现稳定的责任分配"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.40191",
+      "source": "huggingface",
+      "title": "Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement",
+      "authors": [
+        "Liaoyuan Fan",
+        "Yuhao Zheng",
+        "Dongxing Mao",
+        "Hangyu Ran",
+        "Siyuan Hu",
+        "Weijia Mao",
+        "Rui Zhao",
+        "Weijia Wu",
+        "Guian Fang",
+        "Yanzhe Chen",
+        "Zeyu Zhu",
+        "Yuxin Jiang",
+        "Yiren Song",
+        "Yuchao Gu",
+        "Junchao Yi",
+        "Qi Hu",
+        "Dan Kong",
+        "Alex Jinpeng Wang",
+        "Kevin Qinghong Lin",
+        "Mike Zheng Shou",
+        "Wei Liu"
+      ],
+      "abstract": "Video generation is shifting from end-to-end synthesis toward agentic generation, where planning, tool use, and feedback enable coherent, controllable multi-shot videos. In parallel, video world models provide action-conditioned observations and predicted futures, serving as interactive environments for agents. We study their intersection through the agent harness: an executable runtime that constructs context, exposes tools, maintains state, routes feedback, and manages budgets around video models. This report examines three directions. First, agentic video generation, where harnesses coordinate scripting, shot planning, asset management, production, and editing, alongside the evaluation challenges of these systems. Second, agentic world modeling, where harnesses mediate observation, control, execution, and state. We discuss hybrid designs in which game engines or agent-written programs maintain world state while video models render observations, and how agents and world models can mutually evaluate and improve one another. Third, recursive self-improvement (RSI) in video model development, distinguishing output revisions, updates to harness state, generator parameters, and evaluators, and changes to the improvement procedure itself. We identify how these improvements feed back into subsequent development. Across these directions, we analyze essential agent capabilities, including audiovisual perception, long-horizon planning, memory, code-based interaction, feedback-guided control, skill reuse, and multi-agent coordination. We conclude with challenges in autonomous video production, lifelong memory, programmable hybrid control, autonomous model development, provenance, cost accounting, and evaluation linking video quality and task performance to sustained improvements in models and harnesses.",
+      "published_date": "2026-10-29T14:47:39.000Z",
+      "url": "https://arxiv.org/abs/2610.40191",
+      "pdf_url": "https://arxiv.org/pdf/2610.40191",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.40191",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 70,
+      "hot_score": 700,
+      "structured_summary": {
+        "chinese_title": "视频生成与代理结合：代理视频生成、代理世界建模和递归自我改进",
+        "chinese_summary": "通过代理框架实现可控、连贯的多帧视频生成，并探讨代理世界建模和递归自我改进。",
+        "pain_point": "现有视频生成方法难以实现连贯、可控的多帧视频。",
+        "core_value": "提出代理框架，实现视频生成与世界建模的结合，提升生成视频的连贯性和可控性。",
+        "technical_architecture": "代理框架协调视频生成、世界建模和递归自我改进过程。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索递归自我改进的具体实现。",
+        "key_contributions": [
+          "提出代理框架，实现视频生成与世界建模的结合",
+          "探讨代理世界建模和递归自我改进",
+          "提出评价挑战和解决方案"
+        ],
+        "application_scenarios": [
+          "电影和电视剧制作",
+          "虚拟现实和增强现实"
+        ],
+        "technical_highlights": [
+          "代理框架协调视频生成、世界建模和递归自我改进",
+          "探讨代理世界建模和递归自我改进"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.01560",
+      "source": "huggingface",
+      "title": "Democratizing Robot-Use Agents: A Unified Harness with Open Models",
+      "authors": [
+        "Jiarui Yuan",
+        "Yuxin Zuo",
+        "Xiaoyu Huang",
+        "Wenbo Zhang",
+        "Kwanyoung Park",
+        "Junlin Yang",
+        "Tianxiang Zhang",
+        "Ruoqu Chen",
+        "Yutao Ouyang",
+        "Bingxiang He",
+        "Xingtai Lv",
+        "Hongjin Wu",
+        "Jiajun Liu",
+        "Jiahao Zhao",
+        "Tianwei Luo",
+        "Haozhan Li",
+        "Cheng Qian",
+        "Jiaxin Ge",
+        "Huan-ang Gao",
+        "Kaisen Yang",
+        "Jiaqi Deng",
+        "Qixin Xu",
+        "Siqiao Huang",
+        "Bowen Zhou",
+        "Mengdi Xu",
+        "Zhiyuan Liu",
+        "Pieter Abbeel",
+        "Ning Ding"
+      ],
+      "abstract": "Robot-use Agents (RUAs) have shown promising zero-shot manipulation capabilities, but reliance on frontier, proprietary models limits research into further training. To democratize RUA research, we introduce uni-robot-agent, a unified harness for competitive open-weight robot use that supports further training. Without privileged inputs, an out-of-the-box Qwen3.8-Flash-Next achieves a RoboDojo Score of 31.39, surpassing the published GPT-6 Astra-RoboProbe result of 28.97 and many VLA/WAM baselines, and performs competitively on 19 real-world tasks. Our analysis across model generations, families, and sizes links effective robot use to four general capabilities, suggesting that future RUA training should develop them jointly.",
+      "published_date": "2026-11-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.01560",
+      "pdf_url": "https://arxiv.org/pdf/2611.01560",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.01560",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": {
+        "chinese_title": "民主化机器人使用代理：统一的开放模型框架",
+        "chinese_summary": "uni-robot-agent 提供了一个支持进一步训练的开放模型框架，显著提升了机器人操作能力。",
+        "pain_point": "现有机器人使用代理依赖于专有模型，限制了进一步的研究和训练。",
+        "core_value": "通过开放模型框架，uni-robot-agent 促进了机器人使用代理的研究和训练。",
+        "technical_architecture": "uni-robot-agent 提供了一个统一的框架，支持多种开放模型。",
+        "quantitative_results": "Qwen3.8-Flash-Next 达到了 31.39 的 RoboDojo 分数，超过了许多基线模型。",
+        "competitors": "对比了 GPT-6 Astra-RoboProbe 和 VLA/WAM 基线模型。",
+        "limitations": "未来工作可能需要进一步优化模型以适应更多任务。",
+        "key_contributions": [
+          "提出了统一的开放模型框架",
+          "显著提升了机器人操作能力",
+          "支持进一步训练"
+        ],
+        "application_scenarios": [
+          "机器人操作研究",
+          "实际任务执行"
+        ],
+        "technical_highlights": [
+          "支持多种开放模型",
+          "显著提升操作能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.02074",
+      "source": "huggingface",
+      "title": "SWE-Trail: History-Guided Trajectory Collection for Coding Agent Training",
+      "authors": [
+        "Ziming Li",
+        "Lu Yu",
+        "Jiatan Huang",
+        "Qing Cui",
+        "Jun Zhou",
+        "Chuxu Zhang"
+      ],
+      "abstract": "Coding agents solve repository issues through long sequences of exploration, editing, and validation. These trajectories are increasingly used as post-training data, so how they are collected shapes what the trained model learns. A common approach is to sample multiple trajectories independently for each issue and then select or curate them. However, as more trajectories are sampled independently, later trajectories become increasingly redundant, even though earlier trajectories could guide where subsequent collection effort should be spent. A natural way to use this history is to expose it to the coding agent as advice. But training on such trajectories can make the model rely on advice that is unavailable at test time, creating a train-test mismatch. Instead, we argue that history should guide where collection effort is spent, while the coding agent decides what to generate. We introduce SWE-Trail, a trajectory collector that uses earlier trajectories to guide subsequent collection while keeping that history outside the coding agent's context. During a new rollout, SWE-Trail uses history to identify a state where additional collection effort may be useful. There, the coding agent proposes candidate next actions from its ordinary context, and SWE-Trail briefly executes them from the same checkpoint to decide which route continues. We evaluate collection approaches by training student models on the trajectories they produce. For a 124B student initialized from Ling-3.0-flash-base, SWE-Trail improves mean resolution over independent sampling by 2.33 and 1.60 percentage points on SWE-bench Multilingual and SWE-bench Pro, respectively. Without history, the same pipeline produces more resolved trajectories than independent sampling, but improves by only 0.11 points on Multilingual. These results show the value of using history to guide collection without exposing it to the coding agent.",
+      "published_date": "2026-11-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.02074",
+      "pdf_url": "https://arxiv.org/pdf/2611.02074",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.02074",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": {
+        "chinese_title": "SWE-Trail: 历史引导的轨迹收集方法用于编码代理训练",
+        "chinese_summary": "通过利用历史轨迹指导后续收集，减少冗余并提高模型泛化能力。",
+        "pain_point": "现有方法独立采样轨迹导致后期轨迹冗余，影响模型泛化。",
+        "core_value": "通过历史轨迹指导收集，减少冗余，提高模型泛化能力。",
+        "technical_architecture": "利用历史轨迹指导编码代理收集，保持历史轨迹不进入代理上下文。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多实验验证其在大规模场景下的有效性。",
+        "key_contributions": [
+          "提出了一种利用历史轨迹指导收集的新方法",
+          "减少了轨迹收集过程中的冗余",
+          "提高了模型的泛化能力"
+        ],
+        "application_scenarios": [
+          "代码问题解决",
+          "软件开发自动化"
+        ],
+        "technical_highlights": [
+          "利用历史轨迹指导收集",
+          "保持历史轨迹不进入代理上下文"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.03424",
+      "source": "huggingface",
+      "title": "IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?",
+      "authors": [
+        "Shanshan Zhong",
+        "Chen Xu",
+        "Jingjie Ning",
+        "Zhengzhong Liu",
+        "Aviral Kumar",
+        "Chenyan Xiong"
+      ],
+      "abstract": "Research taste, the judgment of what to read, which problems to pursue, and which methods to try, increasingly shapes the work of AI scientists, yet it remains far less understood than their ability to execute research. We introduce IdeaTaste, a benchmark that scores an LLM by how closely the research proposals it writes from a literature snapshot frozen at 2025 match the work the same communities published in 2026. Our experiments span six contemporary language models and four research areas from established to emerging fields, covering more than 90{,}000 proposals in total. LLM agents fall well short of human communities in both the literature they cite and the ideas they state, reaching about 26\\% of the human level on citation matching and only 18\\% on idea matching. Their populations can cite as diversely as a community and take up its tasks and methods, yet rarely arrive at the concrete approaches and research plans it pursues. Neither richer field context nor larger populations substantially close this gap. In blinded expert review, AI proposals trail the 2026 papers least in presentation and most in expected success, echoing their gap in concrete approaches, and those whose ideas no human paper shares fare worst, suggesting weaker directions rather than overlooked opportunities. These results indicate that the main bottleneck in AI research taste lies less in finding the directions a community works on than in turning them into the concrete approaches it goes on to pursue. We release IdeaTaste as an open, continuously updated leaderboard (https://cxcscmu.github.io/IdeaTaste) that benchmarks contemporary AI proposals against future publication cycles.",
+      "published_date": "2026-11-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.03424",
+      "pdf_url": "https://arxiv.org/pdf/2611.03424",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.03424",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 32,
+      "hot_score": 320,
+      "structured_summary": {
+        "chinese_title": "IdeaTaste: LLMs 是否具备人类研究者的研究品味？",
+        "chinese_summary": "LLM 在研究提案方面仅达到人类水平的 18%，主要表现为缺乏具体研究方法和计划。",
+        "pain_point": "LLM 在提出具体研究方法和计划方面远逊于人类研究者。",
+        "core_value": "提出了一个新的基准 IdeaTaste，评估 LLM 的研究提案与人类研究社区的契合度。",
+        "technical_architecture": "通过比较 LLM 提出的研究提案与 2026 年实际发表的研究工作来评估。",
+        "quantitative_results": "LLM 在引用匹配和想法匹配上分别达到人类水平的 26% 和 18%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未显著改善 LLM 在具体研究方法和计划上的表现。",
+        "key_contributions": [
+          "提出 IdeaTaste 基准",
+          "评估 LLM 的研究提案能力",
+          "揭示 LLM 与人类研究者的差距"
+        ],
+        "application_scenarios": [
+          "评估 LLM 的研究提案能力",
+          "指导 LLM 的研究方向"
+        ],
+        "technical_highlights": [
+          "使用未来研究数据作为基准",
+          "覆盖多个研究领域和语言模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.02897",
+      "source": "huggingface",
+      "title": "PhotoGuider: Composition-Aware Cropping and 360^{circ} View Framing with Explainable Photographic Assessments",
+      "authors": [
+        "Yuan-Kang Lee",
+        "Kuan-Lin Chen",
+        "Chia-Che Chang",
+        "Yu-Lun Liu"
+      ],
+      "abstract": "Traditional image cropping assumes the photograph already contains the composition worth keeping, and asks only where to crop. A full 360^{circ} scene offers no such guarantee: the viewing direction in a scene has to be discovered before anything can be framed. We present PhotoGuider, a measure-then-frame method that answers both questions with compact learned scorers over one shared set of composition-aware features. The designed features are extracted using foundation and task-specific vision models and structured into four photographic tokens: Subject, Composition, Aesthetics, and Integrity. Our MLLM explainer is fine-tuned to generate composition-related explanations conditioned on images and measured token assessments. To our knowledge, PhotoGuider is the first method to combine explicit composition-based direction selection in 360^{circ} panoramas with refined framing, camera-parameter output for native re-rendering, and measurement-conditioned explanations. On two standard 2D cropping benchmarks, PhotoGuider achieves the highest average mIoU performance against ground-truth crops. In a blind ranking study, 120 participants ranked three cropping methods over 100 panoramic scenes from the public Poly Haven HDRI library, placing our framings first in 53.2% of cases, against 27.3% and 19.5% for two strong alternatives. Project page: https://ntuneillee.github.io/research/photoguider/",
+      "published_date": "2026-11-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.02897",
+      "pdf_url": "https://arxiv.org/pdf/2611.02897",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.02897",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 31,
+      "hot_score": 310,
+      "structured_summary": {
+        "chinese_title": "PhotoGuider: 具有可解释摄影评估的视角感知裁剪与全景构图",
+        "chinese_summary": "PhotoGuider 是首个结合 360° 全景图中基于构图的方向选择与精细裁剪的方法。",
+        "pain_point": "传统图像裁剪假设照片已有值得保留的构图，而全景图需要先确定视角方向才能裁剪。",
+        "core_value": "PhotoGuider 能够在全景图中选择构图方向并进行精细裁剪，提供可解释的摄影评估。",
+        "technical_architecture": "采用基础和任务特定的视觉模型提取特征，结构化为四个摄影令牌。",
+        "quantitative_results": "在两个标准 2D 裁剪基准上，PhotoGuider 达到最高的平均 mIoU 性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证方法的有效性。",
+        "key_contributions": [
+          "结合 360° 全景图中基于构图的方向选择与精细裁剪",
+          "提供可解释的摄影评估",
+          "首次在 360° 全景图中实现上述功能"
+        ],
+        "application_scenarios": [
+          "全景图编辑",
+          "虚拟现实场景构建"
+        ],
+        "technical_highlights": [
+          "使用四个摄影令牌结构化特征",
+          "生成基于图像的构图相关解释"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.02102",
+      "source": "huggingface",
+      "title": "NorthCUA Technical Report: Turbocharging Computer-Use Agents through Experience at Scale",
+      "authors": [
+        "Chaoyun Zhang",
+        "Bingxuan Li",
+        "Pinxue Guo",
+        "Yangfan Gao",
+        "Zikun Cai",
+        "Tianci Xie",
+        "Hui Li",
+        "Yuqi Huang",
+        "Yifei Cao",
+        "Bo Mao",
+        "Tian Tang",
+        "Qichang Zheng",
+        "Tongtong Liu",
+        "Xiaoxing Wang",
+        "Jinxiu Liu",
+        "Lizhi Lin",
+        "Zhou Shao",
+        "Maosen Zhou",
+        "Miao Zheng",
+        "Shuo Zhang",
+        "Yangji He",
+        "Kepeng Lei",
+        "Ning Zhao",
+        "Wei Shen",
+        "Zhenjiang Jin",
+        "Xinyue Zhang",
+        "Peng Sun",
+        "Zhenhua Han",
+        "Rui Zheng",
+        "Hang Yan"
+      ],
+      "abstract": "Scaling computer-use agents from individual actions to complex software work requires experience that connects decisions to complete outcomes. We present NorthCUA, an integrated system for turbocharging computer-use agents through experience at scale. Its Experience Flywheel supplies diverse executable tasks to the NorthCUA Harness, which sustains long interactions, records decisions, and checks task outcomes. The Flywheel uses these records to curate verified trajectories. For unsolved tasks, recursive self-improvement evolves reusable skills and preserves verified milestones so later attempts build on earlier progress. Staged Learning combines this experience with grounding data from the Flywheel to develop GUI competence through mid-training and long-horizon supervised fine-tuning. The policy then learns from fresh attempts in the same Harness through joint desktop-web reinforcement learning, closing the loop between experience production and policy improvement. The resulting Nano, Mini, and Pro family achieves state-of-the-art results among open-source models across GUI grounding, desktop execution, and Web interaction under the reported evaluation settings. For more responsive Web workflows, NorthCUA-Ultrafast pairs direct action selection with open-ended generation on pre-RL Nano, offering a measured quality-latency tradeoff. Together, these advances establish NorthCUA as a high-performing model family and a reusable foundation for agents that carry complex software work from intent to completion.",
+      "published_date": "2026-11-01T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.02102",
+      "pdf_url": "https://arxiv.org/pdf/2611.02102",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.02102",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "北航技术报告：通过大规模经验加速计算机使用代理",
+        "chinese_summary": "通过经验飞轮和强化学习，北航技术报告提出了一种加速计算机使用代理的方法。",
+        "pain_point": "计算机使用代理需要从单个动作扩展到复杂软件工作，但缺乏足够的经验来连接决策与完整结果。",
+        "core_value": "通过大规模经验积累和自我改进，提高计算机使用代理的性能。",
+        "technical_architecture": "采用经验飞轮和强化学习架构，结合反馈循环优化代理性能。",
+        "quantitative_results": "在GUI接地、桌面执行和Web交互方面，Nano、Mini和Pro系列模型达到开源模型的最新成果。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多复杂任务的适应性。",
+        "key_contributions": [
+          "提出经验飞轮机制",
+          "结合反馈循环进行自我改进",
+          "开发GUI和Web交互能力"
+        ],
+        "application_scenarios": [
+          "自动化软件测试",
+          "智能办公助手"
+        ],
+        "technical_highlights": [
+          "大规模经验积累",
+          "联合桌面-Web强化学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

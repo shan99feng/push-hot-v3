@@ -1,0 +1,605 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-05T03:14:59.048176+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.05275",
+      "source": "huggingface",
+      "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
+      "authors": [
+        "Pengfei Zhou",
+        "Yixing Ma",
+        "Hexin Wang",
+        "Weidong Tang",
+        "Zhenglin Wan",
+        "Wangbo Zhao",
+        "Yang You"
+      ],
+      "abstract": "Artificial general intelligence (AGI) requires a method that can understand, generate, reason, and act across diverse domains and modalities. Rather than relying on a single model to master every capability, a promising path toward AGI now is to orchestrate a heterogeneous ecosystem of specialized models, tools, and policies (candidates) into a unified AI system. At the heart of this vision lies a fundamental question: how can an AI system dynamically select and coordinate the most capable candidate for each task while balancing performance and computational cost? In this work, we present Route Anything, a unified framework for studying model and policy routing across general-purpose AI systems. We develop a unified theoretical foundation that characterizes optimal routing under quality--cost trade-offs and establishes how the information available to a router determines its attainable performance. To systematically investigate routing across diverse capabilities, we first construct an omni-modal trajectory matrix spanning 25 benchmarks across language understanding, image, video, and speech generation, coding and workplace agents, and robotic manipulation, comprising 374,401 scored runs from 452 candidate configurations. Building on this framework, we train and test different routers to investigate the potential of omni-modal model routing, the capabilities of learned routers, and the conditions under which routing improves efficiency. Our results reveal substantial opportunities for capability orchestration: per-input oracle routing outperforms the best fixed candidate by 5.4 points, and learned routers outperform it by 0.3 points across 16 benchmarks, by 2.1 points on video generation, and by 1.1 points on robot manipulation while using 24% less policy time. More importantly, routing raises efficiency by 8.82x on average compared with the reference model.",
+      "published_date": "2026-11-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.05275",
+      "pdf_url": "https://arxiv.org/pdf/2611.05275",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.05275",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 86,
+      "hot_score": 860,
+      "structured_summary": {
+        "chinese_title": "Route Anything：通用人工智能系统中模型与策略路由的研究",
+        "chinese_summary": "提出了一种统一框架Route Anything，用于研究通用人工智能系统中的模型和策略路由。",
+        "pain_point": "如何动态选择和协调最适合每个任务的候选模型和策略，同时平衡性能和计算成本。",
+        "core_value": "提供了一种统一的理论基础，用于优化通用人工智能系统中的路由决策。",
+        "technical_architecture": "构建了一个跨模态的轨迹矩阵，涵盖多种基准测试。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定的基准测试上进行了验证。",
+        "key_contributions": [
+          "提出了统一的理论框架来研究模型和策略路由",
+          "构建了跨模态的基准测试矩阵"
+        ],
+        "application_scenarios": [
+          "通用人工智能系统",
+          "多模态任务处理"
+        ],
+        "technical_highlights": [
+          "统一的理论基础",
+          "跨模态的基准测试矩阵"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.00617",
+      "source": "huggingface",
+      "title": "Words Caught in the Heart: Simulating Person-Specific Expression for Self-Opaque Clients in Psychotherapy",
+      "authors": [
+        "Mengxi Xiao",
+        "Jingjing Chen",
+        "Ziyan Kuang",
+        "Jiarong Song",
+        "Wenhao Zhao",
+        "Zuchen Han",
+        "Yihuai Xu",
+        "Xiyang Huang",
+        "Jie Gong",
+        "Yuechen Jiang",
+        "Xueqing Peng",
+        "Yankai Chen",
+        "Xiaoyan Qu",
+        "Min Peng",
+        "Qianqian Xie"
+      ],
+      "abstract": "Psychotherapy clients may experience distress before they can coherently describe it, and their expression changes with emotion, perceived safety, and trust. Large language model-based client simulators often rely on clinically organized case descriptions, which can encourage responses explaining the client's difficulties more clearly than their current understanding warrants. We propose Pandora, a psychotherapy client simulation framework that models how psychological experience becomes situated, individual expression. Pandora updates psychological and relational states in response to therapist interventions, constructs subjective appraisals and attributions, and plans response content and strategy. A separate expression planner combines these decisions with language patterns distilled from the client's utterances to guide linguistic realization. We evaluate Pandora against five baselines on 115 cases from four counseling and motivational interviewing datasets. It achieves the highest expression similarity and overall disclosure-alignment score among the compared systems. In a four-evaluator study of 45 matched disclosure items, Pandora receives AI-like judgments in 7.2% of ratings, compared with 43.3--67.2% for the baselines and 35.6% without expression planning. The ablation also reduces expression similarity. These results support explicit expression planning in client simulation to improve alignment with individual language patterns and reduce perceived AI-like expression in the evaluated setting.",
+      "published_date": "2026-10-31T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.00617",
+      "pdf_url": "https://arxiv.org/pdf/2611.00617",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.00617",
+      "category": "other",
+      "tags": [
+        "cs.HC"
+      ],
+      "upvotes": 69,
+      "hot_score": 690,
+      "structured_summary": {
+        "chinese_title": "心有灵犀：模拟个体特定表达以应对自我隐秘客户的心理治疗",
+        "chinese_summary": "Pandora 模拟框架通过动态调整心理和关系状态，实现个体化表达，提高表达相似度和披露一致性。",
+        "pain_point": "现有模型依赖临床描述，导致过度解释，无法真实反映个体情感。",
+        "core_value": "Pandora 模拟框架能够根据情境动态调整表达，更真实地反映个体心理状态。",
+        "technical_architecture": "Pandora 通过更新心理和关系状态，构建主观评估和归因，规划响应内容和策略。",
+        "quantitative_results": "Pandora 在 115 个案例中表现最佳，获得最高表达相似度和披露一致性评分。",
+        "competitors": "与五种基线系统对比，Pandora 在 45 个匹配披露项中获得 AI 类似判断。",
+        "limitations": "未来需进一步研究不同心理治疗场景的应用。",
+        "key_contributions": [
+          "提出 Pandora 模拟框架，实现个体化表达",
+          "动态调整心理和关系状态",
+          "提高表达相似度和披露一致性"
+        ],
+        "application_scenarios": [
+          "心理治疗模拟",
+          "情感分析"
+        ],
+        "technical_highlights": [
+          "基于心理和关系状态的动态调整",
+          "个体化表达规划"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.04814",
+      "source": "huggingface",
+      "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
+      "authors": [
+        "Muyao Yuan",
+        "Liyan Xu",
+        "Weizhan Zhang",
+        "Muyan Jiao",
+        "Jiangnan Li",
+        "Jinchao Zhang",
+        "Jie Zhou"
+      ],
+      "abstract": "Large reasoning models achieve strong performance on challenging tasks, but their long chain-of-thought often incurs substantial inference costs by continuing to deliberate after sufficient information has been obtained. Existing reasoning compression methods primarily operate on reasoning trajectories, paying less attention to the local decision of whether further reasoning is necessary given the current state. We propose LoCo, a local preference learning method for reasoning compression. LoCo detects candidate overthinking states from the model's own traces, freezes the corresponding reasoning prefixes, regenerates shorter verified continuations from the same states, and trains on the resulting state-conditioned preference pairs with DPO. This formulation teaches the model when to continue reasoning and when to conclude, rather than simply encouraging shorter trajectories overall. We construct training data entirely from self-generated mathematical traces and evaluate LoCo on five mathematical and three code generation benchmarks. LoCo reduces completion length by 41.7\\%--45.4\\% on mathematics and 23.4\\%--36.3\\% on code, while maintaining or improving accuracy and achieving the best AUC across all code benchmarks. LoCo consistently improves the accuracy-efficiency trade-off on mathematics and transfers effectively to code generation despite math-only training, demonstrating the cross-domain generality of local preference learning for reasoning compression. The code and model will be publicly released at https://github.com/MuyaoYuan/LoCo.",
+      "published_date": "2026-11-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.04814",
+      "pdf_url": "https://arxiv.org/pdf/2611.04814",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.04814",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 65,
+      "hot_score": 650,
+      "structured_summary": {
+        "chinese_title": "思考更少，更局部：基于局部偏好学习的推理压缩",
+        "chinese_summary": "LoCo 方法通过学习何时继续推理和何时停止推理，减少了推理模型的推理长度。",
+        "pain_point": "大型推理模型在获取足够信息后仍继续推理，导致推理链过长，增加推理成本。",
+        "core_value": "LoCo 方法通过局部偏好学习，有效压缩推理长度，同时保持或提高准确性。",
+        "technical_architecture": "LoCo 通过检测候选的过度推理状态，冻结相应的推理前缀，生成更短的验证继续部分。",
+        "quantitative_results": "在数学和代码生成基准上，LoCo 将完成长度分别减少了 41.7%-45.4% 和 23.4%-36.3%，同时保持或提高了准确性。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于数学和代码生成任务进行评估。",
+        "key_contributions": [
+          "提出了一种基于局部偏好学习的推理压缩方法",
+          "通过自动生成的数学轨迹训练数据",
+          "有效减少了推理长度，同时保持或提高了准确性"
+        ],
+        "application_scenarios": [
+          "数学推理任务",
+          "代码生成任务"
+        ],
+        "technical_highlights": [
+          "通过检测和冻结过度推理状态来压缩推理",
+          "使用 DPO 训练生成更短的验证继续部分"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.02737",
+      "source": "huggingface",
+      "title": "MoviEdit: Long-form Multi-Shot Video Editing Made Easy",
+      "authors": [
+        "Suhyeon Lee",
+        "Zhengang Li",
+        "Soo Ye Kim",
+        "Peihao Zhu",
+        "Jong Chul Ye",
+        "Chun-Hao Paul Huang",
+        "Duygu Ceylan",
+        "Yan Kang",
+        "Hyeonho Jeong"
+      ],
+      "abstract": "Long-form multi-shot video editing requires an intended edit to remain coherent across abrupt changes in scene, viewpoint, and subject appearance, while processing substantially longer visual context than conventional single-shot editors. We introduce MoviEdit, an end-to-end framework for scalable long-form multi-shot video editing that jointly addresses the challenges of data, modeling, and evaluation. To provide cross-shot supervision data at scale, we develop automatic data-generation pipelines spanning synchronized multi-view footage, real-world multi-shot videos, and generated multi-shot content, yielding 87K paired editing videos without manual annotation. Architecturally, MoviEdit employs a cascaded bidirectional-autoregressive design: a lightweight bidirectional stage first establishes a globally coherent editing draft over a spatiotemporally compressed representation, which is then autoregressively propagated and refined over the full video. We further introduce MoviEdit-Bench, a dedicated benchmark for systematic evaluation of long-form multi-shot video editing. Extensive experiments show that MoviEdit substantially outperforms existing open-source models and performs on par with industry frontier models across text-guided and image-guided editing. Visit our project page for complete results and to access the benchmark: https://multi-shot-edit.github.io/",
+      "published_date": "2026-11-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.02737",
+      "pdf_url": "https://arxiv.org/pdf/2611.02737",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.02737",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 65,
+      "hot_score": 650,
+      "structured_summary": {
+        "chinese_title": "MoviEdit: 简化长视频多镜头编辑",
+        "chinese_summary": "MoviEdit 提供了一种端到端框架，用于长视频多镜头编辑，解决了数据、建模和评估的挑战。",
+        "pain_point": "长视频多镜头编辑需要保持编辑意图在场景、视角和主体外观突变时的一致性，同时处理比传统单镜头编辑器更长的视觉上下文。",
+        "core_value": "MoviEdit 通过自动数据生成管道和端到端框架，提供了大规模的跨镜头监督数据，解决了长视频多镜头编辑的挑战。",
+        "technical_architecture": "MoviEdit 采用级联双向自回归设计，首先在时空压缩表示上建立全局一致的编辑草稿，然后自回归传播和细化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能包括进一步优化模型性能和扩展应用场景。",
+        "key_contributions": [
+          "开发了大规模的自动数据生成管道",
+          "提出了端到端的长视频多镜头编辑框架",
+          "引入了专门的基准 MoviEdit-Bench"
+        ],
+        "application_scenarios": [
+          "电影和视频制作",
+          "社交媒体内容编辑"
+        ],
+        "technical_highlights": [
+          "级联双向自回归设计",
+          "大规模自动数据生成管道"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.04916",
+      "source": "huggingface",
+      "title": "Behind Video Generation: Observations and Insights on Multimodal Understanding from Kling",
+      "authors": [
+        "Kling Team",
+        "Dong Chen",
+        "Jialu Chen",
+        "Xinlong Chen",
+        "Yifan Dai",
+        "Haotian Dong",
+        "Binzong Geng",
+        "Yushuo Guan",
+        "Minghui Guo",
+        "Guanlin He",
+        "Guanxiao He",
+        "Jingyun Hua",
+        "Yanwei Huang",
+        "Yiyan Ji",
+        "Xueping Jia",
+        "Yizhuo Jia",
+        "Bozhou Li",
+        "Jiaze Li",
+        "Min Li",
+        "Shihao Li",
+        "Shujie Li",
+        "Shengyi Liao",
+        "Weihong Lin",
+        "Shiyuan Liu",
+        "Xinyu Liu",
+        "Siyang Mao",
+        "Xiaoru Qu",
+        "Dianmo Sheng",
+        "Yang Shi",
+        "Jiafu Tang",
+        "Longxiang Tang",
+        "Yuqi Tang",
+        "Chengzhuo Tong",
+        "Kuo Wang",
+        "Qixun Wang",
+        "Rui Wang",
+        "Tianduo Wang",
+        "Yuran Wang",
+        "Zekun Wang",
+        "Zihao Wang",
+        "Boyang Xia",
+        "Yifan Xu",
+        "Liu Yang",
+        "Zhenlong Yuan",
+        "Bohan Zeng",
+        "Mujin Zhang",
+        "Yuanxing Zhang",
+        "Zhicheng Zhang",
+        "Zhuoran Zhang",
+        "Yuanhong Zheng",
+        "Kun Gai",
+        "Chengru Song",
+        "Pengfei Wan"
+      ],
+      "abstract": "Video generation has progressed from isolated clips to coherent short-form audiovisual sequences, and the bottleneck is shifting from rendering to semantic control. This report summarizes the observations and insights on multimodal understanding gained from successive generations of Kling. We argue that generation quality is the projection of multimodal understanding through the entire data--conditioning--alignment--evaluation chain, and we examine this chain module by module. Kling-MLLM, a shared multimodal foundation model that unifies image, video, audio, synchronized audio--video, and interleaved inputs, is specialized for each downstream module. Because a DiT is trained on far fewer training samples than a language model, we treat captioning as a semantic contract that maximizes description density, and extend it to reference-grounded captioning that makes reference bindings explicit. Prompt enhancement translates user intent into this caption distribution: basic PE is derived from captions of compelling videos and refined with text-level and generator-in-the-loop reinforcement learning, while agentic PE refines the story and retrieves compelling examples. We show that a reliable text encoder comes from perceptual training rather than from stronger language ability, and that candidates can be screened from text alone before end-to-end training. Reward modeling pairs a general reward model for explainable, localized critiques with a decision reward model for fast multidimensional scoring, treating perceptual bandwidth as a first-class design parameter. Finally, we review task-specific automatic evaluation, focusing on protocols that expose scoring shortcuts and help trace failures to their upstream source. We hope these lessons offer practical guidance for building the understanding stack behind controllable video generation.",
+      "published_date": "2026-11-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.04916",
+      "pdf_url": "https://arxiv.org/pdf/2611.04916",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.04916",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 52,
+      "hot_score": 520,
+      "structured_summary": {
+        "chinese_title": "视频生成背后的奥秘：Kling在多模态理解方面的观察与见解",
+        "chinese_summary": "通过Kling的多代发展，研究了多模态理解，并提出了一种新的captioning方法。",
+        "pain_point": "视频生成的质量瓶颈在于语义控制。",
+        "core_value": "提出了多模态理解的新见解和一种新的captioning方法。",
+        "technical_architecture": "开发了Kling-MLLM，一种统一多模态的基础模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更多下游任务的应用。",
+        "key_contributions": [
+          "提出了多模态理解的新见解",
+          "开发了captioning的新方法"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "多模态理解"
+        ],
+        "technical_highlights": [
+          "开发了Kling-MLLM模型",
+          "提出了captioning的新方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.05377",
+      "source": "huggingface",
+      "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+      "authors": [
+        "Jisoo Kim",
+        "Chaehyun Kim",
+        "Junsu Kim",
+        "Jiho Park",
+        "Seongchan Kim",
+        "Eunbeen Hong",
+        "Soowon Son",
+        "Fu-En Yang",
+        "Seungryong Kim"
+      ],
+      "abstract": "Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but their representations often entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. We introduce DreamX, which repurposes a pretrained video diffusion model as a universal latent action learner. Our approach extracts compact latent actions from the video model's rich spatiotemporal features, compressing each latent video frame by 300times (1{,200 rightarrow 4} tokens). In addition, by leveraging the video model's generative prior, these latent actions capture action-relevant dynamics disentangled from visual appearance. The resulting latent space serves as a shared action interface across embodiments (human and robot), environments, and action parameterizations. On LARY-Bench, DreamX achieves state-of-the-art performance among latent action models. Moreover, actions encoded in one setting remain effective in another: the latent space supports any-to-any video transfer and zero-shot action transfer across diverse embodiments and environments. Furthermore, this shared interface also enables policy learning in a compact latent action space, reducing the computational cost of video-diffusion-based policies.",
+      "published_date": "2026-11-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.05377",
+      "pdf_url": "https://arxiv.org/pdf/2611.05377",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.05377",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "upvotes": 51,
+      "hot_score": 510,
+      "structured_summary": {
+        "chinese_title": "DreamX: 视频扩散模型是一种通用潜在动作学习器",
+        "chinese_summary": "DreamX 通过利用预训练的视频扩散模型，提取动作相关的动态特征，实现跨体态的动作表示。",
+        "pain_point": "现有模型难以学习通用的动作表示，容易受到视觉变化的影响。",
+        "core_value": "DreamX 能够学习到与视觉无关的动作动态，支持跨体态的动作表示。",
+        "technical_architecture": "DreamX 通过压缩视频模型的时空特征来提取紧凑的动作表示。",
+        "quantitative_results": "在 LARY-Bench 上，DreamX 达到最先进的性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上进行了验证。",
+        "key_contributions": [
+          "提出了一种新的潜在动作学习方法",
+          "利用视频扩散模型的生成先验",
+          "实现了跨体态的动作表示"
+        ],
+        "application_scenarios": [
+          "机器人动作控制",
+          "虚拟角色动作生成"
+        ],
+        "technical_highlights": [
+          "动作表示与视觉无关",
+          "高效压缩时空特征"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.05193",
+      "source": "huggingface",
+      "title": "Factorized MLLM Embeddings for Composed Image Retrieval",
+      "authors": [
+        "WonJun Moon",
+        "Seongchan Kim",
+        "Dahun Kim",
+        "Seungryong Kim"
+      ],
+      "abstract": "Composed Image Retrieval (CIR) aims to retrieve a target image given a reference image and a modification text. Although recent approaches leveraging Multimodal Large Language Models (MLLMs) have shown significant progress, we argue that the MLLM's compositional understanding remains underutilized. This stems from directly mapping composed queries into a retrieval embedding via contrastive supervision alone, without explicitly resolving the intended visual modifications. In this work, we introduce Factorized MLLM Embeddings (FactEmbed), which decouples compositional query comprehension from building discriminative embeddings. Rather than directly projecting the composed query into a single embedding without internal reasoning, FactEmbed employs a set of factorized latents that simulate the intended visual modifications via an intermediate target imagination objective. This process encourages the latents to ground into target semantics before forming discriminative representations for retrieval. Subsequently, to propagate these factorized representations throughout the model for retrieval, we optimize a factor-level contrastive loss while distilling the decomposed representations into a deeper attention layer of the MLLM. Finally, for efficient inference, we retain the [EOS] token to establish a global-level embedding on top of these factorized latents, while we exploit the mean-pooled factorized latents to rerank a short candidate list at negligible cost, as both are produced by the same forward pass. Extensive evaluations demonstrate that FactEmbed outperforms prior works across CIR benchmarks.",
+      "published_date": "2026-11-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.05193",
+      "pdf_url": "https://arxiv.org/pdf/2611.05193",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.05193",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.IR"
+      ],
+      "upvotes": 44,
+      "hot_score": 440,
+      "structured_summary": {
+        "chinese_title": "因子化MLLM嵌入用于组合图像检索",
+        "chinese_summary": "引入因子化MLLM嵌入（FactEmbed），通过中间目标想象优化促进视觉修改的模拟，从而提高组合图像检索性能。",
+        "pain_point": "现有方法直接通过对比监督将组合查询映射到检索嵌入，未能充分利用MLLM的组合理解能力。",
+        "core_value": "通过因子化嵌入和中间目标想象，增强组合图像检索的视觉修改理解。",
+        "technical_architecture": "采用因子化嵌入和中间目标想象优化，构建组合图像检索模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多数据集上进行验证。",
+        "key_contributions": [
+          "引入因子化MLLM嵌入（FactEmbed）",
+          "通过中间目标想象优化促进视觉修改的模拟",
+          "提高组合图像检索的性能"
+        ],
+        "application_scenarios": [
+          "图像检索",
+          "视觉修改理解"
+        ],
+        "technical_highlights": [
+          "因子化嵌入促进视觉修改理解",
+          "中间目标想象优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.02497",
+      "source": "huggingface",
+      "title": "RoboColosseum: Evaluating Physical Intelligence at Scale In-The-Wild",
+      "authors": [
+        "Tan Sang Nguyen",
+        "Yi Ru Wang",
+        "Shailesh Shailesh",
+        "Gang Yang",
+        "Jiamo Hu",
+        "Jianuo Jiang",
+        "Haoquan Fang",
+        "Zhongzheng Ren",
+        "Zhongyi Luo",
+        "Ian Chong",
+        "Aaron Tung",
+        "Santiago Pravisani",
+        "Minghui Lin",
+        "Yao Mo",
+        "Ishneet Singh",
+        "Benjamin Tee",
+        "Harold Soh",
+        "Siddhartha Srinivasa",
+        "Dieter Fox",
+        "David Hsu",
+        "Haoming Song",
+        "Maxime Ellerbach",
+        "Thomas Wolf",
+        "Pepijn Kooijmans",
+        "Ruijie He",
+        "Michael Cho",
+        "Jiafei Duan"
+      ],
+      "abstract": "General-purpose robot policies must work across robots, tasks, and environments, yet the variation that makes physical trials informative also makes them difficult to reproduce. We introduce RoboColosseum, a distributed evaluation framework that combines unified policy serving and standardized protocols across a network of locally operated robots in diverse environments. Our initial study evaluates five vision-language-action (VLA) policies and three frontier AI agents across four embodiments (SO-101, Franka, Bimanual-YAM, and G1 Humanoid). The Open Track compares models without task-specific adaptation in blinded, pairwise trials under matched local conditions. The Fine-tune Track measures how well VLA policies adapt to 20 tasks across all four embodiments when each policy receives the same 100 demonstrations per task. Across 5,699 pairwise Open Track comparisons at 124 sites, frontier agents rival specialized VLA policies, while all systems struggle to complete open-world tasks reliably. After fine-tuning, GR00T N1.7 leads on SO-101 and pi0.5 leads on Franka and Bimanual-YAM. Policy rankings show weak agreement across embodiment-specific task suites (Kendall W = 0.24). Open Track rankings poorly predict relative performance after fine-tuning, with substantial rank reversals on all three embodiments shared between tracks. Measuring partial progress reveals differences that task success alone misses. On the G1 Humanoid, no policy completes any of the five tasks, yet average progress ranges from 13.3% to 23.2% across policies. Open Track rankings stabilize as trials accumulate, and active matchmaking achieves comparable ranking agreement with substantially fewer physical trials than uniform sampling. These results show how distributed physical evaluation can reveal where robot policies generalize, how well they adapt to new tasks, and how far they progress on tasks they fail to complete.",
+      "published_date": "2026-11-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.02497",
+      "pdf_url": "https://arxiv.org/pdf/2611.02497",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.02497",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "upvotes": 44,
+      "hot_score": 440,
+      "structured_summary": {
+        "chinese_title": "RoboColosseum：大规模野外评估物理智能",
+        "chinese_summary": "RoboColosseum 提供了一个分布式评估框架，用于评估通用机器人策略在不同机器人、任务和环境中的表现。",
+        "pain_point": "通用机器人策略难以在不同机器人、任务和环境中可靠地执行。",
+        "core_value": "RoboColosseum 通过标准化协议和分布式评估提高了物理智能的评估效率和准确性。",
+        "technical_architecture": "RoboColosseum 使用统一的策略服务和标准化协议，支持分布式机器人网络。",
+        "quantitative_results": "在 5,699 次开放轨道比较中，前沿代理与专门的视觉-语言-动作策略表现相当。",
+        "competitors": "暂无对比信息",
+        "limitations": "不同机器人特定任务套件的策略排名一致性较低。",
+        "key_contributions": [
+          "提出了一个分布式评估框架 RoboColosseum",
+          "评估了多种视觉-语言-动作策略和前沿 AI 代理",
+          "展示了在不同机器人上的适应性差异"
+        ],
+        "application_scenarios": [
+          "机器人自主导航",
+          "多机器人协作任务"
+        ],
+        "technical_highlights": [
+          "统一的策略服务和标准化协议",
+          "大规模分布式评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.03233",
+      "source": "huggingface",
+      "title": "Axion 1.0: Open Agent Foundation Models, Simplified",
+      "authors": [
+        "Yuqi Jia",
+        "Yunjie Tian",
+        "Jiayu Zheng",
+        "Yijun Liang",
+        "Jingchen Sun",
+        "Mengyu Zhao",
+        "Di Fu"
+      ],
+      "abstract": "We introduce Axion 1.0, a fully open agent foundation model that combines strong and broad agentic capabilities with a remarkably simple training recipe. Axion 1.0 is trained in only three stages: two lightweight supervised fine-tuning stages followed by reinforcement learning, without dedicated mid-training, direct preference optimization (DPO), or on-policy distillation (OPD). The first SFT stage develops strong self-contained reasoning through model-aware data construction, where we synthesize challenging problems and adversarially strengthen them based on the base model's own successful solution strategies. The second stage extends these capabilities to tool-dependent reasoning through a scalable pipeline for constructing diverse and automatically verifiable tasks grounded in real-world data sources and deterministic computation. Finally, reinforcement learning further strengthens long-horizon reasoning and interaction with external tools and environments. Despite this compact training recipe, Axion 1.0 achieves strong performance across a broad suite of agentic benchmarks and is competitive with leading commercial models on several of them. Equally importantly, Axion 1.0 is open beyond model weights: we release the complete recipe, including data construction, generation, filtering, verification, prompts, and training code, enabling the entire development process to be reproduced and extended. Axion 1.0 demonstrates that strong agent foundation models can be both open and simple, offering a practical and reproducible path toward advancing open agentic intelligence.",
+      "published_date": "2026-11-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.03233",
+      "pdf_url": "https://arxiv.org/pdf/2611.03233",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.03233",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 40,
+      "hot_score": 400,
+      "structured_summary": {
+        "chinese_title": "Axion 1.0: 开放智能体基础模型，简化版",
+        "chinese_summary": "Axion 1.0 是一种结合强大广泛智能体能力与极简训练配方的开放智能体基础模型。",
+        "pain_point": "现有智能体模型训练复杂，难以实现高效且广泛的能力。",
+        "core_value": "通过简化训练流程，实现高效且广泛的能力，与商业模型竞争。",
+        "technical_architecture": "三阶段训练：监督微调、工具依赖推理扩展、强化学习。",
+        "quantitative_results": "在多种智能体基准测试中表现出色，部分与领先商业模型竞争。",
+        "competitors": "领先商业模型",
+        "limitations": "未来需进一步探索更广泛的适用场景。",
+        "key_contributions": [
+          "简化训练流程",
+          "三阶段训练方法",
+          "强化学习增强长期推理"
+        ],
+        "application_scenarios": [
+          "智能助手",
+          "自动化任务执行"
+        ],
+        "technical_highlights": [
+          "模型自我强化数据构建",
+          "自动验证任务生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.05036",
+      "source": "huggingface",
+      "title": "ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents",
+      "authors": [
+        "Guanting Dong",
+        "Zhichao Sun",
+        "Xinyu Yang",
+        "Rui Wang",
+        "Xin Deng",
+        "Jiajie Jin",
+        "Zhixiong Yang",
+        "Junhao Huang",
+        "Han Han",
+        "Mingyu Ma",
+        "Xiaotao Wang",
+        "Yuyang Hu",
+        "Xiaoshuai Song",
+        "Xiaoxi Li",
+        "Jiejun Tan",
+        "Zhecan Wang",
+        "Shihan Dou",
+        "Honglin Guo",
+        "Zhiheng Xi",
+        "Tao Gui",
+        "Tao Ji",
+        "Qi Zhang",
+        "Yutao Zhu",
+        "Ji-Rong Wen",
+        "Zhicheng Dou"
+      ],
+      "abstract": "Large language models are deployed as long-horizon agents that compose diverse tools across MCP services into executable workflows. Existing MCP environment-scaling methods are data-centric: they first synthesize a database and scenario, then derive tools and tasks from them. As a result, tool interfaces may not match real ones, tool compositions are not grounded in execution, and tasks rarely span more than one environment. We propose ToolSpace, a tool-centric framework that reverses this order. ToolSpace mines data, state, and retry dependencies from adjacent calls in execution traces of real MCP services and open agent corpora, using deterministic rules rather than LLM judgment, and clusters the resulting weighted tool-composition graph into environments. Databases are synthesized only for state-mutating environments, while query and stateless tools replay recorded returns. ToolSpace then performs state-aware random walks with rollback and decompiles each chain into a natural-language task with assertion-based checks, keeping only samples that replay successfully from the initial state. Applied to AutomationBench and tau3-Bench Banking, the pipeline produces harder Pro versions on which 7 frontier models drop by up to 38.2 points. Across seven long-horizon tool-use benchmarks, ToolSpace raises Qwen3.6-35B-A3B from 23.0 to 41.0 average score (43.2 with RL) and GLM-5.2 from 44.6 to 56.6, on par with Claude Opus 5. Ablations show that execution-witnessed edges clearly outperform LLM-judged ones, and performance keeps improving with data and environment scale.",
+      "published_date": "2026-11-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.05036",
+      "pdf_url": "https://arxiv.org/pdf/2611.05036",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.05036",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "ToolSpace：面向工具的环境合成扩展方法",
+        "chinese_summary": "ToolSpace 提出了一种工具为中心的方法，从执行跟踪中逆向合成环境，生成更复杂的任务。",
+        "pain_point": "现有方法生成的工具接口不匹配实际接口，工具组合缺乏执行基础，任务通常局限于单一环境。",
+        "core_value": "ToolSpace 通过逆向合成环境和任务，提高了长期代理的复杂度和任务跨度。",
+        "technical_architecture": "ToolSpace 从执行跟踪中提取数据、状态和重试依赖，构建加权工具组合图。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于特定的自动化和银行业务场景。",
+        "key_contributions": [
+          "提出了一种工具为中心的方法",
+          "从执行跟踪中逆向合成环境",
+          "生成更复杂的任务"
+        ],
+        "application_scenarios": [
+          "自动化任务",
+          "银行业务"
+        ],
+        "technical_highlights": [
+          "使用确定性规则而非LLM判断",
+          "生成状态感知的随机游走"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-07T02:35:14.737460+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.08449",
+      "source": "huggingface",
+      "title": "VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding",
+      "authors": [
+        "Yu-Cheng Chou",
+        "Shihao Wang",
+        "Jin Huang",
+        "Chi-Pin Huang",
+        "Chiao-An Yang",
+        "Xianzhe Fan",
+        "Jing Wang",
+        "Zhiqi Li",
+        "Yuanguo Kuang",
+        "Ruijie Zheng",
+        "Johan Bjorck",
+        "Sifei Liu",
+        "Hang Su",
+        "Abhishek Badki",
+        "Lei Zhang",
+        "Alan Yuille",
+        "Linxi &#34;Jim&#39;&#39; Fan",
+        "Jan Kautz",
+        "Zhiding Yu"
+      ],
+      "abstract": "Models for physical AI tasks, such as robotics and autonomous driving, need not reason solely in language. They can use visual plans--points, bounding boxes, and trajectories--to represent spatial goals and anticipate motion. However, autoregressive vision-language models generate these plans one coordinate token at a time, making richer predictions increasingly costly. We introduce VFlash, a method for fast, accurate visual planning through Flash Primitive Decoding. VFlash exploits the known structure of visual primitives to predict their coordinates jointly, using a lightweight drafter that generates an entire primitive in one forward pass. The layout adapts to the primitive's type, dimensionality, and length, supporting compact boxes and long, variable-length trajectories. Crucially, spatial accuracy need not require reproducing an autoregressive model's exact token sequence. VFlash therefore trains on annotated primitives and directly accepts structurally valid predictions without target-token agreement. Across the evaluated 2D and 3D robot trajectory tasks, VFlash consistently reduces prediction errors relative to autoregressive decoding. Preliminary single-rollout measurements indicate approximately 25x faster generation for 3D point motion forecasting. A world action model conditioned on VFlash plans achieves 70.2% average success across four MolmoSpaces task suites, compared with 62.6% for the baseline.",
+      "published_date": "2026-11-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.08449",
+      "pdf_url": "https://arxiv.org/pdf/2611.08449",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.08449",
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 95,
+      "hot_score": 950,
+      "structured_summary": {
+        "chinese_title": "VFlash: 快速准确的视觉规划通过闪光原始解码",
+        "chinese_summary": "VFlash 通过联合预测视觉原始的坐标来实现快速准确的视觉规划。",
+        "pain_point": "现有的自回归视觉语言模型逐坐标生成预测，导致更复杂的预测成本高昂。",
+        "core_value": "VFlash 通过联合预测视觉原始的坐标，显著降低了预测误差。",
+        "technical_architecture": "VFlash 使用轻量级的 drafter 一次性生成整个视觉原始。",
+        "quantitative_results": "VFlash 在评估的 2D 和 3D 机器人轨迹任务中，预测误差显著降低。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多的应用场景验证。",
+        "key_contributions": [
+          "提出了一种新的视觉规划方法 VFlash。",
+          "通过联合预测视觉原始的坐标，提高了预测效率。",
+          "不需要与目标标记序列完全一致即可接受结构有效的预测"
+        ],
+        "application_scenarios": [
+          "机器人轨迹规划",
+          "自主驾驶"
+        ],
+        "technical_highlights": [
+          "使用轻量级 drafter 一次性生成整个视觉原始。",
+          "支持紧凑的盒子和长的可变长度轨迹布局"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.08373",
+      "source": "huggingface",
+      "title": "SLA: Scaling Spatial-Language-Action Model via Continual Pre-training",
+      "authors": [
+        "Fuhao Li",
+        "Wenxuan Song",
+        "Qizhou Huang",
+        "Ziyang Zhou",
+        "Jingbo Wang",
+        "Junwu E",
+        "Pengwei Wang",
+        "Yan Wang",
+        "Shunbo Zhou",
+        "Haoang Li"
+      ],
+      "abstract": "Reliable robotic manipulation requires both semantic understanding and precise control in three-dimensional space. However, vision-language-action (VLA) foundations largely inherit visual representations from 2D vision-language pre-training, while spatial supervision is often introduced only during task-specific adaptation. Developing spatial understanding as a transferable foundation-model capability therefore calls for learning from broader robot experience. We present SLA, a Spatial-Language-Action Model that scales implicit spatial alignment to continual pre-training and maintains it during downstream post-training. Initialized from a pretrained pi05 policy, SLA jointly optimizes action prediction and alignment between intermediate visual embeddings and spatial representations from a frozen 3D perception model. We curate and unify heterogeneous robot datasets to support spatial learning across diverse embodiments, tasks, and scenes. To accommodate this diversity, we introduce feature-dependent gates that adaptively aggregate visual embeddings from multiple VLA layers for spatial supervision. The teacher further exploits partially available depth and camera calibration alongside RGB observations, enabling effective use of heterogeneous geometric annotations. Probabilistic state dropout encourages reliance on visual cues and mitigates overfitting to demonstration trajectories. All auxiliary components are used only during training, allowing direct reuse of pretrained VLA weights and preserving the original inference architecture.",
+      "published_date": "2026-11-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.08373",
+      "pdf_url": "https://arxiv.org/pdf/2611.08373",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.08373",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 91,
+      "hot_score": 910,
+      "structured_summary": {
+        "chinese_title": "SLA: 通过持续预训练扩展空间-语言-动作模型",
+        "chinese_summary": "SLA 模型通过持续预训练扩展空间理解，支持多机器人任务和场景的学习。",
+        "pain_point": "现有模型依赖特定任务的监督，缺乏普遍的空间理解能力。",
+        "core_value": "SLA 模型通过持续预训练提升空间理解的泛化能力，适用于多种机器人任务。",
+        "technical_architecture": "SLA 模型结合动作预测和空间表示对齐，使用特征依赖门控机制适应多层视觉嵌入。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多样化的数据集支持进一步的泛化能力提升。",
+        "key_contributions": [
+          "提出 SLA 模型通过持续预训练扩展空间理解",
+          "引入特征依赖门控机制适应多层视觉嵌入",
+          "整合多机器人数据集支持跨任务和场景学习"
+        ],
+        "application_scenarios": [
+          "机器人抓取和放置",
+          "机器人导航和定位"
+        ],
+        "technical_highlights": [
+          "多层视觉嵌入的自适应聚合",
+          "空间表示对齐的持续优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.04277",
+      "source": "huggingface",
+      "title": "Harness-S: Learning from Sibling Harnesses for Generalizable Agent Training",
+      "authors": [
+        "Kangning Zhang",
+        "Wenxiang Jiao",
+        "Bowen Fang",
+        "Shuai Shao",
+        "Jiachen Zhu",
+        "Rong Shan",
+        "Shijian Wang",
+        "Hao Wang",
+        "Yuan Lu",
+        "Weiwen Liu",
+        "Weinan Zhang"
+      ],
+      "abstract": "Harness evolution from a common base exhibits Locality, Complementarity, and Nonstationarity: variants repair different failures, and their utility changes as the policy learns. Rather than seeking a universally superior harness, we introduce Harness-S to selectively rescue failures of a base execution system through sibling harnesses and transfer the resulting capabilities into a single policy that remains effective under the original harness. Directional Harness Evolution develops specialized sibling harnesses along distinct repair directions, forming a reusable Sibling Harness Pool that remains fixed during policy training. Complementary Harness Rescue Training invokes this pool only when all initial attempts under the base harness fail. The same policy generates fresh rollouts under selected auxiliary harnesses, and these trajectories replace the failed group for reinforcement learning. An Adaptive Harness Router selects the Top-k variants using Harness Behavior Profiles and voting across multiple LLMs. Policy-aware profile re-anchoring refreshes this evidence as the policy learns. Across AppWorld, SWE-Gym, and DBBench, the trained policy substantially outperforms policy-only training when returned to the original base harness. Behavioral analyses and held-out cases support the transfer of harness-elicited behaviors into the policy itself. Reusing the router for Rank-1 inference provides additional gains at the same executor rollout count.",
+      "published_date": "2026-11-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.04277",
+      "pdf_url": "https://arxiv.org/pdf/2611.04277",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.04277",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "Harness-S：通过兄弟Harness学习实现通用智能体训练",
+        "chinese_summary": "通过引入Harness-S，智能体能够通过兄弟Harness恢复失败并转移能力，显著提升性能。",
+        "pain_point": "智能体在不同环境下的适应性和鲁棒性不足。",
+        "core_value": "通过兄弟Harness的互补救援和方向性进化，提升智能体的通用性和适应性。",
+        "technical_architecture": "构建可重用的兄弟Harness池，智能体根据行为特征选择最优Harness。",
+        "quantitative_results": "在AppWorld、SWE-Gym和DBBench中，训练后的智能体性能显著优于仅使用策略的方法。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定应用场景中进行了验证。",
+        "key_contributions": [
+          "引入Harness-S机制，通过兄弟Harness互补救援提升智能体性能",
+          "构建可重用的兄弟Harness池，实现智能体的通用训练",
+          "提出适应性Harness路由选择策略，基于行为特征和多LLM投票"
+        ],
+        "application_scenarios": [
+          "智能体在复杂环境中的适应性训练",
+          "多环境下的智能体通用性提升"
+        ],
+        "technical_highlights": [
+          "兄弟Harness池的构建与使用",
+          "适应性Harness路由选择策略"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.00883",
+      "source": "huggingface",
+      "title": "Random Is Almost Enough? Stable and Low-Cost Benchmark Compression via BestRand",
+      "authors": [
+        "George Ling",
+        "Shanshan Zhong",
+        "Lijin Yang",
+        "Hao Yang",
+        "Nanxiang Li",
+        "Zhongzhan Huang"
+      ],
+      "abstract": "Benchmark compression reduces the often prohibitive time and cost of model evaluation by evaluating models on a small benchmark subset that closely matches full-benchmark results. To quantify estimation error, we derive an accurate analytical approximation to the error distribution when estimating full-benchmark scores from a subset, showing that most subsets yield small errors, while a few produce much larger errors, resulting in a long-tailed distribution. This means random sampling alone can achieve surprisingly strong performance with high probability, but remains unstable due to rare large errors. We further show that this instability is inherent to modern foundation models and persists even as more models are evaluated. Based on these findings, we introduce BestRand, a stable and low-cost benchmark compression method that preserves the efficiency of random sampling while substantially reducing its high-error tail. We validate BestRand on 70+ text, multimodal, and agent benchmarks, and further extend it to VLA evaluation. Compared with competitive methods, BestRand reduces high-error risk by 50.2% and estimation error by 16.4% on average, while requiring only 51.3% of the construction cost. It further reduces OOD estimation error by 21.8% on average across score-range, model-family, and temporal shifts. Together, our theory provides practical guidance for understanding and predicting the accuracy and reliability of benchmark compression, while BestRand enables stable and accurate compression at low cost. The code and data are publicly available onhttps://github.com/George-Ling3/BestRand.",
+      "published_date": "2026-10-31T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.00883",
+      "pdf_url": "https://arxiv.org/pdf/2611.00883",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.00883",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 50,
+      "hot_score": 500,
+      "structured_summary": {
+        "chinese_title": "随机抽样几乎足够？通过BestRand实现稳定且低成本的基准压缩",
+        "chinese_summary": "BestRand通过减少高误差风险和降低估计误差，实现高效且稳定的基准压缩。",
+        "pain_point": "模型评估时间长且成本高。",
+        "core_value": "通过随机抽样和改进方法，实现高效且稳定的基准压缩。",
+        "technical_architecture": "基于随机抽样和改进的误差分布分析。",
+        "quantitative_results": "相比竞品，BestRand将高误差风险降低50.2%，估计误差降低16.4%。",
+        "competitors": "相比竞品，BestRand表现更优。",
+        "limitations": "仅在部分基准上进行了验证。",
+        "key_contributions": [
+          "提出BestRand方法",
+          "减少高误差风险",
+          "降低估计误差"
+        ],
+        "application_scenarios": [
+          "文本基准压缩",
+          "多模态基准压缩",
+          "代理基准压缩"
+        ],
+        "technical_highlights": [
+          "改进的误差分布分析",
+          "稳定且低成本"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.07392",
+      "source": "huggingface",
+      "title": "WeLM-Image: A Unified Image Generation Model towards Visual Intelligence",
+      "authors": [
+        "Canmiao Fu",
+        "Chen Li",
+        "Guohui Zhang",
+        "Hao Lu",
+        "Hongyang Wei",
+        "Huadong Wu",
+        "Huaisong Zhang",
+        "Hubery Yin",
+        "Liyuan Cui",
+        "Qixin Yan",
+        "Tong Shao",
+        "Xiaoqiang Zhou",
+        "Xinhang Leng",
+        "Ying Zhang",
+        "Zhenhai Liu",
+        "Zhipeng Huang"
+      ],
+      "abstract": "We present WeLM-Image, a unified image foundation model that integrates multimodal understanding into text-to-image generation, instruction-guided editing, and multi-reference synthesis. Designed for single-GPU deployment in WeChat's large-scale consumer applications, the model processes text, reference images, and target latents as one interleaved sequence. A Mixture-of-Transformers (MoT) backbone combines shared attention with independent understanding and generation parameters to limit optimization interference. Equipping each path with Mixture-of-Experts (MoE) modules provides sparse capacity, with 31.7B stored parameters and approximately 5.4B generation parameters activated per target latent token. A generation-oriented data engine combines a knowledge-grounded visual vocabulary with large-scale visual clustering to balance semantic coverage and editing tasks, while training-time evaluation guides iterative data refinement. Bilingual annotations and verified editing supervision support progressive training up to native 1.5K resolution. We optimize generation and editing separately with rubric- and checklist-based rewards, then consolidate the specialized policies through noise-aware on-policy distillation. In the reported overall comparisons, the 1536-resolution model ranks first among the evaluated open-source models on PRISM-Bench, Qwen-Image-Bench, and UnicBench. MeanFlow-based few-step distillation yields WeLM-Image-Turbo, which generates a 1024times1024 image in 4.98\\,s on a single NVIDIA H20 GPU using eight guidance-free steps.",
+      "published_date": "2026-11-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.07392",
+      "pdf_url": "https://arxiv.org/pdf/2611.07392",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.07392",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 39,
+      "hot_score": 390,
+      "structured_summary": {
+        "chinese_title": "WeLM-Image：面向视觉智能的统一图像生成模型",
+        "chinese_summary": "WeLM-Image 将多模态理解集成到文本到图像生成、指令引导编辑和多参考合成中。",
+        "pain_point": "现有模型在处理多模态信息和生成高质量图像时存在局限性。",
+        "core_value": "通过统一架构和高效设计，提升图像生成质量并支持多种视觉任务。",
+        "technical_architecture": "采用混合多头变压器和专家混合模块，实现高效并行处理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在单GPU上部署，未来需探索多GPU扩展。",
+        "key_contributions": [
+          "将多模态理解集成到图像生成中",
+          "采用混合多头变压器和专家混合模块",
+          "支持多参考合成和指令引导编辑"
+        ],
+        "application_scenarios": [
+          "文本到图像生成",
+          "图像编辑"
+        ],
+        "technical_highlights": [
+          "高效并行处理",
+          "支持多模态理解"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.06741",
+      "source": "huggingface",
+      "title": "TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing",
+      "authors": [
+        "Ruikang Li",
+        "Zixuan Chen",
+        "Jiarui Wu",
+        "Mingde Yao",
+        "Yiyuan Zhang",
+        "Yujin Wang",
+        "Hanming Deng",
+        "Lewei Lu",
+        "Tianfan Xue"
+      ],
+      "abstract": "Strong single-turn editing performance does not guarantee reliable multi-turn interaction: as edited outputs are repeatedly reused, small unintended changes can accumulate into severe visual drift. This long-term drift is often mitigated through training on multi-turn data or cross-turn rollouts, potentially altering pretrained priors, or through specialized inference-time mechanisms that are difficult to scale to foundation models. We introduce TailSteer, a final-stage training framework that improves multi-turn robustness while retaining the generative and editing capabilities acquired through earlier training. TailSteer follows a simple principle: keep early denoising dynamics close to those of the base model and concentrate preservation corrections near the trajectory tail, where fine-grained deviations can be suppressed. These corrections are learned from the editor's own on-policy denoising rollouts, using unchanged source content as a preservation reference without requiring curated ground-truth editing pairs. Experiments across the FLUX, SenseNova, and Qwen families show that TailSteer substantially reduces cumulative drift over 15-20 editing turns while largely preserving base-model performance on extensive text-to-image and single-image editing benchmarks. These results demonstrate that long-horizon editing robustness can be unlocked in foundation models after TailSteer, rather than by relearning their existing capabilities.",
+      "published_date": "2026-11-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.06741",
+      "pdf_url": "https://arxiv.org/pdf/2611.06741",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.06741",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": {
+        "chinese_title": "TailSteer: 轨迹尾部校正以提高多轮次图像编辑的抗漂移能力",
+        "chinese_summary": "TailSteer 提高了多轮次图像编辑的抗漂移能力，同时保留了早期训练获得的生成和编辑能力。",
+        "pain_point": "多轮次图像编辑中，小的无意变化会累积成严重的视觉漂移。",
+        "core_value": "通过轨迹尾部校正，TailSteer 在保持编辑能力的同时，显著减少了累积漂移。",
+        "technical_architecture": "TailSteer 通过保持早期去噪动态接近基础模型，并在轨迹尾部集中校正来工作。",
+        "quantitative_results": "实验表明，TailSteer 在 15-20 轮次编辑中显著减少了累积漂移。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更广泛的模型和应用场景。",
+        "key_contributions": [
+          "提出了轨迹尾部校正的方法",
+          "无需专门的校正数据对，使用编辑器自身的去噪卷出数据进行校正"
+        ],
+        "application_scenarios": [
+          "多轮次图像编辑",
+          "需要长期稳定编辑效果的场景"
+        ],
+        "technical_highlights": [
+          "简单有效的校正原则",
+          "无需专门的校正数据对"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.03743",
+      "source": "huggingface",
+      "title": "EvoMemState: Evolving Memory State for Personal Agents",
+      "authors": [
+        "Zhishang Xiang",
+        "Yunbo Tang",
+        "Zhongqiao Liu",
+        "Junkai Chen",
+        "Zerui Chen",
+        "Qingguo Hu",
+        "Yuxuan Zhang",
+        "William Grant",
+        "Qinggang Zhang",
+        "Jinsong Su"
+      ],
+      "abstract": "Long-term memory enables large language model (LLM) agents to provide continuous personalized assistance by retaining user information across interactions. Existing systems support this process through fact extraction, organization, updating, and retrieval, but largely maintain memories as independent facts. This fact-centric paradigm may overlook how new facts update, constrain, or conflict with earlier ones, while leaving their applicability, role, and priority for the current request implicit. In this paper, we introduce EvoMemState, a state-centric framework that augments persistent facts with two complementary states: Relational States that capture how facts remain valid and relate to one another as memory evolves, and a Reasoning State that determines how these facts should be applied to the current request. Specifically, EvoMemState consists of three key components: (i) Ontology-Guided Memory State Induction extracts Persistent Facts and constructs Relational States that maintain their validity, scope, and evolving relations. (ii) RL-Based State Evolution internalizes memory-use experience into a policy through reinforcement learning to generate a request-specific Reasoning State. (iii) State-Aware Reasoning then combines the relevant facts with their Relational States and the generated Reasoning State to guide the personal agent. Extensive experiments on long-term dialogue and memory-use benchmarks demonstrate consistent improvements over existing memory systems in retrieval completeness and memory-grounded response accuracy. Our code and implementation details are available at https://github.com/XMUDeepLIT/EvoMemState.git.",
+      "published_date": "2026-11-02T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.03743",
+      "pdf_url": "https://arxiv.org/pdf/2611.03743",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.03743",
+      "category": "llm",
+      "tags": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "EvoMemState: 个人代理的进化记忆状态",
+        "chinese_summary": "引入了一种状态为中心的框架，通过关系状态和推理状态来增强持久事实，以更好地处理长期记忆的更新和应用。",
+        "pain_point": "现有系统主要以事实为中心，忽视了新事实如何更新、约束或与早期事实冲突，以及它们在当前请求中的适用性。",
+        "core_value": "通过引入关系状态和推理状态，更好地处理长期记忆的更新和应用，提高个性化辅助的连续性和相关性。",
+        "technical_architecture": "采用本体引导的记忆状态诱导和基于强化学习的状态进化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多的实验数据来验证其在大规模应用中的效果。",
+        "key_contributions": [
+          "引入关系状态和推理状态",
+          "采用本体引导的记忆状态诱导",
+          "基于强化学习的状态进化"
+        ],
+        "application_scenarios": [
+          "个人助手",
+          "智能客服"
+        ],
+        "technical_highlights": [
+          "状态为中心的框架",
+          "本体引导的记忆状态诱导"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.07854",
+      "source": "huggingface",
+      "title": "Towards Foundation Decision Models: Drex",
+      "authors": [
+        "Nischay Dhankhar",
+        "Alisher Amantay",
+        "Zhanibek Datbayev",
+        "Darkhan Akhmetov",
+        "Yash Shah",
+        "Nurmukhamed Ubaidullayev",
+        "Raman Saparkhan",
+        "Dos Baha",
+        "Abulhair Saparov"
+      ],
+      "abstract": "Autoregressive approaches with large language models, such as long chain-of-thought reasoning, have become the default for new AI applications because they reach higher accuracy on a wide range of tasks. In production, however, they give inconsistent answers, require parsing of outputs, and add cost and latency. Decision models address this: given a question and a set of options supplied by the user, they return a probability distribution over the options without autoregressive decoding. We present Drex, a family of four open decision models with 8B (DLM), 9B (v1.5), 35B with 3B active (v2.0), and 27B (Max) parameters. Each request consists of a state (a document, record, or agent context, optionally with images) and questions about it, each asking for a choice among options, a yes/no judgment, or a score on an ordered scale. Training combines supervised fine-tuning with reinforcement learning from adjusted feedback (RLAF), plus vision tuning for Max. Ablations show that RLAF improves accuracy and that consistency losses improve robustness to option order. On Decision Index 0.4.1, Max sets a new state of the art among the decision models we compare (67.52 on the public suite vs. 60.70 for Jev 1.14.0). On Decision Bench v4, it is statistically tied with d3-turbo and GPT-6 Sol and trails Claude Opus 5.5 by 1.6 points, and it has the highest accuracy among decision models on DecideBench. Max answers a typical request in 183 ms, against about 2.0 s for GPT-6 Sol and 3.5 s for Claude Opus 5.5, and its outputs are stable under option reordering. All four models are open source: https://github.com/nace-ai/drex-decision-models",
+      "published_date": "2026-11-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.07854",
+      "pdf_url": "https://arxiv.org/pdf/2611.07854",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.07854",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": {
+        "chinese_title": "向基础决策模型迈进：Drex",
+        "chinese_summary": "Drex 是一种决策模型，能够根据问题和用户提供的选项返回概率分布，无需自回归解码。",
+        "pain_point": "现有自回归方法在生产中回答不一致，需要解析输出，增加成本和延迟。",
+        "core_value": "Drex 提供了一种无需自回归解码的决策模型，提高了准确性和鲁棒性。",
+        "technical_architecture": "Drex 采用监督微调结合调整反馈强化学习（RLAF）进行训练。",
+        "quantitative_results": "Drex 在 Decision Index 0.4.1 上的表现优于其他决策模型。",
+        "competitors": "对比了其他决策模型，Drex 表现最佳。",
+        "limitations": "未来需要进一步探索更复杂的场景应用。",
+        "key_contributions": [
+          "提出了一种新的决策模型 Drex",
+          "采用 RLAF 训练方法提高模型性能",
+          "验证了 RLAF 和一致性损失的有效性"
+        ],
+        "application_scenarios": [
+          "文本理解和生成",
+          "决策支持系统"
+        ],
+        "technical_highlights": [
+          "无需自回归解码",
+          "结合 RLAF 和视觉调优"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.04894",
+      "source": "huggingface",
+      "title": "VisSearch-Bench: Evaluating Long Horizon Visual Search in Multimodal Agents",
+      "authors": [
+        "ZhengXian Wu",
+        "Qianhao Nie",
+        "Zhuohong Chen",
+        "Junjie Gao",
+        "Yuyao Zhang",
+        "Yunyao Yu",
+        "Hangrui Xu",
+        "Cheng Cheng",
+        "Guiyu Ma",
+        "Jin Zhang",
+        "Xingzhong Xu",
+        "Kai Yang",
+        "Haoqian Wang"
+      ],
+      "abstract": "Multimodal agents use web and image tools to answer questions beyond their internal knowledge. Some search tasks use images mainly to identify an initial entity, then rely on text retrieval. These tasks offer limited insight into how agents connect information across images, objects, and search steps. We therefore focus on visual context management. This involves organizing and using visual information and linking it to other findings during search. Visually intensive tasks require agents to combine object appearance, local details, or spatial relations with external information. We introduce VisSearch-Bench, with 204 human-written tasks across 7 main domains and 25 subdomains. It covers Set-wise Visual Search, Sequential Visual Search, Hybrid Wide-Deep Search, Competitive Visual Disambiguation, and Visual-Structure-Guided Search. Each task provides a reference answer, traceable evidence, and scoring rules. Accuracy measures complete task success, while Process Score measures the correctness and completeness of individual results and subquestion answers. Across 16 multimodal models, the best system fully solves only 26.47% of tasks, even with search tools. These results highlight the challenge of linking visual evidence with search results to produce complete answers.",
+      "published_date": "2026-11-03T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.04894",
+      "pdf_url": "https://arxiv.org/pdf/2611.04894",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.04894",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": {
+        "chinese_title": "VisSearch-Bench: 评估多模态代理的长时视觉搜索",
+        "chinese_summary": "引入VisSearch-Bench，评估多模态代理在视觉搜索中的表现。",
+        "pain_point": "现有任务难以评估代理如何连接跨图像、对象和搜索步骤的信息。",
+        "core_value": "提供了一个全面的视觉搜索基准，涵盖多种视觉搜索任务。",
+        "technical_architecture": "设计了包含204个人工编写任务的基准，覆盖多种视觉搜索类型。",
+        "quantitative_results": "16个模型中，最好的系统仅能完全解决26.47%的任务。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步扩展任务覆盖范围。",
+        "key_contributions": [
+          "引入了全面的视觉搜索基准",
+          "涵盖多种视觉搜索任务类型",
+          "提供了详细的参考答案和评分规则"
+        ],
+        "application_scenarios": [
+          "多模态代理评估",
+          "视觉搜索技术改进"
+        ],
+        "technical_highlights": [
+          "包含204个人工编写任务",
+          "覆盖多种视觉搜索任务类型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.06817",
+      "source": "huggingface",
+      "title": "Open-HumanScale: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models",
+      "authors": [
+        "Juncheng Ma",
+        "Jiaxin Li",
+        "Jiankai Tu",
+        "Bo Liang",
+        "Guodong Lv",
+        "Yufan Deng",
+        "Junzhe Tang",
+        "Liangzhu Yang",
+        "Chen Bian",
+        "Zicong Cao",
+        "Baohao Zhu",
+        "Jianxin Bi",
+        "Tengfei Yan",
+        "Yinyuan Zhang",
+        "Kewei Zhang",
+        "Xinglong Chen",
+        "Kaiqi Chen",
+        "Duomin Wang",
+        "Xiaotian Tang",
+        "Liang Tan",
+        "Li Li",
+        "Yuan Xu",
+        "Haosen Yang",
+        "Yuqi Wang",
+        "Jingfei Xia",
+        "Songyan Huang",
+        "Zhiyang Dou",
+        "Zhen Dong",
+        "Enze Xie",
+        "Tat-Seng Chua",
+        "Daquan Zhou"
+      ],
+      "abstract": "Egocentric human video offers a scalable source of manipulation priors for robot learning, yet translating raw data scale into generalizable robot policies demands rigorous data curation and training recipes. We introduce Open-HumanScale, the first fully open recipe for scaling egocentric pretraining to 50,000 hours, anchored by Open-HumanScale-50K---a curated egocentric video corpus densely annotated with hand motion and natural language. Leveraging this corpus, we systematically investigate pure human pretraining via closed-loop simulation evaluations and uncover an empirical log-linear scaling law linking pretraining data hours to downstream robot success rates. Grounded in these findings, we develop HumanWAM-Vanilla, a world--action model pretrained exclusively on 50k hours of egocentric human video. Upon robot post-training, HumanWAM-Vanilla reaches 92.08% success on RoboTwin 2.0 Clean2Clean and 68.88% on Clean2Random, alongside a 14.17% mean success rate and a 19.00 mean progress score on RoboDojo. To push the capability frontier further, we explore joint human--robot pretraining with HumanWAM-Goal, a visual-goal-conditioned world--action model. Hybrid data scaling unlocks broad zero-shot generalization across both simulation and physical benchmarks, propelling post-trained RoboTwin 2.0 performance to new state-of-the-art levels: 92.70% on Clean2Clean and a substantial leap to 84.60% on Clean2Random. On physical robots, HumanWAM-Goal further exhibits emergent embodied in-context learning, dynamically adapting its manipulation behavior to unseen visual goals without parameter updates. To support reproducible scaling research in embodied AI, we open-source the Open-HumanScale-50K corpus, data curation and pretraining pipelines, alongside the pretrained and post-trained HumanWAM checkpoints, inference code, and simulation evaluation suites.",
+      "published_date": "2026-11-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.06817",
+      "pdf_url": "https://arxiv.org/pdf/2611.06817",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.06817",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 15,
+      "hot_score": 150,
+      "structured_summary": {
+        "chinese_title": "Open-HumanScale：面向机器人体验的开放基础模型扩展方案",
+        "chinese_summary": "提出Open-HumanScale，一种基于50,000小时人体视角视频的开放预训练方法，显著提升机器人操作成功率。",
+        "pain_point": "大规模人体视角视频数据难以有效转化为可泛化的机器人策略。",
+        "core_value": "提供了一种系统化的人体视角预训练方法，揭示了数据量与机器人成功率之间的关系。",
+        "technical_architecture": "基于50,000小时人体视角视频的预训练模型，结合闭环仿真评估。",
+        "quantitative_results": "HumanWAM-Vanilla在RoboTwin 2.0 Clean2Clean中达到92.08%成功率。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于人体视角视频，未来需探索更多数据源。",
+        "key_contributions": [
+          "提出Open-HumanScale开放预训练方案",
+          "揭示数据量与机器人成功率关系",
+          "开发HumanWAM-Vanilla预训练模型"
+        ],
+        "application_scenarios": [
+          "机器人操作任务",
+          "机器人学习与适应"
+        ],
+        "technical_highlights": [
+          "大规模人体视角视频预训练",
+          "闭环仿真评估验证"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

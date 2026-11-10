@@ -1,0 +1,545 @@
+{
+  "date": "2026-11-09",
+  "generated_at": "2026-11-10T04:30:50.439770+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.08264",
+      "source": "huggingface",
+      "title": "SplatAnything: Gaussian Spacing Normalization for Feed-forward 3DGS across Arbitrary Scenes",
+      "authors": [
+        "Hao Yu",
+        "Zhenwei Wang",
+        "Yongzhen Hu",
+        "Yuning Gong",
+        "Junta Wu",
+        "Xiaowei Zhou",
+        "Hujun Bao",
+        "Tengfei Wang",
+        "Chunchao Guo",
+        "Sida Peng"
+      ],
+      "abstract": "We identify a key limitation of existing feed-forward 3DGS methods: Gaussian attributes are typically predicted in a radial-distance-normalized space that canonicalizes a global radial statistic of the reconstructed geometry, while the spacing between neighboring Gaussian centers can still vary substantially across scene scales and camera configurations. This mismatch induces systematic shifts in Gaussian-scale targets, leading to ambiguous supervision. To address this, we propose SplatAnything with Gaussian Spacing Normalization (GSNorm), which canonicalizes a robust scene-level statistic of Gaussian spacing to provide a more consistent spatial reference for Gaussian prediction. To rigorously assess our method, we further establish a systematic benchmark spanning diverse datasets, input sparsity levels, and challenging extrapolated viewpoints. Extensive experiments demonstrate that SplatAnything achieves state-of-the-art performance, with particularly strong gains under substantial variations in scene scale and viewpoint.",
+      "published_date": "2026-11-05T16:37:29.000Z",
+      "url": "https://arxiv.org/abs/2611.08264",
+      "pdf_url": "https://arxiv.org/pdf/2611.08264",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.08264",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 64,
+      "hot_score": 640,
+      "structured_summary": {
+        "chinese_title": "SplatAnything: Gaussian Spacing Normalization for Feed-forward 3DGS across Arbitrary Scenes",
+        "chinese_summary": "通过Gaussian Spacing Normalization提供更一致的空间参考，实现3DGS在任意场景下的优越性能。",
+        "pain_point": "现有方法中，Gaussian属性预测在径向距离归一化空间中进行，导致不同场景尺度和相机配置下Gaussian中心间距变化大，引起目标尺度偏移。",
+        "core_value": "提出Gaussian Spacing Normalization，提供更一致的空间参考，增强3DGS的鲁棒性和一致性。",
+        "technical_architecture": "通过Gaussian Spacing Normalization技术，提供更一致的空间参考框架。",
+        "quantitative_results": "实验表明，SplatAnything在多种场景和视角下均表现出优越性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景和视角下进行了评估。",
+        "key_contributions": [
+          "提出Gaussian Spacing Normalization",
+          "建立系统性基准评估方法"
+        ],
+        "application_scenarios": [
+          "3D重建",
+          "场景理解"
+        ],
+        "technical_highlights": [
+          "提供更一致的空间参考",
+          "适用于任意场景和视角"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.06043",
+      "source": "huggingface",
+      "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
+      "authors": [
+        "Daniel Huang",
+        "Qi He",
+        "Shaoxiong Duan",
+        "Yingjie Li",
+        "Qiao Cheng",
+        "Yitao Duan"
+      ],
+      "abstract": "Streaming speech recognition is increasingly consumed by machines, such as translators and voice agents, that act on each token as it appears. A token that is later revised costs wasted work or a wrong action. In this work, we present Confucius4-R2T2 (short for Real Real-Time Transcription), a stable-prefix streaming ASR model that never modifies its earlier output while maintaining high accuracy and low latency. R2T2 is obtained by post-training Qwen3-ASR-1.7B on 1,500 hours of Chinese and English audio while freezing its pre-trained audio encoder and projector. The adaptation is based on the concept of Longest Stable Prefix (LSP), a new notion that we introduce in this work. We prove that LSP is monotone under the prefix order, consistent with the full-audio output, and maximal among labels that equal a whole earlier output. Learning from LSP labels converts a full-context model into a stable-prefix streaming one without any architectural change. Extensive evaluations show that R2T2 brings streaming recognition close to the base model's full-context quality while delivering stable text with low emission lag. Its gains extend beyond the post-training languages, demonstrating a practical path from full-context ASR to stable streaming. We open-source the model weights and code at https://huggingface.co/netease-youdao/Confucius4-R2T2 and https://github.com/netease-youdao/Confucius4-R2T2.",
+      "published_date": "2026-11-04T06:46:50.000Z",
+      "url": "https://arxiv.org/abs/2611.06043",
+      "pdf_url": "https://arxiv.org/pdf/2611.06043",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.06043",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "upvotes": 57,
+      "hot_score": 570,
+      "structured_summary": {
+        "chinese_title": "Confucius4-R2T2: 实时稳定流式ASR模型",
+        "chinese_summary": "提出了一种稳定前缀流式ASR模型R2T2，保持高准确率和低延迟，不修改早期输出。",
+        "pain_point": "流式ASR中，后期修正的token可能导致错误操作。",
+        "core_value": "模型在保持高准确率的同时，确保早期输出不被修改，减少错误。",
+        "technical_architecture": "基于Longest Stable Prefix (LSP)概念，通过后训练将全上下文模型转换为稳定前缀流式模型。",
+        "quantitative_results": "实验表明R2T2接近基模型的全上下文质量，同时具有低延迟。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在后训练语言上进行了验证。",
+        "key_contributions": [
+          "引入了Longest Stable Prefix (LSP)概念",
+          "提出了R2T2模型架构",
+          "证明了LSP的性质"
+        ],
+        "application_scenarios": [
+          "实时翻译",
+          "语音助手"
+        ],
+        "technical_highlights": [
+          "无需架构修改即可实现稳定前缀流式",
+          "保持高准确率和低延迟"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.03953",
+      "source": "huggingface",
+      "title": "P^2-MOPD: Accelerating Multi-Teacher On-Policy Distillation via Parameter Priors",
+      "authors": [
+        "Sinuo Wang",
+        "Jiacheng Lu",
+        "Zeyu Zhang",
+        "Maojia Song",
+        "Rui Sun",
+        "Beidi Luan",
+        "Yutong Xie",
+        "Jing Li",
+        "Daxin Jiang",
+        "Qi Wu",
+        "Zuo Bai"
+      ],
+      "abstract": "Multi-teacher on-policy distillation consolidates expert capabilities by supervising student-generated trajectories, whereas task arithmetic offers a training-free alternative through linear parameter combinations. We view the linear combination of student and expert parameters as a single differentiable model and propose P^2-MOPD, which jointly optimizes the mixing coefficients and the student weights under the same on-policy distillation objective. Unlike task arithmetic, which stays within the span of the frozen student and expert parameters for any choice of merging coefficients, P^2-MOPD keeps the student trainable, so the experts act as parameter priors without confining it to this span. Across four domains at 1.7B and 4B scales, P^2-MOPD achieves faster and more balanced recovery than MOPD from the same initialization, surpassing its final average recovery in half the training steps. At the end of training, our 1.7B model reaches 94.7% average recovery, versus 80.9% for MOPD.",
+      "published_date": "2026-11-02T20:53:15.000Z",
+      "url": "https://arxiv.org/abs/2611.03953",
+      "pdf_url": "https://arxiv.org/pdf/2611.03953",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.03953",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 45,
+      "hot_score": 450,
+      "structured_summary": {
+        "chinese_title": "P^2-MOPD: 加速多教师在线策略蒸馏的方法",
+        "chinese_summary": "P^2-MOPD 通过将学生和专家参数线性组合为单个可微模型，实现更快更平衡的恢复。",
+        "pain_point": "多教师在线策略蒸馏方法在恢复专家能力时速度较慢且不平衡。",
+        "core_value": "P^2-MOPD 通过专家参数作为先验知识，保持学生模型可训练性，实现更快的恢复。",
+        "technical_architecture": "将学生和专家参数线性组合为单个可微模型，联合优化混合系数和学生权重。",
+        "quantitative_results": "P^2-MOPD 在 1.7B 和 4B 规模的四个领域中，比 MOPD 在一半的训练步骤内达到更高的平均恢复率。",
+        "competitors": "MOPD 作为主要基线进行对比。",
+        "limitations": "未来需要在更多领域和更大规模上验证其有效性。",
+        "key_contributions": [
+          "提出 P^2-MOPD 方法，通过专家参数作为先验知识加速恢复。",
+          "保持学生模型可训练性，避免局限于学生和专家参数的组合空间。",
+          "实现更快更平衡的恢复，特别是在训练步骤较少时"
+        ],
+        "application_scenarios": [
+          "多教师在线策略蒸馏",
+          "强化学习任务中的专家知识整合"
+        ],
+        "technical_highlights": [
+          "将学生和专家参数线性组合为单个可微模型。",
+          "联合优化混合系数和学生权重。",
+          "保持学生模型可训练性，不受冻结参数空间限制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.08175",
+      "source": "huggingface",
+      "title": "PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers?",
+      "authors": [
+        "Yue Zhang",
+        "Jilei Sun",
+        "Liqiang Jing",
+        "Yijie Wei",
+        "Ruohan Yang"
+      ],
+      "abstract": "Automating printed circuit board (PCB) routing requires coordinating board-level connectivity decisions with geometric execution under strict design rules. Although recent agents can interact with native routing tools, reliable routing on complex boards remains challenging. We present PCBRouteAgent, a multimodal PCB routing agent inspired by how human engineers coordinate global strategy with local execution. A Global Routing Planner combines board images and structured electrical and geometric information to specify connection topology, routing order, corridors, and layer transitions. A Detailed Routing Executor realizes these guides through KiCad's native routing engine and performs bounded local recovery. Unresolved failures are returned as structured feedback, enabling targeted guide revisions while preserving accepted routes. We evaluate PCBRouteAgent on 247 synthetic and real-world boards from four PCBWorld-Bench test splits. It achieves clean-pass rates of 100%, 94.9%, 100%, and 40% on D2, D3-A, D3-B, and D3-C, respectively. On the three real-world subsets, PCBRouteAgent outperforms the best evaluated baseline in clean-pass rate by 13.9, 36, and 10 percentage points, respectively.",
+      "published_date": "2026-11-05T15:31:15.000Z",
+      "url": "https://arxiv.org/abs/2611.08175",
+      "pdf_url": "https://arxiv.org/pdf/2611.08175",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.08175",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": {
+        "chinese_title": "PCBRouteAgent: LLM 代理与 PCB 走线工程师的差距有多大？",
+        "chinese_summary": "PCBRouteAgent 实现了 100% 的清洁通过率，显著优于现有基线。",
+        "pain_point": "自动化 PCB 走线在复杂板上的可靠实现仍具挑战。",
+        "core_value": "通过结合全局策略与局部执行，PCBRouteAgent 提高了复杂 PCB 的走线成功率。",
+        "technical_architecture": "PCBRouteAgent 包含全局走线规划器和详细走线执行器，利用 KiCad 工具实现。",
+        "quantitative_results": "在四个测试集上分别达到 100%, 94.9%, 100%, 和 40% 的清洁通过率。",
+        "competitors": "优于现有基线 13.9%, 36%, 和 10% 的清洁通过率。",
+        "limitations": "仅在合成和部分真实 PCB 上进行了测试。",
+        "key_contributions": [
+          "提出了结合全局策略与局部执行的多模态 PCB 走线代理",
+          "实现了 100% 的清洁通过率"
+        ],
+        "application_scenarios": [
+          "复杂 PCB 的自动化走线",
+          "提高 PCB 设计效率"
+        ],
+        "technical_highlights": [
+          "利用 KiCad 的本地走线引擎",
+          "通过结构化反馈进行局部恢复"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.06856",
+      "source": "huggingface",
+      "title": "LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis",
+      "authors": [
+        "Haoxiang Cao",
+        "Yuxuan Zhang",
+        "Penghui Du",
+        "Bo Li",
+        "Jiajiong Cao",
+        "Yingying Fan",
+        "Zimeng Wu",
+        "Yifu Luo",
+        "Mingzhe Zheng",
+        "Junwen Miao",
+        "Huaisong Zhang",
+        "Yang Yao",
+        "Yu Wang",
+        "Dongfu Jiang",
+        "Ping Nie",
+        "Wenhu Chen",
+        "Chaoqun Wang",
+        "Changqian Yu",
+        "Kelsey R. Allen"
+      ],
+      "abstract": "We introduce LongBanana, to our knowledge the first expert-designed and expert-verified benchmark for long-context multi-reference image synthesis in the age of agent-driven image generation. The task requires retrieving dispersed visual evidence, rejecting distractors, binding entities and relations, and composing one coherent final image from multiple references. LongBanana contains 90 carefully designed tasks organized by a 3-by-3 taxonomy; each task includes about 32 reference images, 20 constraints, and 50 evaluation items, yielding 4,670 expert-specified atomic evaluation items in total. Its graph-grounded evaluation design instantiates each task with reference images and an entity-relation graph, then converts node, edge, and whole-graph obligations into checklist items for Content Fidelity, Relational Binding, and Global Constraint Satisfaction. Reviewed expert labels include a 15% double-labeled subset with 89.4% exact agreement and 0.83 quadratic weighted kappa. We further introduce LongBanana-Gen, an agent-harness framework for long-horizon image generation; experiments show that minimal agent harnesses improve over direct generation, while a ReAct-Plan-Exec-Reflect (RPR) workflow yields harness-dependent gains by strengthening evidence grounding and repair. Together, LongBanana provides an auditable testbed for measuring dense visual evidence use and a shared target for developing stronger agent-driven image-generation systems. Code and data are available at the project page: https://long-banana.com/.",
+      "published_date": "2026-11-04T18:11:56.000Z",
+      "url": "https://arxiv.org/abs/2611.06856",
+      "pdf_url": "https://arxiv.org/pdf/2611.06856",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.06856",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "LongBanana：专家验证的长上下文多参考图像合成基准",
+        "chinese_summary": "LongBanana 是首个专家设计并验证的长上下文多参考图像合成基准。",
+        "pain_point": "缺乏专门针对长上下文多参考图像合成的专家验证基准。",
+        "core_value": "提供了一个详细的任务分类和评估设计，确保生成的图像准确、相关且满足全局约束。",
+        "technical_architecture": "采用实体-关系图和图为基础的评估设计，将任务分解为内容保真度、关系绑定和全局约束满足的检查项。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步扩展任务集以覆盖更多场景。",
+        "key_contributions": [
+          "设计了专家验证的长上下文多参考图像合成基准",
+          "提出了详细的评估设计",
+          "引入了代理框架以改善生成效果"
+        ],
+        "application_scenarios": [
+          "图像合成",
+          "视觉证据检索"
+        ],
+        "technical_highlights": [
+          "包含90个精心设计的任务",
+          "每个任务有32个参考图像、20个约束和50个评估项"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.09124",
+      "source": "huggingface",
+      "title": "Toward the Era of Agentic Embodied Intelligence",
+      "authors": [
+        "Chao Liang",
+        "Ke Chen",
+        "Fengxiaoxiao Li",
+        "Shibo Huang",
+        "Yufeng Sun",
+        "Zhaokai Yin",
+        "Jianhuan Lai",
+        "Haozhe Feng",
+        "Chenghuan Jia",
+        "Zhipeng Zhang"
+      ],
+      "abstract": "Foundation models increasingly guide robot actions, yet sustained autonomy requires efficient control and failure recovery. We introduce A2-MEAS, an embodied multi-agent framework built around code as a scaling interface. Learned correction codes combine corrective language, spatial evidence, execution history, and action proposals. MetaBrain provides training supervision and runtime guidance. A correction encoder and adapter absorb this knowledge into policy weights during training, while fresh codes adapt behavior with frozen weights at deployment. The action model, A2-WLA, adds motion-aware history and a latent world model to a vision-language-action policy. Surprisingly, this simple design with action pretraining and task specialization reaches 0.5755 Q-score on the 50-task BEHAVIOR 2026 public subset before online correction, 2.21x the 2025 winner's reported 0.2605 across different benchmark editions and training configurations. On all 100 BEHAVIOR 2026 public tasks, A2-MEAS achieves 0.6411 Q-score and 45.40% task success. On RoboTwin 2.0, A2-WLA achieves 93.98% average success, rising to 95.05% with the complete system. Across 12 real-robot tasks in five household settings, A2-WLA achieves 57.92% average success versus 26.67% for pi0.5. In long-horizon pour-over coffee preparation, a history-conditioned adapter raises post-failure completion at two filter-handling steps from 14% to 94% and from 8% to 82%, compared with A2-WLA retries. Our training infrastructure delivers 427.1 samples per second, 4.03x the throughput of a pi0.5 reference implementation on matched hardware. We will release the system, models, training scripts, and infrastructure to support efficient embodied learning.",
+      "published_date": "2026-11-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.09124",
+      "pdf_url": "https://arxiv.org/pdf/2611.09124",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.09124",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "迈向自主智能时代",
+        "chinese_summary": "A2-MEAS框架通过结合纠正代码和元脑提供高效控制和故障恢复，显著提升机器人任务完成率。",
+        "pain_point": "现有机器人缺乏持续自主能力，难以高效控制和恢复故障。",
+        "core_value": "A2-MEAS框架通过纠正代码和元脑实现高效控制和故障恢复，显著提升任务完成率。",
+        "technical_architecture": "A2-MEAS框架基于代码作为扩展接口，结合纠正代码、元脑和动作模型。",
+        "quantitative_results": "在BEHAVIOR 2026公共子集上，A2-MEAS达到0.5755 Q-score，优于2025年冠军的0.2605。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在部分任务和场景中进行了测试。",
+        "key_contributions": [
+          "引入A2-MEAS框架",
+          "结合纠正代码和元脑",
+          "实现高效控制和故障恢复"
+        ],
+        "application_scenarios": [
+          "家庭环境中的机器人任务",
+          "虚拟孪生环境中的机器人任务"
+        ],
+        "technical_highlights": [
+          "动作预训练",
+          "任务专业化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.06808",
+      "source": "huggingface",
+      "title": "LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting",
+      "authors": [
+        "Lingfei Qian",
+        "Yan Wang",
+        "Xueqing Peng",
+        "Yupeng Cao",
+        "Yuechen Jiang",
+        "Zhuohan Xie",
+        "Anke Xu",
+        "Wenbo Cao",
+        "Jiarui Chen",
+        "Zehan Li",
+        "Jimin Huang",
+        "Alejandro Lopez-Lira",
+        "Yuehua Tang",
+        "Sophia Ananiadou",
+        "Jian-Yun Nie"
+      ],
+      "abstract": "Financial backtests of large language models (LLMs) are meaningful only if the model did not already know the outcomes it is asked to predict. Practitioners guard against this by trusting a vendor's stated knowledge cutoff, by asking the model what it knows, or by instructing it to answer as of a past date. To verify whether any of these safeguards can be trusted, we introduce FinDendro, a benchmark of 2,226 dated U.S. facts from 1999 to 2026, covering monthly macroeconomic series, month-end stock prices and Federal Reserve decisions. Each fact yields four prompts: a value question, Recall and Predict questions that pair each candidate value with a claim of knowing or guessing without a declared date, and a Predict question with a historical declared date. Controls for persistence and dominant outcomes keep chance accuracy near 0.27. Results show that for most frontier models, self-reports understate knowledge. GPT-5 answers 76% of controlled facts correctly but claims to know 38%, and answers 61% of the facts it says it does not know. Knowledge claims can persist beyond the measured knowledge boundary, by up to seven quarters, and a declared date removes most of the claims of prior knowledge while leaving accuracy unchanged. Backtests inside a model's training window therefore cannot be certified leak-free by self-report, instruction or stated cutoff. These findings motivate behavioral measurement of temporal knowledge boundaries, and FinDendro provides a benchmark and procedure for selecting backtest periods based on demonstrated factual knowledge.",
+      "published_date": "2026-11-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.06808",
+      "pdf_url": "https://arxiv.org/pdf/2611.06808",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.06808",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "LLMs不知道它们知道的内容：金融回测中时间自知力基准测试",
+        "chinese_summary": "研究发现大多数前沿模型的自我报告低估了知识，GPT-5声称知道38%的事实但实际正确回答了76%。",
+        "pain_point": "现有方法无法可靠验证大型语言模型在金融回测中的未知性。",
+        "core_value": "提出FinDendro基准测试，评估模型在特定时间点的知识水平。",
+        "technical_architecture": "设计了包含2,226个时间戳的美国事实数据集，涵盖宏观经济、股票价格和美联储决策。",
+        "quantitative_results": "GPT-5正确回答了76%的控制事实，但声称只知道38%。",
+        "competitors": "暂无对比信息",
+        "limitations": "数据集仅覆盖美国市场，未来需扩展至全球市场。",
+        "key_contributions": [
+          "提出FinDendro基准测试",
+          "评估模型在特定时间点的知识水平"
+        ],
+        "application_scenarios": [
+          "金融回测",
+          "模型可信度评估"
+        ],
+        "technical_highlights": [
+          "设计了详细的时间戳问题",
+          "验证了模型的自我报告"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.07624",
+      "source": "huggingface",
+      "title": "Beneath the Surface: What We Overlook When We Talk About Agent Evolution",
+      "authors": [
+        "Xiaobo Wang",
+        "Zimu Wang",
+        "Siyu Ye",
+        "Jiaqi Li",
+        "Min Tang",
+        "Jun Bai",
+        "Yuling Shi",
+        "Ruobing Wang",
+        "Jingjing Zhang",
+        "Chaofan Wang",
+        "Kai Wu",
+        "Mengnan Qi",
+        "Kai Cai",
+        "Xiaodong Gu",
+        "Qi Liu",
+        "Zilong Zheng"
+      ],
+      "abstract": "Agent harness evolution enables recursive self-improvement (RSI) without updating model weights. We examine whether higher benchmark scores yield reliable, efficient, and transferable improvement. We evaluate four methods across harnesses, general and coding tasks. Repeated evaluations, controlled agent expansion, component interventions, and admission replays reveal recurring patterns. All sixteen evolved agents gain previously uncovered tasks while losing previously covered ones. In one general-task case, reliability rises by 5.2 points despite losing ten previously covered tasks. Most reliability gains also increase deployment cost. Specific changes usually outperform generic reminders, but their benefits can change when combined. The highest-scoring agent does not yield the largest mean improvement in any of our four pools, and stricter admission can discard useful alternatives. Transfer selectively preserves gains: coverage usually falls on the general-task target across both harness types and paradigms, but rises on the coding target with the outer-layer-only harness. These findings motivate preservation-aware evaluation, tested decision rules, and explicit applicability conditions. As a constructive follow-up, EvoAudit turns these diagnostics into revisions of select, analyze, mutate, and gate, achieving the best performance.",
+      "published_date": "2026-11-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.07624",
+      "pdf_url": "https://arxiv.org/pdf/2611.07624",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.07624",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 23,
+      "hot_score": 230,
+      "structured_summary": {
+        "chinese_title": "深入表面：当我们谈论代理进化时忽略了什么",
+        "chinese_summary": "研究发现，虽然高基准分数的代理进化能带来可靠性和成本之间的权衡。",
+        "pain_point": "代理进化过程中，高基准分数是否总是带来可靠性和效率的提升。",
+        "core_value": "揭示代理进化中可靠性和成本之间的权衡关系，提出评估和决策规则。",
+        "technical_architecture": "通过重复评估、控制代理扩展、组件干预和复盘来研究代理进化。",
+        "quantitative_results": "所有进化后的代理都获得了新任务，但失去了旧任务，可靠性提升的同时成本增加。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以优化代理进化过程中的可靠性和成本平衡。",
+        "key_contributions": [
+          "揭示代理进化中可靠性和成本之间的权衡关系",
+          "提出评估和决策规则",
+          "强调保留改进的重要性"
+        ],
+        "application_scenarios": [
+          "代理系统的自我改进",
+          "通用任务和编码任务的代理进化"
+        ],
+        "technical_highlights": [
+          "通过多种方法和任务评估代理进化",
+          "发现特定变化通常优于通用提示"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.06748",
+      "source": "huggingface",
+      "title": "EvoWorld: Towards Out-of-Sight World Evolution in Generative Video Models",
+      "authors": [
+        "Yequan Bie",
+        "Dengyang Jiang",
+        "Zhixuan Chen",
+        "Xiaozhuan Liang",
+        "Haoxuan Che",
+        "Quande Liu",
+        "Xi Chen",
+        "Hao Chen"
+      ],
+      "abstract": "Generative video models are increasingly used as visual world simulators, yet their primary strength lies in rendering plausible pixels rather than reasoning about how a world should evolve. Coherent world evolution requires more than visual fidelity: when an event occurs, a model must infer its consequences for the entities in the world and then render the resulting state. For example, after a wild beast appears, the model should not only depict the wild beast, but also infer whether a nearby person should flee, take cover, or fight back based on the realized scene. Existing diffusion-based video models lack an explicit mechanism for maintaining world state and reasoning over such event-conditioned consequences, often producing visually plausible but behaviorally static or causally inconsistent outputs. To make this reasoning gap concrete and measurable, we propose a new problem, Out-of-Sight Causal Evolution, which requires a model to render an event, reason about its consequences for the evolving world state, and reveal a causally plausible outcome as the world continues to evolve, even out of sight. As a baseline reference solution, we introduce EvoWorld, a brain-renderer collaboration framework in which a vision-language model serves as the world brain: it observes generated segments, maintains an evolving account of the world, and reasons about plausible state transitions, while a segment-autoregressive video renderer realizes them visually. We further introduce EvoWorld-Data and EvoWorld-Bench for training and evaluating event realization, causal reactions, and revisit consistency. Experiments show that EvoWorld substantially improves event-conditioned causal evolution over recent models while preserving visual quality and consistency, establishing a reference point for reasoning-guided, autonomous world evolution beyond the current field of view.",
+      "published_date": "2026-11-04T16:26:45.000Z",
+      "url": "https://arxiv.org/abs/2611.06748",
+      "pdf_url": "https://arxiv.org/pdf/2611.06748",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.06748",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "EvoWorld: 朝向隐秘世界演变的生成视频模型",
+        "chinese_summary": "提出了一种新的问题，要求模型不仅渲染事件，还要推理其对世界状态的影响，并揭示因果合理的后续结果。",
+        "pain_point": "现有生成视频模型缺乏维护世界状态和推理事件后果的机制，导致行为静态或因果不一致。",
+        "core_value": "通过引入EvoWorld，解决了生成视频模型在世界演变推理上的不足，提高了模型的动态性和因果一致性。",
+        "technical_architecture": "提出了一个脑渲染器协作框架来实现隐秘世界演变的推理。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更复杂的事件和更精细的世界状态推理。",
+        "key_contributions": [
+          "提出了Out-of-Sight Causal Evolution问题",
+          "设计了EvoWorld框架来解决世界演变推理问题",
+          "验证了模型在因果推理和动态渲染上的能力"
+        ],
+        "application_scenarios": [
+          "虚拟现实中的动态场景生成",
+          "增强现实中的实时场景理解与生成"
+        ],
+        "technical_highlights": [
+          "引入了新的因果推理问题",
+          "实现了事件后的动态世界演变渲染"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.01182",
+      "source": "huggingface",
+      "title": "Fast and Exact Relative-Position Attention via Structure-Aware Kernels",
+      "authors": [
+        "Delyan Boychev",
+        "Ivo Petrov",
+        "Dimitar I. Dimitrov"
+      ],
+      "abstract": "Relative-position attention mechanisms offer compelling alternatives to RoPE across various transformer architectures, delivering superior performance in domains such as audio. These mechanisms typically modify attention scores by adding content-position or bias-position terms. Unlike RoPE, which encodes position via per-token rotations directly on the queries and keys, relative-position terms generally require pairwise offset-dependent computation or lookups, complicating their integration into fused attention kernels and introducing severe memory, bandwidth, and compute overheads as sequences scale. To address this bottleneck, we propose an exact attention algorithm that incorporates additive relative-position terms into FlashAttention-style tiled computation. Our method (1) uses offset-aware tiling to avoid redundant indexing and memory accesses, (2) computes only the necessary key/query-relation products and reuses them across token pairs in both forward and backward passes, and (3) uses offset-based gradient sharding and aggregation, eliminating atomic contention. We provide a unified, efficient Triton implementation across diverse relative-position attention mechanisms and evaluate it against naive and specialized implementations. For 8K-token sequences, our method speeds up the forward (backward) pass by 1.8-6.4times (2.0-21times) and reduces peak memory up to 2.9-128times (1.4-54times) over the strongest baseline for each mechanism, enabling long-context end-to-end transcription that is 1.8times faster and uses 2.4times less memory. Our method thus provides a drop-in, hardware-efficient solution for scaling relative-position attention transformers.",
+      "published_date": "2026-10-31T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.01182",
+      "pdf_url": "https://arxiv.org/pdf/2611.01182",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.01182",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": {
+        "chinese_title": "Fast and Exact Relative-Position Attention via Structure-Aware Kernels",
+        "chinese_summary": "提出了一种避免冗余索引和内存访问的相对位置注意力机制，提高了计算效率。",
+        "pain_point": "相对位置注意力机制在处理长序列时存在严重的内存、带宽和计算开销。",
+        "core_value": "通过优化注意力计算方式，提高了相对位置注意力机制的效率。",
+        "technical_architecture": "使用偏移感知的分块计算方法，减少冗余操作并复用关键计算。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定的相对位置注意力机制中进行了实现。",
+        "key_contributions": [
+          "提出了一种避免冗余索引和内存访问的相对位置注意力机制",
+          "优化了注意力计算方式，提高了效率",
+          "提供了一种统一的、高效的Triton实现"
+        ],
+        "application_scenarios": [
+          "适用于音频处理等需要相对位置注意力机制的场景",
+          "适用于长序列处理的Transformer架构"
+        ],
+        "technical_highlights": [
+          "使用偏移感知的分块计算方法",
+          "减少冗余操作并复用关键计算",
+          "消除原子争用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

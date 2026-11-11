@@ -1,0 +1,607 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-11T02:34:35.440750+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.12806",
+      "source": "huggingface",
+      "title": "Learning Heterogeneous Tactile Representation for General Dexterous Manipulation",
+      "authors": [
+        "Bing Han",
+        "Yichuan Peng",
+        "Haoyu Dong",
+        "Yuanmeng Hu",
+        "Yongyi Jia",
+        "Fangjing Wang",
+        "Kecheng Zheng",
+        "Yiming Zhang",
+        "Yanhong Zeng",
+        "Xiaoqing Zhang",
+        "Chen Song",
+        "Rundong Zou",
+        "Anqi Dong",
+        "Yuan Guan",
+        "Ka Leong Cheng",
+        "Xing Zhu",
+        "Yujun Shen",
+        "Nan Xue",
+        "Wei Ning"
+      ],
+      "abstract": "Tactile sensing is an indispensable modality for contact-rich dexterous manipulation, a capability that hints at the ultimate frontiers of embodied intelligence. However, commercially available tactile sensors are still at a relatively early stage of development, with each type of sensor offering irreplaceable strengths alongside its own drawbacks. A key challenge is thus to free tactile understanding from sensor-specific physics, so that embodied models can effectively leverage heterogeneous tactile data. To this end, we develop LingBot-Touch, a tactile foundation model characterized by the following properties. (i) Our model yields a unified representation across different tactile sensors (i.e., piezoresistive, magnetic, and visuotactile sensors), and is easily extensible to new sensor types. (ii) The resulting tactile tokens are plug-and-play: they can be seamlessly integrated into policy models across paradigms, from diffusion policy to vision-language-action (VLA) models such as π_{0.5} and LingBot-VLA, consistently enhancing manipulation dexterity. (iii) Extensive experiments, spanning simulation and real-robot deployments across multiple hardware platforms, demonstrate that our tactile representation substantially benefits complex manipulation tasks while maintaining strong computational efficiency. We believe the findings in this work demonstrate the potential of leveraging cross-sensor data to scale tactile learning, and offer encouraging insights for the design of future hardware and embodied models.",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12806",
+      "pdf_url": "https://arxiv.org/pdf/2611.12806",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12806",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 92,
+      "hot_score": 920,
+      "structured_summary": {
+        "chinese_title": "学习异构触觉表示以实现通用灵巧操作",
+        "chinese_summary": "提出了一种触觉基础模型，能够统一不同类型的触觉传感器数据，提升灵巧操作的通用性。",
+        "pain_point": "现有触觉传感器种类繁多，每种传感器都有其特定的优势和局限性。",
+        "core_value": "该模型能够统一不同类型的触觉传感器数据，提高灵巧操作的通用性和灵活性。",
+        "technical_architecture": "开发了一种触觉基础模型，能够处理不同类型的触觉传感器数据。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多硬件平台上进行测试。",
+        "key_contributions": [
+          "提出了一种统一不同触觉传感器数据的模型",
+          "触觉表示可以无缝集成到各种政策模型中"
+        ],
+        "application_scenarios": [
+          "灵巧操作",
+          "机器人灵巧抓取"
+        ],
+        "technical_highlights": [
+          "触觉表示的统一性",
+          "模型的扩展性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.10771",
+      "source": "huggingface",
+      "title": "WorldFoundry: Towards Unified Infrastructure for World Intelligence",
+      "authors": [
+        "Juanxi Tian",
+        "Jiadong Hou",
+        "Baiang Li",
+        "Xin Lin",
+        "Zhengbo Jiao",
+        "Weijia Zhang",
+        "Yeying Jin",
+        "Truong Nguyen",
+        "Haitian Zheng",
+        "Zhifei Zhang",
+        "Jianfei Yang",
+        "Ming-Hsuan Yang",
+        "Felix Heide",
+        "Wei Xiong",
+        "Enze Xie",
+        "Wanhua Li"
+      ],
+      "abstract": "Visual generative models increasingly blur the line between synthesizing observations and simulating environments. Yet visual plausibility alone does not constitute successful world modeling: compelling outputs may lack persistent state, physical dynamics, or causally consistent responses to interactions. We define a generative world model as a predictive dynamical system that maintains a persistent, history-conditioned representation of an environment, updates that representation in response to actions or interventions, and generates temporally coherent trajectories that reflect outcomes under observed and counterfactual interventions. From this definition, we derive an intelligence-oriented framework spanning perceptual grounding, persistent state modeling, controllable transformation, dynamics-aware prediction, and closed-loop interaction. We present WorldFoundry, open-source infrastructure for reproducible inference and evaluation across video, 3D and 4D, embodied action, and interactive world systems. WorldFoundry unifies model and benchmark discovery, runtime and asset preparation, execution orchestration, artifact management, and interactive visualization, while modality-specific adapters preserve native inputs, execution semantics, output representations, and evaluation protocols. Explicit manifests, durable artifact contracts, and evidence-aware scorecards separate execution readiness from evaluative claims, making each claim traceable to its supporting artifacts. The catalog contains 270 model entries, 74 benchmarks, and 62 registered metric entries, with readiness and execution evidence recorded separately. WorldFoundry enables reproducible comparison of persistent, controllable dynamics across heterogeneous systems, advancing the field from perceptual synthesis toward measurable world intelligence.",
+      "published_date": "2026-11-07T14:59:22.000Z",
+      "url": "https://arxiv.org/abs/2611.10771",
+      "pdf_url": "https://arxiv.org/pdf/2611.10771",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.10771",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 54,
+      "hot_score": 540,
+      "structured_summary": {
+        "chinese_title": "WorldFoundry：统一世界智能基础设施",
+        "chinese_summary": "提出WorldFoundry，一种用于视频、3D和4D、具身动作和交互世界的可重复推理和评估的开源基础设施。",
+        "pain_point": "现有视觉生成模型缺乏持久状态、物理动态和因果一致响应。",
+        "core_value": "提供统一的基础设施，涵盖感知接地、持久状态建模、可控变换、动力学预测和闭环交互。",
+        "technical_architecture": "构建了一个涵盖感知、状态建模、变换、预测和交互的智能框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在论文中提出，未展示具体实验结果。",
+        "key_contributions": [
+          "提出了一种新的生成世界模型定义",
+          "构建了统一的基础设施框架",
+          "涵盖了多种应用场景"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "3D和4D环境建模",
+          "具身动作模拟",
+          "交互世界系统"
+        ],
+        "technical_highlights": [
+          "开源基础设施支持多种模态",
+          "统一模型和基准发现"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12762",
+      "source": "huggingface",
+      "title": "Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery",
+      "authors": [
+        "Weida Wang",
+        "Benteng Chen",
+        "Yigeng Jiang",
+        "Shuchen Pu",
+        "Weiping Shen",
+        "Zichao Liu",
+        "Yulin Su",
+        "Zitong Wang",
+        "Siyu Zhou",
+        "Zifu Wang",
+        "Yizhi Li",
+        "Xin Zong",
+        "Yuning Yang",
+        "Jixiang Bi",
+        "Yuan Wang",
+        "Chuyi Peng",
+        "Shiyao Geng",
+        "Qi Zhang",
+        "Kuan Lu",
+        "Mengzhu Li",
+        "Weiwang Xu",
+        "Peishan Xiang",
+        "Chengjun Liu",
+        "Chengrui Wei",
+        "Fangchen Yu",
+        "Shengji Tang",
+        "Yichen Jiang",
+        "Jingqi Ye",
+        "Cheng Yang",
+        "Tao Hu",
+        "Jianbiao Mei",
+        "Qinglong Cao",
+        "Kun Li",
+        "Yixin Chen",
+        "Shengyuan Xu",
+        "Juncheng Xiao",
+        "Yiheng Wang",
+        "Ruizhe Chen",
+        "Shiyang Feng",
+        "Runmin Ma",
+        "Xiangchao Yan",
+        "Zongsheng Cao",
+        "Haomeng Hu",
+        "Yu Ke",
+        "Taihui Wu",
+        "Meng Dai",
+        "Xu Guo",
+        "Haoyang Peng",
+        "Yinglong Ni",
+        "Pingsen Shi",
+        "Xiaosong Wang",
+        "Shuyue Hu",
+        "Haijun Li",
+        "Sherry Dongqi Bao",
+        "Yang Yang",
+        "Chao Yang",
+        "Jie Hou",
+        "Tianfan Fu",
+        "Yi Gong",
+        "Jin Zeng",
+        "Mao Su",
+        "Hongxia Hao",
+        "Fanyang Mo",
+        "Fenghua Ling",
+        "Tianshu Yu",
+        "Yunqi Cai",
+        "Baihong Chi",
+        "Jingwei Wang",
+        "Lei Wang",
+        "Chuncheng Bu",
+        "Shide Lv",
+        "Guangyu Wang",
+        "Yuqiang Li",
+        "Chunfeng Song",
+        "Lei Bai",
+        "Hui Wang",
+        "Xujun Fu",
+        "Li Cao",
+        "Lei Chen",
+        "Dahua Lin",
+        "Xing Xie",
+        "Bowen Zhou",
+        "Wenlong Zhang",
+        "Pinlong Cai",
+        "Peng Ye",
+        "Aiwen Lei",
+        "Jie Li",
+        "Shengchun Wang",
+        "Bo Zhang",
+        "Shufei Zhang"
+      ],
+      "abstract": "We introduce Sage-Taiyi, a metacognition-inspired architecture that uses accumulated scientific understanding to guide what to investigate next and how to investigate it. Through explicit monitoring and control, the system revises its understanding of evidence, assumptions, and unresolved questions, then uses these assessments to adapt research targets and select reusable reasoning methods. On Taiyi-Bench, an AI co-scientist ideation benchmark comprising 265 tasks from 50 papers across ten disciplines, Sage-Taiyi ranks first on all eight metrics of historical rediscovery and open-ended ideation, achieving an Overall score of 54.0 compared with 47.9 for the strongest baseline, AI Scientist-v2. It also performs well on two external scientific ideation benchmarks. Five expert-guided collaborations further connect its proposals to experimental and computational validation across chemistry, materials science, and engineering. In chemistry, reaction-condition optimization raises the yield of cobalt-catalyzed carbonylation from trace amounts to 84% and photocatalytic allylic amination from 13% to 69%. These results support metacognitive regulation as an approach to scientific ideation and its progression toward practical validation.",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12762",
+      "pdf_url": "https://arxiv.org/pdf/2611.12762",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12762",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 53,
+      "hot_score": 530,
+      "structured_summary": {
+        "chinese_title": "Sage-Taiyi：一种基于元认知的科学发现架构",
+        "chinese_summary": "Sage-Taiyi 通过元认知机制在科学发现中表现优异，获得多个基准测试的第一名。",
+        "pain_point": "科学发现过程中缺乏有效的指导和自适应调整机制。",
+        "core_value": "通过元认知机制实现科学发现的自适应和高效性。",
+        "technical_architecture": "基于元认知的架构，通过监控和控制调整研究目标和推理方法。",
+        "quantitative_results": "在 Taiyi-Bench 上获得 54.0 的 Overall 分数，优于基线 AI Scientist-v2 的 47.9。",
+        "competitors": "与基线 AI Scientist-v2 对比，表现更优。",
+        "limitations": "需要进一步扩展应用场景以验证其普遍适用性。",
+        "key_contributions": [
+          "提出了一种基于元认知的科学发现架构",
+          "在多个基准测试中表现出色",
+          "实现了科学发现过程中的自适应调整"
+        ],
+        "application_scenarios": [
+          "化学反应条件优化",
+          "材料科学和工程中的新想法生成"
+        ],
+        "technical_highlights": [
+          "通过元认知机制实现科学发现的自适应和高效性",
+          "在多个科学领域中取得了显著成果"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12886",
+      "source": "huggingface",
+      "title": "Reframe: Observation-Aligned Multi-Teacher On-Policy Distillation for Agentic Visual Reasoning",
+      "authors": [
+        "Haozhi Yuan",
+        "Handong Li",
+        "Yifan Zhang",
+        "Qianshan Wei"
+      ],
+      "abstract": "Agentic reinforcement learning (RL) and multi-teacher on-policy distillation (MOPD) offer complementary routes to post-training. For visual agents, however, tool use presents two related challenges. Models may overlook useful tool-returned observations, while poorly grounded actions can limit the evidence available for subsequent distillation. We introduce Reframe, a post-training framework that treats the observation state, rather than only the output distribution, as an object of alignment. First, Ground-Drop-GRPO (GD-GRPO) trains spatial and temporal specialists with evidence-aware rewards and stochastic removal of the original visual input, encouraging them to acquire grounded evidence and use the returned observations. Second, Observation-Gated-MOPD (OG-MOPD) replaces deficient tool actions with canonical ones mid-rollout and resumes distillation from the repaired observation. The two stages complement each other, as learning to rely on tool-returned observations can help the policy benefit from observation repair. Neither stage requires a task-specific SFT cold start. Extensive experiments over 14 image and video benchmarks demonstrate that Reframe outperforms both Mix-RL and vanilla MOPD. Ablation results show that GD-GRPO increases observation dependence and tool gain compared with outcome-based GRPO.",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12886",
+      "pdf_url": "https://arxiv.org/pdf/2611.12886",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12886",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 38,
+      "hot_score": 380,
+      "structured_summary": {
+        "chinese_title": "Reframe: 观察对齐的多师在策略蒸馏方法用于自主视觉推理",
+        "chinese_summary": "Reframe 提出了一种后训练框架，通过观察对齐来解决视觉代理中的工具使用问题。",
+        "pain_point": "模型可能忽略有用的工具返回观察，而不良的基础动作限制了后续蒸馏的证据。",
+        "core_value": "通过观察对齐和工具返回观察的使用，提高视觉代理的性能。",
+        "technical_architecture": "引入了 Ground-Drop-GRPO 和 Observation-Gated-MOPD 两个阶段。",
+        "quantitative_results": "在 14 个图像和视频基准上，Reframe 显著优于 Mix-RL。",
+        "competitors": "对比了 Mix-RL 基线。",
+        "limitations": "需要进一步研究以适应更多任务。",
+        "key_contributions": [
+          "引入了观察对齐的概念",
+          "提出了 Ground-Drop-GRPO 和 Observation-Gated-MOPD 方法",
+          "不需要特定任务的 SFT 冷启动"
+        ],
+        "application_scenarios": [
+          "视觉代理的自主学习",
+          "多模态数据处理"
+        ],
+        "technical_highlights": [
+          "通过证据感知奖励和视觉输入的随机移除来训练空间和时间专家",
+          "在卷积过程中用标准动作替换缺陷动作并恢复蒸馏"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.42148",
+      "source": "huggingface",
+      "title": "Flide: Accelerating Decision Inference with Exact State Forking",
+      "authors": [
+        "Bobo Li",
+        "Jiajia Song",
+        "Hao Fei",
+        "Wynne Hsu",
+        "Mong Li Lee"
+      ],
+      "abstract": "Decision models such as Jev have emerged as a highly promising paradigm for LLM agent systems, providing lightweight and reliable categorical reasoning for rapid System One execution. However, existing generation-oriented inference engines fail to support these workloads effectively, suffering from severe prefix recomputation overheads or distorted output probabilities. To address this challenge, we propose Flide, an efficient and exact inference engine that decouples the logical tree structure of a decision request from its physical execution within a single flattened token stream. Through ForkAttention, Flide navigates request dependencies using GPU-resident indices across both standard attention and recurrent Gated DeltaNet layers, guaranteeing in exact arithmetic that every query branch evaluates identically to an isolated forward pass. By expressing branch topologies directly in GPU-resident metadata, Flide accommodates diverse request mixtures with a compact set of pre-recorded execution graphs while enabling expanding agent histories to resume from checkpoints saved in earlier passes. Extensive evaluations on public hybrid and decision models demonstrate that Flide answers queries up to 9.5 times faster than vLLM and SGLang while staying closest to a float32 reference in total variation distance. By unifying physical execution throughput with mathematical exactness, Flide establishes a principled foundation for scalable, latency-critical decision intelligence in agent systems.",
+      "published_date": "2026-10-30T17:59:38.000Z",
+      "url": "https://arxiv.org/abs/2610.42148",
+      "pdf_url": "https://arxiv.org/pdf/2610.42148",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.42148",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 32,
+      "hot_score": 320,
+      "structured_summary": {
+        "chinese_title": "Flide：加速决策推理的精确状态分叉",
+        "chinese_summary": "Flide 提供了一种高效且精确的推理引擎，解决了现有生成式推理引擎在处理决策模型时的前缀重计算开销和输出概率失真问题。",
+        "pain_point": "现有生成式推理引擎在处理决策模型时存在严重的前缀重计算开销和输出概率失真问题。",
+        "core_value": "Flide 通过精确的状态分叉和 GPU 驻留索引，确保每个查询分支与独立前向传递等价，提高了推理效率。",
+        "technical_architecture": "Flide 采用 ForkAttention，通过标准注意力和递归 Gated DeltaNet 层的 GPU 驻留索引导航请求依赖。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索更多复杂决策模型的应用。",
+        "key_contributions": [
+          "提出了精确的状态分叉方法",
+          "设计了 GPU 驻留的索引机制",
+          "支持多样化的请求混合"
+        ],
+        "application_scenarios": [
+          "LLM 代理系统中的决策推理",
+          "支持扩展的智能代理历史记录"
+        ],
+        "technical_highlights": [
+          "ForkAttention 机制",
+          "GPU 驻留的执行图"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.08452",
+      "source": "huggingface",
+      "title": "ReproBridge: Building Reproducibility into ML Research Artifacts",
+      "authors": [
+        "Yubo Wang",
+        "Rui Meng",
+        "Jaehyun Nam",
+        "Tomas Pfister",
+        "Jinsung Yoon"
+      ],
+      "abstract": "Reproducing machine learning experiments requires reconstructing procedures from information scattered across papers, released code, and supporting artifacts. For coding agents, reproduction success can therefore depend on their ability to fill in missing details, rather than on the released artifacts alone. We ask whether preserving recovered procedures and decisions improves subsequent independent reproduction. We define a standardized artifact design comprising a refined codebase, environment setup, experiment launchers, and a reproduction guide, and introduce ReproBridge, an agent workflow for constructing these refined reproducible artifacts. ReproBridge-Bench provides 1,029 tasks from 387 experiments across 36 papers, anchored by five human-verified reference scores per task. Agents attempt tasks in fresh sessions with raw code or refined artifacts; a separate Auditor checks execution evidence. Across four evaluated models, refined artifacts raise mean reproduction success from 76.4% to 92.6% and reduce downstream API spending by 19.7% on average. The cross-model success-rate spread narrows from 21.6 to 3.9 percentage points, with all four models achieving mean success rates above 90%. Removing any component reduces success in the ablation study, with the largest losses from code and environment removal. These results suggest that preserving execution knowledge helps even models with lower raw-code success reproduce experiments more reliably and at lower API cost.",
+      "published_date": "2026-11-05T18:45:36.000Z",
+      "url": "https://arxiv.org/abs/2611.08452",
+      "pdf_url": "https://arxiv.org/pdf/2611.08452",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.08452",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "ReproBridge: 将可重复性融入机器学习研究制品",
+        "chinese_summary": "通过标准化的可重复性制品设计和ReproBridge代理工作流提高机器学习实验的可重复性。",
+        "pain_point": "现有机器学习实验难以重现，依赖于研究人员填补缺失细节。",
+        "core_value": "提供标准化的可重复性制品设计和代理工作流，显著提高实验重现成功率。",
+        "technical_architecture": "定义标准化的可重复性制品设计，包括精炼代码库、环境设置、实验启动器和重现指南。",
+        "quantitative_results": "使用ReproBridge，平均重现成功率从76.4%提高到92.6%，减少下游API成本19.7%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于现有实验数据，未来需要更多实验验证。",
+        "key_contributions": [
+          "定义标准化的可重复性制品设计",
+          "引入ReproBridge代理工作流"
+        ],
+        "application_scenarios": [
+          "机器学习研究",
+          "学术研究"
+        ],
+        "technical_highlights": [
+          "提供详细的实验启动器",
+          "包含重现指南"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.10304",
+      "source": "huggingface",
+      "title": "Longtail-SWE: High-Quality SWE Tasks for Underrepresented Languages",
+      "authors": [
+        "Vladimir Dobrovolskii",
+        "Ibragim Badertdinov",
+        "Alexander Golubev"
+      ],
+      "abstract": "Challenging repository-level benchmarks remain limited for many programming language ecosystems, where filtering scarce candidates with ambiguous descriptions or defective tests can discard valuable engineering problems. We introduce Longtail-SWE, a benchmark of 202 issue-resolution tasks across 13 languages with limited coverage in existing repository-level benchmarks: Clojure, Dart, Elixir, Erlang, F#, Haskell, Julia, Kotlin, Lua, OCaml, R, Scala, and Swift. Its construction uses a solver--judge--repairer pipeline: a solver attempts each candidate task, and a judge reviews the task together with the solver's trajectory and test results to guide revisions to tests and task descriptions. These revisions aim to correct tests that reject valid alternative implementations or accept incorrect solutions while retaining challenging tasks and preserving their intended requirements. We evaluate nine model configurations, including frontier models, and analyze task-solving performance, consistency across repeated attempts, and resource usage. We release all benchmark instances, executable environments, complete construction and evaluation tooling, and agent trajectories, together with an additional set of easier tasks to support evaluation of smaller models.",
+      "published_date": "2026-11-06T23:04:32.000Z",
+      "url": "https://arxiv.org/abs/2611.10304",
+      "pdf_url": "https://arxiv.org/pdf/2611.10304",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.10304",
+      "category": "llm",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "长尾-SWE：面向欠代表语言的高质量SWE任务",
+        "chinese_summary": "提出了一种包含202个问题解决任务的基准，涵盖13种编程语言。",
+        "pain_point": "现有基准库中缺乏针对多种编程语言的高质量问题解决任务。",
+        "core_value": "提供了一种新的基准，旨在解决现有基准库中欠代表语言的问题。",
+        "technical_architecture": "采用了解决器-裁判-修复者流水线方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对特定编程语言。",
+        "key_contributions": [
+          "构建了一个包含202个问题解决任务的基准",
+          "采用了解决器-裁判-修复者流水线方法",
+          "提供了完整的基准实例、执行环境和评估工具"
+        ],
+        "application_scenarios": [
+          "为编程语言研究提供高质量数据",
+          "为开发工具和IDE提供测试基准"
+        ],
+        "technical_highlights": [
+          "流水线方法确保任务质量和一致性",
+          "提供完整工具链支持"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.11558",
+      "source": "huggingface",
+      "title": "InfraRSI: Harnessing Recursive Self-Improvement for Training Infrastructure",
+      "authors": [
+        "InfraRSI Team",
+        "Yuchuan Tian",
+        "Haocheng Mei",
+        "Ye Yuan",
+        "Chao Xu",
+        "Boxun Li",
+        "Guohao Dai",
+        "Kai Han",
+        "Allen Chen",
+        "Yunhe Wang",
+        "Yu Wang"
+      ],
+      "abstract": "While Recursive Self-Improvement (RSI) accelerates isolated algorithm and kernel synthesis, distributed LLM training depends on tightly coupled launch settings, operator kernels, and communication schedules, where single edits often hit out-of-memory (OOM) boundaries, compiler conflicts, measurement jitter, or silent numerical drift. We present InfraRSI, the agentic harness that turns open-ended human commands into verified training optimizations via a five-stage workflow: init locks editable scope and a fixed task contract over workload, loss, and timing invariants to prevent reward hacking, doctor profiles baseline phases and calibrates cluster noise, run co-optimizes launch knobs and code patches before re-verifying top candidates against the baseline and logging findings to a cross-hardware experience bank, and report and apply audit source paths, track failed-trial costs, and commit promoted changes. Rather than stepping greedily from a single incumbent, InfraRSI initializes from diverse experience-seeded configurations and fits global execution-time and censored peak-memory models across all trials, including OOMs. Using these models, it prices per-setting memory costs, revises miscalibrated LLM priors from live runs, and pairs memory-hungry optimizations with memory savers and verified code patches. Across four single- and multi-node dense and Mixture-of-Experts (MoE) LLM workloads, InfraRSI achieves a speedup of up to 2.75times and lifts mean Model FLOPs Utilization (MFU) from 17.4% to 30.0%, outperforming existing tuners and coding agents while transferring experience across GPUs. As it improves training infrastructure efficiency, InfraRSI forms a two-level Recursive Self-Improvement loop---revising priors online within runs and distilling experience across clusters---to push foundation model scaling.",
+      "published_date": "2026-11-08T18:59:37.000Z",
+      "url": "https://arxiv.org/abs/2611.11558",
+      "pdf_url": "https://arxiv.org/pdf/2611.11558",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.11558",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": {
+        "chinese_title": "InfraRSI：利用递归自我改进进行训练基础设施的开发",
+        "chinese_summary": "InfraRSI 将开放命令转化为验证的训练优化，通过五阶段流程解决分布式 LLM 训练中的痛点。",
+        "pain_point": "分布式 LLM 训练中存在内存溢出、编译器冲突、测量抖动和数值漂移等问题。",
+        "core_value": "InfraRSI 通过递归自我改进和五阶段流程提高训练效率和稳定性。",
+        "technical_architecture": "采用五阶段流程：初始化、诊断、运行、报告和应用。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "模型训练复杂，需要大量计算资源。",
+        "key_contributions": [
+          "提出五阶段流程解决分布式 LLM 训练问题",
+          "利用递归自我改进提高训练效率",
+          "模型跨硬件经验库记录和应用"
+        ],
+        "application_scenarios": [
+          "大规模语言模型训练",
+          "分布式训练优化"
+        ],
+        "technical_highlights": [
+          "多配置初始化",
+          "全局执行时间和受抑制峰值内存模型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.10329",
+      "source": "huggingface",
+      "title": "SIRIS: Can LLMs Tell When Simulation Errors Matter in AI-Driven Systems Research",
+      "authors": [
+        "Jinwoo Hwang",
+        "Sukmin Cho",
+        "Tao Zhang",
+        "Soheil Abbasloo",
+        "Jongse Park",
+        "Peng Cheng"
+      ],
+      "abstract": "LLM agents increasingly drive systems research and rely on simulators to evaluate candidate designs at scale. Simulators are imperfect by design: their modeling limitations can distort predictions yet leave the recommended design correct, or change which design should be selected. We introduce Siris to test whether LLMs can tell these cases apart, judging from their systems understanding when a limitation invalidates the simulator's recommendation. By perturbing a simulator, Siris constructs workload pairs with the same candidates, limitation, and simulator recommendation. The perturbation changes predictions on both workloads, yet a reference simulator supports the recommendation on only one. Evaluating thirteen frontier LLMs on LLM serving design problems, we find that identifying a limitation does not ensure a correct choice, and even the strongest models sometimes abandon valid recommendations. Self-correction through a review turn helps these models restore valid choices but introduces new errors in several others. These findings motivate evaluating systems understanding through design decisions under imperfect simulators.",
+      "published_date": "2026-11-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.10329",
+      "pdf_url": "https://arxiv.org/pdf/2611.10329",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.10329",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 12,
+      "hot_score": 120,
+      "structured_summary": {
+        "chinese_title": "SIRIS：LLM能否识别仿真错误对AI驱动系统研究的影响",
+        "chinese_summary": "研究发现，即使识别到仿真错误，LLM也不总能做出正确选择。",
+        "pain_point": "仿真模型的局限性可能导致LLM推荐错误的设计。",
+        "core_value": "提出Siris方法，评估LLM在面对仿真局限性时的决策能力。",
+        "technical_architecture": "通过扰动仿真器构建工作负载对，测试LLM的决策能力。",
+        "quantitative_results": "发现识别局限性并不保证正确选择，最强模型有时也会放弃有效推荐。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究自修正机制的效果。",
+        "key_contributions": [
+          "提出Siris方法评估LLM在仿真局限性下的决策能力",
+          "揭示了识别局限性并不总能保证正确选择",
+          "展示了自修正机制的效果"
+        ],
+        "application_scenarios": [
+          "AI驱动系统研究中的仿真模型评估",
+          "优化LLM在复杂系统设计中的应用"
+        ],
+        "technical_highlights": [
+          "通过扰动仿真器构建工作负载对",
+          "评估LLM在仿真局限性下的决策能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.11450",
+      "source": "huggingface",
+      "title": "How Much Training-Inference Mismatch Can On-Policy Distillation Tolerate?",
+      "authors": [
+        "Cong Yu",
+        "Ziting Wang",
+        "Songlin Jiang",
+        "Sitong Zhang",
+        "Chengliang Chai",
+        "Youhe Jiang",
+        "Eiko Yoneki",
+        "Tuo Shi"
+      ],
+      "abstract": "On-policy distillation (OPD) trains a student language model on its own responses, guided by a fixed teacher. Generating these responses is expensive, so systems use quantized inference and asynchronous rollouts to reduce the cost. Both, however, introduce training-inference mismatch between the rollout engine and the model being trained. Such mismatch can destabilize reinforcement learning (RL), but its effects on OPD remain unclear. This paper investigates how much mismatch OPD tolerates, where its effects arise, and how training systems can use this tolerance. Measuring all mismatch sources on one scale, we examine quantization across three student-teacher pairs, with additional tests of weight staleness and injected noise on one pair. OPD tolerates substantial mismatch without meaningful loss of training quality but degrades at higher levels, revealing an empirical mismatch budget. Both the quality cost of mismatch and the mismatch introduced by quantization depend on the model, with some layers particularly sensitive to reduced precision. In controlled comparisons, OPD remains stable under rollout configurations that destabilize RL methods. Under weight noise, mismatch also shifts the prefixes reached during generation, introducing errors that per-token corrections cannot address. To put these findings into practice, we introduce a lightweight admission check that screens rollout configurations against a calibrated budget without requiring a full training run for each candidate. Model-specific FP8 recipes preserve training quality while providing capacity for at least 1.93times as many KV-cache tokens as BF16. Combining FP8 with asynchronous rollouts reaches the same training quality 1.62times sooner than synchronous BF16 training. Code is available at https://github.com/benyucong/train-inference-mismatch-opd",
+      "published_date": "2026-11-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.11450",
+      "pdf_url": "https://arxiv.org/pdf/2611.11450",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.11450",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 11,
+      "hot_score": 110,
+      "structured_summary": {
+        "chinese_title": "如何容忍训练推理不匹配？基于策略的模型蒸馏的容忍度研究",
+        "chinese_summary": "OPD在不同不匹配程度下仍能保持训练质量，揭示了经验上的不匹配预算。",
+        "pain_point": "训练和推理之间的不匹配可能影响基于策略的模型蒸馏的稳定性。",
+        "core_value": "研究了OPD对不匹配的容忍度，提供了优化训练系统的指导。",
+        "technical_architecture": "通过量化、异步rollout等方法减少推理成本。",
+        "quantitative_results": "OPD在一定程度的不匹配下仍保持高质量训练，但超过一定阈值会下降。",
+        "competitors": "暂无对比信息",
+        "limitations": "实验主要集中在特定模型上，未来需要更广泛的模型验证。",
+        "key_contributions": [
+          "揭示了OPD对训练推理不匹配的容忍度",
+          "提供了衡量不匹配程度的方法",
+          "分析了不同层对精度降低的敏感性"
+        ],
+        "application_scenarios": [
+          "自然语言处理中的模型训练",
+          "强化学习中的策略优化"
+        ],
+        "technical_highlights": [
+          "使用多对学生-教师模型进行实验",
+          "测试了权重陈旧和注入噪声的影响"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

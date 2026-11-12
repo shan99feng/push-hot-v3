@@ -1,0 +1,548 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-12T03:39:42.732669+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.14210",
+      "source": "huggingface",
+      "title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+      "authors": [
+        "Hadi Salloum",
+        "Ammar Ali"
+      ],
+      "abstract": "Weight-space programming, introduced in recent MIT work by Takehi et al., enables a frontier LLM agent to read a network's weights and write a repair. Their GPT-6 Astra agent corrected the reasoning loops of Qwen3.5-0.8B without gradients, using 158 agent turns, 89.7 million tokens, and 50 forward-pass requests. Our method, Tree-Ising, casts this repair as a sparse discrete optimization problem over the model's own BF16 weights. Forward statistics define an objective that weakens a loop direction, strengthens a concluding direction, and preserves the layer's output on productive tokens. Within a state-tree representation, where lossless BF16 storage acts as a special case, the admissible edits are sign flips and exponent shifts that preserve all shared group exponents and mantissas. We decompose this objective exactly into independent QUBO (Ising) problems, one per output row, which we solve on a GPU using simulated annealing or quantum-inspired simulated bifurcation. On the agent's two layers, Tree-Ising achieves 54.6% on MATH-500, outperforming the agent's edit (51.7%) under the same evaluation protocol, while the base model scores 7.9% as reported. The simulated bifurcation solver yields a statistically indistinguishable repair at 55.1%. Both solvers outperform the agent edit across all five math benchmarks, with statistically significant improvements on MATH-500 and GSM8K after correcting for multiple comparisons. Our approach modifies 13% to 17% fewer weights and reduces BF16 bit flips by a factor of 2.2 to 2.3. It requires only four forward-pass requests and zero LLM tokens, with the annealing recipe costing about $0.90 in GPU time. On Qwen3.5-2B, with layers and dose selected using only the base model, the same recipe increases greedy GSM8K accuracy from 21.6% to 69.4%. As a proof of concept, we execute an eight-variable repair subproblem using QAOA on an IBM Heron processor.",
+      "published_date": "2026-11-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.14210",
+      "pdf_url": "https://arxiv.org/pdf/2611.14210",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.14210",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 77,
+      "hot_score": 770,
+      "structured_summary": {
+        "chinese_title": "Tree-Ising: 使用位级伊辛编辑修复语言模型",
+        "chinese_summary": "Tree-Ising 方法将语言模型修复转化为稀疏离散优化问题，通过模拟退火或量子启发式模拟 bifurcation 解决，显著提升模型性能。",
+        "pain_point": "现有方法依赖梯度，效率低下且难以纠正深层逻辑错误。",
+        "core_value": "无需梯度，通过位级编辑高效修复语言模型深层逻辑错误。",
+        "technical_architecture": "基于状态树表示和 QUBO 问题分解，利用 GPU 解决优化问题。",
+        "quantitative_results": "在 MATH-500 测试集上，Tree-Ising 达到 54.6%，优于基线方法 51.7%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定层上测试，未来需扩展到更多层。",
+        "key_contributions": [
+          "提出 Tree-Ising 方法",
+          "将修复问题转化为 QUBO 问题",
+          "利用 GPU 高效求解"
+        ],
+        "application_scenarios": [
+          "语言模型的逻辑错误修复",
+          "提高模型推理准确性"
+        ],
+        "technical_highlights": [
+          "无需梯度的高效修复",
+          "基于位级编辑的优化方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.14033",
+      "source": "huggingface",
+      "title": "Few-Step Streaming Video Generation via Condition Shifting",
+      "authors": [
+        "Deyuan Liu",
+        "Jungang Li",
+        "Kaiwen Zheng",
+        "Kai Jiang",
+        "Jintao Chen",
+        "Yaole Wang",
+        "Ming Lin",
+        "Tao Lin",
+        "Jianfei Chen",
+        "Jun Zhu",
+        "Jintao Zhang"
+      ],
+      "abstract": "Few-step sampling reduces the cost of streaming video generation. Distribution Matching Distillation (DMD) supervises few-step generators with a separate fake-score network, which adds training memory and computation and must track the evolving generator. We extend APEX to streaming video by using condition shifting to estimate the velocity field of the generated distribution within the generator. The original text condition selects generation, while a shifted condition selects fake estimation using the same parameters. This removes the independent fake network while retaining S2-Avatar's frozen reference teacher, Self-Replay Forcing, and perceptual regularization. We evaluate APEX on 180-second videos using three backbone evaluations per block and a one-step spatial Refiner, with a 70-case human study and a 320-case StreamAV-Bench comparison. Compared with S2-Avatar, APEX achieves higher video instruction fulfillment on the Progressive track (3.856 versus 3.831) and higher visual aesthetics across both tracks (0.641898 versus 0.632606). Human raters favor APEX most strongly on instruction following, with +30.0% net preference, followed by consistency and video quality at +4.3% each. Motion quality favors S2-Avatar, audiovisual synchronization is predominantly tied, and usability is unchanged. Separate measurements under matched training settings show 4.4% lower peak allocated GPU memory per GPU and 9.2% shorter mean iteration time than DMD.",
+      "published_date": "2026-11-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.14033",
+      "pdf_url": "https://arxiv.org/pdf/2611.14033",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.14033",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 67,
+      "hot_score": 670,
+      "structured_summary": {
+        "chinese_title": "基于条件偏移的少量步骤流式视频生成",
+        "chinese_summary": "通过条件偏移估计生成分布的流速场，简化流式视频生成。",
+        "pain_point": "流式视频生成成本高，难以实时生成高质量视频。",
+        "core_value": "通过条件偏移减少独立假网络，同时保持高质量生成效果。",
+        "technical_architecture": "使用条件偏移估计生成分布的流速场，简化生成过程。",
+        "quantitative_results": "APEX在渐进轨道上的视频指令满足度更高，视觉美学也更优。",
+        "competitors": "与S2-Avatar相比，APEX在多个指标上表现更优。",
+        "limitations": "仅在180秒视频上进行了评估。",
+        "key_contributions": [
+          "引入条件偏移估计生成分布流速场",
+          "简化了流式视频生成中的独立假网络",
+          "保持了高质量生成效果"
+        ],
+        "application_scenarios": [
+          "流式视频生成",
+          "实时视频生成"
+        ],
+        "technical_highlights": [
+          "条件偏移技术",
+          "简化独立假网络"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12885",
+      "source": "huggingface",
+      "title": "World In-Context Learning for Agentic Robot Manipulation",
+      "authors": [
+        "Heng Fang",
+        "Zehui Guo",
+        "Yuehan Zhang",
+        "Mingyang Du",
+        "Dingkang Liang",
+        "Xiang Bai"
+      ],
+      "abstract": "Trained action policies write manipulation skill into network weights, tying what is learned to the distribution it is learned from. In-context learning (ICL) avoids this coupling but has not matched trained policies, because a demonstration recorded in another scene carries no feedback from the world the robot currently faces. We observe that what an agent learns in context is semantic, recording task steps and object roles rather than visual appearance, so experience gathered in one world transfers to another. Based on this insight, we propose World In-Context Learning (WICL), a paradigm in which a frozen model starts from a demonstration, rehearses the task in a world such as a simulator, and writes the feedback into its context rather than its weights. We build RoboScript, a modular infrastructure that implements WICL for agentic manipulation. From a single demonstration, RoboScript learns each task through rehearsal in simulation, freezes the learned knowledge as a Task Memory, and deploys the frozen memory on new scenes with data isolation that ensures every deployment input is available on a real robot. On all 50 tasks of RoboTwin 2.0, RoboScript reaches 83.4% mean success across clean and randomized settings with one demonstration per task and no gradient updates, exceeding the strongest trained action policy by over 20 points. The method generalizes across visual distributions, improves through reflection, scales with the foundation model, and transfers to a physical dual-arm robot through cross-embodiment memory adaptation. With a world in the loop, a robot can learn a manipulation task in its context as well as it learns one in its weights. All code is available at https://github.com/ArcheOne-AI/RoboScript",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12885",
+      "pdf_url": "https://arxiv.org/pdf/2611.12885",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12885",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "upvotes": 65,
+      "hot_score": 650,
+      "structured_summary": {
+        "chinese_title": "基于世界上下文学习的自主机器人操作",
+        "chinese_summary": "RoboScript通过模拟环境中的任务排练，将反馈写入上下文而非权重，实现83.4%的任务成功率。",
+        "pain_point": "现有方法无法有效利用不同场景下的经验，导致学习效果受限。",
+        "core_value": "通过上下文学习，实现跨场景任务操作的高效迁移。",
+        "technical_architecture": "基于模拟环境的排练和上下文反馈机制。",
+        "quantitative_results": "在RoboTwin 2.0的所有50个任务中，RoboScript达到83.4%的成功率。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要依赖模拟环境进行任务排练。",
+        "key_contributions": [
+          "提出World In-Context Learning (WICL)框架",
+          "构建RoboScript模块化基础设施"
+        ],
+        "application_scenarios": [
+          "自主机器人操作",
+          "多场景任务执行"
+        ],
+        "technical_highlights": [
+          "上下文反馈机制",
+          "数据隔离确保实时可用"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.14320",
+      "source": "huggingface",
+      "title": "Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents",
+      "authors": [
+        "Yukyeong Lee",
+        "Yumin Choi",
+        "Jinheon Baek",
+        "Sung Ju Hwang"
+      ],
+      "abstract": "External memory enables LLM agents to improve from experience by distilling trajectories of past tasks into concise lessons for new tasks. However, memory can also lead to memory-induced degradation, where an agent fails on tasks it would solve without memory, often because it follows a lesson that is incorrect, or misapplies or misreads a valid one. This is because lessons are inferred from trajectories labeled only with task success or failure, yet are typically provided without the trajectories they came from, leaving the agent no way to check them. To address this, we introduce WikiTrace, an evidence-linked memory system designed to let agents check each lesson against its original trajectory. Specifically, motivated by the finding that a trajectory often still holds the evidence needed to catch an erroneous lesson, WikiTrace stores each lesson as a concise insight linked to a summary of why its trajectory succeeded or failed and to the raw trajectory itself. Then, on a new task, the agent starts from all insights and, whenever one lacks details needed to act, conflicts with another, or comes from a failed task, descends through its links with terminal tools to fill in missing details or correct the insight before acting. We validate WikiTrace on five agentic benchmarks, showing that it consistently outperforms existing memory approaches and a baseline given the same insights alone, while also reducing memory-induced degradation. Our code is available at https://github.com/yukyeongleee/wikitrace",
+      "published_date": "2026-11-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.14320",
+      "pdf_url": "https://arxiv.org/pdf/2611.14320",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.14320",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "upvotes": 53,
+      "hot_score": 530,
+      "structured_summary": {
+        "chinese_title": "不要仅仅依赖记忆：证据链接的记忆减少LLM代理的记忆诱导退化",
+        "chinese_summary": "通过引入WikiTrace，让代理可以检查每个教训的原始轨迹，从而减少记忆诱导的退化。",
+        "pain_point": "记忆中的教训可能包含错误或误导信息，导致代理在新任务中表现不佳。",
+        "core_value": "通过链接原始轨迹，WikiTrace帮助代理验证教训的准确性，提高任务成功率。",
+        "technical_architecture": "WikiTrace将教训链接到原始轨迹的摘要和原始数据，代理通过链接获取更多信息。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要依赖大量原始轨迹数据，对数据质量有较高要求。",
+        "key_contributions": [
+          "引入证据链接的记忆系统WikiTrace",
+          "通过链接原始轨迹提高教训的准确性"
+        ],
+        "application_scenarios": [
+          "自然语言处理任务",
+          "知识推理任务"
+        ],
+        "technical_highlights": [
+          "链接原始轨迹验证教训",
+          "动态获取缺失信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12426",
+      "source": "huggingface",
+      "title": "dNaViT: Discrete Codes are General-Purpose Visual Representations",
+      "authors": [
+        "Xiaotong Li",
+        "Zhengrong Yue",
+        "Xu Huang",
+        "Jialv Zou",
+        "Minhao Jing",
+        "Wenhao Yan",
+        "Haodong Li",
+        "Hai Huang",
+        "Bo Zhao",
+        "Yan Feng",
+        "Peng Pei",
+        "Xunliang Cai"
+      ],
+      "abstract": "Discrete autoregressive modeling, notably through next-token prediction, has become a cornerstone of modern language models. Extending this paradigm to vision allows visual and language models to converge on a unified framework, thereby fostering shared methodology and infrastructure. This work investigates a central question: how far can a finite discrete vocabulary go in representing the richness of the visual world? We present dNaViT, a Discrete Native-resolution Vision Transformer that produces discrete visual primitives analogous to language tokens. Built upon a frozen pretrained encoder, dNaViT applies lightweight residual modulation with a dual-branch objective to inject reconstruction-aware cues into semantic features. By leveraging grouped product quantization, it scales discrete capacity without inflating spatial sequence lengths, while a balanced training recipe maintains both semantic and pixel-level information. Consequently, dNaViT functions as a versatile discrete visual tokenizer, enabling unified encoding across downstream tasks alongside high-fidelity image decoding. Extensive evaluations show that dNaViT matches or exceeds task-specific baselines across 12 visual understanding benchmarks, 4 generation benchmarks, and an image editing benchmark. These findings demonstrate that a compact discrete vocabulary can serve as a universal visual currency and unlock the full potential of fully unified, native multimodal methodology.",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12426",
+      "pdf_url": "https://arxiv.org/pdf/2611.12426",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12426",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "dNaViT: 离散编码是通用视觉表示",
+        "chinese_summary": "dNaViT 通过离散视觉原语实现高保真图像解码和下游任务统一编码。",
+        "pain_point": "视觉和语言模型缺乏统一的表示框架。",
+        "core_value": "提供了一种新的视觉表示方法，能够同时保持语义和像素级信息。",
+        "technical_architecture": "基于冻结预训练编码器，使用分组产品量化和双分支目标进行轻量级残差调制。",
+        "quantitative_results": "在 12 个视觉任务上匹配或超越特定基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步探索离散表示在更复杂任务中的应用。",
+        "key_contributions": [
+          "提出了 dNaViT，一种离散视觉原语生成器。",
+          "通过分组产品量化扩展离散容量而不增加空间序列长度。",
+          "保持了语义和像素级信息的平衡训练方法"
+        ],
+        "application_scenarios": [
+          "统一编码跨下游任务",
+          "高保真图像解码"
+        ],
+        "technical_highlights": [
+          "轻量级残差调制",
+          "双分支目标注入重建感知线索"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.14309",
+      "source": "huggingface",
+      "title": "MMDM: Measuring Massive Multitask Decision Making",
+      "authors": [
+        "Junhao Shen",
+        "Qing Zong",
+        "Yue Guo",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Hong Cheng"
+      ],
+      "abstract": "System-1 Decision Models directly make structured probabilistic decisions over query-specified options given a state in a single forward pass, without autoregressively generating reasoning trajectories or textual responses. Recent evaluations cover diverse tasks but often rely on existing benchmarks, where prior exposure to test material can obscure generalization. Moreover, real-world decision making often involves long contexts, large option spaces, and complex logical dependencies, challenges that existing benchmarks do not adequately capture together. Thus, we introduce MMDM (Massive Multitask Decision Making), a benchmark of 5,448 high-quality questions across 16 task categories, combining newly constructed tasks with source-grounded recompositions and rewrites for single-select, multi-select, and soft-label decision making in fresh contexts. It covers realistic scenarios such as agent state tracking, tool and skill selection, preference judgments, and rubric scoring, with option spaces ranging from 2 to 1,024 and inputs extending to 64,817 tokens. With MMDM, we conduct a comprehensive quantitative evaluation of 28 decision models, showing that many perform well on common knowledge yet struggle with interdependent options, constrained decisions, and multi-select tasks. For example, Perplexity Decider-V1.2 reaches 78.75% Hard Single-select Accuracy on world knowledge, but only 53.95% on option logic and 47.95% on constraint planning, while the best Hard Multi-select Accuracy across all models is 36.81%. These results highlight joint reasoning, constraint-aware selection, and complete multi-select recovery as key priorities for decision model development, with MMDM providing a testbed for measuring this progress.",
+      "published_date": "2026-11-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.14309",
+      "pdf_url": "https://arxiv.org/pdf/2611.14309",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.14309",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "MMDM: 测量大规模多任务决策",
+        "chinese_summary": "提出MMDM基准，涵盖5448个高质量问题，评估28种决策模型。",
+        "pain_point": "现有基准无法全面覆盖真实世界决策中的长上下文、大选项空间和复杂逻辑依赖。",
+        "core_value": "提供一个全面的基准，评估多任务决策模型在现实场景中的性能。",
+        "technical_architecture": "结合新构建任务和源数据重组，涵盖单选、多选和软标签决策。",
+        "quantitative_results": "展示了28种决策模型在MMDM上的表现。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了28种模型，未来需扩展模型范围。",
+        "key_contributions": [
+          "提出MMDM基准",
+          "涵盖广泛任务类别",
+          "提供全面评估"
+        ],
+        "application_scenarios": [
+          "代理状态跟踪",
+          "工具和技能选择",
+          "偏好判断",
+          "评分标准"
+        ],
+        "technical_highlights": [
+          "大规模多任务决策",
+          "结合新构建和重组任务"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.11166",
+      "source": "huggingface",
+      "title": "DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight",
+      "authors": [
+        "Zhongxi Chen",
+        "Yi Yang",
+        "Xinyi Chen",
+        "Mingzhe Ye",
+        "Yaping Li",
+        "Zhihong Liu",
+        "Congsheng Xu",
+        "Haonan Wang",
+        "Zhijie Deng"
+      ],
+      "abstract": "Dexterous manipulation requires rich spatial foresight over both the surrounding scene and the robot hand. Existing world-action models often acquire such predictive knowledge through explicit future prediction. We introduce DexForesight, a framework that learns spatial foresight implicitly by injecting dynamics-aware world representations into the latent space of a dexterous policy. During training, DexForesight learns an action-conditioned spatial world model from offline scene depth, kinematic hand geometry, and demonstration trajectories. The world model predicts 3D hand-point motion and visual feature changes, capturing both articulated hand dynamics and scene changes under demonstrated actions, including the motion of fingers occluded from the cameras. We then freeze the world model and align policy queries with its predictive world queries, transferring the learned spatial dynamics into policy latents and using them to condition action generation. At deployment, only the policy is retained, operating on RGB observations, language, and robot state without depth input or explicit future prediction. On 11 DexJoCo simulation tasks, DexForesight improves the overall success rate of the base policy from 49.4% to 60.5%. On three real-robot dexterous manipulation tasks, DexForesight achieves 58.3% success, compared with 50.0% for the strongest baseline. Project page https://dexforesight.github.io/",
+      "published_date": "2026-11-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.11166",
+      "pdf_url": "https://arxiv.org/pdf/2611.11166",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.11166",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 24,
+      "hot_score": 240,
+      "structured_summary": {
+        "chinese_title": "DexForesight: 基于隐式空间预见性的灵巧政策",
+        "chinese_summary": "通过注入动力学感知的世界表示，DexForesight 在灵巧政策的潜在空间中隐式学习空间预见性。",
+        "pain_point": "现有世界-动作模型依赖显式未来预测，难以处理复杂场景和手部动作。",
+        "core_value": "DexForesight 通过隐式学习空间预见性，提高灵巧操作的成功率。",
+        "technical_architecture": "通过动作条件下的空间世界模型预测 3D 手指运动和视觉特征变化。",
+        "quantitative_results": "在 11 个 DexJoCo 模拟任务中，DexForesight 提高了整体成功率。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在模拟环境中测试，实际应用中的表现有待验证。",
+        "key_contributions": [
+          "提出了一种基于隐式空间预见性的灵巧政策框架",
+          "通过动作条件下的空间世界模型预测手部和场景变化",
+          "无需深度输入或显式未来预测，仅保留政策进行操作"
+        ],
+        "application_scenarios": [
+          "灵巧机器人操作",
+          "复杂场景下的手部动作预测"
+        ],
+        "technical_highlights": [
+          "动作条件下的空间世界模型",
+          "隐式学习空间预见性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12177",
+      "source": "huggingface",
+      "title": "Embodied First Exam",
+      "authors": [
+        "Kangrui Wang",
+        "Qineng Wang",
+        "Changhe Chen",
+        "Pingyue Zhang",
+        "Chi Gui",
+        "Feishi Wang",
+        "Canyu Chen",
+        "Wenli Xiao",
+        "Xiaoyu Huang",
+        "Tonghe Zhang",
+        "Linjie Li",
+        "Zihan Wang",
+        "Minyeong Kim",
+        "Yiyou Sun",
+        "Mingkai Deng",
+        "Jinyu Hou",
+        "Qi Zhu",
+        "Han Liu",
+        "Eric P. Xing",
+        "Huaxiu Yao",
+        "Zhiwen Fan",
+        "Yuejiang Liu",
+        "Dawn Song",
+        "Pieter Abbeel",
+        "Li Fei-Fei",
+        "Jiajun Wu",
+        "Yuke Zhu",
+        "Guanya Shi",
+        "Ruohan Zhang",
+        "Manling Li"
+      ],
+      "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12177",
+      "pdf_url": "https://arxiv.org/pdf/2611.12177",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12177",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "具身第一考",
+        "chinese_summary": "提出了一种新的评估框架，让编程代理在进入物理世界前进行测试。",
+        "pain_point": "现有机器人基准测试主要围绕视觉-运动策略学习，未充分评估编程代理在物理世界中的表现。",
+        "core_value": "提供了一个全面的评估框架，涵盖多种任务和机器人，旨在测试编程代理的控制能力。",
+        "technical_architecture": "设计了一个统一的评估框架，允许编程代理选择直接控制、代码控制或训练策略控制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅包含1,156个任务，未来可能需要更多样化的任务集。",
+        "key_contributions": [
+          "提出了新的评估框架",
+          "涵盖多种机器人和任务",
+          "允许代理选择不同的控制方式"
+        ],
+        "application_scenarios": [
+          "机器人控制",
+          "编程代理评估"
+        ],
+        "technical_highlights": [
+          "统一的评估框架",
+          "多样化的任务集"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.10649",
+      "source": "huggingface",
+      "title": "MACaQ: Fast, Model Agnostic Calibrated Quantization for Low-Precision Weights and Activations",
+      "authors": [
+        "Lorenz K. Muller",
+        "Philippe Bich",
+        "Chiara Boretti",
+        "Hyun-Min Chang",
+        "Jiawei Zhuang",
+        "Lukas Cavigelli"
+      ],
+      "abstract": "Weight-activation quantization can reduce the memory and compute cost of neural-network inference, but recent methods often require expensive optimization and architecture-specific propagation of basis transforms across layers. We introduce MACaQ, an MXFP4 W4A4 post-training quantization method that treats every linear layer independently. MACaQ applies a per-channel scale and a block-Hadamard transform online to each layer's activations, while absorbing the corresponding inverse transforms into its weights. Retaining these transforms online avoids cross-layer dependencies and enables a simple streaming implementation of the quantization process, in which only one layer must reside in memory at a time. To improve over round-to-nearest quantization, we introduce Flip-Refinement, a Hessian-aware coordinate-descent procedure that greedily moves individual FP4 codes to adjacent representable values. Despite executing the activation transforms at inference time, MACaQ adds only 2.3% end-to-end overhead over pure MXFP4 on Qwen3-32B in vLLM. MACaQ reaches lower perplexity than DuQuant++ and MR-GPTQ, and already matches their best perplexity on Llama-3-8B in 11 times less quantization time. We further apply MACaQ without architecture-specific modifications to an image diffusion model, illustrating the generality of its layer-local design and show quantization of a 122B parameter model in 64 minutes, using only 32.5GB GPU RAM.",
+      "published_date": "2026-11-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.10649",
+      "pdf_url": "https://arxiv.org/pdf/2611.10649",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.10649",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "MACaQ: 快速、模型无关的校准量化方法，适用于低精度权重和激活",
+        "chinese_summary": "MACaQ 提供了一种高效的 MXFP4 W4A4 后训练量化方法，无需跨层依赖，减少计算和内存成本。",
+        "pain_point": "现有方法需要昂贵的优化和特定架构的基变换传播。",
+        "core_value": "通过独立处理每一层和引入 Flip-Refinement 方法，MACaQ 提高了量化效率和精度。",
+        "technical_architecture": "MACaQ 使用独立的每通道缩放和块 Hadamard 变换在线处理激活，吸收逆变换到权重中。",
+        "quantitative_results": "MACaQ 在 Qwen3-32B 上仅增加 2.3% 的端到端开销，达到比 DuQuant++ 和 MR-GPTQ 更低的困惑度。",
+        "competitors": "对比了 DuQuant++ 和 MR-GPTQ，后者在 Llama-3-8B 上需要 11 倍的量化时间。",
+        "limitations": "未来工作可能需要探索更多应用场景。",
+        "key_contributions": [
+          "提出了一种独立处理每一层的后训练量化方法",
+          "引入了 Flip-Refinement 方法改进量化精度",
+          "实现了简单的流式量化过程"
+        ],
+        "application_scenarios": [
+          "适用于大规模语言模型的低精度量化",
+          "减少计算和内存成本的神经网络推理"
+        ],
+        "technical_highlights": [
+          "无需跨层依赖的独立层处理",
+          "引入 Flip-Refinement 提高量化精度"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.07464",
+      "source": "huggingface",
+      "title": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
+      "authors": [
+        "Yupeng Cao",
+        "Xueqing Peng",
+        "Lingfei Qian",
+        "Haohang Li",
+        "Yangyang Yu",
+        "Anke Xu",
+        "Wenbo Cao",
+        "Yan Wang",
+        "Yuechen Jiang",
+        "Yuyan Wang",
+        "Zhuohan Xie",
+        "Yankai Chen",
+        "Zehan Li",
+        "Jimin Huang",
+        "Xue Liu",
+        "Jian-Yun Nie",
+        "Sophia Ananiadou"
+      ],
+      "abstract": "Language agents increasingly work for users on the open Web, and finance is where trusting them is hardest. The data must come from the Web, the strategy lives in the user's head, and correctness depends on time, so an agent can fail silently: a strategy the user never asked for, unverified data, or a backtest that uses the future yields a report as convincing as a correct one. Existing benchmarks close the world somewhere, fixing the task, the data, or the timeline, and thereby remove these failures instead of measuring them. We introduce FINCOSMOS, an open-world evaluation paradigm for agents doing financial work. A simulated user holds a hidden strategy sampled from a compositional grammar and reveals it only when asked. The agent receives no data, so it must acquire data from the Web, build its own backtest under a data cutoff, and deliver verifiable results. Grading needs no reference answer. Programs verify point-in-time correctness and recompute every reported metric, the delivered strategy is checked against the hidden specification, and a run is accepted only when the user is satisfied and none of 15 veto checks fails. Across four coding agents and a model without tools in 150 sessions, no session is accepted: every session that the simulated user signed off fails a program check, and agents raise only 54--64\\% of the details they were not told. Human experts attribute 88.33\\% of failures to the agents. With FINCOSMOS feedback, an agent with persistent memory learned all ten tasks.",
+      "published_date": "2026-11-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.07464",
+      "pdf_url": "https://arxiv.org/pdf/2611.07464",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.07464",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "q-fin.CP"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "FINCOSMOS：金融领域开放世界评估范式",
+        "chinese_summary": "提出了一种新的评估范式，使语言代理在金融领域能够面对真实世界的挑战。",
+        "pain_point": "现有基准无法真实反映代理在开放世界中的表现，尤其是在金融领域。",
+        "core_value": "通过模拟用户和开放世界的数据获取，评估代理的真实能力和可靠性。",
+        "technical_architecture": "使用模拟用户和动态数据获取机制，构建开放世界评估框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多实际应用场景验证其有效性。",
+        "key_contributions": [
+          "提出了开放世界评估范式",
+          "模拟用户策略，动态数据获取",
+          "严格验证机制"
+        ],
+        "application_scenarios": [
+          "金融策略分析",
+          "投资决策支持"
+        ],
+        "technical_highlights": [
+          "模拟用户策略",
+          "动态数据获取机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

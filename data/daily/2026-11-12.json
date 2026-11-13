@@ -1,0 +1,516 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-13T03:11:15.504864+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2610.40394",
+      "source": "huggingface",
+      "title": "Scaling Mathematical Proof Supervision from Structured Textbooks",
+      "authors": [
+        "Youqing Fang",
+        "Zhouqi Hua",
+        "Yinhao Tang",
+        "Yuzhe Gu",
+        "Lingkai Kong",
+        "Bin Liu",
+        "Weiming Zhang",
+        "Kai Chen",
+        "Yanan Sun",
+        "Wenwei Zhang"
+      ],
+      "abstract": "Mathematical supervision for language models is typically flattened into isolated problem-solution pairs, discarding the curricular organization and evidential structure of the original sources. We introduce TOME-Math (Textbook-Oriented Mathematical Evidence), a large-scale corpus that converts 2,118 textbooks spanning the core areas of university-level mathematics subjects into approximately 380K structured proof-supervision records while preserving chapter order, proposition-proof links, dependency references, and source provenance. Leveraging these structural signals, we explore curriculum learning across multiple mathematical subjects and characterize scaling patterns with supervision volume and source breadth. At full scale, fine-tuning on TOME-Math raises the unweighted mean score across our held-out evaluations and established public benchmarks by 16.7 percentage points over the base model, while exceeding all three public instruction-data baselines evaluated in aggregate. Our findings highlight structured textbooks as both a scalable source of mathematical supervision and an empirical framework for studying the impact of data organization on mathematical reasoning. We will release the corpus to facilitate further research on structured mathematical supervision.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.40394",
+      "pdf_url": "https://arxiv.org/pdf/2610.40394",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.40394",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 40,
+      "hot_score": 400,
+      "structured_summary": {
+        "chinese_title": "从结构化教科书扩展数学证明监督",
+        "chinese_summary": "提出TOME-Math，将2118本教科书转换为38万条结构化证明监督记录，显著提升模型在数学推理上的表现。",
+        "pain_point": "现有方法忽略教科书的课程组织和证据结构，导致模型在数学推理上表现不佳。",
+        "core_value": "利用教科书的结构化信息，提升模型在数学推理任务上的性能。",
+        "technical_architecture": "构建大规模TOME-Math语料库，保留教科书的章节顺序和证明链接。",
+        "quantitative_results": "全量训练后，模型在多个基准测试上的得分提高了16.7个百分点。",
+        "competitors": "超过三个公开指令数据基线。",
+        "limitations": "未来需要探索更多数学领域的应用。",
+        "key_contributions": [
+          "提出TOME-Math语料库",
+          "探索数学推理的课程学习",
+          "提升模型在数学推理上的表现"
+        ],
+        "application_scenarios": [
+          "数学教育",
+          "智能辅导系统"
+        ],
+        "technical_highlights": [
+          "保留教科书的结构化信息",
+          "显著提升模型性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.13410",
+      "source": "huggingface",
+      "title": "SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering",
+      "authors": [
+        "Genming Cui",
+        "Xiangyu Li",
+        "Zixu Hao",
+        "Xin Ding",
+        "Yunxin Liu",
+        "Ting Cao"
+      ],
+      "abstract": "Low-bit quantization reduces the inference cost of LLM agents but can compromise task success. Examining failed rollouts, we find that quantized agents overlook task requirements or environmental conditions, producing environment transitions that diverge from successful full-precision references. Correcting these behavioral divergences remains difficult: offline data may miss the student's failure contexts, while its own rollouts may provide few correct responses in those contexts. We introduce SteerDistill, a quantization-aware distillation method in which a full-precision teacher guides the student to revise failed responses and iteratively refines its guidance using feedback from student execution. This closed-loop teacher steering produces locally verified behavioral corrections. We internalize these corrections by training the student without guidance to match the steered student's predictions at corrected turns and the full-precision teacher's at other turns, enabling unassisted inference. Across five agentic benchmarks and three models, SteerDistill exceeds the strongest quantized baseline by 1.67--2.18 points in average score under W4A16 and stays within one point of BF16. On τ^2-Bench, it outperforms QeRL by 1.84 percentage points in success rate using 67% fewer training GPU hours and produces shorter successful trajectories than the quantized baselines.",
+      "published_date": "2026-11-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.13410",
+      "pdf_url": "https://arxiv.org/pdf/2611.13410",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.13410",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 32,
+      "hot_score": 320,
+      "structured_summary": {
+        "chinese_title": "SteerDistill: 通过闭环教师引导进行LLM代理量化",
+        "chinese_summary": "SteerDistill通过闭环教师引导纠正量化代理的行为偏差，显著提升任务成功率。",
+        "pain_point": "低比特量化虽降低成本，但可能牺牲任务成功。",
+        "core_value": "SteerDistill通过闭环反馈机制有效纠正量化代理的行为偏差。",
+        "technical_architecture": "SteerDistill采用量化感知蒸馏方法，通过闭环教师引导实现行为纠正。",
+        "quantitative_results": "SteerDistill在五个代理基准和三种模型上均优于最强量化基线。",
+        "competitors": "对比最强量化基线。",
+        "limitations": "未来需探索更广泛的模型和任务。",
+        "key_contributions": [
+          "提出SteerDistill量化感知蒸馏方法",
+          "通过闭环教师引导纠正行为偏差"
+        ],
+        "application_scenarios": [
+          "代理任务",
+          "自然语言处理"
+        ],
+        "technical_highlights": [
+          "闭环教师引导机制",
+          "行为纠正与预测匹配"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2610.39671",
+      "source": "huggingface",
+      "title": "Incentivizing Self-Learning in Large Language Models via Reinforcement Learning",
+      "authors": [
+        "Lingkai Kong",
+        "Yuzhe Gu",
+        "Haiteng Zhao",
+        "Zijian Wu",
+        "Youqing Fang",
+        "Zhouqi Hua",
+        "Yanan Sun",
+        "Kai Chen",
+        "Wenwei Zhang"
+      ],
+      "abstract": "Large language models (LLMs) draw on parametric knowledge and retrieval-augmented generation (RAG) to solve knowledge-intensive tasks. Yet problem solving in unfamiliar domains calls for tightly coupled knowledge acquisition and reasoning, beyond factual retrieval and aggregation or learning solely from a preassembled context. We study self-learning -- autonomously retrieving, studying, and applying knowledge from long-form reference materials on the fly. To investigate this capability, we formulate a textbook-based mathematical problem-solving task. LLMs must navigate textbook exposition, learn and apply relevant principles, and construct proofs for exercises, with reference solutions withheld. We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards. Experiments show that our method improves performance across in-domain and out-of-domain textbooks and subjects, raising Intern-S2-Preview-35B's overall proof accuracy from 51.5% to 79.5% and outperforming RL-trained textbook-free and fixed-retrieval baselines. These gains extend to complex long-context benchmarks involving different task types, with improvements over the base model of 1.7 and 2.3 percentage points on BrowseComp-Plus and CL-bench, respectively. Together, these findings suggest that RL can foster a domain-agnostic self-learning strategy, highlighting the potential of self-learning from long-form corpora to strengthen broader problem-solving capabilities on complex, long-context tasks.",
+      "published_date": "2026-10-29T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2610.39671",
+      "pdf_url": "https://arxiv.org/pdf/2610.39671",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2610.39671",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 28,
+      "hot_score": 280,
+      "structured_summary": {
+        "chinese_title": "通过强化学习激励大型语言模型自我学习",
+        "chinese_summary": "通过引入BookNavigator接口和细粒度奖励的强化学习，提高大型语言模型在陌生领域中的自我学习能力。",
+        "pain_point": "大型语言模型在陌生领域解决问题时，缺乏自主学习和应用知识的能力。",
+        "core_value": "通过自我学习提高模型在陌生领域的知识获取和推理能力。",
+        "technical_architecture": "使用BookNavigator接口和强化学习激励自我学习。",
+        "quantitative_results": "实验结果显示模型证明题准确率从51.5%提高到79.5%，优于无教材和固定检索基线。",
+        "competitors": "无对比信息",
+        "limitations": "仅在数学问题解决领域进行了验证。",
+        "key_contributions": [
+          "提出了一种通过强化学习激励自我学习的方法",
+          "设计了BookNavigator接口支持自我学习过程"
+        ],
+        "application_scenarios": [
+          "陌生领域的知识密集型任务",
+          "需要自主学习和应用知识的场景"
+        ],
+        "technical_highlights": [
+          "引入细粒度奖励机制",
+          "支持长文本材料的自主学习"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2608.22237",
+      "source": "huggingface",
+      "title": "Read Less, Solve More: Token-Efficient Sparse Reading of External Content for AI Agents",
+      "authors": [
+        "Zedong Liu",
+        "Jiaan Wu",
+        "Xinyang Ma",
+        "Le Xu",
+        "Kai Wang",
+        "Yuanchao Hu",
+        "Dingwen Tao",
+        "Guangming Tan"
+      ],
+      "abstract": "Web-facing AI agents repeatedly access webpages, documents, repositories, and tool responses, yet reading interfaces often expose entire objects when only sparse evidence is needed. This over-reading increases token and latency costs and can dilute relevant evidence. We present SparseRead, a reusable reading control layer that governs content admission without modifying the agent model. Its Read Intent Protocol tracks evolving needs and source coverage; Adaptive Reader Backends select how evidence is located and exposed; and the Budgeted Read Gate bounds cumulative raw exposure per episode with faithful full-view fallback. A unified Reader interface supports interchangeable evidence acquisition across heterogeneous resources. Across six models, including Claude Opus 5, and five scenarios, SparseRead reduces total tokens by up to 92.9% and wall time by up to 89.0%, preserving or improving task quality in 97% settings. On Web deep-search tasks, it reduces tokens by 31.0--43.0% and task completion time by 23.0--37.0%. Ablations validate the three designs, while integration with three agent frameworks demonstrates portability.",
+      "published_date": "2026-11-07T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2608.22237",
+      "pdf_url": "https://arxiv.org/pdf/2608.22237",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2608.22237",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": {
+        "chinese_title": "读得少，做得多：AI代理高效稀疏阅读外部内容",
+        "chinese_summary": "SparseRead通过稀疏阅读减少token和时间成本，同时保持或提升任务质量。",
+        "pain_point": "现有阅读接口过度暴露信息，增加token和延迟成本，稀释关键证据。",
+        "core_value": "SparseRead通过控制内容访问，减少token和时间成本，同时保持或提升任务质量。",
+        "technical_architecture": "采用Read Intent Protocol、Adaptive Reader Backends和Budgeted Read Gate实现内容控制。",
+        "quantitative_results": "在六种模型和五种场景中，SparseRead最多可减少92.9%的token和89.0%的时间。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多场景验证其普适性。",
+        "key_contributions": [
+          "提出SparseRead控制层",
+          "实现读取意图协议",
+          "支持异构资源的证据获取"
+        ],
+        "application_scenarios": [
+          "Web深度搜索任务",
+          "AI代理访问网页、文档等"
+        ],
+        "technical_highlights": [
+          "减少token和时间成本",
+          "保持或提升任务质量"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.10193",
+      "source": "huggingface",
+      "title": "Ensemble Routing for Prompt-Adaptive Cost-Aware LLM Inference",
+      "authors": [
+        "Saul Urso",
+        "Emanuele Carlini",
+        "Patrizio Dazzi",
+        "Matteo Mordacchini"
+      ],
+      "abstract": "Large language models (LLMs) increasingly support Web-based services that must balance response quality and inference cost across heterogeneous requests. Conventional routing selects one model per prompt, while fixed ensembles cannot adapt their composition and cost to individual requests. We introduce PISA, a prompt-adaptive, cost-aware single-model router, and PISA-E, its extension to ensemble routing. At the core of both methods, PISA combines soft cluster memberships with model-specific predictors to estimate individual model capabilities. Building on these estimates, PISA-E jointly selects ensemble composition and cardinality under an explicit cost--quality preference that can be adjusted at inference time without retraining. A tractable ensemble-success surrogate and efficient candidate selection enable this extension without ensemble-specific training. Across four LLM routing benchmarks under in-distribution (ID) and out-of-distribution (OOD) conditions, PISA achieves the highest macro-average cost--performance hypervolume among the evaluated single-model routers in both settings. Meanwhile, PISA-E achieves the highest macro-average task performance among the evaluated ensemble approaches when prioritizing response quality, surpassing the strongest competitors by 2.09 and 2.87 percentage points under ID and OOD conditions, respectively. At selected lower-cost operating points, it also exceeds the strongest ensemble competitors' macro-average task performance while reducing average inference cost by approximately 36% and 25%, respectively. These results demonstrate the effectiveness of prompt-adaptive capability estimation for both single-model routing and selective ensembling.",
+      "published_date": "2026-11-06T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.10193",
+      "pdf_url": "https://arxiv.org/pdf/2611.10193",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.10193",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 14,
+      "hot_score": 140,
+      "structured_summary": {
+        "chinese_title": "面向提示自适应成本感知的大语言模型推理路由",
+        "chinese_summary": "PISA-E 在不同条件下的主要任务性能最高。",
+        "pain_point": "现有路由方法无法根据请求动态调整模型组合和成本。",
+        "core_value": "PISA-E 能在推理时调整成本-质量偏好，实现最优任务性能。",
+        "technical_architecture": "结合软聚类成员和模型特定预测器估算模型能力。",
+        "quantitative_results": "在四个基准测试中，PISA 和 PISA-E 在成本-性能指标上表现最佳。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应更多实际应用场景。",
+        "key_contributions": [
+          "提出 PISA 和 PISA-E 方法",
+          "实现提示自适应成本感知路由",
+          "无需特定训练即可调整成本-质量偏好"
+        ],
+        "application_scenarios": [
+          "Web 基础服务",
+          "大语言模型推理"
+        ],
+        "technical_highlights": [
+          "联合选择模型组合和数量",
+          "高效候选选择机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.08286",
+      "source": "huggingface",
+      "title": "Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds",
+      "authors": [
+        "Chenhao Zheng",
+        "Zixian Ma",
+        "Kai Li",
+        "Kanchana Ranasinghe",
+        "Jieyu Zhang",
+        "Artemis Panagopoulou",
+        "Weikai Huang",
+        "Jianxu Shangguan",
+        "Yuanyuan Tan",
+        "Silvio Savarese",
+        "Juan Carlos Niebles",
+        "Ranjay Krishna",
+        "Ran Xu",
+        "Honglu Zhou"
+      ],
+      "abstract": "Visual interaction models that support users during ongoing physical tasks require evaluation in closed loop, where assistant responses can change subsequent user behavior and task outcomes. Existing benchmarks largely rely on offline replay and therefore cannot capture these effects. We introduce Interactive Visual Gym, a framework for closed-loop evaluation and training of visual interaction models through joint simulation of executable task environments and human users. We contribute three simulators that recreate everyday tasks and human-aligned action spaces across cooking, household manipulation, and mobile-interface domains, together with a persona-conditioned user simulation harness that collaborates with the assistant while incorporating controlled execution errors and other out-of-plan behaviors. We instantiate the framework as IVG-Bench, a benchmark with 315 interaction scenarios. Evaluating state-of-the-art VLMs as visual interaction models reveals substantial limitations: the best-performing model, Gemini 4 Argon, completes only 53.4% of tasks within the time limit, exhibits significant weaknesses in factual grounding and actionable guidance, and is often too slow to prevent errors when response latency is considered. We verify our evaluation protocol with a human study which finds 78.5% agreement between our interaction-quality metric and participant preferences. We further show that the environments provide useful learning signals: in a proof-of-concept GRPO experiment, closed-loop training improves both task success and interaction quality for Qwen3.5-4B model in our cooking environment.",
+      "published_date": "2026-11-05T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.08286",
+      "pdf_url": "https://arxiv.org/pdf/2611.08286",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.08286",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 13,
+      "hot_score": 130,
+      "structured_summary": {
+        "chinese_title": "交互视觉健身房：通过模拟用户在交互世界中的评估视觉交互模型",
+        "chinese_summary": "提出Interactive Visual Gym框架，通过联合模拟可执行任务环境和人类用户，评估视觉交互模型。",
+        "pain_point": "现有基准依赖离线回放，无法捕捉助手响应对用户行为和任务结果的影响。",
+        "core_value": "提供一种闭环评估和训练视觉交互模型的方法，增强模型的交互能力。",
+        "technical_architecture": "联合模拟可执行任务环境和人类用户，构建仿真用户。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了部分视觉语言模型，未来需扩展模型范围。",
+        "key_contributions": [
+          "提出Interactive Visual Gym框架",
+          "构建了仿真用户和任务环境",
+          "提供了315个交互场景的基准"
+        ],
+        "application_scenarios": [
+          "视觉交互模型的评估和训练",
+          "增强现实和虚拟现实中的交互"
+        ],
+        "technical_highlights": [
+          "多领域仿真用户和任务环境",
+          "个性化用户行为模拟"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.13028",
+      "source": "huggingface",
+      "title": "GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning",
+      "authors": [
+        "Jiajun Chen",
+        "Shicheng Fang",
+        "Jiahao Lu",
+        "Yuxin Wang",
+        "Xipeng Qiu"
+      ],
+      "abstract": "AAA games offer a rich testbed for evaluating agent perception, reasoning, and control. However, evaluating whether agents can complete tasks in AAA games is challenging and often human-annotated because task outcomes are often difficult to verify automatically, let alone applying it for Reinforcement Learning (RL). We introduce GTAGym, an environment and framework for evaluation and RL on GTA V tasks. Its evaluation benchmark, GTAVBench, derived from GTA V main-story missions, contains 103 online tasks reconstructed across nine task families, alongside 47 image-based shooting and sniping tasks using GTA V imagery. A web server provides access to the online environment and evaluation interface, supporting parallel testing through screenshots and keyboard-mouse actions with automatic engine-state outcome checks. We evaluate six frontier LLMs on GTAVBench with textual task instructions and on its GTAVBench-AGI branch, where instructions appear only in the first screenshot and a harness automatically compresses interaction history. The best configuration achieves 70.9% overall accuracy in GTAVBench-AGI, yet aerial navigation, evasion and interception remain difficult. GTAGym also provides a scalable generator that samples task parameters within user-specified ranges and option sets under fixed templates, creating batches of 3D and image-based shooting environments for RL with automatic reward and termination signals. LoRA RL of Qwen3.8-27B on generated on-foot navigation tasks improves the in-domain performance and transfers to out-of-domain task categories, and native GTA V tasks from 15% to 23%.",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.13028",
+      "pdf_url": "https://arxiv.org/pdf/2611.13028",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.13028",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 12,
+      "hot_score": 120,
+      "structured_summary": {
+        "chinese_title": "GTAGym：用于评估和强化学习的真实AAA级游戏任务环境",
+        "chinese_summary": "引入GTAGym环境，通过GTA V任务评估智能体的能力，并支持强化学习。",
+        "pain_point": "评估智能体在AAA级游戏中完成任务的难度。",
+        "core_value": "提供了一个基于真实游戏任务的评估和强化学习环境。",
+        "technical_architecture": "基于GTA V游戏任务构建评估基准GTAVBench。",
+        "quantitative_results": "最佳配置在GTAVBench-AGI中达到70.9%的整体准确率。",
+        "competitors": "暂无对比信息",
+        "limitations": "部分高级导航任务仍具有挑战性。",
+        "key_contributions": [
+          "构建了基于GTA V任务的评估基准GTAVBench",
+          "支持强化学习的环境和框架",
+          "提供了在线环境和评估接口"
+        ],
+        "application_scenarios": [
+          "智能体评估",
+          "强化学习研究"
+        ],
+        "technical_highlights": [
+          "使用真实游戏任务进行评估",
+          "支持并行测试和自动结果检查"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12304",
+      "source": "huggingface",
+      "title": "Evolving Infra: Agent-Adaptive LLM Serving at Scale",
+      "authors": [
+        "Hao Kang",
+        "Weili Xu",
+        "Ziyang Li",
+        "Zheng Du",
+        "Hanchen Li",
+        "Tian Xia",
+        "Song Bian",
+        "Tushar Krishna",
+        "Huizi Mao",
+        "Ion Stoica",
+        "Song Han"
+      ],
+      "abstract": "Agentic workloads are a major source of LLM inference demand. Existing prefill--decode (PD) disaggregated serving systems offer limited flexibility for runtime adaptation of compute allocation and KV cache management, and rely on coarse signals that only partly capture the diverse and dynamic agent workload. These limitations lead to load imbalance between prefill and decode nodes and eviction of KV caches that agents will reuse. We present Evolving Infra, an agent-adaptive serving framework that adapts compute allocation to agent workloads and KV cache management to agent context management at runtime. We decouple compute allocation from key--value (KV) cache management, allowing nodes to switch efficiently between prefill and decode. Building on this design, an online planner matches the PD split to workload composition, while an agent-aware distributed KV manager guides cache eviction and transfer with signals from agent context management. Across coding, math, and computer-use tasks with GLM-5.2 and Kimi K2.6 on up to 256 GB300 GPUs, Evolving Infra reduces mean end-to-end request latency and P95 TTFT by up to 4.1x and 14x over Dynamo, NVIDIA's production framework.",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12304",
+      "pdf_url": "https://arxiv.org/pdf/2611.12304",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12304",
+      "category": "other",
+      "tags": [
+        "cs.DC"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "Evolving Infra: Agent-Adaptive LLM Serving at Scale",
+        "chinese_summary": "Evolving Infra 提供了针对代理工作的自适应计算分配和 KV 缓存管理，显著降低了请求延迟。",
+        "pain_point": "现有系统在计算分配和 KV 缓存管理上缺乏灵活性，导致负载不平衡和缓存频繁被驱逐。",
+        "core_value": "通过自适应计算分配和 KV 缓存管理，Evolving Infra 显著提高了请求处理效率。",
+        "technical_architecture": "Evolving Infra 通过分离计算分配和 KV 缓存管理，实现了节点间的高效切换。",
+        "quantitative_results": "Evolving Infra 在 GLM-5.2 和 Kimi K2.6 上将平均端到端请求延迟和 P95 TTFT 分别降低了 4.1 倍和 14 倍。",
+        "competitors": "对比了 NVIDIA 的生产框架 Dynamo。",
+        "limitations": "未来需要在更多任务和更大规模上进行验证。",
+        "key_contributions": [
+          "提出了自适应计算分配和 KV 缓存管理框架",
+          "实现了节点间的高效切换",
+          "显著降低了请求延迟"
+        ],
+        "application_scenarios": [
+          "大规模语言模型推理",
+          "代理工作负载优化"
+        ],
+        "technical_highlights": [
+          "分离计算分配和 KV 缓存管理",
+          "在线规划和代理感知分布式 KV 管理"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12869",
+      "source": "huggingface",
+      "title": "Where Does Alignment Emerge and What Does It Mean? A Closer Look at the Platonic Representation Hypothesis",
+      "authors": [
+        "Julia Herbst",
+        "Simon Roschmann",
+        "Quentin Bouniot",
+        "Zeynep Akata"
+      ],
+      "abstract": "The Platonic Representation Hypothesis (PRH) suggests that neural networks are converging toward similar representation spaces. As language models become more capable, their representations are aligning with those of vision models. However, recent work has questioned whether this trend continues to hold for newer language models. Moreover, it has been shown that representation similarity metrics can be confounded by model depth and width, requiring appropriate baselines for interpretation. In this work, we first investigate where alignment emerges between unimodal models across model layers and representation dimensions. Next, we find that the PRH capability-alignment trend persists for newer models as long as the captions are sufficiently clean and informative. Finally, we contextualize cross-modal alignment, introducing unimodal and multimodal baselines on various datasets. Our results show that the cross-modal representational alignment of unimodal models can surpass that of explicitly aligned vision-language models, but remains substantially behind the alignment observed for models of the same modality. Code is available at https://github.com/ExplainableML/prh-closer-look.",
+      "published_date": "2026-11-09T18:53:57.000Z",
+      "url": "https://arxiv.org/abs/2611.12869",
+      "pdf_url": "https://arxiv.org/pdf/2611.12869",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12869",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 7,
+      "hot_score": 70,
+      "structured_summary": {
+        "chinese_title": "Platonic Representation Hypothesis: 对齐从何而来及意义何在",
+        "chinese_summary": "研究发现，语言模型与视觉模型的对齐在清洁、信息丰富的描述下仍然存在，且单模态模型的跨模态表示对齐可超越显式对齐的视觉语言模型。",
+        "pain_point": "探讨语言模型与视觉模型对齐趋势的持续性及其影响因素。",
+        "core_value": "揭示单模态模型跨模态对齐的新现象，提供更准确的对齐评估方法。",
+        "technical_architecture": "通过不同模型层和表示维度分析对齐情况，引入单模态和跨模态基线。",
+        "quantitative_results": "单模态模型的跨模态对齐在某些情况下超过显式对齐的视觉语言模型。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多样化的数据集进一步验证。",
+        "key_contributions": [
+          "发现单模态模型跨模态对齐的新现象",
+          "提出更准确的对齐评估方法",
+          "引入单模态和跨模态基线"
+        ],
+        "application_scenarios": [
+          "模型对齐评估",
+          "跨模态理解"
+        ],
+        "technical_highlights": [
+          "分析不同模型层和表示维度的对齐情况",
+          "引入清洁、信息丰富的描述以保持对齐趋势"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.08538",
+      "source": "huggingface",
+      "title": "Subliminal Learning in Vision-Language Models",
+      "authors": [
+        "Arman Hatami",
+        "Romina Aalishah",
+        "Ilya E. Monosov"
+      ],
+      "abstract": "Subliminal learning is a phenomenon in large language models (LLMs) where a teacher passes a hidden preference to a student through training data unrelated to that preference. We study whether subliminal learning also occurs in vision-language models (VLMs). We finetune a teacher VLM to prefer a specific animal or facial attribute and use a control teacher from the same base model. Both teachers generate numbers for an unrelated visual task involving geometric shapes. Two students initialized from the same base VLM are finetuned on the same images, using numbers generated by either the biased or control teacher. Across VLMs ranging from 2B to 7B parameters, we find that both animal and facial preferences can transfer through this unrelated task. Students trained on biased-teacher outputs select the target more often than control students, with a difference of up to sim10 percentage points in the animal preference task. Transfer can become stronger with more training data and varies with the target preference, model, and how the numbers are generated. Beyond preferences, we show that the biased student's explanations use more of the same words and phrases as the biased teacher's explanations than those of the control student, even when all three models select the same image. These results matter for training VLMs and show that training on unrelated data may change both a VLM's image preferences and how it explains its choices, and that transfer can become stronger with more training samples.",
+      "published_date": "2026-11-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.08538",
+      "pdf_url": "https://arxiv.org/pdf/2611.08538",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.08538",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "eess.IV"
+      ],
+      "upvotes": 4,
+      "hot_score": 40,
+      "structured_summary": {
+        "chinese_title": "视觉-语言模型中的潜意识学习",
+        "chinese_summary": "研究发现，视觉-语言模型可以通过与偏好无关的任务传递隐藏偏好。",
+        "pain_point": "探讨视觉-语言模型中是否存在潜意识学习现象。",
+        "core_value": "揭示视觉-语言模型中偏好传递的机制，增强模型的可控性。",
+        "technical_architecture": "通过对比训练数据生成的数字影响学生模型。",
+        "quantitative_results": "偏好传递在不同参数量的模型中均被发现，差异可达10个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "实验结果依赖于特定的偏好和生成方式。",
+        "key_contributions": [
+          "发现视觉-语言模型中的潜意识学习现象",
+          "揭示偏好传递的机制"
+        ],
+        "application_scenarios": [
+          "模型训练与优化",
+          "偏好控制与引导"
+        ],
+        "technical_highlights": [
+          "通过无关任务传递偏好",
+          "偏好传递的量化差异"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

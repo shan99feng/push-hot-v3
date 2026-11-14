@@ -1,0 +1,556 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-14T02:56:20.061515+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.15777",
+      "source": "huggingface",
+      "title": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models",
+      "authors": [
+        "Lichen Li",
+        "Ziping Dong",
+        "Sicheng Feng",
+        "Qi Li",
+        "Xinchao Wang"
+      ],
+      "abstract": "System One models promise fast, general-purpose decision-making without lengthy token generation. However, understanding their capability spectrum and decision reliability requires more than aggregate performance on current benchmarks. Existing evaluations often provide limited insight into the breadth of model capabilities and the reliability of their decisions. We introduce SO-Arena, a benchmark characterizing the capability spectrum and decision reliability of System One models across 11 domains and five capability families. For the capability spectrum, SO-Arena offers evidence-grounded evaluation through reliable sources and manual verification of reference labels against model-visible inputs; fine-grained capability assessment through domain-specific difficulty criteria; and realistic interactive evaluation, where models iteratively execute actions in sandboxes. Reasoning-intensive tasks further enable system one-two comparison. Beyond accuracy, SO-Arena assesses decision reliability through two complementary measures: decision stability under controlled option-set changes and missing-answer recognition when no valid option is available. Evaluations across 21 models reveal that the benefits of scaling and additional reasoning vary substantially across domains. More importantly, strong overall performance does not necessarily imply reliable decision-making: the best-performing System One model ranks only seventh in reliability. Together, these findings highlight the need to characterize capability spectrum and decision reliability as complementary dimensions, providing a systematic view of the strengths and limitations of System One models.",
+      "published_date": "2026-11-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.15777",
+      "pdf_url": "https://arxiv.org/pdf/2611.15777",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.15777",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 79,
+      "hot_score": 790,
+      "structured_summary": {
+        "chinese_title": "SO-Arena: 评估系统一模型能力谱和可靠性的基准",
+        "chinese_summary": "SO-Arena 通过多领域和能力家族评估系统一模型的能力谱和决策可靠性。",
+        "pain_point": "现有评估方法无法全面了解模型能力范围和决策可靠性。",
+        "core_value": "提供多维度评估，增强对系统一模型能力谱和决策可靠性的理解。",
+        "technical_architecture": "通过可靠数据源、手动验证、领域特定难度标准和互动评估。",
+        "quantitative_results": "21 模型评估结果揭示了系统一模型的能力和可靠性。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步扩展评估范围。",
+        "key_contributions": [
+          "引入 SO-Arena 基准",
+          "多领域和能力家族评估",
+          "决策稳定性和无答案识别评估"
+        ],
+        "application_scenarios": [
+          "模型评估",
+          "系统一模型比较"
+        ],
+        "technical_highlights": [
+          "证据支持的评估",
+          "领域特定难度标准",
+          "互动评估"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.14815",
+      "source": "huggingface",
+      "title": "BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model",
+      "authors": [
+        "Junyoung Seo",
+        "Jaewoo Seo",
+        "Seungryong Kim",
+        "Laura Leal-Taixé",
+        "Xiuming Zhang",
+        "Seung Wook Kim"
+      ],
+      "abstract": "Driving world models aim to simulate how a scene unfolds under different ego actions. This requires plausible motion of surrounding vehicles as well as precise ego-trajectory control. Learning vehicle motion from perspective video alone is challenging because motion is entangled with appearance and vehicles can be occluded. Prior work therefore conditions video generation on layouts that specify vehicle motion, providing control over surrounding vehicles but requiring their future trajectories as inputs. We introduce BirdDreams, an autoregressive driving world model that jointly generates perspective video and a schematic bird's-eye-view (BEV) video, making scene layout part of the predicted future. The BEV, rendered from scene annotations for training, depicts roads and vehicles as simple shapes at a fixed metric scale, providing a top-down view of their positions and motion with reduced occlusion between vehicles. Perspective video, by contrast, retains scene details that the BEV omits, such as traffic signals and object appearance. Joint attention between two video diffusion transformers, one per stream, lets each stream inform the other during generation. The predicted BEV also provides a geometric interface for ego control: we translate and rotate its latest frame along an input ego trajectory and use the resulting frames as a soft condition that shows how the scene would appear to move if only the ego vehicle moved. At inference, BirdDreams generates both videos from a single camera image without requiring an HD map or vehicle-state inputs. On PhysicalAI-AV and nuScenes, BirdDreams follows input ego trajectories more faithfully than prior driving world models and generates more plausible ego motion without ego-action conditioning. Human evaluation shows that BirdDreams outperforms a perspective-only baseline in generating realistic surrounding-vehicle behavior.",
+      "published_date": "2026-11-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.14815",
+      "pdf_url": "https://arxiv.org/pdf/2611.14815",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.14815",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 46,
+      "hot_score": 460,
+      "structured_summary": {
+        "chinese_title": "BirdDreams: 联合视角和BEV视频生成的可信、反应式驾驶世界模型",
+        "chinese_summary": "BirdDreams 通过联合生成视角视频和BEV视频，解决了驾驶场景中车辆运动和自我轨迹控制的可信模拟问题。",
+        "pain_point": "现有方法难以从单一视角视频中学习车辆运动，因为运动与外观交织且车辆可能被遮挡。",
+        "core_value": "通过联合生成视角和BEV视频，BirdDreams 提供了更可信的驾驶场景模拟，减少了遮挡并保留了详细信息。",
+        "technical_architecture": "BirdDreams 使用两个视频扩散变换器，通过联合注意力机制生成视角和BEV视频。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多场景下验证模型的鲁棒性。",
+        "key_contributions": [
+          "提出联合生成视角和BEV视频的方法",
+          "通过BEV视频减少遮挡，提高可信度"
+        ],
+        "application_scenarios": [
+          "自动驾驶模拟",
+          "智能交通系统"
+        ],
+        "technical_highlights": [
+          "联合注意力机制",
+          "BEV视频生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.16748",
+      "source": "huggingface",
+      "title": "PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models",
+      "authors": [
+        "Yuxuan Chen",
+        "Xiaojie Li",
+        "Hao Chen",
+        "Juncheng Ma",
+        "Kewei Zhang",
+        "Zhongjing Du",
+        "Guoqiang Wei",
+        "Fangfang Wang",
+        "Zhen Dong",
+        "Zhiyang Dou",
+        "Liming Zhao",
+        "Yan Zeng",
+        "Jianwei Zhang",
+        "Daquan Zhou"
+      ],
+      "abstract": "Video generation models produce visually realistic videos but still struggle with physical dynamics and causal consistency. Learning from generated videos requires fine-grained physical supervision, yet reliable quality judgments, correction pairs, and controlled variations are difficult to obtain. Large language models (LLMs) possess physical knowledge, but struggle to reliably guide video generation models in producing their training videos. We present PhysLoop, a unified harness designed to support physically grounded self-improvement in video generation models. The harness guides and constrains LLMs throughout video generation, selection, and correction, distilling their physical knowledge into physically consistent videos. The framework supports controllable training-data construction and inference-time video repair. By identifying and correcting failures, PhysLoop marks a key milestone toward recursive self-improvement (RSI) in video generation models with limited human intervention. We release 100K videos spanning diverse, realistic indoor and outdoor scenes, along with generation tools and two evaluation datasets: PhysLoop-Gen and PhysLoop-Repair. We evaluate controllable generation and localized repair on these datasets, respectively, and assess physical behavior on the external Physics-IQ Verified benchmark.",
+      "published_date": "2026-11-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.16748",
+      "pdf_url": "https://arxiv.org/pdf/2611.16748",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.16748",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": {
+        "chinese_title": "PhysLoop：利用LLMs的物理意识提升视频生成模型的自我改进能力",
+        "chinese_summary": "PhysLoop通过物理约束提升视频生成模型的物理一致性，支持可控训练数据构建和推理时的视频修复。",
+        "pain_point": "现有的视频生成模型在物理动态和因果一致性方面表现不佳。",
+        "core_value": "通过物理约束提升视频生成模型的物理一致性，支持可控训练数据构建和推理时的视频修复。",
+        "technical_architecture": "PhysLoop通过引导和约束LLMs在整个视频生成、选择和修正过程中，将物理知识转化为物理一致的视频。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以减少对人工干预的依赖。",
+        "key_contributions": [
+          "提出了一种新的框架来支持视频生成模型的物理约束自我改进",
+          "提供了100K多样化的视频数据集，用于训练和评估",
+          "支持可控的训练数据构建和推理时的视频修复"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "视频修复"
+        ],
+        "technical_highlights": [
+          "利用LLMs的物理知识进行视频生成模型的自我改进",
+          "支持物理一致性的视频生成和修复"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.13004",
+      "source": "huggingface",
+      "title": "G-STAR: Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation",
+      "authors": [
+        "Xu Huang",
+        "Ye Huang",
+        "Xiaotong Li",
+        "Zhengrong Yue",
+        "Jialv Zou",
+        "Minhao Jing",
+        "Haodong Li",
+        "Wenhao Yan",
+        "Yaxin Luo",
+        "Duomin Wang",
+        "Daquan Zhou"
+      ],
+      "abstract": "Discrete autoregressive models offer a scalable framework for image generation. However, they face a fundamental trade-off: long token sequences preserve representation quality but slow generation, while aggressive spatial compression reduces representation capacity. Based on product quantization, we show that, under a fixed nominal information budget, group size should scale quadratically with the per-axis spatial compression factor. Building on this principle, we propose GSTAR, a spatial--group co-scaling framework that enables \\(32\\times\\) and even effective \\(64\\times\\) compression while preserving strong reconstruction, understanding, and generation performance. Since larger groups introduce intra-group dependencies that must be modeled efficiently, we analyze their impact on inference latency and generation quality and introduce a semi-autoregressive decoder that combines parallel feature computation with lightweight causal modeling. With these designs, our highly compressed models perform competitively with leading models across five representative text-to-image benchmarks (GenEval, DPG-Bench, PRISM, LongText-Bench, and Qwen-Image-Bench). At \\(1024\\times1024\\) resolution, our model delivers a \\(20\\times\\) speedup over prior discrete autoregressive models, generating each image in 2.5 seconds on a single NVIDIA H200. Together, these results show that highly compressed discrete representations can enable high-quality autoregressive generation at low latency.",
+      "published_date": "2026-11-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.13004",
+      "pdf_url": "https://arxiv.org/pdf/2611.13004",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.13004",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 41,
+      "hot_score": 410,
+      "structured_summary": {
+        "chinese_title": "G-STAR: 空间分组缩放的深度压缩自回归生成",
+        "chinese_summary": "GSTAR 提供了在保持重建、理解和生成性能的同时实现高达 64 倍压缩的方法。",
+        "pain_point": "离散自回归模型在保持表示质量的同时，难以兼顾生成速度和压缩比。",
+        "core_value": "通过空间-分组共缩放框架，GSTAR 实现了高效压缩与性能的平衡。",
+        "technical_architecture": "基于产品量化，GSTAR 提出了一种新的分组缩放框架。",
+        "quantitative_results": "在多个基准测试中，GSTAR 的压缩模型表现与领先模型相当。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究更高效的并行特征计算方法。",
+        "key_contributions": [
+          "提出了空间-分组共缩放框架",
+          "设计了半自回归解码器",
+          "实现了高压缩比与性能的平衡"
+        ],
+        "application_scenarios": [
+          "文本到图像生成",
+          "图像生成"
+        ],
+        "technical_highlights": [
+          "压缩比高达 64 倍",
+          "保持了强重建、理解和生成性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.15131",
+      "source": "huggingface",
+      "title": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+      "authors": [
+        "Hengyuan Cao",
+        "Biao Gong",
+        "Guoshan Lu",
+        "Qiyuan Zhang",
+        "Lin Liu",
+        "Yiding Tian",
+        "Yilei Jiang",
+        "Yuxin Ma",
+        "Chengzhang Wu",
+        "Kun Chen",
+        "Yiqian Xie",
+        "Ting Liu",
+        "Xin Zheng",
+        "Xijun Gu",
+        "Tianren Ma",
+        "Jiancheng Pan",
+        "Chi Zhang",
+        "Xuzhe Zheng",
+        "Siyi Li",
+        "Zhenzhong Lan"
+      ],
+      "abstract": "In this report, we introduce the Reciprocal World Model (RWM) and present Duo v1, a full-duplex world model that continuously perceives audiovisual inputs while responding to users in real time. The RWM treats intelligence and physical reality as equally fundamental to what constitutes a world. Existing world models largely focus on simulating the latter, leaving reasoning and decision-making as external controls rather than intrinsic parts of the world itself. In RWM, we identify two equally fundamental capabilities: Intent, which provides the cognition underlying world interactions, and Realization, which generates coherent audio-visual behavior. To realize this formulation, Duo v1 introduces three key technical designs: (1) Leveraging autoregressive modeling for continuous interaction reasoning and participation decisions, rather than restricting it to instruction understanding for diffusion models. (2) Constructing chunk-specific conditions and synchronize tokens across Intent and Realization on a unified timeline. Module-specific attention masks enforce causal dependencies both within and across chunks, preventing access to future inputs. (3) Mitigating distribution shift in both modules through dual rollout distillation, training on autoregressively generated Intent tokens and synthesized audiovisual histories from Realization. Both modules continuously perceive real-time audio, video, and text, enabling full-duplex interaction with spontaneous conversations and interruptions. Beyond conversation, users can share real objects, reshape virtual scenes, guide assistants, or play audiovisual games without mouse or keyboard controls. The release of Duo v1 makes our first step, with the next version coming soon. We look forward to broader exploration of this emerging field.",
+      "published_date": "2026-11-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.15131",
+      "pdf_url": "https://arxiv.org/pdf/2611.15131",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.15131",
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.SD"
+      ],
+      "upvotes": 37,
+      "hot_score": 370,
+      "structured_summary": {
+        "chinese_title": "Duo：一个双向世界模型用于全双工交互",
+        "chinese_summary": "Duo v1 实现了连续感知音频视频输入并实时响应用户，将意图和实现作为世界模型的两个核心能力。",
+        "pain_point": "现有世界模型主要模拟物理现实，忽视了内在的认知和行为生成。",
+        "core_value": "将认知和行为生成作为世界模型的核心能力，实现双向交互。",
+        "technical_architecture": "采用自回归建模，同步意图和实现模块，防止未来输入访问。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步验证模型在复杂场景下的表现。",
+        "key_contributions": [
+          "提出双向世界模型",
+          "实现连续感知与实时响应",
+          "同步意图和实现模块"
+        ],
+        "application_scenarios": [
+          "全双工通信",
+          "智能交互"
+        ],
+        "technical_highlights": [
+          "自回归建模",
+          "同步机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.15844",
+      "source": "huggingface",
+      "title": "Open Vision Banana: A Fully Open Recipe for Generative Visual Perception",
+      "authors": [
+        "Arpit Jadon",
+        "Valentinos Pariza",
+        "Jona Ruthardt",
+        "Ryousuke Yamada",
+        "A. Sophia Koepke",
+        "Andrei Bursuc",
+        "Yuki M. Asano"
+      ],
+      "abstract": "Recent work suggests that pretrained image generators encode real-world understanding beyond image synthesis. Vision Banana exploits this by framing vision tasks as conditional image editing. However, its data, weights, code, and implementation details are not public. We present Open Vision Banana (OVB), a fully open and reproducible recipe for converting pretrained generators into unified multi-task perception systems. Our analyses identify the design choices that matter most for generalization, including color encoding, prompt design, parameter adaptation, and task balancing. These choices interact, so individually helpful choices can hurt when combined with others. Starting from 4B and 9B parameter open-weight base models and using 2.1M-3.8M training pairs from public datasets, OVB surpasses Vision Banana's reported Cityscapes zero-shot performance (73.9 vs. 69.9 mIoU) and rivals state-of-the-art affine-invariant depth estimators. Its non-zero-shot variants come within five points of Vision Banana on referring and reasoning segmentation but remain further behind on instance segmentation. All models largely retain the base model's image-editing abilities. With legend ensembling, we introduce a test-time scaling method for generator-based perception. It segments an image under several class-color legends and fuses the results by majority vote, correcting unstable color-class bindings and improving mIoU by up to 8.7 points on Cityscapes and 15.0 points on COCO-Object without retraining. We release the dataset construction and processing pipeline, the training and evaluation code, as well as the final, intermediate, and ablation checkpoints. Project website: https://openvisionbanana.github.io",
+      "published_date": "2026-11-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.15844",
+      "pdf_url": "https://arxiv.org/pdf/2611.15844",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.15844",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "Open Vision Banana: 生成视觉感知的完全开放食谱",
+        "chinese_summary": "提出Open Vision Banana，实现预训练生成器向多任务感知系统的转换。",
+        "pain_point": "现有模型缺乏公开的数据、权重、代码和实现细节。",
+        "core_value": "提供可复现的开源解决方案，提升多任务视觉感知性能。",
+        "technical_architecture": "基于预训练生成器，通过条件图像编辑实现多任务感知。",
+        "quantitative_results": "在Cityscapes零样本测试中超越Vision Banana，接近最佳深度估计器。",
+        "competitors": "对比Vision Banana，部分场景接近或略逊于最佳模型。",
+        "limitations": "实例分割任务上仍落后于Vision Banana。",
+        "key_contributions": [
+          "开源数据、权重、代码和实现细节",
+          "提出关键设计选择以提升泛化能力",
+          "实现多任务感知系统"
+        ],
+        "application_scenarios": [
+          "图像编辑",
+          "语义分割",
+          "深度估计"
+        ],
+        "technical_highlights": [
+          "完全开放的食谱",
+          "显著提升零样本性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.17167",
+      "source": "huggingface",
+      "title": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents",
+      "authors": [
+        "Haochen Liu",
+        "Qianhao Zhu",
+        "Zixuan Wang",
+        "Dingming Li",
+        "Tongbo Chen",
+        "Peng Qiu",
+        "Yingqi Qu",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yongliang Shen"
+      ],
+      "abstract": "Decision models answer a question with a typed output, such as a choice among options with a probability for each, so one model can choose an agent's actions, evaluate actions already taken, or score every action to teach a policy with reinforcement learning. Prior work has studied them mainly as actors, judging their usefulness by how well they act. We ask whether a decision model that acts poorly can still teach well. We compare three decision models and three general LLMs as actors and judges on ALFWorld, and use JEV as a teacher on ALFWorld and WebShop. As actors, all six models are pulled away from a subgoal that must come first by an easier one. As judges that see the whole trajectory, the same models credit the steps toward that subgoal, and asking whether each action helped, rather than whether the task will succeed, separates useful from useless actions. As a teacher, JEV raises a Qwen2.5-1.5B policy over GRPO from 72.8% to 82.9% success on ALFWorld and from 56.8% to 71.4% on WebShop. These results suggest that a poor actor can still teach well, because judging an action after the episode ends reveals the consequences that acting must anticipate. Code is available at https://github.com/ZJU-REAL/decision-agents.",
+      "published_date": "2026-11-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.17167",
+      "pdf_url": "https://arxiv.org/pdf/2611.17167",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.17167",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 29,
+      "hot_score": 290,
+      "structured_summary": {
+        "chinese_title": "行动者、裁判或教师？理解长时序代理中的决策模型",
+        "chinese_summary": "研究发现，即使决策模型作为行动者表现不佳，也能有效作为教师。",
+        "pain_point": "现有研究主要关注决策模型作为行动者的表现，忽视了其作为教师的潜力。",
+        "core_value": "揭示了决策模型作为教师的有效性，即使其作为行动者表现不佳。",
+        "technical_architecture": "通过比较决策模型和通用语言模型在ALFWorld和WebShop上的表现。",
+        "quantitative_results": "JEV作为教师提高了Qwen2.5-1.5B政策的成功率。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定任务上进行了验证，未来需要在更多场景下进行测试。",
+        "key_contributions": [
+          "发现决策模型作为教师的有效性",
+          "提出评估决策模型作为教师的新方法"
+        ],
+        "application_scenarios": [
+          "强化学习中的策略教学",
+          "复杂任务的决策支持"
+        ],
+        "technical_highlights": [
+          "比较了决策模型和通用语言模型在不同任务中的表现",
+          "通过JEV作为教师提高了策略的成功率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.17060",
+      "source": "huggingface",
+      "title": "Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors",
+      "authors": [
+        "Hao Li",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Hui En Pang",
+        "Kairui Hu",
+        "Mingze Sun",
+        "Runmao Yao",
+        "Xinhao Ji",
+        "Xiyuan Zheng",
+        "Xuanli Chen",
+        "Yalun Dai",
+        "Yap Kim Hui",
+        "Dingwen Zhang",
+        "Yuanyuan Gao",
+        "Ziang Cao",
+        "Cheng Huang Yean",
+        "Jackson Peng",
+        "Rui Duan",
+        "Yaobo Liu",
+        "Zetong Wang",
+        "Ziwei Liu"
+      ],
+      "abstract": "Large foundation models such as GPT-6 Astra and Claude Fable 5.1 have recently been shown to control robots directly from visual observations. They nevertheless remain brittle on long-horizon, contact-rich tasks in real-world environments. Further progress depends on two complementary resources: demonstrations of human behavior that supervise how tasks are performed, and interactive environments in which policies can be rolled out, evaluated, and improved in closed loop. Language models have advanced along well-characterized scaling laws; the corresponding question for physical AI is how capability scales with environments and behaviors, which first requires identifying which data to scale and how to produce and reuse such data continuously. To address this question, we introduce Ropedia Xperience 2, comprising 1,589 released metric-scale 3D scans and a collection of 4,230 egocentric recordings of 74 tasks (131 hours). We further show that each capture can be repurposed for robot learning: scenes are converted into physically interactive simulation environments, human motion is retargeted to whole-body robot trajectories, and additional robot behaviors are obtained through virtual teleoperation and automated long-horizon trajectory generation. We propose this joint capture of environments and behaviors as a gold standard for physical AI data collection, laying a data foundation for establishing scaling laws over environments and behaviors.",
+      "published_date": "2026-11-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.17060",
+      "pdf_url": "https://arxiv.org/pdf/2611.17060",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.17060",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "Ropedia Xperience 2：物理AI环境和行为扩展的黄金标准",
+        "chinese_summary": "介绍了Ropedia Xperience 2，包含1,589个3D扫描和4,230个第一人称视角的74个任务记录，用于机器人学习。",
+        "pain_point": "现有语言模型在长时、接触丰富的实际任务中表现脆弱。",
+        "core_value": "提供大规模的物理AI环境和行为数据，促进机器人学习。",
+        "technical_architecture": "通过3D扫描和第一人称视角记录创建物理交互模拟环境。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步探索数据的持续生产和再利用。",
+        "key_contributions": [
+          "提供了大规模的物理AI环境和行为数据",
+          "展示了数据的多用途性",
+          "为机器人学习提供了新的资源"
+        ],
+        "application_scenarios": [
+          "机器人学习",
+          "物理AI环境模拟"
+        ],
+        "technical_highlights": [
+          "包含大量3D扫描和任务记录",
+          "数据可用于创建物理交互模拟环境"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.05984",
+      "source": "huggingface",
+      "title": "On the Design of Hyper-Connections: Simplification, Stability, and Scalability",
+      "authors": [
+        "Xiangdong Zhang",
+        "Xiaohan Qin",
+        "Sunan Zou",
+        "Tuo Dai",
+        "Bizhao Shi",
+        "Zhuo Xia",
+        "Yebin Yang",
+        "Yizhou Chen",
+        "Yuliang Liu",
+        "Yu Cheng",
+        "Junchi Yan"
+      ],
+      "abstract": "Hyper-Connections (HC) architectures are increasingly adopted in frontier language models, yet their components remain insufficiently understood and introduce non-negligible training overhead. In this work, we systematically study the HC architecture to understand its components and identify simpler, more efficient designs. We find that learned read/write gating without mixing and unconstrained mixing with fixed gates form two effective interaction groups: either alone achieves performance comparable to mHC. We also identify repeated access to the expanded residual state as a major source of training overhead, even without mixing. These findings lead to SimpleHC, which simplifies the architecture by removing residual mixing and simplifies execution through shared memory access, using the resulting additive structure and shared gate inputs. Layer-specific gates share a group-entry state, enabling batched reads and deferred writes; scalar corrections exactly preserve preceding sublayer output contributions. Our analyses support both the retained residual structure and the design of shared memory access. SimpleHC incurs only 2.4% extra end-to-end training time over a vanilla residual baseline at the largest tested scale. It maintains performance comparable to mHC when scaling from 15B to 30B MoE models, exhibits smoother gradient dynamics during standard training, and remains stable under stress. We hope SimpleHC will encourage a broader pursuit of simplicity in foundation model design, making performance gains more accessible and practical at scale.",
+      "published_date": "2026-11-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.05984",
+      "pdf_url": "https://arxiv.org/pdf/2611.05984",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.05984",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 26,
+      "hot_score": 260,
+      "structured_summary": {
+        "chinese_title": "超连接设计：简化、稳定性和可扩展性",
+        "chinese_summary": "简化超连接架构，减少训练开销，提高效率。",
+        "pain_point": "超连接架构的组件不充分理解，引入显著的训练开销。",
+        "core_value": "提出SimpleHC，简化架构并减少训练时间。",
+        "technical_architecture": "通过移除残差混合和共享内存访问简化架构。",
+        "quantitative_results": "SimpleHC比vanilla残差架构仅增加2.4%的训练时间。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能需要进一步优化。",
+        "key_contributions": [
+          "简化超连接架构",
+          "减少训练开销",
+          "提出SimpleHC"
+        ],
+        "application_scenarios": [
+          "语言模型设计",
+          "大规模模型训练"
+        ],
+        "technical_highlights": [
+          "移除残差混合",
+          "共享内存访问"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.17331",
+      "source": "huggingface",
+      "title": "TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models",
+      "authors": [
+        "Chin-Yang Lin",
+        "Ryo Hachiuma",
+        "Jaesung Choe",
+        "Min-Hung Chen",
+        "Yu-Chiang Frank Wang",
+        "Yen-Yu Lin",
+        "Wei-Chen Chiu",
+        "Yu-Lun Liu",
+        "Cheng Sun"
+      ],
+      "abstract": "Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while Test-Time Training (TTT) layers save computation but sacrifice quality. We propose Test-Time Baking (TTB), a strategy that learns to bake global scene information from cross-view attention into a lightweight MLP, enabling fast and high-fidelity novel-view decoding. The first key is to repurpose the fast-weight MLP of TTT to learn the cross-view attention mapping explicitly from its input-output pairs, rather than replacing attention entirely, achieving the same rendering efficiency as TTT while delivering substantially higher quality. The second key addresses a modality misalignment between context prefilling and novel-view rendering: we disentangle context tokens into camera-only context rendering tokens to serve as TTB input, and context ground-truth tokens with image content to serve as the TTB mapping target, ensuring the baked MLPs are relieved of the modality generalization challenge between context and novel-view processing. Our method achieves up to **23x** rendering speedup with quality on par with the state-of-the-art across several benchmarks. Project page: https://test-time-baking.github.io",
+      "published_date": "2026-11-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.17331",
+      "pdf_url": "https://arxiv.org/pdf/2611.17331",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.17331",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "TTB: 测试时烘焙技术用于高效渲染解码器主导的视图合成模型",
+        "chinese_summary": "TTB 提高了视图合成模型的渲染速度和质量。",
+        "pain_point": "现有视图合成模型在保持高质量的同时无法实现高效渲染。",
+        "core_value": "TTB 通过烘焙全局场景信息到轻量级 MLP 中，实现了高效且高质量的视图解码。",
+        "technical_architecture": "TTB 重新利用 TTT 的快速权重 MLP 来学习跨视图注意力映射。",
+        "quantitative_results": "TTB 实现了最高达 23 倍的渲染速度提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多应用场景。",
+        "key_contributions": [
+          "重新利用 TTT 的快速权重 MLP 学习跨视图注意力映射",
+          "分离上下文令牌以解决模态对齐问题"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "烘焙全局场景信息到轻量级 MLP",
+          "分离上下文令牌以解决模态对齐问题"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

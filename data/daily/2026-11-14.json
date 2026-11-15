@@ -1,0 +1,506 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-15T02:26:37.540987+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2611.17336v1",
+      "source": "arxiv",
+      "title": "Back to Pixels: Lifting Latent Video Diffusion into Pixel Space",
+      "authors": [
+        "Yanke Song",
+        "Shuo Chen",
+        "Chris Rockwell",
+        "Guande He",
+        "Nan Liu",
+        "Desai Xie",
+        "Tianpei Gu",
+        "Yong-Hyun Park",
+        "Aryan V S",
+        "Dennis Yuren Menn",
+        "Ming-Hsuan Yang",
+        "Xun Huang"
+      ],
+      "abstract": "Frontier video generation models work in a VAE latent space that compresses video in both space and time. This compression made training tractable, but now limits high-resolution, controllable, and interactive generation -- doubling resolution quadruples token count, conditions apply to groups of frames rather than individual ones, and each response must wait for the rest of its multi-frame block. We present PixVid, a simple yet effective method that lifts a pretrained latent video model to directly generate every frame in pixel space. PixVid keeps the diffusion transformer and replaces the VAE decoder with a convolutional head that renders its outputs into pixels. We find that predicting clean video rather than velocity, together with a larger noise shift, is key to quality. Finetuned from Wan2.1-14B, PixVid is competitive with the latent baseline within $\\sim 1.3$M training clips. Working framewise in pixels, it generates at $2\\times$ higher resolution with the same per-frame token count, keeps depth-conditioned video editing aligned under fast motion, and responds to each action at the next frame. Project page: https://chenshuo20.github.io/PixVid/",
+      "published_date": "2026-11-12T18:59:55Z",
+      "url": "https://arxiv.org/abs/2611.17336v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17336v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "回到像素：将潜在视频扩散提升至像素空间",
+        "chinese_summary": "PixVid 直接在像素空间生成每一帧，提升分辨率和响应速度。",
+        "pain_point": "现有模型在潜在空间生成视频，限制了高分辨率和交互性。",
+        "core_value": "PixVid 提升分辨率并保持与多帧块的对齐，实现即时响应。",
+        "technical_architecture": "使用扩散变压器并替换 VAE 解码器为卷积头。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更复杂的条件控制。",
+        "key_contributions": [
+          "直接在像素空间生成每一帧",
+          "保持与多帧块的对齐",
+          "提升分辨率并保持即时响应"
+        ],
+        "application_scenarios": [
+          "高分辨率视频生成",
+          "交互式视频编辑"
+        ],
+        "technical_highlights": [
+          "扩散变压器与卷积头结合",
+          "预测干净视频而非速度"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17334v1",
+      "source": "arxiv",
+      "title": "Unbundling Multimodal Vision Encoding",
+      "authors": [
+        "Ellis Brown",
+        "Chris Hoang",
+        "Shengyi Qian",
+        "Shang-Wen Li",
+        "Mike Lewis",
+        "Marjan Ghazvininejad",
+        "Luke Zettlemoyer",
+        "Lucas Beyer",
+        "Mengye Ren",
+        "Jakob Verbeek",
+        "Saining Xie",
+        "Hu Xu"
+      ],
+      "abstract": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone). Because published models also differ in data, architecture, and compute, comparing them cannot isolate the effect of each choice. We disentangle these choices via a controlled framework where we pretrain all models from scratch on common data and compare them on visual question answering and language benchmarks at matched lifetime compute. We find that the visual prior is not necessary; an encoder trained jointly from scratch is on par with a pretrained one, without a separate training stage. What matters instead is dedicated vision capacity: an encoder-free model trails on visual understanding even when its backbone is enlarged by the encoder's parameter count. Yet that capacity need not precede multimodal fusion, as vision-only modules added in-fusion to early backbone layers perform comparably to a pre-fusion encoder and can lower time to first token. These results also hold across backbone sizes, when encoder pretraining is treated as free, and when starting from a pretrained language model. Overall, our findings favor dedicated vision capacity trained jointly with the backbone and placed early within it.",
+      "published_date": "2026-11-12T18:59:54Z",
+      "url": "https://arxiv.org/abs/2611.17334v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17334v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "解构多模态视觉编码",
+        "chinese_summary": "研究发现视觉先验并非必要，关键在于视觉专用容量，且该容量不必在多模态融合前存在。",
+        "pain_point": "现有模型在视觉理解上存在瓶颈，且难以区分不同设计选择的影响。",
+        "core_value": "通过控制实验，明确视觉专用容量的重要性，挑战传统视觉编码设计。",
+        "technical_architecture": "从零开始预训练所有模型，对比视觉先验、专用视觉容量和融合位置的影响。",
+        "quantitative_results": "无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "实验仅在特定数据集和计算资源下进行。",
+        "key_contributions": [
+          "发现视觉先验并非必要",
+          "强调视觉专用容量的重要性",
+          "挑战传统视觉编码设计"
+        ],
+        "application_scenarios": [
+          "多模态视觉理解",
+          "视觉问答"
+        ],
+        "technical_highlights": [
+          "从零开始预训练模型",
+          "控制实验设计"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17331v1",
+      "source": "arxiv",
+      "title": "TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models",
+      "authors": [
+        "Chin-Yang Lin",
+        "Ryo Hachiuma",
+        "Jaesung Choe",
+        "Min-Hung Chen",
+        "Yu-Chiang Frank Wang",
+        "Yen-Yu Lin",
+        "Wei-Chen Chiu",
+        "Yu-Lun Liu",
+        "Cheng Sun"
+      ],
+      "abstract": "Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while Test-Time Training (TTT) layers save computation but sacrifice quality. We propose Test-Time Baking (TTB), a strategy that learns to bake global scene information from cross-view attention into a lightweight MLP, enabling fast and high-fidelity novel-view decoding. The first key is to repurpose the fast-weight MLP of TTT to learn the cross-view attention mapping explicitly from its input-output pairs, rather than replacing attention entirely, achieving the same rendering efficiency as TTT while delivering substantially higher quality. The second key addresses a modality misalignment between context prefilling and novel-view rendering: we disentangle context tokens into camera-only context rendering tokens to serve as TTB input, and context ground-truth tokens with image content to serve as the TTB mapping target, ensuring the baked MLPs are relieved of the modality generalization challenge between context and novel-view processing. Our method achieves up to **23x** rendering speedup with quality on par with the state-of-the-art across several benchmarks. Project page: https://test-time-baking.github.io",
+      "published_date": "2026-11-12T18:59:52Z",
+      "url": "https://arxiv.org/abs/2611.17331v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17331v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "TTB: 测试时烘焙技术用于高效渲染解码器主导的视图合成模型",
+        "chinese_summary": "TTB 方法通过学习烘焙全局场景信息到轻量级 MLP 中，实现快速且高保真度的新视角解码。",
+        "pain_point": "现有视图合成模型在保持高质量的同时，无法高效渲染新视角。",
+        "core_value": "TTB 方法在保持高效渲染的同时，显著提高了视图合成的质量。",
+        "technical_architecture": "利用 TTT 层的快速权重 MLP 学习交叉视图注意力映射。",
+        "quantitative_results": "TTB 方法实现了最高达 23 倍的渲染速度提升。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多复杂场景的应用。",
+        "key_contributions": [
+          "利用 TTT 层的快速权重 MLP 学习交叉视图注意力映射",
+          "分离上下文令牌以解决模态不匹配问题"
+        ],
+        "application_scenarios": [
+          "虚拟现实",
+          "增强现实"
+        ],
+        "technical_highlights": [
+          "轻量级 MLP 的高效烘焙",
+          "解决模态不匹配问题"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17332v1",
+      "source": "arxiv",
+      "title": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+      "authors": [
+        "Jie Wang",
+        "Tong Zhu",
+        "JiaHao Kuang",
+        "Zhe Xu",
+        "Yunkai Chai",
+        "Dehong Zheng",
+        "Yu Cheng",
+        "Tao Ji",
+        "ZhouHan Lin",
+        "Qi Zhang",
+        "Bowen Zhou"
+      ],
+      "abstract": "Model architecture shapes the scaling behavior, training efficiency, and inference cost of LLMs, making it a central focus of both industry and academia. In industry, teams such as those behind DeepSeek, Qwen, and Kimi routinely introduce architectural innovations, yet public reports rarely document which ideas succeeded, which were abandoned, and why. In academia, limited compute and inconsistent baselines often restrict evaluations to small-scale, single-point comparisons, making it difficult to establish whether improvements hold at larger scales or translate into broader impact. ArchSpace addresses both gaps as a public platform for Recording, Reviewing, and Referencing Architecture Researc}: each proposal is recorded with its experiments and reasoning, reviewed by the community, and referenced by later work. To evaluate ideas before costly large-scale training, ArchSpace leverages scaling laws to predict model loss at larger scales from smaller experiments, a practice widely adopted in industry. We provide initial references that make the platform usable: Qwen3.5 and OLMo3 baselines, fitted scaling laws, and a reusable training recipe. Ideas validated through this review can in turn become new baselines, and ArchSpace thereby aims to broaden the range of ideas that shape the next generation of models.",
+      "published_date": "2026-11-12T18:59:52Z",
+      "url": "https://arxiv.org/abs/2611.17332v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17332v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "ArchSpace：记录、审查和引用LLM架构研究",
+        "chinese_summary": "ArchSpace 提供了一个平台，用于记录、审查和引用LLM架构研究，促进大规模训练前的想法验证。",
+        "pain_point": "现有平台缺乏记录和审查LLM架构研究的机制，导致创新难以系统化。",
+        "core_value": "ArchSpace 通过记录、审查和引用机制，促进LLM架构研究的系统化和透明化。",
+        "technical_architecture": "利用缩放定律预测大规模模型损失，提供可复用的训练食谱。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多社区参与和更多样化的架构研究。",
+        "key_contributions": [
+          "提供了一个系统化的架构研究平台",
+          "利用缩放定律预测模型性能"
+        ],
+        "application_scenarios": [
+          "LLM架构研究",
+          "模型性能预测"
+        ],
+        "technical_highlights": [
+          "社区审查机制",
+          "可复用的训练食谱"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17330v1",
+      "source": "arxiv",
+      "title": "ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation",
+      "authors": [
+        "Guangyuan Sui",
+        "Yunzhong Hou",
+        "Chi Harold Liu"
+      ],
+      "abstract": "Vision language navigation (VLN) is very challenging for Unmanned Aerial Vehicles (UAVs) since small errors in 3D motion prediction can lead to navigation errors and collisions. Unable to fathom execution outcomes in 3D environments, existing methods often struggle to predict accurate navigation waypoints from language instructions. To solve this, we introduce the Prototypical Visual Imagination framework, shortened as ProtoVis-Nav, which forces the model to imagine an outcome-associated local visual representation for the intended next UAV movement. Specifically, we predict feature prototypes and use their linear combination to estimate the visual feature of the target region. In this manner, the VLN model first imagines the local visual representation of the next intended location, and then uses predicted prototypes as context for generating the final action, promoting alignment between visual context and waypoint outputs. Extensive experiments demonstrate the effectiveness of the ProtoVis-Nav framework and show substantial improvements over existing baselines.",
+      "published_date": "2026-11-12T18:59:49Z",
+      "url": "https://arxiv.org/abs/2611.17330v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17330v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "ProtoVis-Nav：用于视觉-空间对齐无人机导航的原型视觉想象",
+        "chinese_summary": "通过预测特征原型并使用其线性组合估计目标区域的视觉特征，ProtoVis-Nav 提高了无人机从语言指令预测准确导航点的能力。",
+        "pain_point": "现有方法难以准确预测无人机从语言指令到的导航点，容易导致导航错误和碰撞。",
+        "core_value": "通过想象局部视觉表示并将其作为上下文生成最终动作，促进视觉上下文与导航点输出的对齐。",
+        "technical_architecture": "预测特征原型并使用其线性组合估计目标区域的视觉特征。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更复杂的真实环境中进行测试。",
+        "key_contributions": [
+          "引入了原型视觉想象框架",
+          "提高了无人机从语言指令预测导航点的准确性"
+        ],
+        "application_scenarios": [
+          "无人机室内导航",
+          "无人机室外导航"
+        ],
+        "technical_highlights": [
+          "预测特征原型",
+          "局部视觉表示的想象"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17329v1",
+      "source": "arxiv",
+      "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+      "authors": [
+        "Zeynep Yıldız",
+        "Satchit Chatterji",
+        "Ercan Atam",
+        "Erman Acar"
+      ],
+      "abstract": "Institutional portfolios operate under investment policy statements that specify asset allocation constraints, often conditioned on market regime information. Deep reinforcement learning has been shown to optimize financial performance but typically does not enforce rule compliance, making it unsuitable for real-world deployment. Existing neurosymbolic methods such as Probabilistic Logic Policy Gradient (PLPG) offer constraint-satisfying reinforcement learning (RL) via differentiable symbolic supervision but assume a finite, discrete action space. We present a PLPG-inspired continuous allocation method that estimates the probability that the policy's own executed action satisfies the investment mandate, using reparameterized Monte Carlo sampling, and adds it to the training objective. No post-hoc enforcement mechanism intercepts actions at inference time and compliance is learned by the agent. Audited directly on deterministic mean actions with no correction, the policy reduces violations of a six-rule regime-conditional mandate from 96-98% for unconstrained RL and 33.4% for a reward-penalty baseline to 4.8%, showing that a continuous-action neurosymbolic policy can substantially internalize a symbolic mandate.",
+      "published_date": "2026-11-12T18:59:37Z",
+      "url": "https://arxiv.org/abs/2611.17329v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17329v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "内化投资指令：基于神经符号强化学习的组合分配方法",
+        "chinese_summary": "提出了一种基于PLPG的连续分配方法，通过概率蒙特卡洛采样估计策略执行动作满足投资指令的概率，显著降低了合规违规率。",
+        "pain_point": "现有强化学习方法无法保证投资政策的合规性。",
+        "core_value": "通过神经符号强化学习方法，实现投资政策的内化，提高合规性。",
+        "technical_architecture": "采用PLPG启发的连续动作空间方法，通过概率蒙特卡洛采样进行训练。",
+        "quantitative_results": "将合规违规率从96-98%降低至4.8%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在确定性均值动作上进行审计，未涉及更复杂场景。",
+        "key_contributions": [
+          "提出了一种新的连续动作空间的神经符号强化学习方法",
+          "通过概率蒙特卡洛采样估计策略执行动作的合规性",
+          "显著提高了投资政策的合规性"
+        ],
+        "application_scenarios": [
+          "适用于需要严格遵守投资政策的机构投资组合",
+          "适用于金融市场中的动态投资策略"
+        ],
+        "technical_highlights": [
+          "结合了神经网络和符号逻辑的优势",
+          "通过概率蒙特卡洛采样实现连续动作空间的优化"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17324v1",
+      "source": "arxiv",
+      "title": "K2V: Generative Keyframing For Physically Plausible Video Generation",
+      "authors": [
+        "Felix O'Mahony",
+        "Daniel Olmeda Reino",
+        "Roberto Cipolla",
+        "Ayush Tewari"
+      ],
+      "abstract": "Video diffusion models are able to generate samples with high-quality appearance and textural qualities. However, content produced by these methods is known to exhibit significant physical errors. This is because, in a classical video generation setting, all physical reasoning must take place simultaneously and exclusively within the diffusion process.We propose to resolve these issues by redistributing the task of physical reasoning onto a language model-backed keyframe generation module, which allows for explicit reasoning in language, and fine-grained control over the appearance of the video at important moments in the video. We then condition a video generation model with these keyframes, reducing the role of the diffusion model to the simpler task of interpolating between physically-correct intermediate states, rather than inferring an entire sequence with diffusion. Results demonstrate that our approach significantly outperforms existing approaches, achieving state-of-the-art performance on the Physics-IQ Verified benchmark and PhyGenBench.",
+      "published_date": "2026-11-12T18:59:09Z",
+      "url": "https://arxiv.org/abs/2611.17324v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17324v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "K2V: 生成关键帧以生成物理合理的视频",
+        "chinese_summary": "通过将物理推理任务重新分配给语言模型支持的关键帧生成模块，显著提高视频生成质量。",
+        "pain_point": "现有视频生成方法存在显著的物理错误。",
+        "core_value": "通过关键帧生成模块实现显式物理推理和细粒度控制，简化扩散模型任务。",
+        "technical_architecture": "利用语言模型生成关键帧，扩散模型仅负责插值。",
+        "quantitative_results": "在Physics-IQ Verified和PhyGenBench上达到最新性能。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "引入关键帧生成模块",
+          "简化扩散模型任务"
+        ],
+        "application_scenarios": [
+          "动画生成",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "物理推理与文本生成结合",
+          "细粒度控制视频生成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17323v1",
+      "source": "arxiv",
+      "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+      "authors": [
+        "Ethan Lin",
+        "Akanksha Sarkar",
+        "Ziang Liu",
+        "Kristin Branson",
+        "Jennifer J. Sun"
+      ],
+      "abstract": "Applying machine learning systems to new domains introduces bottlenecks in both labeled data acquisition and manual pipeline engineering. While recent MLE agents show promise in automating pipeline design, they have been studied almost exclusively in fully supervised settings, leaving them untested in realistic regimes where labeled data is scarce but unlabeled data is abundant. In this work, we introduce Agentic Semi-Supervised Learning (AgentSSL), framing SSL as a program search problem and studying how agents navigate this space under limited supervision. We find that even under weak feedback and matched compute, agents can synthesize code that combines and adapts established SSL techniques, exceeding the strongest human-engineered baselines in 8 of 12 settings by up to +21.8%. However, our results identify program selection as a critical bottleneck in AgentSSL, where performance drops by as much as 47% when selecting based on the agent's feedback metric. To systematically study this bottleneck, we introduce ProgramSelectBench, a large-scale benchmark with a combined total of 16,977 agent-generated and human-engineered SSL programs, and evaluate both unsupervised and active program selection methods. We further evaluate AgentSSL on real-world ecology detection tasks, highlighting the opportunities and challenges of transferring agent-discovered strategies beyond controlled benchmarks.",
+      "published_date": "2026-11-12T18:59:06Z",
+      "url": "https://arxiv.org/abs/2611.17323v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17323v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "AgentSSL：MLE代理能否利用未标记数据？",
+        "chinese_summary": "AgentSSL 在有限监督下合成代码，超越了 8 个场景中的最强基线，提升高达 21.8%。",
+        "pain_point": "在缺乏标记数据但丰富未标记数据的现实场景中，MLE代理未被充分测试。",
+        "core_value": "AgentSSL 通过程序搜索解决 SSL 问题，显著提升性能。",
+        "technical_architecture": "将 SSL 问题转化为程序搜索，使用代理合成代码。",
+        "quantitative_results": "在 8 个场景中超越最强基线，提升高达 21.8%。",
+        "competitors": "暂无对比信息",
+        "limitations": "程序选择作为瓶颈，性能下降高达 47%。",
+        "key_contributions": [
+          "提出 AgentSSL 框架",
+          "将 SSL 问题转化为程序搜索",
+          "显著提升 SSL 性能"
+        ],
+        "application_scenarios": [
+          "标记数据稀缺但未标记数据丰富的场景",
+          "自动化机器学习管道设计"
+        ],
+        "technical_highlights": [
+          "代理合成代码结合并适应现有 SSL 技术",
+          "引入 ProgramSelectBench 大规模基准"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17321v1",
+      "source": "arxiv",
+      "title": "BrickFlow: Connectivity-Guided Brick Reconstruction",
+      "authors": [
+        "Peter Kulits",
+        "Cordelia Schmid"
+      ],
+      "abstract": "Given a set of LEGO parts and an image of an assembled object, our task is to infer the pose of each part to assemble the object. In contrast with traditional 3D reconstruction, doing so requires satisfying discrete physical constraints, which provide structure but render the problem combinatorial and highly sensitive to small pose errors. To learn a prior over how parts fit together, we train a set-conditioned SE(3) flow model on procedurally generated assemblies. We then finetune this model to inject image conditioning, using 1% as much data. However, while the learned flow captures global structure, it does not enforce connectivity. To address this, we introduce an analytic connectivity-field guidance to pull predictions toward connected assemblies at test time. Through this, we demonstrate improved build quality with model size, pretraining, and guidance. We make our models and data available for research purposes at https://kulits.github.io/BrickFlow/",
+      "published_date": "2026-11-12T18:58:51Z",
+      "url": "https://arxiv.org/abs/2611.17321v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17321v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "BrickFlow：基于连接性指导的砖块重建",
+        "chinese_summary": "通过连接性指导的砖块重建模型，提高组装质量。",
+        "pain_point": "传统3D重建方法难以满足离散物理约束，导致问题具有组合性和对小姿态误差敏感。",
+        "core_value": "通过连接性指导，解决重建模型中连接性不足的问题，提高组装质量。",
+        "technical_architecture": "训练SE(3)流模型并引入连接性场指导。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多数据来进一步提高模型性能。",
+        "key_contributions": [
+          "提出基于连接性场的指导方法",
+          "使用SE(3)流模型进行砖块姿态预测"
+        ],
+        "application_scenarios": [
+          "LEGO玩具的自动化组装",
+          "3D打印物体的重建"
+        ],
+        "technical_highlights": [
+          "结合生成数据和图像条件进行训练",
+          "引入连接性场指导以确保组装连接性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.17320v1",
+      "source": "arxiv",
+      "title": "Learning When Diffusion Language Models Should Regenerate",
+      "authors": [
+        "Minhae Oh",
+        "Jeonghye Kim",
+        "Jinwoo Koo",
+        "Yeongoon Kim",
+        "Jimin Seo",
+        "Minsik Seol",
+        "Jungwoo Lee"
+      ],
+      "abstract": "Remasking allows diffusion language models to revisit generated text, but effective correction requires knowing when and what to revise. Our diagnosis on Sudoku reveals two gaps. Hidden states contain error information that token confidence does not reliably expose, and remasking an isolated error usually reproduces it when the surrounding context remains fixed. These findings motivate DiVR , a verifier that predicts whether a partially generated sequence will reach a correct answer. Trained on the final correctness of the model's own trajectories, DiVR decides when to regenerate a block and which alternative to retain, while the generator itself stays unchanged. On five reasoning benchmarks with LLaDA-8B-Base, DiVR raises the average accuracy of the fine-tuned generator from 35.3\\% to 43.4\\% at $1.9$-$3.5\\times$ the cost of greedy decoding, above search baselines that use $3.8$-$7.4\\times$. It also complements post-training such as supervised fine-tuning and reinforcement learning, and generalizes to other generators, including Dream.",
+      "published_date": "2026-11-12T18:58:50Z",
+      "url": "https://arxiv.org/abs/2611.17320v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17320v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "学习何时再生扩散语言模型",
+        "chinese_summary": "DiVR 提高了生成序列的准确性，同时降低了成本。",
+        "pain_point": "扩散语言模型在生成文本后难以有效纠正错误。",
+        "core_value": "DiVR 能预测生成序列是否能到达正确答案，从而提高准确性。",
+        "technical_architecture": "DiVR 是一个验证器，预测生成序列的正确性并决定何时再生。",
+        "quantitative_results": "DiVR 将生成器的平均准确性从 35.3% 提高到 43.4%，成本仅为贪婪解码的 1.9-3.5 倍。",
+        "competitors": "使用搜索基线的方法，成本更高，准确率较低。",
+        "limitations": "仅在特定的推理基准上进行了测试。",
+        "key_contributions": [
+          "提出了 DiVR 验证器来预测生成序列的正确性。",
+          "提高了生成器的准确性，同时降低了成本。",
+          "适用于其他生成器，包括 Dream。"
+        ],
+        "application_scenarios": [
+          "扩散语言模型的错误纠正",
+          "提高生成文本的准确性"
+        ],
+        "technical_highlights": [
+          "利用隐藏状态预测错误信息",
+          "动态决定再生和保留的块"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

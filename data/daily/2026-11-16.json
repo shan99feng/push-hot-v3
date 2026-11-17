@@ -1,0 +1,548 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-17T04:59:03.530304+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.18359",
+      "source": "huggingface",
+      "title": "Envisioning Agentic Robotics: A New Era of Robotic Systems",
+      "authors": [
+        "Grid Robotics",
+        "Qingfeng Lan",
+        "Duo Li",
+        "Siyao Li",
+        "Yiheng Lyu",
+        "Shijian Lu",
+        "Zhenghao Qi",
+        "Shizun Wang",
+        "Xinchao Wang",
+        "Ming Yang",
+        "Zhiqin Yang",
+        "Zuhao Yang",
+        "Tao Yu"
+      ],
+      "abstract": "The release of GPT-6 Astra marks the emergence of a new paradigm in robotics: agentic robotics. Within weeks, frontier models with agentic harnesses matched or exceeded task-specific policies on many embodied benchmarks. Instead of training a dedicated policy for each family of tasks, an agentic robotic system applies a foundation model to open-world embodied tasks. It operates in a closed loop: observing the environment, interpreting user intent, reasoning about the task, invoking skills and tools, verifying outcomes, and adapting its strategy. Despite these advances, the community has yet to converge on a shared definition, a reliable evaluation framework, or a research roadmap. We argue that Embodied System 2, realized by a foundation model together with an embodied harness, forms the decision-making core of agentic robotics. Its central challenge is to translate general-purpose reasoning into effective and verifiable actions under physical constraints such as limited reaction time, mechanical limits, unpredictable environment changes, and irreversible consequences. Motivated by this perspective, we propose an evaluation framework that measures both model capabilities and closed-loop system performance. Furthermore, we identify the principles that carry over from digital to physical agents and the challenges that must be addressed to achieve reliable physical autonomy. On top of the Embodied System 2 and the evaluation framework, we envision a research roadmap toward sustained autonomy: the ability to perform work safely and reliably with progressively broader responsibility, from executing individual primitives to fulfilling standing roles.",
+      "published_date": "2026-11-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.18359",
+      "pdf_url": "https://arxiv.org/pdf/2611.18359",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.18359",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 116,
+      "hot_score": 1160,
+      "structured_summary": {
+        "chinese_title": "展望自主机器人：机器人系统的新时代",
+        "chinese_summary": "自主机器人通过基础模型和环境适应性框架实现了开放世界任务的有效执行。",
+        "pain_point": "缺乏统一定义、评估框架和研究路线图。",
+        "core_value": "提出了自主机器人系统的核心挑战和评估框架，推动了该领域的进步。",
+        "technical_architecture": "基于基础模型和环境适应性框架的自主机器人系统。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究以适应物理约束下的有效行动。",
+        "key_contributions": [
+          "提出了自主机器人系统的定义",
+          "设计了评估框架",
+          "指出了核心挑战"
+        ],
+        "application_scenarios": [
+          "开放世界任务执行",
+          "自主机器人系统决策"
+        ],
+        "technical_highlights": [
+          "基础模型的应用",
+          "环境适应性框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.18397",
+      "source": "huggingface",
+      "title": "Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent",
+      "authors": [
+        "Run Luo",
+        "Kuan Zhang",
+        "Qi Deng",
+        "Yukun Chen",
+        "Zhihao Yang",
+        "Yufei Zhang",
+        "Renrong Hu",
+        "Yi Zhang",
+        "Guiyu Ma",
+        "Tianyu Fan",
+        "Longze Chen",
+        "Hao Sun",
+        "Jiaming Li",
+        "Jiaming Yang",
+        "Xiaohao Liu",
+        "Tao Tan",
+        "Minzheng Wang",
+        "Hangtian Jia",
+        "Shuai Yuan",
+        "Lvdi Wang",
+        "Xiao Liu",
+        "Chao Ma",
+        "Yuting Zou",
+        "Yinhe Zheng",
+        "Xiaobo Xia",
+        "Dawei Jiang",
+        "Shaoqing Ren"
+      ],
+      "abstract": "We introduce Gamer, a generalist agent framework built for long-horizon tasks in complex interactive environments. Its end-to-end architecture combines perception, memory management, and multi-step reasoning. A shared training and deployment pipeline supports interaction with both conventional 2D graphical interfaces and complex 3D simulated worlds. We first continue pre-training on a dataset constructed from tens of thousands of hours of device-level keyboard and mouse interaction. These trajectories span simulated games and embodied environments, allowing the model to learn environmental dynamics across both physical and virtual domains. Sparse-thinking instruction tuning then substantially reduces redundant computation while preserving the reasoning needed for complex decisions. We train the policy for long-horizon interaction with a stable multi-turn reinforcement learning method that addresses finite context windows, accumulated rollout errors, and sparse rewards. For real-time interaction, a cloud-edge inference engine serves numerous simulated game environments concurrently, supports unbounded-context execution, and keeps online inference latency low. Across multiple challenging 3D open-world games, Gamer demonstrates solid generalization and operational efficiency comparable to skilled players. It also achieves competitive results on a range of conventional 2D game benchmarks. These results suggest that even repetitive keyboard and mouse trajectories can support substantial gains from scaling data and learning algorithms. Training on these trajectories helps Gamer learn complex skills more steadily in environments with both physical and digital properties. This approach offers a path toward generalist agents that can interact across digital and physical worlds.",
+      "published_date": "2026-11-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.18397",
+      "pdf_url": "https://arxiv.org/pdf/2611.18397",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.18397",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 94,
+      "hot_score": 940,
+      "structured_summary": {
+        "chinese_title": "Gamer：面向长时程实时游戏代理的通用视觉-语言-行动基础模型",
+        "chinese_summary": "Gamer 是一种用于复杂交互环境中的长时程任务的通用代理框架。",
+        "pain_point": "现有模型在处理复杂交互环境中的长时程任务时存在计算冗余和推理延迟问题。",
+        "core_value": "通过结合感知、记忆管理和多步推理，Gamer 提高了模型的效率和实时性。",
+        "technical_architecture": "采用端到端架构，支持与 2D 图形界面和 3D 模拟世界交互。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步优化模型在不同环境下的适应性。",
+        "key_contributions": [
+          "构建了大规模键盘和鼠标交互数据集",
+          "引入了稀疏思考指令调优方法",
+          "开发了稳定多轮强化学习训练方法"
+        ],
+        "application_scenarios": [
+          "复杂交互环境中的长时程任务",
+          "实时游戏代理"
+        ],
+        "technical_highlights": [
+          "支持多种交互界面",
+          "稀疏思考指令调优减少冗余计算"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.15789",
+      "source": "huggingface",
+      "title": "VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender",
+      "authors": [
+        "Yuzhe Chen",
+        "Muxi Diao",
+        "Lele Yang",
+        "Wenbin Xu",
+        "Xuyang Liu",
+        "Qile Su",
+        "Changyi Liu",
+        "Jiankang Chen",
+        "Kaiyu Jiang",
+        "Haoyu Zhang",
+        "Hongyi Fu",
+        "Jianxiong Wang",
+        "Tianke Zhang",
+        "Haonan Fan",
+        "Yingxin Li",
+        "Bingyi Li",
+        "Xu Wang",
+        "Xuanyu Zheng",
+        "Bin Wen",
+        "Tingting Gao",
+        "Wentao Zhang",
+        "Jiale Cao"
+      ],
+      "abstract": "Controllable real-world video generation models can condition on a rendered graybox proxy video, which fixes layout, motion and camera. Coding agents can build such videos by reconstructing a 4D scene in Blender, yet no benchmark checks both these videos and the long, multi-shot scenes behind them. We introduce VibePrevisBench, a benchmark for 4D scene reconstruction: an agent turns a brief into an executable 4D scene and renders its proxy video. Its 242 tasks span four input kinds, including scripts, photos, continuations, and reference videos. Each delivery is scored along two evaluation dimensions. Rule-based Scene Check re-runs the code and compares the exported 4D scene with hidden ground truth facts in nine dimensions. VLM-based Screen Check asks a VLM judge whether the facts that pass can be recognized in the proxy video. We analyze the evaluation results and trajectories of 11 frontier coding agents and identify three key observations. First, multimodal understanding separates the agents, especially in understanding space and camera motion. Second, all agents seem to already master basic camera work and staging, and fail at challenging requests. Third, agents inspect their own renders but fail to correct their errors. Agents thus need better visual understanding of space and camera, explicit checks for challenging requests, and item-by-item verification of renders against the brief.",
+      "published_date": "2026-11-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.15789",
+      "pdf_url": "https://arxiv.org/pdf/2611.15789",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.15789",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 86,
+      "hot_score": 860,
+      "structured_summary": {
+        "chinese_title": "VibePrevisBench: 评估Blender中4D场景生成的代理编码",
+        "chinese_summary": "介绍VibePrevisBench基准，评估代理编码在Blender中生成4D场景的能力。",
+        "pain_point": "缺乏评估4D场景生成和背后多场景的基准。",
+        "core_value": "提供首个评估4D场景重建的基准，涵盖多种输入类型。",
+        "technical_architecture": "结合规则基础和VLM基础的评估方法。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅评估了11个前沿编码代理。",
+        "key_contributions": [
+          "提供首个4D场景重建基准",
+          "涵盖多种输入类型"
+        ],
+        "application_scenarios": [
+          "4D场景生成评估",
+          "代理视频生成"
+        ],
+        "technical_highlights": [
+          "结合规则基础和VLM基础的评估方法",
+          "涵盖多样输入类型"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12068",
+      "source": "huggingface",
+      "title": "MIRIX-2.0: Multi-Agent Memory System",
+      "authors": [
+        "Wei-Chieh Huang",
+        "Weizhi Zhang",
+        "Jiayan Nan",
+        "Peng Xia",
+        "Yu Wang"
+      ],
+      "abstract": "Long-term memory lets LLM agents personalize, stay consistent, and reuse what worked before. Parametric memories need training, consolidation can lose details for good, and keeping every record leaves a growing store to search. We present MIRIX-2.0, a multi-agent memory system designed to be practical, accurate, and efficient at once. It is the most accurate of the compared systems on four of five QA benchmarks. It reaches 91.4% on LoCoMo and 72.6% on LongMemEval-S, where it leads the strongest baseline by 14.3 points, and with AutoDream disabled it gains 31.0 and 22.0 points over HyperMem on single-hop and multi-hop document QA. As procedural memory, it yields the highest mean success among the compared memory methods on ALFWorld and WebShop and reaches 49.2% on MetaClaw-Bench, against 44.0% for MetaClaw's skill library. Six typed memory agents keep complete records as the system of record, and a provenance hypergraph indexes episodic and semantic records with n-ary frames that cite their rows. Retrieval runs under explicit budgets, so the evidence a question inspects does not grow with the history. AutoDream merges duplicate anchors outside the write path without rewriting any record, and it distills task sessions into skills. With AutoDream disabled, MIRIX-2.0 answers faster than HyperMem on all five timed benchmarks. It needs no fine-tuning, runs with closed and open models, and its code is public.",
+      "published_date": "2026-11-09T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12068",
+      "pdf_url": "https://arxiv.org/pdf/2611.12068",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12068",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 46,
+      "hot_score": 460,
+      "structured_summary": {
+        "chinese_title": "MIRIX-2.0: 多智能体记忆系统",
+        "chinese_summary": "MIRIX-2.0 是一种多智能体记忆系统，准确高效地解决长期记忆问题。",
+        "pain_point": "现有记忆系统需要训练、容易丢失细节或存储量大。",
+        "core_value": "MIRIX-2.0 准确高效，是对比系统中四个中的三个最准确的。",
+        "technical_architecture": "MIRIX-2.0 使用六种类型的记忆智能体和证明来源超图。",
+        "quantitative_results": "在 LoCoMo 和 LongMemEval-S 上分别达到 91.4% 和 72.6% 的准确率。",
+        "competitors": "对比 HyperMem 和 MetaClaw 的技能库。",
+        "limitations": "未来可能需要进一步优化检索效率。",
+        "key_contributions": [
+          "多智能体记忆系统设计",
+          "准确性和效率的平衡",
+          "证明来源超图索引"
+        ],
+        "application_scenarios": [
+          "问答系统",
+          "虚拟助手"
+        ],
+        "technical_highlights": [
+          "六种类型记忆智能体",
+          "证明来源超图索引",
+          "高效检索"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.18482",
+      "source": "huggingface",
+      "title": "MMFlash: Faster Speculative Decoding for Vision-Language Models",
+      "authors": [
+        "Sicheng Feng",
+        "Zigeng Chen",
+        "Song Wang",
+        "Gongfan Fang",
+        "Xinchao Wang"
+      ],
+      "abstract": "Speculative decoding accelerates generation by letting a lightweight drafter propose tokens for parallel verification by a target model. Diffusion drafters such as DFlash propose an entire token block in a single forward pass, but mainly focus on text-only tasks, leaving multimodal drafting underexplored. To study this setting, we first introduce a metric of token-level visual dependence based on the KL divergence between next-token distributions with and without visual input. We find that acceptance rates decrease from 46% in the lowest visual-dependence quartile to 22% in the highest, with this disparity persisting after multimodal training. Motivated by this observation, we propose MMFlash, a simple and effective framework that adaptively upweights visually dependent tokens that the drafter predicts poorly. For long video inputs, MMFlash further employs sparse attention to reduce redundant attention computation and improve drafting quality. Across various multimodal benchmarks, MMFlash achieves lossless decoding speedups of up to 3.58times, outperforming EAGLE-3 and DFlash by up to 195.4% and 17.1%, respectively.",
+      "published_date": "2026-11-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.18482",
+      "pdf_url": "https://arxiv.org/pdf/2611.18482",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.18482",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": {
+        "chinese_title": "MMFlash: 视觉语言模型更快的投机解码",
+        "chinese_summary": "MMFlash 提高了视觉语言模型的解码速度，通过适应性加权视觉依赖的预测令牌。",
+        "pain_point": "现有投机解码方法主要针对文本任务，忽视了多模态任务。",
+        "core_value": "MMFlash 通过适应性加权和稀疏注意力提高了多模态任务的解码速度和质量。",
+        "technical_architecture": "MMFlash 通过适应性加权和稀疏注意力机制优化多模态解码。",
+        "quantitative_results": "MMFlash 在各种多模态基准上实现了高达 3.58 倍的无损加速。",
+        "competitors": "优于 EAGLE-3 和 DFlash，分别提高了 195.4% 和 17.1%。",
+        "limitations": "未来可探索更多多模态任务的适应性。",
+        "key_contributions": [
+          "提出基于 KL 散度的视觉依赖度量",
+          "引入适应性加权和稀疏注意力机制",
+          "实现多模态任务的无损加速"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "图像描述生成"
+        ],
+        "technical_highlights": [
+          "简单有效的框架",
+          "显著的加速效果"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.12901",
+      "source": "huggingface",
+      "title": "Rethinking in Spikes: Mitigating Hallucinations in MDLMs with Step-Aware Decoding",
+      "authors": [
+        "Zhongxing Xu",
+        "Zhonghua Wang",
+        "Zhe Qian",
+        "Shiyan Su",
+        "Ming Hu",
+        "Xiaocheng Zou",
+        "Wei Feng",
+        "Mingquan Lin",
+        "Yuyin Zhou",
+        "Yifan Peng",
+        "Hamid Rezatofighi",
+        "Zongyuan Ge"
+      ],
+      "abstract": "Recent advancements in multimodal diffusion language models (MDLMs) have exhibited strong global modeling capabilities through iterative refinement. We observe that mask uncertainty follows an overall downward trend during iterative denoising, while a few denoising steps exhibit localized entropy spikes closely associated with hallucinations. We argue that anomalous steps can be identified by measuring the entropy deviation of each denoising step from its neighboring temporal window. We hypothesize that discrete token commitment discards the distributional information at masked positions, limiting the continued interaction between candidate semantics and the context during entropy spikes. With this goal, we present StepRefine, a plug-and-play decoding strategy that leverages semantic context to achieve reliable denoising. The core of our method lies in a step-aware switch between discrete denoising and latent refinement. The model employs probability-weighted embeddings at entropy spike steps to preserve diverse reasoning hypotheses and performs multiple rounds of continuous refinement. Meanwhile, a refinement controller monitors distributional stability to reduce unnecessary loops and switch the model back to standard discrete denoising. Through extensive experiments, StepRefine demonstrates significant hallucination mitigation across different MDLMs on multimodal benchmarks.",
+      "published_date": "2026-10-14T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.12901",
+      "pdf_url": "https://arxiv.org/pdf/2611.12901",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.12901",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "upvotes": 36,
+      "hot_score": 360,
+      "structured_summary": {
+        "chinese_title": "基于步进感知解码减轻MDLM幻觉的重新思考",
+        "chinese_summary": "提出StepRefine策略，通过步进感知开关机制减轻MDLM幻觉。",
+        "pain_point": "MDLM在去噪过程中出现局部熵突增，导致幻觉。",
+        "core_value": "通过步进感知策略实现可靠的去噪，减轻幻觉。",
+        "technical_architecture": "步进感知开关机制结合概率加权嵌入和多轮连续精炼。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定MDLM模型上进行了实验。",
+        "key_contributions": [
+          "提出StepRefine策略减轻MDLM幻觉",
+          "利用步进感知机制和概率加权嵌入"
+        ],
+        "application_scenarios": [
+          "多模态文本生成",
+          "图像描述生成"
+        ],
+        "technical_highlights": [
+          "步进感知开关机制",
+          "多轮连续精炼"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.17831",
+      "source": "huggingface",
+      "title": "V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations",
+      "authors": [
+        "Keuntae Kim",
+        "Dongjun Kim",
+        "Yong Suk Choi"
+      ],
+      "abstract": "World-model video encoders such as V-JEPA learn how scenes change (direction, speed, order, state) from video alone. To answer questions, they are joined to a language model trained on captions and question-answer pairs. But each caption or question names only a few attributes of a clip, so the model learns to retrieve those attributes rather than to read the clip, and the dynamics the encoder carries go unused: on the same items, a linear probe reads speed from frozen V-JEPA features at 87% while the VLM answers at chance. We show where dynamics lives in a frozen encoder: in a subspace shared across videos for predictive encoders such as V-JEPA, but not as a shared component of frame-wise, text-aligned encoders such as SigLIP. We then build counterfactual supervision that makes the language model read it: pixel transformations turn public videos into answer-balanced variants whose answers are set by the transformation and differ only in the change. Trained in a single stage on 4.53M public samples with 32 visual tokens per frame, where open video LLMs use several stages, 9M to 172M samples and 64 to 256 tokens per frame on average, the resulting V-JEPA-LM models (1B to 8B, Qwen3 and Llama) lead every size class in average score across eleven video benchmarks; our 4B model scores 72.1, against 61.1 for the best open 4B and 64.8 for the best open 8B model. A controlled encoder x supervision study shows that the encoder decides what can be read and the supervision what is read: at a matched budget, counterfactual supervision adds 4.5 points on average and 38 on the speed questions of natural benchmarks. Code and models: https://github.com/kkt94/Llama-V-JEPA-LM.",
+      "published_date": "2026-11-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.17831",
+      "pdf_url": "https://arxiv.org/pdf/2611.17831",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.17831",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "V-JEPA-LM：视频-语言模型，超越静态文本对齐表示，阅读动态",
+        "chinese_summary": "通过构建反事实监督使模型读取视频中的动态，显著提升模型性能。",
+        "pain_point": "现有模型依赖于文本对齐的表示，无法充分利用视频中的动态信息。",
+        "core_value": "通过反事实监督，使模型能够读取视频中的动态信息，显著提升模型性能。",
+        "technical_architecture": "利用反事实监督，将视频动态信息注入语言模型。",
+        "quantitative_results": "单阶段训练4.53M样本，32个视觉标记，性能显著优于多阶段训练的开放视频LLM。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在公共视频数据集上进行验证，未来需在更多场景下测试。",
+        "key_contributions": [
+          "提出反事实监督方法，使模型读取视频动态",
+          "显著提升模型性能",
+          "单阶段训练大幅减少样本需求"
+        ],
+        "application_scenarios": [
+          "视频理解",
+          "问答系统"
+        ],
+        "technical_highlights": [
+          "反事实监督方法",
+          "单阶段训练大幅减少样本需求"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.17878",
+      "source": "huggingface",
+      "title": "DySENSE: Dynamic Spatiotemporal ENergy Synthesis and Emulation with Satellite Imagery",
+      "authors": [
+        "Kailai Sun",
+        "Zijie Gao",
+        "Mingyi He",
+        "Can Rong",
+        "Alok Prakash",
+        "Baoshen Guo",
+        "Shenhao Wang",
+        "Jinhua Zhao"
+      ],
+      "abstract": "Cities account for over two-thirds of the world's energy and more than 70% of global carbon dioxide emissions. City energy is essential for achieving the 2050 net-zero target and the UN's Sustainable Development Goals 7 and 11. Although existing studies have made progress, they are limited by data and methodological gaps. Existing studies are largely predictive for existing cities rather than generative for future cities; fine-grained, aligned monthly dynamic energy data are scarce; and existing GenAI models struggle to generate dynamic urban functional monthly energy. We present DySENSE, a joint multimodal GenAI framework that synthesizes static urban satellite imagery together with spatially aligned, dynamic monthly building energy consumption maps. We decouple long-term static urban morphology from short-term dynamic energy consumption. By conditioning on static urban land use, DySENSE can generate realistic, diverse and new static urban imagery with aligned energy maps. By conditioning on dynamic monthly and climate prompts, DySENSE can jointly generate dynamic, monthly energy consumption maps while keeping the urban morphology static. Experiments across four cities (New York, Washington, Norfolk, Busan) demonstrated that DySENSE can generate annotated high-fidelity synthetic energy data using less than 25% labelled data, boosting downstream prediction performance by 8% mIoU, and achieving strong energy dynamic consistency. Compared to existing methods, DySENSE significantly improved prediction performance (8.7% accuracy) and reduced prediction error (9%-18% CVRMSE, ASHRAE). DySENSE offers an effective foundation for energy-efficient cities, peak-load analysis, building performance simulation and dynamic demand response for city, energy, and building science. The data and code: https://huggingface.co/datasets/skl24/MUSE2 and https://github.com/kailaisun/DySENSE",
+      "published_date": "2026-11-13T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.17878",
+      "pdf_url": "https://arxiv.org/pdf/2611.17878",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.17878",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "DySENSE: 卫星影像驱动的动态时空能源合成与仿真",
+        "chinese_summary": "DySENSE 能生成与静态城市影像对齐的动态月度能源消耗图，支持未来城市的能源规划。",
+        "pain_point": "缺乏细粒度、对齐的动态月度能源数据，现有模型难以生成动态城市功能的月度能源数据。",
+        "core_value": "通过联合生成静态城市影像和动态能源消耗图，DySENSE 支持未来城市的能源规划和可持续发展目标。",
+        "technical_architecture": "DySENSE 是一个联合多模态生成AI框架，结合静态城市卫星影像和动态月度建筑能源消耗图。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在四个城市进行了实验，未来需要扩展到更多城市验证。",
+        "key_contributions": [
+          "提出了联合生成静态城市影像和动态能源消耗图的方法",
+          "能够生成与静态城市影像对齐的动态月度能源消耗图"
+        ],
+        "application_scenarios": [
+          "未来城市的能源规划",
+          "可持续发展目标的实现"
+        ],
+        "technical_highlights": [
+          "结合静态城市卫星影像和动态能源消耗图",
+          "生成与静态影像对齐的动态能源消耗图"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.07226",
+      "source": "huggingface",
+      "title": "Loopback Transformer: Towards a Unified View of Residual Looped Transformers",
+      "authors": [
+        "Xuan Ouyang",
+        "Zefan Cai",
+        "Chenlong Zhang",
+        "Cheng Luo",
+        "Ke Wan",
+        "Junjie Hu"
+      ],
+      "abstract": "Looped Transformers reduce parameter count by repeatedly applying shared blocks, but parameter sharing alone does not determine how the results of repeated computation are reused. We take the depth-memory view of residual connections and analyze which representation is stored after each block application and how later reads weight it. A full block output contains both its input and its new update, so weighting that output also reweights the history already carried by the input. Reading individual updates instead, with the shared stack's input kept on a separate path, gives separate controls over input strength, total update weight, and allocation across updates. The Loopback Transformer implements these controls: geometric decay sets the total update weight and supplies a recency prior, and attention learns how to allocate that weight. On ClimbMix, Loopback reaches lower validation loss than standard Transformer baselines with 40-75% of their Transformer parameters (excluding token embeddings and the output head) at reference scales from 191M to 3B, with training tokens and executed depth matched. It also has higher mean accuracy over thirteen downstream tasks at 1.4B and 3B. At 191M, 374M, and 778M, it has the lowest validation loss and the highest thirteen-task mean among the standard Transformer and seven looped residual designs.",
+      "published_date": "2026-11-04T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.07226",
+      "pdf_url": "https://arxiv.org/pdf/2611.07226",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.07226",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 21,
+      "hot_score": 210,
+      "structured_summary": {
+        "chinese_title": "Loopback Transformer：迈向统一的残差循环变换器视角",
+        "chinese_summary": "Loopback Transformer 通过几何衰减和注意力机制实现对输入强度、总更新权重和更新分配的独立控制，达到在参数量减少的情况下获得更好的性能。",
+        "pain_point": "现有循环变换器模型参数量大，如何在减少参数量的同时保持或提升模型性能。",
+        "core_value": "通过几何衰减和注意力机制实现对输入强度、总更新权重和更新分配的独立控制，提升模型性能。",
+        "technical_architecture": "采用几何衰减和注意力机制实现对输入强度、总更新权重和更新分配的独立控制。",
+        "quantitative_results": "在 ClimbMix 数据集上，Loopback Transformer 使用 40-75% 的参数量达到与标准 Transformer 基线相当的验证损失。",
+        "competitors": "标准 Transformer 基线",
+        "limitations": "未来需要进一步探索更多下游任务的性能。",
+        "key_contributions": [
+          "提出几何衰减和注意力机制实现对输入强度、总更新权重和更新分配的独立控制",
+          "在参数量减少的情况下达到更好的性能"
+        ],
+        "application_scenarios": [
+          "自然语言处理任务",
+          "大规模模型训练"
+        ],
+        "technical_highlights": [
+          "几何衰减和注意力机制的创新应用",
+          "在减少参数量的同时保持或提升模型性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.13509",
+      "source": "huggingface",
+      "title": "Mobile AI Factory: Building Specialized Language Models for Your Mobile Device",
+      "authors": [
+        "Evan Li",
+        "Krishna Deshpande",
+        "Wen Cheng",
+        "Shyamnath Gollakota"
+      ],
+      "abstract": "Small language models (SLMs) running on mobile devices can keep user data private and work without connectivity. But they perform well only when fine-tuned for the target task and sized for the target device, a process that today requires repeated expert tuning. We present {\\it Mobile AI Factory}, an agentic system that builds a fine-tuned, quantized SLM for a given task and phone. Given a task specification and a target phone, an orchestrator LLM chooses whether to tune hyperparameters, mine real data, or generate synthetic examples, while fixed rules roll back changes that hurt accuracy. The factory searches from small to large models across base models and quantizations, adapts its accuracy goal as it searches, and uses real measurements of the target phone across inference engines and backends. We evaluate Mobile AI Factory on ten tasks and four Android phones. On an unseen testset, its on-device models outperform two five-shot frontier models on five tasks, by up to 0.34, and match them on three more. Its search comes within 0.03 of exhaustively training all 27 model variants on an entity extraction task, while using 19times less GPU time. Phone measurements also matter: the best configuration changes across phones. Without phone measurements, Claude Opus 5.5, given the full hardware and model specifications, misses the app's requirements in 25\\% of easy and moderate cases and in 60\\% of hard ones. Code is available at: https://github.com/evanly-gh/SLM_Factory.",
+      "published_date": "2026-11-10T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.13509",
+      "pdf_url": "https://arxiv.org/pdf/2611.13509",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.13509",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 19,
+      "hot_score": 190,
+      "structured_summary": {
+        "chinese_title": "移动AI工厂：为您的移动设备构建专用语言模型",
+        "chinese_summary": "Mobile AI Factory 自动构建针对特定任务和手机的微调量化语言模型。",
+        "pain_point": "现有方法需要专家反复调参，耗时且效率低。",
+        "core_value": "通过自动化流程，提高模型性能并减少资源消耗。",
+        "technical_architecture": "使用代理系统选择调参、数据挖掘或生成合成示例。",
+        "quantitative_results": "在十项任务和四款Android手机上，其模型优于五次示例前沿模型。",
+        "competitors": "暂无对比信息",
+        "limitations": "依赖于目标手机的具体测量数据。",
+        "key_contributions": [
+          "自动构建微调量化语言模型",
+          "减少调参所需时间和资源",
+          "适应不同任务和手机"
+        ],
+        "application_scenarios": [
+          "移动设备上的隐私保护语言模型",
+          "无需网络连接的本地计算"
+        ],
+        "technical_highlights": [
+          "代理系统选择最佳调参策略",
+          "动态调整精度目标"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

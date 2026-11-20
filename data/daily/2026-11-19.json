@@ -1,0 +1,521 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-20T03:54:01.107075+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.24738",
+      "source": "huggingface",
+      "title": "Jeveration: System One Models Now Generate",
+      "authors": [
+        "Yuhe Liu",
+        "Qi Li",
+        "Shihua Zhang",
+        "Xinchao Wang"
+      ],
+      "abstract": "System One models such as Jev return decisions through fast, parallel prediction. In this paper, we introduce Jeveration, showing that the same decision paradigm can also generate high-quality images in a single forward pass. Jeveration builds on a frozen vision-language model, repurposing its visual-semantic knowledge for holistic image generation. The key challenge is to maintain global consistency. A single prompt admits many valid images, yet parallel predictions must converge on a coherent whole. We therefore condition all positions on a shared random state to coordinate parallel predictions, so that each draw yields a different but coherent image. Since the model tends to ignore this state under direct image supervision, we first learn a distribution over discrete image codes to guide single-pass generation. Beyond text-to-image generation, we further unify image-to-image generation and dense prediction within the same architecture, so that one checkpoint supports all three tasks, each in one forward pass. Experiments show that Jeveration generates a 512x512 image in 78 ms, up to 122x faster than existing unified models, while maintaining competitive image quality and dense prediction performance.",
+      "published_date": "2026-11-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.24738",
+      "pdf_url": "https://arxiv.org/pdf/2611.24738",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.24738",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 116,
+      "hot_score": 1160,
+      "structured_summary": {
+        "chinese_title": "Jeveration: 系统一模型现在可以生成图像",
+        "chinese_summary": "Jeveration 通过单次前向传播生成高质量图像。",
+        "pain_point": "现有模型在生成图像时难以保持全局一致性。",
+        "core_value": "通过共享随机状态协调并行预测，实现高质量单次图像生成。",
+        "technical_architecture": "基于冻结的视觉-语言模型，重新利用其视觉-语义知识进行整体图像生成。",
+        "quantitative_results": "生成 512x512 图像仅需 78 毫秒，比现有模型快 122 倍。",
+        "competitors": "暂无对比信息",
+        "limitations": "模型在直接图像监督下倾向于忽略共享状态。",
+        "key_contributions": [
+          "提出 Jeveration，实现高质量单次图像生成。",
+          "统一文本到图像、图像到图像和密集预测任务于同一架构中"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "图像到图像转换",
+          "密集预测"
+        ],
+        "technical_highlights": [
+          "通过共享随机状态协调并行预测",
+          "单次前向传播生成高质量图像"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.23068",
+      "source": "huggingface",
+      "title": "The Resolution Hypothesis: Agent Evolution's Key Is Identifying Improvements",
+      "authors": [
+        "Yuanhao Zeng",
+        "Shaocheng Lan",
+        "Ao Lu",
+        "Kuang Yan",
+        "Heng Lin",
+        "Xinang Xu",
+        "Yuan Luo",
+        "Yueting Wang",
+        "Yexin Li",
+        "Ruo Shan",
+        "Kan Ren"
+      ],
+      "abstract": "Agent evolution follows a simple loop: a proposer writes candidate artifacts (prompts, skills, memories) and selection accepts those that score higher. This loop has shown promise, yet practitioners face a puzzle: methods trade wins across papers, and evolution often fails to bootstrap on certain tasks. We trace this puzzle to the Resolution Hypothesis: agent evolution stalls not because methods fail to propose better artifacts, but because noisy evaluations cannot reliably identify them. Across seven evolution methods and six models (over 10M LLM calls), we find support for the hypothesis at both levels where evaluation scores are used. At the candidate level (choosing artifacts), helpful candidate artifacts exist, but selection is no better than random at telling them from harmful ones, so errors accumulate across rounds. At the method level (ranking methods), typical margins of a few percentage points are smaller than the difference between two independent runs of the same method, so published rankings often rest on luck. Together, these findings indicate that agent evolution is often bottlenecked by reliably identifying improvements. This calls for a shift in how we develop and evaluate self-improving agents, from designing ever more candidate improvement systems to making true improvements detectable and accumulable.",
+      "published_date": "2026-11-17T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.23068",
+      "pdf_url": "https://arxiv.org/pdf/2611.23068",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.23068",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "upvotes": 35,
+      "hot_score": 350,
+      "structured_summary": {
+        "chinese_title": "代理进化假设：关键在于识别改进",
+        "chinese_summary": "代理进化停滞的原因在于评估的噪声无法可靠识别改进。",
+        "pain_point": "代理进化在某些任务上难以自我提升。",
+        "core_value": "提出分辨率假设，揭示代理进化瓶颈。",
+        "technical_architecture": "通过多种进化方法和模型验证假设。",
+        "quantitative_results": "在多种模型和方法上验证了假设。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究如何可靠识别改进。",
+        "key_contributions": [
+          "提出分辨率假设",
+          "验证代理进化瓶颈",
+          "揭示评估噪声问题"
+        ],
+        "application_scenarios": [
+          "代理学习与进化",
+          "智能系统开发"
+        ],
+        "technical_highlights": [
+          "大规模实验验证",
+          "跨模型方法对比"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.21366",
+      "source": "huggingface",
+      "title": "ALIVE: Making Streaming Video Models Interactive",
+      "authors": [
+        "Jinzhao Li",
+        "Yuan Xu",
+        "Jinxuan Wu",
+        "Yukun Wang",
+        "Yijia Lei",
+        "Hanyu Ji",
+        "Yinuo Chen",
+        "Zining Huang",
+        "Chi Zhang",
+        "Hang Ye",
+        "Yiwu Zhong",
+        "Honglei Yan",
+        "Panwang Pan",
+        "Yizhou Wang",
+        "Yin Li",
+        "Miao Liu"
+      ],
+      "abstract": "Streaming video LLMs can continuously observe the world, yet often handle user requests in isolation. We introduce ALIVE, an interactive streaming video model supporting proactive monitoring, streaming task coordination, and feedback-seeking interaction. We construct ALIVE-SFT-288K and ALIVE-RL-3K for two-stage training. Contrastive supervised fine-tuning teaches when and how to respond, while reinforcement learning with Behavior-Aligned Credit Assignment (BACA) combines trajectory-level and local advantages to refine decisions, responses, and silence across multi-turn interactions. We also introduce FSI-Bench to evaluate feedback seeking and subsequent task completion. ALIVE achieves the highest overall scores among the compared models on four public benchmarks and FSI-Bench, demonstrating strong streaming understanding and interactive capabilities.",
+      "published_date": "2026-11-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.21366",
+      "pdf_url": "https://arxiv.org/pdf/2611.21366",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.21366",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 34,
+      "hot_score": 340,
+      "structured_summary": {
+        "chinese_title": "ALIVE: 使流式视频模型互动",
+        "chinese_summary": "ALIVE 是一种支持主动监控、流式任务协调和反馈寻求交互的互动流式视频模型。",
+        "pain_point": "流式视频模型在处理用户请求时往往孤立工作，缺乏互动性。",
+        "core_value": "ALIVE 提供了强大的流式理解能力和互动能力，显著提升了用户体验。",
+        "technical_architecture": "采用两阶段训练，结合监督微调和强化学习进行模型优化。",
+        "quantitative_results": "在四个公开基准和 FSI-Bench 上得分最高。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更复杂的场景和更长时间的交互。",
+        "key_contributions": [
+          "提出 ALIVE 模型，支持互动流式视频处理",
+          "结合监督微调和强化学习优化模型",
+          "引入 FSI-Bench 评估反馈寻求和任务完成"
+        ],
+        "application_scenarios": [
+          "流媒体直播互动",
+          "智能监控系统"
+        ],
+        "technical_highlights": [
+          "两阶段训练方法",
+          "行为对齐的信用分配"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.11318",
+      "source": "huggingface",
+      "title": "PROLA: Principal-Orthogonal Low-rank Adaptation for Predictive Spatiotemporal Weather Downscaling",
+      "authors": [
+        "Minseo Yoon",
+        "Minseong Bae",
+        "Sojin Lee",
+        "Hyunwoo J. Kim"
+      ],
+      "abstract": "High-resolution weather prediction is important for resolving local atmospheric patterns missed by coarse global forecasts. Large pretrained weather backbones have improved global forecasting, but adapting them to produce future high-resolution fields from recent coarse states remains challenging and costly. We formulate this setting as Predictive Spatiotemporal Weather Downscaling (PSWD), a task that jointly refines spatial and temporal resolution while predicting future high-resolution trajectories. To this end, we propose a framework that decomposes prediction into spatial and temporal stages using a shared pretrained backbone, fixed numerical scaffolds, and lightweight residual heads. For backbone adaptation, we introduce PROLA (PRincipal-Orthogonal Low-rank Adaptation), which allocates a fixed low-rank budget between pretrained weights' principal directions and their orthogonal complement. PROLA further rescales rank-1 optimizer updates using gradient signals, improving adaptation without increasing trainable rank. Experiments in the PSWD setting show that PROLA outperforms representative low-rank adaptation baselines. Further experiments across diverse datasets and tasks support the broader applicability of PROLA, showing that its benefits extend beyond the primary weather downscaling setting.",
+      "published_date": "2026-11-08T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.11318",
+      "pdf_url": "https://arxiv.org/pdf/2611.11318",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.11318",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "PROLA：主成分正交低秩适应的预测时空天气降尺度",
+        "chinese_summary": "PROLA 提出了一种新的低秩适应方法，显著提高了高分辨率天气预测的精度。",
+        "pain_point": "现有方法难以高效地将预训练的全球天气模型适应为高分辨率的局部天气预测。",
+        "core_value": "通过低秩预算分配和梯度信号驱动的调整，PROLA 提高了模型的适应性。",
+        "technical_architecture": "PROLA 将预测分解为空间和时间阶段，使用共享的预训练骨干网络和轻量级残差头部。",
+        "quantitative_results": "PROLA 在 PSWD 任务中优于代表性的低秩适应基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多样化的数据集上进行验证。",
+        "key_contributions": [
+          "提出 PROLA 低秩适应方法",
+          "改进了模型的适应性而不增加可训练的秩"
+        ],
+        "application_scenarios": [
+          "高分辨率天气预测",
+          "局部大气模式预测"
+        ],
+        "technical_highlights": [
+          "低秩预算分配",
+          "梯度信号驱动的调整"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.24154",
+      "source": "huggingface",
+      "title": "Game2Player: Scaling Gameplay Experience for Visual Agents through Environment-Player Co-Development",
+      "authors": [
+        "Xirui Jiang",
+        "Yuxi Chen",
+        "Rui Yang",
+        "Feng Luo",
+        "Pengcheng Wang",
+        "Bingxuan Li",
+        "Zihao Zhao",
+        "Yushan Li",
+        "Han Wang",
+        "Manling Li",
+        "Yang Zhang",
+        "Shiyu Chang",
+        "Tong Zhang",
+        "Huan Zhang"
+      ],
+      "abstract": "Games are a rich testbed for visual agents, demanding perception, long-horizon planning, and precise control. However, collecting human gameplay is costly, and learning from gameplay videos requires inferring missing actions. Existing datasets also cover a limited range of games, often without explicit tasks or verifiable outcomes. To address these gaps, we introduce Game2Player, a framework that co-develops game environments and players to collect diverse and verifiable gameplay experience at scale. In the Game2Player loop, a Builder agent adapts existing web games, exposes their internal state, and defines tasks with state-based progress measures and success checks. A Coding Player and a VLM Player then attempt the tasks and report problems to the Builder for repair, so that play serves as both environment validation and training data collection. With Game2Player, we build 568 verified web games with 3,436 tasks, collect 15.7K trajectories (307 hours of gameplay), and hold out 50 games as the benchmark PlayerBench. To evaluate the collected experience as training data, we train VLM agents with progress-weighted SFT, assigning greater weight to steps that advance task progress. Game2Player-9B improves progress from 14.3% to 31.2% on PlayerBench and from 30.0% to 53.1% on the external GameWorld benchmark. More broadly, our work suggests a path for visual agents to scale their gameplay experience by building, verifying, and learning from existing game worlds.",
+      "published_date": "2026-11-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.24154",
+      "pdf_url": "https://arxiv.org/pdf/2611.24154",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.24154",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 25,
+      "hot_score": 250,
+      "structured_summary": {
+        "chinese_title": "Game2Player：通过环境-玩家共同开发扩展视觉代理的游戏体验",
+        "chinese_summary": "构建了一个框架，通过环境-玩家共同开发收集大规模的可验证游戏体验。",
+        "pain_point": "现有数据集覆盖的游戏范围有限，且缺乏明确任务和可验证结果。",
+        "core_value": "通过环境-玩家共同开发，收集了大量可验证的游戏体验，扩展了视觉代理的游戏能力。",
+        "technical_architecture": "采用Builder、Coding Player和VLM Player共同开发游戏环境和任务。",
+        "quantitative_results": "构建了568个游戏，收集了15.7K轨迹（307小时的游戏体验）。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅使用了网页游戏，未来可以扩展到其他类型的游戏。",
+        "key_contributions": [
+          "提出了环境-玩家共同开发框架",
+          "构建了大规模可验证的游戏体验",
+          "使用进度加权SFT训练视觉代理"
+        ],
+        "application_scenarios": [
+          "视觉代理的游戏体验扩展",
+          "游戏环境验证"
+        ],
+        "technical_highlights": [
+          "环境-玩家共同开发机制",
+          "进度加权SFT训练方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.24654",
+      "source": "huggingface",
+      "title": "CurvDelta: Low-Curvature Delta Modeling For Surgical Learning and Unlearning",
+      "authors": [
+        "Zeguan Xiao",
+        "Zhuocheng Liang",
+        "Yun Chen",
+        "Yong Wang",
+        "Guanhua Chen",
+        "Pinyan Lu"
+      ],
+      "abstract": "A central challenge in adapting large language models (LLMs) is capability preservation: an adaptation can achieve its target while degrading general capabilities. We introduce CurvDelta, a scalable framework that incorporates the preservation constraint into the parameterization of the model update. By analyzing the local geometry of the preservation constraint around the pre-adaptation model, CurvDelta constructs a low-curvature space in which parameter updates leave the preservation loss nearly invariant. We make its construction practical for LLMs through Kronecker-factored approximate curvature (K-FAC) and a factorized projection. We also introduce CurvLoRA, a low-rank variant within the same preservation geometry, designed for more efficient adaptation. Both methods apply to preservation-constrained adaptation tasks such as capability learning and selective unlearning. We evaluate our methods on mathematical reasoning, code generation, and knowledge unlearning. For mathematical reasoning and code generation, our approaches achieve competitive downstream performance while better preserving general capabilities, offering a favorable acquisition--retention trade-off relative to the baselines. For knowledge unlearning, our main results on TOFU and MUSE show a better balance between targeted forgetting and knowledge retention than the baselines, with retention performance close to the from-scratch retraining reference.",
+      "published_date": "2026-11-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.24654",
+      "pdf_url": "https://arxiv.org/pdf/2611.24654",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.24654",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "CurvDelta: 用于手术学习和遗忘的低曲率δ建模",
+        "chinese_summary": "CurvDelta 通过低曲率空间保持模型的一般能力，同时实现特定目标。",
+        "pain_point": "大语言模型适应过程中能力退化。",
+        "core_value": "通过低曲率空间保持模型的一般能力，实现更好的性能和保留。",
+        "technical_architecture": "使用K-FAC和因子化投影构建低曲率空间。",
+        "quantitative_results": "在数学推理和代码生成中表现竞争力。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要在更多任务上验证。",
+        "key_contributions": [
+          "引入CurvDelta框架",
+          "构建低曲率空间",
+          "提出CurvLoRA低秩变体"
+        ],
+        "application_scenarios": [
+          "手术学习",
+          "知识遗忘"
+        ],
+        "technical_highlights": [
+          "使用K-FAC优化",
+          "因子化投影"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.24789",
+      "source": "huggingface",
+      "title": "HINT-WAM: Hindsight-Informed Training for World Action Models",
+      "authors": [
+        "Phuong Tuan Dat",
+        "Qi Li",
+        "Xinchao Wang"
+      ],
+      "abstract": "World action models (WAMs) have shown promising generalization and data efficiency in robot manipulation by coupling action generation with predictions of future visual dynamics. Translating these capabilities into reliable task execution, however, remains a challenge for existing post-training methods. Offline supervised fine-tuning provides dense supervision on expert trajectories, but its flow-matching action expert is trained only on noised demonstration actions and never on the intermediate states produced by its own sampler; task-specific adaptation can also compromise pretrained capabilities. On-policy reinforcement learning trains on the policy's own behavior, yet sparse task rewards make exploration and credit assignment difficult, while dense reward shaping still provides scalar evaluations rather than direct action targets. We introduce HINT-WAM, the first on-policy self-distillation framework that supervises the action expert on its own sampling trajectories using hindsight, the future video of the demonstration, as privileged information available to the WAM itself. For each demonstration observation, the student generates its action through its own denoising trajectory, and at the states along this trajectory the same model acts as a teacher conditioned additionally on this hindsight, providing a conditional action distribution as a dense training target, while the student sees only deployment-time inputs and needs no environmental rewards or simulator interaction. To transfer this supervision to a flow-matching action expert, HINT-WAM distills the teacher into the student with an energy score, a distribution-level objective that matches the teacher's action distribution from the student's own samples rather than regressing its velocity field. The project web is available in https://tuandattt.github.io/hintwam/.",
+      "published_date": "2026-11-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.24789",
+      "pdf_url": "https://arxiv.org/pdf/2611.24789",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.24789",
+      "category": "rl",
+      "tags": [
+        "cs.RO"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "HINT-WAM: 基于前瞻信息的机器人动作模型后训练框架",
+        "chinese_summary": "提出了一种基于前瞻信息的自蒸馏框架，用于监督机器人动作模型的采样轨迹。",
+        "pain_point": "现有方法在将机器人动作模型的预测能力转化为可靠的任务执行方面存在挑战。",
+        "core_value": "通过使用前瞻信息作为特权信息，提高了动作模型的训练效果和任务执行能力。",
+        "technical_architecture": "采用基于前瞻信息的自蒸馏方法，监督模型在自己的采样轨迹上。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证在更多任务上的适用性。",
+        "key_contributions": [
+          "提出了基于前瞻信息的自蒸馏框架",
+          "提高了动作模型的训练效果和任务执行能力"
+        ],
+        "application_scenarios": [
+          "机器人操作任务",
+          "自动化生产线"
+        ],
+        "technical_highlights": [
+          "使用前瞻信息作为特权信息",
+          "自蒸馏监督框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.17600",
+      "source": "huggingface",
+      "title": "LightTAR: Light and Fast Target-Aware Representations for Multimodal Tabular Learning",
+      "authors": [
+        "Eilam Shapira",
+        "Alan Arazi",
+        "Shoham Grunblat",
+        "Roi Reichart"
+      ],
+      "abstract": "Multimodal tabular learning involves classification and regression on tables combining structured numerical and categorical features with unstructured text and images. These unstructured fields are commonly represented by pretrained encoder embeddings reduced with principal component analysis (PCA). This reduction prioritizes input variance but may overlook information relevant to predicting the target. We introduce LightTAR, a simple, inexpensive method that adapts dimensionality reduction to the prediction task. LightTAR augments the standard PCA representation with a few target-aware features extracted jointly from the final and an intermediate encoder layer using regularized partial least squares (PLS). We evaluate LightTAR with 21 tabular models, including tree ensembles, neural networks, and tabular foundation models. LightTAR improves average predictive performance for all models and, averaged across models, improves prediction on almost every MulTaBench dataset. These gains come with a small increase in total runtime relative to PCA representations. LightTAR integrates directly into existing encoding pipelines, improving tabular learners' predictive performance without modifying the encoder or the learner.",
+      "published_date": "2026-11-12T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.17600",
+      "pdf_url": "https://arxiv.org/pdf/2611.17600",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.17600",
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 20,
+      "hot_score": 200,
+      "structured_summary": {
+        "chinese_title": "LightTAR: 针对多模态表格学习的轻量级目标感知表示",
+        "chinese_summary": "提出LightTAR，一种简单且经济的方法，通过目标感知特征增强PCA，提升多模态表格学习模型的预测性能。",
+        "pain_point": "现有方法在处理表格数据中的非结构化字段时，可能忽略对预测目标有用的信息。",
+        "core_value": "通过目标感知特征增强PCA，显著提升多模态表格学习模型的预测性能。",
+        "technical_architecture": "结合PCA和目标感知特征的降维方法。",
+        "quantitative_results": "在21个模型上均提升预测性能，多数数据集上表现更优。",
+        "competitors": "暂无对比信息",
+        "limitations": "相对于PCA，总运行时间略有增加。",
+        "key_contributions": [
+          "提出LightTAR方法",
+          "结合PCA和目标感知特征",
+          "显著提升预测性能"
+        ],
+        "application_scenarios": [
+          "多模态表格数据分类",
+          "多模态表格数据回归"
+        ],
+        "technical_highlights": [
+          "简单且经济的方法",
+          "直接集成到现有编码管道中"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.24869",
+      "source": "huggingface",
+      "title": "WorldRuler: Interactive World Modeling under Configurable Rules",
+      "authors": [
+        "Mingliang Zhai",
+        "Chuanhao Li",
+        "Jiaming Tan",
+        "Zhen Li",
+        "Yuwei Wu",
+        "Yunde Jia",
+        "Zian Meng",
+        "Yuanyang Yin",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Rules govern how player actions change interactive worlds. Different rules create distinct gameplay experiences within similar scenes and action spaces. For customizable gameplay, generative world models must follow user-defined rules beyond real-world behaviors. However, realizing user-defined rules presents two challenges: Rule-State Persistence and Rule-to-Visual Realization. The former requires preserving rule definitions, dependencies, and world states across saving and loading, so that restored worlds follow the established rules. The latter requires accurately realizing rule-induced changes on designated objects and attributes, particularly when affected objects are unseen. In this paper, we propose WorldRuler, which organizes rule definitions, dependencies, and object states in an executable 3D rule graph and connects rule execution, video generation, and perceptual feedback in a closed loop. The graph supports joint saving and restoration of rules and world states, while dynamic object binding grounds rule-specified entities in visual instances and uses stored states to constrain generation from their first appearance. We further introduce object attribute state replacement and counterfactual reconstruction training, enabling accurate attribute control and compatible appearance and motion changes while limiting interference with unrelated content. We develop an automated data collection and annotation pipeline using GTA-V and Habitat to construct RuleVerse, a dataset of rule-driven interactions with detailed state and event annotations, including cases where rules take effect before affected objects become visible. Extensive experiments demonstrate the effectiveness of WorldRuler in preserving rule-state consistency across saving and loading and accurately realizing rule outcomes on designated objects and attributes.",
+      "published_date": "2026-11-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.24869",
+      "pdf_url": "https://arxiv.org/pdf/2611.24869",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.24869",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": {
+        "chinese_title": "WorldRuler: 在可配置规则下的互动世界建模",
+        "chinese_summary": "提出WorldRuler，一种通过执行3D规则图来组织规则定义、依赖和对象状态的方法。",
+        "pain_point": "用户自定义规则的实现面临规则状态持久性和规则到视觉现实化的挑战。",
+        "core_value": "通过3D规则图支持规则和世界状态的联合保存与恢复，以及动态对象绑定。",
+        "technical_architecture": "采用3D规则图组织规则定义、依赖和对象状态，并在闭环中连接规则执行、视频生成和感知反馈。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要探索更多复杂规则场景的应用。",
+        "key_contributions": [
+          "提出了一种通过3D规则图组织规则定义、依赖和对象状态的方法。",
+          "实现了规则和世界状态的联合保存与恢复。",
+          "动态对象绑定支持规则指定实体与视觉实例的对接"
+        ],
+        "application_scenarios": [
+          "互动游戏开发",
+          "虚拟现实场景构建"
+        ],
+        "technical_highlights": [
+          "3D规则图支持规则定义、依赖和对象状态的组织。",
+          "闭环连接规则执行、视频生成和感知反馈"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.22925",
+      "source": "huggingface",
+      "title": "Code World Model 2.0: Towards Infinite Controllable Video Generation",
+      "authors": [
+        "Ruoyu Wang",
+        "Hao Zhong",
+        "Yanming Yang",
+        "Jiahao Tian",
+        "Lin Liu",
+        "Biao Gong",
+        "Guoshan Lu",
+        "Yiding Tian",
+        "Chunhua Shen",
+        "Zhenzhong Lan",
+        "Chi Zhang"
+      ],
+      "abstract": "Visual proxies decouple explicit world-state simulation from photorealistic video synthesis, offering a controllable interface for both offline clip creation and real-time interactive streaming. Yet a practical renderer must address two challenges. Upstream proxies vary from coarse layouts to fine articulated geometry depending on the interaction, and streaming inference must operate in a few causal steps without accumulating drift across self-generated history. We present Invoker-Render, pairing a bidirectional creation model with a causal four-step streaming model under a shared conditioning interface over structural proxies, an appearance reference, and language. Trained on an aligned approximately 200-hour multi-granularity corpus, Invoker-Render honors fine geometric constraints when supplied while synthesizing plausible local motion under coarse proxies, enabling runtime selection of input detail. To bridge bidirectional creation and real-time streaming without compounding step compression and rollout drift, we introduce Progressive Forcing (ProForcing). ProForcing first trains a causal predictor and distills it into a four-step renderer using histories derived from training videos. Training then shifts to continuous self-generated rollouts. A pipelined serving stack supports efficient streaming inference. Experiments show versatile control across proxy families, granularities, and camera paths, consistent gains over recent streaming baselines, and stable 30-minute racing rollouts that preserve scene and subject appearance.",
+      "published_date": "2026-11-17T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.22925",
+      "pdf_url": "https://arxiv.org/pdf/2611.22925",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.22925",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 17,
+      "hot_score": 170,
+      "structured_summary": {
+        "chinese_title": "代码世界模型 2.0：迈向无限可控视频生成",
+        "chinese_summary": "提出 Invoker-Render，结合双向生成模型和因果四步流式渲染模型，实现细粒度几何约束和粗粒度代理下的局部可信运动合成。",
+        "pain_point": "现有模型在处理交互变化的粗细几何代理和流式推理时存在挑战。",
+        "core_value": "通过引入 Progressive Forcing，实现双向生成和实时流式渲染的无缝衔接，减少步骤压缩和回放漂移。",
+        "technical_architecture": "采用双向生成模型和因果四步流式渲染模型，共享结构代理、外观参考和语言的条件接口。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可能包括更广泛的场景适应性和更多样化的输入。",
+        "key_contributions": [
+          "提出 Invoker-Render 模型",
+          "引入 Progressive Forcing 方法",
+          "实现细粒度几何约束和粗粒度代理下的局部可信运动合成"
+        ],
+        "application_scenarios": [
+          "离线视频剪辑创建",
+          "实时互动流式传输"
+        ],
+        "technical_highlights": [
+          "结合双向生成和因果四步流式渲染",
+          "实现细粒度几何约束和粗粒度代理下的局部可信运动合成"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

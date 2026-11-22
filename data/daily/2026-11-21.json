@@ -1,0 +1,497 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-22T02:52:24.927155+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2611.26629v1",
+      "source": "arxiv",
+      "title": "Posterior Matching Distillation",
+      "authors": [
+        "Hidir Yesiltepe",
+        "Julius Berner",
+        "Arash Vahdat",
+        "Pinar Yanardag"
+      ],
+      "abstract": "Diffusion distillation accelerates image and video generation by compressing a pretrained teacher's iterative sampling process into a few network evaluations. Distribution-based methods achieve this by matching the student's output distribution to the teacher's. This matching is often driven by reverse-KL objectives, whose mode-seeking bias favors dominant teacher modes at the expense of diversity across samples. We introduce Posterior Matching Distillation (PMD), a new member of the distribution-based distillation family that combines mode-covering posterior sampling with any-step generation. At zero population loss, PMD recovers the teacher's full posterior of clean images at each trained noise level. Its stochastic student supports any-step sampling budgets within the trained timestep grid without further training. To learn these posteriors, PMD matches exponentially reweighted averages of student samples conditioned on a fixed noisy state to corresponding teacher posterior means. Under Gaussian corruption, exponentially tilted posterior mean is a single teacher evaluation at a shifted input. We prove that, matching tilted means over an open neighborhood uniquely identifies the full posterior. PMD thus supervises the entire conditional distribution through a family of mean constraints, without any auxiliary student-score network. Experiments on SDXL and FLUX.2 [klein] 4B demonstrate that PMD achieves the best FID among 4-step methods on both models, while maintaining competitive or leading performance across prompt-alignment and perceptual-quality metrics.",
+      "published_date": "2026-11-19T18:59:57Z",
+      "url": "https://arxiv.org/abs/2611.26629v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26629v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "后验匹配蒸馏",
+        "chinese_summary": "提出了一种新的蒸馏方法PMD，通过匹配学生模型的后验分布来加速图像和视频生成。",
+        "pain_point": "现有的蒸馏方法倾向于保留教师模型的主导模式，牺牲样本多样性。",
+        "core_value": "PMD能够恢复教师模型的完整后验分布，支持任意步长生成。",
+        "technical_architecture": "结合了后验采样和任意步长生成。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究在非高斯噪声下的表现。",
+        "key_contributions": [
+          "提出了一种新的蒸馏方法PMD",
+          "能够恢复教师模型的完整后验分布",
+          "支持任意步长生成"
+        ],
+        "application_scenarios": [
+          "图像和视频生成加速",
+          "模型压缩"
+        ],
+        "technical_highlights": [
+          "通过匹配后验均值实现蒸馏",
+          "支持任意步长生成无需进一步训练"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26627v1",
+      "source": "arxiv",
+      "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+      "authors": [
+        "Tuna Han Salih Meral",
+        "Kaan Oktay",
+        "Alec Helbling",
+        "Atakan Kara",
+        "Duen Horng Chau",
+        "Pinar Yanardag"
+      ],
+      "abstract": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that improving them requires learning complex, input-dependent transformations. To isolate how much of these gains an input-independent shift explains, we probe each RL-tuned model with a deliberately simple parameterization: a fixed set of steering vectors added to the block outputs of the frozen base model. On SD3.5-M, these vectors hold 65x fewer parameters than the RL-tuned LoRA (0.29M against 18.8M). We fit them to match the velocity predictions of public RL-tuned checkpoints, with no reward in the objective. Although the vectors are identical for every prompt, token, and sampling seed, they recover 90.0-96.3% of the reward gains of six RL-tuned image models, and 89.8% and 111.9% on two RL-tuned video models. Initialized at zero and trained with online RL, the vectors alone exceed the reward gains of weight-based RL on text rendering (OCR) and human preference (PickScore) on SD3.5-M. A constant shift thus suffices for most of the gain of policy-gradient RL post-training: without new input-dependent transformations, it steers the pretrained generator toward what it can already compute.",
+      "published_date": "2026-11-19T18:59:53Z",
+      "url": "https://arxiv.org/abs/2611.26627v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26627v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "在扩散变换器中后训练的强化学习是激活导向",
+        "chinese_summary": "通过固定向量调整扩散变换器，实现与强化学习后训练相近的效果。",
+        "pain_point": "扩散变换器的视觉质量、文本渲染和组合准确性需要改进。",
+        "core_value": "通过简单的固定向量调整，显著提升扩散变换器的效果。",
+        "technical_architecture": "使用固定向量调整冻结基模型的输出。",
+        "quantitative_results": "固定向量在多个模型上恢复了90.0-96.3%的强化学习后训练奖励增益。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来可探索更多复杂输入依赖的调整方法。",
+        "key_contributions": [
+          "提出了一种简单的固定向量调整方法",
+          "显著提升了扩散变换器的效果",
+          "验证了输入独立调整的有效性"
+        ],
+        "application_scenarios": [
+          "图像生成",
+          "视频生成"
+        ],
+        "technical_highlights": [
+          "固定向量调整方法简单且参数量少",
+          "恢复了大部分强化学习后训练的奖励增益"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26624v1",
+      "source": "arxiv",
+      "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
+      "authors": [
+        "Weihao Cheng"
+      ],
+      "abstract": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play games and draws on its detailed play experience to revise them for mastery. Starting from an initial game, PlayCraft alternates between playing and crafting. In the playing stage, a player agent watches the game screen, uses the controls, and pursues the game objective over repeated episodes while retaining memory. After each episode, it reports its progress, outcomes, decisions, and reflections. In the crafting stage, a crafter agent uses these reports to revise the game. It estimates player abilities, predicts performance at different proficiency levels, and compares those predictions with a target learning progression. It diagnoses the game and addresses the gaps by giving players meaningful opportunities to improve through better decisions and execution. We evaluate games in fresh runs with player agents across three intelligence settings, measuring learning gain and learning slope. Compared with the initial games, PlayCraft yields larger learning gains and steeper learning slopes in most games. It also outperforms the baselines on the macro-average of each metric at every intelligence setting.",
+      "published_date": "2026-11-19T18:59:34Z",
+      "url": "https://arxiv.org/abs/2611.26624v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26624v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "PlayCraft：从代理游戏体验设计吸引人的游戏",
+        "chinese_summary": "PlayCraft 自动化框架通过代理游戏体验改进游戏，提高玩家掌握水平。",
+        "pain_point": "现有AI生成的游戏缺乏吸引力，难以提高玩家的掌握水平。",
+        "core_value": "通过自动化框架改进游戏，提高玩家的掌握体验。",
+        "technical_architecture": "结合玩家代理和工匠代理交替改进游戏。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定智能设置下评估。",
+        "key_contributions": [
+          "提出PlayCraft自动化框架",
+          "利用代理游戏体验改进游戏"
+        ],
+        "application_scenarios": [
+          "游戏设计",
+          "教育游戏开发"
+        ],
+        "technical_highlights": [
+          "结合玩家和工匠代理",
+          "基于学习进步改进游戏"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26619v1",
+      "source": "arxiv",
+      "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+      "authors": [
+        "Jinbin Luo",
+        "Xiaozhe Yao",
+        "Shang Yang",
+        "Zhijian Liu",
+        "Song Han",
+        "Qinghao Hu"
+      ],
+      "abstract": "Hybrid architectures have become mainstream among open-weight language models. Their global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency. We present TideCache, a serving system on CPU--GPU superchips with three components for allocating GPU memory among caches and managing their residency across GPU and host memory. The Transparent Cache Pool redistributes physical pages among cache components behind fixed virtual addresses, preserving cache layouts and backend interfaces. The Cache Streamer uses computation intervals provided by bounded-state layers to prefetch the next global-attention layer's prefix into GPU slots shared across global-attention layers, reducing GPU residency while overlapping layer-wise transfers with computation. Generated KV remains resident. The Request Scheduler selects resident or streamed execution and triggers capacity adjustments according to request size and queue state. Together, they let HBM released by streaming accommodate other cache components and additional requests. Implemented in SGLang and evaluated on GB300 and GH200 across seven model/platform configurations, TideCache completes up to 2.04x as many agent turns, reduces overall P50 per-token latency by 20--59%, and improves agent P50 TTFT by 1.40--3.05x compared with SGLang with HiCache.",
+      "published_date": "2026-11-19T18:58:31Z",
+      "url": "https://arxiv.org/abs/2611.26619v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26619v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "TideCache: CPU--GPU 超芯片上高效混合大语言模型服务与透明缓存管理及分层流式传输",
+        "chinese_summary": "TideCache 通过透明缓存池、缓存流式传输和请求调度器实现高效的大语言模型服务。",
+        "pain_point": "大语言模型的缓存需求随上下文长度和并发度变化，导致缓存管理复杂。",
+        "core_value": "通过透明缓存池和缓存流式传输优化 GPU 内存分配，提高缓存效率。",
+        "technical_architecture": "采用透明缓存池、缓存流式传输和请求调度器的架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定模型和平台配置下进行了评估。",
+        "key_contributions": [
+          "提出透明缓存池实现物理页在缓存组件间的动态分配",
+          "引入缓存流式传输减少 GPU 居住时间并重叠层间传输",
+          "设计请求调度器根据请求大小和队列状态选择执行方式"
+        ],
+        "application_scenarios": [
+          "适用于大语言模型的高效服务",
+          "支持多模型和多平台的灵活部署"
+        ],
+        "technical_highlights": [
+          "透明缓存池支持固定虚拟地址下的缓存布局和后端接口",
+          "缓存流式传输在层间传输与计算重叠中减少 GPU 居住时间"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26617v1",
+      "source": "arxiv",
+      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+      "authors": [
+        "Yuxin Jiang",
+        "Wenqiang Sun",
+        "Jiaqi Li",
+        "Yuchao Gu",
+        "Lvmin Zhang",
+        "Ivor Tsang",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Videos reveal how the world changes, but rarely the actions that cause those changes. Latent action learning recovers such supervision from visual transitions, yet often learns the underlying dynamics largely from scratch. We ask whether a pretrained video generator can instead provide the prior for both inverse and forward dynamics. We introduce O$^{2}$LaF, built on a simple principle: one prior, two dynamics. We initialize both models from the same pretrained video DiT and adapt them to their distinct roles: a feed-forward transition encoder with learnable action queries for inverse dynamics, and a causal, action-conditioned video generator for forward dynamics. By controlling information access and optimizing both dynamics end-to-end through a compact bottleneck, O$^{2}$LaF learns transferable actions from unlabeled videos. Across navigation and robotic manipulation, O$^{2}$LaF sets a new state of the art in few-shot action probing and enables stronger zero-shot action transfer across visual contexts and embodiments. Beyond generative video priors, we further extend our framework to predictive representation priors such as V-JEPA2, achieving competitive performance. Our findings suggest a broader paradigm for latent-action learning: repurposing pretrained video models to discover transferable actions and predict their consequences.",
+      "published_date": "2026-11-19T18:58:14Z",
+      "url": "https://arxiv.org/abs/2611.26617v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26617v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "一种先验，两种动态：重新利用视频扩散变换器进行自监督隐式动作学习",
+        "chinese_summary": "O$^{2}$LaF通过一个预训练的视频生成器提供先验，实现逆向和正向动态学习，提升动作学习效果。",
+        "pain_point": "现有方法往往需要大量标注数据来学习动作的动态。",
+        "core_value": "利用预训练的视频生成器作为先验，减少对标注数据的依赖，提升动作学习效果。",
+        "technical_architecture": "基于预训练的视频扩散变换器，分别用于逆向和正向动态学习。",
+        "quantitative_results": "在导航和机器人操作任务中，O$^{2}$LaF在少量样本下表现出色。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定视觉场景和实体中验证了效果。",
+        "key_contributions": [
+          "提出了一种新的先验方法，用于动作学习",
+          "展示了预训练模型在动作学习中的潜力"
+        ],
+        "application_scenarios": [
+          "导航任务",
+          "机器人操作"
+        ],
+        "technical_highlights": [
+          "利用预训练的视频生成器作为先验",
+          "通过紧凑瓶颈优化逆向和正向动态"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26615v1",
+      "source": "arxiv",
+      "title": "ScaleWorld: High-Resolution World Generation through Shared Prediction and Refinement",
+      "authors": [
+        "Yansong Qu",
+        "Wesker Zheng",
+        "Quanjian Song",
+        "Zhiyuan Zhang",
+        "Xiao Cao",
+        "Shengchuan Zhang",
+        "Liujuan Cao"
+      ],
+      "abstract": "High-resolution generation enables video world models to render fine-grained scene structures and textures, but directly generating high-resolution video incurs substantial computational and memory costs. We present ScaleWorld, a causal video model that unifies low-resolution world prediction and high-resolution refinement within a single shared backbone. By refining its own predictions, ScaleWorld produces high-resolution world videos without requiring a separate refinement model. For each video chunk, the shared backbone first completes a low-resolution prediction and then performs one-step high-resolution refinement conditioned on that prediction. To support efficient streaming generation, we maintain separate causal states with a long low-resolution history for prediction and a short high-resolution history for refinement. To address task interference during distillation, we separate specialist optimization from capability consolidation and introduce task-asymmetric on-policy distillation (TA-OPD). This procedure transfers prediction and refinement behaviors from specialized teachers into a shared student through local velocity matching under their respective sampling and history policies. {Extensive experiments demonstrate that ScaleWorld achieves high-quality world generation with improved computational and memory efficiency.",
+      "published_date": "2026-11-19T18:58:04Z",
+      "url": "https://arxiv.org/abs/2611.26615v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26615v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "ScaleWorld: 通过共享预测和细化生成高分辨率世界",
+        "chinese_summary": "ScaleWorld 通过共享骨干网络实现低分辨率预测和高分辨率细化，无需额外的细化模型即可生成高分辨率视频。",
+        "pain_point": "直接生成高分辨率视频计算和内存成本高。",
+        "core_value": "降低生成高分辨率视频的成本，提高效率。",
+        "technical_architecture": "采用共享骨干网络进行低分辨率预测和高分辨率细化。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "提出任务不对称在线策略蒸馏（TA-OPD）",
+          "实现低分辨率预测和高分辨率细化的统一"
+        ],
+        "application_scenarios": [
+          "视频生成",
+          "虚拟现实"
+        ],
+        "technical_highlights": [
+          "共享预测和细化模型",
+          "长低分辨率历史和短高分辨率历史的维护"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26613v1",
+      "source": "arxiv",
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "authors": [
+        "Yiyang Du",
+        "Yuxuan Kuang",
+        "Qitao Zhao",
+        "Yixuan Wang",
+        "Zhanqiu Guo",
+        "Yi Xu",
+        "Xin Li",
+        "Wenbin He",
+        "Liu Ren",
+        "Chenyan Xiong"
+      ],
+      "abstract": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succeed nor where they fail. In this paper, we present a systematic action-level analysis of frontier agents on direct robot control across 12 manipulation benchmarks. We introduce AgentRoboCritic, an intent-grounded critique framework in which the policy agent states a local intent alongside each action, and a critic evaluates the action's outcome and failure mode against this intent. Our action-level analysis demonstrates the promising capabilities of frontier agents on direct robot control, including closed-loop recovery from local execution failures, reliable semantic grounding across diverse scenes, and strong zero-shot manipulation without task-specific adaptation. It also identifies their current limitations, including task-relevant physical execution bottlenecks such as grasping and alignment, and uneven recovery across failure modes. Finally, we validate our critic on a 400-action human-annotated benchmark and release a dataset of 12,844 annotated actions alongside a fine-tuned open-source critic, Muse-Glimmer-30B, whose failure-mode accuracy rises from 32.58% to 74.24%, enabling low-cost action-level analysis.",
+      "published_date": "2026-11-19T18:57:25Z",
+      "url": "https://arxiv.org/abs/2611.26613v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26613v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "AgentRoboCritic: 理解前沿代理在直接机器人控制中的能力",
+        "chinese_summary": "提出AgentRoboCritic框架，对前沿代理在直接机器人控制中的能力进行细致分析。",
+        "pain_point": "现有基准仅报告回合级成功率，无法揭示代理成功或失败的具体原因。",
+        "core_value": "提供行动级分析，揭示代理在直接机器人控制中的优势与局限。",
+        "technical_architecture": "引入AgentRoboCritic框架，结合策略代理和批评家进行评估。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仍存在任务相关物理执行瓶颈，不同失败模式下的恢复不均衡。",
+        "key_contributions": [
+          "提出AgentRoboCritic框架",
+          "进行行动级分析",
+          "揭示代理能力与局限"
+        ],
+        "application_scenarios": [
+          "直接机器人控制",
+          "多模态语言代理"
+        ],
+        "technical_highlights": [
+          "结合策略代理和批评家",
+          "细致分析代理能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26609v1",
+      "source": "arxiv",
+      "title": "Variants of Beam Search for DiskANN",
+      "authors": [
+        "Viraj Agrawal",
+        "Kirankumar Shiragur"
+      ],
+      "abstract": "Graph-based data structures such as DiskANN, HNSW, and NSG constitute the state of the art for large-scale approximate nearest-neighbor (ANN) search. Indyk and Xu introduced the notion of $α$-reachable graphs, which include graphs built by DiskANN's slow-preprocessing construction, and proved that greedy search achieves an approximation factor of $\\tfrac{α+1}{α-1}$. Independently, Al-Jazzazi et al. proposed adaptive beam search (ABS) with a relaxation parameter $γ> 0$, showing a $\\tfrac{2}γ$ approximation on navigable graphs ($α\\approx 1$), where greedy search admits no guarantees. In this work, we unify and generalize these results by proving that ABS with parameter $γ$ on $α$-reachable graphs achieves an approximation of $\\tfrac{α+1}{α(γ+1)-1}$ for any metric. Moreover, on sorted $α$-reachable graphs (introduced by Gollapudi et al.) under the $\\ell_2$ metric, we obtain the tighter bound $\\max\\bigl(\\tfracα{α(γ+1)-1}, \\tfrac{α^{2}+1}{α^{2}(γ+1)-1}\\bigr)$. Beyond these theoretical results, we design a beam predictor using features inspired by fine-grained analysis of ABS, trained via a constrained objective that minimizes mean distance computations subject to a target recall. On three 100-million-point benchmarks, using graphs built by DiskANN's practical construction, beam predictor lowers mean query latency on SSD-resident indices at matched recall by up to $29.6\\%$ relative to classical beam search (CBS). Relative to ABS, it is faster in $11$ of $15$ settings, by up to $6.5\\%$, and at most $1.4\\%$ slower in the other $4$; at $95\\%$ recall, its advantage over ABS grows from $0.8$--$4.2\\%$ for $100$ neighbors to $4.6$--$5.6\\%$ for $500$ neighbors. In memory, it needs $1.3$--$23.7\\%$ fewer distance computations than CBS and $0.0$--$3.9\\%$ fewer than ABS.",
+      "published_date": "2026-11-19T18:57:05Z",
+      "url": "https://arxiv.org/abs/2611.26609v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26609v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "recsys",
+      "tags": [
+        "cs.DS",
+        "cs.DB",
+        "cs.IR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "DiskANN 的变种 Beam 搜索方法",
+        "chinese_summary": "提出了一种改进的自适应 Beam 搜索方法，提高了大规模近似最近邻搜索的效率。",
+        "pain_point": "现有近似最近邻搜索方法在大规模数据集上的搜索效率和准确性有待提高。",
+        "core_value": "通过理论证明和实验证明，改进的 Beam 搜索方法在多种场景下表现更优。",
+        "technical_architecture": "基于自适应 Beam 搜索和 α-可达图的理论框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定条件下进行了验证，未来需要更广泛的实验验证。",
+        "key_contributions": [
+          "提出了改进的自适应 Beam 搜索方法",
+          "证明了改进方法在 α-可达图上的理论性能",
+          "设计了基于特征的 Beam 预测器"
+        ],
+        "application_scenarios": [
+          "大规模数据集的近似最近邻搜索",
+          "高维向量的高效检索"
+        ],
+        "technical_highlights": [
+          "结合了自适应搜索和 α-可达图的特性",
+          "通过约束优化实现高效预测"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26607v1",
+      "source": "arxiv",
+      "title": "Bio-PM-Guided Synthetic IMU Generation",
+      "authors": [
+        "Deepali Singh",
+        "Deepesh Parpani",
+        "Aviral Gupta"
+      ],
+      "abstract": "Collecting and labeling inertial measurement unit (IMU) data for human activity recognition (HAR) is expensive, and models trained on one group of subjects often fail to generalize to unseen individuals. Even with balanced data, classifiers struggle to distinguish dynamically similar activity classes and benefit from targeted augmentation. We explore whether synthetic IMU data generated in the representation space of a pretrained biosignal encoder, Bio-PM \\cite{b1}, can serve as a practical augmentation source. Rather than synthesizing raw signals, we leverage Bio-PM's frozen encoder to convert 10-second IMU windows into token embedding sequences and train class-conditional decoders in this space: (1) an autoregressive transformer decoder that predicts tokens sequentially, and (2) a diffusion decoder that learns the token distribution through a denoising objective. We analyze generation realism through distributional metrics and embedding-space visualizations, evaluate downstream utility through leave-one-subject-out HAR classification, and present a PatchDecoder for approximate raw waveform reconstruction. Our diffusion decoder achieves a Train-on-Synthetic-Test-on-Real (TSTR) macro-F1 of 0.68, demonstrating that generated tokens are realistic enough to train a classifier that transfers to real data. Combining synthetic-token augmentation with a 320-dimensional gravity-aware feature representation raises LOSO macro-F1 from 0.729 to 0.809 over a real-only baseline across 51 subjects on the WISDM benchmark, with statistically significant gains concentrated in the most challenging activity classes. These results demonstrate that high-fidelity generation in a pretrained encoder's representation space is achievable and practically useful for cross-subject HAR augmentation.",
+      "published_date": "2026-11-19T18:56:25Z",
+      "url": "https://arxiv.org/abs/2611.26607v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26607v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "生物信号引导合成IMU数据生成",
+        "chinese_summary": "通过预训练的生物信号编码器Bio-PM生成合成IMU数据，提高活动识别模型的泛化能力。",
+        "pain_point": "收集和标注IMU数据成本高，模型难以泛化到未见过的个体。",
+        "core_value": "利用预训练的生物信号编码器生成合成IMU数据，作为数据增强源，提高模型泛化能力。",
+        "technical_architecture": "使用预训练的生物信号编码器将IMU数据转换为token嵌入序列，并训练条件生成模型。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定活动分类任务上进行了验证。",
+        "key_contributions": [
+          "提出使用预训练生物信号编码器生成合成IMU数据",
+          "设计了自回归变压器解码器和扩散解码器"
+        ],
+        "application_scenarios": [
+          "活动识别",
+          "健康监测"
+        ],
+        "technical_highlights": [
+          "利用预训练模型生成合成数据",
+          "提出扩散解码器"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.26603v1",
+      "source": "arxiv",
+      "title": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
+      "authors": [
+        "Peiyun Hu",
+        "Marko Mihajlovic",
+        "Lyndon Duong",
+        "Lahav Lipson",
+        "Wei Dong",
+        "Amaël Delaunoy",
+        "Stephan R. Richter",
+        "Vladlen Koltun"
+      ],
+      "abstract": "We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. By analyzing prior methods for monocular depth estimation, we find that they commonly trade off temporal consistency and boundary sharpness: multi-frame methods favor consistency, single-frame methods favor sharpness. To overcome this trade-off, we train a single, scalable network that processes both images and video and predicts depth maps at native resolution. Depth Pro 2 produces depth maps that are metrically accurate, sharp, and temporally consistent all at once, outperforming prior work in all of these dimensions. We release a family of models that define a new Pareto frontier in terms of metric accuracy, sharpness, temporal consistency, and runtime. We release code and weights at https://apple-aiml-research.github.io/ml-depth-pro-2/",
+      "published_date": "2026-11-19T18:55:41Z",
+      "url": "https://arxiv.org/abs/2611.26603v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26603v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "Depth Pro 2: 高精度且时序一致的单目深度估计",
+        "chinese_summary": "Depth Pro 2 同时提供高精度、边界清晰和时序一致的深度图，超越现有方法。",
+        "pain_point": "现有单目深度估计方法在边界清晰度和时序一致性之间存在权衡。",
+        "core_value": "通过单一可扩展网络同时实现高精度、边界清晰和时序一致性。",
+        "technical_architecture": "单一可扩展网络处理图像和视频，预测原生分辨率的深度图。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来可能需要进一步优化模型以适应更多复杂场景。",
+        "key_contributions": [
+          "同时实现高精度、边界清晰和时序一致性",
+          "单一可扩展网络处理图像和视频"
+        ],
+        "application_scenarios": [
+          "自动驾驶",
+          "机器人视觉"
+        ],
+        "technical_highlights": [
+          "单一网络处理图像和视频",
+          "预测原生分辨率的深度图"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

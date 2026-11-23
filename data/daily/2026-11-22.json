@@ -1,0 +1,489 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-23T03:34:00.781966+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "arxiv-2611.27751v1",
+      "source": "arxiv",
+      "title": "Budgeted Subset Selection with a Transferable Learned Value Model",
+      "authors": [
+        "Jade Lejeune Herman",
+        "Johan A. K. Suykens",
+        "Peter Goos"
+      ],
+      "abstract": "Subset selection is a fundamental task in machine learning, statistics and combinatorial optimisation, with applications in active learning, band selection, input selection and experimental design. The utility of a subset depends on information revealed only after the selection, such as labels or responses, and on interactions among selected candidates. Existing approaches combine value estimation and redundancy control in application-specific ways, which limits their use in other domains. This paper introduces Subset Acquisition with Learned Value Estimates and Search (SALVES), a framework that decomposes subset selection into two components. First, a value model is trained by supervised learning on tasks where the hidden information is known. On a new task, it predicts the utility each candidate would add to the current selection. Second, a selection step chooses the subset from these predictions, typically by simulated annealing with a diversity term penalising redundancy. The value model transfers to new classes, pretrained networks, datasets and sensors, and from synthetic to real data. On the four applications, SALVES matches or outperforms application-specific baselines on average. It requires substantially fewer bands for equal accuracy and remains reliable in input selection where individual baselines fail.",
+      "published_date": "2026-11-20T15:42:07Z",
+      "url": "https://arxiv.org/abs/2611.27751v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27751v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "预算化子集选择与可转移学习价值模型",
+        "chinese_summary": "提出SALVES框架，通过学习和搜索实现子集选择，提高跨域应用性能。",
+        "pain_point": "现有方法在不同领域应用受限，难以泛化。",
+        "core_value": "提出可转移学习价值模型，提升子集选择的泛化能力。",
+        "technical_architecture": "分解子集选择为学习价值模型和选择步骤。",
+        "quantitative_results": "在四个应用中，SALVES匹配或超越了特定应用基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在四个应用中进行了验证。",
+        "key_contributions": [
+          "提出可转移学习价值模型",
+          "提出SALVES框架",
+          "提升子集选择的泛化能力"
+        ],
+        "application_scenarios": [
+          "主动学习",
+          "带宽选择",
+          "输入选择",
+          "实验设计"
+        ],
+        "technical_highlights": [
+          "价值模型可跨域转移",
+          "结合学习和搜索优化子集选择"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27750v1",
+      "source": "arxiv",
+      "title": "RoSci: Exploring Robustness in Science VLMs",
+      "authors": [
+        "Junying Wang",
+        "Yijin Guo",
+        "Yalun Wu",
+        "Ziheng Jiao",
+        "Farong Wen",
+        "Qihang Yan",
+        "Wenzhe Li",
+        "Ye Shen",
+        "Qi Jia",
+        "Chunyi Li",
+        "Zicheng Zhang",
+        "Guangtao Zhai"
+      ],
+      "abstract": "Recent advancements in Vision-Language Models (VLMs) enable significant progress in scientific tasks. However, these models are generally assumed to be presented with complete and accurate information, overlooking the challenges of erroneous/missing information in wild scenarios. To address this gap, we introduce the concept of Scientific Model Robustness, which defines a model's ability to detect anomalies, assess solvability, and perform self-calibration when faced with Information Error (inconsistencies) or Information Loss (insufficiency). Specifically, we present RoSci-Bench, a diagnostic benchmark of 1,220 samples using a seed-variant strategy across six degradation types. To address VLM fragility, we further propose RoSci-Agent, a framework that employs a Parse-Verify-Decide pipeline to vet premises before reasoning. The evaluated VLMs sometimes answer questions whose premises are invalid or incomplete. RoSci-Agent achieves a higher Overall Robustness Score than the evaluated standalone VLMs. RoSci-Bench gives the multimodal reasoning community a common test of when models answer, request clarification, or reject a scientific question.",
+      "published_date": "2026-11-20T15:41:48Z",
+      "url": "https://arxiv.org/abs/2611.27750v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27750v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "RoSci: 探索科学VLMs的鲁棒性",
+        "chinese_summary": "提出RoSci-Agent框架，提高VLMs在信息错误或缺失情况下的鲁棒性。",
+        "pain_point": "现有VLMs在处理错误或缺失信息时表现不佳。",
+        "core_value": "通过RoSci-Bench和RoSci-Agent，提升VLMs在科学任务中的鲁棒性。",
+        "technical_architecture": "采用Parse-Verify-Decide管道进行前提验证。",
+        "quantitative_results": "RoSci-Agent在鲁棒性评分上优于现有VLMs。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅针对六种降级类型进行测试。",
+        "key_contributions": [
+          "提出科学模型鲁棒性概念",
+          "构建RoSci-Bench基准测试",
+          "提出RoSci-Agent框架"
+        ],
+        "application_scenarios": [
+          "科学推理任务",
+          "复杂信息处理"
+        ],
+        "technical_highlights": [
+          "种子变异策略",
+          "自我校准机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27746v1",
+      "source": "arxiv",
+      "title": "Shared Understanding in Human-AI Teams: Coordination Continuity in Evolving Work",
+      "authors": [
+        "Siân Lindley",
+        "Britta Burlin",
+        "Christian Poelitz",
+        "Lev Tankelevitch",
+        "Richard Banks"
+      ],
+      "abstract": "People are increasingly working with AI agents as part of extended, asynchronous workflows. In these settings, shared access to information does not guarantee a shared basis for action: goals, plans, and roles may persist while their current significance changes. We introduce coordination continuity, the extent to which collaborators sustain a workable basis for interdependent action as work progresses. Drawing on research on collaborative work, along with two qualitative team studies and a reflexive case from our own repository-based environment, we present a framework of three elements: durable representations of collaborative work; relative coordination properties that support interpretation of representations in the moment; and interaction mechanisms through which the status of representations can be understood and altered. We use a build-act-drift-rebuild heuristic and the notion of consequential moments to characterise when rebuilding may be needed. We draw eight design implications for collaborative AI infrastructure.",
+      "published_date": "2026-11-20T15:39:11Z",
+      "url": "https://arxiv.org/abs/2611.27746v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27746v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "人类与AI团队中的共享理解：工作演进中的协调连续性",
+        "chinese_summary": "提出了协调连续性框架，以改善人类与AI团队在工作中的协作效率。",
+        "pain_point": "人类与AI团队在异步工作流程中存在协作基础不稳固的问题。",
+        "core_value": "通过构建、行动、漂移、重建的机制，确保协作基础的持续性。",
+        "technical_architecture": "提出了协作连续性框架，包含持久的协作表示、相对协调属性和交互机制。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于定性研究，未来需进行更多实证研究验证。",
+        "key_contributions": [
+          "提出了协调连续性概念",
+          "构建了协作连续性框架",
+          "提出了重建机制"
+        ],
+        "application_scenarios": [
+          "异步工作流程中的团队协作",
+          "基于仓库的环境中的协作"
+        ],
+        "technical_highlights": [
+          "提出了build-act-drift-rebuild机制",
+          "引入了相对协调属性和交互机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27743v1",
+      "source": "arxiv",
+      "title": "Pre-Crawl Prioritization and Seed Classification for Large-Scale Web Archiving",
+      "authors": [
+        "Akshith Garapati",
+        "Sawood Alam"
+      ],
+      "abstract": "Pre-crawl prioritization systems decide which pages to fetch first before indexing, aiming to improve crawl efficiency and coverage. Existing approaches based on page popularity and relevance are unsuited to web-archival crawlers that prioritize comprehensive coverage over selective retrieval. We explore prioritization techniques tailored to web archival operations using URL lexical analysis, dynamic domain reputation systems, and HTTP response analysis to inform crawl scheduling decisions. By incorporating predictive models that estimate content change and disappearance probabilities, we improve crawl completeness while reducing redundant visits to stable resources. Through large-scale experiments, we demonstrate that our methods improve archival effectiveness and resource utilization compared to undirected crawling.",
+      "published_date": "2026-11-20T15:37:26Z",
+      "url": "https://arxiv.org/abs/2611.27743v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27743v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "recsys",
+      "tags": [
+        "cs.DL",
+        "cs.IR"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "大规模网页归档中预爬取优先级和种子分类",
+        "chinese_summary": "通过URL词分析、动态域名声誉系统和HTTP响应分析，提高归档效率和覆盖率。",
+        "pain_point": "现有方法不适用于全面覆盖而非选择性检索的网页归档。",
+        "core_value": "通过预测模型提高归档完整性和资源利用率。",
+        "technical_architecture": "使用URL词分析、动态域名声誉系统和HTTP响应分析。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步优化预测模型。",
+        "key_contributions": [
+          "提出基于URL词分析的预爬取优先级方法",
+          "引入动态域名声誉系统"
+        ],
+        "application_scenarios": [
+          "大规模网页归档",
+          "历史网页保存"
+        ],
+        "technical_highlights": [
+          "结合预测模型估计内容变化和消失概率",
+          "提高归档覆盖率和资源利用率"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27741v1",
+      "source": "arxiv",
+      "title": "Can Vision-Language Models Synthesize Executable Game-Playing Programs?",
+      "authors": [
+        "Yao Tong",
+        "Jiaxin Qi",
+        "Dingyu Zhang",
+        "Jianqiang Huang"
+      ],
+      "abstract": "Recent advances in vision-language models (VLMs) have endowed multimodal agents with increasingly strong visual perception and long-horizon reasoning capabilities, making VLM-based autonomous game playing feasible. Existing game benchmarks primarily evaluate whether an agent can select appropriate actions from the current visual state across different scenarios and games. However, most of them adopt a step-by-step interaction paradigm where the current visual observation is sent to the agent before each action. In practical deployment, this paradigm introduces two fundamental limitations: the game loop must wait for model inference, making real-time interaction impractical, and repeated VLM calls incur substantial cost. Therefore, we propose PlayScriptBench, a script-based game benchmark that evaluates whether VLMs can synthesize an executable game-playing program from game states. This setting jointly evaluates visual grounding, understanding of game dynamics, long-horizon strategic reasoning, and executable program synthesis, providing a more comprehensive assessment of game-playing agents. To support more tractable evaluation for current general-purpose VLMs, we further introduce a four-stage pipeline --- Explore, Perception, API Construction, and Strategy Composition --- that decomposes controller synthesis into game exploration, state perception, interface construction, and strategic control, enabling agents to progressively construct an executable program. Experiments on 16 games spanning 4 genres show that even strong VLMs struggle on our benchmark, revealing a substantial gap between passive visual game understanding and executable closed-loop game control. These results establish script-based controller synthesis as a complementary direction for benchmarking VLM-based game-playing agents.",
+      "published_date": "2026-11-20T15:36:12Z",
+      "url": "https://arxiv.org/abs/2611.27741v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27741v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "视觉-语言模型能否合成可执行的游戏程序？",
+        "chinese_summary": "提出PlayScriptBench，评估VLMs从游戏状态合成可执行游戏程序的能力。",
+        "pain_point": "现有游戏基准主要评估基于VLM的代理在不同场景和游戏中选择适当动作的能力。",
+        "core_value": "提供更全面的游戏代理评估，同时解决实时交互和模型调用成本问题。",
+        "technical_architecture": "基于脚本的游戏基准，评估视觉定位、游戏动力学理解、长期战略推理和可执行程序合成。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "当前仅支持通用VLMs的更可管理评估。",
+        "key_contributions": [
+          "提出PlayScriptBench",
+          "全面评估游戏代理能力",
+          "解决实时交互和模型调用成本问题"
+        ],
+        "application_scenarios": [
+          "游戏开发",
+          "智能游戏代理"
+        ],
+        "technical_highlights": [
+          "脚本驱动的游戏基准",
+          "综合评估多方面能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27738v1",
+      "source": "arxiv",
+      "title": "Average-Depth Variable Execution via Request-Local Token Routing",
+      "authors": [
+        "Pengjie Zheng",
+        "Mengwei Xie",
+        "Huan Yang",
+        "Si Wu",
+        "Pengfei Hu",
+        "Feng Li"
+      ],
+      "abstract": "Layer skipping can reduce large language model inference costs, but a request budget does not specify how to allocate layer execution across generated tokens. We introduce \\method{}, which allows tokens to execute different numbers of layers while matching each request's mean executed depth to a continuous budget. At each routed layer, a router reads the current token state and its request's budget and decides whether to execute the Transformer block. Tokens that skip the block pass through a lightweight residual adapter and write no key/value (K/V) entry at that layer. A single checkpoint serves requests with different budgets in the same batch. Across three LLaMA backbones, six quality metrics, and 13 budgets, AVERT is best or tied for best in 206 of 234 comparisons. Across single- and mixed-budget batches, the mean absolute per-request budget error is at most 1.15 percentage points. When grouping requests by budget leaves batches underfilled, mixing budgets reduces decode time per output token (TPOT) by 4.3--21.2%.",
+      "published_date": "2026-11-20T15:35:08Z",
+      "url": "https://arxiv.org/abs/2611.27738v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27738v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于请求本地令牌路由的平均深度可变执行",
+        "chinese_summary": "AVERT允许令牌执行不同数量的层，同时匹配每个请求的平均执行深度到一个连续预算。",
+        "pain_point": "现有方法无法精确控制每个令牌的层执行数量。",
+        "core_value": "AVERT能够根据请求预算灵活调整执行深度，提高效率。",
+        "technical_architecture": "通过请求本地令牌路由决定是否执行Transformer块。",
+        "quantitative_results": "在三个LLaMA模型上，AVERT在206次比较中表现最佳或并列最佳。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步研究不同场景下的性能。",
+        "key_contributions": [
+          "引入了AVERT方法",
+          "实现了请求预算与执行深度的匹配",
+          "支持不同预算请求的混合处理"
+        ],
+        "application_scenarios": [
+          "大型语言模型推理",
+          "需要灵活调整执行深度的场景"
+        ],
+        "technical_highlights": [
+          "轻量级残差适配器",
+          "单个检查点处理不同预算请求"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27734v1",
+      "source": "arxiv",
+      "title": "AutoOntologyBench: A Task-Grounded Benchmark for Agentic Knowledge Engineering",
+      "authors": [
+        "Minye Shao",
+        "Chenghao Xiao",
+        "Xingyue Zhao",
+        "Yang Long"
+      ],
+      "abstract": "Foundation-model agents are increasingly extending beyond software engineering (SWE) into autonomous scientific research, where acquiring and integrating domain knowledge remains a critical challenge. Recent industrial advances have increasingly adopted knowledge graphs and ontology-based semantic layers to organize heterogeneous knowledge into reusable representations. We ask: Can autonomous agents construct ontologies that help them solve real tasks, and do they offer measurable benefits over alternative knowledge representations? Existing benchmarks evaluate ontology correctness or agent task success in isolation, leaving the value of autonomously acquired knowledge unresolved. We therefore introduce AutoOntologyBench, a task-grounded benchmark comprising 19,947 audited tasks grounded in 18 real-world knowledge sources across 7 domains, with source-native verification. Spanning Application, Repair, Organization, and Construction, AutoOntologyBench compares nine frontier-model agents under matched knowledge representations. Layered on retrieval, agent-built ontologies add 6.1 points of task success, yet trail an expert-derived reference by 13.0, identifying autonomous knowledge acquisition as the bottleneck to scalable scientific research. Code and resources are available at https://github.com/VinyehShaw/AutoOntologyBench.",
+      "published_date": "2026-11-20T15:29:27Z",
+      "url": "https://arxiv.org/abs/2611.27734v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27734v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "AutoOntologyBench: 一种基于任务的自主知识工程基准",
+        "chinese_summary": "AutoOntologyBench 是一种基于任务的基准，评估自主代理构建的本体在解决实际任务中的效果。",
+        "pain_point": "自主代理在科学领域中构建和整合知识存在挑战。",
+        "core_value": "提供一种评估自主代理构建本体效果的新基准。",
+        "technical_architecture": "基于知识图谱和本体的多层次架构。",
+        "quantitative_results": "自主构建的本体在任务成功上增加了6.1分，但落后于专家构建的本体13.0分。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅涵盖7个领域，未来需扩展更多领域。",
+        "key_contributions": [
+          "提供一种新的任务导向基准",
+          "评估自主构建本体的效果"
+        ],
+        "application_scenarios": [
+          "科学领域自主研究",
+          "知识图谱构建"
+        ],
+        "technical_highlights": [
+          "包含19,947个任务",
+          "覆盖18个知识源"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27728v1",
+      "source": "arxiv",
+      "title": "Quantitative Measurement of Pavement Distress based on Vehicle Camera and Perspective Correction",
+      "authors": [
+        "Sike Wang",
+        "Yizhou Lin",
+        "Shuo Li",
+        "Yi Jiang",
+        "Chengcheng Tao"
+      ],
+      "abstract": "Using image data is becoming an important method for highway agencies to automatically evaluate pavement conditions. However, most studies focus on improving detection accuracy rather than obtaining quantitative measurements, such as the length or area of pavement distress. Although field camera calibration can provide such measurements, it is impractical for large volumes of onboard images collected from different vehicles. This study develops a method to quantitatively measure pavement distress directly from in-vehicle camera images without on-site camera calibration. A quadrilateral region of interest is first identified based on lane detection and used to construct a perspective transformation matrix for image correction. Size correction is then performed using the proportions of road markings in the image and a specified scale, which also enables estimation of the actual width of the selected region. The corrected images are subsequently processed using object detection algorithms to obtain quantitative distress measurements. The proposed method can efficiently perform perspective correction for images collected by the same vehicle camera with minimal manual effort. The measured pavement patch lengths show a trend consistent with pavement friction data. By calibrating vehicle cameras using only image information, this study enables quantitative pavement distress detection without additional field experiments. The approach provides a practical solution for processing large volumes of vehicle-camera data, particularly as connected vehicles generate increasing amounts of uncalibrated roadway imagery.",
+      "published_date": "2026-11-20T15:27:14Z",
+      "url": "https://arxiv.org/abs/2611.27728v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27728v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "基于车辆摄像头和透视校正的路面病害定量测量",
+        "chinese_summary": "提出了一种无需现场校准即可从车载摄像头图像中直接定量测量路面病害的方法。",
+        "pain_point": "现有方法主要关注提高检测准确性，而忽视了定量测量路面病害的长度或面积。",
+        "core_value": "该方法能够高效地对同一车辆摄像头采集的图像进行透视校正，无需大量手动操作。",
+        "technical_architecture": "通过车道检测识别四边形区域，并构建透视变换矩阵进行图像校正。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅适用于同一车辆摄像头采集的图像。",
+        "key_contributions": [
+          "无需现场校准即可进行定量测量",
+          "高效透视校正",
+          "利用车道标记进行尺寸校正"
+        ],
+        "application_scenarios": [
+          "高速公路维护",
+          "路面病害监测"
+        ],
+        "technical_highlights": [
+          "基于车道标记的尺寸校正",
+          "无需现场校准的透视校正"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27726v1",
+      "source": "arxiv",
+      "title": "A Switching Mechanism for Selecting Environment-Adaptive Personalized Gains in Hearing Aids",
+      "authors": [
+        "Nafisa Zarrin Tasnim",
+        "Nasser Kehtarnavaz"
+      ],
+      "abstract": "Personalized amplification gains for hearing aids have been shown to be preferred over prescriptive gains. Since the preferred settings can vary depending on the background audio environment, this paper presents a switching mechanism or system that automatically selects personalized gains for a current background audio environment. To prevent foreground speech from interfering with background environment analysis, a one-class voice activity detector is designed to identify speech activity from speech mixed with noise. A consistency check is conducted to enable distinguishing foreground speech from background speech, preserving babble as a background environment of interest because hearing aid users often struggle to understand speech in background babble. Sound segments without foreground speech are then analyzed by an online discovery method combining Bayesian change-point detection with a memory of previously encountered environments. This discovery method detects changes, recognizes returning environments, and discovers new ones without a predefined number of environments. Experimental results show that three-seed mean macro-averaged F1 scores of 85.53%-91.98% across eight speech/background-corpus pairs covering 36 background noise types were achieved. Furthermore, the discovery method achieved adjusted Rand indices of 0.91 and 0.96 on two families of test streams. In the same-recording-return condition of audio streams combining speech with four background audio environments often encountered by hearing aid users, the switching mechanism selected the correct personalized gain profile after 105 environment changes, recalled the stored gain profile at every return, and made no switches to an incorrect gain profile.",
+      "published_date": "2026-11-20T15:25:16Z",
+      "url": "https://arxiv.org/abs/2611.27726v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27726v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "助听器中环境自适应个性化增益切换机制",
+        "chinese_summary": "提出了一种自动选择当前背景音频环境个性化增益的切换机制。",
+        "pain_point": "助听器增益设置依赖于背景音频环境，但现有方法无法自动适应。",
+        "core_value": "通过自动切换个性化增益提高用户在不同环境中的听觉体验。",
+        "technical_architecture": "结合一类语音活动检测和贝叶斯变化点检测实现环境适应。",
+        "quantitative_results": "实验结果显示F1分数在85.53%-91.98%之间。",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步测试更多环境以验证其广泛适用性。",
+        "key_contributions": [
+          "提出了一种自动选择个性化增益的机制",
+          "结合语音活动检测和贝叶斯变化点检测"
+        ],
+        "application_scenarios": [
+          "助听器个性化增益调整",
+          "嘈杂环境下的语音识别"
+        ],
+        "technical_highlights": [
+          "一类语音活动检测",
+          "贝叶斯变化点检测"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "arxiv-2611.27722v1",
+      "source": "arxiv",
+      "title": "Beyond Math, Code, and Logic: Do Reasoning Models Transfer to Scientific Argumentation?",
+      "authors": [
+        "Buse Sibel Korkmaz",
+        "Antonio del Rio Chanona"
+      ],
+      "abstract": "Scientific discourse depends on argumentative reasoning: identifying claims, evaluating evidence, and constructing coherent responses. While recent advances in reasoning-capable language models have demonstrated strong performance on mathematical, coding, and logical benchmarks, their ability to engage in scientific argumentation remains unclear. We present the first systematic evaluation of language models across seven tasks spanning argument mining, rebuttal generation, and discourse-level reasoning using research papers, peer reviews, and grant proposals. Our study reveals that even frontier models with strong general reasoning skills struggle with domain-specific argumentative tasks, highlighting a fundamental capability gap. To address this, we introduce a training framework that explicitly scaffolds the argumentative reasoning process in language models, substantially improving their competence in scientific discourse. The resulting compact models approach or exceed the performance of much larger proprietary systems and generalize to unseen conversational settings, demonstrating reasoning transfer beyond task-specific supervision. These findings underscore that effective scientific argumentation is not an emergent property of scale, but requires explicit reasoning-aware training, and they point toward practical pathways for building AI systems that can contribute meaningfully to scientific discourse.",
+      "published_date": "2026-11-20T15:24:08Z",
+      "url": "https://arxiv.org/abs/2611.27722v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27722v1",
+      "code_url": null,
+      "hf_url": null,
+      "category": "llm",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "upvotes": 0,
+      "hot_score": 0,
+      "structured_summary": {
+        "chinese_title": "超越数学、代码和逻辑：推理模型在科学论证中的迁移能力",
+        "chinese_summary": "研究发现前沿模型在特定领域论证任务上表现不佳，提出一种训练框架提升模型在科学讨论中的能力。",
+        "pain_point": "现有模型在科学论证任务上表现不足，存在领域特定能力差距。",
+        "core_value": "提出一种训练框架，显著提升模型在科学讨论中的论证能力，适用于多种对话场景。",
+        "technical_architecture": "提出一种明确支撑论证推理过程的训练框架。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅基于现有数据集进行评估，未来需进一步验证。",
+        "key_contributions": [
+          "提出一种训练框架提升模型在科学论证中的表现",
+          "模型在未见过的对话场景中表现出色",
+          "证明了推理能力的迁移超越了特定任务的监督"
+        ],
+        "application_scenarios": [
+          "科研论文分析",
+          "同行评审",
+          "资助提案评估"
+        ],
+        "technical_highlights": [
+          "明确支撑论证推理过程",
+          "模型性能接近或超过大型专有系统"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

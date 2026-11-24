@@ -1,0 +1,517 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-24T06:48:39.002169+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.27193",
+      "source": "huggingface",
+      "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction",
+      "authors": [
+        "Haowei He",
+        "Ziwen Zhao",
+        "Chenshuo Pan",
+        "Gang Lin",
+        "Zhihao Yang",
+        "Chao Wang",
+        "Xinzhang Liu",
+        "Kaidong Yu",
+        "Han Gao",
+        "Dongfang Li",
+        "Menglin Yang",
+        "Shuangyong Song",
+        "Yongxiang Li"
+      ],
+      "abstract": "Manifold-constrained Hyper-Connections (mHC) extends residual connections to multiple streams and stabilizes residual propagation by constraining stream-mixing residual matrices to the Birkhoff polytope, the set of doubly stochastic matrices. In this work, we investigate how to effectively mix residual streams within the Birkhoff polytope. We reveal a mixing trade-off: when under-mixed residual matrices stay close to the vertices of the Birkhoff polytope, hyper-connections will degenerate into a set of nearly independent streams; when over-mixed residual matrices are concentrated around the uniform barycenter of the polytope, streams will become less distinguishable from each other. We theoretically validate our findings by bounding the cumulative residual mixing, stream difference and gradient difference of mixing coefficients across layers. Motivated by these findings, we propose Contraction for Manifold-Constrained Hyper-Connections (cmHC), an exact doubly stochastic method which geometrically contracts the Birkhoff polytope toward its interior. This contraction mitigates under-mixing by forcing the residual matrices to explore deeper into the polytope, with a provable stream mixing bound and no new parameterization. Moreover, we apply a moderate contraction at the shallow layers to prevent over-mixing, enabling stable gradient propagation on extremely large-scale model pretraining. Extensive experiments across dense and mixture-of-experts models at various parameter scales demonstrate the effectiveness and scalability of cmHC. We also develop fused operators for cmHC on Ascend NPUs, reducing hyper-connection execution latency by up to 44.8%.",
+      "published_date": "2026-11-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.27193",
+      "pdf_url": "https://arxiv.org/pdf/2611.27193",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.27193",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 94,
+      "hot_score": 940,
+      "structured_summary": {
+        "chinese_title": "cmHC: 通过几何收缩平衡超连接中的流混合",
+        "chinese_summary": "提出了一种新的方法cmHC，通过几何收缩Birkhoff多面体内部来有效混合残差流。",
+        "pain_point": "现有方法在混合残差流时存在过度混合或不足混合的问题。",
+        "core_value": "通过几何收缩方法解决了残差流混合的平衡问题，提高了模型性能。",
+        "technical_architecture": "使用几何收缩方法将Birkhoff多面体收缩到内部。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定场景下进行了验证。",
+        "key_contributions": [
+          "提出了一种新的几何收缩方法cmHC",
+          "理论上验证了残差流混合的边界条件",
+          "解决了残差流混合的过度和不足问题"
+        ],
+        "application_scenarios": [
+          "深度学习模型中的残差流混合",
+          "提高模型训练和泛化能力"
+        ],
+        "technical_highlights": [
+          "通过几何收缩方法有效平衡残差流混合",
+          "理论和实践相结合的验证方法"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.27963",
+      "source": "huggingface",
+      "title": "Non-penetrating World Models",
+      "authors": [
+        "Yuhang Dai",
+        "Yinwei Wu",
+        "Ziyue Lin",
+        "Han Ji",
+        "Xingyi Yang"
+      ],
+      "abstract": "We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world models respond to physical obstacles. Our evaluation reveals that none of the open-source models can reliably prevent such failures. Surprisingly, however, these models already encode the information needed to predict such violations. We find that the hidden states of diffusion transformers (DiTs) can predict whether a candidate action will penetrate an obstacle. Building on this, we introduce NoPeWorld, a lightweight framework that detects and prevents penetration. Specifically, we train a small prediction head on top of a frozen DiT's hidden states to read out if a candidate action is safe or not. Unsafe actions are then replaced with safe ones that best preserve the original intent. Despite its simplicity, NoPeWorld substantially reduces the physical violation rate, averaged over six video world models, from 74% to 16%. Remarkably, our method shows zero-shot generalization to open-domain imagery, third-person viewpoints, and moving obstacles. We publicly release our code, the NoPeBench benchmark, and model weights. Project Page: https://nopeworld.github.io .",
+      "published_date": "2026-11-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.27963",
+      "pdf_url": "https://arxiv.org/pdf/2611.27963",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.27963",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 55,
+      "hot_score": 550,
+      "structured_summary": {
+        "chinese_title": "非穿透世界模型",
+        "chinese_summary": "提出NoPeWorld框架，显著降低物体穿透率，适用于多种视频世界模型。",
+        "pain_point": "现有交互视频世界模型中物体穿透问题普遍存在。",
+        "core_value": "通过预测隐藏状态检测并防止穿透，实现零样本泛化。",
+        "technical_architecture": "基于冻结的扩散变换器（DiT）隐藏状态训练预测头。",
+        "quantitative_results": "穿透率从74%降至16%。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定视频世界模型上测试。",
+        "key_contributions": [
+          "提出NoPeBench基准",
+          "提出NoPeWorld框架",
+          "实现穿透检测与预防"
+        ],
+        "application_scenarios": [
+          "交互视频世界模型",
+          "虚拟现实与增强现实"
+        ],
+        "technical_highlights": [
+          "零样本泛化能力",
+          "简单高效框架"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.26954",
+      "source": "huggingface",
+      "title": "Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation",
+      "authors": [
+        "Jingchen Sun",
+        "Jiaxing Zhang",
+        "Qingqiao Hu",
+        "Dingqiang Ye",
+        "Yuqi Jia",
+        "Yijun Liang",
+        "Di Fu",
+        "Yunjie Tian",
+        "Dongdi Zhao",
+        "Changyou Chen"
+      ],
+      "abstract": "Video foresight reasoning requires vision-language models to anticipate future events or next actions from currently observed videos. Existing methods fit future captions, rationales, or full visual states, but face two limitations. First, they rely on annotations or external large models for supervision, limiting scalability. We address this with an on-policy self-distillation framework that turns past-future video pairs into a natural self-supervised signal without extra annotations or LLM supervision. Second, they treat the whole future clip as equally valuable, although most of it is irrelevant context information. We address this by defining a foresight score, from which we obtain a contrastive privilege advantage that drives the model to learn the most valuable future information. Since the score is intractable, we optimize a tractable lower-bound surrogate that interpolates this advantage, computed between the true and a random reference future, with a teacher-student distillation advantage; together, they amplify decision-relevant content information and suppress irrelevant context information. We call the resulting framework Future-OPSD. On open-ended prediction and closed-ended planning, Future-OPSD improves base models by up to 14.2 and 15.9 points without compromising general video understanding. Code will be available at https://jingchensun.github.io/future-opsd/",
+      "published_date": "2026-11-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.26954",
+      "pdf_url": "https://arxiv.org/pdf/2611.26954",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.26954",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 42,
+      "hot_score": 420,
+      "structured_summary": {
+        "chinese_title": "从未标注视频中学习视频前瞻推理",
+        "chinese_summary": "提出Future-OPSD框架，通过自监督信号和对比优势学习前瞻信息。",
+        "pain_point": "现有方法依赖标注或外部大模型监督，限制了可扩展性。",
+        "core_value": "通过自监督信号和对比优势学习前瞻信息，提高模型的可扩展性和效率。",
+        "technical_architecture": "提出on-policy自蒸馏框架，定义前瞻得分和对比优势。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来工作可探索更多应用场景。",
+        "key_contributions": [
+          "提出Future-OPSD框架",
+          "定义前瞻得分和对比优势",
+          "优化可计算的下界近似"
+        ],
+        "application_scenarios": [
+          "开放预测",
+          "封闭预测"
+        ],
+        "technical_highlights": [
+          "无需额外标注",
+          "自监督学习前瞻信息"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.24636",
+      "source": "huggingface",
+      "title": "Clover-35B-A3B-Preview Technical Report",
+      "authors": [
+        "DiffuSpace Technical Team"
+      ],
+      "abstract": "We introduce Clover-35B-A3B-Preview (Clover), a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters, supporting thinking-mode generation. Clover adapts Gated Delta Networks to block diffusion by combining recurrent memory of previously generated context with bidirectional softmax attention inside the current block. Historical memory readout competes with current-block tokens in a shared softmax, with learnable block-size calibration and a separate, zero-initialized right-context convolution branch. Clover leads the seven evaluated agent metrics, including 73.6 on SWE-bench Verified and 51.7 on Terminal-Bench 2.1. On internal agent workloads, it reaches a reported generation speed of 680 tokens/s using one NVIDIA GB300 GPU at BF16 precision and batch size one. We organize the evaluation around model quality, drafting and verification costs, and deployment under constrained memory. We also describe a decision-model variant that generates answers to related questions in one denoising pass. On an internal set of 500 groups, joint prediction raises question accuracy from 90.37% to 93.88% and all-correct group accuracy from 65.4% to 77.0%.",
+      "published_date": "2026-11-18T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.24636",
+      "pdf_url": "https://arxiv.org/pdf/2611.24636",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.24636",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "upvotes": 38,
+      "hot_score": 380,
+      "structured_summary": {
+        "chinese_title": "Clover-35B-A3B-Preview 技术报告",
+        "chinese_summary": "Clover 是一个支持思考模式生成的混合专家扩散语言模型，具有 350 亿参数和 30 亿激活参数。",
+        "pain_point": "提高语言模型生成质量并降低生成成本。",
+        "core_value": "通过混合专家架构和新颖的注意力机制，显著提升模型性能。",
+        "technical_architecture": "采用混合专家架构和双向 softmax 注意力机制。",
+        "quantitative_results": "在 SWE-bench Verified 上达到 73.6 分，在 Terminal-Bench 2.1 上达到 51.7 分。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在内部数据集上进行了评估。",
+        "key_contributions": [
+          "提出了一种新的混合专家架构",
+          "引入了双向 softmax 注意力机制",
+          "实现了高效的生成速度"
+        ],
+        "application_scenarios": [
+          "高质量文本生成",
+          "自动化问答系统"
+        ],
+        "technical_highlights": [
+          "结合了循环记忆和双向注意力",
+          "提高了生成速度和准确性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.27973",
+      "source": "huggingface",
+      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+      "authors": [
+        "Chang Nie",
+        "Chaoyou Fu",
+        "Songlin Liu",
+        "Yiqing Hu",
+        "Caifeng Shan"
+      ],
+      "abstract": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic computational complexity as the context expands. In contrast, linear-time architectures compress history into fixed-size states, but struggle to retain fine-grained details. We introduce MemOnce, a foundation architecture that learns scalable memory states for language models. MemOnce is based on two core designs: (a) Memory encoder-decoder: it caches only a small subset of final-layer hidden states as compact memory representations and dynamically decodes them back into KV caches for attention layers; (b) Memory sparse attention: for each continual input, MemOnce adaptively retrieves relevant memory representations, with the sparse indices computed only once across layers. Coupling these two designs enables efficient on-the-fly memory loading and KV cache decoding, drastically reducing the GPU memory footprint and achieving linear-time complexity. We conduct extensive experiments to show that MemOnce outperforms Transformers and other architectures across varying model sizes, context lengths, and training paradigms (pretraining and post-training adaptation). In particular, adapting Qwen3.5-4B with MemOnce reduces memory state cache by 1313times and prefill latency by 6.9times at 1M context, and improves throughput by 3.5times and overall memory performance by +5.77%. Finally, MemOnce generalizes zero-shot to downstream representation tasks, achieving competitive results against specialized models.",
+      "published_date": "2026-11-20T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.27973",
+      "pdf_url": "https://arxiv.org/pdf/2611.27973",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.27973",
+      "category": "llm",
+      "tags": [
+        "cs.CL"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "MemOnce：一种面向大规模语言模型的可扩展内存架构",
+        "chinese_summary": "MemOnce通过学习可扩展的内存状态，大幅减少GPU内存占用并实现线性时间复杂度。",
+        "pain_point": "现有架构在处理长时序和持续交互时，难以维持可重用的记忆状态，导致内存占用和计算复杂度激增。",
+        "core_value": "MemOnce通过压缩历史信息并动态解码，有效降低内存占用和计算复杂度。",
+        "technical_architecture": "MemOnce采用记忆编码解码器和稀疏注意力机制，实现高效内存加载和KV缓存解码。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步验证在更复杂场景下的性能。",
+        "key_contributions": [
+          "提出了一种新的记忆编码解码器架构",
+          "引入了稀疏注意力机制以适应持续输入",
+          "实现了线性时间复杂度和低内存占用"
+        ],
+        "application_scenarios": [
+          "大规模语言模型的长时序和持续交互",
+          "需要高效内存管理的自然语言处理任务"
+        ],
+        "technical_highlights": [
+          "动态解码最终层隐藏状态为KV缓存",
+          "仅在每层计算一次稀疏索引"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.15449",
+      "source": "huggingface",
+      "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
+      "authors": [
+        "Jaeseong Lee",
+        "Jinwoo Kim",
+        "Jinho Jeong",
+        "Seon Joo Kim"
+      ],
+      "abstract": "Text-aware image super-resolution (TAISR) aims to recover high-resolution images from low-resolution inputs while preserving textual content. Existing methods treat this as a visual restoration problem, yet severely degraded text often cannot be read from local visual evidence alone. Humans instead read it by reasoning over image context, logical patterns, and prior knowledge. This raises a fundamental question: Does TAISR need reasoning? To answer this, we introduce two diagnostic tools. The first, ReasonText, is a human-curated benchmark that separates reasoning-required text from locally recoverable text. The second, Ground-Truth Text-Crop Accuracy (GTTCA), is a recognition-based metric that measures text restoration quality without text detection errors. Evaluating twelve recent super-resolution (SR) models, we find a consistent and substantial performance drop on reasoning-required text, revealing a systematic blind spot. Two observations point to a remedy. One is that text-conditioned SR models restore text substantially better when given ground-truth text. The other is that multimodal large language models (MLLMs) can read degraded text in low-resolution images through reasoning. We therefore propose Reasoning Transfer via Captioning (RTC), a training-free plug-in that uses an external MLLM to infer the degraded text and feeds the resulting caption to a text-conditioned SR model. RTC consistently improves all six text-conditioned SR models we evaluate, especially on reasoning-required text. Surprisingly, a real-world SR model with RTC can even outperform the TAISR model with RTC, suggesting that reasoning should be a core design axis for future TAISR.",
+      "published_date": "2026-11-11T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.15449",
+      "pdf_url": "https://arxiv.org/pdf/2611.15449",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.15449",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "upvotes": 22,
+      "hot_score": 220,
+      "structured_summary": {
+        "chinese_title": "阅读不可读：文本感知图像超分辨率需要推理",
+        "chinese_summary": "提出了ReasonText和GTTCA工具，揭示了现有超分辨率模型在处理需要推理的文本时存在系统性盲点。",
+        "pain_point": "现有方法在处理严重退化文本时依赖局部视觉证据，导致无法准确恢复文本。",
+        "core_value": "通过引入新的诊断工具，揭示了超分辨率模型在处理需要推理的文本时的局限性。",
+        "technical_architecture": "提出了ReasonText和GTTCA工具来评估模型性能。",
+        "quantitative_results": "发现现有模型在处理需要推理的文本时性能下降明显。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步研究如何提高模型在处理需要推理的文本时的性能。",
+        "key_contributions": [
+          "提出了ReasonText和GTTCA工具",
+          "揭示了超分辨率模型的系统性盲点"
+        ],
+        "application_scenarios": [
+          "图像增强",
+          "文档恢复"
+        ],
+        "technical_highlights": [
+          "提出了新的评估方法",
+          "揭示了现有模型的局限性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.25773",
+      "source": "huggingface",
+      "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+      "authors": [
+        "Chiyu Chen",
+        "Pengzhou Cheng",
+        "Yuezhao Ma",
+        "Xiaocheng Li",
+        "Can Liu",
+        "Haonan Hu",
+        "Yao Yao",
+        "Yifei Yang",
+        "Yijie Lu",
+        "Taolei Wang",
+        "Yansi Li",
+        "Muhuan Wu",
+        "Chenglu Sun",
+        "Gongshen Liu",
+        "Zhuosheng Zhang"
+      ],
+      "abstract": "Full-duplex interaction models exhibit strong conversational agency, enabling natural, low-latency turn-taking, backchannels, and interruptions. However, completing tasks further requires task agency: timely tool invocation and argument revision following user corrections. Frontend-backend agents separate initiation from execution: the frontend decides whether and what to request, while the backend determines how. Execution can be offloaded, but unsent requests cannot be executed, and incomplete ones can misdirect the backend. On Full-Duplex-Bench v3 (FDB v3), most failures of Realtime-Venus-Audio + Harness in our streaming pipeline occur before a domain tool executes. We introduce Duopra, a full-duplex interaction model that learns task execution alongside conversational control. Duopra treats the backend as a tool, accepting a self-contained natural-language request. Direct calls and backend delegation share an action interface and requirements for faithful initiation and correct execution. Its three-stage training combines protocol SFT, full-duplex RL rewarding timely and complete execution, and projector-only repair of talker conditioning after thinker updates. With the same backend, Pass@1 rises from 4.7% to 44.7%; Duopra achieves 47.7% calling tools directly (26.0% after SFT) and 49.3% with a DeepSeek backend. It improves three FDB v1.0 takeover rates over the base model. These results show that task agency can coexist with key conversational agency.",
+      "published_date": "2026-11-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.25773",
+      "pdf_url": "https://arxiv.org/pdf/2611.25773",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.25773",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 18,
+      "hot_score": 180,
+      "structured_summary": {
+        "chinese_title": "Duopra：从全双工对话到全双工代理",
+        "chinese_summary": "Duopra 模型结合了对话控制和任务执行，实现自然流畅的交互。",
+        "pain_point": "现有模型在任务执行方面存在延迟和错误问题。",
+        "core_value": "Duopra 模型通过学习任务执行和对话控制，提高了交互的及时性和准确性。",
+        "technical_architecture": "Duopra 模型采用三阶段训练方法，结合协议 SFT、全双工 RL 和投影修复。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需要进一步优化模型在复杂场景下的表现。",
+        "key_contributions": [
+          "结合对话控制和任务执行",
+          "采用三阶段训练方法"
+        ],
+        "application_scenarios": [
+          "智能助手",
+          "虚拟客服"
+        ],
+        "technical_highlights": [
+          "自包含自然语言请求",
+          "共享行动接口"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.21485",
+      "source": "huggingface",
+      "title": "Lost in the Hallway: Benchmarking Persistent Spatial Memory Across Revisits",
+      "authors": [
+        "Henry Zheng",
+        "Weibo Gong",
+        "Yang Yue",
+        "Rui Huang",
+        "Yang Zhang",
+        "Gao Huang"
+      ],
+      "abstract": "Persistent spatial understanding is essential for embodied agents to operate reliably in environments they repeatedly encounter. It requires recognizing revisited places despite viewpoint changes, distinguishing them from similar-looking rooms, and updating memories as environments change. Yet existing evaluations often leave physical place identity across separated visits implicit. We introduce ReSpaceBench, a benchmark comprising 3,244 questions across 590 synthetic and real-home scenes, organized into 9 tasks spanning room association, persistent state tracking, and downstream reasoning. Controlled walkthroughs define visits by physical room entry and deliberately include same-type room distractors and cross-session object changes. Our evaluation of 32 models and 3 agentic video-understanding frameworks reveals substantial limitations: the strongest evaluated zero-shot model achieves 50.5% overall accuracy and 52.2% on a 450-question subset, compared with 90.1% for human annotators. The evaluated agentic frameworks offer no overall improvement over direct inference with the same base model. Analysis of agent execution traces reveals evidence omissions and incorrect cross-visit room associations as major failure modes, suggesting that iterative evidence seeking alone does not ensure consistent spatial memory. Further analyses expose a gap between recognizing familiar rooms and identifying the correct visited room, while annotation-guided sampling highlights the importance of preserving intervening visits and transitions. We also provide RS-30K, a separate training dataset from synthetic sources with no template, scene, route, or video overlap with the benchmark. Fine-tuning Qwen3-VL-8B raises overall accuracy from 35.5% to 60.4%, with the largest gains in association and improvements extending to real-life scenes.",
+      "published_date": "2026-11-16T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.21485",
+      "pdf_url": "https://arxiv.org/pdf/2611.21485",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.21485",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 10,
+      "hot_score": 100,
+      "structured_summary": {
+        "chinese_title": "迷失在走廊中：跨访重现空间记忆基准测试",
+        "chinese_summary": "提出了ReSpaceBench基准测试，评估了32个模型和3个代理视频理解框架在空间记忆上的表现。",
+        "pain_point": "现有评估方法未能明确跨访空间身份一致性。",
+        "core_value": "提供了全面的基准测试，揭示了现有模型的局限性。",
+        "technical_architecture": "通过受控行走定义访问，并包含相同类型房间的干扰和跨会话对象变化。",
+        "quantitative_results": "最强零样本模型整体准确率为50.5%，对比人工标注为90.1%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需进一步探索跨访记忆的更新机制。",
+        "key_contributions": [
+          "提出了ReSpaceBench基准测试",
+          "揭示了现有模型的局限性",
+          "提供了详细的执行轨迹分析"
+        ],
+        "application_scenarios": [
+          "机器人导航",
+          "虚拟现实环境理解"
+        ],
+        "technical_highlights": [
+          "包含真实家庭场景",
+          "明确跨访空间身份一致性"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.27915",
+      "source": "huggingface",
+      "title": "StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning",
+      "authors": [
+        "Chi Yan",
+        "Guoyang Zhao",
+        "Wentao Yuan",
+        "Yixiao Ge",
+        "Yanning Zhou",
+        "Dan Xu"
+      ],
+      "abstract": "Vision-language models (VLMs) exhibit strong semantic understanding but remain limited in their ability to reason about metric 3D space in the physical world. Existing VLMs typically infer 3D scene structure from one or more images without known camera calibration or cross-view geometric constraints. This makes metric 3D inference inherently ambiguous and leaves it unclear whether their spatial predictions are grounded in visual evidence or driven primarily by semantic priors. In contrast, calibrated stereo provides explicit cross-view geometry that resolves this ambiguity and offers a more reliable foundation for metric 3D perception and geometric generalization. We investigate how VLMs can learn transferable 3D representations directly from calibrated binocular observations. To this end, we introduce StereoVLM, the first geometry-aware binocular VLM for metric 3D spatial reasoning. StereoVLM follows a hierarchical learning paradigm spanning from cross-view correspondence and disparity estimation to calibration-conditioned metric depth perception and semantic spatial reasoning. We further find that disparity supervision generalizes substantially better than direct binocular depth supervision on unseen environments. To evaluate these capabilities, we introduce Stereo3D-Bench, a comprehensive benchmark across three levels, from point-level geometry to object-level spatial reasoning. StereoVLM-8B achieves 95.17% depth accuracy (δ_1) and a 66.98 average object-level score on Stereo3D-Bench. Intervention results further indicate that the model's performance on Stereo3D-Bench benefits from valid cross-view geometry and cannot be explained solely by additional visual tokens or semantic priors. Hierarchical geometric supervision also yields average gains of 3.54 points across five spatial benchmarks and 4.3 percentage points in RoboCasa manipulation success.",
+      "published_date": "2026-11-20T17:52:02.000Z",
+      "url": "https://arxiv.org/abs/2611.27915",
+      "pdf_url": "https://arxiv.org/pdf/2611.27915",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.27915",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "upvotes": 7,
+      "hot_score": 70,
+      "structured_summary": {
+        "chinese_title": "StereoVLM: 双目视觉语言模型在度量3D空间推理中的应用",
+        "chinese_summary": "StereoVLM 是首个几何感知的双目视觉语言模型，用于度量3D空间推理。",
+        "pain_point": "现有视觉语言模型在度量3D空间推理方面存在不确定性。",
+        "core_value": "通过双目校准提供明确的跨视几何结构，增强3D感知和几何泛化。",
+        "technical_architecture": "采用从跨视对应到校准条件下的度量深度感知和语义空间推理的分层学习范式。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多应用场景。",
+        "key_contributions": [
+          "引入几何感知的双目视觉语言模型",
+          "提出分层学习范式"
+        ],
+        "application_scenarios": [
+          "自动驾驶",
+          "机器人导航"
+        ],
+        "technical_highlights": [
+          "跨视几何结构的利用",
+          "校准条件下的度量深度感知"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.26613",
+      "source": "huggingface",
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "authors": [
+        "Yiyang Du",
+        "Yuxuan Kuang",
+        "Qitao Zhao",
+        "Yixuan Wang",
+        "Zhanqiu Guo",
+        "Yi Xu",
+        "Xin Li",
+        "Wenbin He",
+        "Liu Ren",
+        "Chenyan Xiong"
+      ],
+      "abstract": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succeed nor where they fail. In this paper, we present a systematic action-level analysis of frontier agents on direct robot control across 12 manipulation benchmarks. We introduce AgentRoboCritic, an intent-grounded critique framework in which the policy agent states a local intent alongside each action, and a critic evaluates the action's outcome and failure mode against this intent. Our action-level analysis demonstrates the promising capabilities of frontier agents on direct robot control, including closed-loop recovery from local execution failures, reliable semantic grounding across diverse scenes, and strong zero-shot manipulation without task-specific adaptation. It also identifies their current limitations, including task-relevant physical execution bottlenecks such as grasping and alignment, and uneven recovery across failure modes. Finally, we validate our critic on a 400-action human-annotated benchmark and release a dataset of 12,844 annotated actions alongside a fine-tuned open-source critic, Muse-Glimmer-30B, whose failure-mode accuracy rises from 32.58% to 74.24%, enabling low-cost action-level analysis.",
+      "published_date": "2026-11-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.26613",
+      "pdf_url": "https://arxiv.org/pdf/2611.26613",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.26613",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 7,
+      "hot_score": 70,
+      "structured_summary": {
+        "chinese_title": "AgentRoboCritic: 理解前沿代理在直接机器人控制中的能力",
+        "chinese_summary": "提出了AgentRoboCritic框架，对前沿代理在直接机器人控制中的能力进行了系统分析。",
+        "pain_point": "现有基准仅报告回合级成功率，无法展示代理成功或失败的具体原因。",
+        "core_value": "展示了前沿代理在直接机器人控制中的潜力，包括闭环恢复、语义接地和零样本操作。",
+        "technical_architecture": "引入了AgentRoboCritic框架，结合意图和批评机制进行分析。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "存在任务相关物理执行瓶颈，不同失败模式下的恢复不均衡。",
+        "key_contributions": [
+          "提出了AgentRoboCritic框架",
+          "进行了系统性的动作级分析",
+          "揭示了前沿代理在直接机器人控制中的能力"
+        ],
+        "application_scenarios": [
+          "机器人操作",
+          "自动化任务"
+        ],
+        "technical_highlights": [
+          "结合意图和批评机制",
+          "展示了闭环恢复能力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}

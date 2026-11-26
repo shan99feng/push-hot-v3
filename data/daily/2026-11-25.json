@@ -1,0 +1,522 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-26T04:44:02.120098+00:00",
+  "total": 10,
+  "papers": [
+    {
+      "paper_id": "hf-paper-2611.25403",
+      "source": "huggingface",
+      "title": "Antom 3-in-1 Transformer: A Payment Foundation Model",
+      "authors": [
+        "Weiyu Han",
+        "Haoyu Jiang",
+        "Jie Sheng",
+        "Youxi Pan",
+        "Xianglong Liu",
+        "Zeqi Ren",
+        "Dongquan Yi",
+        "Yinhao Liu",
+        "Ruobing Zuo",
+        "Ze Zhao",
+        "Huilin He",
+        "Nairong Zhang",
+        "Xinyi He",
+        "Xiao Tan",
+        "Jun Wang",
+        "Pan Fang",
+        "Wei Zeng",
+        "Jianan Su",
+        "Kaixin Shen",
+        "Jingtong Wu",
+        "Hao Li",
+        "Shuai Chen",
+        "Jiangming Yang",
+        "Tianyi Zhang"
+      ],
+      "abstract": "We report the development of Antom 3-in-1 Transformer, a payment foundation model that integrates sequence, tabular, and graph representations for payment risk detection. The model contains approximately 7B parameters, with approximately 1.7B activated per task route. Antom 3-in-1 Transformer is pretrained to learn reusable behavioral and relational representations, primarily on Ant International's internal payment data. In a cross-business transfer experiment, pretraining improves the target business metric by 34.5% over the same architecture trained from scratch. With only 25% of the training labels, the pretrained model outperforms the full-label scratch baseline in Average Precision (AP) and Recall@0.5% on different merchant domains. In a four-month online experiment on Ant International's billion-scale payment platform, the model reduced the overall loss rate by 37.88% relative to XGB-Online.",
+      "published_date": "2026-11-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.25403",
+      "pdf_url": "https://arxiv.org/pdf/2611.25403",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.25403",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 104,
+      "hot_score": 1040,
+      "structured_summary": {
+        "chinese_title": "Antom 3-in-1 Transformer：一种支付基础模型",
+        "chinese_summary": "Antom 3-in-1 Transformer 结合序列、表格和图表示，提高支付风险检测的准确性。",
+        "pain_point": "支付风险检测中，不同类型数据表示的整合不足。",
+        "core_value": "通过预训练学习可重用的行为和关系表示，提升模型性能。",
+        "technical_architecture": "结合序列、表格和图表示的Transformer架构。",
+        "quantitative_results": "在不同商户领域，预训练模型在平均精度和召回率上优于全标签基线。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在Ant International的内部支付数据上进行预训练。",
+        "key_contributions": [
+          "提出了一种结合序列、表格和图表示的Transformer模型",
+          "通过预训练显著提升模型性能",
+          "在大规模支付平台中有效降低损失率"
+        ],
+        "application_scenarios": [
+          "支付风险检测",
+          "大规模支付平台的风险管理"
+        ],
+        "technical_highlights": [
+          "多模态数据表示的整合",
+          "预训练学习可重用表示"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.32884",
+      "source": "huggingface",
+      "title": "Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe",
+      "authors": [
+        "Richmond Sin Jing Xuan",
+        "Peilin Feng",
+        "Wenbin Wang",
+        "Soujanya Poria"
+      ],
+      "abstract": "AI agents working on long tasks often commit to an answer before they have enough evidence, a behavior called laziness. In our evaluations, they frequently commit even while their stated belief still names several possible answers. An outcome reward at the end of the episode scores only the final answer, so it cannot teach the agent when to commit, because a lucky guess receives the same reward as an answer backed by evidence. During training, however, the simulator can compute the exact posterior over the answer at every step and tell whether the evidence is already enough. We propose Reinforcement Learning with Verifiable Beliefs (RLVB), which rewards the agent for taking further steps while this posterior still allows several answers and for committing once the evidence is sufficient. The reward needs no judge, critic or reward model, and it never reads the belief line the agent writes before each action. We also introduce Pro Worlds, a benchmark of visual puzzles where the agent views a large world through a small window. We evaluate three vision-language models on three benchmarks, two of which are never seen in training. RLVB improves the base model in all nine settings, by 17.1% on average. Under the outcome reward, GRPO and PPO fall below the base model on average. RLVB also outperforms PPO with a process reward from an LLM judge by 9.3% on average while using 1.6 times fewer GPU-hours. The trained agent answers with sufficient evidence in 51%, 12% and 74% of the episodes on the three benchmarks, against 8%, 0.4% and 36% for the base model. Its accuracy gain therefore comes from answering more often at high levels of evidence. The belief line shows how the agent reaches this evidence: it acts on its own belief. It commits at only 0.1 to 2.2% of the turns at which the evidence is insufficient and its line still names several answers, against 3 to 68% for the base model.",
+      "published_date": "2026-11-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.32884",
+      "pdf_url": "https://arxiv.org/pdf/2611.32884",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.32884",
+      "category": "llm",
+      "tags": [
+        "cs.AI"
+      ],
+      "upvotes": 98,
+      "hot_score": 980,
+      "structured_summary": {
+        "chinese_title": "懒惰代理根据自己的信念作答：可验证信念强化学习教会它们根据信念行动",
+        "chinese_summary": "提出RLVB，通过验证信念来解决AI代理在任务中过早作答的问题。",
+        "pain_point": "AI代理在长期任务中过早作答，缺乏判断何时作答的机制。",
+        "core_value": "通过验证信念奖励机制，使代理在证据充足时才作答，提高决策质量。",
+        "technical_architecture": "提出RLVB，通过计算每步的后验概率来决定奖励。",
+        "quantitative_results": "在Pro Worlds基准测试中，所有九种设置下均提高了基模型。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在视觉谜题场景下验证，未来需扩展应用场景。",
+        "key_contributions": [
+          "提出RLVB机制",
+          "验证信念奖励机制",
+          "Pro Worlds基准测试"
+        ],
+        "application_scenarios": [
+          "视觉谜题解决",
+          "长期任务决策"
+        ],
+        "technical_highlights": [
+          "无需外部评判机制",
+          "动态调整奖励机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.28947",
+      "source": "huggingface",
+      "title": "Don't Sleep, Keep Watch: Proactive Perception for Computer-Use Agents",
+      "authors": [
+        "Jiaqi Su",
+        "Jie-Jing Shao",
+        "Yichen Liu",
+        "Long-Kai Huang",
+        "Haiyan Yin"
+      ],
+      "abstract": "Computer-use agents (CUAs) built on vision-language models are increasingly entrusted with long-horizon tasks in live desktop, web, and mobile environments, where the screen keeps changing on its own. However, current CUAs lack real-time situational awareness: they perceive the environment through discrete snapshots, and the substantial inference latency of VLMs, compounded by highly dynamic interfaces, opens a perception-action gap in which the observed state frequently becomes stale before the corresponding action is executed. To bridge this gap, we present NightWatch, a plug-and-play framework that endows any CUA with continuous, temporally grounded perception without changing the agent's model, prompt, or action space. NightWatch couples the VLM agent with NightWatch-0.8B, a lightweight System-1 model that performs streaming monitoring of the interface state and keeps the agent synchronized with the evolving environment at low computational cost and latency, thereby grounding each decision in the current state rather than an outdated snapshot and reducing both stale actions and idle waiting while preserving task success. Experiments on desktop and dynamic web environments (OSWorld-Verified and DynaCU-Bench) show that NightWatch, driven by a watcher of only 0.8B parameters, reduces non-reasoning wall-clock time by 33% and wasted time by 53% on OSWorld while keeping task success on par, raises success on DynaCU-Bench from 39.5% to 44.2% with the large VLM agent, and is more efficient than passive-watching baselines such as AOI and PUSV under the same screenshot-only input, as well as a System-1 decision model more than 30times its size. Overall, NightWatch demonstrates that the timing of perception is as critical as its content, marking a step toward agents that maintain continuous awareness of their environment rather than perceiving it turn by turn.",
+      "published_date": "2026-11-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.28947",
+      "pdf_url": "https://arxiv.org/pdf/2611.28947",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.28947",
+      "category": "llm",
+      "tags": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "upvotes": 97,
+      "hot_score": 970,
+      "structured_summary": {
+        "chinese_title": "保持警觉，不要睡觉：计算机使用代理的主动感知",
+        "chinese_summary": "提出NightWatch框架，使计算机使用代理能够实时同步环境状态，减少过时操作和空闲等待。",
+        "pain_point": "现有计算机使用代理缺乏实时环境感知，导致观察状态与执行动作之间存在时间差。",
+        "core_value": "通过引入轻量级模型实现低成本、低延迟的持续感知，提高任务成功率。",
+        "technical_architecture": "结合视觉语言模型与轻量级监控模型，实现持续同步环境状态。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在桌面和动态网页环境中进行了实验，未来需扩展到更多场景。",
+        "key_contributions": [
+          "提出NightWatch框架",
+          "实现持续同步环境状态",
+          "降低计算成本和延迟"
+        ],
+        "application_scenarios": [
+          "桌面环境",
+          "动态网页环境"
+        ],
+        "technical_highlights": [
+          "轻量级监控模型",
+          "持续同步环境状态"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.30634",
+      "source": "huggingface",
+      "title": "Rewirable Circuits in Transformers with Loom Attention",
+      "authors": [
+        "Da Xiao",
+        "Qingye Meng",
+        "Shengping Li",
+        "Xingyuan Yuan"
+      ],
+      "abstract": "We propose loom attention, which allows a Transformer to dynamically rewire its circuits at every token by interweaving a head's vertical attention over the outputs of earlier heads (to obtain its query, key and value) with its horizontal attention over tokens. We instantiate vertical attention efficiently with normalized and gated linear attention over a per-token matrix memory, which stores the compressed head outputs and serves as a second residual stream. This yields LoomFormer, a dual-stream architecture that splits control and content between the vector and matrix streams. Across model sizes and training token budgets in language modeling and downstream tasks, LoomFormer matches Transformers trained with over 3x compute and recent residual-stream baselines (HC/mHC, MUDDFormer, AttnRes) trained with ~1.7-2.8x. For example, trained on the same 300B tokens with only 2% extra FLOPs, LoomPythia-2.8B achieves ~1.6x the average downstream gain of mHC-Pythia-2.8B over Pythia-2.8B, and matches (0-shot) or surpasses (5-shot) Pythia-12B. Code is available at https://github.com/Caiyun-AI/LoomFormer",
+      "published_date": "2026-11-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.30634",
+      "pdf_url": "https://arxiv.org/pdf/2611.30634",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.30634",
+      "category": "llm",
+      "tags": [
+        "cs.LG"
+      ],
+      "upvotes": 87,
+      "hot_score": 870,
+      "structured_summary": {
+        "chinese_title": "Transformer 中的可重构电路与 Loom 注意力",
+        "chinese_summary": "提出 Loom 注意力，使 Transformer 能够动态重构其电路，匹配更高计算量的模型并超越现有基线。",
+        "pain_point": "现有 Transformer 模型在动态调整注意力机制方面存在局限。",
+        "core_value": "通过动态重构电路提高模型效率和性能。",
+        "technical_architecture": "采用垂直和水平注意力机制结合的架构。",
+        "quantitative_results": "在相同训练数据下，LoomFormer 达到或超过更高计算量模型的表现。",
+        "competitors": "对比 HC/mHC, MUDDFormer, AttnRes 等基线模型。",
+        "limitations": "未来需要在大规模数据集上进一步验证。",
+        "key_contributions": [
+          "提出 Loom 注意力机制",
+          "实现动态重构电路",
+          "提高模型效率和性能"
+        ],
+        "application_scenarios": [
+          "自然语言处理",
+          "下游任务"
+        ],
+        "technical_highlights": [
+          "垂直和水平注意力机制结合",
+          "高效实现垂直注意力"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.31205",
+      "source": "huggingface",
+      "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
+      "authors": [
+        "Zexin He",
+        "Rui Li",
+        "Yushi Lan",
+        "Chengkai Jin",
+        "Zhi Hou",
+        "Xingang Pan"
+      ],
+      "abstract": "Coding agents can construct and revise robot behavior during execution, but using one agent for the whole robot can delay otherwise independent work. We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents. Each member reasons and acts for a configurable control group, such as an arm with its gripper or the torso and chassis, enabling asynchronous reasoning and execution. However, different robot components often have physical dependencies that require coordination. To address this challenge, ACAP introduces a hyper-agent that assigns tasks, coordinates dependencies, and dynamically allocates control between the lead and member agents. This allows independent work to progress concurrently while supporting tightly coupled manipulation when necessary. Across 72 real-world rollouts covering 25 task/platform settings, ACAP reduces task-balanced time cost by 28.2% compared with a single-agent Direct Policy, with improvements across Fully Parallel, Parallel-Sequential, and Collaborative tasks. Across all eight Collaborative settings, ACAP also achieves lower mean time cost than Fixed Delegation, where only member agents can control their assigned groups. An additional 90-rollout study shows lower mean 30-minute-capped time cost than Direct on all six tasks. We further demonstrate mobile manipulation using the same member interface for chassis and torso control. We present the framework and a real-world rollout dataset containing observations, generated programs, actions, and feedback to support research on how coding agents reason and act in the physical world.",
+      "published_date": "2026-11-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.31205",
+      "pdf_url": "https://arxiv.org/pdf/2611.31205",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.31205",
+      "category": "llm",
+      "tags": [
+        "cs.RO",
+        "cs.MA"
+      ],
+      "upvotes": 62,
+      "hot_score": 620,
+      "structured_summary": {
+        "chinese_title": "ACAP: 异步编码代理用于高效机器人控制",
+        "chinese_summary": "ACAP通过异步框架将机器人组织为团队，实现独立工作的同时支持紧密耦合操作，显著减少任务时间成本。",
+        "pain_point": "单个代理控制机器人导致独立工作延迟。",
+        "core_value": "通过异步框架提高机器人控制效率，减少任务时间成本。",
+        "technical_architecture": "采用异步框架，将机器人视为团队，每个成员负责不同控制组。",
+        "quantitative_results": "ACAP在72个实际任务中比单代理直接策略减少任务时间成本28.2%。",
+        "competitors": "暂无对比信息",
+        "limitations": "未来需探索更多复杂任务场景。",
+        "key_contributions": [
+          "提出异步编码代理框架",
+          "实现机器人控制的独立与协作",
+          "动态分配控制权"
+        ],
+        "application_scenarios": [
+          "机器人执行多任务",
+          "复杂环境下的机器人操作"
+        ],
+        "technical_highlights": [
+          "支持异步推理与执行",
+          "动态协调依赖任务"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.30962",
+      "source": "huggingface",
+      "title": "Self-Evolving Evaluation Environments for Computer-Use Agents",
+      "authors": [
+        "Wenhao Wang",
+        "Panrong Tong",
+        "Quyu Kong",
+        "Pengxiang Li",
+        "Haowen Yang",
+        "chenglin Cai",
+        "Siheng Chen",
+        "Yue Wang"
+      ],
+      "abstract": "Computer-use agents (CUAs) are rapidly improving, yet their evaluation remains largely static. Existing benchmarks provide a strong foundation, but fixed difficulty ceilings, limited feature coverage, and coarse aggregate scores progressively weaken their discriminative and diagnostic value. We introduce CUA-SEE, a closed-loop evaluation environment that co-evolves tasks and executable verifiers from rollout evidence. It disentangles three objectives: benchmark evolution expands evaluation scope through cohort-calibrated difficulty and coverage growth; diagnostic evolution increases resolution through agent-conditional capability-boundary probes; and verifier evolution improves precision by translating changing requirements into state-grounded checkpoints with adversarial validation. Across multiple agents, applications, and rounds, CUA-SEE generates challenging, measurable tasks while preserving process-level evidence. Our results position adaptive evaluation as a scalable counterpart to self-evolving agents, continuously tracking what agents can do, where their boundaries lie, and how reliably progress is measured.",
+      "published_date": "2026-11-23T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.30962",
+      "pdf_url": "https://arxiv.org/pdf/2611.30962",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.30962",
+      "category": "llm",
+      "tags": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "upvotes": 48,
+      "hot_score": 480,
+      "structured_summary": {
+        "chinese_title": "计算机使用代理的自我进化评估环境",
+        "chinese_summary": "CUA-SEE 通过自我进化的任务和可执行验证器生成具有挑战性的可测量任务。",
+        "pain_point": "现有基准评估方法固定难度上限，限制了评估的区分度和诊断价值。",
+        "core_value": "通过自我进化的任务和验证器，持续跟踪代理的能力边界和进步可靠性。",
+        "technical_architecture": "基于自我进化的闭环评估环境，通过任务和验证器的协同进化实现。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要进一步验证在更多代理和应用中的适用性。",
+        "key_contributions": [
+          "提出 CUA-SEE 自我进化的评估环境",
+          "通过任务和验证器的协同进化提高评估的精确度和分辨率",
+          "持续跟踪代理的能力边界和进步可靠性"
+        ],
+        "application_scenarios": [
+          "计算机使用代理的评估",
+          "代理能力边界和进步跟踪"
+        ],
+        "technical_highlights": [
+          "自我进化的任务和验证器协同进化",
+          "通过过程级证据生成挑战性可测量任务"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.28649",
+      "source": "huggingface",
+      "title": "S-Mind: Internalizing Multi-View Geometry for Spatial Intelligence",
+      "authors": [
+        "Muxin Fu",
+        "Peike Yu",
+        "Guibin Zhang",
+        "Wenrui Zhou",
+        "Runze Liu",
+        "Lang Feng",
+        "Fuchao Yang",
+        "Feng Chen",
+        "Yixuan Li",
+        "Mengao Zhang",
+        "Shiying Zhang",
+        "Wen Shen",
+        "Ling Pan",
+        "Shuicheng Yan",
+        "Bo An"
+      ],
+      "abstract": "Spatial intelligence, the ability to reason about 3D space from visual observations, becomes essential as multimodal large language models (MLLMs) move into the physical world. Beyond perceiving each view, it rests on two cornerstones of human cognition: fusing multiple views into one coherent 3D scene and mentally transforming that scene to new viewpoints as reasoning unfolds. Yet our spatial probes reveal that MLLMs largely lack both capabilities, even after spatial fine-tuning. We therefore present S-Mind, which internalizes multi-view geometry within the MLLM through a compact set of spatial tokens. It supervises these tokens to hold the fused 3D scene and re-emits them to re-express this scene from every viewpoint the reasoning adopts. Across four spatial benchmarks, S-Mind improves its Qwen3.5 backbones by up to 22.26 points and surpasses frontier general models such as GPT-6-Astra (+0.45), Kimi-K3.1-Pro (+1.97), and GLM-5.3-Flash (+7.80) in average accuracy. Moreover, the same probes confirm that it acquires both capabilities, reaching fusion and transformation accuracies of 65.11% and 82.17%, against at most 16.02% and 37.28% for the baselines. At inference, S-Mind also runs about 100x faster than a tool-based agent on the same backbone. Instilled through these spatial tokens during training, spatial capability becomes intrinsic to the backbone and persists even when the tokens are withheld, offering a promising path toward spatial intelligence in MLLMs.",
+      "published_date": "2026-11-21T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.28649",
+      "pdf_url": "https://arxiv.org/pdf/2611.28649",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.28649",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "upvotes": 41,
+      "hot_score": 410,
+      "structured_summary": {
+        "chinese_title": "S-Mind: 内化多视角几何学以促进空间智能",
+        "chinese_summary": "S-Mind 通过引入空间令牌显著提升了多模态大语言模型在空间推理任务中的表现。",
+        "pain_point": "多模态大语言模型在处理多视角几何和空间推理方面存在不足。",
+        "core_value": "S-Mind 通过内化多视角几何学，显著提升了模型的空间推理能力。",
+        "technical_architecture": "S-Mind 通过引入空间令牌并监督其表达3D场景。",
+        "quantitative_results": "S-Mind 在四个空间基准测试中提高了 Qwen3.5 的表现，平均准确率提升了 22.26 点。",
+        "competitors": "超越了 GPT-6-Astra、Kimi-K3.1-Pro 和 GLM-5.3-Flash 等前沿通用模型。",
+        "limitations": "未来需要在更多实际场景中验证模型的鲁棒性和泛化能力。",
+        "key_contributions": [
+          "引入空间令牌内化多视角几何学",
+          "显著提升多模态大语言模型的空间推理能力"
+        ],
+        "application_scenarios": [
+          "多视角几何处理",
+          "空间推理任务"
+        ],
+        "technical_highlights": [
+          "通过空间令牌实现3D场景的融合与变换",
+          "在多个基准测试中显著提升模型性能"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.32554",
+      "source": "huggingface",
+      "title": "PartAgent: Agentic 3D Part Segmentation via Expert Integration and Closed-Loop Refinement",
+      "authors": [
+        "Yang Cao",
+        "Zhe Zhu",
+        "Yiheng Zhang",
+        "Zhengqiang Zhang",
+        "Haoyuan Li",
+        "Le Wan",
+        "Dan Xu"
+      ],
+      "abstract": "Segmenting a 3D object into semantically meaningful parts requires joint reasoning about geometric structure and semantic context. Pretrained 3D experts provide spatially grounded region proposals, while 2D experts provide semantic cues for identifying object parts. The challenge is to integrate these complementary capabilities into a framework that can both produce meaningful part segmentations and progressively refine them. We present PartAgent, a training-free agentic framework for 3D part segmentation built upon two complementary modules: (i) Structural-Semantic Expert Integration combines regions predicted by the 3D expert with multiview semantic evidence from the 2D expert through image-to-surface correspondences, constructing compositional part partitions at multiple granularities. (ii) Observation-Driven Closed-Loop Partition Refinement observes the current partition and its supporting evidence to select targeted inspection, evidence repair, composition, or reselection actions. It verifies proposed changes and uses the updated state and action outcomes to guide subsequent decisions. On PartObjaverse-Tiny-WT, PartAgent achieves 68.41 mIoU, outperforming the strongest competing method by 8.53 points. Across 3DCoMPaT200, PartNeXt, PartNetE, and PartObjaverse-Tiny, PartAgent achieves the highest mIoU on each dataset, averaging 69.36 across the four datasets, 7.28 points above the highest mean among competing methods.",
+      "published_date": "2026-11-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.32554",
+      "pdf_url": "https://arxiv.org/pdf/2611.32554",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.32554",
+      "category": "cv",
+      "tags": [
+        "cs.CV"
+      ],
+      "upvotes": 33,
+      "hot_score": 330,
+      "structured_summary": {
+        "chinese_title": "PartAgent: 通过专家集成和闭环精炼实现3D部件分割",
+        "chinese_summary": "PartAgent 通过结合3D和2D专家的互补能力，实现3D部件分割并逐步精炼。",
+        "pain_point": "现有方法难以同时进行有意义的部件分割和逐步精炼。",
+        "core_value": "通过专家集成和闭环精炼，提高3D部件分割的准确性和鲁棒性。",
+        "technical_architecture": "基于两个模块：结构语义专家集成和观察驱动的闭环分割精炼。",
+        "quantitative_results": "在PartObjaverse-Tiny-WT上，PartAgent达到68.41 mIoU。",
+        "competitors": "暂无对比信息",
+        "limitations": "仅在特定数据集上进行了验证。",
+        "key_contributions": [
+          "提出专家集成模块",
+          "提出闭环精炼模块"
+        ],
+        "application_scenarios": [
+          "3D建模",
+          "机器人视觉"
+        ],
+        "technical_highlights": [
+          "图像到表面对应",
+          "逐步精炼机制"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.25509",
+      "source": "huggingface",
+      "title": "LingSante MedGuard Technical Report",
+      "authors": [
+        "LingSante MedGuard Team"
+      ],
+      "abstract": "As medical AI is increasingly used for patient consultation and clinical decision support, identifying harmful, non-compliant, or ethically problematic responses is essential for responsible deployment. Assessing these risks requires checking clinical claims against relevant evidence, verifying calculations, and applying medical requirements under their intended conditions. We introduce LingSante MedGuard, a capability-enhanced guardrail that integrates supervision from a medical guardrail teacher model and six specialized medical capability experts into a unified model. The guardrail teacher supervises risk decisions and explanations across medical safety, compliance, and ethics, while the capability experts support medical rule understanding, numerical reasoning, multimodal hallucination detection, agentic safety verification, risk localization, and multimodal entity understanding. We consolidate these sources of supervision through offline supervised fine-tuning on teacher-generated demonstrations, followed by multi-teacher on-policy distillation using feedback on student-generated responses. We further introduce LingSante MedGuardBench, a benchmark comprising 11 risk-detection subsets spanning medical safety, compliance, and ethics. At 4B, 9B, and 27B scales, LingSante MedGuard achieves mean benchmark F1 scores of 82.3%, 82.4%, and 87.4%, respectively. The 4B model also achieves 73.9% mean accuracy across MedHallu and MedHALT-NOTA under retrieval-enabled evaluation. Additional evaluations of the verification components show improvements in evidence-supported consistency, source traceability, and rule-guided rationale quality across model scales. These results support the integration of specialized medical capabilities into a unified guardrail for medical risk assessment and evidence-based medical safety verification.",
+      "published_date": "2026-11-19T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.25509",
+      "pdf_url": "https://arxiv.org/pdf/2611.25509",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.25509",
+      "category": "other",
+      "tags": [
+        "cs.CR"
+      ],
+      "upvotes": 30,
+      "hot_score": 300,
+      "structured_summary": {
+        "chinese_title": "LingSante MedGuard 技术报告",
+        "chinese_summary": "提出了一种结合医学监督教师模型和六位医学专家的统一模型，用于医疗AI的风险检测。",
+        "pain_point": "医疗AI在患者咨询和临床决策支持中的风险识别不足。",
+        "core_value": "通过整合医学监督和专家知识，提高医疗AI的安全性、合规性和伦理标准。",
+        "technical_architecture": "采用监督教师模型和六位医学专家的统一架构。",
+        "quantitative_results": "暂无量化数据",
+        "competitors": "暂无对比信息",
+        "limitations": "需要更多的实际应用场景验证。",
+        "key_contributions": [
+          "引入了医学监督教师模型",
+          "整合了六位医学专家的知识",
+          "提出了多教师在线策略蒸馏方法"
+        ],
+        "application_scenarios": [
+          "医疗咨询",
+          "临床决策支持"
+        ],
+        "technical_highlights": [
+          "结合监督教师和专家知识",
+          "多教师在线策略蒸馏"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    },
+    {
+      "paper_id": "hf-paper-2611.33010",
+      "source": "huggingface",
+      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
+      "authors": [
+        "Xuanchen Liu",
+        "Hejun Zhang",
+        "Boxuan Dong",
+        "Ying Wu",
+        "Heshuai Li",
+        "Wen Gao",
+        "Yonghong Tian",
+        "Weihao Yu"
+      ],
+      "abstract": "Can a simple mirror expose the limitations of today's robotic manipulation policies? Inspired by the mirror self-recognition test in animal cognition, we investigate whether robot policies can reliably manipulate physical objects in scenes containing their reflections. We introduce RoboDojo-Mirror, a benchmark built on RoboDojo that preserves task objectives, success criteria, and policy checkpoints while comparing a mirror-free baseline with single-mirror, dual-mirror, and mirrored-tabletop conditions. Across five policies spanning Vision-Language-Action models, World Action Models, and agentic policies, every mirror condition reduces aggregate success rates: averaged over the three conditions, the drop ranges from 10.8 to 56.7 percentage points across policies, and it reaches 62.5 points on the mirrored tabletop. Because a mirror is also a physical obstacle, we compare it against geometrically matched non-reflective panels; 50--88\\% of mirror-specific failures occur without recorded robot--panel contact, so direct collisions alone do not explain the degradation. Trajectory and contact analyses instead reveal recurring behaviors consistent with phantom targeting of reflected objects and spatial mislocalization of real ones. Targeted diagnostics further characterize grasping near reflections, policy-dependent pushing progress, and physical-target interaction under main-camera occlusion. Real-robot experiments with π_{0.5} and FastWAM also show lower overall success rates under the upright-mirror and mirrored-tabletop conditions. These findings reveal a shared vulnerability to reflective environments across diverse robot policies and motivate reflection-aware evaluation of embodied intelligence. Code is available at https://github.com/iPPLab/robodojo-mirror.",
+      "published_date": "2026-11-24T00:00:00.000Z",
+      "url": "https://arxiv.org/abs/2611.33010",
+      "pdf_url": "https://arxiv.org/pdf/2611.33010",
+      "code_url": null,
+      "hf_url": "https://huggingface.co/papers/2611.33010",
+      "category": "llm",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "upvotes": 27,
+      "hot_score": 270,
+      "structured_summary": {
+        "chinese_title": "嵌入式AI未能通过镜子测试：简单的镜子如何破坏机器人操作策略",
+        "chinese_summary": "研究发现，机器人在包含自身镜像的场景中操作物体的能力显著下降。",
+        "pain_point": "机器人在包含镜像的场景中操作物体的能力受限。",
+        "core_value": "揭示了机器人操作策略在面对镜像时的局限性，提出了新的基准测试。",
+        "technical_architecture": "构建了RoboDojo-Mirror基准测试，对比了不同镜像条件下的机器人表现。",
+        "quantitative_results": "不同策略的平均成功率下降幅度从10.8到56.7个百分点不等，最高达62.5个百分点。",
+        "competitors": "暂无对比信息",
+        "limitations": "未详细探讨所有失败的具体原因。",
+        "key_contributions": [
+          "提出了新的机器人操作策略基准测试",
+          "揭示了机器人在镜像场景中的操作局限性"
+        ],
+        "application_scenarios": [
+          "机器人操作与交互",
+          "机器人认知与自我识别"
+        ],
+        "technical_highlights": [
+          "使用RoboDojo-Mirror基准测试",
+          "分析镜像对机器人操作的影响"
+        ],
+        "model_used": "Qwen/Qwen2.5-7B-Instruct"
+      }
+    }
+  ]
+}
